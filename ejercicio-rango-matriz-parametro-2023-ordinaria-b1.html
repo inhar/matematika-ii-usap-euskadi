@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parametrodun matrize baten heina · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-rango-matriz-parametro-2023-ordinaria-idiomas.js?v=2023-ord-b1a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Ejercicio B1</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Álgebra lineal · Rango de matrices · 2023</p>
+        <h1 class="matrix-rank-2023-title">Rango de una matriz con parámetro</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-matrix-rank-2023-language="es">Calcula el rango de la matriz <span class="math-inline math-nowrap" data-math="A"></span> según los valores del parámetro <span class="math-inline math-nowrap" data-math="\alpha"></span>, siendo:</p>
+        <p data-matrix-rank-2023-language="eu" hidden>Kalkulatu <span class="math-inline math-nowrap" data-math="A"></span> matrizearen heina <span class="math-inline math-nowrap" data-math="\alpha"></span> parametroaren balioen arabera, hau izanik:</p>
+        <div class="matrix-rank-2023-statement math-display" data-math="A=\begin{pmatrix}\alpha&amp;0&amp;\alpha&amp;0\\3&amp;\alpha&amp;0&amp;\alpha\\0&amp;1&amp;-1&amp;2\end{pmatrix}" data-math-display></div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio B1</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-matrix-rank-2023-language="es">La matriz tiene tres filas, así que su rango máximo es 3. Buscamos un menor de orden 3 que sea fácil de calcular. El formado por las columnas segunda, tercera y cuarta tiene determinante <span class="math-inline math-nowrap" data-math="-\alpha^2"></span>; por tanto, si <span class="math-inline math-nowrap" data-math="\alpha\ne0"></span>, el rango ya es 3.</p>
+            <p class="idea-text" data-matrix-rank-2023-language="eu" hidden>Matrizeak hiru errenkada ditu; beraz, gehienezko heina 3 da. Kalkulatzeko erraza den 3. ordenako minore bat bilatzen dugu. Bigarren, hirugarren eta laugarren zutabeek osatutakoaren determinantea <span class="math-inline math-nowrap" data-math="-\alpha^2"></span> da; hortaz, <span class="math-inline math-nowrap" data-math="\alpha\ne0"></span> bada, heina 3 da.</p>
+            <p class="idea-text" data-matrix-rank-2023-language="es">Solo queda estudiar <span class="math-inline math-nowrap" data-math="\alpha=0"></span>. En ese caso la primera fila es nula, de modo que el rango no puede ser 3. Sin embargo, queda un menor de orden 2 con determinante 3, así que el rango es exactamente 2.</p>
+            <p class="idea-text" data-matrix-rank-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="\alpha=0"></span> kasua baino ez da aztertu behar. Kasu horretan lehen errenkada nulua da; beraz, heina ezin da 3 izan. Hala ere, 3 determinantea duen 2. ordenako minore bat geratzen da, eta heina zehazki 2 da.</p>
+            <div class="essential-geometry matrix-rank-2023-idea">
+              <div class="math-display" data-math="\det M_{234}=-\alpha^2" data-math-display></div>
+              <strong class="math-display matrix-rank-2023-classification" data-math="\operatorname{rg}(A)=\begin{cases}3,&amp;\alpha\ne0,\\2,&amp;\alpha=0.\end{cases}" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio B1</p>
+            <h2 id="solution-title">Discusión del rango mediante menores</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Rango máximo</h3>
+                <p data-matrix-rank-2023-language="es">El rango de una matriz no puede superar ni su número de filas ni su número de columnas. En una matriz de tamaño <span class="math-inline math-nowrap" data-math="3\times4"></span>, el máximo posible es 3.</p>
+                <p data-matrix-rank-2023-language="eu" hidden>Matrize baten heina ezin da izan ez errenkada kopurua ez zutabe kopurua baino handiagoa. <span class="math-inline math-nowrap" data-math="3\times4"></span> tamainako matrize batean, gehienezko balioa 3 da.</p>
+                <div class="theory-formula math-display" data-math="\operatorname{rg}(A)\le\min(3,4)=3" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Criterio de los menores</h3>
+                <p data-matrix-rank-2023-language="es">Si existe un menor de orden <span class="math-inline math-nowrap" data-math="r"></span> con determinante no nulo, el rango es al menos <span class="math-inline math-nowrap" data-math="r"></span>. Si además no puede haber menores no nulos de orden superior, el rango es exactamente <span class="math-inline math-nowrap" data-math="r"></span>.</p>
+                <p data-matrix-rank-2023-language="eu" hidden>Zero ez den determinantea duen <span class="math-inline math-nowrap" data-math="r"></span>. ordenako minore bat badago, heina gutxienez <span class="math-inline math-nowrap" data-math="r"></span> da. Gainera, ezin bada goragoko ordenako minore ez-nulurik egon, heina zehazki <span class="math-inline math-nowrap" data-math="r"></span> da.</p>
+                <div class="theory-formula math-display" data-math="\det M_r\ne0\quad\Longrightarrow\quad \operatorname{rg}(A)\ge r" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Un menor nulo no basta</h3>
+                <p data-matrix-rank-2023-language="es">Que un menor concreto se anule no demuestra que el rango baje: podría existir otro menor del mismo orden que no se anule. Por eso conviene elegir un menor cuyos ceros dejen el menor número posible de casos pendientes.</p>
+                <p data-matrix-rank-2023-language="eu" hidden>Minore jakin bat anulatzeak ez du frogatzen heina jaisten denik: ordena bereko beste minore bat ez-nulua izan daiteke. Horregatik, komeni da zeroek aztertu gabeko ahalik eta kasu gutxien uzten dituen minore bat aukeratzea.</p>
+                <div class="matrix-rank-2023-warning">
+                  <div class="math-display" data-math="\det M_{123}=\alpha(3-\alpha)" data-math-display></div>
+                  <div class="math-display" data-math="\det M_{124}\big|_{\alpha=3}=9\ne0" data-math-display></div>
+                </div>
+                <p data-matrix-rank-2023-language="es">El valor <span class="math-inline math-nowrap" data-math="\alpha=3"></span> anula el primer menor, pero no hace bajar el rango.</p>
+                <p data-matrix-rank-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="\alpha=3"></span> balioak lehen minorea anulatzen du, baina ez du heina jaisten.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Fijamos el rango máximo posible</h3>
+                  <p>Como la matriz solo tiene tres filas, basta encontrar un menor de orden 3 no nulo para demostrar que el rango es 3.</p>
+                  <div class="matrix-rank-2023-work">
+                    <strong class="math-display" data-math="\operatorname{rg}(A)\le3" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Elegimos tres columnas convenientes</h3>
+                  <p>Tomamos las columnas segunda, tercera y cuarta. El menor correspondiente contiene dos ceros en la primera fila y se desarrolla en una sola operación.</p>
+                  <div class="matrix-rank-2023-work">
+                    <div class="math-display matrix-rank-2023-matrix" data-math="M_{234}=\begin{pmatrix}0&amp;\alpha&amp;0\\ \alpha&amp;0&amp;\alpha\\1&amp;-1&amp;2\end{pmatrix}" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos el determinante del menor</h3>
+                  <p data-matrix-rank-2023-language="es">Desarrollamos por la primera fila. El signo del elemento situado en la posición <span class="math-inline math-nowrap" data-math="(1,2)"></span> es negativo.</p>
+                  <p data-matrix-rank-2023-language="eu" hidden>Lehen errenkadatik garatzen dugu. <span class="math-inline math-nowrap" data-math="(1,2)"></span> posizioan dagoen elementuaren zeinua negatiboa da.</p>
+                  <div class="matrix-rank-2023-work">
+                    <div class="math-display" data-math="\det M_{234}=-\alpha\begin{vmatrix}\alpha&amp;\alpha\\1&amp;2\end{vmatrix}" data-math-display></div>
+                    <div class="math-display" data-math="\det M_{234}=-\alpha(2\alpha-\alpha)" data-math-display></div>
+                    <strong class="math-display" data-math="\det M_{234}=-\alpha^2" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Clasificamos todos los valores no nulos</h3>
+                  <p data-matrix-rank-2023-language="es">Si <span class="math-inline math-nowrap" data-math="\alpha\ne0"></span>, el menor de orden 3 no se anula. Entonces el rango es al menos 3 y, como no puede superar 3, queda determinado.</p>
+                  <p data-matrix-rank-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="\alpha\ne0"></span> bada, 3. ordenako minorea ez da anulatzen. Beraz, heina gutxienez 3 da eta, 3 baino handiagoa ezin denez izan, zehaztuta geratzen da.</p>
+                  <div class="matrix-rank-2023-work">
+                    <strong class="math-display" data-math="\alpha\ne0\quad\Longrightarrow\quad \operatorname{rg}(A)=3" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Estudiamos el único valor pendiente</h3>
+                  <p data-matrix-rank-2023-language="es">Para <span class="math-inline math-nowrap" data-math="\alpha=0"></span>, la primera fila es nula, de modo que el rango es menor que 3.</p>
+                  <p data-matrix-rank-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="\alpha=0"></span> denean, lehen errenkada nulua da; beraz, heina 3 baino txikiagoa da.</p>
+                  <p data-matrix-rank-2023-language="es">Para comprobar que no baja de 2, tomamos las filas segunda y tercera y las columnas primera y segunda.</p>
+                  <p data-matrix-rank-2023-language="eu" hidden>Heina 2tik behera ez dela jaisten egiaztatzeko, bigarren eta hirugarren errenkadak eta lehenengo eta bigarren zutabeak hartzen ditugu.</p>
+                  <div class="matrix-rank-2023-work">
+                    <div class="math-display matrix-rank-2023-matrix" data-math="A_0=\begin{pmatrix}0&amp;0&amp;0&amp;0\\3&amp;0&amp;0&amp;0\\0&amp;1&amp;-1&amp;2\end{pmatrix}" data-math-display></div>
+                    <div class="math-display" data-math="\begin{vmatrix}3&amp;0\\0&amp;1\end{vmatrix}=3\ne0" data-math-display></div>
+                  </div>
+                  <p>Existe un menor de orden 2 no nulo, así que el rango es al menos 2. Junto con la cota anterior, obtenemos el valor exacto.</p>
+                  <div class="matrix-rank-2023-work">
+                    <strong class="math-display" data-math="\alpha=0\quad\Longrightarrow\quad \operatorname{rg}(A)=2" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry matrix-rank-2023-essential">
+              <div class="math-display matrix-rank-2023-matrix" data-math="M_{234}=\begin{pmatrix}0&amp;\alpha&amp;0\\ \alpha&amp;0&amp;\alpha\\1&amp;-1&amp;2\end{pmatrix}" data-math-display></div>
+              <div class="math-display" data-math="\det M_{234}=-\alpha^2" data-math-display></div>
+              <div class="math-display" data-math="\alpha\ne0\quad\Longrightarrow\quad \operatorname{rg}(A)=3" data-math-display></div>
+              <div class="math-display" data-math="\alpha=0:\quad \begin{vmatrix}3&amp;0\\0&amp;1\end{vmatrix}=3\ne0" data-math-display></div>
+              <strong class="math-display matrix-rank-2023-classification" data-math="\operatorname{rg}(A)=\begin{cases}3,&amp;\alpha\ne0,\\2,&amp;\alpha=0.\end{cases}" data-math-display></strong>
+            </div>
+
+            <div class="result result-long matrix-rank-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display matrix-rank-2023-classification" data-math="\operatorname{rg}(A)=\begin{cases}3,&amp;\alpha\ne0,\\2,&amp;\alpha=0.\end{cases}" data-math-display></strong>
+              <p data-matrix-rank-2023-language="es">El rango solo disminuye cuando <span class="math-inline math-nowrap" data-math="\alpha=0"></span>.</p>
+              <p data-matrix-rank-2023-language="eu" hidden>Heina <span class="math-inline math-nowrap" data-math="\alpha=0"></span> denean bakarrik jaisten da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

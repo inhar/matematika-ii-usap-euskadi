@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zuzen batek eta puntu batek zehaztutako planoa · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-plano-recta-punto-idiomas.js" defer></script>
+  <script src="ejercicio-plano-recta-punto-grafico.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Extraordinaria · Opción B · Problema B.2</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Geometría en el espacio · Rectas y planos · Julio de 2019</p>
+        <h1>Plano determinado por una recta y un punto</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Se considera la recta</p>
+
+        <div class="line-point-statement">
+          <div class="symmetric-line math-display" aria-label="Recta r en forma continua" data-math="r\equiv\frac{x-1}{1}=\frac{y-2}{2}=\frac{z-3}{3}" data-math-display></div>
+          <div class="statement-point">
+            <span>y el punto exterior a ella</span>
+            <strong class="math-inline" data-math="P(1, 2, 5)."></strong>
+          </div>
+        </div>
+
+        <p>Hallar la ecuación del plano que contiene a r y a P.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema B.2</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Una recta y un punto exterior a ella determinan un único plano. De la ecuación continua de r leeremos un punto A de la recta y su vector director. Después construiremos el vector AP. Como el director de r y AP no son paralelos, proporcionan las dos direcciones necesarias para recorrer todo el plano.</p>
+            <div class="idea-formula line-point-idea-formula">
+              <span class="math-inline" data-math="A = (1, 2, 3)"></span>
+              <span class="math-inline" data-math="d_{r} = (1, 2, 3)"></span>
+              <span class="math-inline" data-math="AP = (0, 0, 2)"></span>
+            </div>
+            <p class="idea-text">Usando P como punto de apoyo, escribiremos la forma paramétrica. Finalmente calcularemos un vector normal con un producto vectorial para obtener también una ecuación implícita sencilla.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema B.2</p>
+            <h2 id="solution-title">Construcción y ecuaciones del plano</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Lectura de la ecuación continua de una recta</h3>
+                <p>En la forma continua, los números que se restan a x, y, z son las coordenadas de un punto de la recta. Los denominadores son las componentes de un vector director.</p>
+                <div class="theory-formula line-point-theory-formula math-display" data-math="\frac{x - x_{0}}{a} = \frac{y - y_{0}}{b} = \frac{z - z_{0}}{c} \Rightarrow A(x_{0}, y_{0}, z_{0}), d = (a, b, c)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Plano determinado por una recta y un punto exterior</h3>
+                <p>Tomamos un punto A de la recta, su dirección dᵣ y el vector AP. Si P no pertenece a la recta, esos dos vectores no son paralelos y determinan un único plano.</p>
+                <div class="theory-formula math-display" data-math="\pi : (x, y, z) = P + \lambda d_{r} + \mu AP" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Vector entre dos puntos</h3>
+                <p>El vector que va desde A hasta P se calcula restando las coordenadas del origen a las del extremo, componente a componente.</p>
+                <div class="theory-formula math-display" data-math="AP = P - A" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. De dos direcciones a la ecuación implícita</h3>
+                <p>El producto vectorial de dos direcciones no paralelas del plano produce un vector normal n, perpendicular a ambas. Con un punto conocido P, la ecuación implícita se obtiene imponiendo la perpendicularidad.</p>
+                <div class="theory-formula line-point-theory-normal">
+                  <span class="math-inline" data-math="n = d_{r} \times AP"></span>
+                  <span class="math-inline" data-math="n \cdot [(x, y, z) - P] = 0"></span>
+                </div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Extraemos un punto y un vector director de la recta</h3>
+                  <p>Comparamos la ecuación dada con la forma continua general. Los numeradores proporcionan el punto y los denominadores, la dirección.</p>
+                  <div class="calculation-list line-data-reading">
+                    <div><span>Punto de r</span><strong class="math-inline" data-math="A = (1, 2, 3)"></strong></div>
+                    <div><span>Vector director</span><strong class="math-inline" data-math="d_{r} = (1, 2, 3)"></strong></div>
+                  </div>
+                  <p>Así, la recta también puede escribirse como:</p>
+                  <div class="equation equation-compact line-point-nowrap math-display" data-math="r: (x, y, z) = (1, 2, 3) + t(1, 2, 3), t \in \mathbb{R}" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Construimos una segunda dirección del plano</h3>
+                  <p>La primera dirección ya es la de la recta. Para obtener otra que apunte hacia el punto exterior, calculamos el vector desde A hasta P.</p>
+                  <div class="derivation line-point-vector">
+                    <div><span class="math-inline" data-math="\overrightarrow{AP}"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="P-A"></span></div>
+                    <div><span></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="(1, 2, 5) - (1, 2, 3)"></span></div>
+                    <div><span></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="(0, 0, 2)"></strong></div>
+                  </div>
+                  <p>dᵣ y AP no son proporcionales: el primero tiene componentes x e y no nulas, mientras que el segundo solo tiene componente z. Por tanto, son dos direcciones independientes y determinan un plano.</p>
+                </li>
+
+                <li>
+                  <h3>Escribimos la ecuación vectorial y la paramétrica</h3>
+                  <p>Tomamos P como punto conocido y sumamos múltiplos independientes de las dos direcciones.</p>
+                  <div class="det-expansion line-point-parametric-vector">
+                    <strong class="math-inline" data-math="\pi : (x, y, z) = (1, 2, 5) + \lambda (1, 2, 3) + \mu (0, 0, 2)"></strong>
+                    <span class="math-inline" data-math="\lambda , \mu \in \mathbb{R}"></span>
+                  </div>
+                  <p>Igualando las componentes:</p>
+                  <div class="equation-system parallel-parametric-system line-point-parametric-system math-display" aria-label="Plano pi en forma paramétrica" data-math="\begin{cases}x = 1 + \lambda \\ y = 2 + 2\lambda \\ z = 5 + 3\lambda + 2\mu \\ \lambda , \mu \in \mathbb{R}\end{cases}" data-math-display></div>
+
+                  <figure class="contained-plane-figure" aria-label="Plano determinado por la recta r y el punto exterior P">
+                    <figcaption>La dirección de r y el vector AP recorren dos direcciones distintas del mismo plano.</figcaption>
+                    <div id="line-point-plane-board" class="jxgbox contained-plane-board" role="img" aria-label="Plano pi que contiene la recta r, el punto A de la recta, el punto exterior P y los vectores director y AP"></div>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Calculamos un vector normal</h3>
+                  <p>Para obtener la forma implícita hacemos el producto vectorial de las dos direcciones del plano.</p>
+                  <div class="calculation-list vector-calculation line-point-cross-product">
+                    <div><span class="math-inline" data-math="n_{x}"></span><strong class="math-inline" data-math="2\cdot 2 - 3\cdot 0 = 4"></strong></div>
+                    <div><span class="math-inline" data-math="n_{y}"></span><strong class="math-inline" data-math="3\cdot 0 - 1\cdot 2 = -2"></strong></div>
+                    <div><span class="math-inline" data-math="n_{z}"></span><strong class="math-inline" data-math="1\cdot 0 - 2\cdot 0 = 0"></strong></div>
+                  </div>
+                  <div class="det-expansion line-point-normal-simplification">
+                    <span class="math-inline" data-math="d_{r} \times AP = (4, -2, 0)"></span>
+                    <strong>Podemos simplificar: n = (2, −1, 0)</strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Obtenemos la ecuación implícita</h3>
+                  <p>Unimos el vector normal con el punto P(1, 2, 5). Todo punto (x, y, z) del plano debe cumplir:</p>
+                  <div class="derivation line-point-implicit-derivation">
+                    <div><span class="math-inline" data-math="(2, -1, 0) \cdot (x - 1, y - 2, z - 5)"></span><span class="math-inline" data-math="="></span><span>0</span></div>
+                    <div><span class="math-inline" data-math="2(x - 1) - (y - 2)"></span><span class="math-inline" data-math="="></span><span>0</span></div>
+                    <div><span class="math-inline" data-math="2x - 2 - y + 2"></span><span class="math-inline" data-math="="></span><span>0</span></div>
+                    <div><strong class="math-inline" data-math="2x-y"></strong><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="0"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos que contiene al punto y a toda la recta</h3>
+                  <p>Primero sustituimos las coordenadas de P. Después sustituimos un punto genérico de r, no solamente A.</p>
+                  <div class="calculation-list line-point-checks">
+                    <div><span>Punto P</span><strong class="math-inline" data-math="2\cdot 1 - 2 = 0"></strong></div>
+                    <div><span>Recta r</span><strong>2(1 + <i>t</i>) − (2 + 2<i>t</i>) = 0 <span>para todo t</span></strong></div>
+                  </div>
+                  <p>Por tanto, el plano contiene a P y a todos los puntos de r.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry line-point-essential">
+              <div class="math-display" data-math="A = (1, 2, 3); d_{r} = (1, 2, 3)" data-math-display></div>
+              <div class="math-display" data-math="AP = (1, 2, 5) - (1, 2, 3) = (0, 0, 2)" data-math-display></div>
+              <strong class="math-inline" data-math="\pi : (x, y, z) = (1, 2, 5) + \lambda (1, 2, 3) + \mu (0, 0, 2)"></strong>
+              <div class="math-display" data-math="n = d_{r} \times AP \parallel (2, -1, 0) \Rightarrow 2x - y = 0" data-math-display></div>
+            </div>
+
+            <div class="result result-long line-point-plane-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="line-point-result-form">
+                  <span>Forma paramétrica:</span>
+                  <span class="line-point-result-equations">
+                    <span class="math-inline" data-math="x = 1 + \lambda"></span>
+                    <span class="math-inline" data-math="y = 2 + 2\lambda"></span>
+                    <span class="math-inline" data-math="z = 5 + 3\lambda + 2\mu"></span>
+                  </span>
+                </span>
+                <span class="line-point-result-form">
+                  <span>Forma implícita:</span>
+                  <span class="line-point-result-equations">
+                    <span class="math-inline" data-math="2x - y = 0"></span>
+                  </span>
+                </span>
+              </strong>
+              <p>Ambas ecuaciones describen el único plano que contiene a la recta r y al punto P.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

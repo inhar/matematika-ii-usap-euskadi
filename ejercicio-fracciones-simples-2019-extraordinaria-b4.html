@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zatiki sinpleen bidezko integral arrazionala · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-fracciones-simples-idiomas.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Extraordinaria · Opción B · Problema B.4</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Integrales racionales · Julio de 2019</p>
+        <h1>Integral racional mediante fracciones simples</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Calcular la integral siguiente, explicando el método utilizado:</p>
+        <div class="equation statement-rational-integral math-display" aria-label="Integral de ocho x más siete dividido entre x más uno por x más tres, respecto de x" data-math="\int \frac{8x+7}{(x+1)(x+3)}\,dx" data-math-display></div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema B.4</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">El denominador ya está factorizado en dos factores lineales distintos. Por eso la fracción puede escribirse como suma de dos fracciones simples, una por cada factor. Tras eliminar denominadores obtendremos una identidad en x. Sustituiremos los dos valores que anulan los factores: así desaparece un término cada vez y podemos hallar A y B sin resolver un sistema. Finalmente integraremos cada fracción como un logaritmo y comprobaremos el resultado derivándolo.</p>
+            <div class="idea-formula">
+              <span class="math-inline" data-math="\frac{8x+7}{(x+1)(x+3)}=\frac{A}{x+1}+\frac{B}{x+3}"></span>
+              <strong class="math-inline" data-math="A=-\frac12,\qquad B=\frac{17}{2}"></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema B.4</p>
+            <h2 id="solution-title">Descomposición e integración</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Cuándo usar fracciones simples</h3>
+                <p>Una función racional es un cociente de polinomios. Si el grado del numerador es menor que el del denominador y este se descompone en factores lineales, podemos separar la fracción en otras más sencillas.</p>
+                <div class="theory-formula math-display" data-math="\frac{P(x)}{(x-a)(x-b)}=\frac{A}{x-a}+\frac{B}{x-b}\qquad(a\ne b)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Cómo se calculan los coeficientes</h3>
+                <p>Multiplicamos la igualdad por el denominador común. Así desaparecen las fracciones y obtenemos una identidad que debe cumplirse para todos los valores permitidos de x.</p>
+                <div class="theory-formula math-display" data-math="P(x)=A(x-b)+B(x-a)" data-math-display></div>
+                <p>Elegir los valores que anulan uno de los factores permite aislar directamente cada coeficiente.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Primitiva logarítmica</h3>
+                <p>La derivada del denominador lineal es uno. Por eso cada fracción simple tiene una primitiva logarítmica.</p>
+                <div class="theory-formula math-display" data-math="\int\frac{1}{x+c}\,dx=\ln\lvert x+c\rvert+C" data-math-display></div>
+                <p>El valor absoluto es necesario porque el logaritmo debe servir en los intervalos donde el factor lineal sea positivo o negativo.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Comprobación</h3>
+                <p>La forma más directa de verificar una integral indefinida es derivar el resultado. Al reunir las fracciones debe reaparecer exactamente el integrando inicial.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Reconocemos una función racional propia</h3>
+                  <p>El numerador tiene grado uno y el denominador grado dos. Además, el denominador ya aparece como producto de dos factores lineales distintos, por lo que podemos usar fracciones simples sin hacer antes una división de polinomios.</p>
+                </li>
+
+                <li>
+                  <h3>Planteamos la descomposición</h3>
+                  <p>Asignamos un coeficiente constante a cada factor del denominador.</p>
+                  <div class="math-display" data-math="\frac{8x+7}{(x+1)(x+3)}=\frac{A}{x+1}+\frac{B}{x+3}" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Eliminamos los denominadores</h3>
+                  <p>Multiplicamos toda la igualdad por el denominador común. En cada sumando se simplifica el factor que ya estaba debajo.</p>
+                  <div class="det-expansion integral-expansion">
+                    <span class="math-inline" data-math="(x+1)(x+3)\frac{8x+7}{(x+1)(x+3)}"></span>
+                    <span class="math-inline" data-math="=(x+1)(x+3)\left(\frac{A}{x+1}+\frac{B}{x+3}\right)"></span>
+                    <strong class="math-inline" data-math="8x+7=A(x+3)+B(x+1)"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Elegimos valores que anulan un término</h3>
+                  <p>Con el primer valor desaparece el término que contiene B; con el segundo desaparece el que contiene A. Así obtenemos cada incógnita por separado.</p>
+                  <div class="calculation-list">
+                    <div>
+                      <span class="math-inline" data-math="x=-1"></span>
+                      <strong class="math-inline" data-math="-8+7=A(-1+3)+B\cdot0\Rightarrow -1=2A\Rightarrow A=-\frac12"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="x=-3"></span>
+                      <strong class="math-inline" data-math="-24+7=A\cdot0+B(-3+1)\Rightarrow -17=-2B\Rightarrow B=\frac{17}{2}"></strong>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Escribimos y comprobamos la descomposición</h3>
+                  <p>Sustituimos los dos coeficientes. Para comprobarlos reunimos de nuevo las fracciones y verificamos el numerador.</p>
+                  <div class="det-expansion integral-expansion">
+                    <span class="math-inline" data-math="\frac{8x+7}{(x+1)(x+3)}=-\frac{1}{2(x+1)}+\frac{17}{2(x+3)}"></span>
+                    <span class="math-inline" data-math="\frac{-(x+3)+17(x+1)}{2(x+1)(x+3)}"></span>
+                    <strong class="math-inline" data-math="=\frac{16x+14}{2(x+1)(x+3)}=\frac{8x+7}{(x+1)(x+3)}"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Integramos término a término</h3>
+                  <p>La integral de una suma es la suma de las integrales. Sacamos los coeficientes constantes y aplicamos la primitiva logarítmica.</p>
+                  <div class="det-expansion integral-expansion">
+                    <span class="math-inline" data-math="\int\frac{8x+7}{(x+1)(x+3)}\,dx"></span>
+                    <span class="math-inline" data-math="=-\frac12\int\frac{1}{x+1}\,dx+\frac{17}{2}\int\frac{1}{x+3}\,dx"></span>
+                    <strong class="math-inline" data-math="=-\frac12\ln\lvert x+1\rvert+\frac{17}{2}\ln\lvert x+3\rvert+C"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos derivando</h3>
+                  <p>Derivamos la expresión obtenida y reunimos las dos fracciones.</p>
+                  <div class="det-expansion integral-expansion verification-expansion">
+                    <span class="math-inline" data-math="F'(x)=-\frac{1}{2(x+1)}+\frac{17}{2(x+3)}"></span>
+                    <span class="math-inline" data-math="=\frac{-(x+3)+17(x+1)}{2(x+1)(x+3)}"></span>
+                    <strong class="math-inline" data-math="=\frac{8x+7}{(x+1)(x+3)}"></strong>
+                  </div>
+                  <p>Recuperamos el integrando inicial, así que la primitiva es correcta.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry integral-essential">
+              <div class="math-display" data-math="\frac{8x+7}{(x+1)(x+3)}=\frac{A}{x+1}+\frac{B}{x+3}" data-math-display></div>
+              <div class="math-display" data-math="8x+7=A(x+3)+B(x+1)" data-math-display></div>
+              <div class="math-display" data-math="x=-1\Rightarrow A=-\frac12\qquad x=-3\Rightarrow B=\frac{17}{2}" data-math-display></div>
+              <strong class="math-inline" data-math="\int\frac{8x+7}{(x+1)(x+3)}\,dx=-\frac12\ln\lvert x+1\rvert+\frac{17}{2}\ln\lvert x+3\rvert+C"></strong>
+            </div>
+
+            <div class="result result-long integral-result">
+              <span>Resultado</span>
+              <strong class="math-inline" data-math="-\dfrac12\ln\lvert x+1\rvert+\dfrac{17}{2}\ln\lvert x+3\rvert+C"></strong>
+              <p>Al derivar se recupera el integrando original.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

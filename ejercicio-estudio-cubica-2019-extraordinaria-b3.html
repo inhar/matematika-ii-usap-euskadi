@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funtzio kubiko baten monotonia eta muturrak · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-estudio-cubica-idiomas.js" defer></script>
+  <script src="ejercicio-estudio-cubica-grafico.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Extraordinaria · Opción B · Problema B.3</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Crecimiento y extremos · Julio de 2019</p>
+        <h1>Estudio completo de una función cúbica</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Estudiar los intervalos de crecimiento y decrecimiento y los extremos de la función</p>
+        <div class="equation equation-compact cubic-study-statement math-display" data-math="f(x)=x^3+3x^2-2"></div>
+        <p>Representar gráficamente f.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema B.3</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">La derivada mide la pendiente de la gráfica. Primero calcularemos f′ y buscaremos dónde vale cero; esos puntos dividirán la recta real en intervalos en los que el signo de la derivada permanece constante.</p>
+            <div class="idea-formula cubic-study-idea-formula">
+              <span class="math-inline" data-math="f'(x)=3x(x+2)"></span>
+              <strong class="math-inline" data-math="f'(x)=0\;\Rightarrow\;x=-2,\,0"></strong>
+            </div>
+            <p class="idea-text">El signo positivo, negativo y de nuevo positivo nos dará crecimiento, decrecimiento y crecimiento. Evaluaremos f en los puntos críticos para obtener los extremos y calcularemos los cortes con los ejes para dibujar la cúbica sin depender de una gráfica aproximada.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema B.3</p>
+            <h2 id="solution-title">Monotonía, extremos y gráfica</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Signo de la derivada y monotonía</h3>
+                <p>La derivada indica el signo de la pendiente. Si f′ es positiva en un intervalo, f crece; si f′ es negativa, f decrece.</p>
+                <div class="theory-formula cubic-study-theory-sign">
+                  <span class="math-inline" data-math-es="f'(x)>0\Rightarrow f\text{ creciente};" data-math-eu="f'(x)>0\Rightarrow f\text{ gorakorra};"></span>
+                  <span class="math-inline" data-math-es="f'(x)<0\Rightarrow f\text{ decreciente}." data-math-eu="f'(x)<0\Rightarrow f\text{ beherakorra}."></span>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Puntos críticos</h3>
+                <p>En una función polinómica la derivada existe para todo número real. Por eso los únicos candidatos a extremo son las soluciones de f′(x) = 0. Esos valores separan los intervalos cuyo signo debemos estudiar.</p>
+                <div class="theory-formula math-display" data-math-es="f'(c)=0\Rightarrow c\text{ es candidato a extremo}" data-math-eu="f'(c)=0\Rightarrow c\text{ mutur izateko hautagaia da}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Clasificación mediante el cambio de signo</h3>
+                <p>Un punto crítico es un máximo local cuando la función pasa de crecer a decrecer. Es un mínimo local cuando pasa de decrecer a crecer.</p>
+                <div class="theory-formula cubic-study-theory-extrema">
+                  <span class="math-inline" data-math-es="+\to-\Rightarrow\text{máximo local};" data-math-eu="+\to-\Rightarrow\text{maximo lokala};"></span>
+                  <span class="math-inline" data-math-es="-\to+\Rightarrow\text{mínimo local}." data-math-eu="-\to+\Rightarrow\text{minimo lokala}."></span>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Información necesaria para representar la función</h3>
+                <p>La monotonía y los extremos dan la forma general. Los cortes con el eje x se obtienen resolviendo f(x) = 0 y el corte con el eje y se obtiene calculando f(0). Al ser un polinomio, la gráfica es continua y une toda esa información sin saltos.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Calculamos y factorizamos la derivada</h3>
+                  <p>Aplicamos la regla de la potencia a cada término. La constante −2 tiene derivada cero.</p>
+                  <div class="derivation cubic-study-derivative">
+                    <div><span class="math-inline" data-math="f'(x)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="3x^2+6x"></span></div>
+                    <div><span></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="3x(x+2)"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos los puntos críticos</h3>
+                  <p>Un producto es cero cuando alguno de sus factores es cero.</p>
+                  <div class="derivation cubic-study-critical-points">
+                    <div><span class="math-inline" data-math="3x(x+2)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="0"></span></div>
+                    <div><span class="math-inline" data-math="x"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="0"></strong></div>
+                    <div><span class="math-inline" data-math="x+2"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="0\;\Rightarrow\;x=-2"></strong></div>
+                  </div>
+                  <p>Los valores −2 y 0 dividen la recta real en tres intervalos.</p>
+                </li>
+
+                <li>
+                  <h3>Estudiamos el signo de f′ en cada intervalo</h3>
+                  <p>Basta elegir un valor de prueba dentro de cada intervalo, porque la derivada no vuelve a anularse en su interior.</p>
+                  <div class="calculation-list cubic-study-sign-checks">
+                    <div><span class="math-inline" data-math="x=-3"></span><strong class="math-inline" data-math="f'(-3)=3(-3)(-1)=9>0"></strong></div>
+                    <div><span class="math-inline" data-math="x=-1"></span><strong class="math-inline" data-math="f'(-1)=3(-1)(1)=-3<0"></strong></div>
+                    <div><span class="math-inline" data-math="x=1"></span><strong class="math-inline" data-math="f'(1)=3(1)(3)=9>0"></strong></div>
+                  </div>
+
+                  <div class="cubic-variation-strip" aria-label="Signo de la derivada y variación de la función">
+                    <div class="variation-segment variation-increasing">
+                      <span class="variation-interval math-inline" data-math="(-\infty,-2)"></span>
+                      <strong class="math-inline" data-math="f'(x)>0"></strong>
+                      <span class="variation-behaviour">↗ Crece</span>
+                    </div>
+                    <div class="variation-critical">
+                      <strong class="math-inline" data-math="x=-2"></strong>
+                      <span class="math-inline" data-math="f'=0"></span>
+                      <span>Máximo</span>
+                    </div>
+                    <div class="variation-segment variation-decreasing">
+                      <span class="variation-interval math-inline" data-math="(-2,0)"></span>
+                      <strong class="math-inline" data-math="f'(x)<0"></strong>
+                      <span class="variation-behaviour">↘ Decrece</span>
+                    </div>
+                    <div class="variation-critical">
+                      <strong class="math-inline" data-math="x=0"></strong>
+                      <span class="math-inline" data-math="f'=0"></span>
+                      <span>Mínimo</span>
+                    </div>
+                    <div class="variation-segment variation-increasing">
+                      <span class="variation-interval math-inline" data-math="(0,+\infty)"></span>
+                      <strong class="math-inline" data-math="f'(x)>0"></strong>
+                      <span class="variation-behaviour">↗ Crece</span>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Escribimos los intervalos y calculamos los extremos</h3>
+                  <div class="calculation-list cubic-study-monotonicity">
+                    <div><span>Crecimiento</span><strong class="math-inline" data-math="(-\infty,-2)\cup(0,+\infty)"></strong></div>
+                    <div><span>Decrecimiento</span><strong class="math-inline" data-math="(-2,0)"></strong></div>
+                  </div>
+                  <p>El cambio de signo clasifica cada punto crítico. Para obtener el punto completo calculamos su coordenada y.</p>
+                  <div class="calculation-list cubic-study-extrema-values">
+                    <div><span class="math-inline" data-math="f(-2)"></span><strong class="math-inline" data-math="(-2)^3+3(-2)^2-2=-8+12-2=2"></strong></div>
+                    <div><span class="math-inline" data-math="f(0)"></span><strong class="math-inline" data-math="0^3+3\cdot0^2-2=-2"></strong></div>
+                  </div>
+                  <div class="det-expansion cubic-study-extrema-result">
+                    <strong><span>Máximo local:</span> <span class="math-inline" data-math="(-2,2)"></span></strong>
+                    <strong><span>Mínimo local:</span> <span class="math-inline" data-math="(0,-2)"></span></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos los cortes con los ejes</h3>
+                  <p>El corte con el eje y es inmediato: f(0) = −2. Para hallar los cortes con el eje x resolvemos f(x) = 0.</p>
+                  <div class="derivation cubic-study-factorization">
+                    <div><span class="math-inline" data-math="f(-1)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="-1+3-2=0"></span></div>
+                    <div><span class="math-inline" data-math="x^3+3x^2-2"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="(x+1)(x^2+2x-2)"></span></div>
+                  </div>
+                  <p>Un factor proporciona x = −1. Resolvemos el factor cuadrático con la fórmula general.</p>
+                  <div class="derivation cubic-study-quadratic-roots">
+                    <div><span class="math-inline" data-math="\Delta"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="2^2-4\cdot1\cdot(-2)"></span></div>
+                    <div><span></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="12"></strong></div>
+                    <div><span class="math-inline" data-math="x"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="\dfrac{-2\pm\sqrt{12}}{2}"></span></div>
+                    <div><span></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="-1\pm\sqrt3"></strong></div>
+                  </div>
+                  <div class="det-expansion cubic-study-roots">
+                    <span class="math-inline" data-math="x_1=-1-\sqrt3\approx-2{,}73;"></span>
+                    <span class="math-inline" data-math="x_2=-1;"></span>
+                    <span class="math-inline" data-math="x_3=-1+\sqrt3\approx0{,}73."></span>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Representamos la función</h3>
+                  <p>Situamos los tres cortes con el eje x, el máximo y el mínimo. Después unimos la información respetando los intervalos de crecimiento y decrecimiento.</p>
+                  <figure class="cubic-study-figure" aria-label="Gráfica de la función cúbica con sus cortes y extremos">
+                    <figcaption>La curva crece hasta el máximo, decrece hasta el mínimo y vuelve a crecer. Las etiquetas de los ejes permiten leer la escala.</figcaption>
+                    <div id="cubic-study-board" class="jxgbox cubic-study-board" role="img" aria-label="Gráfica de f de x igual a x al cubo más tres x al cuadrado menos dos, con máximo, mínimo y raíces"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry cubic-study-essential">
+              <div class="math-display" data-math="f'(x)=3x(x+2)=0\;\Rightarrow\;x=-2,\,0"></div>
+              <div class="cubic-study-essential-signs">
+                <span class="math-inline" data-math="(-\infty,-2):\ f'>0;"></span>
+                <span class="math-inline" data-math="(-2,0):\ f'<0;"></span>
+                <span class="math-inline" data-math="(0,+\infty):\ f'>0."></span>
+              </div>
+              <strong>Máximo local en (−2, 2); mínimo local en (0, −2).</strong>
+              <div class="cubic-study-essential-roots">
+                <span>Cortes con el eje x:</span>
+                <span class="math-inline" data-math="-1-\sqrt3,"></span>
+                <span class="math-inline" data-math="-1,"></span>
+                <span class="math-inline" data-math="-1+\sqrt3."></span>
+              </div>
+            </div>
+
+            <div class="result result-long cubic-study-result">
+              <span>Resultado</span>
+              <strong>
+                <span>Creciente en (−∞, −2) ∪ (0, +∞).</span>
+                <span>Decreciente en (−2, 0).</span>
+              </strong>
+              <p>Máximo local en (−2, 2) y mínimo local en (0, −2).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

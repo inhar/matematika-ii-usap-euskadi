@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parametrodun sistema lineala · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-sistemas-idiomas.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Ordinaria · Opción A · Problema A.1</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Álgebra · Sistemas lineales · Junio de 2019</p>
+        <h1>Discusión de un sistema con parámetro</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Discutir, en función de <i>m</i>, el sistema de ecuaciones:</p>
+
+        <div class="equation-system statement-system math-display" aria-label="Sistema de tres ecuaciones con parámetro m" data-math="\begin{cases}(m + 3)x + my + mz = m - 1 \\ 3x + mz = m - 2 \\ -y + z = m - 3\end{cases}" data-math-display></div>
+
+        <p class="statement-prompt">Resolver en los casos de indeterminación, suponiendo que existan.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema A.1</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Para discutir el sistema necesitamos saber cuándo tiene una solución, infinitas o ninguna. El determinante de la matriz de coeficientes localizará los valores de <i>m</i> en los que puede cambiar el comportamiento. Fuera de esos valores habrá solución única; en cada valor excepcional compararemos el rango de la matriz de coeficientes con el de la matriz ampliada y resolveremos únicamente si aparece un caso compatible indeterminado.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema A.1</p>
+            <h2 id="solution-title">Discusión y resolución del sistema</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Matriz de coeficientes y matriz ampliada</h3>
+                <p>Un sistema lineal se escribe como A·X = b. La matriz A contiene los coeficientes de las incógnitas y la matriz ampliada A* añade como última columna los términos independientes.</p>
+                <div class="theory-formula math-display" data-math="A^{*} = (A\mid b)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Determinante y rango</h3>
+                <p>En una matriz cuadrada de orden 3, det(A) ≠ 0 implica rango(A) = 3. Por tanto, el sistema tiene solución única. Solo hay que estudiar por separado los valores del parámetro que anulan el determinante.</p>
+                <div class="theory-formula math-display" data-math="\det(A)\ne0\Rightarrow\operatorname{rg}(A)=3" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Teorema de Rouché-Frobenius</h3>
+                <p>Sea n el número de incógnitas. La comparación entre los rangos de A y A* clasifica el sistema:</p>
+                <div class="classification-list theory-classification">
+                  <div><span class="math-inline" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)=n"></span><strong>Solución única</strong></div>
+                  <div><span class="math-inline" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)<n"></span><strong>Infinitas soluciones</strong></div>
+                  <div><span class="math-inline" data-math="\operatorname{rg}(A)<\operatorname{rg}(A^*)"></span><strong>Ninguna solución</strong></div>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Parámetros libres</h3>
+                <p>Si hay infinitas soluciones y el rango es 2 con 3 incógnitas, queda una incógnita libre. Se le asigna un parámetro, normalmente λ, y las demás incógnitas se expresan en función de él.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Escribimos la matriz de coeficientes</h3>
+                  <p>Tomamos en cada ecuación los coeficientes de x, y, z, en ese orden. Cuando una incógnita no aparece, su coeficiente es 0.</p>
+                  <div class="matrix-equation-line">
+                    <span class="math-inline" data-math="A ="></span>
+                    <div class="matrix matrix-large math-display" data-math="\begin{pmatrix}m + 3 &amp; m &amp; m \\ 3 &amp; 0 &amp; m \\ 0 &amp; -1 &amp; 1\end{pmatrix}" data-math-display></div>
+                  </div>
+                  <p>La columna de términos independientes es b = (m − 1, m − 2, m − 3)<span class="math-inline" data-math="{}^T"></span>.</p>
+                </li>
+
+                <li>
+                  <h3>Calculamos det(A)</h3>
+                  <p>Desarrollamos por la primera fila, con signos +, −, +:</p>
+                  <div class="det-expansion system-det-expansion">
+                    <span class="math-inline" data-math="\det(A) = (m + 3)[0\cdot 1 - m(-1)]"></span>
+                    <span class="math-inline" data-math="- m[3\cdot 1 - m\cdot 0]"></span>
+                    <span class="math-inline" data-math="+ m[3(-1) - 0\cdot 0]"></span>
+                    <span class="math-inline" data-math="= m(m + 3) - 3m - 3m"></span>
+                    <span class="math-inline" data-math="= m^{2} - 3m"></span>
+                    <strong class="math-inline" data-math="= m(m - 3)"></strong>
+                  </div>
+                  <p>El determinante se anula exactamente para m = 0 y m = 3. Esos son los únicos valores que requieren un estudio separado.</p>
+                </li>
+
+                <li>
+                  <h3>Caso m ≠ 0 y m ≠ 3</h3>
+                  <p>En este caso det(A) ≠ 0, por lo que rango(A) = 3. Como hay tres incógnitas, el sistema es compatible determinado: tiene una única solución.</p>
+                </li>
+
+                <li>
+                  <h3>Caso m = 0</h3>
+                  <p>Sustituimos m = 0 en el sistema:</p>
+                  <div class="equation-system compact-system math-display" data-math="\begin{cases}3x = -1 \\ 3x = -2 \\ -y + z = -3\end{cases}" data-math-display></div>
+                  <p>Las dos primeras ecuaciones tienen el mismo lado izquierdo, pero exigen valores distintos. Restando la primera a la segunda se obtiene 0 = −1, una contradicción.</p>
+                  <div class="rank-comparison">
+                    <span class="math-inline" data-math="\operatorname{rg}(A)=2"></span>
+                    <span class="math-inline" data-math="\operatorname{rg}(A^*)=3"></span>
+                  </div>
+                  <p>Los rangos son distintos; por Rouché-Frobenius, el sistema es incompatible y no tiene solución.</p>
+                </li>
+
+                <li>
+                  <h3>Caso m = 3</h3>
+                  <p>Al sustituir m = 3 obtenemos:</p>
+                  <div class="equation-system compact-system math-display" data-math="\begin{cases}6x + 3y + 3z = 2 \\ 3x + 3z = 1 \\ -y + z = 0\end{cases}" data-math-display></div>
+                  <p>La primera ecuación es 2 veces la segunda menos 3 veces la tercera, también en los términos independientes. Por tanto, no aporta una condición nueva.</p>
+                  <div class="equation equation-compact math-display" data-math="F_{1} = 2F_{2} - 3F_{3}" data-math-display></div>
+                  <p>Además, el menor formado por las filas 2 y 3 y las columnas 1 y 2 vale −3, que no es cero. Así, los dos rangos son exactamente 2:</p>
+                  <div class="rank-comparison">
+                    <span class="math-inline" data-math="\operatorname{rg}(A)=2"></span>
+                    <span class="math-inline" data-math="\operatorname{rg}(A^*)=2"></span>
+                  </div>
+                  <p>Como 2 &lt; 3, el sistema es compatible indeterminado y tiene una variable libre.</p>
+                </li>
+
+                <li>
+                  <h3>Resolvemos el caso indeterminado</h3>
+                  <p>De la tercera ecuación obtenemos y = z. Elegimos z como variable libre y escribimos z = λ.</p>
+                  <div class="derivation parameter-solution">
+                    <div><span>z</span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="\lambda"></span></div>
+                    <div><span>y</span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="\lambda"></span></div>
+                    <div><span class="math-inline" data-math="3x + 3\lambda"></span><span class="math-inline" data-math="="></span><span>1</span></div>
+                    <div><span>x</span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="\frac{1}{3} - \lambda"></span></div>
+                  </div>
+                  <p>La primera ecuación queda automáticamente satisfecha, porque depende de las otras dos.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="equation essential-calculation math-display" data-math="\det(A) = m(m - 3)" data-math-display></div>
+
+            <div class="classification-list essential-classification">
+              <div>
+                <span>m ≠ 0, 3</span>
+                <strong>Compatible determinado</strong>
+                <p>Una solución.</p>
+              </div>
+              <div>
+                <span>m = 0</span>
+                <strong>Incompatible</strong>
+                <p>Ninguna solución.</p>
+              </div>
+              <div>
+                <span>m = 3</span>
+                <strong>Compatible indeterminado</strong>
+                <p>Infinitas soluciones.</p>
+              </div>
+            </div>
+
+            <div class="result result-long system-result">
+              <span>Resultado</span>
+              <strong>(x, y, z) = (1/3 − λ, λ, λ)</strong>
+              <p>Único caso indeterminado: m = 3, con λ ∈ ℝ.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

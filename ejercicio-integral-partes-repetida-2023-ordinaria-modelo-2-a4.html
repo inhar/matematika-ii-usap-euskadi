@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zatikako integrazioa bi aldiz · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-integral-partes-repetida-2023-ordinaria-modelo-2-idiomas.js?v=2023-ord-m2-a4" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page repeated-parts-2023-page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Modelo 2 · Ejercicio A4</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Integración por partes · 2023</p>
+        <h1 class="repeated-parts-2023-title">Integración por partes aplicada dos veces</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-repeated-parts-2023-language="es">Calcula la integral siguiente, explicando el método utilizado:</p>
+        <p data-repeated-parts-2023-language="eu" hidden>Kalkulatu integral hau, erabilitako metodoa azalduz:</p>
+        <div class="statement-function repeated-parts-2023-statement math-display" data-math="\int (x^2+1)e^{x+1}\,dx" data-math-display></div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio A4</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-repeated-parts-2023-language="es">El integrando es el producto de un polinomio de segundo grado y una exponencial. Elegimos el polinomio como <span class="math-inline math-nowrap" data-math="u"></span>, porque cada vez que lo derivamos disminuye su grado, y <span class="math-inline math-nowrap" data-math="e^{x+1}\,dx"></span> como <span class="math-inline math-nowrap" data-math="dv"></span>, porque su primitiva vuelve a ser <span class="math-inline math-nowrap" data-math="e^{x+1}"></span>.</p>
+            <p class="idea-text" data-repeated-parts-2023-language="eu" hidden>Integrakizuna bigarren mailako polinomio baten eta esponentzial baten biderkadura da. Polinomioa <span class="math-inline math-nowrap" data-math="u"></span> gisa aukeratzen dugu, deribatzen dugun bakoitzean haren maila jaisten delako; eta <span class="math-inline math-nowrap" data-math="e^{x+1}\,dx"></span>, <span class="math-inline math-nowrap" data-math="dv"></span> gisa, haren primitiboa berriro <span class="math-inline math-nowrap" data-math="e^{x+1}"></span> delako.</p>
+            <p class="idea-text" data-repeated-parts-2023-language="es">La primera aplicación deja otra integral del mismo tipo, pero con un polinomio lineal. Aplicamos partes una segunda vez y llegamos a una integral exponencial inmediata. La cadena de derivadas muestra por qué el proceso termina.</p>
+            <p class="idea-text" data-repeated-parts-2023-language="eu" hidden>Lehen aplikazioak mota bereko beste integral bat uzten du, baina polinomio lineal batekin. Zatikako integrazioa bigarren aldiz aplikatu, eta berehalako integral esponentzial batera iristen gara. Deribatuen kateak prozesua zergatik amaitzen den erakusten du.</p>
+            <div class="repeated-parts-2023-degree" aria-label="El grado del polinomio disminuye al derivarlo">
+              <div class="math-display" data-math="x^2+1\xrightarrow{\ d/dx\ }2x\xrightarrow{\ d/dx\ }2" data-math-display></div>
+            </div>
+            <div class="essential-geometry repeated-parts-2023-essential">
+              <div class="math-display" data-math="I=(x^2+1)e^{x+1}-\int 2xe^{x+1}\,dx" data-math-display></div>
+              <div class="math-display" data-math="\int 2xe^{x+1}\,dx=(2x-2)e^{x+1}" data-math-display></div>
+              <strong class="math-display" data-math="I=(x^2-2x+3)e^{x+1}+C" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio A4</p>
+            <h2 id="solution-title">Dos aplicaciones de la integración por partes</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Fórmula de integración por partes</h3>
+                <p data-repeated-parts-2023-language="es">La fórmula procede de integrar la regla de derivación de un producto. Elegimos una parte para derivarla y otra para integrarla.</p>
+                <p data-repeated-parts-2023-language="eu" hidden>Formula biderkadura baten deribazio-erregela integratzetik dator. Zati bat deribatzeko eta beste bat integratzeko aukeratzen ditugu.</p>
+                <div class="repeated-parts-2023-theory-chain">
+                  <div class="math-display" data-math="(uv)'=u'v+uv'" data-math-display></div>
+                  <div class="math-display" data-math="\int u\,dv=uv-\int v\,du" data-math-display></div>
+                </div>
+              </div>
+              <div class="theory-topic">
+                <h3 data-repeated-parts-2023-language="es">2. Elección de <span class="math-inline math-nowrap" data-math="u"></span> y <span class="math-inline math-nowrap" data-math="dv"></span></h3>
+                <h3 data-repeated-parts-2023-language="eu" hidden>2. <span class="math-inline math-nowrap" data-math="u"></span> eta <span class="math-inline math-nowrap" data-math="dv"></span> aukeratzea</h3>
+                <p data-repeated-parts-2023-language="es">En un producto de un polinomio y una exponencial conviene derivar el polinomio: su grado disminuye hasta convertirse en una constante. La exponencial se integra sin complicarse.</p>
+                <p data-repeated-parts-2023-language="eu" hidden>Polinomio baten eta esponentzial baten biderkaduran, polinomioa deribatzea komeni da: haren maila jaitsi egiten da konstante bihurtu arte. Esponentziala zaildu gabe integratzen da.</p>
+                <div class="repeated-parts-2023-theory-chain">
+                  <div class="math-display" data-math="u=P(x)\quad\Longrightarrow\quad du=P'(x)\,dx" data-math-display></div>
+                  <div class="math-display" data-math="dv=e^{x+1}\,dx\quad\Longrightarrow\quad v=e^{x+1}" data-math-display></div>
+                </div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Repetición del método</h3>
+                <p data-repeated-parts-2023-language="es">Si tras aplicar la fórmula queda otro producto polinomio-exponencial, repetimos partes. No añadimos una constante en cada cálculo auxiliar: una sola constante al final reúne todas las constantes posibles.</p>
+                <p data-repeated-parts-2023-language="eu" hidden>Formula aplikatu ondoren beste biderkadura polinomiko-esponentzial bat geratzen bada, zatikako integrazioa errepikatzen dugu. Ez dugu konstante bat gehitzen kalkulu lagungarri bakoitzean: amaierako konstante bakarrak konstante posible guztiak biltzen ditu.</p>
+                <div class="theory-formula math-display" data-math="\deg P=2\longrightarrow1\longrightarrow0" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Reconocemos el método</h3>
+                  <p data-repeated-parts-2023-language="es">Tenemos un producto de dos tipos de funciones. La exponencial se integra inmediatamente y el polinomio se simplifica al derivarlo; por eso usamos integración por partes.</p>
+                  <p data-repeated-parts-2023-language="eu" hidden>Bi funtzio motaren arteko biderkadura dugu. Esponentziala berehala integratzen da, eta polinomioa sinplifikatu egiten da deribatzean; horregatik erabiltzen dugu zatikako integrazioa.</p>
+                  <div class="repeated-parts-2023-work">
+                    <div class="math-display" data-math="I=\int (x^2+1)e^{x+1}\,dx" data-math-display></div>
+                    <strong class="math-display" data-math="\int u\,dv=uv-\int v\,du" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Preparamos la primera integración por partes</h3>
+                  <p data-repeated-parts-2023-language="es">Tomamos el polinomio como <span class="math-inline math-nowrap" data-math="u"></span>. Para hallar <span class="math-inline math-nowrap" data-math="v"></span>, integramos la exponencial; como la derivada de <span class="math-inline math-nowrap" data-math="x+1"></span> es <span class="math-inline math-nowrap" data-math="1"></span>, no aparece ningún factor adicional.</p>
+                  <p data-repeated-parts-2023-language="eu" hidden>Polinomioa <span class="math-inline math-nowrap" data-math="u"></span> gisa hartzen dugu. <span class="math-inline math-nowrap" data-math="v"></span> aurkitzeko, esponentziala integratzen dugu; <span class="math-inline math-nowrap" data-math="x+1"></span>-en deribatua <span class="math-inline math-nowrap" data-math="1"></span> denez, ez da faktore gehigarririk agertzen.</p>
+                  <div class="repeated-parts-2023-parts">
+                    <div>
+                      <div class="math-display" data-math="u=x^2+1" data-math-display></div>
+                      <div class="math-display" data-math="du=2x\,dx" data-math-display></div>
+                    </div>
+                    <div>
+                      <div class="math-display" data-math="dv=e^{x+1}\,dx" data-math-display></div>
+                      <div class="math-display" data-math="v=e^{x+1}" data-math-display></div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Aplicamos la primera fórmula</h3>
+                  <p data-repeated-parts-2023-language="es">Sustituimos <span class="math-inline math-nowrap" data-math="u"></span>, <span class="math-inline math-nowrap" data-math="v"></span>, <span class="math-inline math-nowrap" data-math="du"></span> y <span class="math-inline math-nowrap" data-math="dv"></span>. La integral restante es más sencilla porque el polinomio ha pasado de grado dos a grado uno.</p>
+                  <p data-repeated-parts-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="u"></span>, <span class="math-inline math-nowrap" data-math="v"></span>, <span class="math-inline math-nowrap" data-math="du"></span> eta <span class="math-inline math-nowrap" data-math="dv"></span> ordezkatzen ditugu. Geratzen den integrala sinpleagoa da, polinomioa bigarren mailatik lehen mailara igaro delako.</p>
+                  <div class="repeated-parts-2023-work">
+                    <div class="math-display" data-math="I=uv-\int v\,du" data-math-display></div>
+                    <strong class="math-display" data-math="I=(x^2+1)e^{x+1}-\int 2xe^{x+1}\,dx" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Resolvemos la integral restante por partes</h3>
+                  <p data-repeated-parts-2023-language="es">Llamamos <span class="math-inline math-nowrap" data-math="J"></span> a la integral auxiliar y repetimos exactamente la misma elección: derivamos el polinomio lineal e integramos la exponencial.</p>
+                  <p data-repeated-parts-2023-language="eu" hidden>Integral lagungarriari <span class="math-inline math-nowrap" data-math="J"></span> deitzen diogu, eta aukera bera errepikatzen dugu: polinomio lineala deribatu eta esponentziala integratzen dugu.</p>
+                  <div class="repeated-parts-2023-work">
+                    <div class="math-display" data-math="J=\int 2xe^{x+1}\,dx" data-math-display></div>
+                  </div>
+                  <div class="repeated-parts-2023-parts">
+                    <div>
+                      <div class="math-display" data-math="u=2x" data-math-display></div>
+                      <div class="math-display" data-math="du=2\,dx" data-math-display></div>
+                    </div>
+                    <div>
+                      <div class="math-display" data-math="dv=e^{x+1}\,dx" data-math-display></div>
+                      <div class="math-display" data-math="v=e^{x+1}" data-math-display></div>
+                    </div>
+                  </div>
+                  <div class="repeated-parts-2023-work">
+                    <div class="math-display" data-math="J=2xe^{x+1}-\int 2e^{x+1}\,dx" data-math-display></div>
+                    <div class="math-display" data-math="J=2xe^{x+1}-2e^{x+1}" data-math-display></div>
+                    <strong class="math-display" data-math="J=(2x-2)e^{x+1}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Reunimos y simplificamos los resultados</h3>
+                  <p data-repeated-parts-2023-language="es">Sustituimos el valor de <span class="math-inline math-nowrap" data-math="J"></span> en la primera igualdad. Después sacamos la exponencial como factor común y reducimos el polinomio.</p>
+                  <p data-repeated-parts-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="J"></span>-ren balioa lehen berdintzan ordezkatzen dugu. Ondoren, esponentziala faktore komun gisa atera eta polinomioa laburtzen dugu.</p>
+                  <div class="repeated-parts-2023-work">
+                    <div class="math-display" data-math="I=(x^2+1)e^{x+1}-(2x-2)e^{x+1}" data-math-display></div>
+                    <div class="math-display" data-math="I=(x^2+1-2x+2)e^{x+1}" data-math-display></div>
+                    <strong class="math-display" data-math="I=(x^2-2x+3)e^{x+1}+C" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos derivando</h3>
+                  <p data-repeated-parts-2023-language="es">Aplicamos la regla del producto a la primitiva. Al sumar los dos términos, recuperamos exactamente el integrando.</p>
+                  <p data-repeated-parts-2023-language="eu" hidden>Biderkaduraren erregela aplikatzen diogu primitiboari. Bi terminoak batzean, integrakizuna zehazki berreskuratzen dugu.</p>
+                  <div class="repeated-parts-2023-work">
+                    <div class="math-display" data-math="F(x)=(x^2-2x+3)e^{x+1}" data-math-display></div>
+                    <div class="math-display" data-math="F'(x)=(2x-2)e^{x+1}+(x^2-2x+3)e^{x+1}" data-math-display></div>
+                    <div class="math-display" data-math="F'(x)=\bigl[(2x-2)+(x^2-2x+3)\bigr]e^{x+1}" data-math-display></div>
+                    <strong class="math-display" data-math="F'(x)=(x^2+1)e^{x+1}" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry repeated-parts-2023-essential">
+              <div class="math-display" data-math="I=(x^2+1)e^{x+1}-\int 2xe^{x+1}\,dx" data-math-display></div>
+              <div class="math-display" data-math="\int 2xe^{x+1}\,dx=2xe^{x+1}-2e^{x+1}" data-math-display></div>
+              <div class="math-display" data-math="I=(x^2+1)e^{x+1}-(2x-2)e^{x+1}" data-math-display></div>
+              <strong class="math-display" data-math="I=(x^2-2x+3)e^{x+1}+C" data-math-display></strong>
+            </div>
+
+            <div class="result result-long repeated-parts-2023-result">
+              <span>Resultado</span>
+              <div class="repeated-parts-2023-result-formulas">
+                <strong class="math-display" data-math="I=\int (x^2+1)e^{x+1}\,dx" data-math-display></strong>
+                <strong class="math-display" data-math="I=(x^2-2x+3)e^{x+1}+C" data-math-display></strong>
+              </div>
+              <p data-repeated-parts-2023-language="es">La derivada de la expresión obtenida coincide con el integrando.</p>
+              <p data-repeated-parts-2023-language="eu" hidden>Lortutako adierazpenaren deribatua integrakizunarekin bat dator.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bi zuzen ebakitzaile, plano komuna eta perpendikularra · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-rectas-secantes-plano-perpendicular-2024-ordinaria-a2-idiomas.js?v=2024-ord-a2-1" defer></script>
+  <script src="ejercicio-rectas-secantes-plano-perpendicular-2024-ordinaria-a2-grafico.js?v=2024-ord-a2-5" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page lines-2024-page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2024 · Ordinaria · Ejercicio A2</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Geometría en el espacio · Rectas y planos · 2024</p>
+        <h1 class="lines-2024-title">Dos rectas secantes, plano común y perpendicular</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-lines-2024-language="es">Se consideran las siguientes rectas:</p>
+        <p data-lines-2024-language="eu" hidden>Honako zuzen hauek emanda daude:</p>
+        <div class="lines-2024-statement-data">
+          <div class="math-display" data-math="r\equiv\begin{cases}x=2\lambda,\\y=-1+4\lambda,\\z=2-\lambda,\end{cases}" data-math-display></div>
+          <div class="math-display" data-math="s\equiv\begin{cases}2x-y=1,\\z=3.\end{cases}" data-math-display></div>
+        </div>
+        <ol class="problem-list lines-2024-questions">
+          <li data-lines-2024-language="es">Calcula la posición relativa de las rectas <span class="math-inline math-nowrap" data-math="r"></span> y <span class="math-inline math-nowrap" data-math="s"></span>.</li>
+          <li data-lines-2024-language="eu" hidden>Kalkulatu <span class="math-inline math-nowrap" data-math="r"></span> eta <span class="math-inline math-nowrap" data-math="s"></span> zuzenen kokapen erlatiboa.</li>
+          <li data-lines-2024-language="es">Calcula la ecuación del plano que contiene a ambas rectas.</li>
+          <li data-lines-2024-language="eu" hidden>Kalkulatu bi zuzenak barne hartzen dituen planoaren ekuazioa.</li>
+          <li data-lines-2024-language="es">Dado el punto <span class="math-inline math-nowrap" data-math="P=(-8,-8,0)"></span>, calcula el punto <span class="math-inline math-nowrap" data-math="Q"></span> de la recta <span class="math-inline math-nowrap" data-math="r"></span> de modo que el vector <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}"></span> sea perpendicular a <span class="math-inline math-nowrap" data-math="r"></span>.</li>
+          <li data-lines-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="P=(-8,-8,0)"></span> puntua emanda, kalkulatu <span class="math-inline math-nowrap" data-math="r"></span> zuzeneko <span class="math-inline math-nowrap" data-math="Q"></span> puntua, <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}"></span> bektorea <span class="math-inline math-nowrap" data-math="r"></span> zuzenarekiko perpendikularra izan dadin.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs lines-2024-tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="lines-2024-part-a" data-target="lines-2024-part-a">A · Posición relativa</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="lines-2024-part-b" data-target="lines-2024-part-b">B · Plano común</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="lines-2024-part-c" data-target="lines-2024-part-c">C · Proyección perpendicular</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="lines-2024-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-lines-2024-language="es">Primero escribimos las dos rectas en forma paramétrica para leer sus vectores directores. Como no son proporcionales, las rectas no pueden ser paralelas ni coincidentes; en el espacio todavía queda decidir si se cortan o se cruzan sin tocarse.</p>
+            <p class="idea-text" data-lines-2024-language="eu" hidden>Lehenik, bi zuzenak forma parametrikoan idazten ditugu haien bektore zuzendariak irakurtzeko. Proportzionalak ez direnez, zuzenak ezin dira paraleloak edo bat datozenak izan; espazioan oraindik erabaki behar da elkar ebakitzen duten ala ukitu gabe gurutzatzen diren.</p>
+            <p class="idea-text" data-lines-2024-language="es">Para distinguir esas dos posibilidades buscamos un punto común. La condición <span class="math-inline math-nowrap" data-math="z=3"></span> de <span class="math-inline math-nowrap" data-math="s"></span> fija <span class="math-inline math-nowrap" data-math="\lambda=-1"></span> en <span class="math-inline math-nowrap" data-math="r"></span>; las demás coordenadas también coinciden, así que obtenemos el punto de corte.</p>
+            <p class="idea-text" data-lines-2024-language="eu" hidden>Bi aukera horiek bereizteko, puntu komun bat bilatzen dugu. <span class="math-inline math-nowrap" data-math="s"></span> zuzenaren <span class="math-inline math-nowrap" data-math="z=3"></span> baldintzak <span class="math-inline math-nowrap" data-math="r"></span> zuzenean <span class="math-inline math-nowrap" data-math="\lambda=-1"></span> ezartzen du; gainerako koordenatuak ere bat datozenez, ebakidura-puntua lortzen dugu.</p>
+            <div class="essential-geometry lines-2024-idea">
+              <div class="math-display" data-math="\vec d_r=(2,4,-1),\qquad\vec d_s=(1,2,0)" data-math-display></div>
+              <strong class="math-display" data-math="r\cap s=\{(-2,-5,3)\}" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Posición relativa de las rectas</h2>
+
+            <figure class="lines-2024-figure lines-2024-intersection-figure" aria-label="Esquema de las rectas r y s que se cortan en el punto I">
+              <figcaption data-lines-2024-language="es">Al parametrizar ambas rectas aparece un único punto común. El esquema representa la geometría dentro del plano que determinan, sin usar ejes de coordenadas externos.</figcaption>
+              <figcaption data-lines-2024-language="eu" hidden>Bi zuzenak parametrizatzean puntu komun bakarra agertzen da. Eskemak zehazten duten planoaren barruko geometria irudikatzen du, kanpoko koordenatu-ardatzik erabili gabe.</figcaption>
+              <div id="lines-2024-intersection-board" class="jxgbox lines-2024-board lines-2024-intersection-board" role="img" aria-label="Representación de las rectas r y s que se cortan en I"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Forma paramétrica y vector director</h3>
+                <p data-lines-2024-language="es">Una recta escrita como <span class="math-inline math-nowrap" data-math="X=A+t\vec d"></span> pasa por <span class="math-inline math-nowrap" data-math="A"></span> y tiene la dirección de <span class="math-inline math-nowrap" data-math="\vec d"></span>. Si aparece como intersección de dos planos, podemos elegir una variable libre y expresar las demás en función de ella.</p>
+                <p data-lines-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="X=A+t\vec d"></span> gisa idatzitako zuzen bat <span class="math-inline math-nowrap" data-math="A"></span> puntutik igarotzen da eta <span class="math-inline math-nowrap" data-math="\vec d"></span> bektorearen norabidea du. Bi planoren ebakidura gisa emanda badago, aldagai aske bat aukeratu eta gainerakoak haren arabera adieraz ditzakegu.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Posiciones relativas de dos rectas</h3>
+                <p data-lines-2024-language="es">Vectores directores proporcionales indican rectas paralelas o coincidentes. Si no son proporcionales, las rectas serán secantes cuando compartan un punto y se cruzarán cuando no exista ningún punto común.</p>
+                <p data-lines-2024-language="eu" hidden>Bektore zuzendari proportzionalek zuzen paraleloak edo bat datozenak adierazten dituzte. Proportzionalak ez badira, zuzenak ebakitzaileak izango dira puntu bat partekatzen badute, eta gurutzatuak puntu komunik ez badago.</p>
+                <div class="lines-2024-theory-chain">
+                  <div class="math-display" data-math="\vec d_r\parallel\vec d_s" data-math-display></div>
+                  <div class="math-display" data-math-es="\vec d_r\not\parallel\vec d_s\ \text{y punto común}\Longrightarrow\text{secantes}" data-math-eu="\vec d_r\not\parallel\vec d_s\ \text{eta puntu komuna}\Longrightarrow\text{ebakitzaileak}" data-math-display></div>
+                </div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Cómo se comprueba una intersección</h3>
+                <p data-lines-2024-language="es">Un punto de intersección debe obtenerse con un valor del parámetro de cada recta y satisfacer simultáneamente las tres coordenadas. No basta con hacer coincidir una o dos de ellas.</p>
+                <p data-lines-2024-language="eu" hidden>Ebakidura-puntu bat zuzen bakoitzaren parametroaren balio batekin lortu behar da, eta hiru koordenatuak aldi berean bete behar ditu. Ez da nahikoa haietako bat edo bi bat etortzea.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Parametrizamos la recta s</h3>
+                  <p data-lines-2024-language="es">Tomamos <span class="math-inline math-nowrap" data-math="x=t"></span>. La primera ecuación da <span class="math-inline math-nowrap" data-math="y=2t-1"></span> y la segunda fija <span class="math-inline math-nowrap" data-math="z=3"></span>.</p>
+                  <p data-lines-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=t"></span> hartzen dugu. Lehen ekuazioak <span class="math-inline math-nowrap" data-math="y=2t-1"></span> ematen du, eta bigarrenak <span class="math-inline math-nowrap" data-math="z=3"></span> ezartzen du.</p>
+                  <div class="lines-2024-work">
+                    <div class="math-display" data-math="s:\ (x,y,z)=(t,2t-1,3)" data-math-display></div>
+                    <strong class="math-display" data-math="s:\ (x,y,z)=(0,-1,3)+t(1,2,0)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Comparamos los vectores directores</h3>
+                  <p data-lines-2024-language="es">Leemos un vector director en cada forma paramétrica. No existe un mismo número que multiplique las tres componentes de uno para obtener el otro.</p>
+                  <p data-lines-2024-language="eu" hidden>Forma parametriko bakoitzean bektore zuzendari bat irakurtzen dugu. Ez dago baten hiru osagaiak biderkatuta bestea ematen duen zenbaki bakar bat.</p>
+                  <div class="lines-2024-work">
+                    <div class="math-display" data-math="\vec d_r=(2,4,-1),\qquad\vec d_s=(1,2,0)" data-math-display></div>
+                    <div class="math-display" data-math="\frac21=\frac42=2,\qquad -1\ne2\cdot0" data-math-display></div>
+                    <strong class="math-display" data-math="\vec d_r\not\parallel\vec d_s" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Buscamos un punto común</h3>
+                  <p data-lines-2024-language="es">En todos los puntos de <span class="math-inline math-nowrap" data-math="s"></span> se cumple <span class="math-inline math-nowrap" data-math="z=3"></span>. Igualamos esa coordenada con la de <span class="math-inline math-nowrap" data-math="r"></span>.</p>
+                  <p data-lines-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="s"></span> zuzeneko puntu guztietan <span class="math-inline math-nowrap" data-math="z=3"></span> betetzen da. Koordenatu hori <span class="math-inline math-nowrap" data-math="r"></span> zuzenekoarekin berdintzen dugu.</p>
+                  <div class="lines-2024-work">
+                    <div class="math-display" data-math="2-\lambda=3" data-math-display></div>
+                    <strong class="math-display" data-math="\lambda=-1" data-math-display></strong>
+                    <div class="math-display" data-math="r(-1)=\bigl(2(-1),-1+4(-1),2-(-1)\bigr)" data-math-display></div>
+                    <strong class="math-display" data-math="r(-1)=(-2,-5,3)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Comprobamos las tres coordenadas</h3>
+                  <p data-lines-2024-language="es">Para que el mismo punto pertenezca a <span class="math-inline math-nowrap" data-math="s"></span>, su primera coordenada obliga a tomar <span class="math-inline math-nowrap" data-math="t=-2"></span>. Sustituimos ese valor en las otras dos coordenadas.</p>
+                  <p data-lines-2024-language="eu" hidden>Puntu bera <span class="math-inline math-nowrap" data-math="s"></span> zuzenekoa izateko, lehen koordenatuak <span class="math-inline math-nowrap" data-math="t=-2"></span> hartzera behartzen du. Balio hori beste bi koordenatuetan ordezkatzen dugu.</p>
+                  <div class="lines-2024-work">
+                    <div class="math-display" data-math="s(-2)=\bigl(-2,2(-2)-1,3\bigr)" data-math-display></div>
+                    <div class="math-display" data-math="s(-2)=(-2,-5,3)=r(-1)" data-math-display></div>
+                    <strong class="math-display" data-math="r\cap s=\{I\},\qquad I=(-2,-5,3)" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry lines-2024-essential">
+              <div class="math-display" data-math="s:(x,y,z)=(0,-1,3)+t(1,2,0)" data-math-display></div>
+              <div class="math-display" data-math="\vec d_r=(2,4,-1)\not\parallel(1,2,0)=\vec d_s" data-math-display></div>
+              <div class="math-display" data-math="2-\lambda=3\Longrightarrow\lambda=-1" data-math-display></div>
+              <strong class="math-display" data-math="r(-1)=s(-2)=(-2,-5,3)" data-math-display></strong>
+            </div>
+
+            <div class="result result-long lines-2024-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="r\cap s=\{(-2,-5,3)\}" data-math-display></strong>
+              <p data-lines-2024-language="es">Las rectas son secantes: se cortan en un único punto.</p>
+              <p data-lines-2024-language="eu" hidden>Zuzenak ebakitzaileak dira: puntu bakar batean ebakitzen dira.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="lines-2024-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-lines-2024-language="es">Dos rectas secantes determinan un único plano. Ya conocemos un punto del plano, el punto de corte <span class="math-inline math-nowrap" data-math="I"></span>, y dos direcciones contenidas en él, <span class="math-inline math-nowrap" data-math="\vec d_r"></span> y <span class="math-inline math-nowrap" data-math="\vec d_s"></span>.</p>
+            <p class="idea-text" data-lines-2024-language="eu" hidden>Bi zuzen ebakitzailek plano bakar bat zehazten dute. Dagoeneko ezagutzen ditugu planoko puntu bat, <span class="math-inline math-nowrap" data-math="I"></span> ebakidura-puntua, eta haren barruko bi norabide, <span class="math-inline math-nowrap" data-math="\vec d_r"></span> eta <span class="math-inline math-nowrap" data-math="\vec d_s"></span>.</p>
+            <p class="idea-text" data-lines-2024-language="es">El producto vectorial de esas direcciones proporciona un vector normal. Con ese normal y el punto <span class="math-inline math-nowrap" data-math="I=(-2,-5,3)"></span> escribimos la ecuación punto-normal del plano y la simplificamos.</p>
+            <p class="idea-text" data-lines-2024-language="eu" hidden>Norabide horien biderkadura bektorialak bektore normal bat ematen du. Normal horrekin eta <span class="math-inline math-nowrap" data-math="I=(-2,-5,3)"></span> puntuarekin planoaren puntu-normal ekuazioa idatzi eta sinplifikatzen dugu.</p>
+            <div class="essential-geometry lines-2024-idea">
+              <div class="math-display" data-math="\vec n=\vec d_r\times\vec d_s=(2,-1,0)" data-math-display></div>
+              <strong class="math-display" data-math="\pi:\ 2x-y-1=0" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Plano que contiene ambas rectas</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Dos rectas secantes determinan un plano</h3>
+                <p data-lines-2024-language="es">Dos rectas que se cortan aportan un punto común y dos direcciones no paralelas. Esos tres datos determinan un único plano.</p>
+                <p data-lines-2024-language="eu" hidden>Elkar ebakitzen duten bi zuzenek puntu komun bat eta paraleloak ez diren bi norabide ematen dituzte. Hiru datu horiek plano bakar bat zehazten dute.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Producto vectorial y vector normal</h3>
+                <p data-lines-2024-language="es">El producto vectorial de dos vectores no paralelos es perpendicular a ambos. Si ambos vectores están contenidos en el plano, su producto vectorial es normal al plano.</p>
+                <p data-lines-2024-language="eu" hidden>Paraleloak ez diren bi bektoreren biderkadura bektoriala biekiko perpendikularra da. Bi bektoreak planoaren barruan badaude, haien biderkadura bektoriala planoarekiko normala da.</p>
+                <div class="math-display" data-math="\vec n=\vec d_r\times\vec d_s" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Ecuación punto-normal del plano</h3>
+                <p data-lines-2024-language="es">Si <span class="math-inline math-nowrap" data-math="I=(x_0,y_0,z_0)"></span> pertenece al plano y <span class="math-inline math-nowrap" data-math="\vec n=(A,B,C)"></span> es normal, cualquier punto <span class="math-inline math-nowrap" data-math="X=(x,y,z)"></span> del plano cumple:</p>
+                <p data-lines-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="I=(x_0,y_0,z_0)"></span> planokoa bada eta <span class="math-inline math-nowrap" data-math="\vec n=(A,B,C)"></span> normala bada, planoko edozein <span class="math-inline math-nowrap" data-math="X=(x,y,z)"></span> puntuk hau betetzen du:</p>
+                <div class="math-display" data-math="A(x-x_0)+B(y-y_0)+C(z-z_0)=0" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Elegimos dos direcciones del plano</h3>
+                  <p data-lines-2024-language="es">Los vectores directores de las dos rectas están contenidos en el plano buscado y no son paralelos.</p>
+                  <p data-lines-2024-language="eu" hidden>Bi zuzenen bektore zuzendariak bilatutako planoaren barruan daude, eta ez dira paraleloak.</p>
+                  <div class="lines-2024-work">
+                    <div class="math-display" data-math="\vec d_r=(2,4,-1)" data-math-display></div>
+                    <div class="math-display" data-math="\vec d_s=(1,2,0)" data-math-display></div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos un vector normal</h3>
+                  <p data-lines-2024-language="es">Desarrollamos el producto vectorial componente a componente.</p>
+                  <p data-lines-2024-language="eu" hidden>Biderkadura bektoriala osagaiz osagai garatzen dugu.</p>
+                  <div class="lines-2024-work">
+                    <div class="math-display" data-math="\vec n=\begin{vmatrix}\vec i&amp;\vec j&amp;\vec k\\2&amp;4&amp;-1\\1&amp;2&amp;0\end{vmatrix}" data-math-display></div>
+                    <div class="math-display" data-math="n_x=4\cdot0-(-1)\cdot2=2" data-math-display></div>
+                    <div class="math-display" data-math="n_y=(-1)\cdot1-2\cdot0=-1" data-math-display></div>
+                    <div class="math-display" data-math="n_z=2\cdot2-4\cdot1=0" data-math-display></div>
+                    <strong class="math-display" data-math="\vec n=(2,-1,0)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Escribimos la ecuación del plano</h3>
+                  <p data-lines-2024-language="es">Usamos el punto común <span class="math-inline math-nowrap" data-math="I=(-2,-5,3)"></span> y el vector normal recién calculado.</p>
+                  <p data-lines-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="I=(-2,-5,3)"></span> puntu komuna eta kalkulatu berri dugun bektore normala erabiltzen ditugu.</p>
+                  <div class="lines-2024-work">
+                    <div class="math-display" data-math="(2,-1,0)\cdot(x+2,y+5,z-3)=0" data-math-display></div>
+                    <div class="math-display" data-math="2(x+2)-(y+5)=0" data-math-display></div>
+                    <div class="math-display" data-math="2x+4-y-5=0" data-math-display></div>
+                    <strong class="math-display" data-math="\pi:\ 2x-y-1=0" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Comprobamos que contiene las dos rectas</h3>
+                  <p data-lines-2024-language="es">Sustituimos el punto genérico de <span class="math-inline math-nowrap" data-math="r"></span>. Para <span class="math-inline math-nowrap" data-math="s"></span>, la propia ecuación que la define ya es <span class="math-inline math-nowrap" data-math="2x-y=1"></span>.</p>
+                  <p data-lines-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="r"></span> zuzeneko puntu orokorra ordezkatzen dugu. <span class="math-inline math-nowrap" data-math="s"></span> zuzenaren kasuan, hura definitzen duen ekuazioa bera <span class="math-inline math-nowrap" data-math="2x-y=1"></span> da.</p>
+                  <div class="lines-2024-work lines-2024-checks">
+                    <div class="math-display" data-math="r:\ 2(2\lambda)-(-1+4\lambda)-1=0" data-math-display></div>
+                    <div class="math-display" data-math="s:\ 2x-y-1=0" data-math-display></div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry lines-2024-essential">
+              <div class="math-display" data-math="\vec n=(2,4,-1)\times(1,2,0)=(2,-1,0)" data-math-display></div>
+              <div class="math-display" data-math="2(x+2)-(y+5)=0" data-math-display></div>
+              <strong class="math-display" data-math="\pi:\ 2x-y-1=0" data-math-display></strong>
+            </div>
+
+            <div class="result result-long lines-2024-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="\pi:\ 2x-y=1" data-math-display></strong>
+              <p data-lines-2024-language="es">Es el único plano que contiene simultáneamente las dos rectas secantes.</p>
+              <p data-lines-2024-language="eu" hidden>Bi zuzen ebakitzaileak aldi berean barne hartzen dituen plano bakarra da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="lines-2024-part-c" class="panel" role="tabpanel" hidden>
+        <div class="section-index">03</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado C</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-lines-2024-language="es">Todo punto <span class="math-inline math-nowrap" data-math="Q"></span> de <span class="math-inline math-nowrap" data-math="r"></span> depende de <span class="math-inline math-nowrap" data-math="\lambda"></span>. Restando las coordenadas de <span class="math-inline math-nowrap" data-math="P"></span> obtenemos <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}"></span>, también en función de ese único parámetro.</p>
+            <p class="idea-text" data-lines-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="r"></span> zuzeneko <span class="math-inline math-nowrap" data-math="Q"></span> puntu oro <span class="math-inline math-nowrap" data-math="\lambda"></span>-ren mende dago. <span class="math-inline math-nowrap" data-math="P"></span> puntuaren koordenatuak kenduta, <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}"></span> lortzen dugu, parametro bakar horren arabera hau ere.</p>
+            <p class="idea-text" data-lines-2024-language="es">La perpendicularidad se traduce en que el producto escalar de <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}"></span> con el vector director de <span class="math-inline math-nowrap" data-math="r"></span> sea cero. Esa condición produce una ecuación lineal en <span class="math-inline math-nowrap" data-math="\lambda"></span>; al resolverla localizamos el pie de la perpendicular.</p>
+            <p class="idea-text" data-lines-2024-language="eu" hidden>Perpendikulartasunak esan nahi du <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}"></span>-ren eta <span class="math-inline math-nowrap" data-math="r"></span> zuzenaren bektore zuzendariaren biderkadura eskalarra zero dela. Baldintza horrek <span class="math-inline math-nowrap" data-math="\lambda"></span>-rekiko ekuazio lineal bat ematen du; ebatzita, perpendikularraren oina kokatzen dugu.</p>
+            <div class="essential-geometry lines-2024-idea">
+              <div class="math-display" data-math="\overrightarrow{PQ}\cdot\vec d_r=0\Longrightarrow\lambda=-2" data-math-display></div>
+              <strong class="math-display" data-math="Q=(-4,-9,4)" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado C</p>
+            <h2>Pie de la perpendicular desde P</h2>
+
+            <figure class="lines-2024-figure lines-2024-perpendicular-figure" aria-label="Esquema de la proyección perpendicular de P sobre la recta r">
+              <figcaption data-lines-2024-language="es">El punto buscado es la proyección ortogonal de <span class="math-inline math-nowrap" data-math="P"></span> sobre <span class="math-inline math-nowrap" data-math="r"></span>: pertenece a la recta y el segmento que lo une con <span class="math-inline math-nowrap" data-math="P"></span> es perpendicular a ella.</figcaption>
+              <figcaption data-lines-2024-language="eu" hidden>Bilatutako puntua <span class="math-inline math-nowrap" data-math="P"></span>-ren <span class="math-inline math-nowrap" data-math="r"></span> zuzenaren gaineko proiekzio ortogonala da: zuzenekoa da, eta <span class="math-inline math-nowrap" data-math="P"></span>-rekin lotzen duen segmentua harekiko perpendikularra da.</figcaption>
+              <div id="lines-2024-perpendicular-board" class="jxgbox lines-2024-board lines-2024-perpendicular-board" role="img" aria-label="Representación que muestra que el vector PQ es perpendicular a la recta r"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Punto genérico de una recta</h3>
+                <p data-lines-2024-language="es">La forma paramétrica describe todos los puntos de la recta. Para localizar uno que cumpla una condición adicional, mantenemos el parámetro desconocido hasta traducir esa condición a una ecuación.</p>
+                <p data-lines-2024-language="eu" hidden>Forma parametrikoak zuzeneko puntu guztiak deskribatzen ditu. Baldintza gehigarri bat betetzen duen bat aurkitzeko, parametroa ezezagun mantentzen dugu baldintza hori ekuazio bihurtu arte.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Criterio de perpendicularidad</h3>
+                <p data-lines-2024-language="es">Dos vectores no nulos son perpendiculares exactamente cuando su producto escalar vale cero. Aplicamos el criterio al vector que va de <span class="math-inline math-nowrap" data-math="P"></span> a <span class="math-inline math-nowrap" data-math="Q"></span> y al vector director de la recta.</p>
+                <p data-lines-2024-language="eu" hidden>Zero ez diren bi bektore perpendikularrak dira, hain zuzen, haien biderkadura eskalarra zero denean. Irizpidea <span class="math-inline math-nowrap" data-math="P"></span>-tik <span class="math-inline math-nowrap" data-math="Q"></span>-ra doan bektoreari eta zuzenaren bektore zuzendariari aplikatzen diegu.</p>
+                <div class="math-display" data-math="\vec u\perp\vec v\Longleftrightarrow\vec u\cdot\vec v=0" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Proyección ortogonal</h3>
+                <p data-lines-2024-language="es">El pie de la perpendicular desde un punto exterior a una recta es el único punto <span class="math-inline math-nowrap" data-math="Q"></span> de la recta para el que <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}\perp r"></span>. Por eso las dos condiciones del problema determinan un único valor del parámetro.</p>
+                <p data-lines-2024-language="eu" hidden>Kanpoko puntu batetik zuzen batera egindako perpendikularraren oina zuzeneko <span class="math-inline math-nowrap" data-math="Q"></span> puntu bakarra da, non <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}\perp r"></span> betetzen den. Horregatik, problemako bi baldintzek parametroaren balio bakar bat zehazten dute.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Escribimos un punto genérico Q de r</h3>
+                  <p data-lines-2024-language="es">Usamos directamente las tres ecuaciones paramétricas de <span class="math-inline math-nowrap" data-math="r"></span>.</p>
+                  <p data-lines-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="r"></span> zuzenaren hiru ekuazio parametrikoak zuzenean erabiltzen ditugu.</p>
+                  <div class="lines-2024-work">
+                    <strong class="math-display" data-math="Q=(2\lambda,-1+4\lambda,2-\lambda)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Formamos el vector PQ</h3>
+                  <p data-lines-2024-language="es">Restamos origen a extremo: <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}=Q-P"></span>.</p>
+                  <p data-lines-2024-language="eu" hidden>Hasierako puntua amaierakoari kentzen diogu: <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}=Q-P"></span>.</p>
+                  <div class="lines-2024-work">
+                    <div class="math-display" data-math="\overrightarrow{PQ}=(2\lambda-(-8),-1+4\lambda-(-8),2-\lambda-0)" data-math-display></div>
+                    <strong class="math-display" data-math="\overrightarrow{PQ}=(2\lambda+8,4\lambda+7,2-\lambda)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Imponemos la perpendicularidad</h3>
+                  <p data-lines-2024-language="es">El vector director de <span class="math-inline math-nowrap" data-math="r"></span> es <span class="math-inline math-nowrap" data-math="(2,4,-1)"></span>. Igualamos a cero el producto escalar y desarrollamos cada producto.</p>
+                  <p data-lines-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="r"></span> zuzenaren bektore zuzendaria <span class="math-inline math-nowrap" data-math="(2,4,-1)"></span> da. Biderkadura eskalarra zerorekin berdindu eta biderkagai bakoitza garatzen dugu.</p>
+                  <div class="lines-2024-work">
+                    <div class="math-display" data-math="(2\lambda+8,4\lambda+7,2-\lambda)\cdot(2,4,-1)=0" data-math-display></div>
+                    <div class="math-display" data-math="2(2\lambda+8)+4(4\lambda+7)-(2-\lambda)=0" data-math-display></div>
+                    <div class="math-display" data-math="4\lambda+16+16\lambda+28-2+\lambda=0" data-math-display></div>
+                    <div class="math-display" data-math="21\lambda+42=0" data-math-display></div>
+                    <strong class="math-display" data-math="\lambda=-2" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos las coordenadas de Q</h3>
+                  <p data-lines-2024-language="es">Sustituimos <span class="math-inline math-nowrap" data-math="\lambda=-2"></span> en el punto genérico de la recta.</p>
+                  <p data-lines-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="\lambda=-2"></span> zuzeneko puntu orokorrean ordezkatzen dugu.</p>
+                  <div class="lines-2024-work">
+                    <div class="math-display" data-math="Q=\bigl(2(-2),-1+4(-2),2-(-2)\bigr)" data-math-display></div>
+                    <strong class="math-display" data-math="Q=(-4,-9,4)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Comprobamos el resultado</h3>
+                  <p data-lines-2024-language="es">El punto pertenece a <span class="math-inline math-nowrap" data-math="r"></span> porque se ha obtenido con <span class="math-inline math-nowrap" data-math="\lambda=-2"></span>. Además, el producto escalar confirma el ángulo recto.</p>
+                  <p data-lines-2024-language="eu" hidden>Puntua <span class="math-inline math-nowrap" data-math="r"></span> zuzenekoa da, <span class="math-inline math-nowrap" data-math="\lambda=-2"></span> erabiliz lortu delako. Gainera, biderkadura eskalarrak angelu zuzena egiaztatzen du.</p>
+                  <div class="lines-2024-work lines-2024-checks">
+                    <div class="math-display" data-math="\overrightarrow{PQ}=(-4,-9,4)-(-8,-8,0)=(4,-1,4)" data-math-display></div>
+                    <div class="math-display" data-math="(4,-1,4)\cdot(2,4,-1)=8-4-4=0" data-math-display></div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry lines-2024-essential">
+              <div class="math-display" data-math="Q=(2\lambda,-1+4\lambda,2-\lambda)" data-math-display></div>
+              <div class="math-display" data-math="\overrightarrow{PQ}\cdot(2,4,-1)=21\lambda+42=0" data-math-display></div>
+              <div class="math-display" data-math="\lambda=-2" data-math-display></div>
+              <strong class="math-display" data-math="Q=(-4,-9,4)" data-math-display></strong>
+            </div>
+
+            <div class="result result-long lines-2024-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="Q=(-4,-9,4)" data-math-display></strong>
+              <p data-lines-2024-language="es">El vector <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}=(4,-1,4)"></span> es perpendicular a <span class="math-inline math-nowrap" data-math="r"></span>.</p>
+              <p data-lines-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}=(4,-1,4)"></span> bektorea <span class="math-inline math-nowrap" data-math="r"></span> zuzenarekiko perpendikularra da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

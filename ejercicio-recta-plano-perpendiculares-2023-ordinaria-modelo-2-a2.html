@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Planoa eta zuzen perpendikularra · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-recta-plano-perpendiculares-2023-ordinaria-modelo-2-idiomas.js?v=2023-ord-m2-a2" defer></script>
+  <script src="ejercicio-recta-plano-perpendiculares-2023-ordinaria-modelo-2-grafico.js?v=2023-ord-m2-a2" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Modelo 2 · Ejercicio A2</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Geometría en el espacio · Rectas y planos · 2023</p>
+        <h1 class="plane-perp-2023-title">Plano y recta perpendicular</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-plane-perp-2023-language="es">La recta <span class="math-inline math-nowrap" data-math="r"></span> y el plano <span class="math-inline math-nowrap" data-math="\pi"></span> se cortan perpendicularmente en el punto <span class="math-inline math-nowrap" data-math="P"></span>. Además, el plano pasa por <span class="math-inline math-nowrap" data-math="Q"></span> y contiene el vector <span class="math-inline math-nowrap" data-math="\vec u"></span>:</p>
+        <p data-plane-perp-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="r"></span> zuzena eta <span class="math-inline math-nowrap" data-math="\pi"></span> planoa perpendikularki ebakitzen dira <span class="math-inline math-nowrap" data-math="P"></span> puntuan. Gainera, planoa <span class="math-inline math-nowrap" data-math="Q"></span> puntutik igarotzen da eta <span class="math-inline math-nowrap" data-math="\vec u"></span> bektorea dauka:</p>
+        <div class="plane-perp-2023-data">
+          <span class="math-inline" data-math="P=(1,-1,2)"></span>
+          <span class="math-inline" data-math="Q=(1,2,3)"></span>
+          <span class="math-inline" data-math="\vec u=(0,0,2)"></span>
+        </div>
+        <p data-plane-perp-2023-language="es">Calcula las ecuaciones de la recta <span class="math-inline math-nowrap" data-math="r"></span> y del plano <span class="math-inline math-nowrap" data-math="\pi"></span>.</p>
+        <p data-plane-perp-2023-language="eu" hidden>Kalkulatu <span class="math-inline math-nowrap" data-math="r"></span> zuzenaren eta <span class="math-inline math-nowrap" data-math="\pi"></span> planoaren ekuazioak.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio A2</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-plane-perp-2023-language="es">Para determinar el plano necesitamos dos direcciones contenidas en él. Una ya está dada: <span class="math-inline math-nowrap" data-math="\vec u"></span>. La otra se obtiene uniendo los dos puntos del plano, <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}=Q-P"></span>.</p>
+            <p class="idea-text" data-plane-perp-2023-language="eu" hidden>Planoa zehazteko, haren barruko bi norabide behar ditugu. Bat emanda dago: <span class="math-inline math-nowrap" data-math="\vec u"></span>. Bestea planoko bi puntuak lotuz lortzen da: <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}=Q-P"></span>.</p>
+            <p class="idea-text" data-plane-perp-2023-language="es">El producto vectorial de esas direcciones proporciona un vector normal al plano. Resulta paralelo a <span class="math-inline math-nowrap" data-math="(1,0,0)"></span>, de modo que el plano es <span class="math-inline math-nowrap" data-math="x=1"></span>. Como la recta es perpendicular al plano, usa ese mismo vector normal como director y pasa por <span class="math-inline math-nowrap" data-math="P"></span>.</p>
+            <p class="idea-text" data-plane-perp-2023-language="eu" hidden>Norabide horien biderkadura bektorialak planoaren bektore normal bat ematen du. <span class="math-inline math-nowrap" data-math="(1,0,0)"></span>-ren paraleloa da; beraz, planoa <span class="math-inline math-nowrap" data-math="x=1"></span> da. Zuzena planoarekiko perpendikularra denez, bektore normal hori bera erabiltzen du zuzendari gisa, eta <span class="math-inline math-nowrap" data-math="P"></span> puntutik igarotzen da.</p>
+            <div class="essential-geometry plane-perp-2023-idea">
+              <div class="math-display" data-math="\overrightarrow{PQ}=(0,3,1),\qquad \vec u=(0,0,2)" data-math-display></div>
+              <div class="math-display" data-math="\vec n=\overrightarrow{PQ}\times\vec u=(6,0,0)\sim(1,0,0)" data-math-display></div>
+              <strong class="math-display" data-math="\pi:x=1" data-math-display></strong>
+              <strong class="math-display" data-math="r:(x,y,z)=(1,-1,2)+t(1,0,0)" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio A2</p>
+            <h2 id="solution-title">Construcción del plano y de su perpendicular</h2>
+
+            <figure class="plane-perp-2023-figure" aria-label="Plano x igual a 1 con los puntos P y Q, dos vectores contenidos en el plano y la recta perpendicular r">
+              <figcaption data-plane-perp-2023-language="es">Los vectores <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}"></span> y <span class="math-inline math-nowrap" data-math="\vec u"></span> están contenidos en <span class="math-inline math-nowrap" data-math="\pi"></span>. La recta <span class="math-inline math-nowrap" data-math="r"></span> pasa por <span class="math-inline math-nowrap" data-math="P"></span> en la dirección normal al plano.</figcaption>
+              <figcaption data-plane-perp-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}"></span> eta <span class="math-inline math-nowrap" data-math="\vec u"></span> bektoreak <span class="math-inline math-nowrap" data-math="\pi"></span> planoaren barruan daude. <span class="math-inline math-nowrap" data-math="r"></span> zuzena <span class="math-inline math-nowrap" data-math="P"></span> puntutik igarotzen da, planoarekiko norabide normalean.</figcaption>
+              <div id="plane-perp-2023-board" class="jxgbox plane-perp-2023-board" role="img" aria-label="Representación tridimensional del plano x igual a 1 y la recta perpendicular que lo corta en P"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Cómo se determina un plano</h3>
+                <p data-plane-perp-2023-language="es">Un punto y dos vectores no paralelos contenidos en el plano lo determinan por completo. Como <span class="math-inline math-nowrap" data-math="P"></span> y <span class="math-inline math-nowrap" data-math="Q"></span> pertenecen al plano, <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}"></span> es una de sus direcciones.</p>
+                <p data-plane-perp-2023-language="eu" hidden>Puntu batek eta planoaren barruko bi bektore ez-paralelok planoa erabat zehazten dute. <span class="math-inline math-nowrap" data-math="P"></span> eta <span class="math-inline math-nowrap" data-math="Q"></span> planokoak direnez, <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}"></span> haren norabideetako bat da.</p>
+                <div class="math-display" data-math="\overrightarrow{PQ}=Q-P" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Producto vectorial y vector normal</h3>
+                <p data-plane-perp-2023-language="es">El producto vectorial de dos vectores no paralelos es perpendicular a ambos. Si los dos están en el plano, su producto vectorial es un vector normal al plano.</p>
+                <p data-plane-perp-2023-language="eu" hidden>Bi bektore ez-paraleloren biderkadura bektoriala biekiko perpendikularra da. Biak planoan badaude, haien biderkadura bektoriala planoaren bektore normala da.</p>
+                <div class="math-display" data-math="\vec n=\overrightarrow{PQ}\times\vec u" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Ecuaciones de plano y recta perpendicular</h3>
+                <p data-plane-perp-2023-language="es">Con un punto <span class="math-inline math-nowrap" data-math="P"></span> y un vector normal <span class="math-inline math-nowrap" data-math="\vec n"></span>, la ecuación del plano se obtiene mediante un producto escalar. Una recta perpendicular al plano tiene un vector director paralelo a <span class="math-inline math-nowrap" data-math="\vec n"></span>.</p>
+                <p data-plane-perp-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="P"></span> puntuarekin eta <span class="math-inline math-nowrap" data-math="\vec n"></span> bektore normalarekin, planoaren ekuazioa biderkadura eskalar baten bidez lortzen da. Planoarekiko perpendikularra den zuzen baten bektore zuzendaria <span class="math-inline math-nowrap" data-math="\vec n"></span>-ren paraleloa da.</p>
+                <div class="plane-perp-2023-theory-chain">
+                  <div class="math-display" data-math="\vec n\cdot\overrightarrow{PX}=0" data-math-display></div>
+                  <div class="math-display" data-math="\vec d_r\parallel\vec n" data-math-display></div>
+                </div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Obtenemos dos direcciones del plano</h3>
+                  <p data-plane-perp-2023-language="es">El vector que une <span class="math-inline math-nowrap" data-math="P"></span> con <span class="math-inline math-nowrap" data-math="Q"></span> está contenido en el plano. El segundo vector ya viene dado en el enunciado.</p>
+                  <p data-plane-perp-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="P"></span> eta <span class="math-inline math-nowrap" data-math="Q"></span> lotzen dituen bektorea planoaren barruan dago. Bigarren bektorea enuntziatuan emanda dago.</p>
+                  <div class="plane-perp-2023-work">
+                    <div class="math-display" data-math="\overrightarrow{PQ}=Q-P" data-math-display></div>
+                    <div class="math-display" data-math="\overrightarrow{PQ}=(1-1,\,2-(-1),\,3-2)" data-math-display></div>
+                    <strong class="math-display" data-math="\overrightarrow{PQ}=(0,3,1),\qquad\vec u=(0,0,2)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos un vector normal al plano</h3>
+                  <p data-plane-perp-2023-language="es">Calculamos el producto vectorial. Ambos vectores tienen primera componente cero, por lo que el resultado queda dirigido según el eje <span class="math-inline math-nowrap" data-math="x"></span>.</p>
+                  <p data-plane-perp-2023-language="eu" hidden>Biderkadura bektoriala kalkulatzen dugu. Bi bektoreen lehen osagaia zero denez, emaitza <span class="math-inline math-nowrap" data-math="x"></span> ardatzaren norabidean geratzen da.</p>
+                  <div class="plane-perp-2023-work">
+                    <div class="math-display" data-math="\vec n=\overrightarrow{PQ}\times\vec u" data-math-display></div>
+                    <div class="math-display" data-math="\vec n=\begin{vmatrix}\vec i&amp;\vec j&amp;\vec k\\0&amp;3&amp;1\\0&amp;0&amp;2\end{vmatrix}" data-math-display></div>
+                    <div class="math-display" data-math="\vec n=(3\cdot2-1\cdot0,\,0,\,0)" data-math-display></div>
+                    <strong class="math-display" data-math="\vec n=(6,0,0)\sim(1,0,0)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos la ecuación del plano</h3>
+                  <p data-plane-perp-2023-language="es">Usamos el vector normal simplificado <span class="math-inline math-nowrap" data-math="(1,0,0)"></span> y el punto <span class="math-inline math-nowrap" data-math="P=(1,-1,2)"></span>.</p>
+                  <p data-plane-perp-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="(1,0,0)"></span> bektore normal sinplifikatua eta <span class="math-inline math-nowrap" data-math="P=(1,-1,2)"></span> puntua erabiltzen ditugu.</p>
+                  <div class="plane-perp-2023-work">
+                    <div class="math-display" data-math="(1,0,0)\cdot(x-1,\,y+1,\,z-2)=0" data-math-display></div>
+                    <div class="math-display" data-math="x-1=0" data-math-display></div>
+                    <strong class="math-display" data-math="\pi:x=1" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos la ecuación de la recta</h3>
+                  <p data-plane-perp-2023-language="es">Una recta perpendicular a un plano lleva la dirección de su vector normal. Además, debe pasar por el punto de corte <span class="math-inline math-nowrap" data-math="P"></span>.</p>
+                  <p data-plane-perp-2023-language="eu" hidden>Planoarekiko perpendikularra den zuzen batek haren bektore normalaren norabidea du. Gainera, <span class="math-inline math-nowrap" data-math="P"></span> ebakidura-puntutik igaro behar du.</p>
+                  <div class="plane-perp-2023-work">
+                    <div class="math-display" data-math="\vec d_r=(1,0,0)" data-math-display></div>
+                    <div class="math-display" data-math="r:(x,y,z)=(1,-1,2)+t(1,0,0)" data-math-display></div>
+                    <strong class="math-display plane-perp-2023-parametric" data-math="r:\begin{cases}x=1+t,\\y=-1,\\z=2\end{cases}\quad t\in\mathbb R" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos los datos del enunciado</h3>
+                  <p data-plane-perp-2023-language="es">Los dos puntos satisfacen <span class="math-inline math-nowrap" data-math="x=1"></span>; el vector dado es perpendicular a la normal; y la recta pasa por <span class="math-inline math-nowrap" data-math="P"></span> cuando <span class="math-inline math-nowrap" data-math="t=0"></span>.</p>
+                  <p data-plane-perp-2023-language="eu" hidden>Bi puntuek <span class="math-inline math-nowrap" data-math="x=1"></span> betetzen dute; emandako bektorea normalarekiko perpendikularra da; eta zuzena <span class="math-inline math-nowrap" data-math="P"></span> puntutik igarotzen da <span class="math-inline math-nowrap" data-math="t=0"></span> denean.</p>
+                  <div class="plane-perp-2023-checks">
+                    <div class="math-display" data-math="P\in\pi:\ 1=1;\qquad Q\in\pi:\ 1=1" data-math-display></div>
+                    <div class="math-display" data-math="(1,0,0)\cdot(0,0,2)=0" data-math-display></div>
+                    <div class="math-display" data-math="r(0)=(1,-1,2)=P" data-math-display></div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry plane-perp-2023-essential">
+              <div class="math-display" data-math="\overrightarrow{PQ}=(0,3,1),\qquad\vec u=(0,0,2)" data-math-display></div>
+              <div class="math-display" data-math="\overrightarrow{PQ}\times\vec u=(6,0,0)\sim(1,0,0)" data-math-display></div>
+              <strong class="math-display" data-math="\pi:x=1" data-math-display></strong>
+              <strong class="math-display" data-math="r:(x,y,z)=(1,-1,2)+t(1,0,0)" data-math-display></strong>
+            </div>
+
+            <div class="result result-long plane-perp-2023-result">
+              <span>Resultado</span>
+              <div class="plane-perp-2023-result-pair">
+                <strong class="math-display" data-math="\pi:x=1" data-math-display></strong>
+                <strong class="math-display plane-perp-2023-parametric" data-math="r:\begin{cases}x=1+t,\\y=-1,\\z=2\end{cases}\quad t\in\mathbb R" data-math-display></strong>
+              </div>
+              <p data-plane-perp-2023-language="es">La recta corta perpendicularmente al plano en <span class="math-inline math-nowrap" data-math="P=(1,-1,2)"></span>.</p>
+              <p data-plane-perp-2023-language="eu" hidden>Zuzenak planoa perpendikularki ebakitzen du <span class="math-inline math-nowrap" data-math="P=(1,-1,2)"></span> puntuan.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

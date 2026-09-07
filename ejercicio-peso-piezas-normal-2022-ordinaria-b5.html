@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Piezen pisuaren banaketa normala · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-peso-piezas-normal-2022-ordinaria-idiomas.js?v=2022-ord-b5a" defer></script>
+  <script src="ejercicio-peso-piezas-normal-2022-ordinaria-grafico.js?v=2022-ord-b5a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2022 · Ordinaria · Ejercicio B5</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Distribución normal · 2022</p>
+        <h1 class="normal-weight-2022-title">Distribución normal del peso de unas piezas</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>El peso, en gramos, de una pieza fabricada en serie sigue una distribución normal de media 52 y desviación típica 6,5.</p>
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">Calcula la probabilidad de que el peso de una pieza fabricada esté comprendido entre 50 y 68 gramos.</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">Si el 30 % de las piezas fabricadas pesa más que una pieza dada, ¿cuánto pesa esta última?</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="normal-weight-2022-part-a" data-target="normal-weight-2022-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="normal-weight-2022-part-b" data-target="normal-weight-2022-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="normal-weight-2022-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">El modelo ya es normal. Tipificamos 50 y 68 gramos para expresar ambos límites en la escala de la normal estándar. Después restamos las probabilidades acumuladas: el área hasta el límite superior menos el área hasta el inferior.</p>
+            <p class="idea-text">Como el límite inferior queda a la izquierda de la media, su valor tipificado es negativo. La simetría de la campana permite obtener esa probabilidad usando la tabla de valores positivos.</p>
+            <div class="essential-geometry normal-weight-2022-idea">
+              <div class="math-display normal-weight-2022-formula" data-math="P(50\le X\le68)=\Phi(2{,}46)-\Phi(-0{,}31)" data-math-display></div>
+              <strong class="math-display" data-math="P(50\le X\le68)\approx0{,}6148" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Probabilidad de un peso entre 50 y 68 gramos</h2>
+
+            <figure class="normal-weight-2022-figure" aria-label="Distribución normal del peso con el intervalo entre 50 y 68 gramos sombreado">
+              <figcaption data-normal-weight-2022-language="es">El área sombreada representa la probabilidad <span class="math-inline math-nowrap" data-math="P(50\le X\le68)"></span>.</figcaption>
+              <figcaption data-normal-weight-2022-language="eu" hidden>Itzaldutako azalerak <span class="math-inline math-nowrap" data-math="P(50\le X\le68)"></span> probabilitatea adierazten du.</figcaption>
+              <div id="normal-weight-2022-interval-board" class="jxgbox normal-weight-2022-board" role="img" aria-label="Campana normal con el área situada entre 50 y 68 gramos sombreada"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Una distribución normal</h3>
+                <p>Una variable normal queda determinada por su media y su desviación típica. La media fija el centro de la campana y la desviación típica mide su dispersión.</p>
+                <div class="theory-formula math-display" data-math="\begin{aligned}X&\sim N(\mu,\sigma),\\ \mu&=52,\quad \sigma=6{,}5.\end{aligned}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Tipificación</h3>
+                <p>Tipificar transforma cualquier valor de la variable original en su distancia a la media medida en desviaciones típicas. Así podemos usar una única tabla, la de la normal estándar.</p>
+                <div class="theory-formula math-display" data-math="Z=\frac{X-\mu}{\sigma}\sim N(0,1)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Probabilidad acumulada y simetría</h3>
+                <p>La función acumulada proporciona el área situada a la izquierda de un valor. Para un intervalo restamos dos acumuladas. La simetría permite convertir un valor negativo en uno positivo.</p>
+                <div class="theory-formula math-display normal-weight-2022-formula" data-math="\begin{aligned}P(a\le Z\le b)&=\Phi(b)-\Phi(a),\\ \Phi(-z)&=1-\Phi(z).\end{aligned}" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Identificamos el modelo</h3>
+                  <p>Llamamos <span class="math-inline math-nowrap" data-math="X"></span> al peso, en gramos, de una pieza. El enunciado proporciona directamente la media y la desviación típica.</p>
+                  <div class="normal-weight-2022-work">
+                    <strong class="math-display" data-math="X\sim N(52;\,6{,}5)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Tipificamos el límite inferior</h3>
+                  <p>Restamos la media y dividimos entre la desviación típica.</p>
+                  <div class="normal-weight-2022-work">
+                    <div class="math-display" data-math="z_1=\frac{50-52}{6{,}5}=\frac{-2}{6{,}5}" data-math-display></div>
+                    <strong class="math-display" data-math="z_1\approx-0{,}31" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Tipificamos el límite superior</h3>
+                  <div class="normal-weight-2022-work">
+                    <div class="math-display" data-math="z_2=\frac{68-52}{6{,}5}=\frac{16}{6{,}5}" data-math-display></div>
+                    <strong class="math-display" data-math="z_2\approx2{,}46" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Leemos las probabilidades acumuladas</h3>
+                  <p>La tabla de la normal estándar da <span class="math-inline math-nowrap" data-math="\Phi(2{,}46)=0{,}9931"></span> y <span class="math-inline math-nowrap" data-math="\Phi(0{,}31)=0{,}6217"></span>. Para el valor negativo usamos la simetría.</p>
+                  <div class="normal-weight-2022-work">
+                    <div class="math-display" data-math="\Phi(-0{,}31)=1-\Phi(0{,}31)" data-math-display></div>
+                    <strong class="math-display" data-math="\Phi(-0{,}31)=1-0{,}6217=0{,}3783" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Restamos las dos áreas acumuladas</h3>
+                  <div class="normal-weight-2022-work">
+                    <div class="math-display normal-weight-2022-formula" data-math="\begin{aligned}P(50\le X\le68)&=\Phi(2{,}46)-\Phi(-0{,}31)\\ &=0{,}9931-0{,}3783\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="P(50\le X\le68)=0{,}6148" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry normal-weight-2022-essential">
+              <div class="math-display" data-math="X\sim N(52;\,6{,}5)" data-math-display></div>
+              <div class="math-display normal-weight-2022-formula" data-math="\begin{aligned}P(50\le X\le68)&=P(-0{,}31\le Z\le2{,}46)\\ &=\Phi(2{,}46)-\Phi(-0{,}31)\end{aligned}" data-math-display></div>
+              <div class="math-display normal-weight-2022-formula" data-math="=0{,}9931-\left(1-0{,}6217\right)" data-math-display></div>
+              <strong class="math-display" data-math="P(50\le X\le68)=0{,}6148" data-math-display></strong>
+            </div>
+
+            <div class="result result-long normal-weight-2022-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="0{,}6148=61{,}48\%" data-math-display></strong>
+              <p data-normal-weight-2022-language="es">La probabilidad de que una pieza pese entre 50 y 68 gramos es del <span class="math-inline math-nowrap" data-math="61{,}48\%"></span>.</p>
+              <p data-normal-weight-2022-language="eu" hidden>Pieza batek 50 eta 68 gramo artean pisatzeko probabilitatea <span class="math-inline math-nowrap" data-math="\%61{,}48"></span> da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="normal-weight-2022-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Buscamos un peso <span class="math-inline math-nowrap" data-math="a"></span> que deje el 30 % de las piezas por encima. Eso significa que el 70 % queda por debajo. Localizamos en la normal estándar el valor <span class="math-inline math-nowrap" data-math="z"></span> cuya probabilidad acumulada es 0,70 y después deshacemos la tipificación.</p>
+            <div class="essential-geometry normal-weight-2022-idea">
+              <div class="math-display normal-weight-2022-formula" data-math="\begin{aligned}P(X>a)&=0{,}30,\\ \Phi(z)&=0{,}70.\end{aligned}" data-math-display></div>
+              <strong class="math-display" data-math="a=52+6{,}5\cdot0{,}525\approx55{,}41\text{ g}" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Peso que deja un 30 % de piezas por encima</h2>
+
+            <figure class="normal-weight-2022-figure" aria-label="Distribución normal del peso con una cola derecha del 30 por ciento">
+              <figcaption data-normal-weight-2022-language="es">La cola sombreada contiene el 30 % de las piezas. El punto de corte es el peso buscado.</figcaption>
+              <figcaption data-normal-weight-2022-language="eu" hidden>Itzaldutako eskuineko buztanak piezen %30 hartzen du. Ebaketa-puntua bilatutako pisua da.</figcaption>
+              <div id="normal-weight-2022-tail-board" class="jxgbox normal-weight-2022-board" role="img" aria-label="Campana normal con el 30 por ciento de la cola derecha sombreado a partir de 55,41 gramos"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Un percentil es un problema inverso</h3>
+                <p>En el apartado anterior conocíamos el peso y buscábamos una probabilidad. Ahora conocemos la probabilidad acumulada y debemos encontrar el peso que la produce.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. De la cola derecha al área acumulada</h3>
+                <p>La tabla normal proporciona el área situada a la izquierda. Si el 30 % queda a la derecha, el área acumulada a la izquierda es el 70 %.</p>
+                <div class="theory-formula math-display" data-math="\begin{aligned}P(X>a)&=0{,}30,\\ P(X\le a)&=0{,}70.\end{aligned}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Lectura e interpolación en la tabla</h3>
+                <p>El valor 0,7000 queda entre dos entradas consecutivas de la tabla. Tomamos un valor intermedio de <span class="math-inline math-nowrap" data-math="z"></span>, suficiente para la precisión pedida.</p>
+                <div class="theory-formula math-display normal-weight-2022-formula" data-math="\begin{aligned}\Phi(0{,}52)&=0{,}6985,\\ \Phi(0{,}53)&=0{,}7019.\end{aligned}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Deshacer la tipificación</h3>
+                <p>Una vez conocido el valor tipificado, recuperamos el peso original multiplicando por la desviación típica y sumando la media.</p>
+                <div class="theory-formula math-display" data-math="a=\mu+\sigma z" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Traducimos el enunciado a una probabilidad</h3>
+                  <p>Llamamos <span class="math-inline math-nowrap" data-math="a"></span> al peso de la pieza. El 30 % de las piezas pesa más que ella.</p>
+                  <div class="normal-weight-2022-work">
+                    <strong class="math-display" data-math="P(X>a)=0{,}30" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Pasamos a la probabilidad acumulada</h3>
+                  <p>La probabilidad total es uno. Por tanto, el área situada a la izquierda del peso buscado es el 70 %.</p>
+                  <div class="normal-weight-2022-work">
+                    <div class="math-display" data-math="P(X\le a)=1-0{,}30" data-math-display></div>
+                    <strong class="math-display" data-math="P(X\le a)=0{,}70" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Buscamos el valor tipificado</h3>
+                  <p>En la tabla, 0,7000 está entre 0,6985 y 0,7019. Sus valores tipificados son 0,52 y 0,53, respectivamente; una interpolación sencilla da aproximadamente 0,525.</p>
+                  <div class="normal-weight-2022-work">
+                    <div class="math-display normal-weight-2022-formula" data-math="\begin{aligned}\Phi(0{,}52)&=0{,}6985,\\ \Phi(0{,}53)&=0{,}7019.\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="z\approx0{,}525" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Deshacemos la tipificación</h3>
+                  <div class="normal-weight-2022-work">
+                    <div class="math-display" data-math="\frac{a-52}{6{,}5}\approx0{,}525" data-math-display></div>
+                    <div class="math-display" data-math="a\approx52+6{,}5\cdot0{,}525" data-math-display></div>
+                    <strong class="math-display" data-math="a\approx55{,}41\text{ g}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Interpretamos el resultado</h3>
+                  <p>Aproximadamente el 70 % de las piezas pesa como máximo 55,41 gramos y el 30 % pesa más.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry normal-weight-2022-essential">
+              <div class="math-display normal-weight-2022-formula" data-math="\begin{aligned}P(X>a)=0{,}30&\Longrightarrow P(X\le a)=0{,}70\\ \Phi(z)=0{,}70&\Longrightarrow z\approx0{,}525\end{aligned}" data-math-display></div>
+              <div class="math-display" data-math="\frac{a-52}{6{,}5}\approx0{,}525" data-math-display></div>
+              <strong class="math-display" data-math="a\approx52+6{,}5\cdot0{,}525=55{,}41\text{ g}" data-math-display></strong>
+            </div>
+
+            <div class="result result-long normal-weight-2022-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="a\approx55{,}41\text{ g}" data-math-display></strong>
+              <p data-normal-weight-2022-language="es">La pieza pesa aproximadamente 55,41 gramos.</p>
+              <p data-normal-weight-2022-language="eu" hidden>Piezak gutxi gorabehera 55,41 gramo pisatzen du.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

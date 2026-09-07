@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bi parabolaren arteko azalera · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-area-entre-parabolas-2023-ordinaria-modelo-2-idiomas.js?v=2023-ord-m2-b4" defer></script>
+  <script src="ejercicio-area-entre-parabolas-2023-ordinaria-modelo-2-grafico.js?v=2023-ord-m2-b4" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page area-parabolas-m2-2023-page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Modelo 2 · Ejercicio B4</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Área entre curvas · 2023</p>
+        <h1 class="area-parabolas-m2-2023-title">Área entre dos parábolas</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-area-parabolas-m2-2023-language="es">Dibuja el recinto limitado por las parábolas de ecuaciones</p>
+        <p data-area-parabolas-m2-2023-language="eu" hidden>Marraztu ekuazio hauetako parabolek mugatutako esparrua:</p>
+        <div class="area-parabolas-m2-2023-statement">
+          <div class="math-display" data-math="y=2x^2-4x+3" data-math-display></div>
+          <div class="math-display" data-math="y=x^2-2x+3" data-math-display></div>
+        </div>
+        <p data-area-parabolas-m2-2023-language="es">y calcula el área de ese recinto.</p>
+        <p data-area-parabolas-m2-2023-language="eu" hidden>eta kalkulatu esparru horren azalera.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio B4</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-area-parabolas-m2-2023-language="es">Primero igualamos las dos funciones. Sus puntos de corte cierran el recinto y sus abscisas serán los límites de integración. Después comparamos ambas parábolas entre esos cortes para saber cuál forma la frontera superior.</p>
+            <p class="idea-text" data-area-parabolas-m2-2023-language="eu" hidden>Lehenik, bi funtzioak berdintzen ditugu. Haien ebakidura-puntuek esparrua ixten dute, eta haien abzisak izango dira integrazio-mugak. Ondoren, bi parabolak ebakidura horien artean konparatzen ditugu, goiko muga zeinek osatzen duen jakiteko.</p>
+            <p class="idea-text" data-area-parabolas-m2-2023-language="es">El área es la integral de «función superior menos función inferior». Aquí esa diferencia se simplifica como <span class="math-inline math-nowrap" data-math="x(2-x)"></span>, que es positiva entre <span class="math-inline math-nowrap" data-math="0"></span> y <span class="math-inline math-nowrap" data-math="2"></span>.</p>
+            <p class="idea-text" data-area-parabolas-m2-2023-language="eu" hidden>Azalera «goiko funtzioa ken beheko funtzioa» diferentziaren integrala da. Hemen, diferentzia <span class="math-inline math-nowrap" data-math="x(2-x)"></span> gisa sinplifikatzen da, eta positiboa da <span class="math-inline math-nowrap" data-math="0"></span> eta <span class="math-inline math-nowrap" data-math="2"></span> artean.</p>
+            <div class="essential-geometry area-parabolas-m2-2023-essential">
+              <div class="math-display" data-math="f(x)=g(x)\quad\Longrightarrow\quad x=0,\ 2" data-math-display></div>
+              <div class="math-display" data-math="g(x)-f(x)=x(2-x)>0\qquad(0<x<2)" data-math-display></div>
+              <strong class="math-display" data-math="A=\int_0^2x(2-x)\,dx=\frac43\,u^2" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio B4</p>
+            <h2 id="solution-title">Representación y cálculo del recinto</h2>
+
+            <figure class="area-parabolas-m2-2023-figure" aria-label="Recinto limitado por dos parábolas">
+              <figcaption data-area-parabolas-m2-2023-language="es">Las curvas se cortan en <span class="math-inline math-nowrap" data-math="(0,3)"></span> y <span class="math-inline math-nowrap" data-math="(2,3)"></span>. Entre ambos puntos, <span class="math-inline math-nowrap" data-math="g(x)=x^2-2x+3"></span> es la frontera superior.</figcaption>
+              <figcaption data-area-parabolas-m2-2023-language="eu" hidden>Kurbak <span class="math-inline math-nowrap" data-math="(0,3)"></span> eta <span class="math-inline math-nowrap" data-math="(2,3)"></span> puntuetan ebakitzen dira. Bi puntuen artean, <span class="math-inline math-nowrap" data-math="g(x)=x^2-2x+3"></span> da goiko muga.</figcaption>
+              <div id="area-parabolas-m2-2023-board" class="jxgbox area-parabolas-m2-2023-board" role="img" aria-label="Dos parábolas y el recinto comprendido entre cero y dos sombreado"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Puntos de corte y límites de integración</h3>
+                <p data-area-parabolas-m2-2023-language="es">Dos gráficas se cortan cuando, para una misma abscisa, tienen la misma ordenada. Las soluciones de esa igualdad delimitan horizontalmente el recinto cerrado.</p>
+                <p data-area-parabolas-m2-2023-language="eu" hidden>Bi grafiko ebakitzen dira abzisa bererako ordenatu bera dutenean. Berdintza horren soluzioek horizontalki mugatzen dute esparru itxia.</p>
+                <div class="theory-formula math-display" data-math="f(x)=g(x)\quad\Longrightarrow\quad x=a,\ b" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Área entre dos curvas</h3>
+                <p data-area-parabolas-m2-2023-language="es">La altura de cada franja vertical es la ordenada superior menos la inferior. Si esa diferencia es positiva en todo el intervalo, su integral suma directamente las áreas de todas las franjas.</p>
+                <p data-area-parabolas-m2-2023-language="eu" hidden>Zerrenda bertikal bakoitzaren altuera goiko ordenatua ken behekoa da. Diferentzia tarte osoan positiboa bada, haren integralak zuzenean batzen ditu zerrenda guztien azalerak.</p>
+                <div class="theory-formula math-display" data-math="A=\int_a^b\bigl[f_{\mathrm{sup}}(x)-f_{\mathrm{inf}}(x)\bigr]\,dx" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Regla de Barrow</h3>
+                <p data-area-parabolas-m2-2023-language="es">Calculamos una primitiva del integrando y la evaluamos en los extremos: valor en el límite superior menos valor en el inferior.</p>
+                <p data-area-parabolas-m2-2023-language="eu" hidden>Integrakizunaren primitibo bat kalkulatu eta muturretan ebaluatzen dugu: goiko mugako balioa ken beheko mugakoa.</p>
+                <div class="theory-formula math-display" data-math="\int_a^b h(x)\,dx=H(b)-H(a)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Identificamos las dos parábolas</h3>
+                  <p data-area-parabolas-m2-2023-language="es">Llamamos <span class="math-inline math-nowrap" data-math="f"></span> a la primera función y <span class="math-inline math-nowrap" data-math="g"></span> a la segunda. Completamos cuadrados para localizar sus vértices y facilitar el dibujo.</p>
+                  <p data-area-parabolas-m2-2023-language="eu" hidden>Lehen funtzioari <span class="math-inline math-nowrap" data-math="f"></span> eta bigarrenari <span class="math-inline math-nowrap" data-math="g"></span> deitzen diegu. Karratuak osatzen ditugu erpinak kokatzeko eta marrazkia errazteko.</p>
+                  <div class="area-parabolas-m2-2023-work">
+                    <div class="math-display" data-math="f(x)=2x^2-4x+3=2(x-1)^2+1" data-math-display></div>
+                    <div class="math-display" data-math="g(x)=x^2-2x+3=(x-1)^2+2" data-math-display></div>
+                    <div class="area-parabolas-m2-2023-vertices">
+                      <div class="math-display" data-math="V_f=(1,1)" data-math-display></div>
+                      <div class="math-display" data-math="V_g=(1,2)" data-math-display></div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos las abscisas de intersección</h3>
+                  <p data-area-parabolas-m2-2023-language="es">En un punto común las dos funciones tienen el mismo valor. Igualamos, pasamos todos los términos a un miembro y factorizamos.</p>
+                  <p data-area-parabolas-m2-2023-language="eu" hidden>Puntu komun batean, bi funtzioek balio bera dute. Berdindu, gai guztiak atal batera eraman eta faktorizatzen dugu.</p>
+                  <div class="area-parabolas-m2-2023-work">
+                    <div class="math-display" data-math="2x^2-4x+3=x^2-2x+3" data-math-display></div>
+                    <div class="math-display" data-math="x^2-2x=0" data-math-display></div>
+                    <div class="math-display" data-math="x(x-2)=0" data-math-display></div>
+                    <strong class="math-display" data-math="x=0\qquad\text{o}\qquad x=2" data-math-eu="x=0\qquad\text{edo}\qquad x=2" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos los puntos de corte completos</h3>
+                  <p data-area-parabolas-m2-2023-language="es">Sustituimos las dos abscisas en cualquiera de las funciones. En ambos casos la ordenada es <span class="math-inline math-nowrap" data-math="3"></span>.</p>
+                  <p data-area-parabolas-m2-2023-language="eu" hidden>Bi abzisak funtzioetako edozeinetan ordezkatzen ditugu. Bi kasuetan ordenatua <span class="math-inline math-nowrap" data-math="3"></span> da.</p>
+                  <div class="area-parabolas-m2-2023-points">
+                    <div>
+                      <div class="math-display" data-math="x=0" data-math-display></div>
+                      <strong class="math-display" data-math="P=(0,3)" data-math-display></strong>
+                    </div>
+                    <div>
+                      <div class="math-display" data-math="x=2" data-math-display></div>
+                      <strong class="math-display" data-math="Q=(2,3)" data-math-display></strong>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Determinamos qué parábola queda arriba</h3>
+                  <p data-area-parabolas-m2-2023-language="es">Restamos la primera función a la segunda y factorizamos. Para <span class="math-inline math-nowrap" data-math="0<x<2"></span>, los dos factores son positivos; por tanto, <span class="math-inline math-nowrap" data-math="g(x)>f(x)"></span> en todo el interior del recinto.</p>
+                  <p data-area-parabolas-m2-2023-language="eu" hidden>Lehen funtzioa bigarrenari kentzen diogu eta faktorizatzen dugu. <span class="math-inline math-nowrap" data-math="0<x<2"></span> denean, bi faktoreak positiboak dira; beraz, <span class="math-inline math-nowrap" data-math="g(x)>f(x)"></span> esparruaren barrualde osoan.</p>
+                  <div class="area-parabolas-m2-2023-work">
+                    <div class="math-display" data-math="g(x)-f(x)=(x^2-2x+3)-(2x^2-4x+3)" data-math-display></div>
+                    <div class="math-display" data-math="g(x)-f(x)=-x^2+2x" data-math-display></div>
+                    <strong class="math-display" data-math="g(x)-f(x)=x(2-x)>0\qquad(0<x<2)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Planteamos la integral del área</h3>
+                  <p data-area-parabolas-m2-2023-language="es">Integramos la diferencia «superior menos inferior» desde la primera abscisa de corte hasta la segunda.</p>
+                  <p data-area-parabolas-m2-2023-language="eu" hidden>«Goikoa ken behekoa» diferentzia integratzen dugu lehen ebakidura-abzisatik bigarrenera.</p>
+                  <div class="area-parabolas-m2-2023-work">
+                    <div class="math-display" data-math="A=\int_0^2\bigl[g(x)-f(x)\bigr]\,dx" data-math-display></div>
+                    <div class="math-display" data-math="A=\int_0^2(-x^2+2x)\,dx" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la integral sin saltos</h3>
+                  <p data-area-parabolas-m2-2023-language="es">Integramos término a término y aplicamos la regla de Barrow.</p>
+                  <p data-area-parabolas-m2-2023-language="eu" hidden>Terminoz termino integratu eta Barrow-en erregela aplikatzen dugu.</p>
+                  <div class="area-parabolas-m2-2023-work">
+                    <div class="math-display" data-math="A=\left[-\frac{x^3}{3}+x^2\right]_0^2" data-math-display></div>
+                    <div class="math-display" data-math="A=\left(-\frac{2^3}{3}+2^2\right)-\left(-\frac{0^3}{3}+0^2\right)" data-math-display></div>
+                    <div class="math-display" data-math="A=-\frac83+4" data-math-display></div>
+                    <strong class="math-display" data-math="A=\frac43\,u^2" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry area-parabolas-m2-2023-essential">
+              <div class="math-display" data-math="f(x)=g(x)\quad\Longrightarrow\quad x=0,\ 2" data-math-display></div>
+              <div class="math-display" data-math="g(x)-f(x)=x(2-x)>0\qquad(0<x<2)" data-math-display></div>
+              <div class="math-display" data-math="A=\int_0^2(-x^2+2x)\,dx" data-math-display></div>
+              <div class="math-display" data-math="A=\left[-\frac{x^3}{3}+x^2\right]_0^2" data-math-display></div>
+              <strong class="math-display" data-math="A=\frac43\,u^2" data-math-display></strong>
+            </div>
+
+            <div class="result result-long area-parabolas-m2-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="A=\frac43\,u^2" data-math-display></strong>
+              <p data-area-parabolas-m2-2023-language="es">El recinto queda comprendido entre <span class="math-inline math-nowrap" data-math="x=0"></span> y <span class="math-inline math-nowrap" data-math="x=2"></span>.</p>
+              <p data-area-parabolas-m2-2023-language="eu" hidden>Esparrua <span class="math-inline math-nowrap" data-math="x=0"></span> eta <span class="math-inline math-nowrap" data-math="x=2"></span> artean dago.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

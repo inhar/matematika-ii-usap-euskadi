@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funtzio esponentzial baten deribatuak eta muturrak · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-extremos-exponencial-idiomas.js?v=katex-1" defer></script>
+  <script src="ejercicio-extremos-exponencial-grafico.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Ordinaria · Opción B · Problema B.3</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Derivadas y extremos · Junio de 2019</p>
+        <h1>Derivadas y extremos de una función exponencial</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Sea f la función</p>
+        <div class="statement-function extrema-statement-function math-display" aria-label="f de x igual a x al cuadrado por e elevado a menos cuatro x" data-math="f(x) = x^{2}e^{-4x}" data-math-display></div>
+        <p>Calcular la primera y la segunda derivada de f. Hallar los máximos y mínimos de f.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema B.3</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">La función es un producto: un polinomio y una exponencial cuyo exponente también depende de x. Por eso calcularemos sus dos derivadas combinando la regla del producto con la regla de la cadena. Después resolveremos f′(x) = 0 para localizar los posibles extremos. Como <span class="math-inline" data-math="e^{-4x}"></span> siempre es positiva, el signo de f′ dependerá únicamente de sus factores polinómicos; con ese signo sabremos dónde crece o decrece la función y podremos clasificar cada punto crítico.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema B.3</p>
+            <h2 id="solution-title">Derivadas, crecimiento y extremos</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Regla del producto y regla de la cadena</h3>
+                <p>Si una función es el producto de u(x) y v(x), hay que derivar cada factor por turno. Para derivar una exponencial con exponente variable se aplica además la regla de la cadena.</p>
+                <div class="theory-formula math-display" data-math="(u\cdot v)' = u'\cdot v + u\cdot v'" data-math-display></div>
+                <div class="theory-formula math-display" data-math="\left(e^{g(x)}\right)'=g'(x)e^{g(x)}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Puntos críticos</h3>
+                <p>Los máximos y mínimos interiores solo pueden aparecer en puntos donde la derivada vale cero o no existe. En este ejercicio f es derivable para todo número real, así que basta con resolver:</p>
+                <div class="theory-formula math-display" data-math="f'(x) = 0" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Signo de la derivada</h3>
+                <p>Si f′ es positiva en un intervalo, f es creciente; si f′ es negativa, f es decreciente. Un cambio de signo de negativo a positivo produce un mínimo, y uno de positivo a negativo produce un máximo.</p>
+                <div class="theory-formula math-display" data-math-es="f':\ -\to+\Rightarrow\text{mínimo}\qquad\cdot\qquad f':\ +\to-\Rightarrow\text{máximo}" data-math-eu="f':\ -\to+\Rightarrow\text{minimoa}\qquad\cdot\qquad f':\ +\to-\Rightarrow\text{maximoa}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Criterio de la segunda derivada</h3>
+                <p>En un punto crítico x₀, el signo de f″ permite confirmar la clasificación: una segunda derivada positiva indica curvatura hacia arriba y una negativa, curvatura hacia abajo.</p>
+                <div class="theory-formula math-display" data-math-es="f''(x_0)>0\Rightarrow\text{mínimo}\qquad\cdot\qquad f''(x_0)<0\Rightarrow\text{máximo}" data-math-eu="f''(x_0)>0\Rightarrow\text{minimoa}\qquad\cdot\qquad f''(x_0)<0\Rightarrow\text{maximoa}" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Calculamos la primera derivada</h3>
+                  <p>Identificamos los dos factores del producto y derivamos cada uno. En la exponencial usamos la regla de la cadena: la derivada del exponente −4x es −4.</p>
+                  <div class="calculation-list extrema-factor-derivatives">
+                    <div><span class="math-inline" data-math="u(x) = x^{2}"></span><strong class="math-inline" data-math="u'(x) = 2x"></strong></div>
+                    <div><span class="math-inline" data-math="v(x) = e^{-4x}"></span><strong class="math-inline" data-math="v'(x) = -4e^{-4x}"></strong></div>
+                  </div>
+                  <div class="det-expansion extrema-derivative-work">
+                    <span class="math-inline" data-math="f'(x) = u'(x)v(x) + u(x)v'(x)"></span>
+                    <span class="math-inline" data-math="f'(x) = 2xe^{-4x} + x^{2}(-4e^{-4x})"></span>
+                    <span class="math-inline" data-math="f'(x) = 2xe^{-4x} - 4x^{2}e^{-4x}"></span>
+                    <strong class="math-inline" data-math="f'(x) = 2x(1 - 2x)e^{-4x}"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la segunda derivada</h3>
+                  <p>Volvemos a usar la regla del producto, ahora sobre <span class="math-inline" data-math="e^{-4x}(2x-4x^2)"></span>. Escribimos todos los términos antes de simplificar.</p>
+                  <div class="calculation-list extrema-factor-derivatives">
+                    <div><span class="math-inline" data-math="g(x) = e^{-4x}"></span><strong class="math-inline" data-math="g'(x) = -4e^{-4x}"></strong></div>
+                    <div><span class="math-inline" data-math="h(x) = 2x - 4x^{2}"></span><strong class="math-inline" data-math="h'(x) = 2 - 8x"></strong></div>
+                  </div>
+                  <div class="det-expansion extrema-derivative-work">
+                    <span class="math-inline" data-math="f''(x) = g'(x)h(x) + g(x)h'(x)"></span>
+                    <span class="math-inline" data-math="f''(x) = (-4e^{-4x})(2x - 4x^{2}) + e^{-4x}(2 - 8x)"></span>
+                    <span class="math-inline" data-math="f''(x) = e^{-4x}[-8x + 16x^{2} + 2 - 8x]"></span>
+                    <strong class="math-inline" data-math="f''(x) = e^{-4x}(16x^{2} - 16x + 2)"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Buscamos los puntos críticos</h3>
+                  <p>Igualamos la primera derivada a cero. La exponencial nunca se anula, de modo que el producto solo puede valer cero por alguno de los factores polinómicos.</p>
+                  <div class="det-expansion extrema-critical-work">
+                    <span class="math-inline" data-math="2x(1 - 2x)e^{-4x} = 0"></span>
+                    <span class="math-inline" data-math-es="e^{-4x}>0\text{ para todo }x\in\mathbb{R}" data-math-eu="e^{-4x}>0,\ x\in\mathbb{R}\text{ guztietarako}"></span>
+                    <span class="math-inline" data-math-es="2x=0\ \text{o}\ 1-2x=0" data-math-eu="2x=0\ \text{edo}\ 1-2x=0"></span>
+                    <strong class="math-inline" data-math-es="x=0\ \text{o}\ x=\frac12" data-math-eu="x=0\ \text{edo}\ x=\frac12"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Estudiamos el signo de f′</h3>
+                  <p>Como 2 y <span class="math-inline" data-math="e^{-4x}"></span> son positivos, basta con mirar los signos de x y de 1 − 2x en los tres intervalos separados por 0 y 1/2.</p>
+                  <div class="calculation-list extrema-sign-checks">
+                    <div><span class="math-inline" data-math="x<0"></span><strong class="math-inline" data-math-es="x\text{ es }-\ \text{y}\ 1-2x\text{ es }+\Rightarrow f'(x)<0" data-math-eu="x\text{ negatiboa da eta }1-2x\text{ positiboa}\Rightarrow f'(x)<0"></strong></div>
+                    <div><span class="math-inline" data-math="0<x<\frac12"></span><strong class="math-inline" data-math-es="x\text{ es }+\ \text{y}\ 1-2x\text{ es }+\Rightarrow f'(x)>0" data-math-eu="x\text{ positiboa da eta }1-2x\text{ positiboa}\Rightarrow f'(x)>0"></strong></div>
+                    <div><span class="math-inline" data-math="x>\frac12"></span><strong class="math-inline" data-math-es="x\text{ es }+\ \text{y}\ 1-2x\text{ es }-\Rightarrow f'(x)<0" data-math-eu="x\text{ positiboa da eta }1-2x\text{ negatiboa}\Rightarrow f'(x)<0"></strong></div>
+                  </div>
+
+                  <div class="variation-table" role="img" aria-label="Tabla de signos de la primera derivada y variación de la función">
+                    <div class="variation-row variation-header">
+                      <span class="math-inline" data-math="x"></span><span class="math-inline" data-math="(-\infty,0)"></span><span class="math-inline" data-math="0"></span><span class="math-inline" data-math="(0,\frac12)"></span><span class="math-inline" data-math="\frac12"></span><span class="math-inline" data-math="(\frac12,+\infty)"></span>
+                    </div>
+                    <div class="variation-row variation-sign-row">
+                      <strong class="math-inline" data-math="f'"></strong><span>−</span><span>0</span><span>+</span><span>0</span><span>−</span>
+                    </div>
+                    <div class="variation-row variation-function-row">
+                      <strong>f</strong><span>↘</span><span>mín.</span><span>↗</span><span>máx.</span><span>↘</span>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Clasificamos los extremos y calculamos sus valores</h3>
+                  <p>En x = 0 la derivada cambia de negativa a positiva, luego hay un mínimo. En x = 1/2 cambia de positiva a negativa, luego hay un máximo local.</p>
+                  <div class="calculation-list extrema-values">
+                    <div><span class="math-inline" data-math="x = 0"></span><strong class="math-inline" data-math="f(0) = 0^{2}e^{0} = 0"></strong></div>
+                    <div><span class="math-inline" data-math="x=\frac12"></span><strong class="math-inline" data-math="f(\frac12)=(\frac12)^2e^{-2}=\frac{1}{4e^2}"></strong></div>
+                  </div>
+                  <p>La segunda derivada confirma la clasificación: f″(0) = 2 &gt; 0 y f″(1/2) = −2<span class="math-inline" data-math="e^{-2}"></span> &lt; 0.</p>
+
+                  <figure class="extrema-figure" aria-label="Gráfica de la función con su mínimo y su máximo local señalados">
+                    <figcaption>La gráfica permite leer el descenso, el ascenso y el nuevo descenso alrededor de los dos puntos críticos.</figcaption>
+                    <div id="extrema-function-board" class="jxgbox extrema-function-board" role="img" aria-label="Gráfica de f de x igual a x al cuadrado por e elevado a menos cuatro x, con los extremos en cero y un medio"></div>
+                  </figure>
+
+                  <p>Además, f(x) ≥ 0 para todo x, así que (0, 0) es un mínimo absoluto. El punto de x = 1/2 es solo un máximo local: cuando x tiende a −∞, f(x) tiende a +∞ y, por tanto, no existe máximo absoluto.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry extrema-essential">
+              <div class="math-display" data-math="f'(x) = 2x(1 - 2x)e^{-4x}" data-math-display></div>
+              <div class="math-display" data-math="f''(x) = e^{-4x}(16x^{2} - 16x + 2)" data-math-display></div>
+              <div class="math-display" data-math-es="f'(x)=0\Longleftrightarrow x=0\ \text{o}\ x=\frac12" data-math-eu="f'(x)=0\Longleftrightarrow x=0\ \text{edo}\ x=\frac12" data-math-display></div>
+              <div class="extrema-essential-sign">
+                <span class="math-inline" data-math-es="f'(x)<0\text{ en }(-\infty,0)\text{ y }(\frac12,+\infty)\Rightarrow f\text{ decrece};" data-math-eu="f'(x)<0\text{ tarte hauetan: }(-\infty,0)\text{ eta }(\frac12,+\infty)\Rightarrow f\text{ beherakorra da};"></span>
+                <span class="math-inline" data-math-es="f'(x)>0\text{ en }(0,\frac12)\Rightarrow f\text{ crece}." data-math-eu="f'(x)>0\text{ tarte honetan: }(0,\frac12)\Rightarrow f\text{ gorakorra da}."></span>
+              </div>
+              <strong class="math-inline" data-math-es="\text{Mínimo absoluto: }(0,0);\quad\text{máximo local: }(\frac12,\frac{1}{4e^2})." data-math-eu="\text{Minimo absolutua: }(0,0);\quad\text{maximo lokala: }(\frac12,\frac{1}{4e^2})."></strong>
+            </div>
+
+            <div class="result result-long extrema-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="result-unit">Mínimo absoluto: <span class="math-nowrap math-inline" data-math="x = 0"></span></span>
+                <span class="result-unit">Máximo local: <span class="math-nowrap math-inline" data-math="x = \frac{1}{2}"></span></span>
+              </strong>
+              <p>No existe máximo absoluto.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

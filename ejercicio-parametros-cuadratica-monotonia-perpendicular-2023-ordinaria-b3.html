@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funtzio koadratiko baten parametroak · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-parametros-cuadratica-monotonia-perpendicular-2023-ordinaria-idiomas.js?v=2023-ord-b3a" defer></script>
+  <script src="ejercicio-parametros-cuadratica-monotonia-perpendicular-2023-ordinaria-grafico.js?v=2023-ord-b3a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Ejercicio B3</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Parámetros, monotonía y tangentes · 2023</p>
+        <h1 class="quadratic-2023-title">Parámetros de una función cuadrática</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-quadratic-2023-language="es">La función</p>
+        <p data-quadratic-2023-language="eu" hidden>Funtzio hau</p>
+        <div class="statement-function quadratic-2023-statement math-display" data-math="f(x)=Ax^2+Bx+C" data-math-display></div>
+        <p data-quadratic-2023-language="es">es creciente en <span class="math-inline math-nowrap" data-math="(-\infty,1)"></span> y decreciente en <span class="math-inline math-nowrap" data-math="(1,+\infty)"></span>. Además, la recta tangente a su gráfica en <span class="math-inline math-nowrap" data-math="x=2"></span> es perpendicular a la recta <span class="math-inline math-nowrap" data-math="y=x+2"></span> y</p>
+        <p data-quadratic-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="(-\infty,1)"></span> tartean gorakorra da eta <span class="math-inline math-nowrap" data-math="(1,+\infty)"></span> tartean beherakorra. Gainera, haren grafikoaren <span class="math-inline math-nowrap" data-math="x=2"></span> puntuko ukitzailea <span class="math-inline math-nowrap" data-math="y=x+2"></span> zuzenarekiko perpendikularra da, eta</p>
+        <div class="quadratic-2023-limit math-display" data-math="f(0)=\lim_{x\to0}\frac{\sin x}{x}" data-math-display></div>
+        <p data-quadratic-2023-language="es">Calcula los valores de los parámetros <span class="math-inline math-nowrap" data-math="A"></span>, <span class="math-inline math-nowrap" data-math="B"></span> y <span class="math-inline math-nowrap" data-math="C"></span>.</p>
+        <p data-quadratic-2023-language="eu" hidden>Kalkulatu <span class="math-inline math-nowrap" data-math="A"></span>, <span class="math-inline math-nowrap" data-math="B"></span> eta <span class="math-inline math-nowrap" data-math="C"></span> parametroen balioak.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio B3</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-quadratic-2023-language="es">La clave es traducir cada frase del enunciado a una condición algebraica. Como la función pasa de creciente a decreciente en <span class="math-inline math-nowrap" data-math="x=1"></span>, allí tiene un máximo y su derivada se anula: <span class="math-inline math-nowrap" data-math="f'(1)=0"></span>.</p>
+            <p class="idea-text" data-quadratic-2023-language="eu" hidden>Gakoa enuntziatuko esaldi bakoitza baldintza algebraiko bihurtzea da. Funtzioa <span class="math-inline math-nowrap" data-math="x=1"></span> puntuan gorakor izatetik beherakor izatera pasatzen denez, han maximo bat du eta deribatua zero da: <span class="math-inline math-nowrap" data-math="f'(1)=0"></span>.</p>
+            <p class="idea-text" data-quadratic-2023-language="es">La recta <span class="math-inline math-nowrap" data-math="y=x+2"></span> tiene pendiente <span class="math-inline math-nowrap" data-math="1"></span>; una perpendicular tiene pendiente <span class="math-inline math-nowrap" data-math="-1"></span>. Por tanto, <span class="math-inline math-nowrap" data-math="f'(2)=-1"></span>. Estas dos ecuaciones determinan <span class="math-inline math-nowrap" data-math="A"></span> y <span class="math-inline math-nowrap" data-math="B"></span>, mientras que el límite determina directamente <span class="math-inline math-nowrap" data-math="C"></span>.</p>
+            <p class="idea-text" data-quadratic-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="y=x+2"></span> zuzenaren malda <span class="math-inline math-nowrap" data-math="1"></span> da; zuzen perpendikular baten malda <span class="math-inline math-nowrap" data-math="-1"></span> da. Beraz, <span class="math-inline math-nowrap" data-math="f'(2)=-1"></span>. Bi ekuazio horiek <span class="math-inline math-nowrap" data-math="A"></span> eta <span class="math-inline math-nowrap" data-math="B"></span> zehazten dituzte; limiteak, berriz, <span class="math-inline math-nowrap" data-math="C"></span> zuzenean ematen du.</p>
+            <div class="essential-geometry quadratic-2023-essential">
+              <div class="math-display" data-math="f'(x)=2Ax+B" data-math-display></div>
+              <div class="math-display" data-math="2A+B=0,\qquad 4A+B=-1,\qquad C=1" data-math-display></div>
+              <strong class="math-display" data-math="A=-\frac12,\qquad B=1,\qquad C=1" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio B3</p>
+            <h2 id="solution-title">De las condiciones a los parámetros</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Monotonía y puntos estacionarios</h3>
+                <p data-quadratic-2023-language="es">Si una función derivable pasa de creciente a decreciente en un punto interior, allí tiene un máximo local. En ese punto, la derivada vale cero.</p>
+                <p data-quadratic-2023-language="eu" hidden>Funtzio deribagarri bat barruko puntu batean gorakor izatetik beherakor izatera pasatzen bada, han maximo lokal bat du. Puntu horretan deribatua zero da.</p>
+                <div class="theory-formula math-display" data-math-es="f\nearrow\ \text{antes de }a,\quad f\searrow\ \text{después de }a\Rightarrow f'(a)=0" data-math-eu="f\nearrow\ a\text{-ren aurretik},\quad f\searrow\ a\text{-ren ondoren}\Rightarrow f'(a)=0" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Tangentes y rectas perpendiculares</h3>
+                <p data-quadratic-2023-language="es">La pendiente de la tangente a <span class="math-inline math-nowrap" data-math="f"></span> en <span class="math-inline math-nowrap" data-math="x=a"></span> es <span class="math-inline math-nowrap" data-math="f'(a)"></span>. Dos rectas no verticales son perpendiculares cuando el producto de sus pendientes es <span class="math-inline math-nowrap" data-math="-1"></span>.</p>
+                <p data-quadratic-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="f"></span>-ren <span class="math-inline math-nowrap" data-math="x=a"></span> puntuko ukitzailearen malda <span class="math-inline math-nowrap" data-math="f'(a)"></span> da. Bi zuzen ez-bertikal perpendikularrak dira haien malden biderkadura <span class="math-inline math-nowrap" data-math="-1"></span> denean.</p>
+                <div class="theory-formula math-display" data-math="m_1m_2=-1" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Límite trigonométrico fundamental</h3>
+                <p data-quadratic-2023-language="es">Con el ángulo medido en radianes, el siguiente límite es uno. Además, en una cuadrática <span class="math-inline math-nowrap" data-math="f(0)=C"></span>.</p>
+                <p data-quadratic-2023-language="eu" hidden>Angelua radianetan neurtuta, hurrengo limitea bat da. Gainera, funtzio koadratiko batean <span class="math-inline math-nowrap" data-math="f(0)=C"></span>.</p>
+                <div class="theory-formula math-display" data-math="\lim_{x\to0}\frac{\sin x}{x}=1" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Derivamos la función</h3>
+                  <p data-quadratic-2023-language="es">Los parámetros son constantes. Derivamos término a término.</p>
+                  <p data-quadratic-2023-language="eu" hidden>Parametroak konstanteak dira. Gaiz gai deribatzen dugu.</p>
+                  <div class="quadratic-2023-work">
+                    <div class="math-display" data-math="f(x)=Ax^2+Bx+C" data-math-display></div>
+                    <strong class="math-display" data-math="f'(x)=2Ax+B" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Traducimos la condición de monotonía</h3>
+                  <p data-quadratic-2023-language="es">La función crece antes de <span class="math-inline math-nowrap" data-math="x=1"></span> y decrece después. Por tanto, tiene un máximo en <span class="math-inline math-nowrap" data-math="x=1"></span> y la derivada se anula allí.</p>
+                  <p data-quadratic-2023-language="eu" hidden>Funtzioa <span class="math-inline math-nowrap" data-math="x=1"></span> baino lehen gorakorra da eta ondoren beherakorra. Beraz, maximo bat du <span class="math-inline math-nowrap" data-math="x=1"></span> puntuan, eta deribatua han zero da.</p>
+                  <div class="quadratic-2023-work">
+                    <div class="math-display" data-math="f'(1)=2A\cdot1+B" data-math-display></div>
+                    <strong class="math-display" data-math="2A+B=0" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Traducimos la perpendicularidad</h3>
+                  <p data-quadratic-2023-language="es">La pendiente de <span class="math-inline math-nowrap" data-math="y=x+2"></span> es <span class="math-inline math-nowrap" data-math="1"></span>. La pendiente perpendicular es <span class="math-inline math-nowrap" data-math="-1"></span>, y debe coincidir con la derivada de <span class="math-inline math-nowrap" data-math="f"></span> en <span class="math-inline math-nowrap" data-math="x=2"></span>.</p>
+                  <p data-quadratic-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="y=x+2"></span> zuzenaren malda <span class="math-inline math-nowrap" data-math="1"></span> da. Malda perpendikularra <span class="math-inline math-nowrap" data-math="-1"></span> da, eta <span class="math-inline math-nowrap" data-math="f"></span>-ren <span class="math-inline math-nowrap" data-math="x=2"></span> puntuko deribatuarekin bat etorri behar du.</p>
+                  <div class="quadratic-2023-work">
+                    <div class="math-display" data-math="1\cdot f'(2)=-1\Rightarrow f'(2)=-1" data-math-display></div>
+                    <div class="math-display" data-math="f'(2)=2A\cdot2+B" data-math-display></div>
+                    <strong class="math-display" data-math="4A+B=-1" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Resolvemos el sistema para <span class="math-inline math-nowrap" data-math="A"></span> y <span class="math-inline math-nowrap" data-math="B"></span></h3>
+                  <p data-quadratic-2023-language="es">Restamos la primera ecuación a la segunda. Así desaparece <span class="math-inline math-nowrap" data-math="B"></span>.</p>
+                  <p data-quadratic-2023-language="eu" hidden>Lehenengo ekuazioa bigarrenari kentzen diogu. Horrela, <span class="math-inline math-nowrap" data-math="B"></span> desagertzen da.</p>
+                  <div class="quadratic-2023-work">
+                    <div class="math-display" data-math="\left\{\begin{aligned}2A+B&amp;=0,\\4A+B&amp;=-1.\end{aligned}\right." data-math-display></div>
+                    <div class="math-display" data-math="(4A+B)-(2A+B)=-1-0" data-math-display></div>
+                    <div class="math-display" data-math="2A=-1\Rightarrow A=-\frac12" data-math-display></div>
+                    <div class="math-display" data-math="2\left(-\frac12\right)+B=0" data-math-display></div>
+                    <strong class="math-display" data-math="A=-\frac12,\qquad B=1" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos <span class="math-inline math-nowrap" data-math="C"></span> con el límite</h3>
+                  <p data-quadratic-2023-language="es">Al sustituir <span class="math-inline math-nowrap" data-math="x=0"></span> en la cuadrática solo queda el término independiente.</p>
+                  <p data-quadratic-2023-language="eu" hidden>Funtzio koadratikoan <span class="math-inline math-nowrap" data-math="x=0"></span> ordezkatzean gai independentea baino ez da geratzen.</p>
+                  <div class="quadratic-2023-work">
+                    <div class="math-display" data-math="f(0)=A\cdot0^2+B\cdot0+C=C" data-math-display></div>
+                    <div class="math-display" data-math="\lim_{x\to0}\frac{\sin x}{x}=1" data-math-display></div>
+                    <strong class="math-display" data-math="C=1" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos las condiciones</h3>
+                  <p data-quadratic-2023-language="es">Escribimos la función obtenida. Su derivada confirma exactamente los intervalos indicados.</p>
+                  <p data-quadratic-2023-language="eu" hidden>Lortutako funtzioa idazten dugu. Haren deribatuak emandako tarteak zehazki baieztatzen ditu.</p>
+                  <div class="quadratic-2023-work">
+                    <strong class="math-display" data-math="f(x)=-\frac12x^2+x+1" data-math-display></strong>
+                    <div class="math-display" data-math="f'(x)=1-x" data-math-display></div>
+                    <div class="math-display" data-math="x<1\Rightarrow f'(x)>0,\qquad x>1\Rightarrow f'(x)<0" data-math-display></div>
+                  </div>
+                  <p data-quadratic-2023-language="es">En <span class="math-inline math-nowrap" data-math="x=2"></span>, el punto de tangencia es <span class="math-inline math-nowrap" data-math="T=(2,1)"></span> y la tangente tiene pendiente <span class="math-inline math-nowrap" data-math="-1"></span>.</p>
+                  <p data-quadratic-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=2"></span> puntuan, ukitze-puntua <span class="math-inline math-nowrap" data-math="T=(2,1)"></span> da eta ukitzailearen malda <span class="math-inline math-nowrap" data-math="-1"></span> da.</p>
+                  <div class="quadratic-2023-work">
+                    <div class="math-display" data-math="t\colon y-1=-(x-2)\Rightarrow y=-x+3" data-math-display></div>
+                    <div class="math-display" data-math="m_t\,m_s=(-1)\cdot1=-1" data-math-display></div>
+                  </div>
+
+                  <figure class="quadratic-2023-figure" aria-label="Parábola obtenida, su tangente en x igual a dos y la recta perpendicular dada">
+                    <figcaption data-quadratic-2023-language="es">La parábola tiene su máximo en <span class="math-inline math-nowrap" data-math="x=1"></span>. La tangente <span class="math-inline math-nowrap" data-math="t"></span> en <span class="math-inline math-nowrap" data-math="T=(2,1)"></span> es perpendicular a la recta dada <span class="math-inline math-nowrap" data-math="s\colon y=x+2"></span>; el pequeño ángulo recto marca esa relación.</figcaption>
+                    <figcaption data-quadratic-2023-language="eu" hidden>Parabolak <span class="math-inline math-nowrap" data-math="x=1"></span> puntuan du maximoa. <span class="math-inline math-nowrap" data-math="T=(2,1)"></span> puntuko <span class="math-inline math-nowrap" data-math="t"></span> ukitzailea emandako <span class="math-inline math-nowrap" data-math="s\colon y=x+2"></span> zuzenarekiko perpendikularra da; angelu zuzen txikiak erlazio hori adierazten du.</figcaption>
+                    <div id="quadratic-2023-board" class="jxgbox quadratic-2023-board" role="img" aria-label="Parábola menos un medio x cuadrado más x más uno, tangente y igual a menos x más tres y recta y igual a x más dos"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry quadratic-2023-essential">
+              <div class="math-display" data-math="f'(x)=2Ax+B" data-math-display></div>
+              <div class="math-display" data-math="f'(1)=0\Rightarrow 2A+B=0" data-math-display></div>
+              <div class="math-display" data-math="f'(2)=-1\Rightarrow 4A+B=-1" data-math-display></div>
+              <div class="math-display" data-math="f(0)=\lim_{x\to0}\frac{\sin x}{x}=1\Rightarrow C=1" data-math-display></div>
+              <strong class="math-display" data-math="A=-\frac12,\qquad B=1,\qquad C=1" data-math-display></strong>
+            </div>
+
+            <div class="result quadratic-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="A=-\frac12,\qquad B=1,\qquad C=1" data-math-display></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

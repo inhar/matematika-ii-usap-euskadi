@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funtzio kubikoa: parametroak eta muturrak · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-cubica-extremos-2020-ordinaria-idiomas.js" defer></script>
+  <script src="ejercicio-cubica-extremos-2020-ordinaria-grafico.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2020 · Ordinaria · Opción A · Ejercicio A.3</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Derivadas y extremos · 2020</p>
+        <h1>Función cúbica: parámetros y extremos relativos</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Dada la función</p>
+        <div class="equation cubic-statement-function math-display" data-math="f(x)=ax^3+bx^2+c" data-math-display></div>
+
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">
+              Obtener los valores de los parámetros para que su gráfica pase por el punto
+              <span class="math-nowrap math-inline" data-math="P(0,2)"></span>
+              y tenga un extremo relativo en
+              <span class="math-nowrap math-inline" data-math="Q(1,-1)"></span>.
+            </span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">¿Tiene más extremos?</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="cubic-2020-part-a" data-target="cubic-2020-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="cubic-2020-part-b" data-target="cubic-2020-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="cubic-2020-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Hay tres parámetros desconocidos y el enunciado proporciona exactamente tres condiciones. Los dos puntos deben pertenecer a la gráfica y, además, la derivada debe anularse en la abscisa del extremo. Traduciremos esos tres datos a ecuaciones, resolveremos el sistema y comprobaremos que el punto indicado es realmente un extremo.</p>
+            <div class="essential-geometry cubic-essential">
+              <div class="math-display" data-math="P(0,2)\Rightarrow f(0)=2" data-math-display></div>
+              <div class="math-display" data-math="Q(1,-1)\Rightarrow f(1)=-1" data-math-display></div>
+              <div class="math-display" data-math="Q\text{ extremo}\Rightarrow f'(1)=0" data-math-eu="Q\text{ muturra}\Rightarrow f'(1)=0" data-math-display></div>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Determinación de los parámetros</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Un punto de la gráfica produce una ecuación</h3>
+                <p>Un punto pertenece a la gráfica de una función cuando su ordenada coincide con el valor de la función en su abscisa. Aplicaremos esta equivalencia a los dos puntos del enunciado.</p>
+                <div class="theory-formula math-display" data-math-es="(x_0,y_0)\in\operatorname{graf}(f)\Longleftrightarrow f(x_0)=y_0" data-math-eu="(x_0,y_0)\in\operatorname{graf}(f)\Longleftrightarrow f(x_0)=y_0" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Condición necesaria de extremo</h3>
+                <p>Si una función es derivable y tiene un extremo local en un punto interior, la derivada se anula allí. Esta condición permite obtener la tercera ecuación del sistema.</p>
+                <div class="theory-formula math-display" data-math-es="x_0\text{ extremo local}\Rightarrow f'(x_0)=0" data-math-eu="x_0\text{ mutur lokala}\Rightarrow f'(x_0)=0" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Comprobación con la segunda derivada</h3>
+                <p>Anular la primera derivada solo da un candidato. Si la segunda derivada no es cero, su signo confirma y clasifica el extremo.</p>
+                <div class="theory-formula">
+                  <div class="cubic-essential-flow">
+                    <span class="math-inline" data-math="f'(x_0)=0,\quad f''(x_0)>0"></span>
+                    <span class="math-inline" data-math-es="\Rightarrow\text{mínimo local}" data-math-eu="\Rightarrow\text{minimo lokala}"></span>
+                  </div>
+                  <div class="cubic-essential-flow">
+                    <span class="math-inline" data-math="f'(x_0)=0,\quad f''(x_0)<0"></span>
+                    <span class="math-inline" data-math-es="\Rightarrow\text{máximo local}" data-math-eu="\Rightarrow\text{maximo lokala}"></span>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Calculamos las derivadas que vamos a necesitar</h3>
+                  <p>Los parámetros son constantes, así que derivamos término a término.</p>
+                  <div class="det-expansion cubic-derivatives">
+                    <span class="math-inline" data-math="f(x)=ax^3+bx^2+c"></span>
+                    <span class="math-inline" data-math="f'(x)=3ax^2+2bx"></span>
+                    <strong class="math-inline" data-math="f''(x)=6ax+2b"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Usamos el punto P</h3>
+                  <p>Al sustituir su abscisa en la función debemos obtener su ordenada.</p>
+                  <div class="derivation cubic-condition">
+                    <div><span class="math-inline" data-math="f(0)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="2"></span></div>
+                    <div><span class="math-inline" data-math="a\cdot0^3+b\cdot0^2+c"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="2"></span></div>
+                    <div><span class="math-inline" data-math="c"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="2"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Usamos que Q pertenece a la gráfica</h3>
+                  <p>Sustituimos sus dos coordenadas y después empleamos el valor de <span class="math-nowrap math-inline" data-math="c"></span> que acabamos de hallar.</p>
+                  <div class="derivation cubic-condition">
+                    <div><span class="math-inline" data-math="f(1)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="-1"></span></div>
+                    <div><span class="math-inline" data-math="a+b+c"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="-1"></span></div>
+                    <div><span class="math-inline" data-math="a+b+2"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="-1"></span></div>
+                    <div><span class="math-inline" data-math="a+b"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="-3"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Usamos que Q es un extremo</h3>
+                  <p>Como la función es derivable, la primera derivada debe anularse en su abscisa.</p>
+                  <div class="derivation cubic-condition">
+                    <div><span class="math-inline" data-math="f'(1)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="0"></span></div>
+                    <div><span class="math-inline" data-math="3a\cdot1^2+2b\cdot1"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="0"></span></div>
+                    <div><span class="math-inline" data-math="3a+2b"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="0"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Resolvemos las dos ecuaciones restantes</h3>
+                  <p>Multiplicamos la primera ecuación por dos y la restamos de la segunda. Así desaparece el parámetro <span class="math-nowrap math-inline" data-math="b"></span>.</p>
+                  <div class="det-expansion cubic-system-reduction">
+                    <span class="math-inline" data-math="a+b=-3"></span>
+                    <span class="math-inline" data-math="3a+2b=0"></span>
+                    <span class="math-inline" data-math="2a+2b=-6"></span>
+                    <span class="math-inline" data-math="a=0-(-6)"></span>
+                    <strong class="math-inline" data-math="a=6"></strong>
+                  </div>
+                  <p>Sustituimos el valor obtenido en la ecuación más sencilla.</p>
+                  <div class="derivation cubic-final-coefficient">
+                    <div><span class="math-inline" data-math="6+b"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="-3"></span></div>
+                    <div><span class="math-inline" data-math="b"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="-9"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Escribimos la función y verificamos el extremo</h3>
+                  <div class="equation equation-compact cubic-final-function math-display" data-math="f(x)=6x^3-9x^2+2" data-math-display></div>
+                  <div class="calculation-list cubic-verification">
+                    <div><span>P pertenece</span><strong class="math-inline" data-math="f(0)=2"></strong></div>
+                    <div><span>Q pertenece</span><strong class="math-inline" data-math="f(1)=6-9+2=-1"></strong></div>
+                    <div><span>Q es estacionario</span><strong class="math-inline" data-math="f'(1)=18-18=0"></strong></div>
+                    <div>
+                      <span>Q es un extremo</span>
+                      <strong class="cubic-essential-flow">
+                        <span class="math-inline" data-math="f''(1)=36-18=18>0"></span>
+                        <span class="math-inline" data-math-es="\Rightarrow\text{mínimo local}" data-math-eu="\Rightarrow\text{minimo lokala}"></span>
+                      </strong>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry cubic-essential">
+              <div class="math-display" data-math="f(0)=2\Rightarrow c=2" data-math-display></div>
+              <div class="math-display" data-math="f(1)=-1\Rightarrow a+b=-3" data-math-display></div>
+              <div class="math-display" data-math="f'(1)=0\Rightarrow 3a+2b=0" data-math-display></div>
+              <strong class="math-inline" data-math="a=6;\qquad b=-9;\qquad c=2"></strong>
+            </div>
+
+            <div class="result result-long cubic-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="math-inline" data-math="a=6;\quad b=-9;\quad c=2"></span>
+                <span class="math-inline" data-math="f(x)=6x^3-9x^2+2"></span>
+              </strong>
+              <p>El punto Q queda confirmado como mínimo local.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cubic-2020-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Para saber si hay más extremos debemos encontrar todos los ceros de la primera derivada, no solo el que ya conocemos. La derivada se factoriza de inmediato y muestra dos únicos puntos críticos. La segunda derivada permitirá distinguir cuál es máximo y cuál es mínimo.</p>
+            <div class="essential-geometry cubic-essential">
+              <div class="math-display" data-math="f'(x)=18x(x-1)" data-math-display></div>
+              <strong class="math-inline" data-math="f'(x)=0\Longleftrightarrow x=0\ \text{o}\ x=1" data-math-eu="f'(x)=0\Longleftrightarrow x=0\ \text{edo}\ x=1"></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Estudio de todos los extremos</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Dónde pueden aparecer los extremos</h3>
+                <p>En una función derivable, todo extremo local interior debe ser un punto crítico. Por eso hay que resolver completamente la ecuación de la primera derivada.</p>
+                <div class="theory-formula math-display" data-math-es="x_0\text{ extremo local}\Rightarrow f'(x_0)=0" data-math-eu="x_0\text{ mutur lokala}\Rightarrow f'(x_0)=0" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Cómo se clasifica cada punto crítico</h3>
+                <p>El signo de la segunda derivada describe la curvatura local: negativo en un máximo y positivo en un mínimo.</p>
+                <div class="theory-formula cubic-theory-sign">
+                  <span class="math-inline" data-math-es="f''(x_0)<0\Rightarrow\text{máximo local}" data-math-eu="f''(x_0)<0\Rightarrow\text{maximo lokala}"></span>
+                  <span class="math-inline" data-math-es="f''(x_0)>0\Rightarrow\text{mínimo local}" data-math-eu="f''(x_0)>0\Rightarrow\text{minimo lokala}"></span>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Por qué la lista será completa</h3>
+                <p>Una vez factorizada la derivada, sus ceros son exactamente los ceros de sus factores. Si no hay más raíces, tampoco puede haber más extremos locales interiores.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Factorizamos la primera derivada</h3>
+                  <p>Extraemos el factor común para ver todos sus ceros.</p>
+                  <div class="det-expansion cubic-derivative-factor">
+                    <span class="math-inline" data-math="f'(x)=18x^2-18x"></span>
+                    <strong class="math-inline" data-math="f'(x)=18x(x-1)"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Localizamos todos los puntos críticos</h3>
+                  <p>Un producto es cero si alguno de sus factores es cero.</p>
+                  <div class="det-expansion cubic-critical-points">
+                    <span class="math-inline" data-math="18x(x-1)=0"></span>
+                    <span class="math-inline" data-math-es="x=0\quad\text{o}\quad x-1=0" data-math-eu="x=0\quad\text{edo}\quad x-1=0"></span>
+                    <strong class="math-inline" data-math-es="x=0\quad\text{o}\quad x=1" data-math-eu="x=0\quad\text{edo}\quad x=1"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Clasificamos ambos puntos</h3>
+                  <p>Evaluamos la segunda derivada en cada abscisa crítica.</p>
+                  <div class="det-expansion cubic-derivatives">
+                    <span class="math-inline" data-math="f''(x)=36x-18"></span>
+                  </div>
+                  <div class="calculation-list cubic-extrema-classification">
+                    <div><span class="math-inline" data-math="x=0"></span><strong class="math-inline" data-math-es="f''(0)=-18<0\Rightarrow\text{máximo local}" data-math-eu="f''(0)=-18<0\Rightarrow\text{maximo lokala}"></strong></div>
+                    <div><span class="math-inline" data-math="x=1"></span><strong class="math-inline" data-math-es="f''(1)=18>0\Rightarrow\text{mínimo local}" data-math-eu="f''(1)=18>0\Rightarrow\text{minimo lokala}"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos las coordenadas y cerramos el estudio</h3>
+                  <div class="calculation-list cubic-verification">
+                    <div><span>Máximo</span><strong class="math-inline" data-math="f(0)=2\Rightarrow P(0,2)"></strong></div>
+                    <div><span>Mínimo</span><strong class="math-inline" data-math="f(1)=-1\Rightarrow Q(1,-1)"></strong></div>
+                  </div>
+                  <p>No hay más extremos: la factorización anterior contiene todos los ceros de la derivada.</p>
+
+                  <figure class="cubic-extrema-figure" aria-label="Gráfica de la función cúbica con su máximo y su mínimo locales">
+                    <figcaption>La gráfica confirma el máximo en P, el mínimo en Q y el cambio de monotonía entre ambos.</figcaption>
+                    <div id="cubic-2020-extrema-board" class="jxgbox cubic-extrema-board" role="img" aria-label="Gráfica de la función cúbica con máximo en P cero dos y mínimo en Q uno menos uno"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry cubic-essential">
+              <div class="math-display" data-math="f'(x)=18x(x-1)=0\Longleftrightarrow x=0,\ 1" data-math-display></div>
+              <div class="math-display" data-math-es="f''(0)=-18<0\Rightarrow P(0,2)\text{ es máximo}" data-math-eu="f''(0)=-18<0\Rightarrow P(0,2)\text{ maximoa da}" data-math-display></div>
+              <div class="math-display" data-math-es="f''(1)=18>0\Rightarrow Q(1,-1)\text{ es mínimo}" data-math-eu="f''(1)=18>0\Rightarrow Q(1,-1)\text{ minimoa da}" data-math-display></div>
+              <strong>No hay más ceros de la derivada; por tanto, no hay más extremos.</strong>
+            </div>
+
+            <div class="result result-long cubic-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="math-inline" data-math-es="\text{Máximo local: }P(0,2)" data-math-eu="\text{Maximo lokala: }P(0,2)"></span>
+                <span class="math-inline" data-math-es="\text{Mínimo local: }Q(1,-1)" data-math-eu="\text{Minimo lokala: }Q(1,-1)"></span>
+              </strong>
+              <p>No existen más extremos locales.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

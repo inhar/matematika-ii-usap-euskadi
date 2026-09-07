@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eragiketa jarraituen ondorengo determinantea · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-operaciones-determinante-idiomas.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Extraordinaria · Opción B · Problema B.1</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Álgebra lineal · Propiedades de los determinantes · Julio de 2019</p>
+        <h1>Determinante tras varias operaciones matriciales</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Una matriz A de tamaño 3 × 3 cumple:</p>
+        <div class="equation equation-compact determinant-initial-value math-display" data-math="\det(A) = 5" data-math-display></div>
+        <p>Se realizan sucesivamente las siguientes operaciones:</p>
+
+        <ol class="statement-list determinant-operation-statement">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">Se intercambian la primera y la segunda fila.</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">Se multiplica la tercera columna por −2.</span>
+          </li>
+          <li>
+            <span class="statement-label">c</span>
+            <span class="statement-text">Se multiplica toda la matriz por 2.</span>
+          </li>
+          <li>
+            <span class="statement-label">d</span>
+            <span class="statement-text">Se transpone la matriz.</span>
+          </li>
+        </ol>
+
+        <p>Calcular razonadamente el determinante de la matriz obtenida.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema B.1</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">No necesitamos conocer las entradas de la matriz: cada operación modifica su determinante mediante un factor conocido. Seguiremos las transformaciones en el orden indicado, actualizando el valor después de cada una. El intercambio de filas cambia el signo; multiplicar una columna por −2 multiplica el determinante por −2; multiplicar toda una matriz 3 × 3 por 2 aporta el factor 2³; y transponerla no cambia su determinante.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema B.1</p>
+            <h2 id="solution-title">Efecto de las operaciones sobre el determinante</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Intercambio de dos filas</h3>
+                <p>Si se intercambian dos filas de una matriz cuadrada, el determinante conserva su valor absoluto, pero cambia de signo.</p>
+                <div class="theory-formula math-display" data-math="F_i\leftrightarrow F_j\Rightarrow\det(A')=-\det(A)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Multiplicación de una fila o columna</h3>
+                <p>Si una sola fila o una sola columna se multiplica por un número k, el determinante queda multiplicado por ese mismo número.</p>
+                <div class="theory-formula math-display" data-math="C_j\leftarrow kC_j\Rightarrow\det(A')=k\cdot\det(A)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Multiplicación de toda la matriz</h3>
+                <p>Multiplicar toda una matriz de orden n por k equivale a multiplicar sus n filas por k. Por eso aparecen n factores iguales.</p>
+                <div class="theory-formula math-display" data-math="\det(kA)=k^n\det(A)" data-math-display></div>
+                <p>En una matriz 3 × 3, el factor es k³. Esta propiedad no debe confundirse con multiplicar una única fila o columna.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Determinante de la traspuesta</h3>
+                <p>La trasposición intercambia filas por columnas, pero no modifica el valor del determinante.</p>
+                <div class="theory-formula math-display" data-math="\det(A^{\mathsf T}) = \det(A)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Nombramos las matrices de cada etapa</h3>
+                  <p>Llamaremos A₀ a la matriz inicial y A₁, A₂, A₃ y A₄ a las matrices obtenidas después de las operaciones a, b, c y d, respectivamente.</p>
+                  <div class="equation equation-compact math-display" data-math="\det(A_{0}) = 5" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Intercambiamos la primera y la segunda fila</h3>
+                  <p>Un único intercambio de dos filas cambia el signo del determinante. No altera su valor absoluto.</p>
+                  <div class="det-expansion successive-det-calculation">
+                    <span class="math-nowrap math-inline" data-math="F_{1} \leftrightarrow F_{2}"></span>
+                    <span class="math-nowrap math-inline" data-math="\det(A_{1}) = -\det(A_{0})"></span>
+                    <strong class="math-nowrap math-inline" data-math="\det(A_{1}) = -5"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Multiplicamos la tercera columna por −2</h3>
+                  <p>Al multiplicar una sola columna por −2, el determinante anterior queda multiplicado por −2. Los dos signos negativos se cancelan.</p>
+                  <div class="det-expansion successive-det-calculation">
+                    <span class="math-nowrap math-inline" data-math="C_{3} \longleftarrow -2C_{3}"></span>
+                    <span class="math-nowrap math-inline" data-math="\det(A_{2}) = (-2)\det(A_{1})"></span>
+                    <span class="math-nowrap math-inline" data-math="\det(A_{2}) = (-2)(-5)"></span>
+                    <strong class="math-nowrap math-inline" data-math="\det(A_{2}) = 10"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Multiplicamos toda la matriz por 2</h3>
+                  <p>A₂ es de tamaño 3 × 3. Multiplicar toda la matriz por 2 multiplica cada una de sus tres filas por 2; por eso el determinante recibe el factor 2³ = 8, no solamente el factor 2.</p>
+                  <div class="det-expansion successive-det-calculation">
+                    <span class="math-nowrap math-inline" data-math="A_{3} = 2A_{2}"></span>
+                    <span class="math-nowrap math-inline" data-math="\det(A_{3}) = 2^{3}\det(A_{2})"></span>
+                    <span class="math-nowrap math-inline" data-math="\det(A_{3}) = 8\cdot 10"></span>
+                    <strong class="math-nowrap math-inline" data-math="\det(A_{3}) = 80"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Transponemos la matriz</h3>
+                  <p>La traspuesta tiene el mismo determinante que la matriz de la que procede.</p>
+                  <div class="det-expansion successive-det-calculation">
+                    <span class="math-nowrap math-inline" data-math="A_{4} = A_{3}^{\mathsf T}"></span>
+                    <span class="math-nowrap math-inline" data-math="\det(A_{4}) = \det(A_{3})"></span>
+                    <strong class="math-nowrap math-inline" data-math="\det(A_{4}) = 80"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Reunimos toda la secuencia</h3>
+                  <p>La siguiente lectura permite comprobar el valor después de cada operación, no solo el resultado final.</p>
+                  <figure class="det-operation-figure" aria-label="Secuencia de las cuatro operaciones y del determinante obtenido tras cada una">
+                    <figcaption>Evolución del determinante</figcaption>
+                    <div class="det-operation-chain" role="list">
+                      <div class="det-operation-row" role="listitem">
+                        <span class="det-stage">A₀</span>
+                        <div><strong>Matriz inicial</strong><small>Valor dado</small></div>
+                        <b>5</b>
+                      </div>
+                      <div class="det-operation-row" role="listitem">
+                        <span class="det-stage">A₁</span>
+                        <div><strong>F₁ ↔ F₂</strong><small>Factor −1</small></div>
+                        <b>−5</b>
+                      </div>
+                      <div class="det-operation-row" role="listitem">
+                        <span class="det-stage">A₂</span>
+                        <div><strong>C₃ ← −2C₃</strong><small>Factor −2</small></div>
+                        <b>10</b>
+                      </div>
+                      <div class="det-operation-row" role="listitem">
+                        <span class="det-stage">A₃</span>
+                        <div><strong>A₃ = 2A₂</strong><small>Factor 2³ = 8</small></div>
+                        <b>80</b>
+                      </div>
+                      <div class="det-operation-row" role="listitem">
+                        <span class="det-stage">A₄</span>
+                        <div><strong>A₄ = A₃ᵀ</strong><small>Factor 1</small></div>
+                        <b>80</b>
+                      </div>
+                    </div>
+                  </figure>
+                  <div class="det-expansion successive-det-summary">
+                    <span class="successive-det-formula math-inline" data-math="\det(A_{4}) = 5\cdot (-1)\cdot (-2)\cdot 2^{3}\cdot 1"></span>
+                    <strong class="math-nowrap math-inline" data-math="\det(A_{4}) = 80"></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry successive-det-essential">
+              <div>Intercambiar F₁ y F₂: <strong class="math-inline" data-math="5\cdot (-1) = -5"></strong></div>
+              <div>Multiplicar C₃ por −2: <strong class="math-inline" data-math="(-5)(-2) = 10"></strong></div>
+              <div>Multiplicar toda la matriz 3 × 3 por 2: <strong class="math-inline" data-math="10\cdot 2^{3} = 80"></strong></div>
+              <div>Transponer: <strong>el determinante no cambia</strong></div>
+            </div>
+
+            <div class="result matrix-determinant-result">
+              <span>Resultado</span>
+              <strong class="math-inline" data-math="\det(A_4)=80"></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

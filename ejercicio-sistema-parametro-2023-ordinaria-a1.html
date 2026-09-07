@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parametrodun sistema lineal baten eztabaida · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-sistema-parametro-2023-ordinaria-idiomas.js?v=2023-ord-a1a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Ejercicio A1</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Álgebra lineal · Sistemas con parámetro · 2023</p>
+        <h1 class="system-2023-title">Discusión de un sistema lineal con parámetro</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-system-2023-language="es">Discute la existencia de solución del siguiente sistema en función del parámetro <span class="math-inline math-nowrap" data-math="\alpha"></span>:</p>
+        <p data-system-2023-language="eu" hidden>Eztabaidatu sistema honen soluzioaren existentzia <span class="math-inline math-nowrap" data-math="\alpha"></span> parametroaren arabera:</p>
+        <div class="system-2023-statement math-display" data-math="\left\{\begin{aligned}x+2y+3z&=1,\\ x+\alpha y+z&=1,\\ 2x+3y+4z&=2.\end{aligned}\right." data-math-display></div>
+        <p data-system-2023-language="es">Resuelve el sistema en los casos <span class="math-inline math-nowrap" data-math="\alpha=1"></span> y <span class="math-inline math-nowrap" data-math="\alpha=2"></span>.</p>
+        <p data-system-2023-language="eu" hidden>Ebatzi sistema <span class="math-inline math-nowrap" data-math="\alpha=1"></span> eta <span class="math-inline math-nowrap" data-math="\alpha=2"></span> kasuetan.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs system-2023-tabs" aria-label="Partes de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="system-2023-discussion" data-target="system-2023-discussion">Discusión</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="system-2023-alpha-one" data-target="system-2023-alpha-one">
+        <span class="math-inline math-nowrap" data-math="\alpha=1"></span>
+      </button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="system-2023-alpha-two" data-target="system-2023-alpha-two">
+        <span class="math-inline math-nowrap" data-math="\alpha=2"></span>
+      </button>
+    </nav>
+
+    <div class="solutions">
+      <section id="system-2023-discussion" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Discusión</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-system-2023-language="es">Calculamos el determinante de la matriz de coeficientes. Si es distinto de cero, el sistema tiene una única solución. El determinante solo se anula para <span class="math-inline math-nowrap" data-math="\alpha=1"></span>; por eso únicamente en ese valor necesitamos comparar los rangos de la matriz de coeficientes y de la ampliada.</p>
+            <p class="idea-text" data-system-2023-language="eu" hidden>Koefizienteen matrizearen determinantea kalkulatzen dugu. Zero ez bada, sistemak soluzio bakarra du. Determinantea <span class="math-inline math-nowrap" data-math="\alpha=1"></span> denean baino ez da anulatzen; horregatik, balio horretan bakarrik alderatu behar ditugu koefizienteen matrizearen eta matrize hedatuaren heinak.</p>
+            <p class="idea-text" data-system-2023-language="es">Al sustituir <span class="math-inline math-nowrap" data-math="\alpha=1"></span>, una de las ecuaciones resulta redundante y no aparece ninguna contradicción. Por tanto, el sistema tiene solución para todo valor del parámetro: única salvo en <span class="math-inline math-nowrap" data-math="\alpha=1"></span>, donde hay infinitas.</p>
+            <p class="idea-text" data-system-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="\alpha=1"></span> ordezkatzean, ekuazioetako bat erredundantea da eta ez da kontraesanik agertzen. Beraz, sistemak soluzioa du parametroaren balio guztietarako: bakarra da <span class="math-inline math-nowrap" data-math="\alpha=1"></span> izan ezik; balio horretan infinitu soluzio ditu.</p>
+            <div class="essential-geometry system-2023-idea">
+              <div class="math-display" data-math="\det A_\alpha=2(1-\alpha)" data-math-display></div>
+              <strong class="math-display system-2023-classification" data-math="\begin{cases}\alpha\ne1:&\text{solución única},\\ \alpha=1:&\text{infinitas soluciones}.\end{cases}" data-math-eu="\begin{cases}\alpha\ne1:&\text{soluzio bakarra},\\ \alpha=1:&\text{infinitu soluzio}.\end{cases}" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Discusión</p>
+            <h2>Clasificación del sistema según el parámetro</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. El determinante detecta el caso regular</h3>
+                <p>En un sistema cuadrado, un determinante no nulo garantiza que la matriz de coeficientes es invertible y que existe una única solución.</p>
+                <div class="theory-formula math-display" data-math="\det A\ne0\quad\Longrightarrow\quad \operatorname{rg}(A)=n" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Teorema de Rouché-Frobenius</h3>
+                <p>Cuando el determinante se anula, debemos comparar el rango de la matriz de coeficientes con el de la matriz ampliada.</p>
+                <div class="system-2023-theory-cases">
+                  <div class="math-display" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)=n" data-math-display></div>
+                  <p>Una única solución.</p>
+                  <div class="math-display" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)&lt;n" data-math-display></div>
+                  <p>Infinitas soluciones.</p>
+                  <div class="math-display" data-math="\operatorname{rg}(A)\ne\operatorname{rg}(A^*)" data-math-display></div>
+                  <p>Ninguna solución.</p>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. El parámetro excepcional</h3>
+                <p>Solo hay que estudiar rangos en los valores que anulan el determinante. El resto queda clasificado de una sola vez.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Escribimos la matriz de coeficientes</h3>
+                  <div class="system-2023-work">
+                    <div class="math-display" data-math="A_\alpha=\begin{pmatrix}1&amp;2&amp;3\\1&amp;\alpha&amp;1\\2&amp;3&amp;4\end{pmatrix}" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos su determinante</h3>
+                  <p>Desarrollamos por la primera fila y simplificamos.</p>
+                  <div class="system-2023-work">
+                    <div class="math-display system-2023-determinant" data-math="\begin{aligned}\det A_\alpha={}&(4\alpha-3)-2(4-2)\\ &+3(3-2\alpha)\\ ={}&2-2\alpha=2(1-\alpha).\end{aligned}" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Clasificamos el caso regular</h3>
+                  <p data-system-2023-language="es">Si <span class="math-inline math-nowrap" data-math="\alpha\ne1"></span>, el determinante no se anula. La matriz tiene rango tres y el sistema es compatible determinado.</p>
+                  <p data-system-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="\alpha\ne1"></span> bada, determinantea ez da anulatzen. Matrizearen heina hiru da eta sistema bateragarri determinatua da.</p>
+                  <div class="system-2023-work">
+                    <strong class="math-display" data-math="\alpha\ne1\quad\Longrightarrow\quad \operatorname{rg}(A_\alpha)=3" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Estudiamos el único caso singular</h3>
+                  <p data-system-2023-language="es">Para <span class="math-inline math-nowrap" data-math="\alpha=1"></span>, reducimos la matriz ampliada. La última fila se anula por completo.</p>
+                  <p data-system-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="\alpha=1"></span> denean, matrize hedatua murrizten dugu. Azken errenkada erabat anulatzen da.</p>
+                  <div class="system-2023-work">
+                    <div class="math-display system-2023-matrix" data-math="\left(\begin{array}{ccc|c}1&amp;2&amp;3&amp;1\\1&amp;1&amp;1&amp;1\\2&amp;3&amp;4&amp;2\end{array}\right)" data-math-display></div>
+                    <div class="math-display system-2023-operations" data-math="F_2\leftarrow F_2-F_1,\qquad F_3\leftarrow F_3-2F_1" data-math-display></div>
+                    <div class="math-display system-2023-matrix" data-math="\left(\begin{array}{ccc|c}1&amp;2&amp;3&amp;1\\0&amp;-1&amp;-2&amp;0\\0&amp;-1&amp;-2&amp;0\end{array}\right)" data-math-display></div>
+                    <div class="math-display" data-math="F_3\leftarrow F_3-F_2" data-math-display></div>
+                    <strong class="math-display" data-math="\operatorname{rg}(A_1)=\operatorname{rg}(A_1^*)=2&lt;3" data-math-display></strong>
+                  </div>
+                  <p>Los rangos son iguales pero menores que el número de incógnitas: hay infinitas soluciones.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry system-2023-essential">
+              <div class="math-display" data-math="\det A_\alpha=2-2\alpha=2(1-\alpha)" data-math-display></div>
+              <div class="math-display" data-math="\alpha\ne1\quad\Longrightarrow\quad \det A_\alpha\ne0" data-math-display></div>
+              <div class="math-display" data-math="\alpha=1\quad\Longrightarrow\quad \operatorname{rg}(A_1)=\operatorname{rg}(A_1^*)=2" data-math-display></div>
+              <strong class="math-display system-2023-classification" data-math="\begin{cases}\alpha\ne1:&\text{solución única},\\ \alpha=1:&\text{infinitas soluciones}.\end{cases}" data-math-eu="\begin{cases}\alpha\ne1:&\text{soluzio bakarra},\\ \alpha=1:&\text{infinitu soluzio}.\end{cases}" data-math-display></strong>
+            </div>
+
+            <div class="result result-long system-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="\alpha=1\ \text{es el único valor singular}" data-math-eu="\alpha=1\ \text{da balio singular bakarra}" data-math-display></strong>
+              <p data-system-2023-language="es">El sistema siempre tiene solución: es única si <span class="math-inline math-nowrap" data-math="\alpha\ne1"></span> e infinita si <span class="math-inline math-nowrap" data-math="\alpha=1"></span>.</p>
+              <p data-system-2023-language="eu" hidden>Sistemak beti du soluzioa: bakarra da <span class="math-inline math-nowrap" data-math="\alpha\ne1"></span> bada, eta infinitu soluzio ditu <span class="math-inline math-nowrap" data-math="\alpha=1"></span> bada.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="system-2023-alpha-one" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Caso α = 1</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-system-2023-language="es">Al sustituir <span class="math-inline math-nowrap" data-math="\alpha=1"></span>, dos filas de la matriz reducida coinciden. Solo quedan dos ecuaciones independientes para tres incógnitas, así que elegimos una variable libre y expresamos las otras dos en función de ella.</p>
+            <p class="idea-text" data-system-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="\alpha=1"></span> ordezkatzean, matrize murriztuaren bi errenkada berdinak dira. Hiru ezezagunetarako bi ekuazio independente baino ez dira geratzen; beraz, aldagai aske bat aukeratu eta beste biak haren arabera adierazten ditugu.</p>
+            <div class="essential-geometry system-2023-idea">
+              <div class="math-display" data-math="z=t,\qquad y=-2t,\qquad x=1+t" data-math-display></div>
+              <strong class="math-display" data-math="(x,y,z)=(1+t,-2t,t),\qquad t\in\mathbb R" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Caso α = 1</p>
+            <h2>Resolución del sistema indeterminado</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Operaciones elementales por filas</h3>
+                <p>Sumar a una fila un múltiplo de otra no cambia el conjunto de soluciones. Usamos estas operaciones para obtener un sistema equivalente más sencillo.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Variable libre</h3>
+                <p>Si el rango es menor que el número de incógnitas, alguna variable puede elegirse libremente. Cada valor de esa variable produce una solución distinta.</p>
+                <div class="theory-formula math-display" data-math="n-\operatorname{rg}(A)=3-2=1" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Solución paramétrica</h3>
+                <p>La solución no es un único punto, sino una familia de puntos descrita mediante un parámetro real.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Sustituimos el parámetro</h3>
+                  <div class="system-2023-work">
+                    <div class="math-display system-2023-matrix" data-math="A_1^*=\left(\begin{array}{ccc|c}1&amp;2&amp;3&amp;1\\1&amp;1&amp;1&amp;1\\2&amp;3&amp;4&amp;2\end{array}\right)" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Reducimos la matriz ampliada</h3>
+                  <div class="system-2023-work">
+                    <div class="math-display system-2023-operations" data-math="F_2\leftarrow F_2-F_1,\qquad F_3\leftarrow F_3-2F_1" data-math-display></div>
+                    <div class="math-display system-2023-matrix" data-math="\left(\begin{array}{ccc|c}1&amp;2&amp;3&amp;1\\0&amp;-1&amp;-2&amp;0\\0&amp;-1&amp;-2&amp;0\end{array}\right)" data-math-display></div>
+                    <div class="math-display" data-math="F_3\leftarrow F_3-F_2" data-math-display></div>
+                    <strong class="math-display system-2023-matrix" data-math="\left(\begin{array}{ccc|c}1&amp;2&amp;3&amp;1\\0&amp;-1&amp;-2&amp;0\\0&amp;0&amp;0&amp;0\end{array}\right)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Elegimos la variable libre</h3>
+                  <p data-system-2023-language="es">Tomamos <span class="math-inline math-nowrap" data-math="z=t"></span>, con <span class="math-inline math-nowrap" data-math="t\in\mathbb R"></span>. La segunda fila proporciona directamente <span class="math-inline math-nowrap" data-math="y"></span>.</p>
+                  <p data-system-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="z=t"></span> hartzen dugu, <span class="math-inline math-nowrap" data-math="t\in\mathbb R"></span> izanik. Bigarren errenkadak zuzenean ematen du <span class="math-inline math-nowrap" data-math="y"></span>.</p>
+                  <div class="system-2023-work">
+                    <div class="math-display" data-math="-y-2z=0" data-math-display></div>
+                    <strong class="math-display" data-math="y=-2t" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la variable restante</h3>
+                  <div class="system-2023-work">
+                    <div class="math-display" data-math="x+2(-2t)+3t=1" data-math-display></div>
+                    <strong class="math-display" data-math="x=1+t" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Escribimos la familia de soluciones</h3>
+                  <div class="system-2023-work">
+                    <strong class="math-display" data-math="(x,y,z)=(1+t,-2t,t),\qquad t\in\mathbb R" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry system-2023-essential">
+              <div class="math-display system-2023-matrix" data-math="\left(\begin{array}{ccc|c}1&amp;2&amp;3&amp;1\\0&amp;-1&amp;-2&amp;0\\0&amp;0&amp;0&amp;0\end{array}\right)" data-math-display></div>
+              <div class="math-display" data-math="z=t\quad\Longrightarrow\quad y=-2t,\quad x=1+t" data-math-display></div>
+              <strong class="math-display" data-math="(x,y,z)=(1+t,-2t,t),\qquad t\in\mathbb R" data-math-display></strong>
+            </div>
+
+            <div class="result result-long system-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="(x,y,z)=(1+t,-2t,t)" data-math-display></strong>
+              <p data-system-2023-language="es">Hay infinitas soluciones, una por cada valor real de <span class="math-inline math-nowrap" data-math="t"></span>.</p>
+              <p data-system-2023-language="eu" hidden>Infinitu soluzio daude, <span class="math-inline math-nowrap" data-math="t"></span>-ren balio erreal bakoitzeko bat.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="system-2023-alpha-two" class="panel" role="tabpanel" hidden>
+        <div class="section-index">03</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Caso α = 2</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-system-2023-language="es">Como <span class="math-inline math-nowrap" data-math="\det A_2=-2\ne0"></span>, sabemos que la solución es única. Al restar la primera ecuación a la segunda aparece inmediatamente <span class="math-inline math-nowrap" data-math="z=0"></span>; después obtenemos <span class="math-inline math-nowrap" data-math="y=0"></span> y finalmente <span class="math-inline math-nowrap" data-math="x=1"></span>.</p>
+            <p class="idea-text" data-system-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="\det A_2=-2\ne0"></span> denez, soluzioa bakarra dela dakigu. Lehen ekuazioa bigarrenari kentzean, berehala <span class="math-inline math-nowrap" data-math="z=0"></span> lortzen da; ondoren <span class="math-inline math-nowrap" data-math="y=0"></span> eta azkenik <span class="math-inline math-nowrap" data-math="x=1"></span>.</p>
+            <div class="essential-geometry system-2023-idea">
+              <strong class="math-display" data-math="(x,y,z)=(1,0,0)" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Caso α = 2</p>
+            <h2>Resolución del sistema determinado</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Un determinante no nulo garantiza unicidad</h3>
+                <p>Como la matriz de coeficientes es invertible, no puede haber ni contradicciones ni variables libres: existe exactamente una solución.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Eliminación de incógnitas</h3>
+                <p>Restar ecuaciones permite cancelar términos y obtener un sistema equivalente más sencillo. Elegimos las restas que aíslan antes una incógnita.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Sustituimos el parámetro</h3>
+                  <div class="system-2023-work">
+                    <div class="math-display" data-math="\left\{\begin{aligned}x+2y+3z&amp;=1,\\ x+2y+z&amp;=1,\\ 2x+3y+4z&amp;=2.\end{aligned}\right." data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Restamos las dos primeras ecuaciones</h3>
+                  <div class="system-2023-work">
+                    <div class="math-display" data-math="(x+2y+z)-(x+2y+3z)=1-1" data-math-display></div>
+                    <div class="math-display" data-math="-2z=0" data-math-display></div>
+                    <strong class="math-display" data-math="z=0" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Eliminamos x con la primera y la tercera ecuación</h3>
+                  <div class="system-2023-work">
+                    <div class="math-display" data-math="(2x+3y+4z)-2(x+2y+3z)=2-2" data-math-display></div>
+                    <div class="math-display" data-math="-y-2z=0" data-math-display></div>
+                    <strong class="math-display" data-math="z=0\quad\Longrightarrow\quad y=0" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Sustituimos en la primera ecuación</h3>
+                  <div class="system-2023-work">
+                    <div class="math-display" data-math="x+2\cdot0+3\cdot0=1" data-math-display></div>
+                    <strong class="math-display" data-math="x=1" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry system-2023-essential">
+              <div class="math-display" data-math="E_2-E_1:\quad -2z=0\quad\Longrightarrow\quad z=0" data-math-display></div>
+              <div class="math-display" data-math="E_3-2E_1:\quad -y-2z=0\quad\Longrightarrow\quad y=0" data-math-display></div>
+              <strong class="math-display" data-math="x=1,\qquad (x,y,z)=(1,0,0)" data-math-display></strong>
+            </div>
+
+            <div class="result result-long system-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="(x,y,z)=(1,0,0)" data-math-display></strong>
+              <p>El sistema tiene una única solución.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

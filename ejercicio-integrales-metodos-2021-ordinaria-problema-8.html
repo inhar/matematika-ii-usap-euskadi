@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zatikako integrazioa eta zatiki sinpleak · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-integrales-metodos-2021-ordinaria-idiomas.js?v=2021-ord-p8b" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2021 · Ordinaria · Problema 8</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Integrales · 2021</p>
+        <h1>Integración por partes y fracciones simples</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Calcular, explicando los métodos utilizados, las integrales:</p>
+        <div class="integrals-2021-statement">
+          <div>
+            <span class="math-inline" data-math="I"></span>
+            <span class="math-display" data-math="\int (x+2)\operatorname{sen}(2x)\,dx" data-math-eu="\int (x+2)\sin(2x)\,dx" data-math-display></span>
+          </div>
+          <div>
+            <span class="math-inline" data-math="J"></span>
+            <span class="math-display" data-math="\int\frac{x+7}{x^2-4x-5}\,dx" data-math-display></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Integrales de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="integrals-2021-part-i" data-target="integrals-2021-part-i">I</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="integrals-2021-part-j" data-target="integrals-2021-part-j">J</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="integrals-2021-part-i" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Integral I</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">El integrando es el producto de un polinomio y una función trigonométrica. No tiene una primitiva inmediata, pero la integración por partes permite derivar el factor polinómico, que se simplifica, e integrar el seno, cuya primitiva conocemos.</p>
+            <p class="idea-text">Elegiremos como primer factor el polinomio. Su derivada es uno, así que la integral que queda después de aplicar la fórmula es inmediata. Hay que prestar especial atención al factor un medio que aparece al integrar una función de argumento doble.</p>
+            <div class="essential-geometry integrals-2021-idea">
+              <div class="math-display" data-math="u=x+2,\qquad dv=\operatorname{sen}(2x)\,dx" data-math-eu="u=x+2,\qquad dv=\sin(2x)\,dx" data-math-display></div>
+              <div class="math-display" data-math="du=dx,\qquad v=-\frac12\cos(2x)" data-math-display></div>
+              <strong class="math-display" data-math="I=-\frac{x+2}{2}\cos(2x)+\frac14\operatorname{sen}(2x)+C" data-math-eu="I=-\frac{x+2}{2}\cos(2x)+\frac14\sin(2x)+C" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Integral I</p>
+            <h2>Integración por partes</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Cuándo utilizar la integración por partes</h3>
+                <p>Este método es útil en productos donde uno de los factores se simplifica al derivarlo y el otro puede integrarse directamente. Es especialmente frecuente en productos de polinomios con exponenciales o funciones trigonométricas.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Fórmula de integración por partes</h3>
+                <p>La fórmula se obtiene a partir de la derivada de un producto. En ella, una parte se deriva y la otra se integra.</p>
+                <div class="theory-formula math-display" data-math="(uv)'=u'v+uv'" data-math-display></div>
+                <div class="theory-formula math-display" data-math="\int u\,dv=uv-\int v\,du" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Primitiva del seno de una función lineal</h3>
+                <p>Al integrar una función trigonométrica compuesta hay que dividir por la derivada de su argumento. El signo negativo procede de la derivada del coseno.</p>
+                <div class="theory-formula math-display" data-math="\int\operatorname{sen}(kx)\,dx=-\frac1k\cos(kx)+C" data-math-eu="\int\sin(kx)\,dx=-\frac1k\cos(kx)+C" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Comprobación de una primitiva</h3>
+                <p>Una integral indefinida se comprueba derivando el resultado. Los términos adicionales deben cancelarse y debe recuperarse exactamente el integrando inicial.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Reconocemos el método</h3>
+                  <p>El polinomio se simplifica al derivarlo y el factor trigonométrico se integra directamente. Por tanto, aplicamos integración por partes.</p>
+                </li>
+
+                <li>
+                  <h3>Elegimos las dos partes</h3>
+                  <p>Derivamos el polinomio e integramos la función trigonométrica.</p>
+                  <div class="integrals-2021-choices">
+                    <div>
+                      <strong class="math-inline" data-math="u=x+2"></strong>
+                      <span class="math-inline" data-math="du=dx"></span>
+                    </div>
+                    <div>
+                      <strong class="math-inline" data-math="dv=\operatorname{sen}(2x)\,dx" data-math-eu="dv=\sin(2x)\,dx"></strong>
+                      <span class="math-inline" data-math="v=-\frac12\cos(2x)"></span>
+                    </div>
+                  </div>
+                  <p>El factor un medio aparece porque la derivada del argumento es dos.</p>
+                </li>
+
+                <li>
+                  <h3>Sustituimos en la fórmula</h3>
+                  <div class="integrals-2021-work">
+                    <div class="math-display" data-math="I=uv-\int v\,du" data-math-display></div>
+                    <div class="math-display" data-math="\begin{aligned}I={}&(x+2)\left(-\frac12\cos(2x)\right)\\&-\int\left(-\frac12\cos(2x)\right)\,dx\end{aligned}" data-math-display></div>
+                    <div class="math-display" data-math="I=-\frac{x+2}{2}\cos(2x)+\frac12\int\cos(2x)\,dx" data-math-display></div>
+                  </div>
+                  <p>La integral restante queda sumando porque en la fórmula estamos restando una expresión negativa.</p>
+                </li>
+
+                <li>
+                  <h3>Calculamos la integral restante</h3>
+                  <div class="integrals-2021-work">
+                    <div class="math-display" data-math="\int\cos(2x)\,dx=\frac12\operatorname{sen}(2x)" data-math-eu="\int\cos(2x)\,dx=\frac12\sin(2x)" data-math-display></div>
+                    <div class="math-display" data-math="\begin{aligned}I={}&-\frac{x+2}{2}\cos(2x)\\&+\frac12\left(\frac12\operatorname{sen}(2x)\right)+C\end{aligned}" data-math-eu="\begin{aligned}I={}&-\frac{x+2}{2}\cos(2x)\\&+\frac12\left(\frac12\sin(2x)\right)+C\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="I=-\frac{x+2}{2}\cos(2x)+\frac14\operatorname{sen}(2x)+C" data-math-eu="I=-\frac{x+2}{2}\cos(2x)+\frac14\sin(2x)+C" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos derivando</h3>
+                  <p>Derivamos los dos sumandos no constantes. Los términos con coseno se cancelan.</p>
+                  <div class="integrals-2021-work">
+                    <div class="math-display" data-math="\frac{d}{dx}\left[-\frac{x+2}{2}\cos(2x)\right]" data-math-display></div>
+                    <div class="math-display" data-math="=-\frac12\cos(2x)+(x+2)\operatorname{sen}(2x)" data-math-eu="=-\frac12\cos(2x)+(x+2)\sin(2x)" data-math-display></div>
+                    <div class="math-display" data-math="\frac{d}{dx}\left[\frac14\operatorname{sen}(2x)\right]=\frac12\cos(2x)" data-math-eu="\frac{d}{dx}\left[\frac14\sin(2x)\right]=\frac12\cos(2x)" data-math-display></div>
+                    <strong class="math-display" data-math="I'(x)=(x+2)\operatorname{sen}(2x)" data-math-eu="I'(x)=(x+2)\sin(2x)" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry integrals-2021-essential">
+              <div class="math-display" data-math="u=x+2,\qquad du=dx" data-math-display></div>
+              <div class="math-display" data-math="dv=\operatorname{sen}(2x)\,dx,\qquad v=-\frac12\cos(2x)" data-math-eu="dv=\sin(2x)\,dx,\qquad v=-\frac12\cos(2x)" data-math-display></div>
+              <div class="math-display" data-math="I=-\frac{x+2}{2}\cos(2x)+\frac12\int\cos(2x)\,dx" data-math-display></div>
+              <strong class="math-display" data-math="I=-\frac{x+2}{2}\cos(2x)+\frac14\operatorname{sen}(2x)+C" data-math-eu="I=-\frac{x+2}{2}\cos(2x)+\frac14\sin(2x)+C" data-math-display></strong>
+            </div>
+
+            <div class="result result-long integrals-2021-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="I=-\frac{x+2}{2}\cos(2x)+\frac14\operatorname{sen}(2x)+C" data-math-eu="I=-\frac{x+2}{2}\cos(2x)+\frac14\sin(2x)+C" data-math-display></strong>
+              <p>Al derivar se recupera exactamente el integrando.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="integrals-2021-part-j" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Integral J</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Tenemos una función racional propia: el grado del numerador es menor que el del denominador. Al factorizar el denominador aparecen dos factores lineales distintos, de modo que la fracción puede separarse en dos fracciones simples.</p>
+            <p class="idea-text">Calcularemos sus coeficientes usando los valores que anulan cada factor. Después integraremos las dos fracciones como logaritmos. Los valores absolutos son necesarios porque la función original no está definida en las raíces del denominador.</p>
+            <div class="essential-geometry integrals-2021-idea">
+              <div class="math-display" data-math="x^2-4x-5=(x+1)(x-5)" data-math-display></div>
+              <div class="math-display" data-math="\frac{x+7}{(x+1)(x-5)}=-\frac1{x+1}+\frac2{x-5}" data-math-display></div>
+              <strong class="math-display" data-math="J=-\ln\lvert x+1\rvert+2\ln\lvert x-5\rvert+C" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Integral J</p>
+            <h2>Descomposición en fracciones simples</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Función racional propia</h3>
+                <p>Una función racional es propia cuando el grado del numerador es menor que el del denominador. En ese caso puede intentarse directamente una descomposición en fracciones simples.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Denominador con factores lineales distintos</h3>
+                <p>Si el denominador es el producto de dos factores lineales distintos, asociamos una constante a cada uno.</p>
+                <div class="theory-formula math-display" data-math="\begin{aligned}\frac{P(x)}{(x-a)(x-b)}&=\frac{A}{x-a}\\&\quad+\frac{B}{x-b}\\[2pt]&a\ne b\end{aligned}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Cálculo de los coeficientes</h3>
+                <p>Al multiplicar por el denominador común obtenemos una identidad polinómica. Sustituir las raíces del denominador anula un término cada vez y permite aislar cada coeficiente.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Primitiva logarítmica y dominio</h3>
+                <p>Cada fracción simple produce un logaritmo. El valor absoluto hace válida la primitiva en cualquier intervalo que no atraviese una raíz del denominador.</p>
+                <div class="theory-formula math-display" data-math="\int\frac{1}{x-a}\,dx=\ln\lvert x-a\rvert+C" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Factorizamos el denominador</h3>
+                  <p>Buscamos dos números cuyo producto sea menos cinco y cuya suma sea menos cuatro.</p>
+                  <div class="integrals-2021-work">
+                    <div class="math-display" data-math="-5\cdot1=-5,\qquad -5+1=-4" data-math-display></div>
+                    <strong class="math-display" data-math="x^2-4x-5=(x+1)(x-5)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Planteamos la descomposición</h3>
+                  <p>Asignamos una constante a cada factor lineal.</p>
+                  <div class="integrals-2021-work">
+                    <div class="math-display" data-math="\frac{x+7}{(x+1)(x-5)}=\frac{A}{x+1}+\frac{B}{x-5}" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Eliminamos los denominadores</h3>
+                  <p>Multiplicamos la igualdad por el denominador común. La identidad resultante debe cumplirse para todos los valores permitidos.</p>
+                  <div class="integrals-2021-work">
+                    <div class="math-display" data-math="x+7=A(x-5)+B(x+1)" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos los coeficientes</h3>
+                  <p>Usamos las dos raíces del denominador para anular alternativamente uno de los sumandos.</p>
+                  <div class="integrals-2021-coefficients">
+                    <div>
+                      <span class="math-inline" data-math="x=-1"></span>
+                      <span class="math-inline" data-math="6=-6A"></span>
+                      <strong class="math-inline" data-math="A=-1"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="x=5"></span>
+                      <span class="math-inline" data-math="12=6B"></span>
+                      <strong class="math-inline" data-math="B=2"></strong>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Integramos término a término</h3>
+                  <div class="integrals-2021-work">
+                    <div class="math-display" data-math="J=\int\left(-\frac1{x+1}+\frac2{x-5}\right)\,dx" data-math-display></div>
+                    <div class="math-display" data-math="J=-\int\frac1{x+1}\,dx+2\int\frac1{x-5}\,dx" data-math-display></div>
+                    <strong class="math-display" data-math="J=-\ln\lvert x+1\rvert+2\ln\lvert x-5\rvert+C" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos derivando</h3>
+                  <p>Derivamos los logaritmos y reunimos las fracciones con el denominador común.</p>
+                  <div class="integrals-2021-work">
+                    <div class="math-display" data-math="J'(x)=-\frac1{x+1}+\frac2{x-5}" data-math-display></div>
+                    <div class="math-display" data-math="J'(x)=\frac{-(x-5)+2(x+1)}{(x+1)(x-5)}" data-math-display></div>
+                    <div class="math-display" data-math="J'(x)=\frac{x+7}{(x+1)(x-5)}" data-math-display></div>
+                    <strong class="math-display" data-math="J'(x)=\frac{x+7}{x^2-4x-5}" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry integrals-2021-essential">
+              <div class="math-display" data-math="x^2-4x-5=(x+1)(x-5)" data-math-display></div>
+              <div class="math-display" data-math="x+7=A(x-5)+B(x+1)" data-math-display></div>
+              <div class="math-display" data-math="x=-1\Rightarrow A=-1,\qquad x=5\Rightarrow B=2" data-math-display></div>
+              <div class="math-display" data-math="\frac{x+7}{x^2-4x-5}=-\frac1{x+1}+\frac2{x-5}" data-math-display></div>
+              <strong class="math-display" data-math="J=-\ln\lvert x+1\rvert+2\ln\lvert x-5\rvert+C" data-math-display></strong>
+            </div>
+
+            <div class="result result-long integrals-2021-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="J=-\ln\lvert x+1\rvert+2\ln\lvert x-5\rvert+C" data-math-display></strong>
+              <p>La primitiva es válida en cada intervalo del dominio, con <span class="math-inline math-nowrap" data-math="x\notin\{-1,5\}"></span>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

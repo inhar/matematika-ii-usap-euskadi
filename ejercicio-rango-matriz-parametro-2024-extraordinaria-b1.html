@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parametrodun matrizearen heina · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-rango-matriz-parametro-2024-extraordinaria-b1-idiomas.js?v=1" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="page rank-extra-2024-page">
+  <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+    <a href="index.html">← Volver a ejercicios</a>
+    <div class="exercise-nav-meta">
+      <span class="source-reference">2024 · Extraordinaria · Ejercicio B1</span>
+      <div class="language-switch" data-language-switch></div>
+    </div>
+  </nav>
+
+  <header class="hero"><div class="hero-copy">
+    <p class="eyebrow">Álgebra lineal · Rango de matrices · 2024</p>
+    <h1>Dos valores reducen el rango</h1>
+  </div></header>
+
+  <section class="problem" aria-labelledby="statement-title">
+    <div class="section-index">00</div>
+    <div class="section-content">
+      <h2 id="statement-title">Enunciado</h2>
+      <p>Calcula el rango de la matriz según el parámetro <span class="math-inline math-nowrap" data-math="m"></span>.</p>
+      <div class="statement-function math-display" data-math="A=\begin{pmatrix}1&3&4&1\\m&2-m&2&1\\m&-2&m-2&1\end{pmatrix}" data-math-display></div>
+    </div>
+  </section>
+
+  <section class="level-control" aria-labelledby="level-title">
+    <p class="control-label" id="level-title">Qué quieres ver</p>
+    <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+      <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+      <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+      <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+      <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+    </div>
+  </section>
+
+  <div class="solutions">
+    <section class="panel active" role="tabpanel">
+      <div class="section-index">01</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Rango de <span class="math-inline math-nowrap" data-math="A"></span></p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-rank-extra-2024-language="es">Como la matriz tiene tres filas, su rango máximo es <span class="math-inline math-nowrap" data-math="3"></span>. Basta encontrar un menor de orden tres no nulo para alcanzar ese rango.</p>
+          <p class="idea-text" data-rank-extra-2024-language="eu" hidden>Matrizeak hiru errenkada dituenez, haren gehieneko heina <span class="math-inline math-nowrap" data-math="3"></span> da. Hirugarren ordenako minor ez-nulu bat aurkitzea nahikoa da hein hori izateko.</p>
+          <p class="idea-text" data-rank-extra-2024-language="es">El menor formado por las columnas primera, segunda y cuarta vale <span class="math-inline math-nowrap" data-math="(m-1)(m-4)"></span>. Por tanto, solo debemos revisar aparte <span class="math-inline math-nowrap" data-math="m=1"></span> y <span class="math-inline math-nowrap" data-math="m=4"></span>; en ambos aparece dependencia, pero permanece un menor de orden dos no nulo.</p>
+          <p class="idea-text" data-rank-extra-2024-language="eu" hidden>Lehen, bigarren eta laugarren zutabeek osatutako minorrak <span class="math-inline math-nowrap" data-math="(m-1)(m-4)"></span> balio du. Beraz, <span class="math-inline math-nowrap" data-math="m=1"></span> eta <span class="math-inline math-nowrap" data-math="m=4"></span> baino ez ditugu bereiz aztertu behar; bietan mendekotasuna agertzen da, baina bigarren ordenako minor ez-nulu bat geratzen da.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="\operatorname{rg}(A)=3\ \text{salvo si}\ m=1\ \text{o}\ m=4" data-math-display data-math-es="\operatorname{rg}(A)=3\ \text{salvo si}\ m=1\ \text{o}\ m=4" data-math-eu="\operatorname{rg}(A)=3,\quad m\ne1,4\ \text{bada}"></strong></div>
+        </div>
+
+        <div class="solution-view" hidden>
+          <p class="kicker">Rango de <span class="math-inline math-nowrap" data-math="A"></span></p>
+          <h2>Buscamos un menor de orden tres y comprobamos sus excepciones</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>1. Rango mediante menores</h3>
+              <p data-rank-extra-2024-language="es">El rango es el mayor orden de un menor no nulo. En una matriz <span class="math-inline math-nowrap" data-math="3\times4"></span>, el rango no puede superar <span class="math-inline math-nowrap" data-math="3"></span>.</p>
+              <p data-rank-extra-2024-language="eu" hidden>Heina minor ez-nulu baten ordena handiena da. <span class="math-inline math-nowrap" data-math="3\times4"></span> matrize batean, heina ezin da <span class="math-inline math-nowrap" data-math="3"></span> baino handiagoa izan.</p>
+            </div>
+            <div class="theory-topic">
+              <h3>2. Cómo se demuestra cada rango</h3>
+              <p data-rank-extra-2024-language="es">Para probar rango <span class="math-inline math-nowrap" data-math="3"></span> basta un menor de orden tres no nulo. Si todos los de orden tres se anulan, hay que exhibir un menor de orden dos no nulo para concluir que el rango es exactamente <span class="math-inline math-nowrap" data-math="2"></span>.</p>
+              <p data-rank-extra-2024-language="eu" hidden>Hirugarren heina frogatzeko, hirugarren ordenako minor ez-nulu bat nahikoa da. Hirugarren ordenako guztiak nuluak badira, bigarren ordenako minor ez-nulu bat erakutsi behar da heina zehazki <span class="math-inline math-nowrap" data-math="2"></span> dela ondorioztatzeko.</p>
+            </div>
+          </aside>
+
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Elegimos las columnas <span class="math-inline math-nowrap" data-math="C_1,C_2,C_4"></span></h3>
+                <div class="math-display" data-math="D=\begin{vmatrix}1&3&1\\m&2-m&1\\m&-2&1\end{vmatrix}" data-math-display></div>
+              </li>
+              <li>
+                <h3>Calculamos y factorizamos el menor</h3>
+                <div class="math-display" data-math="D=(4-m)-3(m-m)+m^2-4m" data-math-display></div>
+                <div class="math-display" data-math="D=m^2-5m+4=(m-1)(m-4)" data-math-display></div>
+              </li>
+              <li>
+                <h3>Resolvemos el caso general</h3>
+                <div class="math-display" data-math="m\ne1,4\quad\Longrightarrow\quad D\ne0" data-math-display></div>
+                <strong class="math-display" data-math="\operatorname{rg}(A)=3" data-math-display></strong>
+              </li>
+              <li>
+                <h3>Comprobamos <span class="math-inline math-nowrap" data-math="m=1"></span></h3>
+                <div class="math-display" data-math="A_1=\begin{pmatrix}1&3&4&1\\1&1&2&1\\1&-2&-1&1\end{pmatrix}" data-math-display></div>
+                <p data-rank-extra-2024-language="es">Aquí <span class="math-inline math-nowrap" data-math="C_4=C_1"></span>, y además el menor de <span class="math-inline math-nowrap" data-math="C_1,C_2,C_3"></span> es siempre cero. Por tanto, el rango es como máximo dos.</p>
+                <p data-rank-extra-2024-language="eu" hidden>Hemen <span class="math-inline math-nowrap" data-math="C_4=C_1"></span> da, eta <span class="math-inline math-nowrap" data-math="C_1,C_2,C_3"></span> zutabeen minorrak zero balio du beti. Beraz, heina gehienez bi da.</p>
+                <div class="math-display" data-math="\begin{vmatrix}1&3\\1&1\end{vmatrix}=-2\ne0" data-math-display></div>
+                <strong class="math-display" data-math="\operatorname{rg}(A_1)=2" data-math-display></strong>
+              </li>
+              <li>
+                <h3>Comprobamos <span class="math-inline math-nowrap" data-math="m=4"></span></h3>
+                <div class="math-display" data-math="A_4=\begin{pmatrix}1&3&4&1\\4&-2&2&1\\4&-2&2&1\end{pmatrix}" data-math-display></div>
+                <p data-rank-extra-2024-language="es">Las filas segunda y tercera coinciden, de modo que el rango es como máximo dos.</p>
+                <p data-rank-extra-2024-language="eu" hidden>Bigarren eta hirugarren errenkadak berdinak dira; beraz, heina gehienez bi da.</p>
+                <div class="math-display" data-math="\begin{vmatrix}1&3\\4&-2\end{vmatrix}=-14\ne0" data-math-display></div>
+                <strong class="math-display" data-math="\operatorname{rg}(A_4)=2" data-math-display></strong>
+              </li>
+            </ol>
+          </div>
+
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry">
+            <div class="math-display" data-math="D_{124}=(m-1)(m-4)" data-math-display></div>
+            <div class="math-display" data-math="m=1:\ \operatorname{rg}(A)=2;\qquad m=4:\ \operatorname{rg}(A)=2" data-math-display></div>
+          </div>
+          <div class="result">
+            <span>Resultado</span>
+            <strong>
+              <span class="math-display" data-math="\operatorname{rg}(A)=3,\quad m\ne1,4" data-math-display></span>
+              <span class="math-display" data-math="\operatorname{rg}(A)=2,\quad m=1\ \text{o}\ m=4" data-math-display data-math-es="\operatorname{rg}(A)=2,\quad m=1\ \text{o}\ m=4" data-math-eu="\operatorname{rg}(A)=2,\quad m=1\ \text{edo}\ m=4"></span>
+            </strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

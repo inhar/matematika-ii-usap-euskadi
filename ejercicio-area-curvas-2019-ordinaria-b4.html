@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zuzenaren eta parabolaren arteko azalera · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-area-curvas-idiomas.js" defer></script>
+  <script src="ejercicio-area-curvas-grafico.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Ordinaria · Opción B · Problema B.4</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Área entre curvas · Junio de 2019</p>
+        <h1>Área entre una recta y una parábola</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Representar el recinto finito del plano limitado por la recta y la parábola:</p>
+        <div class="function-data area-function-data" aria-label="Recta y igual a x más dos y parábola y igual a x al cuadrado">
+          <span class="math-inline" data-math="y = x + 2"></span>
+          <span class="math-inline" data-math="y = x^{2}"></span>
+        </div>
+        <p>Calcular su área.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema B.4</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Primero igualaremos las ecuaciones para encontrar los puntos de corte; sus coordenadas x serán los límites de integración. Después decidiremos qué gráfica queda arriba en el intervalo comprendido entre esos puntos. En x = 0 la recta vale 2 y la parábola vale 0, así que la recta es la función superior. El área será la integral definida de «función superior menos función inferior» entre x = −1 y x = 2.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema B.4</p>
+            <h2 id="solution-title">Recinto y cálculo del área</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Intersección de dos gráficas</h3>
+                <p>En un punto común, las dos funciones tienen la misma coordenada x y la misma coordenada y. Por eso sus abscisas se obtienen resolviendo la igualdad entre ambas expresiones.</p>
+                <div class="theory-formula math-display" data-math="f(x) = g(x)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Área entre dos curvas</h3>
+                <p>Si f(x) está por encima de g(x) en todo el intervalo [a, b], el área encerrada se calcula integrando la distancia vertical entre las dos gráficas.</p>
+                <div class="theory-formula math-display" data-math="A = \int_{a}^{b} [f(x) - g(x)] dx" data-math-display></div>
+                <p>El orden es importante: función superior menos función inferior.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Regla de Barrow</h3>
+                <p>Si F es una primitiva de h, la integral definida se obtiene evaluando F en el extremo superior y restando su valor en el extremo inferior.</p>
+                <div class="theory-formula math-display" data-math="\int_{a}^{b} h(x) dx = F(b) - F(a)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Significado del resultado</h3>
+                <p>Una integral de «superior menos inferior» da un valor no negativo. Como estamos midiendo una superficie, el resultado se expresa en unidades cuadradas.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Encontramos los puntos de intersección</h3>
+                  <p>En los puntos donde la recta y la parábola se cortan, sus valores de y son iguales. Igualamos las dos expresiones y factorizamos.</p>
+                  <div class="det-expansion area-intersection-work">
+                    <span class="math-nowrap math-inline" data-math="x + 2 = x^{2}"></span>
+                    <span class="math-nowrap math-inline" data-math="x^{2} - x - 2 = 0"></span>
+                    <span class="math-nowrap math-inline" data-math="(x - 2)(x + 1) = 0"></span>
+                    <strong><span class="math-nowrap math-inline" data-math="x = -1"></span> &nbsp;o&nbsp; <span class="math-nowrap math-inline" data-math="x = 2"></span></strong>
+                  </div>
+                  <p>Calculamos ahora la coordenada y de cada punto usando la recta.</p>
+                  <div class="calculation-list area-intersection-values">
+                    <div><span class="math-inline" data-math="x = -1"></span><strong class="math-inline" data-math="y = -1 + 2 = 1 \Rightarrow (-1, 1)"></strong></div>
+                    <div><span class="math-inline" data-math="x = 2"></span><strong class="math-inline" data-math="y = 2 + 2 = 4 \Rightarrow (2, 4)"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Decidimos qué función está por encima</h3>
+                  <p>Los puntos de corte separan el recinto. Probamos un valor interior sencillo, x = 0.</p>
+                  <div class="calculation-list area-order-check">
+                    <div><span>Recta</span><strong class="math-inline" data-math="y = 0 + 2 = 2"></strong></div>
+                    <div><span>Parábola</span><strong class="math-inline" data-math="y = 0^{2} = 0"></strong></div>
+                  </div>
+                  <p>Como 2 &gt; 0, la recta está por encima de la parábola en [−1, 2]. No puede cambiar el orden dentro del intervalo porque no hay más puntos de intersección.</p>
+                  <figure class="area-between-curves-figure" aria-label="Representación del recinto limitado por la recta y igual a x más dos y la parábola y igual a x al cuadrado">
+                    <figcaption>El recinto sombreado queda entre las abscisas −1 y 2; en todo ese intervalo, la recta es la frontera superior.</figcaption>
+                    <div id="area-between-curves-board" class="jxgbox area-between-curves-board" role="img" aria-label="Gráfica de la recta y igual a x más dos y la parábola y igual a x al cuadrado, con el recinto entre ambas sombreado"></div>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Planteamos la integral del área</h3>
+                  <p>Restamos la función inferior, x², a la superior, x + 2, e integramos desde la primera intersección hasta la segunda.</p>
+                  <div class="det-expansion area-integral-setup">
+                    <strong class="math-inline" data-math="A = \int_{-1}^{2} [(x + 2) - x^{2}] dx"></strong>
+                    <span class="math-inline" data-math="A = \int_{-1}^{2} (x + 2 - x^{2}) dx"></span>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos una primitiva</h3>
+                  <p>Integramos término a término: aumentamos en uno cada exponente y dividimos por el nuevo exponente.</p>
+                  <div class="calculation-list area-primitive-terms">
+                    <div><span class="math-inline" data-math="\int x\,dx"></span><strong class="math-inline" data-math="\frac{x^2}{2}"></strong></div>
+                    <div><span class="math-inline" data-math="\int 2 dx"></span><strong>2x</strong></div>
+                    <div><span class="math-inline" data-math="\int -x^2\,dx"></span><strong class="math-inline" data-math="-\frac{x^3}{3}"></strong></div>
+                  </div>
+                  <div class="det-expansion area-primitive-result">
+                    <strong class="math-inline" data-math="F(x)=\frac{x^2}{2}+2x-\frac{x^3}{3}"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Aplicamos la regla de Barrow</h3>
+                  <p>Evaluamos la primitiva en los dos extremos. Dejamos cada sustitución en una línea completa para no perder ningún signo.</p>
+                  <div class="area-endpoint-evaluations">
+                    <div>
+                      <span>F(2)</span>
+                      <div><b>2²/2 + 2·2 − 2³/3</b><b>= 2 + 4 − 8/3 = 10/3</b></div>
+                    </div>
+                    <div>
+                      <span>F(−1)</span>
+                      <div><b>(−1)²/2 + 2(−1) − (−1)³/3</b><b>= 1/2 − 2 + 1/3 = −7/6</b></div>
+                    </div>
+                  </div>
+                  <p>Ahora restamos el valor del extremo inferior completo; por eso aparecen los paréntesis alrededor de −7/6.</p>
+                  <div class="det-expansion area-final-calculation">
+                    <span class="math-nowrap math-inline" data-math="A = F(2) - F(-1)"></span>
+                    <span class="math-nowrap math-inline" data-math="A = \frac{10}{3} - (-\frac{7}{6})"></span>
+                    <span class="math-nowrap math-inline" data-math="A = \frac{20}{6} + \frac{7}{6} = \frac{27}{6}"></span>
+                    <strong class="math-nowrap math-inline" data-math="A = \frac{9}{2} u^{2}"></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry area-essential">
+              <div class="math-display" data-math="\Rightarrow o" data-math-display></div>
+              <div class="math-display" data-math-es="\text{En }[-1,2],\ y=x+2\text{ está por encima de }y=x^2" data-math-eu="[-1,2]\text{ tartean, }y=x+2\text{ zuzena }y=x^2\text{ parabolaren gainean dago}" data-math-display></div>
+              <div class="math-display" data-math="A = \int_{-1}^{2} [(x + 2) - x^{2}] dx" data-math-display></div>
+              <div class="math-display" data-math="F(x)=\frac{x^2}{2}+2x-\frac{x^3}{3}" data-math-display></div>
+              <strong class="math-nowrap math-inline" data-math="A = F(2) - F(-1) = \frac{9}{2} u^{2}"></strong>
+            </div>
+
+            <div class="result result-long area-curves-result">
+              <span>Resultado</span>
+              <strong><span class="result-unit">Área: <span class="math-nowrap math-inline" data-math="\frac{9}{2} u^{2}"></span></span></strong>
+              <p>El recinto está comprendido entre x = −1 y x = 2.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

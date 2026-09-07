@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parametrodun matrize baten alderantzizkoa · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-matriz-inversa-parametro-2021-extraordinaria-idiomas.js?v=2021-extra-p2d" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2021 · Extraordinaria · Problema 2</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Álgebra lineal · Matrices · 2021</p>
+        <h1>Inversa de una matriz con parámetro</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Sea la matriz:</p>
+        <div class="equation inverse-2021-statement inverse-extra-statement math-display" aria-label="Matriz M de a de orden tres" data-math="M(a)=\begin{pmatrix}1&amp;a&amp;1\\a&amp;1&amp;a\\0&amp;a&amp;1\end{pmatrix}" data-math-display></div>
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">Determinar para qué valores del parámetro <span class="math-nowrap math-inline" data-math="a"></span> la matriz no tiene inversa.</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">Calcular, si es posible, la matriz inversa para <span class="math-nowrap math-inline" data-math="a=0"></span> y, si no fuera posible, justificarlo.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="inverse-extra-2021-part-a" data-target="inverse-extra-2021-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="inverse-extra-2021-part-b" data-target="inverse-extra-2021-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="inverse-extra-2021-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Una matriz cuadrada tiene inversa exactamente cuando su determinante no es cero. Calcularemos el determinante conservando el parámetro y buscaremos los valores que lo anulan; esos, y solo esos, serán los valores que impiden la inversa.</p>
+            <div class="essential-geometry inverse-2021-idea">
+              <div class="math-display" data-math="\det M(a)=1-a^2" data-math-display></div>
+              <div class="math-display" data-math="\det M(a)=0\Longleftrightarrow a\in\{-1,1\}" data-math-display></div>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Valores que impiden la inversa</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Qué significa que una matriz sea invertible</h3>
+                <p>Una matriz cuadrada es invertible si existe otra matriz que, al multiplicarla por ambos lados, produce la matriz identidad.</p>
+                <div class="theory-formula math-display" data-math="MM^{-1}=M^{-1}M=I" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Criterio del determinante</h3>
+                <p>Para una matriz cuadrada, tener inversa equivale a tener determinante distinto de cero. Por eso basta localizar los valores del parámetro que hacen que el determinante se anule.</p>
+                <div class="theory-formula inverse-2021-invertibility">
+                  <span class="math-inline" data-math="\det(M)\ne0\Longleftrightarrow M^{-1}\text{ existe}"></span>
+                  <span class="math-inline" data-math-es="\det(M)=0\Longleftrightarrow M^{-1}\text{ no existe}" data-math-eu="\det(M)=0\Longleftrightarrow M^{-1}\text{ ez da existitzen}"></span>
+                </div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Planteamos el determinante</h3>
+                  <p>Mantenemos el parámetro y desarrollamos por la primera fila, cuyos signos son positivo, negativo y positivo.</p>
+                  <div class="equation inverse-2021-determinant-matrix math-display" data-math="\det M(a)=\begin{vmatrix}1&amp;a&amp;1\\a&amp;1&amp;a\\0&amp;a&amp;1\end{vmatrix}" data-math-display></div>
+                </li>
+                <li>
+                  <h3>Calculamos los tres términos</h3>
+                  <p>Cada elemento de la primera fila multiplica al determinante que queda al eliminar su fila y su columna.</p>
+                  <div class="cofactor-work inverse-2021-det-cofactors">
+                    <div><span>Primer término</span><strong class="math-inline" data-math="\begin{vmatrix}1&amp;a\\a&amp;1\end{vmatrix}=1-a^2"></strong></div>
+                    <div><span>Segundo término</span><strong class="math-inline" data-math="-a\begin{vmatrix}a&amp;a\\0&amp;1\end{vmatrix}=-a^2"></strong></div>
+                    <div><span>Tercer término</span><strong class="math-inline" data-math="\begin{vmatrix}a&amp;1\\0&amp;a\end{vmatrix}=a^2"></strong></div>
+                  </div>
+                  <div class="det-expansion inverse-2021-det-chain">
+                    <span class="math-inline" data-math="\det M(a)=1-a^2-a^2+a^2"></span>
+                    <strong class="math-inline" data-math="=1-a^2"></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Factorizamos e igualamos a cero</h3>
+                  <p>Reconocemos una diferencia de cuadrados y aplicamos la propiedad del producto nulo.</p>
+                  <div class="det-expansion inverse-2021-roots">
+                    <span class="math-inline" data-math="1-a^2=(1-a)(1+a)"></span>
+                    <span class="math-inline" data-math="(1-a)(1+a)=0"></span>
+                    <strong class="math-inline" data-math="a=-1\quad\text{o}\quad a=1" data-math-es="a=-1\quad\text{o}\quad a=1" data-math-eu="a=-1\quad\text{edo}\quad a=1"></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Interpretamos los valores obtenidos</h3>
+                  <p>En los dos valores encontrados el determinante es cero y la inversa no existe. Para cualquier otro valor, el determinante es distinto de cero y la matriz sí es invertible.</p>
+                  <div class="inverse-2021-cases">
+                    <div><span class="math-inline" data-math="a\in\{-1,1\}"></span><strong>No tiene inversa.</strong></div>
+                    <div><span class="math-inline" data-math="a\notin\{-1,1\}"></span><strong>Sí tiene inversa.</strong></div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry inverse-2021-essential">
+              <div class="math-display" data-math="\det M(a)=1-a^2" data-math-display></div>
+              <div class="math-display" data-math="=(1-a)(1+a)" data-math-display></div>
+              <strong>
+                <span class="math-nowrap math-inline" data-math="M(a)"></span>
+                no tiene inversa cuando
+                <span class="math-nowrap math-inline" data-math="a\in\{-1,1\}"></span>.
+              </strong>
+            </div>
+
+            <div class="result result-long matrix-determinant-result inverse-2021-result">
+              <span>Resultado</span>
+              <strong><span class="math-nowrap math-inline" data-math="a=-1\quad\text{y}\quad a=1" data-math-es="a=-1\quad\text{y}\quad a=1" data-math-eu="a=-1\quad\text{eta}\quad a=1"></span></strong>
+              <p>Son los únicos valores para los que la matriz no tiene inversa.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="inverse-extra-2021-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Al sustituir <span class="math-nowrap math-inline" data-math="a=0"></span>, la matriz obtenida es casi la identidad: solo sobra un <span class="math-nowrap math-inline" data-math="1"></span> en la primera fila. Aplicaremos Gauss-Jordan a la matriz ampliada <span class="math-nowrap math-inline" data-math="(M(0)\mid I_3)"></span>; una única resta de filas convertirá el bloque izquierdo en la identidad y dejará la inversa en el bloque derecho.</p>
+            <div class="essential-geometry inverse-2021-idea">
+              <div class="math-display" data-math="F_1\leftarrow F_1-F_3" data-math-display></div>
+              <div class="math-display" data-math="M(0)^{-1}=\begin{pmatrix}1&amp;0&amp;-1\\0&amp;1&amp;0\\0&amp;0&amp;1\end{pmatrix}" data-math-display></div>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Inversa para <span class="math-nowrap math-inline" data-math="a=0"></span></h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Método de Gauss-Jordan para calcular la inversa</h3>
+                <p>Colocamos la matriz junto a la identidad y aplicamos operaciones elementales por filas. Si logramos transformar el bloque izquierdo en la identidad, el bloque derecho se habrá convertido en la inversa.</p>
+                <div class="theory-formula math-display" data-math="(M\mid I)\longrightarrow(I\mid M^{-1})" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Operaciones elementales por filas</h3>
+                <p>Podemos intercambiar filas, multiplicar una fila por un número distinto de cero o sumar a una fila un múltiplo de otra. La operación debe aplicarse a toda la fila, en ambos bloques.</p>
+                <div class="theory-formula math-display" data-math="F_i\leftarrow F_i+\lambda F_j" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Condición previa y comprobación</h3>
+                <p>El método solo puede terminar con la identidad si la matriz es invertible. Después podemos confirmar el resultado multiplicando la matriz original por la inversa.</p>
+                <div class="theory-formula inverse-extra-theory-check">
+                  <span class="math-inline" data-math="\det M\ne0"></span>
+                  <span class="math-inline" data-math="MM^{-1}=I_3"></span>
+                </div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Sustituimos <span class="math-nowrap math-inline" data-math="a=0"></span></h3>
+                  <p>Evaluamos la matriz y el determinante calculado en el apartado anterior.</p>
+                  <div class="inverse-2021-matrix-and-det">
+                    <div class="matrix-equation-line">
+                      <span class="math-inline" data-math="M(0)="></span>
+                      <div class="matrix math-display" data-math="\begin{pmatrix}1&amp;0&amp;1\\0&amp;1&amp;0\\0&amp;0&amp;1\end{pmatrix}" data-math-display></div>
+                    </div>
+                    <strong class="math-inline" data-math="\det M(0)=1-0^2=1\ne0"></strong>
+                  </div>
+                  <p>Como el determinante no es cero, la inversa existe.</p>
+                </li>
+
+                <li>
+                  <h3>Construimos la matriz ampliada</h3>
+                  <p>Escribimos la identidad a la derecha de la matriz que queremos invertir.</p>
+                  <div class="equation inverse-extra-augmented math-display" data-math="\left(M(0)\mid I_3\right)=\left(\begin{array}{ccc|ccc}1&amp;0&amp;1&amp;1&amp;0&amp;0\\0&amp;1&amp;0&amp;0&amp;1&amp;0\\0&amp;0&amp;1&amp;0&amp;0&amp;1\end{array}\right)" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Eliminamos el elemento sobrante</h3>
+                  <p>El único elemento que impide que el bloque izquierdo sea la identidad es el <span class="math-nowrap math-inline" data-math="1"></span> de la posición <span class="math-nowrap math-inline" data-math="(1,3)"></span>. Restamos la tercera fila a la primera.</p>
+                  <div class="inverse-extra-gauss">
+                    <strong class="math-display" data-math="F_1\leftarrow F_1-F_3" data-math-display></strong>
+                    <div class="math-display inverse-extra-augmented" data-math="\left(\begin{array}{ccc|ccc}1&amp;0&amp;0&amp;1&amp;0&amp;-1\\0&amp;1&amp;0&amp;0&amp;1&amp;0\\0&amp;0&amp;1&amp;0&amp;0&amp;1\end{array}\right)" data-math-display></div>
+                  </div>
+                  <p>La operación afecta a toda la primera fila: a la izquierda hacemos <span class="math-nowrap math-inline" data-math="1-1=0"></span> y, a la derecha, <span class="math-nowrap math-inline" data-math="0-1=-1"></span> en la última posición.</p>
+                </li>
+
+                <li>
+                  <h3>Leemos la matriz inversa</h3>
+                  <p>El bloque izquierdo ya es la identidad. Por tanto, el bloque derecho es la inversa buscada.</p>
+                  <div class="equation inverse-2021-adjugate math-display" data-math="M(0)^{-1}=\begin{pmatrix}1&amp;0&amp;-1\\0&amp;1&amp;0\\0&amp;0&amp;1\end{pmatrix}" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos mediante el producto</h3>
+                  <p>Multiplicamos la matriz original por la inversa obtenida.</p>
+                  <div class="inverse-2021-check-product inverse-extra-check">
+                    <div class="math-display" data-math="\begin{pmatrix}1&amp;0&amp;1\\0&amp;1&amp;0\\0&amp;0&amp;1\end{pmatrix}\begin{pmatrix}1&amp;0&amp;-1\\0&amp;1&amp;0\\0&amp;0&amp;1\end{pmatrix}" data-math-display></div>
+                    <strong class="math-display" data-math="=\begin{pmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\\0&amp;0&amp;1\end{pmatrix}=I_3" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry inverse-2021-essential">
+              <div class="math-display" data-math="\det M(0)=1\ne0" data-math-display></div>
+              <div class="math-display" data-math="F_1\leftarrow F_1-F_3" data-math-display></div>
+              <strong class="math-display" data-math="M(0)^{-1}=\begin{pmatrix}1&amp;0&amp;-1\\0&amp;1&amp;0\\0&amp;0&amp;1\end{pmatrix}" data-math-display></strong>
+            </div>
+
+            <div class="result result-long matrix-determinant-result inverse-2021-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="M(0)^{-1}=\begin{pmatrix}1&amp;0&amp;-1\\0&amp;1&amp;0\\0&amp;0&amp;1\end{pmatrix}" data-math-display></strong>
+              <p>El producto con <span class="math-nowrap math-inline" data-math="M(0)"></span> es la identidad.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

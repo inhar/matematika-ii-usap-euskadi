@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zatikako integrazioa · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-integral-idiomas.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Ordinaria · Opción A · Problema A.4</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Integrales · Junio de 2019</p>
+        <h1>Integración por partes de un producto exponencial</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Calcular la integral, explicando el proceso utilizado:</p>
+        <div class="equation statement-integral math-display" aria-label="Integral de x por e elevado a menos cuatro x respecto de x" data-math="\int x e^{-4x} dx" data-math-display></div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema A.4</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">El integrando es el producto del polinomio x y la exponencial e⁻⁴ˣ. No tiene una primitiva inmediata, pero la integración por partes permite derivar el factor que se simplifica e integrar el que permanece reconocible. Elegiremos u = x porque al derivarlo se convierte en 1, y dv = e⁻⁴ˣ dx porque su integral es directa. Después aplicaremos la fórmula, calcularemos la integral restante y derivaremos el resultado para comprobar los signos.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema A.4</p>
+            <h2 id="solution-title">Integral por partes</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. De dónde sale la integración por partes</h3>
+                <p>Partimos de la regla de derivación de un producto. Al integrar ambos lados y despejar uno de los términos aparece la fórmula de integración por partes.</p>
+                <div class="theory-formula math-display" data-math="(uv)' = u'v + uv'" data-math-display></div>
+                <div class="theory-formula math-display" data-math="\int u dv = uv - \int v du" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Cómo elegir u y dv</h3>
+                <p>Conviene escoger como u el factor que se simplifica al derivarlo y como dv el factor que sabemos integrar. Aquí x baja a 1 y e⁻⁴ˣ conserva su forma al integrarlo.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Integral de una exponencial compuesta</h3>
+                <p>Para k ≠ 0, integrar eᵏˣ exige dividir por la derivada k del exponente.</p>
+                <div class="theory-formula math-display" data-math="\int e^{kx} dx = \frac{1}{k}e^{kx} + C" data-math-display></div>
+                <p>En este ejercicio k = −4, por eso aparece el factor −1/4.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Constante y comprobación</h3>
+                <p>Una integral indefinida representa una familia de primitivas y debe incluir + C. Para comprobar el resultado basta derivarlo: debemos recuperar exactamente el integrando.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Reconocemos el método</h3>
+                  <p>Tenemos un producto de dos tipos de funciones: un polinomio y una exponencial. Al derivar x obtenemos 1, así que la integración por partes simplificará el producto.</p>
+                </li>
+
+                <li>
+                  <h3>Elegimos las dos partes</h3>
+                  <p>Tomamos x como u y la exponencial, junto con dx, como dv.</p>
+                  <div class="parts-choice">
+                    <div>
+                      <strong class="math-inline" data-math="u = x"></strong>
+                      <span class="math-inline" data-math="du = dx"></span>
+                    </div>
+                    <div>
+                      <strong class="math-inline" data-math="dv = e^{-4x} dx"></strong>
+                      <span class="math-inline" data-math="v = -(\frac{1}{4})e^{-4x}"></span>
+                    </div>
+                  </div>
+                  <p>El signo negativo de v aparece porque la derivada del exponente −4x es −4.</p>
+                </li>
+
+                <li>
+                  <h3>Aplicamos la fórmula</h3>
+                  <p>Sustituimos u, v, du y dv en ∫u dv = uv − ∫v du:</p>
+                  <div class="det-expansion integral-expansion">
+                    <span class="math-inline" data-math="\int x e^{-4x} dx"></span>
+                    <span class="math-inline" data-math="= x[-(\frac{1}{4})e^{-4x}] - \int [-(\frac{1}{4})e^{-4x}] dx"></span>
+                    <strong class="math-inline" data-math="= -(\frac{x}{4})e^{-4x} + (\frac{1}{4})\int e^{-4x} dx"></strong>
+                  </div>
+                  <p>Hay un signo más delante de la integral restante porque estamos restando una expresión negativa.</p>
+                </li>
+
+                <li>
+                  <h3>Calculamos la integral restante</h3>
+                  <p>Usamos ∫e⁻⁴ˣ dx = −(1/4)e⁻⁴ˣ:</p>
+                  <div class="det-expansion integral-expansion">
+                    <span class="math-inline" data-math="-(\frac{x}{4})e^{-4x} + (\frac{1}{4})[-(\frac{1}{4})e^{-4x}]"></span>
+                    <strong class="math-inline" data-math="= -(\frac{x}{4})e^{-4x} - (\frac{1}{16})e^{-4x} + C"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Simplificamos</h3>
+                  <p>Sacamos como factor común −e⁻⁴ˣ y escribimos x/4 con denominador 16.</p>
+                  <div class="det-expansion integral-expansion">
+                    <span class="math-inline" data-math="-e^{-4x}(\frac{x}{4} + \frac{1}{16}) + C"></span>
+                    <span class="math-inline" data-math="=-e^{-4x}(\frac{4x}{16}+\frac{1}{16})+C"></span>
+                    <strong class="math-inline" data-math="=-\frac{(4x+1)e^{-4x}}{16}+C"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos derivando</h3>
+                  <p>Sea F(x) = −[(4x + 1)e⁻⁴ˣ] / 16. Aplicamos la regla del producto:</p>
+                  <div class="det-expansion integral-expansion verification-expansion">
+                    <span class="math-inline" data-math="F'(x) = -(\frac{1}{16})[4e^{-4x} + (4x + 1)(-4)e^{-4x}]"></span>
+                    <span class="math-inline" data-math="=-\frac{e^{-4x}}{16}[4-16x-4]"></span>
+                    <strong class="math-inline" data-math="= x e^{-4x}"></strong>
+                  </div>
+                  <p>La derivada coincide con el integrando, por lo que la primitiva es correcta.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="parts-choice essential-parts">
+              <div>
+                <strong class="math-inline" data-math="u = x"></strong>
+                <span class="math-inline" data-math="du = dx"></span>
+              </div>
+              <div>
+                <strong class="math-inline" data-math="dv = e^{-4x} dx"></strong>
+                <span class="math-inline" data-math="v = -(\frac{1}{4})e^{-4x}"></span>
+              </div>
+            </div>
+            <div class="essential-geometry integral-essential">
+              <div class="math-display" data-math="\int u dv = uv - \int v du" data-math-display></div>
+              <div class="math-display" data-math="\int x e^{-4x} dx = -(\frac{x}{4})e^{-4x} - (\frac{1}{16})e^{-4x} + C" data-math-display></div>
+              <strong class="math-inline" data-math="=-\frac{(4x+1)e^{-4x}}{16}+C"></strong>
+            </div>
+
+            <div class="result result-long integral-result">
+              <span>Resultado</span>
+              <strong class="math-inline" data-math="-\dfrac{(4x+1)e^{-4x}}{16}+C"></strong>
+              <p>Su derivada es x e⁻⁴ˣ.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

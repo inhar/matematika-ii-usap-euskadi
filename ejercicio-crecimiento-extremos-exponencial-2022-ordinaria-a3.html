@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funtzio esponentzial baten hazkundea eta muturrak · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-crecimiento-extremos-exponencial-2022-ordinaria-idiomas.js?v=2022-ord-a3a" defer></script>
+  <script src="ejercicio-crecimiento-extremos-exponencial-2022-ordinaria-grafico.js?v=2022-ord-a3a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2022 · Ordinaria · Ejercicio A3</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Monotonía y extremos · 2022</p>
+        <h1 class="extrema-2022-title">Crecimiento y extremos de una función exponencial</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-extrema-2022-language="es">Dada la función</p>
+        <p data-extrema-2022-language="eu" hidden>Funtzio hau emanda:</p>
+        <div class="statement-function extrema-2022-statement math-display" aria-label="f de x igual a x menos uno al cuadrado por e elevado a menos dos x" data-math="f(x)=(x-1)^2e^{-2x}" data-math-display></div>
+        <p data-extrema-2022-language="es">Estudia sus intervalos de crecimiento y decrecimiento y calcula sus máximos y mínimos.</p>
+        <p data-extrema-2022-language="eu" hidden>Aztertu haren gorakortasun- eta beherakortasun-tarteak, eta kalkulatu maximoak eta minimoak.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio A3</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-extrema-2022-language="es">La función es el producto de un polinomio y una exponencial. Calcularemos su derivada combinando la regla del producto y la regla de la cadena, y después resolveremos <span class="math-inline math-nowrap" data-math="f'(x)=0"></span> para localizar los puntos críticos.</p>
+            <p class="idea-text" data-extrema-2022-language="eu" hidden>Funtzioa polinomio baten eta esponentzial baten biderkadura da. Deribatua kalkulatzeko biderkaduraren erregela eta katearen erregela konbinatuko ditugu; ondoren, <span class="math-inline math-nowrap" data-math="f'(x)=0"></span> ebatziko dugu puntu kritikoak aurkitzeko.</p>
+            <p class="idea-text" data-extrema-2022-language="es">Como <span class="math-inline math-nowrap" data-math="e^{-2x}"></span> siempre es positiva, no cambia el signo de la derivada. El signo depende solo de los factores <span class="math-inline math-nowrap" data-math="x-1"></span> y <span class="math-inline math-nowrap" data-math="2-x"></span>; con ellos sabremos dónde crece o decrece la función y clasificaremos los extremos.</p>
+            <p class="idea-text" data-extrema-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="e^{-2x}"></span> beti positiboa denez, ez du deribatuaren zeinua aldatzen. Zeinua <span class="math-inline math-nowrap" data-math="x-1"></span> eta <span class="math-inline math-nowrap" data-math="2-x"></span> faktoreek bakarrik erabakitzen dute; horien bidez funtzioa non den gorakorra edo beherakorra ikusiko dugu, eta muturrak sailkatuko ditugu.</p>
+            <div class="essential-geometry extrema-2022-idea">
+              <div class="math-display" data-math="f'(x)=2(x-1)(2-x)e^{-2x}" data-math-display></div>
+              <div class="math-display" data-math="f'(x)=0\Longleftrightarrow x=1\ \text{edo}\ x=2" data-math-es="f'(x)=0\Longleftrightarrow x=1\ \text{o}\ x=2" data-math-eu="f'(x)=0\Longleftrightarrow x=1\ \text{edo}\ x=2" data-math-display></div>
+              <strong class="math-display" data-math-es="\text{Mínimo absoluto: }(1,0)" data-math-eu="\text{Minimo absolutua: }(1,0)" data-math-display></strong>
+              <strong class="math-display" data-math-es="\text{Máximo local: }(2,e^{-4})" data-math-eu="\text{Maximo lokala: }(2,e^{-4})" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio A3</p>
+            <h2 id="solution-title">Derivada, monotonía y extremos</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Regla del producto y regla de la cadena</h3>
+                <p>Para derivar un producto, derivamos cada factor por turno. En una exponencial con exponente variable también multiplicamos por la derivada de ese exponente.</p>
+                <div class="theory-formula math-display" data-math="(u\cdot v)'=u'\cdot v+u\cdot v'" data-math-display></div>
+                <div class="theory-formula math-display" data-math="\left(e^{g(x)}\right)'=g'(x)e^{g(x)}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Positividad de la función exponencial</h3>
+                <p>Una exponencial real nunca vale cero ni es negativa. Por eso no puede aportar soluciones a una ecuación de producto igual a cero y tampoco modifica el signo de los demás factores.</p>
+                <div class="theory-formula math-display" data-math="e^t>0\qquad\text{para todo }t\in\mathbb R" data-math-es="e^t>0\qquad\text{para todo }t\in\mathbb R" data-math-eu="e^t>0\qquad t\in\mathbb R\text{ guztietarako}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Derivada y monotonía</h3>
+                <p>Los puntos críticos separan los intervalos que debemos estudiar. En cada uno, el signo de la primera derivada indica el sentido de variación de la función.</p>
+                <div class="theory-formula math-display" data-math-es="f'(x)>0\Rightarrow f\text{ crece}" data-math-eu="f'(x)>0\Rightarrow f\text{ gorakorra da}" data-math-display></div>
+                <div class="theory-formula math-display" data-math-es="f'(x)<0\Rightarrow f\text{ decrece}" data-math-eu="f'(x)<0\Rightarrow f\text{ beherakorra da}" data-math-display></div>
+                <div class="theory-formula math-display" data-math-es="-\to+\Rightarrow\text{mínimo}" data-math-eu="-\to+\Rightarrow\text{minimoa}" data-math-display></div>
+                <div class="theory-formula math-display" data-math-es="+\to-\Rightarrow\text{máximo}" data-math-eu="+\to-\Rightarrow\text{maximoa}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Extremo local y extremo absoluto</h3>
+                <p>El cambio de signo de la derivada clasifica un extremo local. Para decidir si también es absoluto debemos comparar con el comportamiento global de la función, incluidos sus límites en los extremos del dominio.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Identificamos los dos factores</h3>
+                  <p>La función es un producto. Escribimos por separado cada factor y su derivada para aplicar la regla sin omitir ningún término.</p>
+                  <div class="calculation-list extrema-factor-derivatives">
+                    <div><span class="math-inline" data-math="u(x)=(x-1)^2"></span><strong class="math-inline" data-math="u'(x)=2(x-1)"></strong></div>
+                    <div><span class="math-inline" data-math="v(x)=e^{-2x}"></span><strong class="math-inline" data-math="v'(x)=-2e^{-2x}"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la primera derivada</h3>
+                  <p>Aplicamos la regla del producto. En la segunda línea sustituimos las dos derivadas anteriores.</p>
+                  <div class="extrema-2022-work">
+                    <div class="math-display" data-math="f'(x)=u'(x)v(x)+u(x)v'(x)" data-math-display></div>
+                    <div class="math-display" data-math="f'(x)=2(x-1)e^{-2x}-2(x-1)^2e^{-2x}" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Factorizamos la derivada</h3>
+                  <p>Extraemos el factor común <span class="math-inline math-nowrap" data-math="2(x-1)e^{-2x}"></span>. La factorización deja visibles los factores que decidirán el signo.</p>
+                  <div class="extrema-2022-work">
+                    <div class="math-display" data-math="f'(x)=2(x-1)e^{-2x}\left[1-(x-1)\right]" data-math-display></div>
+                    <div class="math-display" data-math="1-(x-1)=2-x" data-math-display></div>
+                    <strong class="math-display" data-math="f'(x)=2(x-1)(2-x)e^{-2x}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos los puntos críticos</h3>
+                  <p>Igualamos la derivada a cero. Los factores <span class="math-inline math-nowrap" data-math="2"></span> y <span class="math-inline math-nowrap" data-math="e^{-2x}"></span> son siempre positivos, de modo que solo pueden anularse los dos factores lineales.</p>
+                  <div class="extrema-2022-work">
+                    <div class="math-display" data-math="2(x-1)(2-x)e^{-2x}=0" data-math-display></div>
+                    <div class="math-display" data-math-es="x-1=0\quad\text{o}\quad2-x=0" data-math-eu="x-1=0\quad\text{edo}\quad2-x=0" data-math-display></div>
+                    <strong class="math-display" data-math-es="x=1\quad\text{o}\quad x=2" data-math-eu="x=1\quad\text{edo}\quad x=2" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Estudiamos el signo de la derivada</h3>
+                  <p>Los puntos críticos dividen la recta real en tres intervalos. Como la constante y la exponencial son positivas, basta combinar los signos de <span class="math-inline math-nowrap" data-math="x-1"></span> y <span class="math-inline math-nowrap" data-math="2-x"></span>.</p>
+                  <div class="calculation-list extrema-2022-signs">
+                    <div>
+                      <span class="math-inline" data-math="(-\infty,1)"></span>
+                      <strong class="math-inline" data-math="(-)\cdot(+)\Rightarrow f'(x)<0\Rightarrow f\searrow"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="(1,2)"></span>
+                      <strong class="math-inline" data-math="(+)\cdot(+)\Rightarrow f'(x)>0\Rightarrow f\nearrow"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="(2,+\infty)"></span>
+                      <strong class="math-inline" data-math="(+)\cdot(-)\Rightarrow f'(x)<0\Rightarrow f\searrow"></strong>
+                    </div>
+                  </div>
+                  <div class="extrema-2022-work extrema-2022-monotony">
+                    <strong class="math-display" data-math-es="f\text{ decrece en }(-\infty,1)" data-math-eu="f\text{ beherakorra da }(-\infty,1)\text{ tartean}" data-math-display></strong>
+                    <strong class="math-display" data-math-es="f\text{ decrece en }(2,+\infty)" data-math-eu="f\text{ beherakorra da }(2,+\infty)\text{ tartean}" data-math-display></strong>
+                    <strong class="math-display" data-math-es="\text{Crece en }(1,2)" data-math-eu="\text{Gorakorra da }(1,2)\text{ tartean}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Clasificamos los extremos y calculamos sus valores</h3>
+                  <p data-extrema-2022-language="es">En <span class="math-inline math-nowrap" data-math="x=1"></span>, la derivada cambia de negativa a positiva: hay un mínimo. En <span class="math-inline math-nowrap" data-math="x=2"></span>, cambia de positiva a negativa: hay un máximo local.</p>
+                  <p data-extrema-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=1"></span> puntuan, deribatua negatibotik positibora aldatzen da: minimo bat dago. <span class="math-inline math-nowrap" data-math="x=2"></span> puntuan, positibotik negatibora aldatzen da: maximo lokal bat dago.</p>
+                  <div class="calculation-list extrema-values">
+                    <div><span class="math-inline" data-math="x=1"></span><strong class="math-inline" data-math="f(1)=0^2e^{-2}=0"></strong></div>
+                    <div><span class="math-inline" data-math="x=2"></span><strong class="math-inline" data-math="f(2)=1^2e^{-4}=e^{-4}\approx0{,}018"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Decidimos cuáles son absolutos</h3>
+                  <p data-extrema-2022-language="es">La función nunca es negativa porque contiene un cuadrado y una exponencial positiva. Por tanto, el valor <span class="math-inline math-nowrap" data-math="f(1)=0"></span> es el mínimo absoluto. En cambio, hacia la izquierda la función crece sin límite, así que el máximo de <span class="math-inline math-nowrap" data-math="x=2"></span> es solo local y no existe máximo absoluto.</p>
+                  <p data-extrema-2022-language="eu" hidden>Funtzioa ez da inoiz negatiboa, karratu bat eta esponentzial positibo bat dituelako. Beraz, <span class="math-inline math-nowrap" data-math="f(1)=0"></span> balioa minimo absolutua da. Aldiz, ezkerrerantz funtzioa mugarik gabe hazten da; hortaz, <span class="math-inline math-nowrap" data-math="x=2"></span> puntuko maximoa lokala baino ez da, eta ez dago maximo absoluturik.</p>
+                  <div class="extrema-2022-work">
+                    <div class="math-display" data-math="f(x)\ge0\qquad(x\in\mathbb R)" data-math-display></div>
+                    <div class="math-display" data-math="\lim_{x\to-\infty}(x-1)^2e^{-2x}=+\infty" data-math-display></div>
+                  </div>
+
+                  <figure class="extrema-figure extrema-2022-figure" aria-label="Gráfica ampliada de la función con el mínimo absoluto y el máximo local">
+                    <figcaption data-extrema-2022-language="es">Vista ampliada alrededor de los puntos críticos. La rama situada más a la izquierda continúa creciendo hacia <span class="math-inline math-nowrap" data-math="+\infty"></span>; se recorta para poder distinguir con claridad el pequeño máximo local.</figcaption>
+                    <figcaption data-extrema-2022-language="eu" hidden>Puntu kritikoen inguruko ikuspegi handitua. Ezkerreko adarrak <span class="math-inline math-nowrap" data-math="+\infty"></span>-rantz hazten jarraitzen du; moztu egin da maximo lokal txikia argi ikusi ahal izateko.</figcaption>
+                    <div id="extrema-2022-board" class="jxgbox extrema-function-board extrema-2022-board" role="img" aria-label="Gráfica de f de x igual a x menos uno al cuadrado por e elevado a menos dos x, con extremos en uno y dos"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry extrema-essential extrema-2022-essential">
+              <div class="math-display" data-math="f'(x)=2(x-1)(2-x)e^{-2x}" data-math-display></div>
+              <div class="math-display" data-math-es="f'(x)=0\Longleftrightarrow x=1\ \text{o}\ x=2" data-math-eu="f'(x)=0\Longleftrightarrow x=1\ \text{edo}\ x=2" data-math-display></div>
+              <div class="extrema-essential-sign">
+                <div class="math-display" data-math="(-\infty,1)\colon\ f'(x)<0\Rightarrow f\searrow" data-math-display></div>
+                <div class="math-display" data-math="(1,2)\colon\ f'(x)>0\Rightarrow f\nearrow" data-math-display></div>
+                <div class="math-display" data-math="(2,+\infty)\colon\ f'(x)<0\Rightarrow f\searrow" data-math-display></div>
+              </div>
+              <strong class="math-display" data-math-es="\text{Mínimo absoluto: }(1,0)" data-math-eu="\text{Minimo absolutua: }(1,0)" data-math-display></strong>
+              <strong class="math-display" data-math-es="\text{Máximo local: }(2,e^{-4})" data-math-eu="\text{Maximo lokala: }(2,e^{-4})" data-math-display></strong>
+            </div>
+
+            <div class="result result-long extrema-result extrema-2022-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="result-unit" data-extrema-2022-language="es">Mínimo absoluto: <span class="math-nowrap math-inline" data-math="(1,0)"></span></span>
+                <span class="result-unit" data-extrema-2022-language="eu" hidden>Minimo absolutua: <span class="math-nowrap math-inline" data-math="(1,0)"></span></span>
+                <span class="result-unit" data-extrema-2022-language="es">Máximo local: <span class="math-nowrap math-inline" data-math="(2,e^{-4})"></span></span>
+                <span class="result-unit" data-extrema-2022-language="eu" hidden>Maximo lokala: <span class="math-nowrap math-inline" data-math="(2,e^{-4})"></span></span>
+              </strong>
+              <p>No existe máximo absoluto.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

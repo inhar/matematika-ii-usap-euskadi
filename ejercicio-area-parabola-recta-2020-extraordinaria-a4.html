@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parabola eta zuzen baten arteko azalera · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-area-parabola-recta-2020-extraordinaria-idiomas.js?v=2020-extra-a4a" defer></script>
+  <script src="ejercicio-area-parabola-recta-2020-extraordinaria-grafico.js?v=2020-extra-a4a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2020 · Extraordinaria · Opción A · Ejercicio A.4</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Área entre curvas · 2020</p>
+        <h1>Área entre una parábola y una recta</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Representar la región finita del plano limitada por la curva y la recta:</p>
+        <div class="function-data area-line-statement-functions" aria-label="Curva y igual a tres menos x al cuadrado y recta y igual a dos x">
+          <span class="math-inline" data-math="y=3-x^2"></span>
+          <span class="math-inline" data-math="y=2x"></span>
+        </div>
+        <p>Calcular el área de dicha región.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio A.4</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">La región finita solo puede quedar cerrada entre los puntos donde se cortan la parábola y la recta. Por eso empezaremos igualando sus ecuaciones: las soluciones serán los límites de integración.</p>
+            <p class="idea-text">Después comprobaremos cuál de las dos gráficas queda arriba entre esos cortes. La diferencia «curva superior menos curva inferior» mide la altura de cada franja vertical del recinto; al integrar esas alturas en todo el intervalo obtendremos el área.</p>
+            <div class="essential-geometry area-line-idea">
+              <div class="math-display" data-math="3-x^2=2x\Rightarrow x=-3,\ 1" data-math-display></div>
+              <div class="math-display" data-math="A=\int_{-3}^{1}\big[(3-x^2)-2x\big]\,dx" data-math-display></div>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio A.4</p>
+            <h2 id="solution-title">Representación y cálculo del área</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Cómo representar las fronteras</h3>
+                <p>Una función de la forma indicada es una parábola de eje vertical. El signo negativo del término cuadrático hace que se abra hacia abajo; su vértice se obtiene directamente porque no existe término lineal. La otra función es una recta que pasa por el origen y tiene pendiente 2.</p>
+                <div class="theory-formula area-line-theory-shapes">
+                  <span class="math-inline" data-math="y=3-x^2\Rightarrow V(0,3)"></span>
+                  <span class="math-inline" data-math="y=2x\Rightarrow m=2"></span>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Intersecciones y orden de las curvas</h3>
+                <p>Las fronteras se cortan cuando tienen la misma ordenada para una misma abscisa. Esas abscisas delimitan el recinto. Para decidir qué gráfica queda arriba basta comparar ambas funciones en cualquier punto interior del intervalo.</p>
+                <div class="theory-formula math-display" data-math="f(x)=g(x)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Área entre dos curvas</h3>
+                <p>En cada abscisa, la altura de una franja vertical es el valor de la función superior menos el de la inferior. Integrar esa diferencia suma todas las franjas sin introducir áreas negativas.</p>
+                <div class="theory-formula math-display" data-math="A=\int_a^b\big[f_{\mathrm{sup}}(x)-f_{\mathrm{inf}}(x)\big]\,dx" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Regla de Barrow</h3>
+                <p>Si una función es una primitiva del integrando, la integral definida se calcula evaluándola en los dos extremos y restando el valor del límite inferior.</p>
+                <div class="theory-formula math-display" data-math="\int_a^b h(x)\,dx=H(b)-H(a)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Interpretamos las dos gráficas</h3>
+                  <p>La primera frontera es una parábola con vértice en el eje vertical y ramas hacia abajo. La segunda es una recta creciente que pasa por el origen.</p>
+                  <div class="calculation-list area-line-shapes">
+                    <div><span class="math-inline" data-math="f(x)=3-x^2"></span><strong class="math-inline" data-math-es="V(0,3),\quad\text{abre hacia abajo}" data-math-eu="V(0,3),\quad\text{beherantz irekitzen da}"></strong></div>
+                    <div><span class="math-inline" data-math="g(x)=2x"></span><strong class="math-inline" data-math-es="m=2,\quad\text{pasa por }(0,0)" data-math-eu="m=2,\quad(0,0)\text{ puntutik igarotzen da}"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos las abscisas de intersección</h3>
+                  <p>En un punto común, la parábola y la recta tienen la misma ordenada. Igualamos sus expresiones y resolvemos la ecuación.</p>
+                  <div class="det-expansion area-line-intersections">
+                    <span class="math-inline" data-math="3-x^2=2x"></span>
+                    <span class="math-inline" data-math="x^2+2x-3=0"></span>
+                    <span class="math-inline" data-math="(x+3)(x-1)=0"></span>
+                    <strong class="math-inline" data-math-es="x=-3\quad\text{o}\quad x=1" data-math-eu="x=-3\quad\text{edo}\quad x=1"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos los puntos de corte completos</h3>
+                  <p>Sustituimos cada abscisa en la recta, que proporciona la ordenada con una sola operación.</p>
+                  <div class="calculation-list area-line-points">
+                    <div><span class="math-inline" data-math="x=-3"></span><strong class="math-inline" data-math="y=2(-3)=-6\Rightarrow P(-3,-6)"></strong></div>
+                    <div><span class="math-inline" data-math="x=1"></span><strong class="math-inline" data-math="y=2(1)=2\Rightarrow Q(1,2)"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Determinamos qué curva queda arriba</h3>
+                  <p>Elegimos un valor interior sencillo, por ejemplo 0, y comparamos las dos alturas.</p>
+                  <div class="calculation-list area-line-order">
+                    <div><span class="math-inline" data-math="f(0)"></span><strong class="math-inline" data-math="3-0^2=3"></strong></div>
+                    <div><span class="math-inline" data-math="g(0)"></span><strong class="math-inline" data-math="2\cdot0=0"></strong></div>
+                  </div>
+                  <p>Como la parábola está por encima en un punto interior y las gráficas no vuelven a cortarse entre los extremos, es la frontera superior en todo el recinto.</p>
+                  <div class="math-display" data-math="-3<x<1\Rightarrow 3-x^2>2x" data-math-display></div>
+
+                  <figure class="area-line-figure" aria-label="Representación de la región limitada por la parábola y la recta">
+                    <figcaption>Los puntos de corte delimitan el recinto. Entre ellos, la parábola es la frontera superior y la recta la inferior.</figcaption>
+                    <div id="area-parabola-line-2020-board" class="jxgbox area-line-board" role="img" aria-label="Parábola y recta con la región comprendida entre menos tres y uno sombreada"></div>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Planteamos la integral del área</h3>
+                  <p>Restamos la función inferior a la superior y usamos como límites las abscisas de intersección.</p>
+                  <div class="det-expansion area-line-integral">
+                    <span class="math-inline" data-math="A=\int_{-3}^{1}\big[f(x)-g(x)\big]\,dx"></span>
+                    <span class="math-inline" data-math="f(x)-g(x)=(3-x^2)-2x"></span>
+                    <strong class="math-inline" data-math="A=\int_{-3}^{1}(3-2x-x^2)\,dx"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos una primitiva</h3>
+                  <p>Integramos término a término mediante la regla de la potencia.</p>
+                  <div class="calculation-list area-line-primitives">
+                    <div><span class="math-inline" data-math="\int 3\,dx"></span><strong class="math-inline" data-math="3x"></strong></div>
+                    <div><span class="math-inline" data-math="\int -2x\,dx"></span><strong class="math-inline" data-math="-x^2"></strong></div>
+                    <div><span class="math-inline" data-math="\int -x^2\,dx"></span><strong class="math-inline" data-math="-\frac{x^3}{3}"></strong></div>
+                  </div>
+                  <div class="equation area-line-primitive math-display" data-math="H(x)=3x-x^2-\frac{x^3}{3}" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Aplicamos la regla de Barrow sin saltos</h3>
+                  <p>Evaluamos la primitiva en cada extremo por separado.</p>
+                  <div class="det-expansion area-line-evaluation">
+                    <span class="math-inline" data-math="H(1)=3\cdot1-1^2-\frac{1^3}{3}"></span>
+                    <strong class="math-inline" data-math="H(1)=3-1-\frac13=\frac53"></strong>
+                  </div>
+                  <div class="det-expansion area-line-evaluation">
+                    <span class="math-inline" data-math="H(-3)=3(-3)-(-3)^2-\frac{(-3)^3}{3}"></span>
+                    <span class="math-inline" data-math="H(-3)=-9-9+9"></span>
+                    <strong class="math-inline" data-math="H(-3)=-9"></strong>
+                  </div>
+                  <p>Restamos el valor del límite inferior al del superior.</p>
+                  <div class="det-expansion area-line-final-calculation">
+                    <span class="math-inline" data-math="A=H(1)-H(-3)"></span>
+                    <span class="math-inline" data-math="A=\frac53-(-9)=\frac53+\frac{27}{3}"></span>
+                    <strong class="math-inline" data-math="A=\frac{32}{3}"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Interpretamos el resultado</h3>
+                  <p>El integrando es positivo en todo el intervalo y el área obtenida también. La magnitud se expresa en unidades cuadradas.</p>
+                  <div class="math-display" data-math="A=\frac{32}{3}\,u^2\approx10{,}67\,u^2" data-math-display></div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry area-line-essential">
+              <div class="math-display" data-math="3-x^2=2x\Rightarrow(x+3)(x-1)=0" data-math-display></div>
+              <div class="math-display" data-math="x=-3,\ 1" data-math-display></div>
+              <div class="math-display" data-math-es="\text{En }[-3,1],\quad 3-x^2\ge2x" data-math-eu="[-3,1]\text{ tartean},\quad 3-x^2\ge2x" data-math-display></div>
+              <div class="math-display" data-math="A=\int_{-3}^{1}(3-2x-x^2)\,dx" data-math-display></div>
+              <div class="math-display" data-math="A=\left[3x-x^2-\frac{x^3}{3}\right]_{-3}^{1}" data-math-display></div>
+              <strong class="math-inline" data-math="A=\frac{32}{3}\,u^2"></strong>
+            </div>
+
+            <div class="result result-long area-line-result">
+              <span>Resultado</span>
+              <strong><span class="result-unit">Área de la región: <span class="math-nowrap math-inline" data-math="\frac{32}{3}\,u^2"></span></span></strong>
+              <p><span class="math-nowrap math-inline" data-math="\frac{32}{3}\,u^2\approx10{,}67\,u^2"></span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

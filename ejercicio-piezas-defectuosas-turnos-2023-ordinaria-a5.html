@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pieza akastunak: probabilitate osoa eta Bayes · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-piezas-defectuosas-turnos-2023-ordinaria-idiomas.js?v=2023-ord-a5" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Ejercicio A5</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Probabilidad total y Bayes · 2023</p>
+        <h1 class="shifts-2023-title">Piezas defectuosas en cuatro turnos</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <div data-shifts-2023-language="es">
+          <p>La producción de una empresa la realizan, a partes iguales, cuatro turnos, de los que tres son diurnos y uno nocturno. El porcentaje de piezas defectuosas producidas en cada turno diurno es el <span class="math-inline math-nowrap" data-math="2\%"></span> y en el nocturno es del <span class="math-inline math-nowrap" data-math="10\%"></span>.</p>
+          <p>Si se toma una pieza al azar de un turno al azar:</p>
+          <ol class="statement-parts">
+            <li>calcula la probabilidad de que la pieza sea defectuosa;</li>
+            <li>si la pieza tomada es defectuosa, calcula la probabilidad de que se haya producido en un turno diurno.</li>
+          </ol>
+        </div>
+        <div data-shifts-2023-language="eu" hidden>
+          <p>Enpresa baten ekoizpena lau txandatan egiten da, zati berdinetan; hiru egunekoak dira eta bat gauekoa. Eguneko txanda bakoitzean ekoitzitako pieza akastunen ehunekoa <span class="math-inline math-nowrap" data-math="2\%"></span> da, eta gauekoan <span class="math-inline math-nowrap" data-math="10\%"></span>.</p>
+          <p>Pieza bat ausazko txanda batetik ausaz hartzen bada:</p>
+          <ol class="statement-parts">
+            <li>kalkulatu pieza akastuna izateko probabilitatea;</li>
+            <li>hartutako pieza akastuna bada, kalkulatu eguneko txanda batean ekoitzi izateko probabilitatea.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="shifts-2023-part-a" data-target="shifts-2023-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="shifts-2023-part-b" data-target="shifts-2023-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="shifts-2023-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-shifts-2023-language="es">La pieza puede proceder de un turno diurno o del nocturno. Como tres de los cuatro turnos son diurnos y todos producen la misma cantidad, las probabilidades de esas dos procedencias son <span class="math-inline math-nowrap" data-math="3/4"></span> y <span class="math-inline math-nowrap" data-math="1/4"></span>.</p>
+            <p class="idea-text" data-shifts-2023-language="eu" hidden>Pieza eguneko txanda batetik edo gaueko txandatik etor daiteke. Lau txandetatik hiru egunekoak direnez eta guztiek kopuru bera ekoizten dutenez, bi jatorri horien probabilitateak <span class="math-inline math-nowrap" data-math="3/4"></span> eta <span class="math-inline math-nowrap" data-math="1/4"></span> dira.</p>
+            <p class="idea-text" data-shifts-2023-language="es">Trazaremos un árbol: en cada camino multiplicaremos la probabilidad del tipo de turno por su porcentaje de piezas defectuosas. Los dos caminos que terminan en pieza defectuosa son incompatibles, así que los sumaremos mediante la probabilidad total.</p>
+            <p class="idea-text" data-shifts-2023-language="eu" hidden>Zuhaitz bat marraztuko dugu: bide bakoitzean txanda motaren probabilitatea eta haren pieza akastunen ehunekoa biderkatuko ditugu. Pieza akastunean amaitzen diren bi bideak bateraezinak direnez, probabilitate osoaren bidez batuko ditugu.</p>
+            <div class="essential-geometry shifts-2023-idea">
+              <div class="math-display" data-math="P(D)=\frac34,\qquad P(N)=\frac14" data-math-display></div>
+              <div class="math-display" data-math="P(F)=P(D)P(F\mid D)+P(N)P(F\mid N)" data-math-display></div>
+              <strong class="math-display" data-math="P(F)=0{,}04=4\%" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Probabilidad de obtener una pieza defectuosa</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Probabilidades condicionadas en un árbol</h3>
+                <p data-shifts-2023-language="es">La primera etapa representa la procedencia de la pieza. La segunda contiene probabilidades condicionadas, porque la proporción de defectuosas depende del tipo de turno ya elegido.</p>
+                <p data-shifts-2023-language="eu" hidden>Lehenengo etapak piezaren jatorria adierazten du. Bigarrenak probabilitate baldintzatuak ditu, akastunen proportzioa aurretik aukeratutako txanda motaren mende dagoelako.</p>
+                <div class="theory-formula math-display" data-math="P(F\mid D)=0{,}02,\qquad P(F\mid N)=0{,}10" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Suceso complementario</h3>
+                <p data-shifts-2023-language="es">En cada turno, una pieza es defectuosa o no lo es. Las probabilidades de esos dos resultados suman uno.</p>
+                <p data-shifts-2023-language="eu" hidden>Txanda bakoitzean, pieza bat akastuna da edo ez da akastuna. Bi emaitza horien probabilitateen batura bat da.</p>
+                <div class="theory-formula math-display" data-math="P(F^c\mid T)=1-P(F\mid T)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Regla del producto</h3>
+                <p data-shifts-2023-language="es">La probabilidad de un camino completo se calcula multiplicando la primera rama por la probabilidad condicionada de la segunda.</p>
+                <p data-shifts-2023-language="eu" hidden>Bide oso baten probabilitatea lehenengo adarra eta bigarrenaren probabilitate baldintzatua biderkatuz kalkulatzen da.</p>
+                <div class="theory-formula math-display" data-math="P(T\cap F)=P(T)P(F\mid T)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Teorema de la probabilidad total</h3>
+                <p data-shifts-2023-language="es">Los sucesos <span class="math-inline math-nowrap" data-math="D"></span> y <span class="math-inline math-nowrap" data-math="N"></span> forman una partición: toda pieza procede exactamente de uno de ellos. Para obtener <span class="math-inline math-nowrap" data-math="F"></span>, sumamos todos los caminos que terminan en ese suceso.</p>
+                <p data-shifts-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="D"></span> eta <span class="math-inline math-nowrap" data-math="N"></span> gertaerek partizio bat osatzen dute: pieza oro horietako batetik dator. <span class="math-inline math-nowrap" data-math="F"></span> lortzeko, gertaera horretan amaitzen diren bide guztiak batzen ditugu.</p>
+                <div class="theory-formula math-display" data-math="\begin{aligned}P(F)={}&P(D)P(F\mid D)\\&+P(N)P(F\mid N)\end{aligned}" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Definimos los sucesos</h3>
+                  <p data-shifts-2023-language="es">Usaremos <span class="math-inline math-nowrap" data-math="D"></span> para «turno diurno», <span class="math-inline math-nowrap" data-math="N"></span> para «turno nocturno» y <span class="math-inline math-nowrap" data-math="F"></span> para «pieza defectuosa».</p>
+                  <p data-shifts-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="D"></span> erabiliko dugu «eguneko txanda» adierazteko, <span class="math-inline math-nowrap" data-math="N"></span> «gaueko txanda» adierazteko eta <span class="math-inline math-nowrap" data-math="F"></span> «pieza akastuna» adierazteko.</p>
+                </li>
+                <li>
+                  <h3>Calculamos la probabilidad de cada tipo de turno</h3>
+                  <p data-shifts-2023-language="es">Hay cuatro turnos equiprobables: tres son diurnos y uno es nocturno.</p>
+                  <p data-shifts-2023-language="eu" hidden>Probabilitate bereko lau txanda daude: hiru egunekoak dira eta bat gauekoa.</p>
+                  <div class="shifts-2023-work">
+                    <div class="math-display" data-math="P(D)=\frac34=0{,}75" data-math-display></div>
+                    <div class="math-display" data-math="P(N)=\frac14=0{,}25" data-math-display></div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Completamos las probabilidades de la segunda etapa</h3>
+                  <p data-shifts-2023-language="es">Restamos de uno los porcentajes de piezas defectuosas para obtener los de piezas no defectuosas.</p>
+                  <p data-shifts-2023-language="eu" hidden>Pieza akastunen ehunekoak batetik kentzen ditugu akastunak ez diren piezen ehunekoak lortzeko.</p>
+                  <div class="shifts-2023-work">
+                    <div class="math-display" data-math="P(F^c\mid D)=1-0{,}02=0{,}98" data-math-display></div>
+                    <div class="math-display" data-math="P(F^c\mid N)=1-0{,}10=0{,}90" data-math-display></div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Construimos y leemos el árbol</h3>
+                  <p data-shifts-2023-language="es">La primera bifurcación elige el tipo de turno; la segunda indica si la pieza es defectuosa. Al final de cada camino aparece el producto de sus dos ramas.</p>
+                  <p data-shifts-2023-language="eu" hidden>Lehenengo adarkadurak txanda mota aukeratzen du; bigarrenak pieza akastuna den adierazten du. Bide bakoitzaren amaieran haren bi adarren biderkadura agertzen da.</p>
+                </li>
+                <li>
+                  <h3>Calculamos los dos caminos favorables</h3>
+                  <p data-shifts-2023-language="es">Una pieza defectuosa puede proceder de un turno diurno o del nocturno.</p>
+                  <p data-shifts-2023-language="eu" hidden>Pieza akastuna eguneko txanda batetik edo gaueko txandatik etor daiteke.</p>
+                  <div class="shifts-2023-paths">
+                    <div>
+                      <span class="math-inline" data-math="D\cap F"></span>
+                      <strong class="math-inline" data-math="\frac34\cdot0{,}02=0{,}015"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="N\cap F"></span>
+                      <strong class="math-inline" data-math="\frac14\cdot0{,}10=0{,}025"></strong>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Sumamos los caminos favorables</h3>
+                  <p data-shifts-2023-language="es">Los dos caminos no pueden ocurrir a la vez, porque la pieza solo procede de un turno.</p>
+                  <p data-shifts-2023-language="eu" hidden>Bi bideak ezin dira aldi berean gertatu, pieza txanda bakar batetik datorrelako.</p>
+                  <div class="shifts-2023-work">
+                    <div class="math-display" data-math="P(F)=P(D\cap F)+P(N\cap F)" data-math-display></div>
+                    <div class="math-display" data-math="P(F)=0{,}015+0{,}025" data-math-display></div>
+                    <strong class="math-display" data-math="P(F)=0{,}04=4\%" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry shifts-2023-essential">
+              <div class="math-display" data-math="P(D)=\frac34,\quad P(N)=\frac14" data-math-display></div>
+              <div class="math-display" data-math="P(D\cap F)=\frac34\cdot0{,}02=0{,}015" data-math-display></div>
+              <div class="math-display" data-math="P(N\cap F)=\frac14\cdot0{,}10=0{,}025" data-math-display></div>
+              <strong class="math-display" data-math="P(F)=0{,}015+0{,}025=0{,}04" data-math-display></strong>
+            </div>
+
+            <figure class="shifts-2023-tree-figure" aria-label="Árbol de probabilidades de los turnos y el estado de la pieza">
+              <figcaption data-shifts-2023-language="es">Primero se elige el tipo de turno y después el estado de la pieza. A la derecha aparece la probabilidad conjunta de cada camino.</figcaption>
+              <figcaption data-shifts-2023-language="eu" hidden>Lehenik txanda mota aukeratzen da, eta ondoren piezaren egoera. Eskuinean bide bakoitzaren baterako probabilitatea agertzen da.</figcaption>
+
+              <div class="shifts-2023-tree shifts-2023-tree-desktop" role="img" aria-label="Árbol con turnos diurno y nocturno, piezas defectuosas y no defectuosas, y probabilidades conjuntas">
+                <svg viewBox="0 0 900 440" aria-hidden="true" focusable="false">
+                  <g class="shifts-tree-primary-lines">
+                    <line x1="60" y1="220" x2="315" y2="100"></line>
+                    <line x1="60" y1="220" x2="315" y2="340"></line>
+                  </g>
+                  <g class="shifts-tree-defective-lines">
+                    <line x1="345" y1="100" x2="615" y2="40"></line>
+                    <line x1="345" y1="340" x2="615" y2="280"></line>
+                  </g>
+                  <g class="shifts-tree-valid-lines">
+                    <line x1="345" y1="100" x2="615" y2="160"></line>
+                    <line x1="345" y1="340" x2="615" y2="400"></line>
+                  </g>
+                  <g class="shifts-tree-dots">
+                    <circle cx="55" cy="220" r="4"></circle>
+                    <circle cx="330" cy="100" r="4"></circle>
+                    <circle cx="330" cy="340" r="4"></circle>
+                  </g>
+                </svg>
+
+                <span class="shifts-tree-stage shifts-tree-stage-turn">Turno</span>
+                <span class="shifts-tree-stage shifts-tree-stage-state">Estado</span>
+                <span class="shifts-tree-stage shifts-tree-stage-path">Camino</span>
+
+                <span class="shifts-tree-label shifts-tree-d math-inline" data-math="D"></span>
+                <span class="shifts-tree-label shifts-tree-n math-inline" data-math="N"></span>
+                <span class="shifts-tree-prob shifts-tree-prob-d math-inline" data-math="3/4"></span>
+                <span class="shifts-tree-prob shifts-tree-prob-n math-inline" data-math="1/4"></span>
+
+                <span class="shifts-tree-label shifts-tree-d-f math-inline" data-math="F"></span>
+                <span class="shifts-tree-label shifts-tree-d-ok math-inline" data-math="F^c"></span>
+                <span class="shifts-tree-label shifts-tree-n-f math-inline" data-math="F"></span>
+                <span class="shifts-tree-label shifts-tree-n-ok math-inline" data-math="F^c"></span>
+
+                <span class="shifts-tree-prob shifts-tree-d-f-prob math-inline" data-math="0{,}02"></span>
+                <span class="shifts-tree-prob shifts-tree-d-ok-prob math-inline" data-math="0{,}98"></span>
+                <span class="shifts-tree-prob shifts-tree-n-f-prob math-inline" data-math="0{,}10"></span>
+                <span class="shifts-tree-prob shifts-tree-n-ok-prob math-inline" data-math="0{,}90"></span>
+
+                <span class="shifts-tree-joint shifts-tree-d-f-joint math-inline" data-math="0{,}015"></span>
+                <span class="shifts-tree-joint shifts-tree-d-ok-joint math-inline" data-math="0{,}735"></span>
+                <span class="shifts-tree-joint shifts-tree-n-f-joint math-inline" data-math="0{,}025"></span>
+                <span class="shifts-tree-joint shifts-tree-n-ok-joint math-inline" data-math="0{,}225"></span>
+              </div>
+
+              <div class="shifts-2023-tree-mobile" role="img" aria-label="Resumen móvil de las ramas del árbol de turnos">
+                <div>
+                  <strong class="math-inline" data-math="D\quad(3/4)"></strong>
+                  <span class="math-inline" data-math="F:\ 0{,}02\ \longrightarrow\ 0{,}015"></span>
+                  <span class="math-inline" data-math="F^c:\ 0{,}98\ \longrightarrow\ 0{,}735"></span>
+                </div>
+                <div>
+                  <strong class="math-inline" data-math="N\quad(1/4)"></strong>
+                  <span class="math-inline" data-math="F:\ 0{,}10\ \longrightarrow\ 0{,}025"></span>
+                  <span class="math-inline" data-math="F^c:\ 0{,}90\ \longrightarrow\ 0{,}225"></span>
+                </div>
+              </div>
+            </figure>
+
+            <div class="result result-long shifts-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(F)=0{,}04" data-math-display></strong>
+              <p data-shifts-2023-language="es">La probabilidad de obtener una pieza defectuosa es del <span class="math-inline math-nowrap" data-math="4\%"></span>.</p>
+              <p data-shifts-2023-language="eu" hidden>Pieza akastuna lortzeko probabilitatea <span class="math-inline math-nowrap" data-math="4\%"></span> da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="shifts-2023-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-shifts-2023-language="es">Ahora sabemos que la pieza es defectuosa, así que descartamos los dos caminos que terminan en <span class="math-inline math-nowrap" data-math="F^c"></span>. El nuevo total de referencia es <span class="math-inline math-nowrap" data-math="P(F)=0{,}04"></span>.</p>
+            <p class="idea-text" data-shifts-2023-language="eu" hidden>Orain pieza akastuna dela dakigu; beraz, <span class="math-inline math-nowrap" data-math="F^c"></span>-n amaitzen diren bi bideak baztertzen ditugu. Erreferentziazko guztizko berria <span class="math-inline math-nowrap" data-math="P(F)=0{,}04"></span> da.</p>
+            <p class="idea-text" data-shifts-2023-language="es">Dentro de las piezas defectuosas, el camino favorable es «turno diurno y defectuosa», cuya probabilidad es <span class="math-inline math-nowrap" data-math="0{,}015"></span>. Bayes compara ese camino favorable con todas las piezas defectuosas.</p>
+            <p class="idea-text" data-shifts-2023-language="eu" hidden>Pieza akastunen artean, aldeko bidea «eguneko txanda eta akastuna» da, eta haren probabilitatea <span class="math-inline math-nowrap" data-math="0{,}015"></span> da. Bayesen formulak aldeko bide hori pieza akastun guztiekin alderatzen du.</p>
+            <div class="essential-geometry shifts-2023-idea">
+              <div class="math-display" data-math="P(D\cap F)=0{,}015,\qquad P(F)=0{,}04" data-math-display></div>
+              <div class="math-display" data-math="P(D\mid F)=\frac{P(D\cap F)}{P(F)}" data-math-display></div>
+              <strong class="math-display" data-math="P(D\mid F)=\frac38=0{,}375" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Probabilidad de que proceda de un turno diurno</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Probabilidad condicionada</h3>
+                <p data-shifts-2023-language="es">Al saber que ha ocurrido <span class="math-inline math-nowrap" data-math="F"></span>, el espacio de referencia queda reducido a las piezas defectuosas. Comparamos la parte que también cumple <span class="math-inline math-nowrap" data-math="D"></span> con todo <span class="math-inline math-nowrap" data-math="F"></span>.</p>
+                <p data-shifts-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="F"></span> gertatu dela dakigunean, erreferentzia-espazioa pieza akastunetara murrizten da. <span class="math-inline math-nowrap" data-math="D"></span> ere betetzen duen zatia <span class="math-inline math-nowrap" data-math="F"></span> osoarekin alderatzen dugu.</p>
+                <div class="theory-formula math-display" data-math="P(D\mid F)=\frac{P(D\cap F)}{P(F)}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Teorema de Bayes</h3>
+                <p data-shifts-2023-language="es">El numerador se obtiene siguiendo el camino favorable. El denominador reúne, mediante la probabilidad total, todos los caminos compatibles con la condición.</p>
+                <p data-shifts-2023-language="eu" hidden>Zenbakitzailea aldeko bidea jarraituz lortzen da. Izendatzaileak baldintzarekin bateragarriak diren bide guztiak biltzen ditu probabilitate osoaren bidez.</p>
+                <div class="theory-formula math-display" data-math="P(D\mid F)=\frac{P(D)P(F\mid D)}{P(F)}" data-math-display></div>
+                <div class="theory-formula math-display" data-math="\begin{aligned}P(F)={}&P(D)P(F\mid D)\\&+P(N)P(F\mid N)\end{aligned}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. El orden de la condición importa</h3>
+                <p data-shifts-2023-language="es"><span class="math-inline math-nowrap" data-math="P(F\mid D)=0{,}02"></span> es un dato del enunciado. La pregunta pide la dirección contraria, <span class="math-inline math-nowrap" data-math="P(D\mid F)"></span>, que no tiene por qué valer lo mismo.</p>
+                <p data-shifts-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="P(F\mid D)=0{,}02"></span> enuntziatuko datua da. Galderak kontrako noranzkoa eskatzen du, <span class="math-inline math-nowrap" data-math="P(D\mid F)"></span>, eta ez du zertan balio bera izan.</p>
+                <div class="theory-formula math-display" data-math="P(D\mid F)\ne P(F\mid D)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Traducimos la pregunta</h3>
+                  <p data-shifts-2023-language="es">Queremos saber si el turno fue diurno sabiendo que la pieza es defectuosa. La información conocida se escribe después de la barra.</p>
+                  <p data-shifts-2023-language="eu" hidden>Pieza akastuna dela jakinda txanda egunekoa izan den jakin nahi dugu. Ezagutzen dugun informazioa barraren ondoren idazten da.</p>
+                  <div class="shifts-2023-work">
+                    <strong class="math-display" data-math="P(D\mid F)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos el camino favorable</h3>
+                  <p data-shifts-2023-language="es">La pieza debe proceder de un turno diurno y, además, ser defectuosa.</p>
+                  <p data-shifts-2023-language="eu" hidden>Piezak eguneko txanda batetik etorri behar du eta, gainera, akastuna izan.</p>
+                  <div class="shifts-2023-work">
+                    <div class="math-display" data-math="P(D\cap F)=P(D)P(F\mid D)" data-math-display></div>
+                    <strong class="math-display" data-math="P(D\cap F)=\frac34\cdot0{,}02=0{,}015" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Tomamos el total de piezas defectuosas</h3>
+                  <p data-shifts-2023-language="es">El apartado anterior reúne los dos posibles orígenes de una pieza defectuosa.</p>
+                  <p data-shifts-2023-language="eu" hidden>Aurreko atalak pieza akastun baten bi jatorri posibleak biltzen ditu.</p>
+                  <div class="shifts-2023-work">
+                    <strong class="math-display" data-math="P(F)=0{,}04" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Aplicamos Bayes y simplificamos</h3>
+                  <div class="shifts-2023-work">
+                    <div class="math-display" data-math="P(D\mid F)=\frac{0{,}015}{0{,}04}" data-math-display></div>
+                    <div class="math-display" data-math="P(D\mid F)=\frac{15}{40}=\frac38" data-math-display></div>
+                    <strong class="math-display" data-math="P(D\mid F)=0{,}375=37{,}5\%" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry shifts-2023-essential">
+              <div class="math-display" data-math="P(D\cap F)=\frac34\cdot0{,}02=0{,}015" data-math-display></div>
+              <div class="math-display" data-math="P(F)=0{,}04" data-math-display></div>
+              <div class="math-display" data-math="P(D\mid F)=\frac{P(D\cap F)}{P(F)}" data-math-display></div>
+              <strong class="math-display" data-math="P(D\mid F)=\frac{0{,}015}{0{,}04}=\frac38=0{,}375" data-math-display></strong>
+            </div>
+
+            <figure class="shifts-2023-bayes-figure" aria-label="Composición de las piezas defectuosas según el tipo de turno">
+              <figcaption data-shifts-2023-language="es">Entre las piezas defectuosas, <span class="math-inline math-nowrap" data-math="0{,}015"></span> proceden de los turnos diurnos y <span class="math-inline math-nowrap" data-math="0{,}025"></span> del nocturno.</figcaption>
+              <figcaption data-shifts-2023-language="eu" hidden>Pieza akastunen artean, <span class="math-inline math-nowrap" data-math="0{,}015"></span> eguneko txandetatik datoz eta <span class="math-inline math-nowrap" data-math="0{,}025"></span> gaueko txandatik.</figcaption>
+              <div class="shifts-2023-bayes-bar" role="img" aria-label="Barra dividida entre 37,5 por ciento de turnos diurnos y 62,5 por ciento de turno nocturno">
+                <span class="shifts-bayes-day"></span>
+                <span class="shifts-bayes-night"></span>
+              </div>
+              <div class="shifts-2023-bayes-legend">
+                <span><i class="shifts-bayes-day"></i><span class="math-inline" data-math="D\cap F:\ 0{,}015\quad(37{,}5\%)"></span></span>
+                <span><i class="shifts-bayes-night"></i><span class="math-inline" data-math="N\cap F:\ 0{,}025\quad(62{,}5\%)"></span></span>
+              </div>
+            </figure>
+
+            <div class="result result-long shifts-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(D\mid F)=\frac38=0{,}375" data-math-display></strong>
+              <p data-shifts-2023-language="es">La probabilidad pedida es del <span class="math-inline math-nowrap" data-math="37{,}5\%"></span>.</p>
+              <p data-shifts-2023-language="eu" hidden>Eskatutako probabilitatea <span class="math-inline math-nowrap" data-math="37{,}5\%"></span> da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

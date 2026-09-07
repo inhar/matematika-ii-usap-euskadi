@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zuzen parametrikoa eta perpendikularra · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-recta-perpendicular-punto-2023-ordinaria-idiomas.js?v=2023-ord-a2a" defer></script>
+  <script src="ejercicio-recta-perpendicular-punto-2023-ordinaria-grafico.js?v=2023-ord-a2a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Ejercicio A2</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Geometría en el espacio · Rectas perpendiculares · 2023</p>
+        <h1 class="perpendicular-2023-title">Recta paramétrica y perpendicular desde un punto</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-perpendicular-2023-language="es">Sea <span class="math-inline math-nowrap" data-math="r"></span> la recta definida por las ecuaciones cartesianas:</p>
+        <p data-perpendicular-2023-language="eu" hidden>Izan bedi <span class="math-inline math-nowrap" data-math="r"></span> ekuazio kartesiar hauek definitutako zuzena:</p>
+        <div class="perpendicular-2023-statement math-display" data-math="r\equiv\begin{cases}x+y-z=1\\2x+2y+z=2.\end{cases}" data-math-display></div>
+        <div class="perpendicular-2023-parts">
+          <p data-perpendicular-2023-language="es"><strong>a)</strong> Calcula las ecuaciones paramétricas de la recta <span class="math-inline math-nowrap" data-math="r"></span>.</p>
+          <p data-perpendicular-2023-language="eu" hidden><strong>a)</strong> Kalkulatu <span class="math-inline math-nowrap" data-math="r"></span> zuzenaren ekuazio parametrikoak.</p>
+          <p data-perpendicular-2023-language="es"><strong>b)</strong> Calcula las ecuaciones paramétricas de la recta que corta perpendicularmente a <span class="math-inline math-nowrap" data-math="r"></span> y pasa por el punto exterior <span class="math-inline math-nowrap" data-math="P(2,1,0)"></span>.</p>
+          <p data-perpendicular-2023-language="eu" hidden><strong>b)</strong> Kalkulatu <span class="math-inline math-nowrap" data-math="r"></span> zuzena perpendikularki ebakitzen duen eta kanpoko <span class="math-inline math-nowrap" data-math="P(2,1,0)"></span> puntutik igarotzen den zuzenaren ekuazio parametrikoak.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio A2</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-perpendicular-2023-language="es">Las dos ecuaciones cartesianas describen dos planos cuya intersección es <span class="math-inline math-nowrap" data-math="r"></span>. Al eliminar entre ellas obtenemos <span class="math-inline math-nowrap" data-math="z=0"></span> y <span class="math-inline math-nowrap" data-math="x+y=1"></span>. Dejando <span class="math-inline math-nowrap" data-math="x=t"></span>, aparece directamente una parametrización y el vector director <span class="math-inline math-nowrap" data-math="v_r=(1,-1,0)"></span>.</p>
+            <p class="idea-text" data-perpendicular-2023-language="eu">Bi ekuazio kartesiarrek bi plano deskribatzen dituzte, eta haien ebakidura <span class="math-inline math-nowrap" data-math="r"></span> zuzena da. Ekuazioen artean ezabatuz, <span class="math-inline math-nowrap" data-math="z=0"></span> eta <span class="math-inline math-nowrap" data-math="x+y=1"></span> lortzen ditugu. <span class="math-inline math-nowrap" data-math="x=t"></span> utzita, parametrizazioa eta <span class="math-inline math-nowrap" data-math="v_r=(1,-1,0)"></span> norabide-bektorea zuzenean agertzen dira.</p>
+            <p class="idea-text" data-perpendicular-2023-language="es">Para la perpendicular, representamos su punto de corte con <span class="math-inline math-nowrap" data-math="r"></span> como <span class="math-inline math-nowrap" data-math="Q(t)"></span>. El vector <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}"></span> debe ser perpendicular a <span class="math-inline math-nowrap" data-math="v_r"></span>; el producto escalar nulo determina <span class="math-inline math-nowrap" data-math="Q=(1,0,0)"></span> y, con él, la dirección de la nueva recta.</p>
+            <p class="idea-text" data-perpendicular-2023-language="eu">Perpendikularrerako, <span class="math-inline math-nowrap" data-math="r"></span> zuzenarekiko ebakidura-puntua <span class="math-inline math-nowrap" data-math="Q(t)"></span> gisa adierazten dugu. <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}"></span> bektoreak <span class="math-inline math-nowrap" data-math="v_r"></span>-rekiko perpendikularra izan behar du; biderkadura eskalar nuluak <span class="math-inline math-nowrap" data-math="Q=(1,0,0)"></span> zehazten du, eta puntu horrek zuzen berriaren norabidea ematen du.</p>
+            <div class="essential-geometry perpendicular-2023-idea">
+              <div class="math-display" data-math="r\colon (x,y,z)=(t,1-t,0)" data-math-display></div>
+              <div class="math-display" data-math="\overrightarrow{PQ}\cdot v_r=0\quad\Longrightarrow\quad Q=(1,0,0)" data-math-display></div>
+              <strong class="math-display" data-math="s\colon (x,y,z)=(2,1,0)+\lambda(1,1,0)" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio A2</p>
+            <h2 id="solution-title">De ecuaciones cartesianas a dos rectas perpendiculares</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Intersección de dos planos</h3>
+                <p>Dos ecuaciones lineales independientes con tres incógnitas dejan una variable libre. Su conjunto de soluciones es una recta, y la variable libre actúa como parámetro.</p>
+                <div class="theory-formula math-display" data-math="\begin{cases}\pi_1\\\pi_2\end{cases}\quad\Longrightarrow\quad (x,y,z)=A+t\,v_r" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Ecuación paramétrica de una recta</h3>
+                <p>Una recta queda determinada por uno de sus puntos y un vector director no nulo. Cada valor del parámetro produce uno de sus puntos.</p>
+                <div class="theory-formula math-display" data-math="r\colon X=A+t\,v_r" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Perpendicularidad de vectores</h3>
+                <p>Dos vectores no nulos son perpendiculares exactamente cuando su producto escalar es cero.</p>
+                <div class="theory-formula math-display" data-math="u\perp v\quad\Longleftrightarrow\quad u\cdot v=0" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Pie de la perpendicular</h3>
+                <p data-perpendicular-2023-language="es">El punto buscado <span class="math-inline math-nowrap" data-math="Q"></span> debe cumplir dos condiciones a la vez: pertenecer a la recta dada y hacer que el segmento que lo une con <span class="math-inline math-nowrap" data-math="P"></span> sea perpendicular a ella.</p>
+                <p data-perpendicular-2023-language="eu" hidden>Bilatutako <span class="math-inline math-nowrap" data-math="Q"></span> puntuak bi baldintza bete behar ditu aldi berean: emandako zuzenean egotea eta <span class="math-inline math-nowrap" data-math="P"></span> puntuarekin lotzen duen segmentua zuzenarekiko perpendikularra izatea.</p>
+                <div class="theory-formula math-display" data-math="Q\in r,\qquad \overrightarrow{PQ}\cdot v_r=0" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Eliminamos una incógnita entre las dos ecuaciones</h3>
+                  <p data-perpendicular-2023-language="es">Restamos a la segunda ecuación el doble de la primera. Así desaparecen simultáneamente <span class="math-inline math-nowrap" data-math="x"></span> e <span class="math-inline math-nowrap" data-math="y"></span>.</p>
+                  <p data-perpendicular-2023-language="eu" hidden>Bigarren ekuazioari lehenengoaren bikoitza kentzen diogu. Horrela, <span class="math-inline math-nowrap" data-math="x"></span> eta <span class="math-inline math-nowrap" data-math="y"></span> aldi berean desagertzen dira.</p>
+                  <div class="perpendicular-2023-work">
+                    <div class="math-display" data-math="(2x+2y+z)-2(x+y-z)=2-2" data-math-display></div>
+                    <div class="math-display" data-math="2x+2y+z-2x-2y+2z=0" data-math-display></div>
+                    <strong class="math-display" data-math="3z=0\quad\Longrightarrow\quad z=0" data-math-display></strong>
+                  </div>
+                  <p data-perpendicular-2023-language="es">Sustituimos <span class="math-inline math-nowrap" data-math="z=0"></span> en la primera ecuación.</p>
+                  <p data-perpendicular-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="z=0"></span> lehen ekuazioan ordezkatzen dugu.</p>
+                  <div class="perpendicular-2023-work">
+                    <div class="math-display" data-math="x+y-0=1" data-math-display></div>
+                    <strong class="math-display" data-math="x+y=1" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Parametrizamos la recta <span class="math-inline math-nowrap" data-math="r"></span></h3>
+                  <p data-perpendicular-2023-language="es">Tenemos dos relaciones para tres coordenadas, de modo que una de ellas es libre. Elegimos <span class="math-inline math-nowrap" data-math="x=t"></span> y expresamos las demás en función de <span class="math-inline math-nowrap" data-math="t"></span>.</p>
+                  <p data-perpendicular-2023-language="eu" hidden>Hiru koordenatuetarako bi erlazio ditugu; beraz, horietako bat askea da. <span class="math-inline math-nowrap" data-math="x=t"></span> aukeratu eta gainerakoak <span class="math-inline math-nowrap" data-math="t"></span>-ren arabera adierazten ditugu.</p>
+                  <div class="perpendicular-2023-work">
+                    <div class="math-display" data-math="x=t,\qquad y=1-t,\qquad z=0" data-math-display></div>
+                    <div class="math-display" data-math="r\colon (x,y,z)=(0,1,0)+t(1,-1,0)" data-math-display></div>
+                    <strong class="math-display" data-math="v_r=(1,-1,0)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Representamos el punto de corte sobre <span class="math-inline math-nowrap" data-math="r"></span></h3>
+                  <p data-perpendicular-2023-language="es">Llamamos <span class="math-inline math-nowrap" data-math="Q"></span> al punto donde la recta buscada corta a <span class="math-inline math-nowrap" data-math="r"></span>. Como todavía no conocemos su posición, conservamos el parámetro.</p>
+                  <p data-perpendicular-2023-language="eu" hidden>Bilatutako zuzenak <span class="math-inline math-nowrap" data-math="r"></span> zuzena ebakitzen duen puntuari <span class="math-inline math-nowrap" data-math="Q"></span> deitzen diogu. Haren kokapena oraindik ez dakigunez, parametroa mantentzen dugu.</p>
+                  <div class="perpendicular-2023-work">
+                    <strong class="math-display" data-math="Q(t)=(t,1-t,0)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Imponemos la perpendicularidad</h3>
+                  <p data-perpendicular-2023-language="es">Construimos el vector que va desde <span class="math-inline math-nowrap" data-math="P(2,1,0)"></span> hasta <span class="math-inline math-nowrap" data-math="Q(t)"></span> y hacemos nulo su producto escalar con <span class="math-inline math-nowrap" data-math="v_r"></span>.</p>
+                  <p data-perpendicular-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="P(2,1,0)"></span> puntutik <span class="math-inline math-nowrap" data-math="Q(t)"></span> puntura doan bektorea eraikitzen dugu, eta <span class="math-inline math-nowrap" data-math="v_r"></span>-rekin duen biderkadura eskalarra zero egiten dugu.</p>
+                  <div class="perpendicular-2023-work">
+                    <div class="math-display" data-math="\overrightarrow{PQ}=Q-P=(t-2,-t,0)" data-math-display></div>
+                    <div class="math-display" data-math="(t-2,-t,0)\cdot(1,-1,0)=0" data-math-display></div>
+                    <div class="math-display" data-math="t-2+t=0" data-math-display></div>
+                    <strong class="math-display" data-math="2t-2=0\quad\Longrightarrow\quad t=1" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos el punto <span class="math-inline math-nowrap" data-math="Q"></span> y la nueva dirección</h3>
+                  <p data-perpendicular-2023-language="es">Sustituimos <span class="math-inline math-nowrap" data-math="t=1"></span> en la recta y tomamos como dirección el vector que une <span class="math-inline math-nowrap" data-math="Q"></span> con <span class="math-inline math-nowrap" data-math="P"></span>.</p>
+                  <p data-perpendicular-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="t=1"></span> zuzenean ordezkatzen dugu, eta <span class="math-inline math-nowrap" data-math="Q"></span> eta <span class="math-inline math-nowrap" data-math="P"></span> lotzen dituen bektorea norabidetzat hartzen dugu.</p>
+                  <div class="perpendicular-2023-work">
+                    <div class="math-display" data-math="Q=(1,1-1,0)=(1,0,0)" data-math-display></div>
+                    <div class="math-display" data-math="\overrightarrow{QP}=P-Q=(2,1,0)-(1,0,0)" data-math-display></div>
+                    <strong class="math-display" data-math="\overrightarrow{QP}=(1,1,0)" data-math-display></strong>
+                  </div>
+                  <p data-perpendicular-2023-language="es">Comprobamos que la dirección obtenida es perpendicular a la de <span class="math-inline math-nowrap" data-math="r"></span>.</p>
+                  <p data-perpendicular-2023-language="eu" hidden>Lortutako norabidea <span class="math-inline math-nowrap" data-math="r"></span> zuzenarenarekiko perpendikularra dela egiaztatzen dugu.</p>
+                  <div class="perpendicular-2023-work">
+                    <strong class="math-display" data-math="(1,1,0)\cdot(1,-1,0)=1-1=0" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Escribimos y comprobamos la recta pedida</h3>
+                  <p data-perpendicular-2023-language="es">La recta <span class="math-inline math-nowrap" data-math="s"></span> pasa por <span class="math-inline math-nowrap" data-math="P"></span> y tiene dirección <span class="math-inline math-nowrap" data-math="(1,1,0)"></span>. Usamos un parámetro nuevo, <span class="math-inline math-nowrap" data-math="\lambda"></span>.</p>
+                  <p data-perpendicular-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="s"></span> zuzena <span class="math-inline math-nowrap" data-math="P"></span> puntutik igarotzen da eta <span class="math-inline math-nowrap" data-math="(1,1,0)"></span> norabidea du. Parametro berri bat erabiltzen dugu: <span class="math-inline math-nowrap" data-math="\lambda"></span>.</p>
+                  <div class="perpendicular-2023-work">
+                    <div class="math-display" data-math="s\colon (x,y,z)=(2,1,0)+\lambda(1,1,0)" data-math-display></div>
+                    <strong class="math-display perpendicular-2023-system" data-math="s\colon\begin{cases}x=2+\lambda\\y=1+\lambda\\z=0.\end{cases}" data-math-display></strong>
+                  </div>
+                  <p data-perpendicular-2023-language="es">Para <span class="math-inline math-nowrap" data-math="\lambda=-1"></span> obtenemos <span class="math-inline math-nowrap" data-math="Q=(1,0,0)"></span>, que pertenece a <span class="math-inline math-nowrap" data-math="r"></span>. Por tanto, las dos rectas se cortan en el punto calculado.</p>
+                  <p data-perpendicular-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="\lambda=-1"></span> denean, <span class="math-inline math-nowrap" data-math="Q=(1,0,0)"></span> lortzen dugu, eta puntu hori <span class="math-inline math-nowrap" data-math="r"></span> zuzenean dago. Beraz, bi zuzenak kalkulatutako puntuan ebakitzen dira.</p>
+
+                  <figure class="perpendicular-2023-figure" aria-label="Rectas r y s perpendiculares en el plano z igual a cero">
+                    <figcaption data-perpendicular-2023-language="es">Toda la figura está en el plano <span class="math-inline math-nowrap" data-math="z=0"></span>. El punto <span class="math-inline math-nowrap" data-math="Q"></span> es el pie de la perpendicular trazada desde <span class="math-inline math-nowrap" data-math="P"></span>.</figcaption>
+                    <figcaption data-perpendicular-2023-language="eu" hidden>Irudi osoa <span class="math-inline math-nowrap" data-math="z=0"></span> planoan dago. <span class="math-inline math-nowrap" data-math="Q"></span> puntua <span class="math-inline math-nowrap" data-math="P"></span> puntutik trazatutako perpendikularraren oina da.</figcaption>
+                    <div id="perpendicular-2023-board" class="jxgbox perpendicular-2023-board" role="img" aria-label="Rectas r y s perpendiculares, punto exterior P y pie Q"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry perpendicular-2023-essential">
+              <div class="math-display" data-math="E_2-2E_1\quad\Longrightarrow\quad z=0,\qquad x+y=1" data-math-display></div>
+              <div class="math-display" data-math="r\colon (x,y,z)=(t,1-t,0),\qquad v_r=(1,-1,0)" data-math-display></div>
+              <div class="math-display" data-math="Q(t)=(t,1-t,0)" data-math-display></div>
+              <div class="math-display" data-math="\overrightarrow{PQ}\cdot v_r=0\quad\Longrightarrow\quad t=1,\quad Q=(1,0,0)" data-math-display></div>
+              <strong class="math-display" data-math="s\colon (x,y,z)=(2,1,0)+\lambda(1,1,0)" data-math-display></strong>
+            </div>
+
+            <div class="result result-long geometry-result perpendicular-2023-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="math-display perpendicular-2023-system" data-math="r\colon\begin{cases}x=t\\y=1-t\\z=0,\end{cases}" data-math-display></span>
+                <span class="math-display perpendicular-2023-system" data-math="s\colon\begin{cases}x=2+\lambda\\y=1+\lambda\\z=0.\end{cases}" data-math-display></span>
+              </strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

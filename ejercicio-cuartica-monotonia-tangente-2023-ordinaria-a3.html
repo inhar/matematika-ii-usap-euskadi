@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funtzio kuartiko baten aldakuntza eta ukitzailea · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-cuartica-monotonia-tangente-2023-ordinaria-idiomas.js?v=2023-ord-a3a" defer></script>
+  <script src="ejercicio-cuartica-monotonia-tangente-2023-ordinaria-grafico.js?v=2023-ord-a3a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Ejercicio A3</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Monotonía, extremos y tangente · 2023</p>
+        <h1 class="quartic-2023-title">Estudio de una función cuártica y su recta tangente</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-quartic-2023-language="es">Sea la función</p>
+        <p data-quartic-2023-language="eu" hidden>Har dezagun funtzio hau:</p>
+        <div class="statement-function quartic-2023-statement math-display" data-math="f(x)=x^4-2x^3+x^2" data-math-display></div>
+        <p data-quartic-2023-language="es">Calcula sus intervalos de crecimiento y decrecimiento y encuentra sus máximos y mínimos relativos. Calcula la recta tangente a la gráfica de <span class="math-inline math-nowrap" data-math="f"></span> en el punto de abscisa <span class="math-inline math-nowrap" data-math="x=2"></span>.</p>
+        <p data-quartic-2023-language="eu" hidden>Kalkulatu haren gorakortasun- eta beherakortasun-tarteak, eta aurkitu maximo eta minimo erlatiboak. Kalkulatu <span class="math-inline math-nowrap" data-math="f"></span>-ren grafikoaren zuzen ukitzailea <span class="math-inline math-nowrap" data-math="x=2"></span> abzisako puntuan.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio A3</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-quartic-2023-language="es">La primera derivada contiene toda la información necesaria para estudiar la variación. La calculamos, la factorizamos y resolvemos <span class="math-inline math-nowrap" data-math="f'(x)=0"></span>. Los tres ceros obtenidos dividen la recta real en cuatro intervalos; el signo de la derivada en cada uno nos dirá dónde crece o decrece la función.</p>
+            <p class="idea-text" data-quartic-2023-language="eu" hidden>Lehenengo deribatuak aldakuntza aztertzeko behar dugun informazio guztia dauka. Kalkulatu, faktorizatu eta <span class="math-inline math-nowrap" data-math="f'(x)=0"></span> ebazten dugu. Lortutako hiru zeroek lau tartetan banatzen dute zuzen erreala; tarte bakoitzean deribatuaren zeinuak funtzioa non den gorakorra edo beherakorra esango digu.</p>
+            <p class="idea-text" data-quartic-2023-language="es">Para la tangente necesitamos el punto de contacto y su pendiente. Ambos salen de la misma función: el punto es <span class="math-inline math-nowrap" data-math="(2,f(2))"></span> y la pendiente es <span class="math-inline math-nowrap" data-math="f'(2)"></span>. Después aplicamos la ecuación punto-pendiente.</p>
+            <p class="idea-text" data-quartic-2023-language="eu" hidden>Ukitzailea lortzeko ukitze-puntua eta malda behar ditugu. Biak funtzio beretik datoz: puntua <span class="math-inline math-nowrap" data-math="(2,f(2))"></span> da eta malda <span class="math-inline math-nowrap" data-math="f'(2)"></span>. Ondoren, puntu-malda ekuazioa aplikatzen dugu.</p>
+            <div class="essential-geometry quartic-2023-essential">
+              <div class="math-display" data-math="f'(x)=2x(2x-1)(x-1)" data-math-display></div>
+              <div class="math-display" data-math="f'(x)=0\Longleftrightarrow x=0,\ \frac12,\ 1" data-math-display></div>
+              <strong class="math-display" data-math-es="\text{Mínimos: }(0,0)\text{ y }(1,0);\qquad \text{máximo: }\left(\frac12,\frac1{16}\right)" data-math-eu="\text{Minimoak: }(0,0)\text{ eta }(1,0);\qquad \text{maximoa: }\left(\frac12,\frac1{16}\right)" data-math-display></strong>
+              <strong class="math-display" data-math="y=12x-20" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio A3</p>
+            <h2 id="solution-title">Derivada, monotonía, extremos y tangente</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Derivada y monotonía</h3>
+                <p data-quartic-2023-language="es">En un intervalo en el que la derivada es positiva, la función crece; si la derivada es negativa, decrece. Los ceros de la derivada separan los intervalos cuyo signo debemos estudiar.</p>
+                <p data-quartic-2023-language="eu" hidden>Deribatua positiboa den tarte batean funtzioa gorakorra da; deribatua negatiboa bada, beherakorra. Deribatuaren zeroek aztertu beharreko zeinu-tarteak bereizten dituzte.</p>
+                <div class="theory-formula math-display" data-math-es="f'(x)>0\Rightarrow f\text{ crece}" data-math-eu="f'(x)>0\Rightarrow f\text{ gorakorra da}" data-math-display></div>
+                <div class="theory-formula math-display" data-math-es="f'(x)<0\Rightarrow f\text{ decrece}" data-math-eu="f'(x)<0\Rightarrow f\text{ beherakorra da}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Clasificación de los extremos</h3>
+                <p data-quartic-2023-language="es">Un cambio de signo de negativa a positiva produce un mínimo local. Un cambio de positiva a negativa produce un máximo local.</p>
+                <p data-quartic-2023-language="eu" hidden>Zeinu negatibotik positibora aldatzeak minimo lokal bat ematen du. Positibotik negatibora aldatzeak maximo lokal bat ematen du.</p>
+                <div class="theory-formula math-display" data-math-es="-\to+\Rightarrow\text{ mínimo},\qquad +\to-\Rightarrow\text{ máximo}" data-math-eu="-\to+\Rightarrow\text{ minimoa},\qquad +\to-\Rightarrow\text{ maximoa}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Ecuación de la recta tangente</h3>
+                <p data-quartic-2023-language="es">La derivada en <span class="math-inline math-nowrap" data-math="x=a"></span> es la pendiente de la tangente. La recta pasa por el punto <span class="math-inline math-nowrap" data-math="(a,f(a))"></span>.</p>
+                <p data-quartic-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=a"></span> puntuko deribatua ukitzailearen malda da. Zuzena <span class="math-inline math-nowrap" data-math="(a,f(a))"></span> puntutik igarotzen da.</p>
+                <div class="theory-formula math-display" data-math="y-f(a)=f'(a)(x-a)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Reescribimos la función</h3>
+                  <p data-quartic-2023-language="es">Aunque derivaremos la expresión desarrollada, la forma factorizada permite ver que la función nunca es negativa y facilita el cálculo de algunos valores.</p>
+                  <p data-quartic-2023-language="eu" hidden>Adierazpen garatua deribatuko badugu ere, forma faktorizatuak funtzioa inoiz negatiboa ez dela erakusten du eta balio batzuk kalkulatzea errazten du.</p>
+                  <div class="quartic-2023-work">
+                    <div class="math-display" data-math="f(x)=x^2(x^2-2x+1)" data-math-display></div>
+                    <strong class="math-display" data-math="f(x)=x^2(x-1)^2\ge 0" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos y factorizamos la derivada</h3>
+                  <p data-quartic-2023-language="es">Derivamos término a término. Después extraemos el factor común y factorizamos el trinomio de segundo grado.</p>
+                  <p data-quartic-2023-language="eu" hidden>Gaiz gai deribatzen dugu. Ondoren, faktore komuna ateratzen dugu eta bigarren mailako trinomioa faktorizatzen dugu.</p>
+                  <div class="quartic-2023-work">
+                    <div class="math-display" data-math="f'(x)=4x^3-6x^2+2x" data-math-display></div>
+                    <div class="math-display" data-math="f'(x)=2x(2x^2-3x+1)" data-math-display></div>
+                    <strong class="math-display" data-math="f'(x)=2x(2x-1)(x-1)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos los puntos críticos</h3>
+                  <p data-quartic-2023-language="es">Un producto es cero cuando alguno de sus factores es cero. Resolvemos cada ecuación lineal por separado.</p>
+                  <p data-quartic-2023-language="eu" hidden>Biderkadura bat zero da haren faktoreren bat zero denean. Ekuazio lineal bakoitza bereiz ebazten dugu.</p>
+                  <div class="quartic-2023-work">
+                    <div class="math-display" data-math="2x(2x-1)(x-1)=0" data-math-display></div>
+                    <div class="math-display" data-math="x=0,\qquad 2x-1=0,\qquad x-1=0" data-math-display></div>
+                    <strong class="math-display" data-math="x=0,\qquad x=\frac12,\qquad x=1" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Estudiamos el signo de la derivada</h3>
+                  <p data-quartic-2023-language="es">Los tres puntos críticos separan cuatro intervalos. En cada uno combinamos los signos de <span class="math-inline math-nowrap" data-math="x"></span>, <span class="math-inline math-nowrap" data-math="2x-1"></span> y <span class="math-inline math-nowrap" data-math="x-1"></span>.</p>
+                  <p data-quartic-2023-language="eu" hidden>Hiru puntu kritikoek lau tarte bereizten dituzte. Tarte bakoitzean <span class="math-inline math-nowrap" data-math="x"></span>, <span class="math-inline math-nowrap" data-math="2x-1"></span> eta <span class="math-inline math-nowrap" data-math="x-1"></span> faktoreen zeinuak konbinatzen ditugu.</p>
+                  <div class="quartic-2023-signs">
+                    <div>
+                      <span class="math-inline" data-math="(-\infty,0)"></span>
+                      <strong class="math-inline" data-math="(-)(-)(-)\Rightarrow f'(x)<0\Rightarrow f\searrow"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="\left(0,\frac12\right)"></span>
+                      <strong class="math-inline" data-math="(+)(-)(-)\Rightarrow f'(x)>0\Rightarrow f\nearrow"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="\left(\frac12,1\right)"></span>
+                      <strong class="math-inline" data-math="(+)(+)(-)\Rightarrow f'(x)<0\Rightarrow f\searrow"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="(1,+\infty)"></span>
+                      <strong class="math-inline" data-math="(+)(+)(+)\Rightarrow f'(x)>0\Rightarrow f\nearrow"></strong>
+                    </div>
+                  </div>
+                  <div class="quartic-2023-work quartic-2023-monotony">
+                    <strong class="math-display" data-math-es="\text{Crece en }\left(0,\frac12\right)\cup(1,+\infty)" data-math-eu="\text{Gorakorra da }\left(0,\frac12\right)\cup(1,+\infty)\text{ tarteetan}" data-math-display></strong>
+                    <strong class="math-display" data-math-es="\text{Decrece en }(-\infty,0)\cup\left(\frac12,1\right)" data-math-eu="\text{Beherakorra da }(-\infty,0)\cup\left(\frac12,1\right)\text{ tarteetan}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Clasificamos y calculamos los extremos</h3>
+                  <p data-quartic-2023-language="es">Leemos el cambio de signo de la derivada en cada punto crítico y sustituimos su abscisa en la función.</p>
+                  <p data-quartic-2023-language="eu" hidden>Puntu kritiko bakoitzean deribatuaren zeinu-aldaketa irakurtzen dugu eta haren abzisa funtzioan ordezkatzen dugu.</p>
+                  <div class="quartic-2023-extrema">
+                    <div>
+                      <span class="math-inline" data-math="x=0\colon\ -\to+"></span>
+                      <strong class="math-inline" data-math="f(0)=0"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="x=\frac12\colon\ +\to-"></span>
+                      <strong class="math-inline" data-math="f\left(\frac12\right)=\frac1{16}"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="x=1\colon\ -\to+"></span>
+                      <strong class="math-inline" data-math="f(1)=0"></strong>
+                    </div>
+                  </div>
+                  <p data-quartic-2023-language="es">Por tanto, <span class="math-inline math-nowrap" data-math="(0,0)"></span> y <span class="math-inline math-nowrap" data-math="(1,0)"></span> son mínimos relativos. Además son absolutos porque <span class="math-inline math-nowrap" data-math="f(x)\ge0"></span>. El punto <span class="math-inline math-nowrap" data-math="\left(\frac12,\frac1{16}\right)"></span> es un máximo relativo.</p>
+                  <p data-quartic-2023-language="eu" hidden>Beraz, <span class="math-inline math-nowrap" data-math="(0,0)"></span> eta <span class="math-inline math-nowrap" data-math="(1,0)"></span> minimo erlatiboak dira. Gainera, absolutuak dira, <span class="math-inline math-nowrap" data-math="f(x)\ge0"></span> delako. <span class="math-inline math-nowrap" data-math="\left(\frac12,\frac1{16}\right)"></span> puntua maximo erlatiboa da.</p>
+
+                  <figure class="quartic-2023-figure quartic-2023-extrema-figure" aria-label="Gráfica ampliada de la función cuártica alrededor de sus tres extremos">
+                    <figcaption data-quartic-2023-language="es">Vista ampliada entre los dos mínimos. Esta escala permite distinguir el máximo relativo, cuyo valor es solo <span class="math-inline math-nowrap" data-math="\frac1{16}=0{,}0625"></span>.</figcaption>
+                    <figcaption data-quartic-2023-language="eu" hidden>Bi minimoen arteko ikuspegi handitua. Eskala horri esker, <span class="math-inline math-nowrap" data-math="\frac1{16}=0{,}0625"></span> balioa baino ez duen maximo erlatiboa bereiz daiteke.</figcaption>
+                    <div id="quartic-2023-extrema-board" class="jxgbox quartic-2023-board" role="img" aria-label="Función cuártica con mínimos en cero y uno y máximo en un medio"></div>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Calculamos la recta tangente en <span class="math-inline math-nowrap" data-math="x=2"></span></h3>
+                  <p data-quartic-2023-language="es">Primero obtenemos la ordenada del punto de contacto y la pendiente de la recta.</p>
+                  <p data-quartic-2023-language="eu" hidden>Lehenik, ukitze-puntuaren ordenatua eta zuzenaren malda lortzen ditugu.</p>
+                  <div class="quartic-2023-work">
+                    <div class="math-display" data-math="f(2)=2^4-2\cdot2^3+2^2=16-16+4=4" data-math-display></div>
+                    <div class="math-display" data-math="f'(2)=2\cdot2\,(2\cdot2-1)(2-1)=12" data-math-display></div>
+                    <div class="math-display" data-math="y-4=12(x-2)" data-math-display></div>
+                    <strong class="math-display" data-math="y=12x-20" data-math-display></strong>
+                  </div>
+
+                  <figure class="quartic-2023-figure quartic-2023-tangent-figure" aria-label="Gráfica de la función cuártica y su recta tangente en x igual a dos">
+                    <figcaption data-quartic-2023-language="es">La curva y la recta comparten el punto <span class="math-inline math-nowrap" data-math="(2,4)"></span> y la misma pendiente en él. Las guías discontinuas permiten leer rápidamente sus coordenadas.</figcaption>
+                    <figcaption data-quartic-2023-language="eu" hidden>Kurbak eta zuzenak <span class="math-inline math-nowrap" data-math="(2,4)"></span> puntua eta bertako malda bera dituzte. Gida etenek koordenatuak azkar irakurtzeko aukera ematen dute.</figcaption>
+                    <div id="quartic-2023-tangent-board" class="jxgbox quartic-2023-board" role="img" aria-label="Función cuártica y recta y igual a doce x menos veinte tangentes en el punto dos cuatro"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry quartic-2023-essential">
+              <div class="math-display" data-math="f'(x)=2x(2x-1)(x-1)" data-math-display></div>
+              <div class="math-display" data-math="f'(x)=0\Longleftrightarrow x=0,\ \frac12,\ 1" data-math-display></div>
+              <div class="quartic-2023-essential-signs">
+                <div class="math-display" data-math="(-\infty,0)\colon f'<0" data-math-display></div>
+                <div class="math-display" data-math="\left(0,\frac12\right)\colon f'>0" data-math-display></div>
+                <div class="math-display" data-math="\left(\frac12,1\right)\colon f'<0" data-math-display></div>
+                <div class="math-display" data-math="(1,+\infty)\colon f'>0" data-math-display></div>
+              </div>
+              <strong class="math-display" data-math-es="\text{Mínimos: }(0,0)\text{ y }(1,0)" data-math-eu="\text{Minimoak: }(0,0)\text{ eta }(1,0)" data-math-display></strong>
+              <strong class="math-display" data-math-es="\text{Máximo: }\left(\frac12,\frac1{16}\right)" data-math-eu="\text{Maximoa: }\left(\frac12,\frac1{16}\right)" data-math-display></strong>
+              <div class="math-display" data-math="f(2)=4,\qquad f'(2)=12" data-math-display></div>
+              <strong class="math-display" data-math="y=12x-20" data-math-display></strong>
+            </div>
+
+            <div class="result result-long quartic-2023-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="result-unit" data-quartic-2023-language="es">Crece en <span class="math-inline math-nowrap" data-math="\left(0,\frac12\right)\cup(1,+\infty)"></span>.</span>
+                <span class="result-unit" data-quartic-2023-language="eu" hidden>Gorakorra da <span class="math-inline math-nowrap" data-math="\left(0,\frac12\right)\cup(1,+\infty)"></span> tarteetan.</span>
+                <span class="result-unit" data-quartic-2023-language="es">Decrece en <span class="math-inline math-nowrap" data-math="(-\infty,0)\cup\left(\frac12,1\right)"></span>.</span>
+                <span class="result-unit" data-quartic-2023-language="eu" hidden>Beherakorra da <span class="math-inline math-nowrap" data-math="(-\infty,0)\cup\left(\frac12,1\right)"></span> tarteetan.</span>
+                <span class="result-unit" data-quartic-2023-language="es">Mínimos en <span class="math-inline math-nowrap" data-math="(0,0)"></span> y <span class="math-inline math-nowrap" data-math="(1,0)"></span>; máximo en <span class="math-inline math-nowrap" data-math="\left(\frac12,\frac1{16}\right)"></span>.</span>
+                <span class="result-unit" data-quartic-2023-language="eu" hidden>Minimoak <span class="math-inline math-nowrap" data-math="(0,0)"></span> eta <span class="math-inline math-nowrap" data-math="(1,0)"></span> puntuetan; maximoa <span class="math-inline math-nowrap" data-math="\left(\frac12,\frac1{16}\right)"></span> puntuan.</span>
+                <span class="result-unit" data-quartic-2023-language="es">Tangente: <span class="math-inline math-nowrap" data-math="y=12x-20"></span>.</span>
+                <span class="result-unit" data-quartic-2023-language="eu" hidden>Ukitzailea: <span class="math-inline math-nowrap" data-math="y=12x-20"></span>.</span>
+              </strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

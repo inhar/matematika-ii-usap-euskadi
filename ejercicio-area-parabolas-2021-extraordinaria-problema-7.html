@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bi parabolaren arteko azalera · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css?v=2021-extra-p7">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-area-parabolas-2021-extraordinaria-idiomas.js?v=2021-extra-p7" defer></script>
+  <script src="ejercicio-area-parabolas-2021-extraordinaria-grafico.js?v=2021-extra-p7" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2021 · Extraordinaria · Problema 7</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Área entre curvas · 2021</p>
+        <h1>Área encerrada entre dos parábolas</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Dibujar la región encerrada por las funciones</p>
+        <div class="function-data area-parabolas-data" aria-label="Funciones f igual a x al cuadrado menos dos x más uno y g igual a menos x al cuadrado más cinco">
+          <span class="math-inline" data-math="f(x)=x^2-2x+1"></span>
+          <span class="math-inline" data-math="g(x)=-x^2+5"></span>
+        </div>
+        <p>y calcular el área de dicha región.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema 7</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">El recinto empieza y termina donde se cortan las dos parábolas, así que primero igualaremos las funciones. Después compararemos sus valores entre las intersecciones para saber cuál queda arriba; ese orden determina la altura positiva de cada franja vertical. Finalmente integraremos «curva superior menos curva inferior» entre las dos abscisas de corte.</p>
+            <div class="essential-geometry area-parabolas-essential">
+              <div class="math-display" data-math="f(x)=g(x)\Rightarrow x=-1,\ 2" data-math-display></div>
+              <div class="math-display" data-math="A=\int_{-1}^{2}[g(x)-f(x)]\,dx" data-math-display></div>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema 7</p>
+            <h2 id="solution-title">Representación y cálculo del área</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Cómo reconocer una parábola</h3>
+                <p>La forma de vértice permite localizar el punto central de la parábola. El signo del coeficiente principal indica hacia dónde se abren sus ramas.</p>
+                <div class="theory-formula cubic-essential-flow">
+                  <span class="math-inline" data-math="y=a(x-h)^2+k"></span>
+                  <span class="math-inline" data-math="V(h,k)"></span>
+                </div>
+                <div class="theory-formula cubic-essential-flow">
+                  <span class="math-inline" data-math-es="a>0\Rightarrow\text{abre hacia arriba}" data-math-eu="a>0\Rightarrow\text{gorantz irekitzen da}"></span>
+                  <span class="math-inline" data-math-es="a<0\Rightarrow\text{abre hacia abajo}" data-math-eu="a<0\Rightarrow\text{beherantz irekitzen da}"></span>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Puntos de intersección</h3>
+                <p>Dos gráficas se cortan cuando tienen la misma ordenada para una misma abscisa. Por eso los extremos horizontales del recinto se obtienen igualando las funciones.</p>
+                <div class="theory-formula math-display" data-math="f(x)=g(x)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Área entre dos curvas</h3>
+                <p>La altura de una franja vertical es la diferencia entre la curva superior y la inferior. Integrar esa altura desde el primer corte hasta el segundo suma todas las franjas.</p>
+                <div class="theory-formula math-display" data-math="A=\int_a^b[f_{\mathrm{sup}}(x)-f_{\mathrm{inf}}(x)]\,dx" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Regla de Barrow</h3>
+                <p>Si una función es una primitiva del integrando, la integral definida se calcula restando su valor en el límite inferior al valor en el límite superior.</p>
+                <div class="theory-formula math-display" data-math="\int_a^b h(x)\,dx=H(b)-H(a)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Interpretamos las dos parábolas</h3>
+                  <p>Completamos el cuadrado en la primera función. Así vemos sus vértices y la orientación de sus ramas antes de dibujarlas.</p>
+                  <div class="det-expansion area-parabolas-functions">
+                    <span class="math-inline" data-math="f(x)=x^2-2x+1=(x-1)^2"></span>
+                    <strong class="math-inline" data-math="g(x)=-x^2+5"></strong>
+                  </div>
+                  <div class="calculation-list area-parabolas-points">
+                    <div><span class="math-inline" data-math="f"></span><strong class="math-inline" data-math-es="V_f=(1,0),\quad\text{abre hacia arriba}" data-math-eu="V_f=(1,0),\quad\text{gorantz irekitzen da}"></strong></div>
+                    <div><span class="math-inline" data-math="g"></span><strong class="math-inline" data-math-es="V_g=(0,5),\quad\text{abre hacia abajo}" data-math-eu="V_g=(0,5),\quad\text{beherantz irekitzen da}"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos las abscisas de intersección</h3>
+                  <p>En un punto común las dos funciones tienen el mismo valor. Igualamos, simplificamos y factorizamos el polinomio resultante.</p>
+                  <div class="det-expansion area-parabolas-intersections">
+                    <span class="math-inline" data-math="x^2-2x+1=-x^2+5"></span>
+                    <span class="math-inline" data-math="2x^2-2x-4=0"></span>
+                    <span class="math-inline" data-math="x^2-x-2=0"></span>
+                    <span class="math-inline" data-math="(x+1)(x-2)=0"></span>
+                    <strong class="cubic-essential-flow">
+                      <span class="math-inline" data-math="x=-1"></span>
+                      <span class="math-inline" data-math-es="\text{o}\quad x=2" data-math-eu="\text{edo}\quad x=2"></span>
+                    </strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos los puntos completos</h3>
+                  <p>Sustituimos cada abscisa en una de las funciones para obtener la ordenada correspondiente.</p>
+                  <div class="calculation-list area-parabolas-points">
+                    <div><span class="math-inline" data-math="x=-1"></span><strong class="math-inline" data-math="y=f(-1)=4\Rightarrow P(-1,4)"></strong></div>
+                    <div><span class="math-inline" data-math="x=2"></span><strong class="math-inline" data-math="y=f(2)=1\Rightarrow Q(2,1)"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Determinamos qué curva queda arriba</h3>
+                  <p>Restamos la primera función a la segunda y factorizamos la diferencia.</p>
+                  <div class="derivation area-parabolas-order">
+                    <div><span class="math-inline" data-math="g(x)-f(x)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="-x^2+5-x^2+2x-1"></span></div>
+                    <div><span></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="-2x^2+2x+4"></span></div>
+                    <div><span></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="2(x+1)(2-x)"></strong></div>
+                  </div>
+                  <p>Entre los dos cortes, ambos factores son positivos. Por tanto, la segunda parábola queda arriba y la diferencia proporciona una altura positiva.</p>
+                  <div class="math-display" data-math="-1<x<2\Rightarrow g(x)-f(x)>0" data-math-display></div>
+
+                  <figure class="area-parabolas-figure" aria-label="Representación de la región encerrada por las dos parábolas">
+                    <figcaption>Las intersecciones fijan los límites del recinto. Entre ellas, la parábola cóncava es la frontera superior.</figcaption>
+                    <div id="area-parabolas-2021-extra-board" class="jxgbox area-parabolas-board" role="img" aria-label="Gráfica de dos parábolas con la región entre menos uno y dos sombreada"></div>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Planteamos la integral del área</h3>
+                  <p>Integramos la diferencia positiva entre la curva superior y la inferior desde el primer corte hasta el segundo.</p>
+                  <div class="det-expansion area-parabolas-integral">
+                    <span class="math-inline" data-math="A=\int_{-1}^{2}[g(x)-f(x)]\,dx"></span>
+                    <span class="math-inline" data-math="g(x)-f(x)=-2x^2+2x+4"></span>
+                    <strong class="math-inline" data-math="A=\int_{-1}^{2}(-2x^2+2x+4)\,dx"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos una primitiva</h3>
+                  <p>Integramos término a término usando la regla de la potencia.</p>
+                  <div class="calculation-list area-parabolas-primitives">
+                    <div><span class="math-inline" data-math="\int -2x^2\,dx"></span><strong class="math-inline" data-math="-\frac{2x^3}{3}"></strong></div>
+                    <div><span class="math-inline" data-math="\int 2x\,dx"></span><strong class="math-inline" data-math="x^2"></strong></div>
+                    <div><span class="math-inline" data-math="\int 4\,dx"></span><strong class="math-inline" data-math="4x"></strong></div>
+                  </div>
+                  <div class="equation equation-compact math-display" data-math="H(x)=-\frac{2x^3}{3}+x^2+4x" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Aplicamos la regla de Barrow sin saltos</h3>
+                  <p>Calculamos por separado el valor de la primitiva en cada extremo.</p>
+                  <div class="det-expansion area-parabolas-evaluation">
+                    <span class="math-inline" data-math="H(2)=-\frac{16}{3}+4+8"></span>
+                    <strong class="math-inline" data-math="H(2)=\frac{20}{3}"></strong>
+                  </div>
+                  <div class="det-expansion area-parabolas-evaluation">
+                    <span class="math-inline" data-math="H(-1)=\frac{2}{3}+1-4"></span>
+                    <strong class="math-inline" data-math="H(-1)=-\frac{7}{3}"></strong>
+                  </div>
+                  <p>Ahora restamos el valor inferior al superior.</p>
+                  <div class="derivation cubic-final-coefficient">
+                    <div><span class="math-inline" data-math="A"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="\frac{20}{3}-(-\frac{7}{3})"></span></div>
+                    <div><span class="math-inline" data-math="A"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="\frac{27}{3}"></span></div>
+                    <div><span class="math-inline" data-math="A"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="9"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos el sentido del resultado</h3>
+                  <p>El integrando es positivo en todo el intervalo y el resultado también lo es. Como se trata de un área, la unidad se expresa al cuadrado.</p>
+                  <div class="math-display" data-math="A=9\,u^2" data-math-display></div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry area-parabolas-essential">
+              <div class="math-display" data-math-es="f(x)=g(x)\Rightarrow x=-1\ \text{o}\ x=2" data-math-eu="f(x)=g(x)\Rightarrow x=-1\ \text{edo}\ x=2" data-math-display></div>
+              <div class="math-display" data-math-es="\text{En }[-1,2],\quad g(x)\ge f(x)" data-math-eu="[-1,2]\text{ tartean},\quad g(x)\ge f(x)" data-math-display></div>
+              <div class="math-display" data-math="A=\int_{-1}^{2}(-2x^2+2x+4)\,dx" data-math-display></div>
+              <div class="math-display" data-math="A=H(2)-H(-1)=\frac{20}{3}+\frac{7}{3}" data-math-display></div>
+              <strong class="math-inline" data-math="A=9\,u^2"></strong>
+            </div>
+
+            <div class="result result-long area-parabolas-result">
+              <span>Resultado</span>
+              <strong><span class="result-unit">Área de la región: <span class="math-nowrap math-inline" data-math="9\,u^2"></span></span></strong>
+              <p>
+                <span class="math-nowrap math-inline" data-math-es="\text{Límites: }x=-1\text{ y }x=2" data-math-eu="\text{Mugak: }x=-1\text{ eta }x=2"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

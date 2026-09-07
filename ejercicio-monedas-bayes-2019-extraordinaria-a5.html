@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hiru txanpon: probabilitate osoa eta Bayes · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-monedas-bayes-idiomas.js" defer></script>
+  <script src="ejercicio-monedas-bayes-grafico.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Extraordinaria · Opción A · Problema A.5</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Probabilidad condicionada · Julio de 2019</p>
+        <h1>Tres monedas: probabilidad total y teorema de Bayes</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Una caja contiene tres monedas, R, L y M. Se elige una de ellas al azar y se lanza.</p>
+
+        <div class="coin-data" aria-label="Características de las tres monedas">
+          <div>
+            <strong>R</strong>
+            <span>Moneda normal</span>
+            <small>P(C) = 1/2</small>
+          </div>
+          <div>
+            <strong>L</strong>
+            <span>Cara por los dos lados</span>
+            <small>P(C) = 1</small>
+          </div>
+          <div>
+            <strong>M</strong>
+            <span>Moneda trucada</span>
+            <small>P(C) = 1/5</small>
+          </div>
+        </div>
+
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">Calcular la probabilidad de obtener cara.</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">Si ha salido cruz, ¿cuál es la probabilidad de que la moneda elegida sea R?</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="coins-part-a" data-target="coins-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="coins-part-b" data-target="coins-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="coins-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Obtener cara puede ocurrir por tres caminos distintos: elegir R y obtener cara, elegir L y obtener cara, o elegir M y obtener cara. Como primero se elige la moneda y después se observa el resultado, multiplicaremos las probabilidades de las ramas de cada camino. Después sumaremos los tres caminos que terminan en cara. El árbol permite conservar a la vista tanto la primera elección como las probabilidades condicionadas de cada moneda.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Probabilidad de obtener cara</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Probabilidades condicionadas en un árbol</h3>
+                <p>La primera etapa es elegir una moneda. La segunda depende de la moneda elegida; por eso sus ramas contienen probabilidades condicionadas como P(C | R), la probabilidad de cara sabiendo que se ha elegido R.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Regla del producto para un camino</h3>
+                <p>Para recorrer un camino completo deben ocurrir sus dos etapas. La probabilidad conjunta se obtiene multiplicando la probabilidad de elegir la moneda por la probabilidad del resultado dentro de esa moneda.</p>
+                <div class="theory-formula math-display" data-math="P(R \cap C) = P(R) \cdot P(C\mid R)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Teorema de la probabilidad total</h3>
+                <p>R, L y M forman una partición: siempre se elige exactamente una de las tres monedas. El suceso C se descompone en tres caminos incompatibles, de modo que sus probabilidades se suman.</p>
+                <div class="theory-formula coin-formula math-display" data-math="P(C) = P(R)P(C\mid R) + P(L)P(C\mid L) + P(M)P(C\mid M)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Nombramos los sucesos</h3>
+                  <p>Usaremos R, L y M para indicar qué moneda se elige. Llamaremos C a obtener cara y X a obtener cruz.</p>
+                  <div class="equation equation-compact coin-event-key">C = cara &nbsp;·&nbsp; X = cruz</div>
+                </li>
+
+                <li>
+                  <h3>Escribimos la probabilidad de elegir cada moneda</h3>
+                  <p>La elección se hace al azar entre tres monedas, así que las tres tienen la misma probabilidad.</p>
+                  <div class="equation equation-compact math-display" data-math="P(R) = P(L) = P(M) = \frac{1}{3}" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Completamos las probabilidades de cara y cruz</h3>
+                  <p>En cada moneda, las probabilidades de cara y cruz deben sumar 1. La moneda L nunca puede dar cruz porque tiene cara en sus dos lados.</p>
+                  <div class="calculation-list coin-probabilities">
+                    <div><span>R</span><strong class="math-inline" data-math="P(C\mid R) = \frac{1}{2}; P(X\mid R) = \frac{1}{2}"></strong></div>
+                    <div><span>L</span><strong class="math-inline" data-math="P(C\mid L) = 1; P(X\mid L) = 0"></strong></div>
+                    <div><span>M</span><strong class="math-inline" data-math="P(C\mid M) = \frac{1}{5}; P(X\mid M) = \frac{4}{5}"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Organizamos el experimento en un árbol</h3>
+                  <p>La primera ramificación representa la moneda elegida. Desde cada moneda salen las dos posibilidades del lanzamiento. Las ramas que terminan en cara aparecen destacadas.</p>
+                  <figure class="coin-tree-figure" aria-label="Árbol de probabilidades de elegir una de tres monedas y obtener cara o cruz">
+                    <figcaption>Árbol completo del experimento</figcaption>
+                    <p class="coin-tree-legend">C = cara · X = cruz</p>
+                    <div id="coin-tree-board" class="jxgbox coin-tree-board" role="img" aria-label="Árbol con las monedas R, L y M y las probabilidades de obtener cara o cruz con cada una"></div>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Multiplicamos los tres caminos que terminan en cara</h3>
+                  <p>En cada camino multiplicamos la probabilidad de elegir la moneda por la probabilidad de cara una vez elegida.</p>
+                  <div class="calculation-list coin-head-paths">
+                    <div><span class="math-inline" data-math="R \cap C"></span><strong class="math-inline" data-math="(\frac{1}{3}) \cdot (\frac{1}{2}) = \frac{1}{6} = \frac{5}{30}"></strong></div>
+                    <div><span class="math-inline" data-math="L \cap C"></span><strong class="math-inline" data-math="(\frac{1}{3}) \cdot 1 = \frac{1}{3} = \frac{10}{30}"></strong></div>
+                    <div><span class="math-inline" data-math="M \cap C"></span><strong class="math-inline" data-math="(\frac{1}{3}) \cdot (\frac{1}{5}) = \frac{1}{15} = \frac{2}{30}"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Sumamos todos los caminos que producen cara</h3>
+                  <p>Los tres caminos son incompatibles porque solo se elige una moneda. Usamos denominador común 30 para ver la suma sin saltos.</p>
+                  <div class="det-expansion coin-probability-expansion">
+                    <span class="coin-formula math-inline" data-math="P(C) = \frac{1}{6} + \frac{1}{3} + \frac{1}{15}"></span>
+                    <span class="coin-formula math-inline" data-math="= \frac{5}{30} + \frac{10}{30} + \frac{2}{30}"></span>
+                    <strong class="math-nowrap math-inline" data-math="P(C) = \frac{17}{30}"></strong>
+                  </div>
+                  <p>En decimal, 17/30 = 0,5666…, por lo que la probabilidad es aproximadamente del 56,67 %.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry coin-essential">
+              <div class="math-display" data-math="P(R) = P(L) = P(M) = \frac{1}{3}" data-math-display></div>
+              <div class="math-display" data-math="P(C\mid R) = \frac{1}{2}; P(C\mid L) = 1; P(C\mid M) = \frac{1}{5}" data-math-display></div>
+              <div class="coin-formula math-display" data-math="P(C) = (\frac{1}{3})(\frac{1}{2}) + (\frac{1}{3})(1) + (\frac{1}{3})(\frac{1}{5})" data-math-display></div>
+              <strong class="math-nowrap math-inline" data-math="P(C) = \frac{17}{30}"></strong>
+            </div>
+
+            <div class="result probability-result">
+              <span>Resultado</span>
+              <strong>P(C) = 17/30</strong>
+              <p>≈ 0,5667 = 56,67 %</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="coins-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Ahora sabemos que el resultado ha sido cruz y queremos reconstruir qué moneda se eligió. Dejamos de comparar todos los resultados del experimento y miramos únicamente los caminos que terminan en cruz. Entre esos caminos, el favorable es «elegir R y obtener cruz». El teorema de Bayes compara la probabilidad de ese camino con la probabilidad total de obtener cruz.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Probabilidad de haber elegido R sabiendo que salió cruz</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Probabilidad condicionada</h3>
+                <p>Saber que ha ocurrido X reduce el universo a los resultados que terminan en cruz. Dentro de ese nuevo conjunto comparamos la parte en la que también se eligió R con todo el suceso X.</p>
+                <div class="theory-formula math-display" data-math="P(R\mid X)=\frac{P(R\cap X)}{P(X)}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Teorema de Bayes</h3>
+                <p>La intersección del numerador se calcula siguiendo un camino del árbol. El denominador reúne todos los caminos que pueden producir cruz.</p>
+                <div class="theory-formula coin-formula math-display" data-math="P(R\mid X)=\frac{P(R)P(X\mid R)}{P(X)}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Probabilidad del suceso complementario</h3>
+                <p>Cara y cruz son los dos únicos resultados posibles. Por eso podemos obtener la probabilidad de cruz restando a 1 la probabilidad de cara.</p>
+                <div class="theory-formula math-display" data-math="P(X) = 1 - P(C)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Traducimos exactamente la pregunta</h3>
+                  <p>Queremos la probabilidad de que la moneda sea R bajo la condición de que ha salido cruz. La condición conocida se escribe después de la barra.</p>
+                  <div class="equation equation-compact math-display" data-math="P(R\mid X)" data-math-display></div>
+                  <p>No es P(X | R): esa sería la probabilidad de cruz cuando ya sabemos que la moneda es R.</p>
+                </li>
+
+                <li>
+                  <h3>Calculamos la probabilidad total de cruz</h3>
+                  <p>Como cara y cruz son complementarios, podemos usar el resultado del apartado A.</p>
+                  <div class="det-expansion coin-probability-expansion">
+                    <span class="math-nowrap math-inline" data-math="P(X) = 1 - P(C)"></span>
+                    <span class="math-nowrap math-inline" data-math="= 1 - \frac{17}{30}"></span>
+                    <strong class="math-nowrap math-inline" data-math="P(X) = \frac{13}{30}"></strong>
+                  </div>
+                  <p>El árbol ofrece la misma comprobación sumando los caminos que terminan en cruz.</p>
+                  <div class="det-expansion coin-probability-expansion coin-cross-check">
+                    <span class="coin-formula math-inline" data-math="P(X) = (\frac{1}{3})(\frac{1}{2}) + (\frac{1}{3})(0) + (\frac{1}{3})(\frac{4}{5})"></span>
+                    <span class="coin-formula math-inline" data-math="= \frac{1}{6} + 0 + \frac{4}{15}"></span>
+                    <strong class="math-nowrap math-inline" data-math="= \frac{5}{30} + 0 + \frac{8}{30} = \frac{13}{30}"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos el camino favorable: R y cruz</h3>
+                  <p>Para que se elija R y salga cruz deben ocurrir las dos etapas del camino.</p>
+                  <div class="det-expansion coin-probability-expansion">
+                    <span class="coin-formula math-inline" data-math="P(R \cap X) = P(R) \cdot P(X\mid R)"></span>
+                    <span class="coin-formula math-inline" data-math="= (\frac{1}{3}) \cdot (\frac{1}{2})"></span>
+                    <strong class="math-nowrap math-inline" data-math="P(R \cap X) = \frac{1}{6} = \frac{5}{30}"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Aplicamos Bayes y simplificamos</h3>
+                  <p>Dividimos la probabilidad del camino favorable entre la probabilidad de todos los caminos compatibles con la información «ha salido cruz».</p>
+                  <div class="det-expansion coin-probability-expansion">
+                    <span class="coin-formula math-inline" data-math="P(R\mid X)=\dfrac{\frac16}{\frac{13}{30}}"></span>
+                    <span class="coin-formula math-inline" data-math="= (\frac{1}{6}) \cdot (\frac{30}{13})"></span>
+                    <strong class="math-nowrap math-inline" data-math="P(R\mid X) = \frac{5}{13}"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Interpretamos el nuevo universo</h3>
+                  <p>Al expresar P(X) con denominador 30, cinco partes proceden de R, ninguna de L y ocho de M. Una vez sabemos que salió cruz, solo quedan esas 13 partes posibles.</p>
+                  <figure class="cross-composition" aria-label="Composición de los resultados cruz: cinco partes proceden de R y ocho de M">
+                    <div class="cross-bar" aria-hidden="true">
+                      <span class="cross-r"><b>R</b><small>5</small></span>
+                      <span class="cross-m"><b>M</b><small>8</small></span>
+                    </div>
+                    <figcaption>De las 13 partes que producen cruz, 5 corresponden a R. La moneda L aporta 0.</figcaption>
+                  </figure>
+                  <p>Por tanto, aproximadamente el 38,46 % de las cruces procede de la moneda R.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry coin-essential">
+              <div class="math-display" data-math="P(X) = 1 - \frac{17}{30} = \frac{13}{30}" data-math-display></div>
+              <div class="math-display" data-math="P(R \cap X) = (\frac{1}{3})(\frac{1}{2}) = \frac{1}{6}" data-math-display></div>
+              <div class="coin-formula math-display" data-math="P(R\mid X)=\dfrac{\frac16}{\frac{13}{30}}" data-math-display></div>
+              <strong class="math-nowrap math-inline" data-math="P(R\mid X) = \frac{5}{13}"></strong>
+            </div>
+
+            <div class="result probability-result">
+              <span>Resultado</span>
+              <strong>P(R | X) = 5/13</strong>
+              <p>≈ 0,3846 = 38,46 %</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

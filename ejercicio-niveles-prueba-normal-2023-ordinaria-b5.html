@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banaketa normala: mailen araberako sailkapena · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-niveles-prueba-normal-2023-ordinaria-idiomas.js?v=2023-ord-b5" defer></script>
+  <script src="ejercicio-niveles-prueba-normal-2023-ordinaria-grafico.js?v=2023-ord-b5" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Ejercicio B5</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Distribución normal · 2023</p>
+        <h1 class="levels-normal-2023-title">Clasificación por niveles en una prueba</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <div data-levels-normal-2023-language="es">
+          <p>Los resultados obtenidos en una prueba de matemáticas siguen una distribución normal con media 65 puntos y desviación típica 18 puntos. El <span class="math-inline math-nowrap" data-math="15\%"></span> del alumnado está en el nivel avanzado, el <span class="math-inline math-nowrap" data-math="65\%"></span> en el nivel medio y el <span class="math-inline math-nowrap" data-math="20\%"></span> restante en el nivel inicial.</p>
+          <p>Decide, razonando tus respuestas, en qué nivel situaremos a quienes han obtenido las siguientes notas:</p>
+          <ol class="statement-parts">
+            <li><span class="math-inline math-nowrap" data-math="85{,}5"></span> puntos;</li>
+            <li><span class="math-inline math-nowrap" data-math="48"></span> puntos.</li>
+          </ol>
+        </div>
+        <div data-levels-normal-2023-language="eu" hidden>
+          <p>Matematikako proba batean lortutako emaitzek 65 puntuko batezbestekoa eta 18 puntuko desbideratze tipikoa duen banaketa normala jarraitzen dute. Ikasleen <span class="math-inline math-nowrap" data-math="15\%"></span> maila aurreratuan dago, <span class="math-inline math-nowrap" data-math="65\%"></span> erdi-mailan eta gainerako <span class="math-inline math-nowrap" data-math="20\%"></span> hasierako mailan.</p>
+          <p>Erabaki, erantzunak arrazoituz, zer mailatan kokatuko ditugun nota hauek lortu dituzten ikasleak:</p>
+          <ol class="statement-parts">
+            <li><span class="math-inline math-nowrap" data-math="85{,}5"></span> puntu;</li>
+            <li><span class="math-inline math-nowrap" data-math="48"></span> puntu.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="levels-normal-2023-part-a" data-target="levels-normal-2023-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="levels-normal-2023-part-b" data-target="levels-normal-2023-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="levels-normal-2023-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-levels-normal-2023-language="es">Para saber si <span class="math-inline math-nowrap" data-math="85{,}5"></span> pertenece al nivel avanzado necesitamos localizar primero su frontera inferior. Como el nivel avanzado contiene el <span class="math-inline math-nowrap" data-math="15\%"></span> superior, el punto de corte deja un <span class="math-inline math-nowrap" data-math="85\%"></span> a la izquierda.</p>
+            <p class="idea-text" data-levels-normal-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="85{,}5"></span> maila aurreratukoa den jakiteko, lehenik maila horren beheko muga kokatu behar dugu. Maila aurreratuak goiko <span class="math-inline math-nowrap" data-math="15\%"></span> hartzen duenez, ebaketa-puntuak <span class="math-inline math-nowrap" data-math="85\%"></span> uzten du ezkerrean.</p>
+            <p class="idea-text" data-levels-normal-2023-language="es">Buscaremos en la normal estándar el percentil 85 y desharemos la tipificación. Después bastará comparar la nota con ese punto de corte; no estamos calculando la probabilidad de obtener exactamente esa nota.</p>
+            <p class="idea-text" data-levels-normal-2023-language="eu" hidden>Normal estandarrean 85. pertzentila bilatu eta tipifikazioa desegingo dugu. Ondoren, nota ebaketa-puntu horrekin alderatzea nahikoa izango da; ez gara nota zehatz hori lortzeko probabilitatea kalkulatzen ari.</p>
+            <div class="essential-geometry levels-normal-2023-idea">
+              <div class="math-display" data-math="P(X\le x_2)=0{,}85\Rightarrow z_2\approx1{,}04" data-math-display></div>
+              <div class="math-display" data-math="x_2=65+18\cdot1{,}04=83{,}72" data-math-display></div>
+              <strong class="math-display" data-math="85{,}5>83{,}72\Rightarrow\text{nivel avanzado}" data-math-eu="85{,}5>83{,}72\Rightarrow\text{maila aurreratua}" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Clasificación de la nota 85,5</h2>
+
+            <figure class="levels-normal-2023-figure" aria-label="Distribución normal dividida en tres niveles con la nota 85,5 señalada">
+              <figcaption data-levels-normal-2023-language="es">Los puntos de corte separan el <span class="math-inline math-nowrap" data-math="20\%"></span> inicial, el <span class="math-inline math-nowrap" data-math="65\%"></span> medio y el <span class="math-inline math-nowrap" data-math="15\%"></span> avanzado. La nota <span class="math-inline math-nowrap" data-math="85{,}5"></span> queda en la zona avanzada.</figcaption>
+              <figcaption data-levels-normal-2023-language="eu" hidden>Ebaketa-puntuek hasierako <span class="math-inline math-nowrap" data-math="20\%"></span>, erdiko <span class="math-inline math-nowrap" data-math="65\%"></span> eta maila aurreratuko <span class="math-inline math-nowrap" data-math="15\%"></span> bereizten dituzte. <span class="math-inline math-nowrap" data-math="85{,}5"></span> nota maila aurreratuan geratzen da.</figcaption>
+              <div id="levels-normal-2023-score-a-board" class="jxgbox levels-normal-2023-board" role="img" aria-label="Campana normal con los niveles inicial, medio y avanzado y la nota 85,5 en el nivel avanzado"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Percentiles y puntos de corte</h3>
+                <p data-levels-normal-2023-language="es">Un percentil es el valor que deja a su izquierda una proporción determinada. Si el nivel avanzado ocupa la cola derecha del <span class="math-inline math-nowrap" data-math="15\%"></span>, su frontera inferior es el percentil 85.</p>
+                <p data-levels-normal-2023-language="eu" hidden>Pertzentil batek proportzio jakin bat uzten du bere ezkerrean. Maila aurreratuak eskuineko <span class="math-inline math-nowrap" data-math="15\%"></span>-eko buztana hartzen badu, haren beheko muga 85. pertzentila da.</p>
+                <div class="levels-normal-2023-theory-formulas">
+                  <span class="math-inline" data-math="P(X\ge x_2)=0{,}15"></span>
+                  <span class="math-inline" data-math="P(X\le x_2)=0{,}85"></span>
+                </div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Tipificación y transformación inversa</h3>
+                <p data-levels-normal-2023-language="es">La tabla trabaja con la normal estándar. Tipificar lleva una nota a esa escala; la fórmula inversa recupera la nota original a partir de su valor <span class="math-inline math-nowrap" data-math="z"></span>.</p>
+                <p data-levels-normal-2023-language="eu" hidden>Taulak normal estandarrarekin lan egiten du. Tipifikatzeak nota eskala horretara eramaten du; alderantzizko formulak jatorrizko nota berreskuratzen du <span class="math-inline math-nowrap" data-math="z"></span> baliotik.</p>
+                <div class="levels-normal-2023-theory-formulas">
+                  <span class="math-inline" data-math="Z=\frac{X-65}{18}"></span>
+                  <span class="math-inline" data-math="X=65+18Z"></span>
+                </div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Lectura de la tabla normal</h3>
+                <p data-levels-normal-2023-language="es">Buscamos en la tabla una probabilidad acumulada próxima a <span class="math-inline math-nowrap" data-math="0{,}85"></span>. La entrada <span class="math-inline math-nowrap" data-math="0{,}8508"></span> corresponde a <span class="math-inline math-nowrap" data-math="z=1{,}04"></span>.</p>
+                <p data-levels-normal-2023-language="eu" hidden>Taulan <span class="math-inline math-nowrap" data-math="0{,}85"></span>-etik hurbil dagoen probabilitate metatua bilatzen dugu. <span class="math-inline math-nowrap" data-math="0{,}8508"></span> sarrera <span class="math-inline math-nowrap" data-math="z=1{,}04"></span> balioari dagokio.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Identificamos el modelo</h3>
+                  <p data-levels-normal-2023-language="es">Llamamos <span class="math-inline math-nowrap" data-math="X"></span> a la nota obtenida. El enunciado proporciona la media y la desviación típica.</p>
+                  <p data-levels-normal-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="X"></span> deituko diogu lortutako notari. Enuntziatuak batezbestekoa eta desbideratze tipikoa ematen ditu.</p>
+                  <div class="levels-normal-2023-work">
+                    <strong class="math-display" data-math="X\sim N(65,18)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Traducimos el nivel avanzado a una probabilidad acumulada</h3>
+                  <p data-levels-normal-2023-language="es">El nivel avanzado es la cola derecha del <span class="math-inline math-nowrap" data-math="15\%"></span>. Por tanto, su límite inferior deja el <span class="math-inline math-nowrap" data-math="85\%"></span> a la izquierda.</p>
+                  <p data-levels-normal-2023-language="eu" hidden>Maila aurreratua eskuineko <span class="math-inline math-nowrap" data-math="15\%"></span>-eko buztana da. Beraz, haren beheko mugak <span class="math-inline math-nowrap" data-math="85\%"></span> uzten du ezkerrean.</p>
+                  <div class="levels-normal-2023-work">
+                    <div class="math-display" data-math="P(X\ge x_2)=0{,}15" data-math-display></div>
+                    <strong class="math-display" data-math="P(X\le x_2)=1-0{,}15=0{,}85" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Buscamos el valor tipificado</h3>
+                  <p data-levels-normal-2023-language="es">La tabla de la normal estándar proporciona el área acumulada a la izquierda.</p>
+                  <p data-levels-normal-2023-language="eu" hidden>Normal estandarraren taulak ezkerreko azalera metatua ematen du.</p>
+                  <div class="levels-normal-2023-work">
+                    <div class="math-display" data-math="\Phi(z_2)\approx0{,}85" data-math-display></div>
+                    <div class="math-display" data-math="\Phi(1{,}04)=0{,}8508" data-math-display></div>
+                    <strong class="math-display" data-math="z_2\approx1{,}04" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Deshacemos la tipificación</h3>
+                  <div class="levels-normal-2023-work">
+                    <div class="math-display" data-math="\frac{x_2-65}{18}=1{,}04" data-math-display></div>
+                    <div class="math-display" data-math="x_2=65+18\cdot1{,}04" data-math-display></div>
+                    <strong class="math-display" data-math="x_2=83{,}72" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Comparamos la nota con el punto de corte</h3>
+                  <p data-levels-normal-2023-language="es">Las notas iguales o superiores a <span class="math-inline math-nowrap" data-math="83{,}72"></span> pertenecen al nivel avanzado.</p>
+                  <p data-levels-normal-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="83{,}72"></span> edo gehiagoko notak maila aurreratukoak dira.</p>
+                  <div class="levels-normal-2023-work">
+                    <div class="math-display" data-math="85{,}5>83{,}72" data-math-display></div>
+                    <strong class="math-display" data-math="85{,}5\Rightarrow\text{nivel avanzado}" data-math-eu="85{,}5\Rightarrow\text{maila aurreratua}" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry levels-normal-2023-essential">
+              <div class="math-display" data-math="P(X\le x_2)=0{,}85\Rightarrow z_2\approx1{,}04" data-math-display></div>
+              <div class="math-display" data-math="x_2=65+18\cdot1{,}04=83{,}72" data-math-display></div>
+              <strong class="math-display" data-math="85{,}5>83{,}72\Rightarrow\text{nivel avanzado}" data-math-eu="85{,}5>83{,}72\Rightarrow\text{maila aurreratua}" data-math-display></strong>
+            </div>
+
+            <div class="result result-long levels-normal-2023-result">
+              <span>Resultado</span>
+              <strong data-levels-normal-2023-language="es">Nivel avanzado</strong>
+              <strong data-levels-normal-2023-language="eu" hidden>Maila aurreratua</strong>
+              <p data-levels-normal-2023-language="es">La nota <span class="math-inline math-nowrap" data-math="85{,}5"></span> supera el punto de corte <span class="math-inline math-nowrap" data-math="83{,}72"></span>.</p>
+              <p data-levels-normal-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="85{,}5"></span> notak <span class="math-inline math-nowrap" data-math="83{,}72"></span> ebaketa-puntua gainditzen du.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="levels-normal-2023-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-levels-normal-2023-language="es">El nivel inicial contiene directamente el <span class="math-inline math-nowrap" data-math="20\%"></span> inferior. Por tanto, buscamos en la normal estándar el valor que deja un área <span class="math-inline math-nowrap" data-math="0{,}20"></span> a su izquierda.</p>
+            <p class="idea-text" data-levels-normal-2023-language="eu" hidden>Hasierako mailak beheko <span class="math-inline math-nowrap" data-math="20\%"></span> hartzen du zuzenean. Beraz, normal estandarrean ezkerrean <span class="math-inline math-nowrap" data-math="0{,}20"></span>-ko azalera uzten duen balioa bilatuko dugu.</p>
+            <p class="idea-text" data-levels-normal-2023-language="es">Ese valor tipificado es negativo porque el corte está por debajo de la media. Desharemos la tipificación y compararemos <span class="math-inline math-nowrap" data-math="48"></span> con el límite superior del nivel inicial.</p>
+            <p class="idea-text" data-levels-normal-2023-language="eu" hidden>Balio tipifikatu hori negatiboa da ebaketa batezbestekoaren azpitik dagoelako. Tipifikazioa desegin eta <span class="math-inline math-nowrap" data-math="48"></span> hasierako mailaren goiko mugarekin alderatuko dugu.</p>
+            <div class="essential-geometry levels-normal-2023-idea">
+              <div class="math-display" data-math="P(X\le x_1)=0{,}20\Rightarrow z_1\approx-0{,}84" data-math-display></div>
+              <div class="math-display" data-math="x_1=65+18(-0{,}84)=49{,}88" data-math-display></div>
+              <strong class="math-display" data-math="48<49{,}88\Rightarrow\text{nivel inicial}" data-math-eu="48<49{,}88\Rightarrow\text{hasierako maila}" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Clasificación de la nota 48</h2>
+
+            <figure class="levels-normal-2023-figure" aria-label="Distribución normal dividida en tres niveles con la nota 48 señalada">
+              <figcaption data-levels-normal-2023-language="es">La nota <span class="math-inline math-nowrap" data-math="48"></span> queda a la izquierda del primer punto de corte, dentro del <span class="math-inline math-nowrap" data-math="20\%"></span> correspondiente al nivel inicial.</figcaption>
+              <figcaption data-levels-normal-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="48"></span> nota lehenengo ebaketa-puntuaren ezkerrean geratzen da, hasierako mailari dagokion <span class="math-inline math-nowrap" data-math="20\%"></span>-aren barruan.</figcaption>
+              <div id="levels-normal-2023-score-b-board" class="jxgbox levels-normal-2023-board" role="img" aria-label="Campana normal con los niveles inicial, medio y avanzado y la nota 48 en el nivel inicial"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. El percentil inferior</h3>
+                <p data-levels-normal-2023-language="es">El nivel inicial contiene el <span class="math-inline math-nowrap" data-math="20\%"></span> de notas más bajas. Su límite superior es, por definición, el percentil 20.</p>
+                <p data-levels-normal-2023-language="eu" hidden>Hasierako mailak nota baxuenen <span class="math-inline math-nowrap" data-math="20\%"></span> hartzen du. Haren goiko muga, definizioz, 20. pertzentila da.</p>
+                <div class="theory-formula math-display" data-math="P(X\le x_1)=0{,}20" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Simetría de la normal estándar</h3>
+                <p data-levels-normal-2023-language="es">Si la tabla solo presenta valores positivos, convertimos el área izquierda <span class="math-inline math-nowrap" data-math="0{,}20"></span> en el área <span class="math-inline math-nowrap" data-math="0{,}80"></span> asociada al valor positivo simétrico.</p>
+                <p data-levels-normal-2023-language="eu" hidden>Taulak balio positiboak soilik ematen baditu, ezkerreko <span class="math-inline math-nowrap" data-math="0{,}20"></span>-ko azalera balio positibo simetrikoari dagokion <span class="math-inline math-nowrap" data-math="0{,}80"></span>-ko azalerara bihurtzen dugu.</p>
+                <div class="theory-formula math-display" data-math="\Phi(-z)=1-\Phi(z)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Deshacer la tipificación</h3>
+                <p data-levels-normal-2023-language="es">Una vez encontrado el valor tipificado, volvemos a la escala de notas con la media y la desviación típica del enunciado.</p>
+                <p data-levels-normal-2023-language="eu" hidden>Balio tipifikatua aurkitu ondoren, noten eskalara itzultzen gara enuntziatuko batezbestekoa eta desbideratze tipikoa erabiliz.</p>
+                <div class="theory-formula math-display" data-math="x_1=65+18z_1" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Identificamos el punto de corte</h3>
+                  <p data-levels-normal-2023-language="es">El límite superior del nivel inicial deja por debajo el <span class="math-inline math-nowrap" data-math="20\%"></span> de las notas.</p>
+                  <p data-levels-normal-2023-language="eu" hidden>Hasierako mailaren goiko mugak noten <span class="math-inline math-nowrap" data-math="20\%"></span> uzten du azpitik.</p>
+                  <div class="levels-normal-2023-work">
+                    <strong class="math-display" data-math="P(X\le x_1)=0{,}20" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Buscamos el valor tipificado</h3>
+                  <p data-levels-normal-2023-language="es">Por simetría, buscamos en la tabla el área <span class="math-inline math-nowrap" data-math="0{,}80"></span>. La entrada más próxima es <span class="math-inline math-nowrap" data-math="0{,}7995"></span>, correspondiente a <span class="math-inline math-nowrap" data-math="0{,}84"></span>.</p>
+                  <p data-levels-normal-2023-language="eu" hidden>Simetria dela eta, taulan <span class="math-inline math-nowrap" data-math="0{,}80"></span>-ko azalera bilatzen dugu. Sarrerarik hurbilena <span class="math-inline math-nowrap" data-math="0{,}7995"></span> da, <span class="math-inline math-nowrap" data-math="0{,}84"></span> balioari dagokiona.</p>
+                  <div class="levels-normal-2023-work">
+                    <div class="math-display" data-math="\Phi(0{,}84)=0{,}7995\approx0{,}80" data-math-display></div>
+                    <div class="math-display" data-math="\Phi(-0{,}84)=1-0{,}7995=0{,}2005" data-math-display></div>
+                    <strong class="math-display" data-math="z_1\approx-0{,}84" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Deshacemos la tipificación</h3>
+                  <div class="levels-normal-2023-work">
+                    <div class="math-display" data-math="\frac{x_1-65}{18}=-0{,}84" data-math-display></div>
+                    <div class="math-display" data-math="x_1=65+18(-0{,}84)" data-math-display></div>
+                    <strong class="math-display" data-math="x_1=49{,}88" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Comparamos la nota con el punto de corte</h3>
+                  <p data-levels-normal-2023-language="es">Las notas iguales o inferiores aproximadamente a <span class="math-inline math-nowrap" data-math="49{,}88"></span> pertenecen al nivel inicial.</p>
+                  <p data-levels-normal-2023-language="eu" hidden>Gutxi gorabehera <span class="math-inline math-nowrap" data-math="49{,}88"></span> edo gutxiagoko notak hasierako mailakoak dira.</p>
+                  <div class="levels-normal-2023-work">
+                    <div class="math-display" data-math="48<49{,}88" data-math-display></div>
+                    <strong class="math-display" data-math="48\Rightarrow\text{nivel inicial}" data-math-eu="48\Rightarrow\text{hasierako maila}" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry levels-normal-2023-essential">
+              <div class="math-display" data-math="P(X\le x_1)=0{,}20\Rightarrow z_1\approx-0{,}84" data-math-display></div>
+              <div class="math-display" data-math="x_1=65+18(-0{,}84)=49{,}88" data-math-display></div>
+              <strong class="math-display" data-math="48<49{,}88\Rightarrow\text{nivel inicial}" data-math-eu="48<49{,}88\Rightarrow\text{hasierako maila}" data-math-display></strong>
+            </div>
+
+            <div class="result result-long levels-normal-2023-result">
+              <span>Resultado</span>
+              <strong data-levels-normal-2023-language="es">Nivel inicial</strong>
+              <strong data-levels-normal-2023-language="eu" hidden>Hasierako maila</strong>
+              <p data-levels-normal-2023-language="es">La nota <span class="math-inline math-nowrap" data-math="48"></span> queda por debajo del punto de corte <span class="math-inline math-nowrap" data-math="49{,}88"></span>.</p>
+              <p data-levels-normal-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="48"></span> nota <span class="math-inline math-nowrap" data-math="49{,}88"></span> ebaketa-puntuaren azpitik geratzen da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

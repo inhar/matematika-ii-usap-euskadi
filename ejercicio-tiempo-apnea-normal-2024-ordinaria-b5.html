@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arnasari eusteko denbora · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-tiempo-apnea-normal-2024-ordinaria-b5-idiomas.js?v=1" defer></script>
+  <script src="ejercicio-tiempo-apnea-normal-2024-ordinaria-b5-grafico.js?v=1" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="page apnea-normal-2024-page">
+  <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+    <a href="index.html">← Volver a ejercicios</a>
+    <div class="exercise-nav-meta">
+      <span class="source-reference">2024 · Ordinaria · Ejercicio B5</span>
+      <div class="language-switch" data-language-switch></div>
+    </div>
+  </nav>
+
+  <header class="hero"><div class="hero-copy">
+    <p class="eyebrow">Probabilidad · Distribución normal · 2024</p>
+    <h1>Tiempo sin respirar bajo el agua</h1>
+  </div></header>
+
+  <section class="problem" aria-labelledby="statement-title">
+    <div class="section-index">00</div>
+    <div class="section-content">
+      <h2 id="statement-title">Enunciado</h2>
+      <p data-apnea-normal-2024-language="es">El tiempo que un adulto aguanta bajo el agua sin respirar sigue una distribución normal con media <span class="math-inline math-nowrap" data-math="45"></span> segundos y desviación típica <span class="math-inline math-nowrap" data-math="7{,}3"></span> segundos.</p>
+      <p data-apnea-normal-2024-language="eu" hidden>Heldu batek ur azpian arnasarik hartu gabe irauten duen denborak banaketa normala du, <span class="math-inline math-nowrap" data-math="45"></span> segundoko batezbestekoarekin eta <span class="math-inline math-nowrap" data-math="7{,}3"></span> segundoko desbideratze tipikoarekin.</p>
+      <div class="statement-function math-display" data-math="X\sim N(45;\,7{,}3)" data-math-display></div>
+      <ol class="problem-list" data-apnea-normal-2024-language="es">
+        <li>Calcula el porcentaje de adultos que aguanta más de <span class="math-inline math-nowrap" data-math="57"></span> segundos.</li>
+        <li>Calcula el porcentaje que aguanta entre <span class="math-inline math-nowrap" data-math="39"></span> y <span class="math-inline math-nowrap" data-math="57"></span> segundos.</li>
+      </ol>
+      <ol class="problem-list" data-apnea-normal-2024-language="eu" hidden>
+        <li>Kalkulatu <span class="math-inline math-nowrap" data-math="57"></span> segundo baino gehiago irauten duten helduen ehunekoa.</li>
+        <li>Kalkulatu <span class="math-inline math-nowrap" data-math="39"></span> eta <span class="math-inline math-nowrap" data-math="57"></span> segundo artean irauten dutenen ehunekoa.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="level-control" aria-labelledby="level-title">
+    <p class="control-label" id="level-title">Qué quieres ver</p>
+    <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+      <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+      <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+      <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+      <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+    </div>
+  </section>
+
+  <div class="tabs" role="tablist" aria-label="Apartados de la solución">
+    <button class="tab active" type="button" role="tab" aria-selected="true" data-target="apnea-normal-2024-part-a">Apartado A</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-target="apnea-normal-2024-part-b">Apartado B</button>
+  </div>
+
+  <div class="solutions">
+    <section id="apnea-normal-2024-part-a" class="panel active" role="tabpanel">
+      <div class="section-index">01</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Apartado A</p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-apnea-normal-2024-language="es">Las tablas trabajan con la normal estándar, así que convertimos <span class="math-inline math-nowrap" data-math="57"></span> segundos en una puntuación típica. El resultado <span class="math-inline math-nowrap" data-math="z=1{,}64"></span> indica que ese tiempo está <span class="math-inline math-nowrap" data-math="1{,}64"></span> desviaciones típicas por encima de la media.</p>
+          <p class="idea-text" data-apnea-normal-2024-language="eu" hidden>Taulek normal estandarra erabiltzen dutenez, <span class="math-inline math-nowrap" data-math="57"></span> segundo puntuazio tipiko bihurtzen ditugu. <span class="math-inline math-nowrap" data-math="z=1{,}64"></span> emaitzak denbora hori batezbestekotik <span class="math-inline math-nowrap" data-math="1{,}64"></span> desbideratze tipikora dagoela adierazten du.</p>
+          <p class="idea-text" data-apnea-normal-2024-language="es">La tabla proporciona el área a la izquierda de <span class="math-inline math-nowrap" data-math="1{,}64"></span>. Como se pide «más de», necesitamos la cola derecha y restamos esa área a <span class="math-inline math-nowrap" data-math="1"></span>.</p>
+          <p class="idea-text" data-apnea-normal-2024-language="eu" hidden>Taulak <span class="math-inline math-nowrap" data-math="1{,}64"></span>-ren ezkerreko azalera ematen du. «Baino gehiago» eskatzen denez, eskuineko isatsa behar dugu, eta azalera hori <span class="math-inline math-nowrap" data-math="1"></span>-i kentzen diogu.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="P(X>57)=1-\Phi(1{,}64)" data-math-display></strong></div>
+        </div>
+
+        <div class="solution-view" hidden>
+          <p class="kicker">Apartado A</p>
+          <h2>Tipificamos y calculamos la cola derecha</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>1. Tipificación de una normal</h3>
+              <p data-apnea-normal-2024-language="es">Si <span class="math-inline math-nowrap" data-math="X\sim N(\mu;\sigma)"></span>, restar la media y dividir por la desviación típica transforma <span class="math-inline math-nowrap" data-math="X"></span> en una normal estándar.</p>
+              <p data-apnea-normal-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="X\sim N(\mu;\sigma)"></span> bada, batezbestekoa kendu eta desbideratze tipikoaz zatitzeak <span class="math-inline math-nowrap" data-math="X"></span> normal estandar bihurtzen du.</p>
+              <div class="theory-formula math-display" data-math="Z=\frac{X-\mu}{\sigma}\sim N(0;1)" data-math-display></div>
+            </div>
+            <div class="theory-topic">
+              <h3>2. Tabla acumulada y complemento</h3>
+              <p data-apnea-normal-2024-language="es">Escribimos <span class="math-inline math-nowrap" data-math="\Phi(z)=P(Z\le z)"></span>. Esta es el área a la izquierda; la cola derecha es el complemento respecto del área total <span class="math-inline math-nowrap" data-math="1"></span>.</p>
+              <p data-apnea-normal-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="\Phi(z)=P(Z\le z)"></span> idazten dugu. Hori ezkerreko azalera da; eskuineko isatsa <span class="math-inline math-nowrap" data-math="1"></span> azalera osoarekiko osagarria da.</p>
+              <div class="theory-formula math-display" data-math="P(Z>z)=1-\Phi(z)" data-math-display></div>
+            </div>
+          </aside>
+
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Identificamos los parámetros</h3>
+                <div class="math-display" data-math="\mu=45;\qquad \sigma=7{,}3" data-math-display></div>
+              </li>
+              <li>
+                <h3>Tipificamos los <span class="math-inline math-nowrap" data-math="57"></span> segundos</h3>
+                <div class="math-display" data-math="z=\frac{57-45}{7{,}3}=1{,}6438\ldots\approx1{,}64" data-math-display></div>
+              </li>
+              <li>
+                <h3>Leemos la tabla de la normal</h3>
+                <div class="math-display" data-math="\Phi(1{,}64)=P(Z\le1{,}64)=0{,}9495" data-math-display></div>
+              </li>
+              <li>
+                <h3>Tomamos el complemento</h3>
+                <div class="math-display" data-math="P(X>57)=P(Z>1{,}64)" data-math-display></div>
+                <div class="math-display" data-math="P(X>57)=1-0{,}9495=0{,}0505" data-math-display></div>
+              </li>
+              <li>
+                <h3>Pasamos de probabilidad a porcentaje</h3>
+                <div class="math-display" data-math="0{,}0505\cdot100=5{,}05\%" data-math-display></div>
+              </li>
+            </ol>
+          </div>
+
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry">
+            <div class="math-display" data-math="z=\frac{57-45}{7{,}3}\approx1{,}64" data-math-display></div>
+            <div class="math-display" data-math="P(X>57)=1-0{,}9495=0{,}0505" data-math-display></div>
+          </div>
+          <figure class="apnea-normal-2024-figure" aria-label="Cola derecha de la distribución normal a partir de 57 segundos">
+            <figcaption data-apnea-normal-2024-language="es">La zona coloreada representa a quienes superan los <span class="math-inline math-nowrap" data-math="57"></span> segundos.</figcaption>
+            <figcaption data-apnea-normal-2024-language="eu" hidden>Koloreztatutako eremuak <span class="math-inline math-nowrap" data-math="57"></span> segundo gainditzen dituztenak adierazten ditu.</figcaption>
+            <div id="apnea-normal-2024-board-a" class="jxgbox apnea-normal-2024-board" role="img" aria-label="Distribución normal con el área a la derecha de 57 segundos coloreada"></div>
+          </figure>
+          <div class="result"><span>Resultado</span><strong class="math-display" data-math="5{,}05\%" data-math-display></strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="apnea-normal-2024-part-b" class="panel" role="tabpanel" hidden>
+      <div class="section-index">02</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Apartado B</p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-apnea-normal-2024-language="es">Tipificamos los dos extremos del intervalo: <span class="math-inline math-nowrap" data-math="39"></span> segundos corresponde a <span class="math-inline math-nowrap" data-math="z\approx-0{,}82"></span>, y <span class="math-inline math-nowrap" data-math="57"></span> segundos a <span class="math-inline math-nowrap" data-math="z\approx1{,}64"></span>.</p>
+          <p class="idea-text" data-apnea-normal-2024-language="eu" hidden>Tartearen bi muturrak tipifikatzen ditugu: <span class="math-inline math-nowrap" data-math="39"></span> segundo <span class="math-inline math-nowrap" data-math="z\approx-0{,}82"></span>-ri dagokio, eta <span class="math-inline math-nowrap" data-math="57"></span> segundo <span class="math-inline math-nowrap" data-math="z\approx1{,}64"></span>-ri.</p>
+          <p class="idea-text" data-apnea-normal-2024-language="es">La probabilidad entre dos valores es el área acumulada hasta el extremo superior menos la acumulada hasta el inferior. Para el valor negativo usamos la simetría de la normal.</p>
+          <p class="idea-text" data-apnea-normal-2024-language="eu" hidden>Bi balioren arteko probabilitatea goiko muturreraino metatutako azalera ken beheko muturreraino metatutakoa da. Balio negatiborako normalaren simetria erabiltzen dugu.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="P(-0{,}82<Z<1{,}64)=\Phi(1{,}64)-\Phi(-0{,}82)" data-math-display></strong></div>
+        </div>
+
+        <div class="solution-view" hidden>
+          <p class="kicker">Apartado B</p>
+          <h2>Restamos las dos probabilidades acumuladas</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>1. Probabilidad de un intervalo</h3>
+              <p data-apnea-normal-2024-language="es">El área comprendida entre dos valores se obtiene restando sus probabilidades acumuladas.</p>
+              <p data-apnea-normal-2024-language="eu" hidden>Bi balioren arteko azalera haien probabilitate metatuak kenduz lortzen da.</p>
+              <div class="theory-formula math-display" data-math="P(a<Z<b)=\Phi(b)-\Phi(a)" data-math-display></div>
+            </div>
+            <div class="theory-topic">
+              <h3>2. Simetría de la normal estándar</h3>
+              <p data-apnea-normal-2024-language="es">Las tablas suelen dar valores positivos. La simetría respecto de cero permite transformar el acumulado de un valor negativo.</p>
+              <p data-apnea-normal-2024-language="eu" hidden>Taulek balio positiboak eman ohi dituzte. Zerorekiko simetriak balio negatibo baten metatua eraldatzeko aukera ematen du.</p>
+              <div class="theory-formula math-display" data-math="\Phi(-z)=1-\Phi(z)" data-math-display></div>
+            </div>
+          </aside>
+
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Tipificamos el límite inferior</h3>
+                <div class="math-display" data-math="z_1=\frac{39-45}{7{,}3}=-0{,}8219\ldots\approx-0{,}82" data-math-display></div>
+              </li>
+              <li>
+                <h3>Tipificamos el límite superior</h3>
+                <div class="math-display" data-math="z_2=\frac{57-45}{7{,}3}=1{,}6438\ldots\approx1{,}64" data-math-display></div>
+              </li>
+              <li>
+                <h3>Escribimos la probabilidad tipificada</h3>
+                <div class="math-display" data-math="P(39<X<57)=P(-0{,}82<Z<1{,}64)" data-math-display></div>
+              </li>
+              <li>
+                <h3>Leemos la tabla y usamos la simetría</h3>
+                <div class="math-display" data-math="\Phi(1{,}64)=0{,}9495;\qquad \Phi(0{,}82)=0{,}7939" data-math-display></div>
+                <div class="math-display" data-math="\Phi(-0{,}82)=1-0{,}7939=0{,}2061" data-math-display></div>
+              </li>
+              <li>
+                <h3>Restamos y expresamos el porcentaje</h3>
+                <div class="math-display" data-math="0{,}9495-0{,}2061=0{,}7434" data-math-display></div>
+                <div class="math-display" data-math="0{,}7434\cdot100=74{,}34\%" data-math-display></div>
+              </li>
+            </ol>
+          </div>
+
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry">
+            <div class="math-display" data-math="39\mapsto-0{,}82;\qquad 57\mapsto1{,}64" data-math-display></div>
+            <div class="math-display" data-math="P=0{,}9495-0{,}2061=0{,}7434" data-math-display></div>
+          </div>
+          <figure class="apnea-normal-2024-figure" aria-label="Área de la distribución normal entre 39 y 57 segundos">
+            <figcaption data-apnea-normal-2024-language="es">La zona coloreada recoge los tiempos comprendidos entre <span class="math-inline math-nowrap" data-math="39"></span> y <span class="math-inline math-nowrap" data-math="57"></span> segundos.</figcaption>
+            <figcaption data-apnea-normal-2024-language="eu" hidden>Koloreztatutako eremuak <span class="math-inline math-nowrap" data-math="39"></span> eta <span class="math-inline math-nowrap" data-math="57"></span> segundo arteko denborak biltzen ditu.</figcaption>
+            <div id="apnea-normal-2024-board-b" class="jxgbox apnea-normal-2024-board" role="img" aria-label="Distribución normal con el área entre 39 y 57 segundos coloreada"></div>
+          </figure>
+          <div class="result"><span>Resultado</span><strong class="math-display" data-math="74{,}34\%" data-math-display></strong></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

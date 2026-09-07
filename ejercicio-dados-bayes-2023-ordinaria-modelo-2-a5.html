@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dado arrunta edo trukatua: probabilitate osoa eta Bayes · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-dados-bayes-2023-ordinaria-modelo-2-idiomas.js?v=2023-ord-m2-a5-2" defer></script>
+  <script src="ejercicio-dados-bayes-2023-ordinaria-modelo-2-grafico.js?v=2023-ord-m2-a5-2" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page dice-bayes-2023-page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Modelo 2 · Ejercicio A5</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Probabilidad total y Bayes · 2023</p>
+        <h1 class="dice-bayes-2023-title">Dado normal o trucado: probabilidad total y Bayes</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-dice-bayes-2023-language="es">Tenemos dos dados, uno normal y otro trucado. En el trucado hay cuatro unos y dos doses. Se elige un dado al azar y se tira dos veces.</p>
+        <p data-dice-bayes-2023-language="eu" hidden>Bi dado ditugu, bat arrunta eta bestea trukatua. Dado trukatuan lau bateko eta bi biko daude. Dado bat zoriz aukeratu eta bi aldiz jaurtitzen da.</p>
+        <ol class="statement-list dice-bayes-2023-questions">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text" data-dice-bayes-2023-language="es">¿Cuál es la probabilidad de obtener un 1 en la primera tirada y un 2 en la segunda?</span>
+            <span class="statement-text" data-dice-bayes-2023-language="eu" hidden>Zein da lehen jaurtiketan 1 eta bigarrenean 2 ateratzeko probabilitatea?</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text" data-dice-bayes-2023-language="es">Sabiendo que el resultado de la primera tirada ha sido un 1 y el de la segunda un 2, calcula la probabilidad de que se haya escogido el dado trucado.</span>
+            <span class="statement-text" data-dice-bayes-2023-language="eu" hidden>Lehen jaurtiketan 1 eta bigarrenean 2 atera direla jakinda, kalkulatu dado trukatua aukeratu izanaren probabilitatea.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="dice-bayes-2023-part-a" data-target="dice-bayes-2023-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="dice-bayes-2023-part-b" data-target="dice-bayes-2023-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="dice-bayes-2023-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-dice-bayes-2023-language="es">Llamamos <span class="math-inline math-nowrap" data-math="E"></span> al suceso «sale 1 y después 2». Hay dos caminos incompatibles que producen <span class="math-inline math-nowrap" data-math="E"></span>: haber elegido el dado normal o haber elegido el trucado. Calcularemos la probabilidad del mismo resultado con cada dado.</p>
+            <p class="idea-text" data-dice-bayes-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="E"></span> deitzen diogu «lehenik 1 eta ondoren 2 ateratzea» gertaerari. <span class="math-inline math-nowrap" data-math="E"></span> sortzen duten bi bide bateraezin daude: dado arrunta edo dado trukatua aukeratu izana. Emaitza beraren probabilitatea dado bakoitzarekin kalkulatuko dugu.</p>
+            <p class="idea-text" data-dice-bayes-2023-language="es">Condicionado al dado elegido, las dos tiradas son independientes: multiplicamos sus probabilidades. Después ponderamos los dos caminos por la probabilidad <span class="math-inline math-nowrap" data-math="1/2"></span> de elegir cada dado y los sumamos.</p>
+            <p class="idea-text" data-dice-bayes-2023-language="eu" hidden>Aukeratutako dadoa finkatuta, bi jaurtiketak independenteak dira: haien probabilitateak biderkatzen ditugu. Ondoren, bi bideak dado bakoitza aukeratzeko <span class="math-inline math-nowrap" data-math="1/2"></span> probabilitateaz haztatu eta batu egiten ditugu.</p>
+            <div class="essential-geometry dice-bayes-2023-essential">
+              <div class="math-display" data-math="P(E\mid N)=\frac16\cdot\frac16=\frac1{36}" data-math-display></div>
+              <div class="math-display" data-math="P(E\mid T)=\frac46\cdot\frac26=\frac29" data-math-display></div>
+              <strong class="math-display" data-math="P(E)=\frac12\cdot\frac1{36}+\frac12\cdot\frac29=\frac18" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Probabilidad de obtener primero 1 y después 2</h2>
+
+            <figure class="dice-bayes-2023-tree-figure" aria-label="Árbol de probabilidades de la elección del dado y las dos tiradas">
+              <figcaption data-dice-bayes-2023-language="es">Las ramas naranjas forman los dos caminos que producen <span class="math-inline math-nowrap" data-math="E=(1,2)"></span>. Sus probabilidades conjuntas se calculan inmediatamente después del árbol.</figcaption>
+              <figcaption data-dice-bayes-2023-language="eu" hidden>Adar laranjek <span class="math-inline math-nowrap" data-math="E=(1,2)"></span> sortzen duten bi bideak osatzen dituzte. Haien baterako probabilitateak zuhaitzaren ondoren kalkulatzen dira.</figcaption>
+              <div id="dice-bayes-2023-tree-board" class="jxgbox dice-bayes-2023-tree-board" role="img" aria-label="Árbol completo con los caminos normal uno dos y trucado uno dos destacados"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Regla del producto</h3>
+                <p data-dice-bayes-2023-language="es">Una vez fijado el dado, una tirada no modifica las probabilidades de la siguiente. Para obtener una secuencia concreta multiplicamos las probabilidades de sus resultados.</p>
+                <p data-dice-bayes-2023-language="eu" hidden>Dadoa finkatu ondoren, jaurtiketa batek ez ditu hurrengoaren probabilitateak aldatzen. Segida jakin bat lortzeko, haren emaitzen probabilitateak biderkatzen ditugu.</p>
+                <div class="theory-formula math-display" data-math="P(A\cap B\mid D)=P(A\mid D)\,P(B\mid D)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Teorema de la probabilidad total</h3>
+                <p data-dice-bayes-2023-language="es">Si un suceso puede ocurrir después de elegir uno de varios casos incompatibles, su probabilidad es la suma de las probabilidades de todos esos caminos.</p>
+                <p data-dice-bayes-2023-language="eu" hidden>Gertaera bat kasu bateraezinetako bat aukeratu ondoren gerta badaiteke, haren probabilitatea bide guztien probabilitateen batura da.</p>
+                <div class="theory-formula math-display" data-math="P(N\cap E)=P(N)P(E\mid N)" data-math-display></div>
+                <div class="theory-formula math-display" data-math="P(T\cap E)=P(T)P(E\mid T)" data-math-display></div>
+                <div class="theory-formula math-display" data-math="P(E)=P(N\cap E)+P(T\cap E)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Definimos los sucesos y las probabilidades iniciales</h3>
+                  <p data-dice-bayes-2023-language="es">Usaremos <span class="math-inline math-nowrap" data-math="N"></span> para el dado normal, <span class="math-inline math-nowrap" data-math="T"></span> para el trucado y <span class="math-inline math-nowrap" data-math="E"></span> para la secuencia pedida. Como el dado se elige al azar, ambos tienen la misma probabilidad.</p>
+                  <p data-dice-bayes-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="N"></span> dado arruntarentzat, <span class="math-inline math-nowrap" data-math="T"></span> dado trukatuarentzat eta <span class="math-inline math-nowrap" data-math="E"></span> eskatutako segidarentzat erabiliko ditugu. Dadoa zoriz aukeratzen denez, biek probabilitate bera dute.</p>
+                  <div class="dice-bayes-2023-work">
+                    <div class="math-display" data-math="E=\{\text{primera tirada }1,\ \text{segunda tirada }2\}" data-math-eu="E=\{\text{lehen jaurtiketa }1,\ \text{bigarren jaurtiketa }2\}" data-math-display></div>
+                    <strong class="math-display" data-math="P(N)=P(T)=\frac12" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos el camino del dado normal</h3>
+                  <p data-dice-bayes-2023-language="es">En un dado normal, tanto el 1 como el 2 ocupan una de las seis caras. Multiplicamos porque deben ocurrir los dos resultados en ese orden.</p>
+                  <p data-dice-bayes-2023-language="eu" hidden>Dado arrunt batean, bai 1ak bai 2ak seina aurpegietako bana hartzen dute. Biderkatu egiten dugu, bi emaitzak ordena horretan gertatu behar direlako.</p>
+                  <div class="dice-bayes-2023-work">
+                    <div class="math-display" data-math="P(1\mid N)=\frac16,\qquad P(2\mid N)=\frac16" data-math-display></div>
+                    <strong class="math-display" data-math="P(E\mid N)=\frac16\cdot\frac16=\frac1{36}" data-math-display></strong>
+                    <div class="math-display" data-math="P(N\cap E)=\frac12\cdot\frac1{36}=\frac1{72}" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos el camino del dado trucado</h3>
+                  <p data-dice-bayes-2023-language="es">El dado trucado tiene cuatro caras con 1 y dos caras con 2. De nuevo multiplicamos las probabilidades de las dos tiradas.</p>
+                  <p data-dice-bayes-2023-language="eu" hidden>Dado trukatuak lau aurpegi ditu 1arekin eta bi aurpegi 2arekin. Berriro, bi jaurtiketen probabilitateak biderkatzen ditugu.</p>
+                  <div class="dice-bayes-2023-work">
+                    <div class="math-display" data-math="P(1\mid T)=\frac46,\qquad P(2\mid T)=\frac26" data-math-display></div>
+                    <strong class="math-display" data-math="P(E\mid T)=\frac46\cdot\frac26=\frac8{36}=\frac29" data-math-display></strong>
+                    <div class="math-display" data-math="P(T\cap E)=\frac12\cdot\frac29=\frac19" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Sumamos los dos caminos</h3>
+                  <p data-dice-bayes-2023-language="es">Los sucesos «normal y <span class="math-inline math-nowrap" data-math="E"></span>» y «trucado y <span class="math-inline math-nowrap" data-math="E"></span>» son incompatibles y reúnen todas las formas de obtener la secuencia.</p>
+                  <p data-dice-bayes-2023-language="eu" hidden>«Arrunta eta <span class="math-inline math-nowrap" data-math="E"></span>» eta «trukatua eta <span class="math-inline math-nowrap" data-math="E"></span>» gertaerak bateraezinak dira, eta segida lortzeko modu guztiak biltzen dituzte.</p>
+                  <div class="dice-bayes-2023-work">
+                    <div class="math-display" data-math="P(E)=P(N\cap E)+P(T\cap E)" data-math-display></div>
+                    <div class="math-display" data-math="P(E)=\frac1{72}+\frac19" data-math-display></div>
+                    <div class="math-display" data-math="P(E)=\frac1{72}+\frac8{72}=\frac9{72}" data-math-display></div>
+                    <strong class="math-display" data-math="P(E)=\frac18" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry dice-bayes-2023-essential">
+              <div class="math-display" data-math="P(E\mid N)=\frac16\cdot\frac16=\frac1{36}" data-math-display></div>
+              <div class="math-display" data-math="P(E\mid T)=\frac46\cdot\frac26=\frac29" data-math-display></div>
+              <div class="math-display" data-math="P(E)=\frac12\cdot\frac1{36}+\frac12\cdot\frac29" data-math-display></div>
+              <strong class="math-display" data-math="P(E)=\frac1{72}+\frac8{72}=\frac18" data-math-display></strong>
+            </div>
+
+            <div class="result result-long dice-bayes-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(E)=\frac18=0{,}125" data-math-display></strong>
+              <p data-dice-bayes-2023-language="es">La probabilidad de obtener primero 1 y después 2 es del <span class="math-inline math-nowrap" data-math="12{,}5\%"></span>.</p>
+              <p data-dice-bayes-2023-language="eu" hidden>Lehenik 1 eta ondoren 2 ateratzeko probabilitatea <span class="math-inline math-nowrap" data-math="\%12{,}5"></span> da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dice-bayes-2023-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-dice-bayes-2023-language="es">Ahora conocemos el resultado <span class="math-inline math-nowrap" data-math="E"></span> y preguntamos por su causa: qué dado se eligió. Usamos Bayes para comparar el peso del camino «trucado y <span class="math-inline math-nowrap" data-math="E"></span>» con la probabilidad total de <span class="math-inline math-nowrap" data-math="E"></span>.</p>
+            <p class="idea-text" data-dice-bayes-2023-language="eu" hidden>Orain <span class="math-inline math-nowrap" data-math="E"></span> emaitza ezagutzen dugu, eta haren kausaz galdetzen dugu: zein dado aukeratu zen. Bayes erabiltzen dugu «trukatua eta <span class="math-inline math-nowrap" data-math="E"></span>» bidearen pisua <span class="math-inline math-nowrap" data-math="E"></span>-ren probabilitate osoarekin konparatzeko.</p>
+            <p class="idea-text" data-dice-bayes-2023-language="es">El camino trucado aporta <span class="math-inline math-nowrap" data-math="1/9=8/72"></span> y el normal solo <span class="math-inline math-nowrap" data-math="1/72"></span>. Entre los nueve setentaidosavos que forman <span class="math-inline math-nowrap" data-math="E"></span>, ocho proceden del dado trucado.</p>
+            <p class="idea-text" data-dice-bayes-2023-language="eu" hidden>Bide trukatuak <span class="math-inline math-nowrap" data-math="1/9=8/72"></span> ematen du, eta arruntak <span class="math-inline math-nowrap" data-math="1/72"></span> bakarrik. <span class="math-inline math-nowrap" data-math="E"></span> osatzen duten bederatzi hirurogeita hamabirenetatik, zortzi dado trukatutik datoz.</p>
+            <div class="essential-geometry dice-bayes-2023-essential">
+              <div class="math-display" data-math="P(T\cap E)=\frac12\cdot\frac46\cdot\frac26=\frac19" data-math-display></div>
+              <strong class="math-display" data-math="P(T\mid E)=\frac{P(T\cap E)}{P(E)}=\frac{1/9}{1/8}=\frac89" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Probabilidad de que se eligiera el dado trucado</h2>
+
+            <figure class="dice-bayes-2023-posterior-figure" aria-label="Reparto del suceso observado entre el dado normal y el trucado">
+              <figcaption data-dice-bayes-2023-language="es">Al restringirnos a los casos en que ocurre <span class="math-inline math-nowrap" data-math="E"></span>, una parte procede del dado normal y ocho del trucado.</figcaption>
+              <figcaption data-dice-bayes-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="E"></span> gertatzen den kasuetara mugatzean, zati bat dado arruntetik dator eta zortzi dado trukatutik.</figcaption>
+              <div class="dice-bayes-2023-posterior" role="img" aria-label="Una novena parte normal y ocho novenas partes trucado">
+                <div class="dice-bayes-2023-posterior-normal">
+                  <strong class="math-inline" data-math="N"></strong>
+                  <span class="math-inline" data-math="\frac19"></span>
+                </div>
+                <div class="dice-bayes-2023-posterior-tricked">
+                  <strong class="math-inline" data-math="T"></strong>
+                  <span class="math-inline" data-math="\frac89"></span>
+                </div>
+              </div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Probabilidad condicionada</h3>
+                <p data-dice-bayes-2023-language="es">Al saber que ha ocurrido <span class="math-inline math-nowrap" data-math="E"></span>, nuestro nuevo universo queda formado solo por los casos compatibles con <span class="math-inline math-nowrap" data-math="E"></span>. El numerador selecciona, dentro de ellos, los que además proceden del dado trucado.</p>
+                <p data-dice-bayes-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="E"></span> gertatu dela jakitean, gure unibertso berria <span class="math-inline math-nowrap" data-math="E"></span>-rekin bateragarriak diren kasuek bakarrik osatzen dute. Zenbakitzaileak, horien artean, dado trukatutik datozenak hautatzen ditu.</p>
+                <div class="theory-formula math-display" data-math="P(T\mid E)=\frac{P(T\cap E)}{P(E)}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Teorema de Bayes</h3>
+                <p data-dice-bayes-2023-language="es">La intersección del numerador puede escribirse como la probabilidad inicial de la causa multiplicada por la probabilidad del resultado bajo esa causa.</p>
+                <p data-dice-bayes-2023-language="eu" hidden>Zenbakitzaileko ebakidura kausaren hasierako probabilitatea bider kausa horren pean emaitzak duen probabilitatea gisa idatz daiteke.</p>
+                <div class="theory-formula math-display" data-math="P(T\mid E)=\frac{P(T)P(E\mid T)}{P(E)}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Normalización de los caminos</h3>
+                <p data-dice-bayes-2023-language="es">Los pesos de los caminos que producen <span class="math-inline math-nowrap" data-math="E"></span> son <span class="math-inline math-nowrap" data-math="1/72"></span> y <span class="math-inline math-nowrap" data-math="8/72"></span>. Al dividir cada peso entre su suma, obtenemos las probabilidades condicionadas <span class="math-inline math-nowrap" data-math="1/9"></span> y <span class="math-inline math-nowrap" data-math="8/9"></span>.</p>
+                <p data-dice-bayes-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="E"></span> sortzen duten bideen pisuak <span class="math-inline math-nowrap" data-math="1/72"></span> eta <span class="math-inline math-nowrap" data-math="8/72"></span> dira. Pisu bakoitza haien baturaz zatitzean, <span class="math-inline math-nowrap" data-math="1/9"></span> eta <span class="math-inline math-nowrap" data-math="8/9"></span> probabilitate baldintzatuak lortzen ditugu.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Recuperamos la probabilidad del resultado observado</h3>
+                  <p data-dice-bayes-2023-language="es">En el apartado anterior hemos sumado los dos caminos que producen <span class="math-inline math-nowrap" data-math="E"></span>.</p>
+                  <p data-dice-bayes-2023-language="eu" hidden>Aurreko atalean, <span class="math-inline math-nowrap" data-math="E"></span> sortzen duten bi bideak batu ditugu.</p>
+                  <div class="dice-bayes-2023-work">
+                    <strong class="math-display" data-math="P(E)=\frac18=\frac9{72}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos el camino favorable del numerador</h3>
+                  <p data-dice-bayes-2023-language="es">Para que se cumplan simultáneamente <span class="math-inline math-nowrap" data-math="T"></span> y <span class="math-inline math-nowrap" data-math="E"></span>, hay que elegir el dado trucado, obtener 1 y después obtener 2.</p>
+                  <p data-dice-bayes-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="T"></span> eta <span class="math-inline math-nowrap" data-math="E"></span> aldi berean betetzeko, dado trukatua aukeratu, 1 atera eta ondoren 2 atera behar da.</p>
+                  <div class="dice-bayes-2023-work">
+                    <div class="math-display" data-math="P(T\cap E)=P(T)P(E\mid T)" data-math-display></div>
+                    <div class="math-display" data-math="P(T\cap E)=\frac12\cdot\frac46\cdot\frac26" data-math-display></div>
+                    <strong class="math-display" data-math="P(T\cap E)=\frac19=\frac8{72}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Aplicamos la probabilidad condicionada</h3>
+                  <p data-dice-bayes-2023-language="es">Dividimos el peso del camino trucado entre la probabilidad total del resultado observado.</p>
+                  <p data-dice-bayes-2023-language="eu" hidden>Bide trukatuaren pisua behatutako emaitzaren probabilitate osoaz zatitzen dugu.</p>
+                  <div class="dice-bayes-2023-work">
+                    <div class="math-display" data-math="P(T\mid E)=\frac{P(T\cap E)}{P(E)}" data-math-display></div>
+                    <div class="math-display" data-math="P(T\mid E)=\frac{1/9}{1/8}" data-math-display></div>
+                    <div class="math-display" data-math="P(T\mid E)=\frac19\cdot\frac81" data-math-display></div>
+                    <strong class="math-display" data-math="P(T\mid E)=\frac89" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Interpretamos el resultado</h3>
+                  <p data-dice-bayes-2023-language="es">Aunque ambos dados eran igual de probables antes de observar las tiradas, la secuencia <span class="math-inline math-nowrap" data-math="(1,2)"></span> es ocho veces más probable por el camino trucado. Por eso el dato observado eleva su probabilidad posterior a <span class="math-inline math-nowrap" data-math="8/9"></span>.</p>
+                  <p data-dice-bayes-2023-language="eu" hidden>Jaurtiketak ikusi aurretik bi dadoak probabilitate berekoak baziren ere, <span class="math-inline math-nowrap" data-math="(1,2)"></span> segida zortzi aldiz probableagoa da bide trukatutik. Horregatik, behatutako datuak haren ondorengo probabilitatea <span class="math-inline math-nowrap" data-math="8/9"></span>-ra igotzen du.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry dice-bayes-2023-essential">
+              <div class="math-display" data-math="P(E)=\frac18" data-math-display></div>
+              <div class="math-display" data-math="P(T\cap E)=\frac12\cdot\frac46\cdot\frac26=\frac19" data-math-display></div>
+              <strong class="math-display" data-math="P(T\mid E)=\frac{1/9}{1/8}=\frac89" data-math-display></strong>
+            </div>
+
+            <div class="result result-long dice-bayes-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(T\mid E)=\frac89\approx0{,}8889" data-math-display></strong>
+              <p data-dice-bayes-2023-language="es">La probabilidad de que se eligiera el dado trucado es aproximadamente del <span class="math-inline math-nowrap" data-math="88{,}89\%"></span>.</p>
+              <p data-dice-bayes-2023-language="eu" hidden>Dado trukatua aukeratu izanaren probabilitatea gutxi gorabehera <span class="math-inline math-nowrap" data-math="\%88{,}89"></span> da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

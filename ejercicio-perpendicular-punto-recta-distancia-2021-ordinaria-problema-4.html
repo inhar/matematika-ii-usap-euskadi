@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Puntutik zuzenerako perpendikularra · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-perpendicular-punto-recta-distancia-2021-ordinaria-idiomas.js?v=2021-ord-p4e" defer></script>
+  <script src="ejercicio-perpendicular-punto-recta-distancia-2021-ordinaria-grafico.js?v=2021-ord-p4a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2021 · Ordinaria · Problema 4</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Geometría en el espacio · Rectas y distancias · 2021</p>
+        <h1>Perpendicular desde un punto a una recta</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Se consideran el punto y la recta:</p>
+        <div class="perpendicular-2021-statement">
+          <span class="math-inline" data-math="P(-2,1,0)"></span>
+          <div class="geometry-object">
+            <span class="math-inline" data-math="r\colon"></span>
+            <div class="equation-system compact-system perpendicular-2021-system math-display" aria-label="Recta r en ecuaciones paramétricas" data-math="\begin{cases}x=1-2t\\y=1+t\\z=t\end{cases}" data-math-display></div>
+          </div>
+        </div>
+        <p class="perpendicular-2021-task perpendicular-2021-task-es" lang="es">La recta <span class="math-inline math-nowrap" data-math="s"></span> debe pasar por <span class="math-inline math-nowrap" data-math="P"></span> y cortar perpendicularmente a <span class="math-inline math-nowrap" data-math="r"></span>. Hallar sus ecuaciones paramétricas y la distancia desde <span class="math-inline math-nowrap" data-math="P"></span> al punto de corte de ambas rectas.</p>
+        <p class="perpendicular-2021-task perpendicular-2021-task-eu" lang="eu"><span class="math-inline math-nowrap" data-math="s"></span> zuzenak <span class="math-inline math-nowrap" data-math="P"></span> puntutik igaro eta <span class="math-inline math-nowrap" data-math="r"></span> zuzena perpendikularki ebaki behar du. Aurkitu haren ekuazio parametrikoak eta <span class="math-inline math-nowrap" data-math="P"></span> puntutik bi zuzenen ebakidura-punturainoko distantzia.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema 4</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">El punto de corte buscado, <span class="math-inline math-nowrap" data-math="Q"></span>, está sobre la recta <span class="math-inline math-nowrap" data-math="r"></span>; por tanto, sus coordenadas dependen del parámetro de esa recta. El vector que une <span class="math-inline math-nowrap" data-math="P"></span> con <span class="math-inline math-nowrap" data-math="Q"></span> debe ser perpendicular al vector director de <span class="math-inline math-nowrap" data-math="r"></span>.</p>
+            <p class="idea-text">Impondremos esa perpendicularidad con un producto escalar igual a cero. Así hallaremos primero <span class="math-inline math-nowrap" data-math="Q"></span>. Después, <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}"></span> será el vector director de la recta pedida, y su módulo será la distancia solicitada.</p>
+            <div class="essential-geometry perpendicular-2021-idea">
+              <div class="math-display" data-math="Q(t)=(1-2t,1+t,t)" data-math-display></div>
+              <strong class="math-display" data-math="\overrightarrow{PQ}\cdot v_r=0" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema 4</p>
+            <h2 id="solution-title">Pie de la perpendicular, recta y distancia</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Punto genérico de una recta paramétrica</h3>
+                <p>Cada valor del parámetro produce un punto de la recta. Mantener el parámetro permite representar el punto de corte todavía desconocido.</p>
+                <div class="theory-formula math-display" data-math="Q(t)=Q_0+t\,v_r" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Perpendicularidad de vectores</h3>
+                <p>Dos vectores no nulos son perpendiculares exactamente cuando su producto escalar vale cero.</p>
+                <div class="theory-formula math-display" data-math="u\perp v\Longleftrightarrow u\cdot v=0" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Recta definida por un punto y una dirección</h3>
+                <p>Una recta queda determinada por uno de sus puntos y un vector director. El parámetro recorre todos sus puntos.</p>
+                <div class="theory-formula math-display" data-math="s\colon X=P+\lambda d_s" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Distancia entre dos puntos</h3>
+                <p>La distancia es el módulo del vector que une los puntos. En este problema, el segmento perpendicular es además la distancia mínima desde el punto a la recta.</p>
+                <div class="theory-formula math-display" data-math="d(P,Q)=\lVert\overrightarrow{PQ}\rVert" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Leemos la dirección de la recta dada</h3>
+                  <p>Los coeficientes del parámetro forman el vector director de <span class="math-inline math-nowrap" data-math="r"></span>.</p>
+                  <div class="perpendicular-2021-reading">
+                    <div class="math-display" data-math="r\colon (x,y,z)=(1,1,0)+t(-2,1,1)" data-math-display></div>
+                    <strong class="math-display" data-math="v_r=(-2,1,1)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Representamos el punto de corte sobre la recta</h3>
+                  <p><span class="math-inline math-nowrap" data-math="Q"></span> es el punto donde se cortan las dos rectas. Como pertenece a <span class="math-inline math-nowrap" data-math="r"></span>, conserva sus ecuaciones paramétricas.</p>
+                  <div class="equation perpendicular-2021-q math-display" data-math="Q(t)=(1-2t,1+t,t)" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Construimos el vector perpendicular</h3>
+                  <p>A las coordenadas de <span class="math-inline math-nowrap" data-math="Q"></span> les restamos las de <span class="math-inline math-nowrap" data-math="P"></span>.</p>
+                  <div class="perpendicular-2021-vector-work">
+                    <div class="math-display" data-math="\overrightarrow{PQ}=Q-P" data-math-display></div>
+                    <div class="math-display" data-math="=(1-2t+2,\,1+t-1,\,t-0)" data-math-display></div>
+                    <strong class="math-display" data-math="\overrightarrow{PQ}=(3-2t,t,t)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Imponemos el producto escalar nulo</h3>
+                  <p>El segmento que une <span class="math-inline math-nowrap" data-math="P"></span> con <span class="math-inline math-nowrap" data-math="Q"></span> debe ser perpendicular a la dirección de <span class="math-inline math-nowrap" data-math="r"></span>.</p>
+                  <div class="perpendicular-2021-dot-work">
+                    <div class="math-display" data-math="(3-2t,t,t)\cdot(-2,1,1)=0" data-math-display></div>
+                    <div class="math-display" data-math="-2(3-2t)+t+t=0" data-math-display></div>
+                    <div class="math-display" data-math="-6+6t=0" data-math-display></div>
+                    <strong class="math-display" data-math="t=1" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos el punto de corte y la nueva dirección</h3>
+                  <p>En la recta dada sustituimos <span class="math-inline math-nowrap" data-math="t=1"></span> y calculamos el vector que parte de <span class="math-inline math-nowrap" data-math="P"></span>.</p>
+                  <div class="perpendicular-2021-q-work">
+                    <div class="math-display" data-math="Q=(1-2,1+1,1)=(-1,2,1)" data-math-display></div>
+                    <div class="math-display" data-math="\overrightarrow{PQ}=(-1,2,1)-(-2,1,0)" data-math-display></div>
+                    <strong class="math-display" data-math="\overrightarrow{PQ}=(1,1,1)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Escribimos las ecuaciones de la recta pedida</h3>
+                  <p><span class="math-inline math-nowrap" data-math="s"></span> es la recta que pasa por <span class="math-inline math-nowrap" data-math="P"></span> y tiene dirección <span class="math-inline math-nowrap" data-math="\overrightarrow{PQ}"></span>. Usamos <span class="math-inline math-nowrap" data-math="\lambda"></span> para no confundir su parámetro con el de <span class="math-inline math-nowrap" data-math="r"></span>.</p>
+                  <div class="perpendicular-2021-line-work">
+                    <div class="math-display" data-math="s\colon (x,y,z)=(-2,1,0)+\lambda(1,1,1)" data-math-display></div>
+                    <strong class="math-display" data-math="s\colon\begin{cases}x=-2+\lambda\\y=1+\lambda\\z=\lambda\end{cases}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la distancia</h3>
+                  <p>La distancia pedida es la longitud del segmento perpendicular <span class="math-inline math-nowrap" data-math="PQ"></span>.</p>
+                  <div class="perpendicular-2021-distance-work">
+                    <div class="math-display" data-math="d(P,Q)=\lVert\overrightarrow{PQ}\rVert" data-math-display></div>
+                    <div class="math-display" data-math="=\sqrt{1^2+1^2+1^2}" data-math-display></div>
+                    <strong class="math-display" data-math="d(P,Q)=\sqrt3" data-math-display></strong>
+                  </div>
+
+                  <figure class="perpendicular-2021-figure" aria-label="Recta s que pasa por P y corta perpendicularmente a la recta r en Q">
+                    <figcaption class="perpendicular-2021-caption perpendicular-2021-caption-es" lang="es"><span class="math-inline math-nowrap" data-math="Q"></span> es el pie de la perpendicular. El segmento <span class="math-inline math-nowrap" data-math="PQ"></span> es la distancia desde <span class="math-inline math-nowrap" data-math="P"></span> hasta <span class="math-inline math-nowrap" data-math="r"></span>.</figcaption>
+                    <figcaption class="perpendicular-2021-caption perpendicular-2021-caption-eu" lang="eu"><span class="math-inline math-nowrap" data-math="Q"></span> perpendikularraren oina da. <span class="math-inline math-nowrap" data-math="PQ"></span> segmentua <span class="math-inline math-nowrap" data-math="P"></span> puntutik <span class="math-inline math-nowrap" data-math="r"></span> zuzenerainoko distantzia da.</figcaption>
+                    <div id="perpendicular-2021-board" class="jxgbox perpendicular-2021-board" role="img" aria-label="Rectas r y s perpendiculares, punto P exterior y punto de corte Q"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry perpendicular-2021-essential">
+              <div class="math-display" data-math="Q(t)=(1-2t,1+t,t)" data-math-display></div>
+              <div class="math-display" data-math="\overrightarrow{PQ}=(3-2t,t,t)" data-math-display></div>
+              <div class="math-display" data-math="\overrightarrow{PQ}\cdot(-2,1,1)=0\Rightarrow t=1" data-math-display></div>
+              <strong class="math-display" data-math="Q=(-1,2,1),\qquad \overrightarrow{PQ}=(1,1,1)" data-math-display></strong>
+            </div>
+
+            <div class="result result-long geometry-result perpendicular-2021-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="math-display" data-math="s\colon\begin{cases}x=-2+\lambda\\y=1+\lambda\\z=\lambda\end{cases}" data-math-display></span>
+                <span class="math-display" data-math="d(P,Q)=\sqrt3" data-math-display></span>
+              </strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

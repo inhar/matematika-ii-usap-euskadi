@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funtzio polinomiko baten monotonia eta muturrak · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-estudio-cuartica-2021-ordinaria-idiomas.js?v=2021-ord-p5a" defer></script>
+  <script src="ejercicio-estudio-cuartica-2021-ordinaria-grafico.js?v=2021-ord-p5a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2021 · Ordinaria · Problema 5</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Monotonía y extremos · 2021</p>
+        <h1>Estudio de una función polinómica</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Estudiar los máximos, los mínimos y los intervalos de crecimiento y decrecimiento de la función:</p>
+        <div class="equation quartic-2021-statement math-display" data-math="f(x)=5+8x^2-x^4" data-math-display></div>
+        <p>Representar su gráfica.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema 5</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">La derivada nos dice dónde crece y dónde decrece la función. Primero la factorizaremos para localizar sus ceros: esos puntos dividen la recta real en intervalos dentro de los cuales el signo de la derivada no cambia.</p>
+            <p class="idea-text">Después leeremos los cambios de signo. Un paso de positivo a negativo produce un máximo; un paso de negativo a positivo, un mínimo. La simetría de la función y su comportamiento en los extremos completarán la representación.</p>
+            <div class="essential-geometry quartic-2021-idea">
+              <div class="math-display" data-math="f'(x)=4x(2-x)(2+x)" data-math-display></div>
+              <strong class="math-display" data-math="f'(x)=0\Longleftrightarrow x=-2,\ 0,\ 2" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema 5</p>
+            <h2 id="solution-title">Monotonía, extremos y representación</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Simetría de una función par</h3>
+                <p>Si al cambiar el signo de la variable la expresión no cambia, la función es par. Su gráfica es simétrica respecto del eje vertical.</p>
+                <div class="theory-formula math-display" data-math="f(-x)=f(x)\Longrightarrow f\text{ es par}" data-math-eu="f(-x)=f(x)\Longrightarrow f\text{ bikoitia da}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Signo de la derivada y monotonía</h3>
+                <p>La primera derivada mide la variación local de la función. Su signo permite decidir si la gráfica sube o baja al avanzar hacia la derecha.</p>
+                <div class="theory-formula quartic-2021-theory-sign">
+                  <span class="math-inline" data-math="f'(x)>0\Longrightarrow f\text{ crece}" data-math-eu="f'(x)>0\Longrightarrow f\text{ gorakorra da}"></span>
+                  <span class="math-inline" data-math="f'(x)<0\Longrightarrow f\text{ decrece}" data-math-eu="f'(x)<0\Longrightarrow f\text{ beherakorra da}"></span>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Clasificación mediante el cambio de signo</h3>
+                <p>Un cero de la derivada es un candidato a extremo. El cambio de signo alrededor de ese punto indica si se trata de un máximo o de un mínimo.</p>
+                <div class="theory-formula quartic-2021-theory-sign">
+                  <span class="math-inline" data-math="+\longrightarrow-\Longrightarrow\text{ máximo local}" data-math-eu="+\longrightarrow-\Longrightarrow\text{ maximo lokala}"></span>
+                  <span class="math-inline" data-math="-\longrightarrow+\Longrightarrow\text{ mínimo local}" data-math-eu="-\longrightarrow+\Longrightarrow\text{ minimo lokala}"></span>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Extremos absolutos y comportamiento final</h3>
+                <p>Para decidir si un extremo es absoluto también hay que observar qué sucede cuando la variable crece en valor absoluto. En un polinomio domina el término de mayor grado.</p>
+                <div class="theory-formula math-display" data-math="\lim_{x\to\pm\infty}(5+8x^2-x^4)=-\infty" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Comprobamos la simetría</h3>
+                  <p>Sustituimos la variable por su opuesta. Las potencias pares eliminan el signo negativo.</p>
+                  <div class="quartic-2021-work">
+                    <div class="math-display" data-math="f(-x)=5+8(-x)^2-(-x)^4" data-math-display></div>
+                    <div class="math-display" data-math="f(-x)=5+8x^2-x^4=f(x)" data-math-display></div>
+                    <strong class="math-display" data-math="f\text{ es par}" data-math-eu="f\text{ bikoitia da}" data-math-display></strong>
+                  </div>
+                  <p>Por tanto, la gráfica será simétrica respecto del eje de ordenadas.</p>
+                </li>
+
+                <li>
+                  <h3>Derivamos y factorizamos</h3>
+                  <p>Derivamos término a término y extraemos el factor común. Después usamos una diferencia de cuadrados.</p>
+                  <div class="quartic-2021-work">
+                    <div class="math-display" data-math="f'(x)=0+16x-4x^3" data-math-display></div>
+                    <div class="math-display" data-math="f'(x)=4x(4-x^2)" data-math-display></div>
+                    <strong class="math-display" data-math="f'(x)=4x(2-x)(2+x)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos los puntos críticos</h3>
+                  <p>Un producto es cero cuando alguno de sus factores es cero.</p>
+                  <div class="quartic-2021-work quartic-2021-critical-work">
+                    <div class="math-display" data-math="4x(2-x)(2+x)=0" data-math-display></div>
+                    <div class="quartic-2021-roots">
+                      <span class="math-inline" data-math="x=0;"></span>
+                      <span class="math-inline" data-math="2-x=0\Rightarrow x=2;"></span>
+                      <span class="math-inline" data-math="2+x=0\Rightarrow x=-2."></span>
+                    </div>
+                    <strong class="math-display" data-math="x=-2,\quad x=0,\quad x=2" data-math-display></strong>
+                  </div>
+                  <p>Estos tres valores separan cuatro intervalos en los que la derivada conserva su signo.</p>
+                </li>
+
+                <li>
+                  <h3>Determinamos el signo de la derivada</h3>
+                  <p>Elegimos un valor sencillo dentro de cada intervalo y lo sustituimos en la forma factorizada de la derivada.</p>
+                  <div class="quartic-2021-sign-checks">
+                    <div>
+                      <span class="math-inline" data-math="x=-3\in(-\infty,-2)"></span>
+                      <strong class="math-inline" data-math="f'(-3)=4(-3)(4-9)=60>0"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="x=-1\in(-2,0)"></span>
+                      <strong class="math-inline" data-math="f'(-1)=4(-1)(4-1)=-12<0"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="x=1\in(0,2)"></span>
+                      <strong class="math-inline" data-math="f'(1)=4(1)(4-1)=12>0"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="x=3\in(2,+\infty)"></span>
+                      <strong class="math-inline" data-math="f'(3)=4(3)(4-9)=-60<0"></strong>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Leemos los intervalos de monotonía</h3>
+                  <p>Derivada positiva significa crecimiento; derivada negativa, decrecimiento.</p>
+                  <div class="quartic-2021-monotonicity">
+                    <div>
+                      <span class="math-inline" data-math="(-\infty,-2)"></span>
+                      <strong class="math-inline" data-math="f'(x)>0\quad\uparrow"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="(-2,0)"></span>
+                      <strong class="math-inline" data-math="f'(x)<0\quad\downarrow"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="(0,2)"></span>
+                      <strong class="math-inline" data-math="f'(x)>0\quad\uparrow"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="(2,+\infty)"></span>
+                      <strong class="math-inline" data-math="f'(x)<0\quad\downarrow"></strong>
+                    </div>
+                  </div>
+                  <div class="quartic-2021-work">
+                    <strong class="math-display" data-math="f\text{ crece en }(-\infty,-2)\cup(0,2)" data-math-eu="f\text{ gorakorra da }(-\infty,-2)\cup(0,2)\text{ tarteetan}" data-math-display></strong>
+                    <strong class="math-display" data-math="f\text{ decrece en }(-2,0)\cup(2,+\infty)" data-math-eu="f\text{ beherakorra da }(-2,0)\cup(2,+\infty)\text{ tarteetan}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Clasificamos los extremos y calculamos sus ordenadas</h3>
+                  <p>En cada punto crítico observamos cómo cambia el signo de la derivada y evaluamos la función.</p>
+                  <div class="quartic-2021-extrema">
+                    <div>
+                      <span class="math-inline" data-math="x=-2\colon\quad +\to-"></span>
+                      <strong class="math-inline" data-math="f(-2)=5+8\cdot4-16=21"></strong>
+                      <span>Máximo en <span class="math-inline math-nowrap" data-math="(-2,21)"></span>.</span>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="x=0\colon\quad -\to+"></span>
+                      <strong class="math-inline" data-math="f(0)=5"></strong>
+                      <span>Mínimo local en <span class="math-inline math-nowrap" data-math="(0,5)"></span>.</span>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="x=2\colon\quad +\to-"></span>
+                      <strong class="math-inline" data-math="f(2)=5+8\cdot4-16=21"></strong>
+                      <span>Máximo en <span class="math-inline math-nowrap" data-math="(2,21)"></span>.</span>
+                    </div>
+                  </div>
+                  <p>Como el término dominante es negativo, la función tiende a menos infinito en ambos extremos. Por eso los dos máximos son absolutos y no existe mínimo absoluto.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry quartic-2021-essential">
+              <div class="math-display" data-math="f'(x)=4x(2-x)(2+x)" data-math-display></div>
+              <div class="math-display" data-math="f'(x)=0\Longleftrightarrow x=-2,\ 0,\ 2" data-math-display></div>
+              <div class="quartic-2021-monotonicity quartic-2021-essential-signs">
+                <div><span class="math-inline" data-math="(-\infty,-2)"></span><strong class="math-inline" data-math="+\quad\uparrow"></strong></div>
+                <div><span class="math-inline" data-math="(-2,0)"></span><strong class="math-inline" data-math="-\quad\downarrow"></strong></div>
+                <div><span class="math-inline" data-math="(0,2)"></span><strong class="math-inline" data-math="+\quad\uparrow"></strong></div>
+                <div><span class="math-inline" data-math="(2,+\infty)"></span><strong class="math-inline" data-math="-\quad\downarrow"></strong></div>
+              </div>
+              <strong class="math-display" data-math="\text{Máximos absolutos: }(-2,21)\text{ y }(2,21)" data-math-eu="\text{Maximo absolutuak: }(-2,21)\text{ eta }(2,21)" data-math-display></strong>
+              <strong class="math-display" data-math="\text{Mínimo local: }(0,5)" data-math-eu="\text{Minimo lokala: }(0,5)" data-math-display></strong>
+            </div>
+
+            <figure class="quartic-2021-figure" aria-label="Gráfica de la función con dos máximos y un mínimo local">
+              <figcaption>La simetría, los cambios de monotonía y el comportamiento final determinan la forma de la gráfica.</figcaption>
+              <div id="quartic-2021-board" class="jxgbox quartic-2021-board" role="img" aria-label="Gráfica de f de x igual a cinco más ocho x al cuadrado menos x a la cuarta, con máximos en menos dos y dos y mínimo local en cero"></div>
+            </figure>
+
+            <div class="result result-long quartic-2021-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="math-inline" data-math="f\uparrow\text{ en }(-\infty,-2)\cup(0,2)" data-math-eu="f\uparrow\quad(-\infty,-2)\cup(0,2)\text{ tarteetan}"></span>
+                <span class="math-inline" data-math="f\downarrow\text{ en }(-2,0)\cup(2,+\infty)" data-math-eu="f\downarrow\quad(-2,0)\cup(2,+\infty)\text{ tarteetan}"></span>
+                <span class="math-inline" data-math="\text{Máximos absolutos: }(-2,21)\text{ y }(2,21)" data-math-eu="\text{Maximo absolutuak: }(-2,21)\text{ eta }(2,21)"></span>
+                <span class="math-inline" data-math="\text{Mínimo local: }(0,5)" data-math-eu="\text{Minimo lokala: }(0,5)"></span>
+              </strong>
+              <p>No existe mínimo absoluto.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

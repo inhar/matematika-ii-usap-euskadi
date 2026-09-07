@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bi integral arrazional · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-integrales-racionales-2024-ordinaria-a4-idiomas.js?v=2024-ord-a4-1" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page integrals-2024-page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2024 · Ordinaria · Ejercicio A4</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Integrales racionales · 2024</p>
+        <h1>Dos integrales racionales, dos preparaciones</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Calcula las dos integrales siguientes:</p>
+        <ol class="problem-list problem-list-math">
+          <li><div class="math-display" data-math="\int\frac{2-3x+x^3}{x^2+2x+1}\,dx" data-math-display></div></li>
+          <li><div class="math-display" data-math="\int\frac{2-3x}{x^2+2x+1}\,dx" data-math-display></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="tabs" role="tablist" aria-label="Apartados de la solución">
+      <button class="tab active" type="button" role="tab" aria-selected="true" data-target="integrals-2024-part-a">Apartado A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-target="integrals-2024-part-b">Apartado B</button>
+    </div>
+
+    <div class="solutions">
+      <section id="integrals-2024-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-integrals-2024-language="es">El numerador tiene grado mayor que el denominador, así que la fracción no puede descomponerse directamente en fracciones simples. Primero dividimos los polinomios: así separamos una parte polinómica, fácil de integrar, y un resto dividido entre <span class="math-inline math-nowrap" data-math="(x+1)^2"></span>.</p>
+            <p class="idea-text" data-integrals-2024-language="eu" hidden>Zenbakitzailearen maila izendatzailearena baino handiagoa da; beraz, zatikia ezin da zuzenean zatiki sinpletan deskonposatu. Lehenik polinomioak zatitzen ditugu: horrela, integratzeko erraza den zati polinomiko bat eta <span class="math-inline math-nowrap" data-math="(x+1)^2"></span>-rekin zatitutako hondarra bereizten ditugu.</p>
+            <p class="idea-text" data-integrals-2024-language="es">La identidad que buscamos es <span class="math-inline math-nowrap" data-math="x^3-3x+2=(x-2)(x+1)^2+4"></span>. Después basta integrar término a término y comprobar el resultado derivándolo.</p>
+            <p class="idea-text" data-integrals-2024-language="eu" hidden>Bilatzen dugun identitatea <span class="math-inline math-nowrap" data-math="x^3-3x+2=(x-2)(x+1)^2+4"></span> da. Ondoren, gaiz gai integratu eta emaitza deribatuz egiaztatzea besterik ez da falta.</p>
+            <div class="essential-geometry integrals-2024-idea">
+              <div class="math-display" data-math="\frac{x^3-3x+2}{(x+1)^2}=x-2+\frac{4}{(x+1)^2}" data-math-display></div>
+              <strong class="math-display" data-math="\frac{x^2}{2}-2x-\frac{4}{x+1}+C" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2 id="solution-a-title">Dividimos antes de integrar</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Fracción racional impropia</h3>
+                <p data-integrals-2024-language="es">Si el grado del numerador es mayor o igual que el del denominador, primero hacemos la división <span class="math-inline math-nowrap" data-math="P=DQ+R"></span>, con <span class="math-inline math-nowrap" data-math="\deg R<\deg D"></span>. Entonces <span class="math-inline math-nowrap" data-math="P/D=Q+R/D"></span>.</p>
+                <p data-integrals-2024-language="eu" hidden>Zenbakitzailearen maila izendatzailearena baino handiagoa edo berdina bada, lehenik <span class="math-inline math-nowrap" data-math="P=DQ+R"></span> zatiketa egiten dugu, <span class="math-inline math-nowrap" data-math="\deg R<\deg D"></span> izanik. Orduan, <span class="math-inline math-nowrap" data-math="P/D=Q+R/D"></span>.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Linealidad y regla de las potencias</h3>
+                <p data-integrals-2024-language="es">La integral de una suma es la suma de las integrales. Para la potencia trasladada usamos la misma regla que para <span class="math-inline math-nowrap" data-math="u^n"></span>, porque la derivada de <span class="math-inline math-nowrap" data-math="x+1"></span> es <span class="math-inline math-nowrap" data-math="1"></span>.</p>
+                <p data-integrals-2024-language="eu" hidden>Batura baten integrala integralen batura da. Berretura desplazaturako <span class="math-inline math-nowrap" data-math="u^n"></span>-ren arau bera erabiltzen dugu, <span class="math-inline math-nowrap" data-math="x+1"></span>-en deribatua <span class="math-inline math-nowrap" data-math="1"></span> delako.</p>
+                <div class="theory-formula math-display" data-math="\int(x+1)^n\,dx=\frac{(x+1)^{n+1}}{n+1}+C" data-math-display></div>
+                <div class="math-display" data-math="n\ne-1" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Factorizamos el denominador</h3>
+                  <p data-integrals-2024-language="es">Es un cuadrado perfecto. Esta forma hará inmediata la integración del resto.</p>
+                  <p data-integrals-2024-language="eu" hidden>Karratu perfektua da. Forma horrek hondarraren integrazioa berehalakoa egiten du.</p>
+                  <div class="math-display" data-math="x^2+2x+1=(x+1)^2" data-math-display></div>
+                </li>
+                <li>
+                  <h3>Realizamos la división de polinomios</h3>
+                  <p data-integrals-2024-language="es">El cociente es <span class="math-inline math-nowrap" data-math="x-2"></span>. Multiplicamos para obtener el producto del divisor por el cociente y calculamos el resto.</p>
+                  <p data-integrals-2024-language="eu" hidden>Zatidura <span class="math-inline math-nowrap" data-math="x-2"></span> da. Zatitzailea zatidurarekin biderkatu eta hondarra kalkulatzen dugu.</p>
+                  <div class="math-display" data-math="(x-2)(x+1)^2=(x-2)(x^2+2x+1)" data-math-display></div>
+                  <div class="math-display" data-math="(x-2)(x+1)^2=x^3-3x-2" data-math-display></div>
+                  <div class="math-display" data-math="(x^3-3x+2)-(x^3-3x-2)=4" data-math-display></div>
+                  <strong class="math-display" data-math="x^3-3x+2=(x-2)(x+1)^2+4" data-math-display></strong>
+                </li>
+                <li>
+                  <h3>Separamos el integrando</h3>
+                  <p data-integrals-2024-language="es">Dividimos la identidad anterior entre <span class="math-inline math-nowrap" data-math="(x+1)^2"></span>.</p>
+                  <p data-integrals-2024-language="eu" hidden>Aurreko identitatea <span class="math-inline math-nowrap" data-math="(x+1)^2"></span>-rekin zatitzen dugu.</p>
+                  <div class="math-display" data-math="\frac{x^3-3x+2}{(x+1)^2}=x-2+\frac{4}{(x+1)^2}" data-math-display></div>
+                </li>
+                <li>
+                  <h3>Integramos término a término</h3>
+                  <div class="math-display" data-math="\int\left(x-2+4(x+1)^{-2}\right)dx" data-math-display></div>
+                  <div class="math-display" data-math="=\frac{x^2}{2}-2x+4\frac{(x+1)^{-1}}{-1}+C" data-math-display></div>
+                  <strong class="math-display" data-math="\int\frac{2-3x+x^3}{x^2+2x+1}\,dx=\frac{x^2}{2}-2x-\frac{4}{x+1}+C" data-math-display></strong>
+                </li>
+                <li>
+                  <h3>Comprobamos derivando</h3>
+                  <div class="math-display" data-math="\left(\frac{x^2}{2}-2x-\frac{4}{x+1}\right)'=x-2+\frac{4}{(x+1)^2}" data-math-display></div>
+                  <strong class="math-display" data-math="x-2+\frac{4}{(x+1)^2}=\frac{x^3-3x+2}{(x+1)^2}" data-math-display></strong>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry integrals-2024-essential">
+              <div class="math-display" data-math="x^2+2x+1=(x+1)^2" data-math-display></div>
+              <div class="math-display" data-math="\frac{x^3-3x+2}{(x+1)^2}=x-2+\frac{4}{(x+1)^2}" data-math-display></div>
+              <strong class="math-display" data-math="\int\frac{2-3x+x^3}{x^2+2x+1}\,dx=\frac{x^2}{2}-2x-\frac{4}{x+1}+C" data-math-display></strong>
+            </div>
+
+            <div class="result result-long integrals-2024-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="\frac{x^2}{2}-2x-\frac{4}{x+1}+C" data-math-display></strong>
+              <p data-integrals-2024-language="es">La primitiva es válida en cualquier intervalo que no atraviese <span class="math-inline math-nowrap" data-math="x=-1"></span>.</p>
+              <p data-integrals-2024-language="eu" hidden>Primitiboa <span class="math-inline math-nowrap" data-math="x=-1"></span> zeharkatzen ez duen edozein tartetan da baliozkoa.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="integrals-2024-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-integrals-2024-language="es">Ahora la fracción es propia: el numerador tiene menor grado que el denominador. Como el denominador es el factor lineal repetido <span class="math-inline math-nowrap" data-math="(x+1)^2"></span>, buscamos una suma con denominadores <span class="math-inline math-nowrap" data-math="x+1"></span> y <span class="math-inline math-nowrap" data-math="(x+1)^2"></span>.</p>
+            <p class="idea-text" data-integrals-2024-language="eu" hidden>Oraingo zatikia propioa da: zenbakitzailearen maila izendatzailearena baino txikiagoa da. Izendatzailea <span class="math-inline math-nowrap" data-math="(x+1)^2"></span> faktore lineal errepikatua denez, <span class="math-inline math-nowrap" data-math="x+1"></span> eta <span class="math-inline math-nowrap" data-math="(x+1)^2"></span> izendatzaileak dituen batura bilatzen dugu.</p>
+            <p class="idea-text" data-integrals-2024-language="es">Al eliminar denominadores, una identidad lineal determina los dos coeficientes. Después aparece una integral logarítmica y otra de potencia negativa.</p>
+            <p class="idea-text" data-integrals-2024-language="eu" hidden>Izendatzaileak ezabatzean, identitate lineal batek bi koefizienteak zehazten ditu. Ondoren, integral logaritmiko bat eta berretura negatiboko beste bat agertzen dira.</p>
+            <div class="essential-geometry integrals-2024-idea">
+              <div class="math-display" data-math="\frac{2-3x}{(x+1)^2}=-\frac{3}{x+1}+\frac{5}{(x+1)^2}" data-math-display></div>
+              <strong class="math-display" data-math="-3\ln\lvert x+1\rvert-\frac{5}{x+1}+C" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Descomponemos el factor repetido</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Fracciones simples con un factor repetido</h3>
+                <p data-integrals-2024-language="es">Por cada potencia del factor lineal repetido debe aparecer una fracción. Para <span class="math-inline math-nowrap" data-math="(x-a)^2"></span> necesitamos los dos términos siguientes.</p>
+                <p data-integrals-2024-language="eu" hidden>Faktore lineal errepikatuaren berretura bakoitzeko zatiki bat agertu behar da. <span class="math-inline math-nowrap" data-math="(x-a)^2"></span>-rako, hurrengo bi gaiak behar ditugu.</p>
+                <div class="theory-formula math-display" data-math="\frac{P(x)}{(x-a)^2}=\frac{A}{x-a}+\frac{B}{(x-a)^2}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Dos primitivas básicas</h3>
+                <p data-integrals-2024-language="es">El primer término produce un logaritmo; el segundo se integra como una potencia de exponente <span class="math-inline math-nowrap" data-math="-2"></span>.</p>
+                <p data-integrals-2024-language="eu" hidden>Lehenengo gaiak logaritmo bat ematen du; bigarrena <span class="math-inline math-nowrap" data-math="-2"></span> berretzaileko berretura gisa integratzen da.</p>
+                <div class="theory-formula math-display" data-math="\int\frac{1}{x+1}\,dx=\ln\lvert x+1\rvert+C" data-math-display></div>
+                <div class="theory-formula math-display" data-math="\int\frac{1}{(x+1)^2}\,dx=-\frac{1}{x+1}+C" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Factorizamos y planteamos la descomposición</h3>
+                  <div class="math-display" data-math="x^2+2x+1=(x+1)^2" data-math-display></div>
+                  <div class="math-display" data-math="\frac{2-3x}{(x+1)^2}=\frac{A}{x+1}+\frac{B}{(x+1)^2}" data-math-display></div>
+                </li>
+                <li>
+                  <h3>Calculamos los coeficientes</h3>
+                  <p data-integrals-2024-language="es">Multiplicamos por <span class="math-inline math-nowrap" data-math="(x+1)^2"></span> y comparamos el coeficiente de <span class="math-inline math-nowrap" data-math="x"></span> y el término independiente.</p>
+                  <p data-integrals-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="(x+1)^2"></span>-rekin biderkatu, eta <span class="math-inline math-nowrap" data-math="x"></span>-ren koefizientea eta gai askea konparatzen ditugu.</p>
+                  <div class="math-display" data-math="2-3x=A(x+1)+B=Ax+(A+B)" data-math-display></div>
+                  <div class="math-display" data-math="A=-3;\qquad A+B=2" data-math-display></div>
+                  <div class="math-display" data-math="-3+B=2\Longrightarrow B=5" data-math-display></div>
+                  <strong class="math-display" data-math="\frac{2-3x}{(x+1)^2}=-\frac{3}{x+1}+\frac{5}{(x+1)^2}" data-math-display></strong>
+                </li>
+                <li>
+                  <h3>Integramos los dos términos</h3>
+                  <div class="math-display" data-math="\begin{aligned}I={}&-3\int\frac{dx}{x+1}\\&+5\int(x+1)^{-2}\,dx\end{aligned}" data-math-display></div>
+                  <div class="math-display" data-math="=-3\ln\lvert x+1\rvert-5(x+1)^{-1}+C" data-math-display></div>
+                  <strong class="math-display" data-math="\int\frac{2-3x}{x^2+2x+1}\,dx=-3\ln\lvert x+1\rvert-\frac{5}{x+1}+C" data-math-display></strong>
+                </li>
+                <li>
+                  <h3>Comprobamos derivando</h3>
+                  <div class="math-display" data-math="\left(-3\ln\lvert x+1\rvert-\frac{5}{x+1}\right)'=-\frac{3}{x+1}+\frac{5}{(x+1)^2}" data-math-display></div>
+                  <strong class="math-display" data-math="-\frac{3}{x+1}+\frac{5}{(x+1)^2}=\frac{2-3x}{(x+1)^2}" data-math-display></strong>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry integrals-2024-essential">
+              <div class="math-display" data-math="\frac{2-3x}{(x+1)^2}=-\frac{3}{x+1}+\frac{5}{(x+1)^2}" data-math-display></div>
+              <strong class="math-display" data-math="\int\frac{2-3x}{x^2+2x+1}\,dx=-3\ln\lvert x+1\rvert-\frac{5}{x+1}+C" data-math-display></strong>
+            </div>
+
+            <div class="result result-long integrals-2024-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="-3\ln\lvert x+1\rvert-\frac{5}{x+1}+C" data-math-display></strong>
+              <p data-integrals-2024-language="es">La primitiva es válida en cualquier intervalo que no atraviese <span class="math-inline math-nowrap" data-math="x=-1"></span>.</p>
+              <p data-integrals-2024-language="eu" hidden>Primitiboa <span class="math-inline math-nowrap" data-math="x=-1"></span> zeharkatzen ez duen edozein tartetan da baliozkoa.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

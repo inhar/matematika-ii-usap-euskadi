@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Puntua, norabideak eta plano perpendikularrak · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-plano-vectores-2020-ordinaria-idiomas.js" defer></script>
+  <script src="ejercicio-plano-vectores-2020-ordinaria-grafico.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2020 · Ordinaria · Opción A · Ejercicio A.2</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Geometría en el espacio · Planos · 2020</p>
+        <h1>Plano determinado por un punto y dos vectores</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <ol class="statement-list plane-vectors-statement">
+          <li>
+            <span class="statement-label">a</span>
+            <div class="statement-text">
+              <p>Hallar la ecuación del plano que pasa por el punto P y es paralelo a los vectores v y w:</p>
+              <div class="plane-vectors-data">
+                <span class="math-inline" data-math="P=(-1,2,3)"></span>
+                <span class="math-inline" data-math="v=(-1,-2,-3)"></span>
+                <span class="math-inline" data-math="w=(1,3,5)"></span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <div class="statement-text">
+              <p>Hallar el valor de A para que el plano anterior y el siguiente plano sean perpendiculares:</p>
+              <div class="statement-plane-equation math-display" data-math="\sigma:Ax-y+5z=8" data-math-display></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="part-a" data-target="part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="part-b" data-target="part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Los dos vectores paralelos al plano nos dan sus dos direcciones. Su producto vectorial será perpendicular a ambas y, por tanto, un vector normal del plano. Con ese normal y el punto P escribiremos la ecuación punto-normal y la simplificaremos hasta obtener la forma implícita.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Ecuación del plano</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Dos direcciones determinan la orientación</h3>
+                <p>Un plano queda determinado por un punto y dos vectores directores no paralelos. Todo vector normal al plano debe ser perpendicular a esas dos direcciones.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Producto vectorial</h3>
+                <p>El producto vectorial de dos vectores no paralelos produce un vector perpendicular a ambos. Por eso sirve como normal del plano que contiene sus direcciones.</p>
+                <div class="theory-formula math-display" data-math="n=v\times w;\qquad n\cdot v=0;\qquad n\cdot w=0" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Ecuación punto-normal</h3>
+                <p>Si P₀ pertenece al plano y n es un vector normal, el vector que une P₀ con cualquier punto X del plano debe ser perpendicular a n.</p>
+                <div class="theory-formula math-display" data-math="n\cdot(X-P_0)=0" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Buscamos un vector normal al plano</h3>
+                  <p>Como v y w son paralelos al plano, calculamos n = v × w. Hacemos cada componente por separado para controlar bien los signos.</p>
+                  <div class="calculation-list plane-cross-components">
+                    <div><span class="math-inline" data-math="n_x"></span><strong class="math-inline" data-math="(-2)5-(-3)3=-10+9=-1"></strong></div>
+                    <div><span class="math-inline" data-math="n_y"></span><strong class="math-inline" data-math="(-3)1-(-1)5=-3+5=2"></strong></div>
+                    <div><span class="math-inline" data-math="n_z"></span><strong class="math-inline" data-math="(-1)3-(-2)1=-3+2=-1"></strong></div>
+                  </div>
+                  <div class="equation equation-compact plane-normal-result math-display" data-math="n=v\times w=(-1,2,-1)" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Escribimos la ecuación punto-normal</h3>
+                  <p>Un punto genérico del plano es X = (x, y, z). El vector que va de P a X se obtiene restando sus coordenadas.</p>
+                  <div class="det-expansion plane-point-normal-chain">
+                    <span class="math-inline" data-math="X-P=(x+1,y-2,z-3)"></span>
+                    <span class="math-inline" data-math="n=(-1,2,-1)"></span>
+                    <strong class="math-inline" data-math="n\cdot(X-P)=0"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Desarrollamos y simplificamos</h3>
+                  <p>Multiplicamos las componentes correspondientes y reunimos después los términos constantes.</p>
+                  <div class="det-expansion plane-equation-chain">
+                    <span class="math-inline" data-math="-(x+1)+2(y-2)-(z-3)=0"></span>
+                    <span class="math-inline" data-math="-x-1+2y-4-z+3=0"></span>
+                    <span class="math-inline" data-math="-x+2y-z-2=0"></span>
+                    <strong class="math-inline" data-math="\pi:-x+2y-z=2"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos la geometría obtenida</h3>
+                  <p>El punto P satisface la ecuación y el normal es perpendicular a los dos vectores dados.</p>
+                  <div class="calculation-list plane-vector-checks">
+                    <div><span>P en π</span><strong class="math-inline" data-math="-(-1)+2\cdot2-3=2"></strong></div>
+                    <div>
+                      <span class="math-inline" data-math="n\cdot v"></span>
+                      <strong>
+                        <span class="math-inline" data-math="(-1)(-1)+2(-2)+(-1)(-3)"></span>
+                        <span class="math-inline" data-math="=1-4+3=0"></span>
+                      </strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="n\cdot w"></span>
+                      <strong>
+                        <span class="math-inline" data-math="(-1)1+2\cdot3+(-1)5"></span>
+                        <span class="math-inline" data-math="=-1+6-5=0"></span>
+                      </strong>
+                    </div>
+                  </div>
+
+                  <figure class="span-plane-figure" aria-label="Representación tridimensional del plano, el punto P, los vectores v y w contenidos en él y el vector normal n">
+                    <figcaption>Los vectores v y w parten de P y marcan dos direcciones del plano π; n es perpendicular a ambos.</figcaption>
+                    <div id="span-plane-board" class="jxgbox span-plane-board" role="img" aria-label="Plano pi con el punto P, los vectores v y w y el vector normal n"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry plane-vectors-essential">
+              <div class="math-display" data-math="v\times w=(-1,2,-1)=n" data-math-display></div>
+              <div class="math-display" data-math="n\cdot[(x,y,z)-(-1,2,3)]=0" data-math-display></div>
+              <strong class="math-inline" data-math="\pi:-x+2y-z=2"></strong>
+            </div>
+
+            <div class="result result-long plane-vectors-result">
+              <span>Resultado</span>
+              <strong class="math-inline" data-math="\pi:-x+2y-z=2"></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Dos planos son perpendiculares cuando sus vectores normales son perpendiculares. Ya conocemos el normal del primer plano; leeremos el del segundo directamente de sus coeficientes e igualaremos a cero el producto escalar de ambos. La ecuación resultante tendrá como única incógnita el parámetro A.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Perpendicularidad entre los planos</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Normal de un plano implícito</h3>
+                <p>En una ecuación ax + by + cz = d, los coeficientes de x, y, z forman un vector normal al plano.</p>
+                <div class="theory-formula math-display" data-math="ax+by+cz=d\quad\Longrightarrow\quad n=(a,b,c)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Perpendicularidad de planos</h3>
+                <p>Dos planos son perpendiculares exactamente cuando sus vectores normales son perpendiculares. Dos vectores son perpendiculares si su producto escalar es cero.</p>
+                <div class="theory-formula math-display" data-math="\pi\perp\sigma\quad\Longleftrightarrow\quad n_\pi\cdot n_\sigma=0" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Identificamos los dos vectores normales</h3>
+                  <p>El normal de π se obtuvo en el apartado anterior. El de σ se lee directamente de los coeficientes de su ecuación.</p>
+                  <div class="calculation-list plane-normals">
+                    <div><span class="math-inline" data-math="\pi"></span><strong class="math-inline" data-math="n_\pi=(-1,2,-1)"></strong></div>
+                    <div><span class="math-inline" data-math="\sigma"></span><strong class="math-inline" data-math="n_\sigma=(A,-1,5)"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Imponemos que los normales sean perpendiculares</h3>
+                  <p>Multiplicamos las componentes correspondientes y sumamos.</p>
+                  <div class="det-expansion plane-perpendicular-chain">
+                    <span class="math-inline" data-math="n_\pi\cdot n_\sigma=0"></span>
+                    <span class="math-inline" data-math="(-1)A+2(-1)+(-1)5=0"></span>
+                    <span class="math-inline" data-math="-A-2-5=0"></span>
+                    <span class="math-inline" data-math="-A-7=0"></span>
+                    <strong class="math-inline" data-math="A=-7"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos el valor obtenido</h3>
+                  <p>Con A = −7, el segundo normal es (−7, −1, 5). Su producto escalar con el primero vale cero.</p>
+                  <div class="det-expansion plane-perpendicular-check">
+                    <span class="math-inline" data-math="(-1,2,-1)\cdot(-7,-1,5)"></span>
+                    <strong class="math-inline" data-math="=7-2-5=0"></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="det-expansion plane-perpendicular-essential">
+              <span class="math-inline" data-math="n_\pi=(-1,2,-1)"></span>
+              <span class="math-inline" data-math="n_\sigma=(A,-1,5)"></span>
+              <span class="math-inline" data-math="n_\pi\cdot n_\sigma=-A-7=0"></span>
+              <strong class="math-inline" data-math="A=-7"></strong>
+            </div>
+
+            <div class="result plane-parameter-result">
+              <span>Resultado</span>
+              <strong class="math-inline" data-math="A=-7"></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

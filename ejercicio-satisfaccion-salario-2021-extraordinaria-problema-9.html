@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laneko gogobetetasuna eta soldata · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-satisfaccion-salario-2021-extraordinaria-idiomas.js?v=2021-ext-p9a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2021 · Extraordinaria · Problema 9</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Probabilidad total y Bayes · 2021</p>
+        <h1>Satisfacción laboral y salario</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>En una empresa, el 70 % de sus trabajadoras están satisfechas con su contrato. Entre las satisfechas, el 80 % gana más de 1 000 euros; entre las que no están satisfechas, solo el 20 % gana más de 1 000 euros.</p>
+
+        <p>Llamaremos <span class="math-inline math-nowrap" data-math="S"></span> al suceso «estar satisfecha con el contrato» y <span class="math-inline math-nowrap" data-math="G"></span> al suceso «ganar más de 1 000 euros». Los datos son:</p>
+        <div class="salary-2021-data" aria-label="Probabilidades de satisfacción y salario">
+          <span class="math-display" data-math="P(S)=0{,}70" data-math-display></span>
+          <span class="math-display" data-math="P(G\mid S)=0{,}80" data-math-display></span>
+          <span class="math-display" data-math="P(G\mid S^c)=0{,}20" data-math-display></span>
+        </div>
+
+        <p>Se elige una trabajadora al azar. Calcular:</p>
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">La probabilidad de que gane más de 1 000 euros.</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">Si gana más de 1 000 euros, la probabilidad de que esté satisfecha con su contrato.</span>
+          </li>
+          <li>
+            <span class="statement-label">c</span>
+            <span class="statement-text">La probabilidad de que gane menos de 1 000 euros y esté satisfecha con su contrato.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="salary-2021-part-a" data-target="salary-2021-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="salary-2021-part-b" data-target="salary-2021-part-b">B</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="salary-2021-part-c" data-target="salary-2021-part-c">C</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="salary-2021-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Una trabajadora que gana más de 1 000 euros puede estar satisfecha o no estarlo. El árbol separa primero esos dos grupos y, dentro de cada uno, distingue el nivel salarial.</p>
+            <p class="idea-text">Multiplicaremos las probabilidades de las ramas de cada camino que termina en <span class="math-inline math-nowrap" data-math="G"></span>. Como esos caminos son incompatibles, sumaremos sus probabilidades mediante el teorema de la probabilidad total.</p>
+            <div class="essential-geometry salary-2021-idea">
+              <div class="math-display" data-math="P(S^c)=1-0{,}70=0{,}30" data-math-display></div>
+              <div class="math-display" data-math="P(G)=0{,}70\cdot0{,}80+0{,}30\cdot0{,}20" data-math-display></div>
+              <strong class="math-display" data-math="P(G)=0{,}62" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Probabilidad de ganar más de 1 000 euros</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Probabilidades condicionadas en un árbol</h3>
+                <p>La primera etapa representa la satisfacción con el contrato. Las probabilidades de la segunda etapa son condicionadas, porque el salario depende del grupo al que pertenece la trabajadora.</p>
+                <div class="theory-formula math-display" data-math="P(G\mid S),\qquad P(G\mid S^c)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Suceso contrario</h3>
+                <p>Un suceso y su contrario forman todos los casos posibles y no pueden ocurrir a la vez. Por eso sus probabilidades suman uno.</p>
+                <div class="theory-formula math-display" data-math="P(S^c)=1-P(S)" data-math-display></div>
+                <div class="theory-formula math-display" data-math="P(G^c\mid S)=1-P(G\mid S)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Regla del producto</h3>
+                <p>La probabilidad de recorrer un camino completo se obtiene multiplicando la probabilidad de la primera rama por la probabilidad condicionada de la segunda.</p>
+                <div class="theory-formula math-display" data-math="P(S\cap G)=P(S)\,P(G\mid S)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Teorema de la probabilidad total</h3>
+                <p>Los sucesos <span class="math-inline math-nowrap" data-math="S"></span> y <span class="math-inline math-nowrap" data-math="S^c"></span> forman una partición. Para calcular <span class="math-inline math-nowrap" data-math="P(G)"></span>, sumamos todos los caminos que terminan en <span class="math-inline math-nowrap" data-math="G"></span>.</p>
+                <div class="theory-formula math-display" data-math="P(G)=P(S)P(G\mid S)+P(S^c)P(G\mid S^c)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Completamos la primera etapa</h3>
+                  <p>Estar satisfecha y no estarlo son sucesos contrarios. La probabilidad que falta se obtiene restando de uno.</p>
+                  <div class="salary-2021-work">
+                    <div class="math-display" data-math="P(S^c)=1-P(S)" data-math-display></div>
+                    <strong class="math-display" data-math="P(S^c)=1-0{,}70=0{,}30" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Completamos las ramas salariales</h3>
+                  <p>En cada grupo, ganar más de 1 000 euros y ganar menos de 1 000 euros son los dos resultados considerados.</p>
+                  <div class="salary-2021-work">
+                    <div class="math-display" data-math="P(G^c\mid S)=1-0{,}80=0{,}20" data-math-display></div>
+                    <div class="math-display" data-math="P(G^c\mid S^c)=1-0{,}20=0{,}80" data-math-display></div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Identificamos los caminos favorables</h3>
+                  <p>Hay dos maneras incompatibles de terminar en <span class="math-inline math-nowrap" data-math="G"></span>: partir de <span class="math-inline math-nowrap" data-math="S"></span> o partir de <span class="math-inline math-nowrap" data-math="S^c"></span>.</p>
+                  <div class="salary-2021-paths">
+                    <div>
+                      <span class="math-inline" data-math="S\cap G"></span>
+                      <strong class="math-inline" data-math="0{,}70\cdot0{,}80=0{,}56"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="S^c\cap G"></span>
+                      <strong class="math-inline" data-math="0{,}30\cdot0{,}20=0{,}06"></strong>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Sumamos los dos caminos</h3>
+                  <p>Aplicamos el teorema de la probabilidad total.</p>
+                  <div class="salary-2021-work">
+                    <div class="math-display" data-math="P(G)=P(S\cap G)+P(S^c\cap G)" data-math-display></div>
+                    <div class="math-display" data-math="P(G)=0{,}56+0{,}06" data-math-display></div>
+                    <strong class="math-display" data-math="P(G)=0{,}62=62\%" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry salary-2021-essential">
+              <div class="math-display" data-math="P(S^c)=0{,}30" data-math-display></div>
+              <div class="math-display" data-math="P(G)=P(S)P(G\mid S)+P(S^c)P(G\mid S^c)" data-math-display></div>
+              <div class="math-display" data-math="P(G)=0{,}70\cdot0{,}80+0{,}30\cdot0{,}20" data-math-display></div>
+              <strong class="math-display" data-math="P(G)=0{,}62" data-math-display></strong>
+            </div>
+
+            <figure class="salary-2021-tree-figure" aria-label="Árbol de probabilidades de satisfacción y salario">
+              <figcaption>El árbol sigue el orden del experimento: primero la satisfacción con el contrato y después el salario.</figcaption>
+              <div class="salary-2021-tree salary-2021-tree-desktop" role="img" aria-label="Árbol con satisfacción y no satisfacción, seguido de ganar más o menos de 1 000 euros">
+                <svg viewBox="0 0 900 380" aria-hidden="true" focusable="false">
+                  <g class="salary-tree-primary-lines">
+                    <line x1="55" y1="190" x2="320" y2="95"></line>
+                    <line x1="55" y1="190" x2="320" y2="285"></line>
+                  </g>
+                  <g class="salary-tree-high-lines">
+                    <line x1="320" y1="95" x2="650" y2="45"></line>
+                    <line x1="320" y1="285" x2="650" y2="235"></line>
+                  </g>
+                  <g class="salary-tree-low-lines">
+                    <line x1="320" y1="95" x2="650" y2="145"></line>
+                    <line x1="320" y1="285" x2="650" y2="335"></line>
+                  </g>
+                  <g class="salary-tree-dots">
+                    <circle cx="55" cy="190" r="4"></circle>
+                    <circle cx="320" cy="95" r="4"></circle>
+                    <circle cx="320" cy="285" r="4"></circle>
+                  </g>
+                </svg>
+                <span class="salary-tree-stage salary-tree-stage-satisfaction">Satisfacción</span>
+                <span class="salary-tree-stage salary-tree-stage-salary">Salario</span>
+
+                <span class="salary-tree-label salary-tree-s math-inline" data-math="S"></span>
+                <span class="salary-tree-label salary-tree-not-s math-inline" data-math="S^c"></span>
+                <span class="salary-tree-prob salary-tree-prob-s math-inline" data-math="0{,}70"></span>
+                <span class="salary-tree-prob salary-tree-prob-not-s math-inline" data-math="0{,}30"></span>
+
+                <span class="salary-tree-label salary-tree-s-g math-inline" data-math="G"></span>
+                <span class="salary-tree-label salary-tree-s-not-g math-inline" data-math="G^c"></span>
+                <span class="salary-tree-label salary-tree-not-s-g math-inline" data-math="G"></span>
+                <span class="salary-tree-label salary-tree-not-s-not-g math-inline" data-math="G^c"></span>
+                <span class="salary-tree-prob salary-tree-s-g-prob math-inline" data-math="0{,}80"></span>
+                <span class="salary-tree-prob salary-tree-s-not-g-prob math-inline" data-math="0{,}20"></span>
+                <span class="salary-tree-prob salary-tree-not-s-g-prob math-inline" data-math="0{,}20"></span>
+                <span class="salary-tree-prob salary-tree-not-s-not-g-prob math-inline" data-math="0{,}80"></span>
+              </div>
+
+              <div class="salary-2021-tree-mobile" role="img" aria-label="Resumen móvil de las ramas del árbol de satisfacción y salario">
+                <div>
+                  <strong class="math-inline" data-math="S\quad(0{,}70)"></strong>
+                  <span class="math-inline" data-math="G:\ 0{,}80"></span>
+                  <span class="math-inline" data-math="G^c:\ 0{,}20"></span>
+                </div>
+                <div>
+                  <strong class="math-inline" data-math="S^c\quad(0{,}30)"></strong>
+                  <span class="math-inline" data-math="G:\ 0{,}20"></span>
+                  <span class="math-inline" data-math="G^c:\ 0{,}80"></span>
+                </div>
+              </div>
+            </figure>
+
+            <div class="result result-long salary-2021-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(G)=0{,}62" data-math-display></strong>
+              <p>La probabilidad de ganar más de 1 000 euros es del <span class="math-inline math-nowrap" data-math="62\%"></span>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="salary-2021-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Ahora sabemos que la trabajadora gana más de 1 000 euros. El conjunto de referencia queda reducido a los dos caminos del árbol que terminan en <span class="math-inline math-nowrap" data-math="G"></span>.</p>
+            <p class="idea-text">Dentro de ese conjunto, el camino favorable es <span class="math-inline math-nowrap" data-math="S\cap G"></span>. Aplicaremos Bayes: dividiremos la probabilidad de ese camino entre la probabilidad total de <span class="math-inline math-nowrap" data-math="G"></span>.</p>
+            <div class="essential-geometry salary-2021-idea">
+              <div class="math-display" data-math="P(S\cap G)=0{,}70\cdot0{,}80=0{,}56" data-math-display></div>
+              <div class="math-display" data-math="P(S\mid G)=\frac{P(S\cap G)}{P(G)}" data-math-display></div>
+              <strong class="math-display" data-math="P(S\mid G)=\frac{0{,}56}{0{,}62}=\frac{28}{31}" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Probabilidad de estar satisfecha si gana más de 1 000 euros</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Probabilidad condicionada</h3>
+                <p>Al saber que ha ocurrido <span class="math-inline math-nowrap" data-math="G"></span>, descartamos los caminos que terminan en <span class="math-inline math-nowrap" data-math="G^c"></span>. La probabilidad buscada compara el camino <span class="math-inline math-nowrap" data-math="S\cap G"></span> con todo el suceso <span class="math-inline math-nowrap" data-math="G"></span>.</p>
+                <div class="theory-formula math-display" data-math="P(S\mid G)=\frac{P(S\cap G)}{P(G)}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Teorema de Bayes</h3>
+                <p>La probabilidad conjunta del numerador se calcula siguiendo una rama. El denominador reúne todos los caminos compatibles con la información conocida.</p>
+                <div class="theory-formula math-display" data-math="P(S\mid G)=\frac{P(S)P(G\mid S)}{P(G)}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. No invertir la condición</h3>
+                <p>El dato <span class="math-inline math-nowrap" data-math="P(G\mid S)"></span> y la probabilidad pedida <span class="math-inline math-nowrap" data-math="P(S\mid G)"></span> tienen condiciones opuestas y, en general, valores diferentes.</p>
+                <div class="theory-formula math-display" data-math="P(S\mid G)\ne P(G\mid S)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Traducimos la pregunta</h3>
+                  <p>La información conocida se escribe después de la barra y lo que queremos averiguar, delante.</p>
+                  <div class="salary-2021-work">
+                    <strong class="math-display" data-math="P(S\mid G)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos el camino favorable</h3>
+                  <p>La trabajadora debe estar satisfecha y, además, ganar más de 1 000 euros.</p>
+                  <div class="salary-2021-work">
+                    <div class="math-display" data-math="P(S\cap G)=P(S)P(G\mid S)" data-math-display></div>
+                    <strong class="math-display" data-math="P(S\cap G)=0{,}70\cdot0{,}80=0{,}56" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Usamos la probabilidad total</h3>
+                  <p>El denominador reúne a todas las trabajadoras que ganan más de 1 000 euros.</p>
+                  <div class="salary-2021-work">
+                    <strong class="math-display" data-math="P(G)=0{,}62" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Aplicamos Bayes y simplificamos</h3>
+                  <div class="salary-2021-work">
+                    <div class="math-display" data-math="P(S\mid G)=\frac{0{,}56}{0{,}62}" data-math-display></div>
+                    <div class="math-display" data-math="P(S\mid G)=\frac{56}{62}=\frac{28}{31}" data-math-display></div>
+                    <strong class="math-display" data-math="P(S\mid G)\approx0{,}9032=90{,}32\%" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry salary-2021-essential">
+              <div class="math-display" data-math="P(S\cap G)=0{,}56,\qquad P(G)=0{,}62" data-math-display></div>
+              <div class="math-display" data-math="P(S\mid G)=\frac{P(S\cap G)}{P(G)}" data-math-display></div>
+              <strong class="math-display" data-math="P(S\mid G)=\frac{28}{31}\approx0{,}9032" data-math-display></strong>
+            </div>
+
+            <figure class="salary-2021-bayes-figure" aria-label="Composición de las trabajadoras que ganan más de 1 000 euros según su satisfacción">
+              <figcaption>Entre quienes ganan más de 1 000 euros, la parte satisfecha corresponde al camino de probabilidad 0,56.</figcaption>
+              <div class="salary-2021-bayes-bar" role="img" aria-label="Barra dividida entre las probabilidades conjuntas 0,56 de satisfechas y 0,06 de no satisfechas">
+                <span class="salary-bayes-s"></span>
+                <span class="salary-bayes-not-s"></span>
+              </div>
+              <div class="salary-2021-bayes-legend">
+                <span><i class="salary-bayes-s"></i><span class="math-inline" data-math="S\cap G:\ 0{,}56"></span></span>
+                <span><i class="salary-bayes-not-s"></i><span class="math-inline" data-math="S^c\cap G:\ 0{,}06"></span></span>
+              </div>
+            </figure>
+
+            <div class="result result-long salary-2021-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(S\mid G)=\frac{28}{31}\approx0{,}9032" data-math-display></strong>
+              <p>La probabilidad pedida es aproximadamente del <span class="math-inline math-nowrap" data-math="90{,}32\%"></span>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="salary-2021-part-c" class="panel" role="tabpanel" hidden>
+        <div class="section-index">03</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado C</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">La palabra «y» indica que deben ocurrir los dos sucesos: estar satisfecha y ganar menos de 1 000 euros. En el árbol esto corresponde a un único camino, <span class="math-inline math-nowrap" data-math="S\cap G^c"></span>.</p>
+            <p class="idea-text">La probabilidad de ganar menos de 1 000 euros dentro del grupo satisfecho es el complemento de <span class="math-inline math-nowrap" data-math="P(G\mid S)"></span>. Después multiplicaremos las dos ramas del camino.</p>
+            <div class="essential-geometry salary-2021-idea">
+              <div class="math-display" data-math="P(G^c\mid S)=1-0{,}80=0{,}20" data-math-display></div>
+              <div class="math-display" data-math="P(S\cap G^c)=P(S)P(G^c\mid S)" data-math-display></div>
+              <strong class="math-display" data-math="P(S\cap G^c)=0{,}70\cdot0{,}20=0{,}14" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado C</p>
+            <h2>Probabilidad de ganar menos y estar satisfecha</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Intersección de sucesos</h3>
+                <p>La intersección representa que los dos sucesos deben ocurrir simultáneamente.</p>
+                <div class="theory-formula math-display" data-math="S\cap G^c" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Probabilidad condicionada complementaria</h3>
+                <p>Dentro del grupo satisfecho, las dos categorías salariales consideradas son complementarias.</p>
+                <div class="theory-formula math-display" data-math="P(G^c\mid S)=1-P(G\mid S)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Un camino se multiplica</h3>
+                <p>El camino recorre primero <span class="math-inline math-nowrap" data-math="S"></span> y después <span class="math-inline math-nowrap" data-math="G^c"></span>. Multiplicamos la probabilidad de la primera rama por la probabilidad condicionada de la segunda.</p>
+                <div class="theory-formula math-display" data-math="P(S\cap G^c)=P(S)P(G^c\mid S)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Traducimos la palabra «y»</h3>
+                  <p>Los dos sucesos deben ocurrir simultáneamente, así que buscamos una intersección.</p>
+                  <div class="salary-2021-work">
+                    <strong class="math-display" data-math="P(S\cap G^c)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos la probabilidad salarial que falta</h3>
+                  <p>Entre las trabajadoras satisfechas, el 80 % gana más de 1 000 euros. El resto gana menos.</p>
+                  <div class="salary-2021-work">
+                    <div class="math-display" data-math="P(G^c\mid S)=1-P(G\mid S)" data-math-display></div>
+                    <strong class="math-display" data-math="P(G^c\mid S)=1-0{,}80=0{,}20" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Multiplicamos las ramas del camino</h3>
+                  <div class="salary-2021-work">
+                    <div class="math-display" data-math="P(S\cap G^c)=P(S)P(G^c\mid S)" data-math-display></div>
+                    <div class="math-display" data-math="P(S\cap G^c)=0{,}70\cdot0{,}20" data-math-display></div>
+                    <strong class="math-display" data-math="P(S\cap G^c)=0{,}14=14\%" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry salary-2021-essential">
+              <div class="math-display" data-math="P(G^c\mid S)=0{,}20" data-math-display></div>
+              <div class="math-display" data-math="P(S\cap G^c)=P(S)P(G^c\mid S)" data-math-display></div>
+              <strong class="math-display" data-math="P(S\cap G^c)=0{,}70\cdot0{,}20=0{,}14" data-math-display></strong>
+            </div>
+
+            <div class="result result-long salary-2021-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(S\cap G^c)=0{,}14" data-math-display></strong>
+              <p>La probabilidad de cumplir ambas condiciones es del <span class="math-inline math-nowrap" data-math="14\%"></span>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

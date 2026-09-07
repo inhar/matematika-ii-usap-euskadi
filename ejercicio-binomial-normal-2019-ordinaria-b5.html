@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banaketa binomialaren hurbilketa normala · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-binomial-normal-idiomas.js" defer></script>
+  <script src="ejercicio-binomial-normal-grafico.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Ordinaria · Opción B · Problema B.5</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Distribuciones binomial y normal · Junio de 2019</p>
+        <h1>Aproximación normal de una distribución binomial</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Lanzamos un dado de seis caras 6.000 veces. Calcular la probabilidad de que el número de veces que salga el 5:</p>
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">sea superior a 1.500;</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">esté comprendido entre 1.000 y 1.100.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="binomial-part-a" data-target="binomial-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="binomial-part-b" data-target="binomial-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="binomial-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Contaremos cuántas veces aparece el 5 mediante una variable binomial: hay 6.000 ensayos independientes y en cada uno la probabilidad de éxito es 1/6. Como el número de lanzamientos es muy grande, aproximaremos esa binomial por una normal con la misma media y desviación típica. Después aplicaremos la corrección de continuidad y mediremos cuántas desviaciones típicas separan 1.500,5 de la media; esa distancia decidirá el tamaño de la probabilidad buscada.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Probabilidad de superar 1.500 cincos</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Distribución binomial</h3>
+                <p>Si repetimos n veces un experimento independiente con dos resultados y la probabilidad de éxito p no cambia, el número X de éxitos sigue una distribución binomial.</p>
+                <div class="theory-formula math-display" data-math="X \sim B(n, p)" data-math-display></div>
+                <p>Aquí un «éxito» es obtener un 5: n = 6.000 y p = 1/6.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Aproximación por una normal</h3>
+                <p>Cuando np y n(1 − p) son suficientemente grandes, la binomial puede aproximarse por una normal con la misma media y desviación típica.</p>
+                <div class="theory-formula normal-theory-lines">
+                  <span class="math-inline" data-math="Y \sim N(\mu , \sigma )"></span>
+                  <span class="math-inline" data-math="\mu=np"></span>
+                  <span class="math-inline" data-math="\sigma=\sqrt{np(1-p)}"></span>
+                </div>
+                <p>En este ejercicio ambos productos superan ampliamente 5, así que la aproximación es adecuada.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Corrección de continuidad</h3>
+                <p>La binomial solo toma valores enteros, mientras que la normal es continua. Para representar X ≥ 1.501 con una normal, situamos la frontera entre 1.500 y 1.501.</p>
+                <div class="theory-formula normal-theory-lines math-display" data-math="P(X > 1.500) = P(X \ge 1.501) \approx P(Y > 1.500{,}5)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Tipificación</h3>
+                <p>Restar la media y dividir por la desviación típica transforma Y en una normal estándar Z. El valor obtenido indica la distancia a la media medida en desviaciones típicas.</p>
+                <div class="theory-formula math-display" data-math="Z=\frac{Y-\mu}{\sigma}" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Definimos la variable aleatoria</h3>
+                  <p>Llamamos X al número de veces que aparece el 5 en los 6.000 lanzamientos. Cada lanzamiento es independiente y tiene la misma probabilidad de éxito.</p>
+                  <div class="calculation-list binomial-data">
+                    <div><span>Ensayos</span><strong class="math-inline" data-math="n = 6.000"></strong></div>
+                    <div><span>Éxito</span><strong>obtener un 5</strong></div>
+                    <div><span>Probabilidad</span><strong class="math-inline" data-math="p = \frac{1}{6}; q = 1 - p = \frac{5}{6}"></strong></div>
+                  </div>
+                  <div class="det-expansion normal-model">
+                    <strong class="math-inline" data-math="X \sim B(6.000, \frac{1}{6})"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos y construimos la aproximación normal</h3>
+                  <p>Los dos productos que controlan la aproximación son grandes.</p>
+                  <div class="calculation-list normal-conditions">
+                    <div><span>np</span><strong class="math-inline" data-math="6.000 \cdot \frac{1}{6} = 1.000 > 5"></strong></div>
+                    <div><span>nq</span><strong class="math-inline" data-math="6.000 \cdot \frac{5}{6} = 5.000 > 5"></strong></div>
+                  </div>
+                  <p>Calculamos la media y la desviación típica de la normal que utilizaremos.</p>
+                  <div class="det-expansion normal-parameter-work">
+                    <span class="math-inline" data-math="\mu=np=6.000\cdot\frac16=1.000"></span>
+                    <span class="math-inline" data-math="\sigma=\sqrt{npq}=\sqrt{6.000\cdot\frac16\cdot\frac56}"></span>
+                    <strong class="math-inline" data-math="\sigma=\sqrt{\frac{2.500}{3}}=\frac{50}{\sqrt3}\approx28{,}87"></strong>
+                  </div>
+                  <div class="det-expansion normal-model">
+                    <strong class="math-inline" data-math="Y \sim N(1.000; 28{,}87)"></strong>
+                    <span>El segundo parámetro es la desviación típica.</span>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Aplicamos la corrección de continuidad</h3>
+                  <p>«Superior a 1.500» significa que X puede valer 1.501, 1.502, etc. En la normal continua desplazamos la frontera media unidad.</p>
+                  <div class="det-expansion continuity-work">
+                    <span class="math-inline" data-math="P(X > 1.500) = P(X \ge 1.501)"></span>
+                    <strong class="math-inline" data-math="\approx P(Y > 1.500{,}5)"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Tipificamos la frontera</h3>
+                  <p>Restamos la media y dividimos por la desviación típica.</p>
+                  <div class="det-expansion standardization-work">
+                    <span class="math-inline" data-math="z=\frac{1.500{,}5-1.000}{28{,}87}"></span>
+                    <span class="math-inline" data-math="z=\frac{500{,}5}{28{,}87}"></span>
+                    <strong class="math-inline" data-math="z \approx 17{,}34"></strong>
+                  </div>
+                  <p>La frontera está 17,34 desviaciones típicas por encima de la media. La cola normal a partir de un valor tan extremo es despreciable.</p>
+                  <div class="normal-distance" aria-label="La frontera está diecisiete coma treinta y cuatro desviaciones típicas por encima de la media">
+                    <span>μ = 1.000</span>
+                    <span>+ 17,34σ</span>
+                    <strong>1.500,5</strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Leemos la probabilidad</h3>
+                  <p>La tabla normal ya da una cola prácticamente nula mucho antes de z = 17,34. Por tanto, con la precisión habitual de las tablas:</p>
+                  <div class="det-expansion normal-tail-result">
+                    <span class="math-inline" data-math="P(X > 1.500) \approx P(Z > 17{,}34)"></span>
+                    <strong class="math-inline" data-math="\approx 0"></strong>
+                  </div>
+                  <p>No significa que sea matemáticamente imposible, sino que su probabilidad es tan pequeña que se redondea a 0.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry binomial-essential">
+              <div class="math-display" data-math="X \sim B(6.000, \frac{1}{6}) \approx Y \sim N(1.000; 28{,}87)" data-math-display></div>
+              <div class="math-display" data-math="P(X > 1.500) \approx P(Y > 1.500{,}5)" data-math-display></div>
+              <div class="math-display" data-math="z=\frac{1.500{,}5-1.000}{28{,}87}\approx17{,}34" data-math-display></div>
+              <strong class="math-inline" data-math="P(Z > 17{,}34) \approx 0"></strong>
+            </div>
+
+            <div class="result result-long normal-result">
+              <span>Resultado</span>
+              <strong><span class="result-unit">P(X &gt; 1.500) ≈ 0</span></strong>
+              <p>Con la precisión de las tablas, el suceso es prácticamente imposible.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="binomial-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Usaremos la misma variable binomial y la misma aproximación normal, cuya media es precisamente 1.000. Siguiendo la interpretación de la solución de la fuente, «entre 1.000 y 1.100» significa <span class="math-nowrap math-inline" data-math="1.000 &lt; X &lt; 1.100"></span>. Convertiremos ese intervalo discreto en uno continuo mediante las fronteras 1.000,5 y 1.099,5; después tipificaremos ambos extremos y restaremos las áreas acumuladas de la normal estándar.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Probabilidad entre 1.000 y 1.100 cincos</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Modelo binomial y aproximación normal</h3>
+                <p>El número X de cincos sigue B(n, p). Si np y nq son grandes, usamos una normal Y con media μ = np y desviación típica σ = √(npq).</p>
+                <div class="theory-formula normal-theory-lines math-display" data-math="X \sim B(6.000, \frac{1}{6}) \approx Y \sim N(1.000; 28{,}87)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Corrección de continuidad en un intervalo abierto</h3>
+                <p>La condición a &lt; X &lt; b incluye los enteros desde a + 1 hasta b − 1. La normal continua debe empezar media unidad antes del primer entero incluido y terminar media unidad después del último.</p>
+                <div class="theory-formula normal-theory-lines math-display" data-math="P(a &lt; X &lt; b) \approx P(a + 0{,}5 &lt; Y &lt; b - 0{,}5)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Tipificación de los dos extremos</h3>
+                <p>Aplicamos Z = (Y − μ)/σ a cada frontera. Así transformamos el intervalo de Y en otro equivalente para la normal estándar Z.</p>
+                <div class="theory-formula normal-theory-lines math-display" data-math="z_{1} = (a + 0{,}5 - \mu )/\sigma z_{2} = (b - 0{,}5 - \mu )/\sigma" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Probabilidad entre dos valores</h3>
+                <p>La tabla proporciona Φ(z) = P(Z ≤ z), es decir, el área acumulada a la izquierda. Para conservar solo el área comprendida entre z₁ y z₂, restamos las dos acumuladas.</p>
+                <div class="theory-formula normal-theory-lines math-display" data-math="P(z_{1} &lt; Z &lt; z_{2}) = Φ(z_{2}) - Φ(z_{1})" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Recuperamos el modelo</h3>
+                  <p>La variable sigue siendo el número X de cincos obtenidos en 6.000 lanzamientos.</p>
+                  <div class="det-expansion normal-parameter-work">
+                    <span class="math-inline" data-math="X \sim B(6.000, \frac{1}{6})"></span>
+                    <span class="math-inline" data-math="\mu=np=1.000"></span>
+                    <span class="math-inline" data-math="\sigma=\sqrt{npq}=\sqrt{\frac{2.500}{3}}"></span>
+                    <strong class="math-inline" data-math="Y \sim N(1.000; 28{,}87)"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Precisamos el intervalo y corregimos la continuidad</h3>
+                  <p>La solución de la fuente interpreta «comprendido entre» con extremos excluidos. Por tanto, los valores enteros favorables van desde 1.001 hasta 1.099.</p>
+                  <div class="det-expansion continuity-work">
+                    <span class="math-inline" data-math="P(1.000 &lt; X &lt; 1.100)"></span>
+                    <span class="math-inline" data-math="= P(1.001 \le X \le 1.099)"></span>
+                    <strong class="math-inline" data-math="\approx P(1.000{,}5 &lt; Y &lt; 1.099{,}5)"></strong>
+                  </div>
+                  <p>Las dos fronteras continuas quedan a media unidad de los primeros valores excluidos.</p>
+                </li>
+
+                <li>
+                  <h3>Tipificamos los dos extremos</h3>
+                  <p>Usamos la misma transformación en las dos fronteras.</p>
+                  <div class="normal-bound-calculations">
+                    <div>
+                      <span>Límite inferior</span>
+                      <div>
+                        <b>z₁ = (1.000,5 − 1.000) / 28,87</b>
+                        <strong>z₁ ≈ 0,02</strong>
+                      </div>
+                    </div>
+                    <div>
+                      <span>Límite superior</span>
+                      <div>
+                        <b>z₂ = (1.099,5 − 1.000) / 28,87</b>
+                        <strong>z₂ ≈ 3,45</strong>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="det-expansion standardized-interval">
+                    <span class="math-inline" data-math="P(1.000{,}5 &lt; Y &lt; 1.099{,}5)"></span>
+                    <strong class="math-inline" data-math="\approx P(0{,}02 &lt; Z &lt; 3{,}45)"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Identificamos el área en la normal estándar</h3>
+                  <p>La zona sombreada comienza apenas a la derecha de la media y termina en z = 3,45. Es casi la mitad derecha de la campana, salvo una franja muy estrecha junto a z = 0 y una cola final diminuta.</p>
+                  <figure class="normal-distribution-figure" aria-label="Área de la normal estándar comprendida entre cero coma cero dos y tres coma cuarenta y cinco">
+                    <figcaption>El área sombreada representa <span class="math-nowrap math-inline" data-math="P(0{,}02 &lt; Z &lt; 3{,}45)"></span>.</figcaption>
+                    <div id="normal-distribution-board" class="jxgbox normal-distribution-board" role="img" aria-label="Campana normal estándar con el área entre z igual a cero coma cero dos y z igual a tres coma cuarenta y cinco sombreada"></div>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Restamos las probabilidades acumuladas</h3>
+                  <p>Buscamos en la tabla los valores acumulados a la izquierda de cada extremo.</p>
+                  <div class="calculation-list normal-table-values">
+                    <div><span class="math-inline" data-math="Φ(3{,}45)"></span><strong>0,9997</strong></div>
+                    <div><span class="math-inline" data-math="Φ(0{,}02)"></span><strong>0,5080</strong></div>
+                  </div>
+                  <p>El área entre ambos valores es la diferencia.</p>
+                  <div class="det-expansion normal-probability-work">
+                    <span class="math-inline" data-math="P(0{,}02 &lt; Z &lt; 3{,}45) = Φ(3{,}45) - Φ(0{,}02)"></span>
+                    <span class="math-inline" data-math="= 0{,}9997 - 0{,}5080"></span>
+                    <strong class="math-inline" data-math="= 0{,}4917"></strong>
+                  </div>
+                  <p>El resultado equivale aproximadamente al 49,17 %. El redondeo coincide con la tabla usada en la solución de la fuente.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry binomial-essential">
+              <div class="math-display" data-math="X \sim B(6.000, \frac{1}{6}) \approx Y \sim N(1.000; 28{,}87)" data-math-display></div>
+              <div class="math-display" data-math="P(1.000 &lt; X &lt; 1.100)" data-math-display></div>
+              <div class="math-display" data-math="\approx P(1.000{,}5 &lt; Y &lt; 1.099{,}5)" data-math-display></div>
+              <div class="math-display" data-math="P(0{,}02 &lt; Z &lt; 3{,}45) = Φ(3{,}45) - Φ(0{,}02)" data-math-display></div>
+              <strong class="math-inline" data-math="0{,}9997 - 0{,}5080 = 0{,}4917"></strong>
+            </div>
+
+            <div class="result result-long normal-result">
+              <span>Resultado</span>
+              <strong><span class="result-unit">P(1.000 &lt; X &lt; 1.100) ≈ 0,4917</span></strong>
+              <p>Aproximadamente, un 49,17 %.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

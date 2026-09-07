@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bi parabolaren arteko azalera · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-area-parabolas-idiomas.js" defer></script>
+  <script src="ejercicio-area-parabolas-grafico.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Extraordinaria · Opción A · Problema A.4</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Área entre curvas · Julio de 2019</p>
+        <h1>Área entre dos parábolas</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Sea R el recinto del plano limitado por las curvas:</p>
+        <div class="function-data area-parabolas-data" aria-label="Curvas y igual a x por tres menos x e y igual a x al cuadrado">
+          <span class="math-inline" data-math="y = x(3 - x)"></span>
+          <span class="math-inline" data-math="y = x^{2}"></span>
+        </div>
+        <p>Dibujar R y calcular su área.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema A.4</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">El área está encerrada entre dos curvas, así que primero necesitamos saber dónde empieza y termina el recinto: igualaremos las funciones para hallar sus puntos de corte. Después determinaremos cuál de las dos parábolas queda arriba entre esas intersecciones; esta comprobación fija el orden correcto de la resta. Finalmente integraremos «curva superior menos curva inferior» entre las dos abscisas obtenidas.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema A.4</p>
+            <h2 id="solution-title">Representación y cálculo del área</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Puntos de intersección</h3>
+                <p>Dos gráficas se cortan cuando, para una misma abscisa x, tienen la misma ordenada. Por eso los límites del recinto se encuentran resolviendo la igualdad entre las funciones.</p>
+                <div class="theory-formula math-display" data-math="f(x) = g(x)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Curva superior y curva inferior</h3>
+                <p>Antes de integrar hay que conocer el orden de las curvas. Si f(x) − g(x) es positiva en un intervalo, entonces f está por encima de g en ese intervalo.</p>
+                <div class="theory-formula math-display" data-math="f(x) - g(x) > 0 \Rightarrow f(x) > g(x)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Área entre dos curvas</h3>
+                <p>La altura de cada franja vertical es la diferencia entre la función superior y la inferior. La suma continua de esas franjas se expresa mediante una integral definida.</p>
+                <div class="theory-formula area-parabolas-formula math-display" data-math="A = \int_{a}^{b} [f_{\mathrm{sup}}(x) - f_{\mathrm{inf}}(x)] dx" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Regla de Barrow y comprobación del signo</h3>
+                <p>Si F es una primitiva del integrando, la integral vale F(b) − F(a). Un área nunca puede ser negativa: un resultado negativo indicaría que hemos restado las curvas en el orden contrario.</p>
+                <div class="theory-formula math-display" data-math="A = F(b) - F(a) \ge 0" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Escribimos las dos funciones de forma explícita</h3>
+                  <p>Desarrollamos el producto de la primera curva para poder compararla y operar con ella con facilidad.</p>
+                  <div class="det-expansion area-parabolas-functions">
+                    <span class="math-nowrap math-inline" data-math="f(x) = x(3 - x) = 3x - x^{2}"></span>
+                    <strong class="math-nowrap math-inline" data-math="g(x) = x^{2}"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos los puntos de intersección</h3>
+                  <p>En los puntos comunes se cumple f(x) = g(x). Igualamos, pasamos todos los términos a un lado y factorizamos.</p>
+                  <div class="det-expansion area-parabolas-intersections">
+                    <span class="math-nowrap math-inline" data-math="3x - x^{2} = x^{2}"></span>
+                    <span class="math-nowrap math-inline" data-math="3x - 2x^{2} = 0"></span>
+                    <span class="math-nowrap math-inline" data-math="x(3 - 2x) = 0"></span>
+                    <strong><span class="math-nowrap math-inline" data-math="x = 0"></span> &nbsp;o&nbsp; <span class="math-nowrap math-inline" data-math="x = \frac{3}{2}"></span></strong>
+                  </div>
+                  <p>Calculamos las ordenadas sustituyendo en la función más sencilla, g(x) = x².</p>
+                  <div class="calculation-list area-parabolas-points">
+                    <div><span class="math-inline" data-math="x = 0"></span><strong class="math-inline" data-math="y = 0^{2} = 0 \Rightarrow (0, 0)"></strong></div>
+                    <div><span class="math-inline" data-math="x = \frac{3}{2}"></span><strong class="math-inline" data-math="y = (\frac{3}{2})^{2} = \frac{9}{4} \Rightarrow (\frac{3}{2}, \frac{9}{4})"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Determinamos qué parábola queda arriba</h3>
+                  <p>Restamos la segunda función a la primera y estudiamos el signo dentro del intervalo <span class="math-nowrap math-inline" data-math="(0, \frac{3}{2})"></span>.</p>
+                  <div class="det-expansion area-parabolas-order">
+                    <span class="math-nowrap math-inline" data-math="f(x) - g(x) = (3x - x^{2}) - x^{2}"></span>
+                    <span class="math-nowrap math-inline" data-math="= 3x - 2x^{2}"></span>
+                    <strong class="math-nowrap math-inline" data-math="= x(3 - 2x) > 0"></strong>
+                  </div>
+                  <p>En ese intervalo, x &gt; 0 y 3 − 2x &gt; 0; por tanto, ambos factores son positivos y f(x) está por encima de g(x). Como comprobación rápida, en x = 1 se obtiene f(1) = 2 y g(1) = 1.</p>
+
+                  <figure class="area-parabolas-figure" aria-label="Representación del recinto limitado por las dos parábolas">
+                    <figcaption>Las intersecciones fijan los límites. Entre ellas, la parábola y = 3x − x² es la frontera superior del recinto R.</figcaption>
+                    <div id="area-parabolas-board" class="jxgbox area-parabolas-board" role="img" aria-label="Gráfica de las parábolas y igual a tres x menos x al cuadrado e y igual a x al cuadrado, con el recinto entre ambas sombreado"></div>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Planteamos la integral con el orden correcto</h3>
+                  <p>La función superior es 3x − x² y la inferior es x². Las restamos e integramos desde x = 0 hasta x = 3/2.</p>
+                  <div class="det-expansion area-parabolas-integral">
+                    <strong class="area-parabolas-formula math-inline" data-math="A = \int_{0}^{\frac{3}{2}} [(3x - x^{2}) - x^{2}] dx"></strong>
+                    <span class="area-parabolas-formula math-inline" data-math="A = \int_{0}^{\frac{3}{2}} (3x - 2x^{2}) dx"></span>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Integramos y evaluamos los extremos</h3>
+                  <p>Integramos término a término y aplicamos la regla de Barrow.</p>
+                  <div class="calculation-list area-parabolas-primitives">
+                    <div><span class="math-inline" data-math="\int 3x\,dx"></span><strong class="math-inline" data-math="\frac{3x^2}{2}"></strong></div>
+                    <div><span class="math-inline" data-math="\int -2x^2\,dx"></span><strong class="math-inline" data-math="-\frac{2x^3}{3}"></strong></div>
+                  </div>
+                  <div class="det-expansion area-parabolas-evaluation">
+                    <span class="area-parabolas-formula math-inline" data-math="A=[\frac{3x^2}{2}-\frac{2x^3}{3}]_0^{\frac32}"></span>
+                    <span class="area-parabolas-formula math-inline" data-math="A=[\frac{3(\frac32)^2}{2}-\frac{2(\frac32)^3}{3}]-0"></span>
+                    <span class="area-parabolas-formula math-inline" data-math="A = \frac{27}{8} - \frac{9}{4}"></span>
+                    <span class="area-parabolas-formula math-inline" data-math="A = \frac{27}{8} - \frac{18}{8}"></span>
+                    <strong class="math-nowrap math-inline" data-math="A = \frac{9}{8} u^{2}"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos que el resultado tiene sentido</h3>
+                  <p>El integrando 3x − 2x² es positivo entre 0 y 3/2, de modo que la integral debe ser positiva. El valor 9/8 cumple esta condición.</p>
+                  <p class="source-correction"><strong>Corrección de la fuente:</strong> la solución publicada afirma que y = x² queda arriba y plantea la resta al revés. Su propia gráfica muestra el orden correcto. El área positiva 9/8 se obtiene con (3x − x²) − x².</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry area-parabolas-essential">
+              <div class="math-display" data-math-es="x=0\ \text{o}\ x=\frac32" data-math-eu="x=0\ \text{edo}\ x=\frac32" data-math-display></div>
+              <div class="math-display" data-math-es="\text{En }[0,\frac32],\ 3x-x^2\ge x^2" data-math-eu="[0,\frac32]\text{ tartean, }3x-x^2\ge x^2" data-math-display></div>
+              <div class="area-parabolas-formula math-display" data-math="A = \int_{0}^{\frac{3}{2}} (3x - 2x^{2}) dx" data-math-display></div>
+              <div class="area-parabolas-formula math-display" data-math="A=[\frac{3x^2}{2}-\frac{2x^3}{3}]_0^{\frac32}" data-math-display></div>
+              <strong class="math-nowrap math-inline" data-math="A = \frac{9}{8} u^{2}"></strong>
+            </div>
+
+            <div class="result result-long area-parabolas-result">
+              <span>Resultado</span>
+              <strong><span class="result-unit">Área de R: <span class="math-nowrap math-inline" data-math="\frac{9}{8} u^{2}"></span></span></strong>
+              <p>
+                <span class="math-nowrap math-inline" data-math-es="\text{El recinto empieza en }x=0" data-math-eu="\text{Esparrua }x=0\text{ puntuan hasten da}"></span>
+                <span class="math-nowrap math-inline" data-math-es="\text{y termina en }x=\frac32" data-math-eu="\text{eta }x=\frac32\text{ puntuan amaitzen da}"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

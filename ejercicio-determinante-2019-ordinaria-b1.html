@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matrize triangeluarraren determinantea · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-determinante-idiomas.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Ordinaria · Opción B · Problema B.1</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Álgebra lineal · Determinantes · Junio de 2019</p>
+        <h1>Determinante de una matriz triangular al cuadrado</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Dada la matriz A(a):</p>
+        <div class="matrix-expression statement-square-matrix" aria-label="A de a es la matriz uno, cero, cero; uno, a, cero; uno, uno, uno">
+          <span class="matrix-label math-inline" data-math="A(a) ="></span>
+          <div class="matrix math-display" data-math="\begin{pmatrix}1 &amp; 0 &amp; 0 \\ 1 &amp; a &amp; 0 \\ 1 &amp; 1 &amp; 1\end{pmatrix}" data-math-display></div>
+        </div>
+        <p>Calcular, razonadamente, el valor de a para que el determinante de A(a)² valga 4.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema B.1</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">El objetivo es calcular det(A²), no todas las entradas de A². Como A² = A·A, la propiedad multiplicativa del determinante permite escribir det(A²) = [det(A)]². Además, A es triangular inferior, por lo que su determinante es el producto de los elementos de la diagonal principal: 1·a·1 = a. Solo quedará resolver a² = 4 y comprobar sus dos soluciones.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema B.1</p>
+            <h2 id="solution-title">Determinante y valores del parámetro</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Determinante de un producto</h3>
+                <p>Para dos matrices cuadradas M y N del mismo orden, el determinante del producto es el producto de sus determinantes.</p>
+                <div class="theory-formula math-display" data-math="\det(MN) = \det(M) \cdot \det(N)" data-math-display></div>
+                <p>Como A² significa A·A, podemos aplicar esta propiedad dos veces sobre la misma matriz.</p>
+                <div class="theory-formula math-display" data-math="\det(A^{2}) = [\det(A)]^{2}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Determinante de una matriz triangular</h3>
+                <p>Una matriz es triangular inferior cuando todas las entradas situadas por encima de su diagonal principal son cero. Su determinante es el producto de los elementos de esa diagonal.</p>
+                <div class="theory-formula math-display" data-math="\det(A) = a_{11} \cdot a_{22} \cdot a_{33}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Ecuación de segundo grado sin término lineal</h3>
+                <p>Si x² = k con k &gt; 0, existen dos soluciones reales opuestas: la raíz positiva y su negativa.</p>
+                <div class="theory-formula math-display" data-math="x^{2} = k \Rightarrow x = \pm \sqrt{k}" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Leemos exactamente qué determinante se pide</h3>
+                  <p>La condición del enunciado es det(A²) = 4. No necesitamos conocer las nueve entradas de A² si podemos calcular directamente su determinante.</p>
+                </li>
+
+                <li>
+                  <h3>Usamos la propiedad del determinante de un producto</h3>
+                  <p>Escribimos A² como A·A y separamos el determinante del producto.</p>
+                  <div class="det-expansion determinant-chain">
+                    <span class="math-inline" data-math="\det(A^{2}) = \det(A\cdot A)"></span>
+                    <span class="math-inline" data-math="= \det(A) \cdot \det(A)"></span>
+                    <strong class="math-inline" data-math="= [\det(A)]^{2}"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos det(A) usando su diagonal</h3>
+                  <p>A es triangular inferior porque todas las entradas situadas sobre la diagonal principal son cero. Destacamos la diagonal que determina su determinante.</p>
+                  <figure class="triangular-figure" role="img" aria-label="Matriz triangular inferior A con diagonal principal uno, a, uno; su determinante es uno por a por uno">
+                    <div class="matrix triangular-matrix math-display" data-math="\begin{pmatrix}1 &amp; 0 &amp; 0 \\ 1 &amp; a &amp; 0 \\ 1 &amp; 1 &amp; 1\end{pmatrix}" data-math-display></div>
+                    <figcaption>
+                      <span>Diagonal principal</span>
+                      <strong class="math-inline" data-math="\det(A)=1\cdot a\cdot1=a"></strong>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Sustituimos en la condición y resolvemos</h3>
+                  <p>Como det(A) = a, su cuadrado debe valer 4.</p>
+                  <div class="det-expansion determinant-chain">
+                    <span class="math-inline" data-math="\det(A^{2}) = [\det(A)]^{2} = 4"></span>
+                    <span class="math-inline" data-math="a^{2} = 4"></span>
+                    <span class="math-inline" data-math="a = \pm \sqrt{4}"></span>
+                    <strong class="math-inline" data-math="a \in {-2, 2}"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos los dos valores</h3>
+                  <p>El cuadrado elimina el signo, por eso ambos valores cumplen la condición.</p>
+                  <div class="calculation-list determinant-checks">
+                    <div><span class="math-inline" data-math="a = 2"></span><strong class="math-inline" data-math="\det(A^{2}) = [\det(A)]^{2} = 2^{2} = 4"></strong></div>
+                    <div><span class="math-inline" data-math="a = -2"></span><strong class="math-inline" data-math="\det(A^{2}) = [\det(A)]^{2} = (-2)^{2} = 4"></strong></div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry determinant-essential">
+              <div class="math-display" data-math="\det(A^{2}) = [\det(A)]^{2}" data-math-display></div>
+              <div class="math-display" data-math="\det(A) = 1 \cdot a \cdot 1 = a" data-math-display></div>
+              <strong class="math-inline" data-math="a^{2} = 4 \Rightarrow a = \pm 2"></strong>
+            </div>
+
+            <div class="result matrix-determinant-result">
+              <span>Resultado</span>
+              <strong>a ∈ {−2, 2}</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

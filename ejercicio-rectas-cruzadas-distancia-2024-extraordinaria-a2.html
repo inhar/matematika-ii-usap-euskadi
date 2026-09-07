@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zuzen gurutzatuen arteko distantzia · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-rectas-cruzadas-distancia-2024-extraordinaria-a2-idiomas.js?v=1" defer></script>
+  <script src="ejercicio-rectas-cruzadas-distancia-2024-extraordinaria-a2-grafico.js?v=1" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="page skew-lines-2024-page">
+  <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+    <a href="index.html">← Volver a ejercicios</a>
+    <div class="exercise-nav-meta">
+      <span class="source-reference">2024 · Extraordinaria · Ejercicio A2</span>
+      <div class="language-switch" data-language-switch></div>
+    </div>
+  </nav>
+  <header class="hero"><div class="hero-copy">
+    <p class="eyebrow">Geometría · Posición y distancia entre rectas · 2024</p>
+    <h1>Dos rectas que no comparten plano</h1>
+  </div></header>
+
+  <section class="problem" aria-labelledby="statement-title">
+    <div class="section-index">00</div>
+    <div class="section-content">
+      <h2 id="statement-title">Enunciado</h2>
+      <p>Se consideran las rectas</p>
+      <div class="statement-function math-display" data-math="r:\ \frac{x-1}{1}=\frac{y+1}{2}=\frac{z}{-1}" data-math-display></div>
+      <div class="statement-function math-display" data-math="s:\ \begin{cases}x=\lambda,\\y=-2+3\lambda,\\z=-1+\lambda.\end{cases}" data-math-display></div>
+      <ol class="problem-list">
+        <li>Determina su posición relativa.</li>
+        <li data-skew-lines-2024-language="es">Si se cortan, calcula el ángulo mínimo; si no se cortan, calcula la distancia entre ellas.</li>
+        <li data-skew-lines-2024-language="eu" hidden>Ebakitzen badira, kalkulatu angelu txikiena; ebakitzen ez badira, kalkulatu haien arteko distantzia.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="level-control" aria-labelledby="level-title">
+    <p class="control-label" id="level-title">Qué quieres ver</p>
+    <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+      <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+      <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+      <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+      <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+    </div>
+  </section>
+
+  <div class="tabs" role="tablist" aria-label="Apartados de la solución">
+    <button class="tab active" type="button" role="tab" aria-selected="true" data-target="skew-lines-2024-part-a">Apartado A</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-target="skew-lines-2024-part-b">Apartado B</button>
+  </div>
+
+  <div class="solutions">
+    <section id="skew-lines-2024-part-a" class="panel active" role="tabpanel">
+      <div class="section-index">01</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Apartado A</p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-skew-lines-2024-language="es">Los vectores directores <span class="math-inline math-nowrap" data-math="(1,2,-1)"></span> y <span class="math-inline math-nowrap" data-math="(1,3,1)"></span> no son proporcionales, así que las rectas no son paralelas: o se cortan o son cruzadas.</p>
+          <p class="idea-text" data-skew-lines-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="(1,2,-1)"></span> eta <span class="math-inline math-nowrap" data-math="(1,3,1)"></span> bektore zuzendariak ez dira proportzionalak; beraz, zuzenak ez dira paraleloak: edo ebakitzen dira, edo gurutzatuak dira.</p>
+          <p class="idea-text" data-skew-lines-2024-language="es">Tomamos un punto de cada recta y formamos el vector que los une. Si ese vector y los dos directores fueran coplanarios, las rectas se cortarían. Su producto mixto vale <span class="math-inline math-nowrap" data-math="-4"></span>, no cero, por lo que no existe un plano que contenga ambas.</p>
+          <p class="idea-text" data-skew-lines-2024-language="eu" hidden>Zuzen bakoitzeko puntu bat hartu eta haiek lotzen dituen bektorea osatzen dugu. Bektore hori eta bi zuzendariak koplanarioak balira, zuzenak ebakiko lirateke. Haien biderkadura mistoak <span class="math-inline math-nowrap" data-math="-4"></span> balio du, ez zero; hortaz, ez dago bi zuzenak barne hartzen dituen planorik.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="\det(\vec v_r,\vec v_s,\overrightarrow{AB})=-4\ne0" data-math-display></strong></div>
+        </div>
+        <div class="solution-view" hidden>
+          <p class="kicker">Apartado A</p>
+          <h2>Comprobamos que las tres direcciones no son coplanarias</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>1. Posiciones de dos rectas en el espacio</h3>
+              <p data-skew-lines-2024-language="es">Dos rectas pueden ser coincidentes, paralelas, secantes o cruzadas. Si sus directores no son proporcionales, solo quedan las opciones secantes y cruzadas.</p>
+              <p data-skew-lines-2024-language="eu" hidden>Espazioko bi zuzen bat datozenak, paraleloak, ebakitzaileak edo gurutzatuak izan daitezke. Haien zuzendariak proportzionalak ez badira, ebakitzaileak edo gurutzatuak baino ezin dira izan.</p>
+            </div>
+            <div class="theory-topic">
+              <h3>2. Criterio de coplanariedad</h3>
+              <p data-skew-lines-2024-language="es">Dos directores y un vector que une un punto de cada recta son coplanarios exactamente cuando su producto mixto es cero.</p>
+              <p data-skew-lines-2024-language="eu" hidden>Bi zuzendari eta zuzen bakoitzeko puntu bana lotzen dituen bektorea koplanarioak dira, baldin eta soilik baldin haien biderkadura mistoa zero bada.</p>
+              <div class="theory-formula math-display" data-math="[\vec u,\vec v,\vec w]=\det(\vec u,\vec v,\vec w)" data-math-display></div>
+            </div>
+          </aside>
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Extraemos un punto y un vector de cada recta</h3>
+                <div class="math-display" data-math="A=(1,-1,0),\qquad \vec v_r=(1,2,-1)" data-math-display></div>
+                <div class="math-display" data-math="B=(0,-2,-1),\qquad \vec v_s=(1,3,1)" data-math-display></div>
+              </li>
+              <li>
+                <h3>Descartamos el paralelismo</h3>
+                <p data-skew-lines-2024-language="es">Los cocientes entre las componentes de <span class="math-inline math-nowrap" data-math="\vec v_r"></span> y <span class="math-inline math-nowrap" data-math="\vec v_s"></span> no coinciden; los vectores no son proporcionales.</p>
+                <p data-skew-lines-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="\vec v_r"></span> eta <span class="math-inline math-nowrap" data-math="\vec v_s"></span> bektoreen osagaien arteko zatidurak ez datoz bat; bektoreak ez dira proportzionalak.</p>
+              </li>
+              <li>
+                <h3>Unimos los puntos elegidos</h3>
+                <div class="math-display" data-math="\overrightarrow{AB}=B-A=(-1,-1,-1)" data-math-display></div>
+              </li>
+              <li>
+                <h3>Calculamos el producto mixto</h3>
+                <div class="math-display" data-math="\det\begin{pmatrix}1&2&-1\\1&3&1\\-1&-1&-1\end{pmatrix}" data-math-display></div>
+                <div class="math-display" data-math="-3+1-2-3+1+2=-4\ne0" data-math-display></div>
+              </li>
+              <li>
+                <h3>Interpretamos el resultado</h3>
+                <p data-skew-lines-2024-language="es">Los tres vectores no son coplanarios, así que las rectas no pueden pertenecer al mismo plano ni cortarse.</p>
+                <p data-skew-lines-2024-language="eu" hidden>Hiru bektoreak ez dira koplanarioak; beraz, zuzenak ezin dira plano berekoak izan, ezta elkar ebaki ere.</p>
+              </li>
+            </ol>
+          </div>
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry">
+            <div class="math-display" data-math="\vec v_r=(1,2,-1),\quad \vec v_s=(1,3,1)" data-math-display></div>
+            <div class="math-display" data-math="\overrightarrow{AB}=(-1,-1,-1),\quad [\vec v_r,\vec v_s,\overrightarrow{AB}]=-4" data-math-display></div>
+          </div>
+          <div class="result"><span>Resultado</span><strong>Las rectas <span class="math-inline math-nowrap" data-math="r"></span> y <span class="math-inline math-nowrap" data-math="s"></span> son cruzadas.</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skew-lines-2024-part-b" class="panel" role="tabpanel" hidden>
+      <div class="section-index">02</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Apartado B</p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-skew-lines-2024-language="es">Como las rectas son cruzadas, calculamos su distancia. El producto mixto mide el volumen del paralelepípedo formado por los dos directores y el vector que une las rectas.</p>
+          <p class="idea-text" data-skew-lines-2024-language="eu" hidden>Zuzenak gurutzatuak direnez, haien arteko distantzia kalkulatzen dugu. Biderkadura mistoak bi zuzendariak eta zuzenak lotzen dituen bektoreak osatutako paralelepipedoaren bolumena neurtzen du.</p>
+          <p class="idea-text" data-skew-lines-2024-language="es">Ese mismo volumen es el área de la base <span class="math-inline math-nowrap" data-math="\lVert\vec v_r\times\vec v_s\rVert"></span> multiplicada por la altura, que es justamente la distancia buscada. Por eso dividimos volumen entre área.</p>
+          <p class="idea-text" data-skew-lines-2024-language="eu" hidden>Bolumen bera oinarriaren <span class="math-inline math-nowrap" data-math="\lVert\vec v_r\times\vec v_s\rVert"></span> azalera bider altuera da; altuera hori bilatzen den distantzia da. Horregatik, bolumena azaleraz zatitzen dugu.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="d(r,s)=\frac{|[\vec v_r,\vec v_s,\overrightarrow{AB}]|}{\lVert\vec v_r\times\vec v_s\rVert}" data-math-display></strong></div>
+        </div>
+        <div class="solution-view" hidden>
+          <p class="kicker">Apartado B</p>
+          <h2>Dividimos el producto mixto por el área de la base</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>Distancia entre rectas cruzadas</h3>
+              <p data-skew-lines-2024-language="es">El valor absoluto del producto mixto es un volumen. El módulo del producto vectorial de los directores es el área de la base. Su cociente es la altura perpendicular.</p>
+              <p data-skew-lines-2024-language="eu" hidden>Biderkadura mistoaren balio absolutua bolumena da. Zuzendarien biderkadura bektorialaren modulua oinarriaren azalera da. Haien zatidura altuera perpendikularra da.</p>
+              <div class="theory-formula math-display" data-math="V=A_{\text{base}}\,d" data-math-display></div>
+              <div class="theory-formula math-display" data-math="V=|[\vec u,\vec v,\vec w]|,\qquad A_{\text{base}}=\lVert\vec u\times\vec v\rVert" data-math-display></div>
+            </div>
+          </aside>
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Calculamos el producto vectorial de los directores</h3>
+                <div class="math-display" data-math="\vec v_r\times\vec v_s=\begin{vmatrix}\vec i&\vec j&\vec k\\1&2&-1\\1&3&1\end{vmatrix}" data-math-display></div>
+                <div class="math-display" data-math="\vec v_r\times\vec v_s=(5,-2,1)" data-math-display></div>
+              </li>
+              <li>
+                <h3>Calculamos el área de la base</h3>
+                <div class="math-display" data-math="\lVert(5,-2,1)\rVert=\sqrt{25+4+1}=\sqrt{30}" data-math-display></div>
+              </li>
+              <li>
+                <h3>Usamos el producto mixto del apartado anterior</h3>
+                <div class="math-display" data-math="|[\vec v_r,\vec v_s,\overrightarrow{AB}]|=|-4|=4" data-math-display></div>
+              </li>
+              <li>
+                <h3>Dividimos y racionalizamos</h3>
+                <div class="math-display" data-math="d(r,s)=\frac4{\sqrt{30}}" data-math-display></div>
+                <div class="math-display" data-math="d(r,s)=\frac{4\sqrt{30}}{30}=\frac{2\sqrt{30}}{15}" data-math-display></div>
+              </li>
+            </ol>
+          </div>
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry">
+            <div class="math-display" data-math="\vec v_r\times\vec v_s=(5,-2,1),\qquad \lVert\vec v_r\times\vec v_s\rVert=\sqrt{30}" data-math-display></div>
+            <div class="math-display" data-math="d(r,s)=\frac4{\sqrt{30}}=\frac{2\sqrt{30}}{15}" data-math-display></div>
+          </div>
+          <figure class="skew-lines-2024-figure" aria-label="Esquema en perspectiva de dos rectas cruzadas y su perpendicular común">
+            <figcaption data-skew-lines-2024-language="es">Esquema en perspectiva: la distancia es la longitud del segmento perpendicular común, no la distancia entre dos puntos cualesquiera.</figcaption>
+            <figcaption data-skew-lines-2024-language="eu" hidden>Perspektibako eskema: distantzia perpendikular komunaren segmentuaren luzera da, ez edozein bi punturen arteko distantzia.</figcaption>
+            <div id="skew-lines-2024-board" class="jxgbox skew-lines-2024-board" role="img" aria-label="Dos rectas cruzadas unidas por el segmento de distancia mínima"></div>
+          </figure>
+          <div class="result"><span>Resultado</span><strong class="math-display" data-math="d(r,s)=\frac{2\sqrt{30}}{15}" data-math-display></strong></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

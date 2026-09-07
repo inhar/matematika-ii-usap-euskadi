@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zuzenaren eta bi planoren arteko geometria · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-intersecciones-recta-planos-distancias-2023-ordinaria-idiomas.js?v=2023-ord-b2a" defer></script>
+  <script src="ejercicio-intersecciones-recta-planos-distancias-2023-ordinaria-grafico.js?v=2023-ord-b2a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Ejercicio B2</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Geometría en el espacio · Rectas, planos y distancias · 2023</p>
+        <h1 class="intersections-2023-title">Intersecciones de una recta con dos planos</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-intersections-2023-language="es">Se consideran la recta <span class="math-inline math-nowrap" data-math="r"></span> y los planos <span class="math-inline math-nowrap" data-math="\pi_1"></span> y <span class="math-inline math-nowrap" data-math="\pi_2"></span>:</p>
+        <p data-intersections-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="r"></span> zuzena eta <span class="math-inline math-nowrap" data-math="\pi_1"></span> eta <span class="math-inline math-nowrap" data-math="\pi_2"></span> planoak hauek dira:</p>
+        <div class="intersections-2023-data">
+          <div class="math-display intersections-2023-line" data-math="r\colon\frac{x-1}{1}=\frac{y-1}{-1}=\frac{z-1}{2}" data-math-display></div>
+          <div class="math-display" data-math="\pi_1\colon x+y+z=1" data-math-display></div>
+          <div class="math-display" data-math="\pi_2\colon x+y-z=1" data-math-display></div>
+        </div>
+        <p data-intersections-2023-language="es">El punto <span class="math-inline math-nowrap" data-math="P_1"></span> es la intersección de <span class="math-inline math-nowrap" data-math="r"></span> con <span class="math-inline math-nowrap" data-math="\pi_1"></span>, y <span class="math-inline math-nowrap" data-math="P_2"></span> es la intersección de <span class="math-inline math-nowrap" data-math="r"></span> con <span class="math-inline math-nowrap" data-math="\pi_2"></span>. Calcula:</p>
+        <p data-intersections-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="P_1"></span> puntua <span class="math-inline math-nowrap" data-math="r"></span> eta <span class="math-inline math-nowrap" data-math="\pi_1"></span>-en ebakidura da, eta <span class="math-inline math-nowrap" data-math="P_2"></span> puntua <span class="math-inline math-nowrap" data-math="r"></span> eta <span class="math-inline math-nowrap" data-math="\pi_2"></span>-ren ebakidura. Kalkulatu:</p>
+        <ol class="statement-list" data-intersections-2023-language="es">
+          <li><span class="statement-label">a</span><span class="statement-text">las coordenadas de <span class="math-inline math-nowrap" data-math="P_1"></span> y <span class="math-inline math-nowrap" data-math="P_2"></span>;</span></li>
+          <li><span class="statement-label">b</span><span class="statement-text">la distancia entre <span class="math-inline math-nowrap" data-math="P_1"></span> y <span class="math-inline math-nowrap" data-math="P_2"></span>;</span></li>
+          <li><span class="statement-label">c</span><span class="statement-text">la distancia del punto <span class="math-inline math-nowrap" data-math="P_1"></span> al plano <span class="math-inline math-nowrap" data-math="\pi_2"></span>.</span></li>
+        </ol>
+        <ol class="statement-list" data-intersections-2023-language="eu" hidden>
+          <li><span class="statement-label">a</span><span class="statement-text"><span class="math-inline math-nowrap" data-math="P_1"></span> eta <span class="math-inline math-nowrap" data-math="P_2"></span> puntuen koordenatuak;</span></li>
+          <li><span class="statement-label">b</span><span class="statement-text"><span class="math-inline math-nowrap" data-math="P_1"></span> eta <span class="math-inline math-nowrap" data-math="P_2"></span> puntuen arteko distantzia;</span></li>
+          <li><span class="statement-label">c</span><span class="statement-text"><span class="math-inline math-nowrap" data-math="P_1"></span> puntutik <span class="math-inline math-nowrap" data-math="\pi_2"></span> planorainoko distantzia.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs intersections-2023-tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="intersections-2023-part-a" data-target="intersections-2023-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="intersections-2023-part-b" data-target="intersections-2023-part-b">B</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="intersections-2023-part-c" data-target="intersections-2023-part-c">C</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="intersections-2023-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-intersections-2023-language="es">La igualdad de las tres fracciones de la ecuación continua permite llamar <span class="math-inline math-nowrap" data-math="t"></span> a su valor común. Así obtenemos un punto genérico de <span class="math-inline math-nowrap" data-math="r"></span>: <span class="math-inline math-nowrap" data-math="R(t)=(1+t,1-t,1+2t)"></span>.</p>
+            <p class="idea-text" data-intersections-2023-language="eu" hidden>Ekuazio jarraituko hiru zatikien berdintzari <span class="math-inline math-nowrap" data-math="t"></span> balio komuna ematen diogu. Horrela, <span class="math-inline math-nowrap" data-math="r"></span> zuzeneko puntu orokorra lortzen dugu: <span class="math-inline math-nowrap" data-math="R(t)=(1+t,1-t,1+2t)"></span>.</p>
+            <p class="idea-text" data-intersections-2023-language="es">Sustituimos ese punto en cada plano. La primera sustitución determina <span class="math-inline math-nowrap" data-math="t=-1"></span> y la segunda <span class="math-inline math-nowrap" data-math="t=0"></span>; al volver a <span class="math-inline math-nowrap" data-math="R(t)"></span> aparecen los dos puntos de corte.</p>
+            <p class="idea-text" data-intersections-2023-language="eu" hidden>Puntu hori plano bakoitzean ordezkatzen dugu. Lehen ordezkapenak <span class="math-inline math-nowrap" data-math="t=-1"></span> ematen du, eta bigarrenak <span class="math-inline math-nowrap" data-math="t=0"></span>; balio horiek <span class="math-inline math-nowrap" data-math="R(t)"></span>-n jarrita bi ebakidura-puntuak lortzen dira.</p>
+            <div class="essential-geometry intersections-2023-essential">
+              <div class="math-display" data-math="R(t)=(1+t,1-t,1+2t)" data-math-display></div>
+              <strong class="math-display" data-math="P_1=(0,2,-1),\qquad P_2=(1,1,1)" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Intersecciones de la recta con los planos</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. De ecuación continua a paramétrica</h3>
+                <p data-intersections-2023-language="es">En una ecuación continua, las tres fracciones representan el mismo parámetro. Igualar cada una a <span class="math-inline math-nowrap" data-math="t"></span> permite despejar las coordenadas.</p>
+                <p data-intersections-2023-language="eu" hidden>Ekuazio jarraitu batean, hiru zatikiek parametro bera adierazten dute. Bakoitza <span class="math-inline math-nowrap" data-math="t"></span>-rekin berdinduta koordenatuak aska daitezke.</p>
+                <div class="theory-formula math-display" data-math="\begin{aligned}\frac{x-a}{u}=\frac{y-b}{v}=\frac{z-c}{w}&amp;=t,\\[3pt](x,y,z)&amp;=(a,b,c)+t(u,v,w).\end{aligned}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Intersección de una recta y un plano</h3>
+                <p data-intersections-2023-language="es">Un punto de la recta pertenece al plano cuando sus coordenadas satisfacen la ecuación del plano. La sustitución produce una ecuación para el parámetro.</p>
+                <p data-intersections-2023-language="eu" hidden>Zuzeneko puntu bat planoan dago haren koordenatuek planoaren ekuazioa betetzen dutenean. Ordezkapenak parametroarentzako ekuazio bat ematen du.</p>
+                <div class="theory-formula math-display" data-math="R(t)\in\pi\quad\Longleftrightarrow\quad F(R(t))=0" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Parametrizamos la recta</h3>
+                  <p data-intersections-2023-language="es">Llamamos <span class="math-inline math-nowrap" data-math="t"></span> al valor común de las tres fracciones y despejamos cada coordenada.</p>
+                  <p data-intersections-2023-language="eu" hidden>Hiru zatikien balio komunari <span class="math-inline math-nowrap" data-math="t"></span> deitzen diogu, eta koordenatu bakoitza askatzen dugu.</p>
+                  <div class="intersections-2023-work">
+                    <div class="math-display" data-math="\frac{x-1}{1}=t\quad\Longrightarrow\quad x=1+t" data-math-display></div>
+                    <div class="math-display" data-math="\frac{y-1}{-1}=t\quad\Longrightarrow\quad y=1-t" data-math-display></div>
+                    <div class="math-display" data-math="\frac{z-1}{2}=t\quad\Longrightarrow\quad z=1+2t" data-math-display></div>
+                    <strong class="math-display" data-math="R(t)=(1+t,1-t,1+2t)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos la intersección con <span class="math-inline math-nowrap" data-math="\pi_1"></span></h3>
+                  <p data-intersections-2023-language="es">Sustituimos las tres coordenadas de <span class="math-inline math-nowrap" data-math="R(t)"></span> en <span class="math-inline math-nowrap" data-math="x+y+z=1"></span>.</p>
+                  <p data-intersections-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="R(t)"></span>-ren hiru koordenatuak <span class="math-inline math-nowrap" data-math="x+y+z=1"></span> ekuazioan ordezkatzen ditugu.</p>
+                  <div class="intersections-2023-work">
+                    <div class="math-display" data-math="(1+t)+(1-t)+(1+2t)=1" data-math-display></div>
+                    <div class="math-display" data-math="3+2t=1" data-math-display></div>
+                    <strong class="math-display" data-math="2t=-2\quad\Longrightarrow\quad t=-1" data-math-display></strong>
+                    <div class="math-display" data-math="P_1=R(-1)=(0,2,-1)" data-math-display></div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos la intersección con <span class="math-inline math-nowrap" data-math="\pi_2"></span></h3>
+                  <p data-intersections-2023-language="es">Ahora sustituimos en <span class="math-inline math-nowrap" data-math="x+y-z=1"></span>. El signo menos delante de <span class="math-inline math-nowrap" data-math="z"></span> afecta a todo <span class="math-inline math-nowrap" data-math="1+2t"></span>.</p>
+                  <p data-intersections-2023-language="eu" hidden>Orain <span class="math-inline math-nowrap" data-math="x+y-z=1"></span> ekuazioan ordezkatzen dugu. <span class="math-inline math-nowrap" data-math="z"></span>-ren aurreko minus zeinuak <span class="math-inline math-nowrap" data-math="1+2t"></span> adierazpen osoari eragiten dio.</p>
+                  <div class="intersections-2023-work">
+                    <div class="math-display" data-math="(1+t)+(1-t)-(1+2t)=1" data-math-display></div>
+                    <div class="math-display" data-math="1-2t=1" data-math-display></div>
+                    <strong class="math-display" data-math="-2t=0\quad\Longrightarrow\quad t=0" data-math-display></strong>
+                    <div class="math-display" data-math="P_2=R(0)=(1,1,1)" data-math-display></div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Situamos los elementos del problema</h3>
+                  <p data-intersections-2023-language="es">La recta atraviesa cada plano en uno de los puntos calculados. El segmento destacado une <span class="math-inline math-nowrap" data-math="P_1"></span> y <span class="math-inline math-nowrap" data-math="P_2"></span>; el segmento discontinuo representa la distancia perpendicular desde <span class="math-inline math-nowrap" data-math="P_1"></span> hasta <span class="math-inline math-nowrap" data-math="\pi_2"></span>.</p>
+                  <p data-intersections-2023-language="eu" hidden>Zuzenak kalkulatutako puntuetako batean zeharkatzen du plano bakoitza. Nabarmendutako segmentuak <span class="math-inline math-nowrap" data-math="P_1"></span> eta <span class="math-inline math-nowrap" data-math="P_2"></span> lotzen ditu; segmentu etenak <span class="math-inline math-nowrap" data-math="P_1"></span> puntutik <span class="math-inline math-nowrap" data-math="\pi_2"></span> planorainoko distantzia perpendikularra adierazten du.</p>
+                  <figure class="intersections-2023-figure" aria-label="Recta que corta dos planos en P1 y P2">
+                    <figcaption data-intersections-2023-language="es">Esquema espacial de la recta, los planos y los segmentos cuyas longitudes se calculan en los apartados B y C.</figcaption>
+                    <figcaption data-intersections-2023-language="eu" hidden>Zuzenaren, planoen eta B eta C ataletan kalkulatzen diren segmentuen espazioko eskema.</figcaption>
+                    <div id="intersections-2023-board" class="jxgbox intersections-2023-board" role="img" aria-label="Planos pi uno y pi dos, recta r, puntos P1 y P2 y distancia perpendicular"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry intersections-2023-essential">
+              <div class="math-display" data-math="R(t)=(1+t,1-t,1+2t)" data-math-display></div>
+              <div class="math-display" data-math="R(t)\in\pi_1\Longrightarrow t=-1" data-math-display></div>
+              <div class="math-display" data-math="R(t)\in\pi_2\Longrightarrow t=0" data-math-display></div>
+              <strong class="math-display" data-math="P_1=(0,2,-1),\qquad P_2=(1,1,1)" data-math-display></strong>
+            </div>
+            <div class="result geometry-result intersections-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P_1=(0,2,-1),\qquad P_2=(1,1,1)" data-math-display></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="intersections-2023-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-intersections-2023-language="es">La distancia entre dos puntos es la longitud del vector que los une. Restamos sus coordenadas componente a componente y calculamos la norma del vector resultante.</p>
+            <p class="idea-text" data-intersections-2023-language="eu" hidden>Bi punturen arteko distantzia puntuak lotzen dituen bektorearen luzera da. Koordenatuak osagaiz osagai kentzen ditugu, eta lortutako bektorearen norma kalkulatzen dugu.</p>
+            <div class="essential-geometry intersections-2023-essential">
+              <div class="math-display" data-math="\overrightarrow{P_1P_2}=(1,-1,2)" data-math-display></div>
+              <strong class="math-display" data-math="d(P_1,P_2)=\sqrt{1^2+(-1)^2+2^2}=\sqrt6" data-math-display></strong>
+            </div>
+          </div>
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Distancia entre los puntos de corte</h2>
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>Distancia entre dos puntos</h3>
+                <p data-intersections-2023-language="es">La distancia entre dos puntos del espacio es el módulo del vector que los une. El orden de la resta no cambia la distancia, porque las componentes quedan elevadas al cuadrado.</p>
+                <p data-intersections-2023-language="eu" hidden>Espazioko bi punturen arteko distantzia puntuak lotzen dituen bektorearen modulua da. Kenketaren ordenak ez du distantzia aldatzen, osagaiak ber bi egiten direlako.</p>
+                <div class="theory-formula math-display" data-math="d(A,B)=\lVert\overrightarrow{AB}\rVert=\sqrt{(x_B-x_A)^2+(y_B-y_A)^2+(z_B-z_A)^2}" data-math-display></div>
+              </div>
+            </aside>
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Construimos el vector entre los puntos</h3>
+                  <p data-intersections-2023-language="es">Restamos a las coordenadas de <span class="math-inline math-nowrap" data-math="P_2"></span> las de <span class="math-inline math-nowrap" data-math="P_1"></span>.</p>
+                  <p data-intersections-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="P_2"></span>-ren koordenatuei <span class="math-inline math-nowrap" data-math="P_1"></span>-enak kentzen dizkiegu.</p>
+                  <div class="intersections-2023-work">
+                    <div class="math-display" data-math="\overrightarrow{P_1P_2}=P_2-P_1" data-math-display></div>
+                    <div class="math-display" data-math="=(1-0,\,1-2,\,1-(-1))" data-math-display></div>
+                    <strong class="math-display" data-math="\overrightarrow{P_1P_2}=(1,-1,2)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos su módulo</h3>
+                  <p data-intersections-2023-language="es">Elevamos al cuadrado cada componente, sumamos y tomamos la raíz cuadrada.</p>
+                  <p data-intersections-2023-language="eu" hidden>Osagai bakoitza ber bi egiten dugu, batu eta erro karratua hartzen dugu.</p>
+                  <div class="intersections-2023-work">
+                    <div class="math-display" data-math="d(P_1,P_2)=\sqrt{1^2+(-1)^2+2^2}" data-math-display></div>
+                    <div class="math-display" data-math="=\sqrt{1+1+4}" data-math-display></div>
+                    <strong class="math-display" data-math="d(P_1,P_2)=\sqrt6" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry intersections-2023-essential">
+              <div class="math-display" data-math="\overrightarrow{P_1P_2}=(1,-1,2)" data-math-display></div>
+              <strong class="math-display" data-math="d(P_1,P_2)=\lVert\overrightarrow{P_1P_2}\rVert=\sqrt6" data-math-display></strong>
+            </div>
+            <div class="result geometry-result intersections-2023-result">
+              <span>Resultado</span>
+              <strong class="math-inline" data-math="d(P_1,P_2)=\sqrt6"></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="intersections-2023-part-c" class="panel" role="tabpanel" hidden>
+        <div class="section-index">03</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado C</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-intersections-2023-language="es">Escribimos el plano como <span class="math-inline math-nowrap" data-math="x+y-z-1=0"></span> y aplicamos directamente la fórmula de distancia punto-plano a <span class="math-inline math-nowrap" data-math="P_1=(0,2,-1)"></span>.</p>
+            <p class="idea-text" data-intersections-2023-language="eu" hidden>Planoa <span class="math-inline math-nowrap" data-math="x+y-z-1=0"></span> moduan idazten dugu, eta puntu-planoko distantziaren formula zuzenean aplikatzen diogu <span class="math-inline math-nowrap" data-math="P_1=(0,2,-1)"></span> puntuari.</p>
+            <div class="essential-geometry intersections-2023-essential">
+              <div class="math-display" data-math="d(P_1,\pi_2)=\frac{|0+2-(-1)-1|}{\sqrt{1^2+1^2+(-1)^2}}" data-math-display></div>
+              <strong class="math-display" data-math="d(P_1,\pi_2)=\frac{2}{\sqrt3}=\frac{2\sqrt3}{3}" data-math-display></strong>
+            </div>
+          </div>
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado C</p>
+            <h2>Distancia de un punto a un plano</h2>
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>Distancia punto-plano</h3>
+                <p data-intersections-2023-language="es">Si el plano está escrito como <span class="math-inline math-nowrap" data-math="Ax+By+Cz+D=0"></span>, su vector normal es <span class="math-inline math-nowrap" data-math="(A,B,C)"></span>. La fórmula divide el valor absoluto de la ecuación en el punto entre la longitud de ese normal.</p>
+                <p data-intersections-2023-language="eu" hidden>Planoa <span class="math-inline math-nowrap" data-math="Ax+By+Cz+D=0"></span> moduan idatzita badago, haren bektore normala <span class="math-inline math-nowrap" data-math="(A,B,C)"></span> da. Formulak puntuan lortutako ekuazioaren balio absolutua normalaren luzerarekin zatitzen du.</p>
+                <div class="theory-formula math-display" data-math="d(P,\pi)=\frac{|Ax_0+By_0+Cz_0+D|}{\sqrt{A^2+B^2+C^2}}" data-math-display></div>
+              </div>
+            </aside>
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Identificamos los datos de la fórmula</h3>
+                  <p data-intersections-2023-language="es">Pasamos todos los términos del plano al primer miembro y leemos sus coeficientes.</p>
+                  <p data-intersections-2023-language="eu" hidden>Planoaren gai guztiak lehenengo atalera pasatzen ditugu, eta haren koefizienteak irakurtzen ditugu.</p>
+                  <div class="intersections-2023-work">
+                    <div class="math-display" data-math="\pi_2\colon x+y-z-1=0" data-math-display></div>
+                    <strong class="math-display" data-math="A=1,\qquad B=1,\qquad C=-1,\qquad D=-1" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Sustituimos el punto <span class="math-inline math-nowrap" data-math="P_1"></span></h3>
+                  <p data-intersections-2023-language="es">Usamos <span class="math-inline math-nowrap" data-math="P_1=(0,2,-1)"></span> y mantenemos el valor absoluto hasta simplificar el numerador.</p>
+                  <p data-intersections-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="P_1=(0,2,-1)"></span> erabiltzen dugu, eta balio absolutua mantentzen dugu zenbakitzailea sinplifikatu arte.</p>
+                  <div class="intersections-2023-work">
+                    <div class="math-display" data-math="d(P_1,\pi_2)=\frac{|1\cdot0+1\cdot2+(-1)(-1)-1|}{\sqrt{1^2+1^2+(-1)^2}}" data-math-display></div>
+                    <div class="math-display" data-math="=\frac{|0+2+1-1|}{\sqrt{1+1+1}}" data-math-display></div>
+                    <strong class="math-display" data-math="d(P_1,\pi_2)=\frac2{\sqrt3}" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Racionalizamos el denominador</h3>
+                  <p data-intersections-2023-language="es">Multiplicamos numerador y denominador por <span class="math-inline math-nowrap" data-math="\sqrt3"></span> para escribir el resultado sin una raíz en el denominador.</p>
+                  <p data-intersections-2023-language="eu" hidden>Zenbakitzailea eta izendatzailea <span class="math-inline math-nowrap" data-math="\sqrt3"></span>-rekin biderkatzen ditugu, emaitza izendatzailean errorik gabe idazteko.</p>
+                  <div class="intersections-2023-work">
+                    <div class="math-display" data-math="\frac2{\sqrt3}\cdot\frac{\sqrt3}{\sqrt3}=\frac{2\sqrt3}{3}" data-math-display></div>
+                    <strong class="math-display" data-math="d(P_1,\pi_2)=\frac{2\sqrt3}{3}" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry intersections-2023-essential">
+              <div class="math-display" data-math="\pi_2\colon x+y-z-1=0" data-math-display></div>
+              <div class="math-display" data-math="d(P_1,\pi_2)=\frac{|0+2-(-1)-1|}{\sqrt{1^2+1^2+(-1)^2}}" data-math-display></div>
+              <strong class="math-display" data-math="d(P_1,\pi_2)=\frac{2\sqrt3}{3}" data-math-display></strong>
+            </div>
+            <div class="result geometry-result intersections-2023-result">
+              <span>Resultado</span>
+              <strong class="math-inline" data-math="d(P_1,\pi_2)=\frac{2\sqrt3}{3}"></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

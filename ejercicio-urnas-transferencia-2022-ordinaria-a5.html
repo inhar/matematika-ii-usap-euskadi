@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bola baten transferentzia urnen artean · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-urnas-transferencia-2022-ordinaria-idiomas.js?v=2022-ord-a5a" defer></script>
+  <script src="ejercicio-urnas-transferencia-2022-ordinaria-grafico.js?v=2022-ord-a5a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2022 · Ordinaria · Ejercicio A5</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Probabilidad compuesta · 2022</p>
+        <h1 class="urn-transfer-2022-title">Urnas con transferencia de una bola</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Tenemos dos urnas con la siguiente composición:</p>
+        <div class="urn-transfer-2022-data" aria-label="Composición inicial de las urnas T y R">
+          <div>
+            <strong class="math-inline" data-math="T"></strong>
+            <span>4 bolas negras</span>
+            <span>6 bolas blancas</span>
+          </div>
+          <div>
+            <strong class="math-inline" data-math="R"></strong>
+            <span>7 bolas negras</span>
+            <span>3 bolas blancas</span>
+          </div>
+        </div>
+        <p>Se selecciona al azar una urna, se extrae una bola y se coloca en la otra urna. A continuación, se extrae una bola de esta última urna.</p>
+        <p>Calcula la probabilidad de que las dos bolas extraídas:</p>
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">sean negras;</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">sean blancas;</span>
+          </li>
+          <li>
+            <span class="statement-label">c</span>
+            <span class="statement-text">sean de distinto color.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="urn-transfer-2022-part-a" data-target="urn-transfer-2022-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="urn-transfer-2022-part-b" data-target="urn-transfer-2022-part-b">B</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="urn-transfer-2022-part-c" data-target="urn-transfer-2022-part-c">C</button>
+    </nav>
+
+    <div class="solution-view urn-transfer-2022-shared-visual" hidden>
+      <figure class="urn-transfer-2022-figure" aria-label="Árbol de probabilidades del experimento con las dos urnas">
+        <figcaption data-urn-transfer-2022-language="es">Árbol completo del experimento. En el gráfico, <span class="math-inline math-nowrap" data-math="B"></span> significa «blanca» y <span class="math-inline math-nowrap" data-math="N"></span>, «negra».</figcaption>
+        <figcaption data-urn-transfer-2022-language="eu" hidden>Esperimentuaren probabilitate-zuhaitz osoa. Grafikoan, <span class="math-inline math-nowrap" data-math="Z"></span> letrak «zuria» adierazten du eta <span class="math-inline math-nowrap" data-math="B"></span> letrak, «beltza».</figcaption>
+        <div id="urn-transfer-2022-board" class="jxgbox urn-transfer-2022-board" role="img" aria-label="Árbol con la urna elegida, el color de la primera bola y el color de la segunda bola"></div>
+      </figure>
+    </div>
+
+    <div class="solutions">
+      <section id="urn-transfer-2022-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-urn-transfer-2022-language="es">Para obtener dos bolas negras hay dos caminos: elegir primero la urna <span class="math-inline math-nowrap" data-math="T"></span> y sacar negra en ambas extracciones, o elegir primero <span class="math-inline math-nowrap" data-math="R"></span> y volver a sacar negra dos veces.</p>
+            <p class="idea-text" data-urn-transfer-2022-language="eu" hidden>Bi bola beltz lortzeko bi bide daude: lehenik <span class="math-inline math-nowrap" data-math="T"></span> urna aukeratu eta bi ateraldietan beltza lortzea, edo lehenik <span class="math-inline math-nowrap" data-math="R"></span> aukeratu eta berriro bi aldiz beltza ateratzea.</p>
+            <p class="idea-text" data-urn-transfer-2022-language="es">La transferencia modifica la segunda urna. Si la primera bola es negra, la urna receptora tendrá una bola negra más y un total de once bolas. Multiplicamos las probabilidades de cada camino y sumamos ambos resultados.</p>
+            <p class="idea-text" data-urn-transfer-2022-language="eu" hidden>Transferentziak bigarren urnaren osaera aldatzen du. Lehen bola beltza bada, urna hartzaileak bola beltz bat gehiago eta guztira hamaika bola izango ditu. Bide bakoitzeko probabilitateak biderkatu eta bi emaitzak batzen ditugu.</p>
+            <div class="essential-geometry urn-transfer-2022-idea">
+              <div class="math-display urn-transfer-2022-formula" data-math="\frac12\cdot\frac4{10}\cdot\frac8{11}+\frac12\cdot\frac7{10}\cdot\frac5{11}" data-math-display></div>
+              <strong class="math-display" data-math="P(\text{dos negras})=\frac{67}{220}\approx0{,}305" data-math-eu="P(\text{bi beltz})=\frac{67}{220}\approx0{,}305" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Probabilidad de extraer dos bolas negras</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Probabilidades condicionadas</h3>
+                <p>La probabilidad de la segunda extracción depende de la urna elegida y del color transferido en la primera extracción. Por eso las probabilidades de la última etapa son condicionadas.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Regla del producto</h3>
+                <p>La probabilidad de un camino completo se obtiene multiplicando las probabilidades de sus ramas.</p>
+                <div class="theory-formula math-display" data-math="\begin{aligned}P(A\cap B\cap C)={}&P(A)P(B\mid A)\\ &\cdot P(C\mid A\cap B)\end{aligned}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Suma de caminos incompatibles</h3>
+                <p>Elegir primero T y elegir primero R son posibilidades incompatibles. Si ambas producen el resultado buscado, sumamos sus probabilidades.</p>
+                <div class="theory-formula math-display" data-math="P(E)=P(E\cap T)+P(E\cap R)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>La primera urna se elige al azar</h3>
+                  <p>Como hay dos urnas y ninguna tiene preferencia, las dos se eligen con la misma probabilidad.</p>
+                  <div class="urn-transfer-2022-work">
+                    <div class="math-display" data-math="P(T)=P(R)=\frac12" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Camino que empieza en la urna T</h3>
+                  <p data-urn-transfer-2022-language="es">En <span class="math-inline math-nowrap" data-math="T"></span> hay cuatro bolas negras de diez. Si transferimos una negra a <span class="math-inline math-nowrap" data-math="R"></span>, esta pasa de siete a ocho negras y queda con once bolas en total.</p>
+                  <p data-urn-transfer-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="T"></span> urnan lau bola beltz daude hamarretik. Bola beltz bat <span class="math-inline math-nowrap" data-math="R"></span> urnara pasatzen badugu, zazpi bola beltz izatetik zortzi izatera pasatzen da, eta guztira hamaika bola ditu.</p>
+                  <div class="urn-transfer-2022-work">
+                    <div class="math-display" data-math="P(T\to N_1\to N_2)=\frac12\cdot\frac4{10}\cdot\frac8{11}" data-math-eu="P(T\to B_1\to B_2)=\frac12\cdot\frac4{10}\cdot\frac8{11}" data-math-display></div>
+                    <strong class="math-display" data-math="P(T\to N_1\to N_2)=\frac{32}{220}" data-math-eu="P(T\to B_1\to B_2)=\frac{32}{220}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Camino que empieza en la urna R</h3>
+                  <p data-urn-transfer-2022-language="es">En <span class="math-inline math-nowrap" data-math="R"></span> hay siete bolas negras de diez. Al transferir una negra a <span class="math-inline math-nowrap" data-math="T"></span>, esta queda con cinco negras de un total de once.</p>
+                  <p data-urn-transfer-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="R"></span> urnan zazpi bola beltz daude hamarretik. Bola beltz bat <span class="math-inline math-nowrap" data-math="T"></span> urnara pasatzean, bost bola beltz eta guztira hamaika bola izango ditu.</p>
+                  <div class="urn-transfer-2022-work">
+                    <div class="math-display" data-math="P(R\to N_1\to N_2)=\frac12\cdot\frac7{10}\cdot\frac5{11}" data-math-eu="P(R\to B_1\to B_2)=\frac12\cdot\frac7{10}\cdot\frac5{11}" data-math-display></div>
+                    <strong class="math-display" data-math="P(R\to N_1\to N_2)=\frac{35}{220}" data-math-eu="P(R\to B_1\to B_2)=\frac{35}{220}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Sumamos los dos caminos</h3>
+                  <div class="urn-transfer-2022-work">
+                    <div class="math-display urn-transfer-2022-formula" data-math="\begin{aligned}P(\text{dos negras})&=\frac{32}{220}+\frac{35}{220}\\ &=\frac{67}{220}\end{aligned}" data-math-eu="\begin{aligned}P(\text{bi beltz})&=\frac{32}{220}+\frac{35}{220}\\ &=\frac{67}{220}\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="\frac{67}{220}\approx0{,}305" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry urn-transfer-2022-essential">
+              <div class="math-display urn-transfer-2022-formula" data-math="\begin{aligned}P(\text{dos negras})={}&\frac12\cdot\frac4{10}\cdot\frac8{11}\\ &+\frac12\cdot\frac7{10}\cdot\frac5{11}\end{aligned}" data-math-eu="\begin{aligned}P(\text{bi beltz})={}&\frac12\cdot\frac4{10}\cdot\frac8{11}\\ &+\frac12\cdot\frac7{10}\cdot\frac5{11}\end{aligned}" data-math-display></div>
+              <strong class="math-display" data-math="P(\text{dos negras})=\frac{67}{220}\approx0{,}305" data-math-eu="P(\text{bi beltz})=\frac{67}{220}\approx0{,}305" data-math-display></strong>
+            </div>
+
+            <div class="result result-long urn-transfer-2022-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="\frac{67}{220}\approx0{,}305" data-math-display></strong>
+              <p data-urn-transfer-2022-language="es">La probabilidad de extraer dos bolas negras es aproximadamente del <span class="math-inline math-nowrap" data-math="30{,}5\%"></span>.</p>
+              <p data-urn-transfer-2022-language="eu" hidden>Bi bola beltz ateratzeko probabilitatea gutxi gorabehera <span class="math-inline math-nowrap" data-math="\%30{,}5"></span> da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="urn-transfer-2022-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-urn-transfer-2022-language="es">Para obtener dos bolas blancas volvemos a tener dos caminos, uno por cada urna inicial. Si la primera bola es blanca, la urna receptora tendrá una bola blanca más y once bolas en total.</p>
+            <p class="idea-text" data-urn-transfer-2022-language="eu" hidden>Bi bola zuri lortzeko berriro bi bide ditugu, hasierako urna bakoitzeko bat. Lehen bola zuria bada, urna hartzaileak bola zuri bat gehiago eta guztira hamaika bola izango ditu.</p>
+            <div class="essential-geometry urn-transfer-2022-idea">
+              <div class="math-display urn-transfer-2022-formula" data-math="\frac12\cdot\frac6{10}\cdot\frac4{11}+\frac12\cdot\frac3{10}\cdot\frac7{11}" data-math-display></div>
+              <strong class="math-display" data-math="P(\text{dos blancas})=\frac{45}{220}\approx0{,}205" data-math-eu="P(\text{bi zuri})=\frac{45}{220}\approx0{,}205" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Probabilidad de extraer dos bolas blancas</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. El árbol conserva la estructura</h3>
+                <p>La elección de urna sigue teniendo probabilidad un medio. Solo cambian las ramas de color que seguimos y la composición de la urna receptora.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Regla del producto</h3>
+                <p>Multiplicamos las tres probabilidades de cada camino: urna inicial, primera bola y segunda bola.</p>
+                <div class="theory-formula math-display" data-math="\begin{aligned}P(A\cap B\cap C)={}&P(A)P(B\mid A)\\ &\cdot P(C\mid A\cap B)\end{aligned}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Suma de los dos caminos</h3>
+                <p>Los caminos que comienzan en T y R no pueden ocurrir simultáneamente, por lo que sus probabilidades se suman.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Camino que empieza en la urna T</h3>
+                  <p data-urn-transfer-2022-language="es">La probabilidad de sacar blanca en <span class="math-inline math-nowrap" data-math="T"></span> es <span class="math-inline math-nowrap" data-math="6/10"></span>. Tras transferirla, <span class="math-inline math-nowrap" data-math="R"></span> pasa a tener cuatro blancas de once.</p>
+                  <p data-urn-transfer-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="T"></span> urnatik bola zuria ateratzeko probabilitatea <span class="math-inline math-nowrap" data-math="6/10"></span> da. Transferitu ondoren, <span class="math-inline math-nowrap" data-math="R"></span> urnak lau bola zuri ditu hamaikatik.</p>
+                  <div class="urn-transfer-2022-work">
+                    <div class="math-display" data-math="P(T\to B_1\to B_2)=\frac12\cdot\frac6{10}\cdot\frac4{11}" data-math-eu="P(T\to Z_1\to Z_2)=\frac12\cdot\frac6{10}\cdot\frac4{11}" data-math-display></div>
+                    <strong class="math-display" data-math="P(T\to B_1\to B_2)=\frac{24}{220}" data-math-eu="P(T\to Z_1\to Z_2)=\frac{24}{220}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Camino que empieza en la urna R</h3>
+                  <p data-urn-transfer-2022-language="es">La probabilidad de sacar blanca en <span class="math-inline math-nowrap" data-math="R"></span> es <span class="math-inline math-nowrap" data-math="3/10"></span>. Al pasarla a <span class="math-inline math-nowrap" data-math="T"></span>, esta queda con siete blancas de once.</p>
+                  <p data-urn-transfer-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="R"></span> urnatik bola zuria ateratzeko probabilitatea <span class="math-inline math-nowrap" data-math="3/10"></span> da. <span class="math-inline math-nowrap" data-math="T"></span> urnara pasatzean, zazpi bola zuri izango ditu hamaikatik.</p>
+                  <div class="urn-transfer-2022-work">
+                    <div class="math-display" data-math="P(R\to B_1\to B_2)=\frac12\cdot\frac3{10}\cdot\frac7{11}" data-math-eu="P(R\to Z_1\to Z_2)=\frac12\cdot\frac3{10}\cdot\frac7{11}" data-math-display></div>
+                    <strong class="math-display" data-math="P(R\to B_1\to B_2)=\frac{21}{220}" data-math-eu="P(R\to Z_1\to Z_2)=\frac{21}{220}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Sumamos los dos caminos</h3>
+                  <div class="urn-transfer-2022-work">
+                    <div class="math-display urn-transfer-2022-formula" data-math="\begin{aligned}P(\text{dos blancas})&=\frac{24}{220}+\frac{21}{220}\\ &=\frac{45}{220}\end{aligned}" data-math-eu="\begin{aligned}P(\text{bi zuri})&=\frac{24}{220}+\frac{21}{220}\\ &=\frac{45}{220}\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="\frac{45}{220}\approx0{,}205" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry urn-transfer-2022-essential">
+              <div class="math-display urn-transfer-2022-formula" data-math="\begin{aligned}P(\text{dos blancas})={}&\frac12\cdot\frac6{10}\cdot\frac4{11}\\ &+\frac12\cdot\frac3{10}\cdot\frac7{11}\end{aligned}" data-math-eu="\begin{aligned}P(\text{bi zuri})={}&\frac12\cdot\frac6{10}\cdot\frac4{11}\\ &+\frac12\cdot\frac3{10}\cdot\frac7{11}\end{aligned}" data-math-display></div>
+              <strong class="math-display" data-math="P(\text{dos blancas})=\frac{45}{220}\approx0{,}205" data-math-eu="P(\text{bi zuri})=\frac{45}{220}\approx0{,}205" data-math-display></strong>
+            </div>
+
+            <div class="result result-long urn-transfer-2022-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="\frac{45}{220}\approx0{,}205" data-math-display></strong>
+              <p data-urn-transfer-2022-language="es">La probabilidad de extraer dos bolas blancas es aproximadamente del <span class="math-inline math-nowrap" data-math="20{,}5\%"></span>.</p>
+              <p data-urn-transfer-2022-language="eu" hidden>Bi bola zuri ateratzeko probabilitatea gutxi gorabehera <span class="math-inline math-nowrap" data-math="\%20{,}5"></span> da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="urn-transfer-2022-part-c" class="panel" role="tabpanel" hidden>
+        <div class="section-index">03</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado C</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Las dos bolas solo pueden tener el mismo color o distinto color. Como ya conocemos las probabilidades de «dos negras» y «dos blancas», resulta más breve usar el suceso contrario.</p>
+            <div class="essential-geometry urn-transfer-2022-idea">
+              <div class="math-display urn-transfer-2022-formula" data-math="P(\text{distinto})=1-P(\text{dos negras})-P(\text{dos blancas})" data-math-eu="P(\text{desberdin})=1-P(\text{bi beltz})-P(\text{bi zuri})" data-math-display></div>
+              <strong class="math-display" data-math="P(\text{distinto})=\frac{108}{220}\approx0{,}491" data-math-eu="P(\text{desberdin})=\frac{108}{220}\approx0{,}491" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado C</p>
+            <h2>Probabilidad de extraer bolas de distinto color</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Suceso contrario</h3>
+                <p>Un suceso y su contrario forman todos los resultados posibles y no comparten ninguno. Por tanto, sus probabilidades suman uno.</p>
+                <div class="theory-formula math-display" data-math="P(E^c)=1-P(E)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Partición por colores</h3>
+                <p>Los resultados «dos negras», «dos blancas» y «distinto color» son incompatibles y cubren todo el experimento.</p>
+                <div class="theory-formula math-display" data-math="P(M)+P(D)=1" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Agrupamos los casos del mismo color</h3>
+                  <p>Las dos bolas tienen el mismo color si ambas son negras o ambas son blancas.</p>
+                  <div class="urn-transfer-2022-work">
+                    <div class="math-display urn-transfer-2022-formula" data-math="\begin{aligned}P(\text{mismo color})&=P(\text{dos negras})\\ &\quad+P(\text{dos blancas})\end{aligned}" data-math-eu="\begin{aligned}P(\text{kolore bera})&=P(\text{bi beltz})\\ &\quad+P(\text{bi zuri})\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="P(\text{mismo color})=\frac{67+45}{220}=\frac{112}{220}" data-math-eu="P(\text{kolore bera})=\frac{67+45}{220}=\frac{112}{220}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Aplicamos el suceso contrario</h3>
+                  <div class="urn-transfer-2022-work">
+                    <div class="math-display" data-math="P(\text{distinto})=1-\frac{112}{220}" data-math-eu="P(\text{desberdin})=1-\frac{112}{220}" data-math-display></div>
+                    <div class="math-display" data-math="P(\text{distinto})=\frac{220-112}{220}" data-math-eu="P(\text{desberdin})=\frac{220-112}{220}" data-math-display></div>
+                    <strong class="math-display" data-math="P(\text{distinto})=\frac{108}{220}\approx0{,}491" data-math-eu="P(\text{desberdin})=\frac{108}{220}\approx0{,}491" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos que las tres probabilidades suman uno</h3>
+                  <div class="urn-transfer-2022-work">
+                    <strong class="math-display" data-math="\frac{67}{220}+\frac{45}{220}+\frac{108}{220}=1" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry urn-transfer-2022-essential">
+              <div class="math-display urn-transfer-2022-formula" data-math="\begin{aligned}P(\text{distinto})&=1-\left(\frac{67}{220}+\frac{45}{220}\right)\\ &=\frac{108}{220}\end{aligned}" data-math-eu="\begin{aligned}P(\text{desberdin})&=1-\left(\frac{67}{220}+\frac{45}{220}\right)\\ &=\frac{108}{220}\end{aligned}" data-math-display></div>
+              <strong class="math-display" data-math="P(\text{distinto})=\frac{108}{220}\approx0{,}491" data-math-eu="P(\text{desberdin})=\frac{108}{220}\approx0{,}491" data-math-display></strong>
+            </div>
+
+            <div class="result result-long urn-transfer-2022-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="\frac{108}{220}\approx0{,}491" data-math-display></strong>
+              <p data-urn-transfer-2022-language="es">La probabilidad de extraer bolas de distinto color es aproximadamente del <span class="math-inline math-nowrap" data-math="49{,}1\%"></span>.</p>
+              <p data-urn-transfer-2022-language="eu" hidden>Kolore desberdineko bolak ateratzeko probabilitatea gutxi gorabehera <span class="math-inline math-nowrap" data-math="\%49{,}1"></span> da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

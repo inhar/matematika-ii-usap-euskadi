@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bi integral, bi metodo · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-integrales-metodos-2025-ordinaria-5a-idiomas.js?v=1" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page integrals-2025-page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2025 · Ordinaria · Ejercicio 5A</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero"><div class="hero-copy"><p class="eyebrow">Análisis · Integrales · 2025</p><h1>Dos integrales, dos métodos</h1></div></header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Calcular las siguientes integrales indefinidas:</p>
+        <div class="integrals-2025-statement">
+          <div><span class="problem-letter">a</span><span class="math-display" data-math="\int 2x\cos(2x+5)\,dx" data-math-display></span></div>
+          <div><span class="problem-letter">b</span><span class="math-display" data-math="\int\frac{x+495}{x^2-2025}\,dx" data-math-display></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="tabs" role="tablist" aria-label="Integrales de la solución">
+      <button class="tab active" type="button" role="tab" aria-selected="true" data-target="integrals-2025-parts">Por partes</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-target="integrals-2025-fractions">Fracciones simples</button>
+    </div>
+
+    <div class="solutions">
+      <section id="integrals-2025-parts" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p><h2>Idea de resolución</h2>
+            <div data-integrals-2025-language="es">
+              <p class="idea-text">Es un producto de un polinomio y un coseno. Conviene derivar <span class="math-inline math-nowrap" data-math="2x"></span>, porque se convierte en una constante, e integrar <span class="math-inline math-nowrap" data-math="\cos(2x+5)"></span>, que tiene una primitiva inmediata.</p>
+              <p class="idea-text">La fórmula de integración por partes transforma así la integral inicial en otra más sencilla. Hay que vigilar el factor <span class="math-inline math-nowrap" data-math="1/2"></span> producido por la derivada del argumento <span class="math-inline math-nowrap" data-math="2x+5"></span>.</p>
+            </div>
+            <div data-integrals-2025-language="eu" hidden>
+              <p class="idea-text">Polinomio baten eta kosinu baten biderkadura da. <span class="math-inline math-nowrap" data-math="2x"></span> deribatzea komeni da, konstante bihurtzen delako, eta <span class="math-inline math-nowrap" data-math="\cos(2x+5)"></span> integratzea, bere primitiboa berehalakoa delako.</p>
+              <p class="idea-text">Zatikako integrazioaren formulak hasierako integrala sinpleagoa den beste integral batean bihurtzen du. <span class="math-inline math-nowrap" data-math="2x+5"></span> argumentuaren deribatuak sortzen duen <span class="math-inline math-nowrap" data-math="1/2"></span> faktorea zaindu behar da.</p>
+            </div>
+            <div class="essential-geometry integrals-2025-essential">
+              <div class="math-display" data-math="u=2x,\quad dv=\cos(2x+5)\,dx" data-math-display></div>
+              <strong class="math-display" data-math="\begin{aligned}\int 2x\cos(2x+5)\,dx&=x\sin(2x+5)\\&\quad+\frac12\cos(2x+5)+C\end{aligned}" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p><h2>Integramos por partes</h2>
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic"><h3>Cuándo usar integración por partes</h3><p data-integrals-2025-language="es">Se usa especialmente en productos donde un factor se simplifica al derivarlo y el otro se puede integrar. La elección adecuada hace que la nueva integral sea más fácil que la original.</p><p data-integrals-2025-language="eu" hidden>Biderkagai bat deribatzean sinplifikatzen den eta bestea integra daitekeen biderkaduretan erabiltzen da bereziki. Aukera egokiak integral berria jatorrizkoa baino errazagoa izatea lortzen du.</p><div class="theory-formula math-display" data-math="\int u\,dv=uv-\int v\,du" data-math-display></div></div>
+              <div class="theory-topic"><h3>Primitivas con argumento lineal</h3><p data-integrals-2025-language="es">Si el argumento es <span class="math-inline math-nowrap" data-math="ax+b"></span>, al integrar hay que dividir entre <span class="math-inline math-nowrap" data-math="a"></span>, su derivada.</p><p data-integrals-2025-language="eu" hidden>Argumentua <span class="math-inline math-nowrap" data-math="ax+b"></span> bada, integratzean <span class="math-inline math-nowrap" data-math="a"></span>-z, haren deribatuaz, zatitu behar da.</p><div class="theory-formula math-display" data-math="\int\cos(ax+b)\,dx=\frac1a\sin(ax+b)+C" data-math-display></div><div class="theory-formula math-display" data-math="\int\sin(ax+b)\,dx=-\frac1a\cos(ax+b)+C" data-math-display></div></div>
+            </aside>
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li><h3>Elegimos qué derivar y qué integrar</h3><p data-integrals-2025-language="es">Derivamos el polinomio, que baja de grado, e integramos el coseno.</p><p data-integrals-2025-language="eu" hidden>Polinomioa deribatzen dugu, maila jaisten duelako, eta kosinua integratzen dugu.</p><div class="integrals-2025-pair"><div class="math-display" data-math="u=2x\quad\Longrightarrow\quad du=2\,dx" data-math-display></div><div class="math-display" data-math="dv=\cos(2x+5)\,dx\quad\Longrightarrow\quad v=\frac12\sin(2x+5)" data-math-display></div></div></li>
+                <li><h3>Aplicamos la fórmula</h3><div class="integrals-2025-work"><div class="math-display" data-math="\begin{aligned}I&=uv-\int v\,du\\&=2x\cdot\frac12\sin(2x+5)\\&\quad-\int\frac12\sin(2x+5)\cdot2\,dx\\&=x\sin(2x+5)-\int\sin(2x+5)\,dx\end{aligned}" data-math-display></div></div></li>
+                <li><h3>Calculamos la integral restante</h3><div class="math-display" data-math="\int\sin(2x+5)\,dx=-\frac12\cos(2x+5)" data-math-display></div><strong class="math-display" data-math="I=x\sin(2x+5)+\frac12\cos(2x+5)+C" data-math-display></strong></li>
+                <li><h3>Comprobamos derivando</h3><p data-integrals-2025-language="es">Los dos términos con seno se cancelan y recuperamos exactamente el integrando.</p><p data-integrals-2025-language="eu" hidden>Sinua duten bi terminoak ezeztatu egiten dira, eta integrakizuna zehatz-mehatz berreskuratzen dugu.</p><div class="math-display" data-math="\begin{aligned}I'(x)&=\sin(2x+5)+2x\cos(2x+5)\\&\quad-\sin(2x+5)\\&=2x\cos(2x+5)\end{aligned}" data-math-display></div></li>
+              </ol>
+            </div>
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry integrals-2025-essential"><div class="math-display" data-math="u=2x,\quad du=2\,dx;\qquad v=\frac12\sin(2x+5)" data-math-display></div><div class="math-display" data-math="I=x\sin(2x+5)-\int\sin(2x+5)\,dx" data-math-display></div><strong class="math-display" data-math="I=x\sin(2x+5)+\frac12\cos(2x+5)+C" data-math-display></strong></div>
+            <div class="result result-long"><span>Resultado</span><strong class="math-display" data-math="\begin{aligned}&x\sin(2x+5)\\&\quad+\frac12\cos(2x+5)+C\end{aligned}" data-math-display></strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="integrals-2025-fractions" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p><h2>Idea de resolución</h2>
+            <div data-integrals-2025-language="es"><p class="idea-text">El denominador es una diferencia de cuadrados: <span class="math-inline math-nowrap" data-math="x^2-2025=(x-45)(x+45)"></span>. Al tener dos factores lineales distintos, descomponemos la función racional en dos fracciones simples.</p><p class="idea-text">Cada fracción tendrá una primitiva logarítmica. Antes de integrar calcularemos sus coeficientes usando precisamente los valores <span class="math-inline math-nowrap" data-math="x=45"></span> y <span class="math-inline math-nowrap" data-math="x=-45"></span>.</p></div>
+            <div data-integrals-2025-language="eu" hidden><p class="idea-text">Izendatzailea karratuen kendura da: <span class="math-inline math-nowrap" data-math="x^2-2025=(x-45)(x+45)"></span>. Bi faktore lineal desberdin dituenez, funtzio arrazionala bi zatiki sinpletan deskonposatzen dugu.</p><p class="idea-text">Zatiki bakoitzak primitibo logaritmiko bat izango du. Integratu aurretik, koefizienteak <span class="math-inline math-nowrap" data-math="x=45"></span> eta <span class="math-inline math-nowrap" data-math="x=-45"></span> balioak erabiliz kalkulatuko ditugu.</p></div>
+            <div class="essential-geometry integrals-2025-essential"><div class="math-display" data-math="\frac{x+495}{(x-45)(x+45)}=\frac6{x-45}-\frac5{x+45}" data-math-display></div><strong class="math-display" data-math="\begin{aligned}\int\frac{x+495}{x^2-2025}\,dx&=6\ln|x-45|\\&\quad-5\ln|x+45|+C\end{aligned}" data-math-display></strong></div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p><h2>Descomponemos en fracciones simples</h2>
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic"><h3>Diferencia de cuadrados</h3><p data-integrals-2025-language="es">Una diferencia de cuadrados se factoriza como suma por diferencia.</p><p data-integrals-2025-language="eu" hidden>Karratuen kendura batura bider kendura gisa faktorizatzen da.</p><div class="theory-formula math-display" data-math="a^2-b^2=(a-b)(a+b)" data-math-display></div></div>
+              <div class="theory-topic"><h3>Factores lineales distintos</h3><p data-integrals-2025-language="es">Si una fracción racional propia tiene dos factores lineales distintos, se asocia una constante a cada factor. Al eliminar denominadores obtenemos una identidad; sustituir cada raíz permite aislar un coeficiente.</p><p data-integrals-2025-language="eu" hidden>Zatiki arrazional propio batek bi faktore lineal desberdin baditu, konstante bana lotzen zaio faktore bakoitzari. Izendatzaileak ezabatuta identitate bat lortzen dugu; erro bakoitza ordezkatzeak koefiziente bat bakartzen du.</p><div class="theory-formula math-display" data-math="\frac{P(x)}{(x-a)(x-b)}=\frac A{x-a}+\frac B{x-b}" data-math-display></div></div>
+              <div class="theory-topic"><h3>Primitiva logarítmica</h3><p data-integrals-2025-language="es">El valor absoluto permite escribir una misma primitiva en cualquier intervalo que no atraviese el punto donde el denominador se anula.</p><p data-integrals-2025-language="eu" hidden>Balio absolutuak primitibo bera idazteko aukera ematen du izendatzailea zero den puntua zeharkatzen ez duen edozein tartetan.</p><div class="theory-formula math-display" data-math="\int\frac k{x-a}\,dx=k\ln|x-a|+C" data-math-display></div></div>
+            </aside>
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li><h3>Factorizamos el denominador</h3><div class="math-display" data-math="x^2-2025=x^2-45^2=(x-45)(x+45)" data-math-display></div></li>
+                <li><h3>Planteamos la descomposición</h3><div class="math-display" data-math="\frac{x+495}{(x-45)(x+45)}=\frac A{x-45}+\frac B{x+45}" data-math-display></div><p data-integrals-2025-language="es">Multiplicamos por <span class="math-inline math-nowrap" data-math="(x-45)(x+45)"></span>.</p><p data-integrals-2025-language="eu" hidden><span class="math-inline math-nowrap" data-math="(x-45)(x+45)"></span>-ez biderkatzen dugu.</p><div class="math-display" data-math="x+495=A(x+45)+B(x-45)" data-math-display></div></li>
+                <li><h3>Calculamos A y B</h3><div class="integrals-2025-work"><div class="math-display" data-math="x=45:\qquad 540=90A\quad\Longrightarrow\quad A=6" data-math-display></div><div class="math-display" data-math="x=-45:\qquad 450=-90B\quad\Longrightarrow\quad B=-5" data-math-display></div></div></li>
+                <li><h3>Integramos término a término</h3><div class="math-display" data-math="\begin{aligned}J&=\int\left(\frac6{x-45}-\frac5{x+45}\right)dx\\&=6\ln|x-45|-5\ln|x+45|+C\end{aligned}" data-math-display></div></li>
+                <li><h3>Comprobamos derivando</h3><div class="math-display" data-math="\begin{aligned}J'(x)&=\frac6{x-45}-\frac5{x+45}\\&=\frac{6(x+45)-5(x-45)}{x^2-2025}\\&=\frac{x+495}{x^2-2025}\end{aligned}" data-math-display></div></li>
+              </ol>
+            </div>
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry integrals-2025-essential"><div class="math-display" data-math="x^2-2025=(x-45)(x+45)" data-math-display></div><div class="math-display" data-math="\frac{x+495}{x^2-2025}=\frac6{x-45}-\frac5{x+45}" data-math-display></div><strong class="math-display" data-math="J=6\ln|x-45|-5\ln|x+45|+C" data-math-display></strong></div>
+            <div class="result result-long"><span>Resultado</span><strong class="math-display" data-math="6\ln|x-45|-5\ln|x+45|+C" data-math-display></strong></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>α parametrodun sistema lineala · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-sistema-alpha-2022-ordinaria-idiomas.js?v=2022-ord-a1a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2022 · Ordinaria · Ejercicio A1</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Álgebra lineal · Sistemas con parámetros · 2022</p>
+        <h1>Sistema lineal con parámetro α</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Discute la existencia de soluciones del siguiente sistema de ecuaciones lineales en función de los valores del parámetro α:</p>
+        <div class="equation-system statement-system system-alpha-2022-statement math-display" aria-label="Sistema de tres ecuaciones con parámetro alfa" data-math="\begin{cases}x+y+\alpha z=\alpha\\2x+\alpha y+\alpha z=1\\x+\alpha y+z=1\end{cases}" data-math-display></div>
+        <p>Resuelve el sistema para los dos valores siguientes, si es posible:</p>
+        <div class="system-alpha-2022-values">
+          <span class="math-inline math-nowrap" data-math="\alpha=-1"></span>
+          <span class="math-inline math-nowrap" data-math="\alpha=1"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="system-alpha-2022-part-a" data-target="system-alpha-2022-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="system-alpha-2022-part-b" data-target="system-alpha-2022-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="system-alpha-2022-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">El determinante de la matriz de coeficientes resuelve de inmediato el caso general: si no es cero, el sistema tiene una única solución. Por eso calcularemos primero el determinante y estudiaremos por separado únicamente los valores del parámetro que lo anulan.</p>
+            <p class="idea-text">Aquí solo aparece un valor excepcional. En él, el determinante ya no basta y debemos comparar los rangos de la matriz de coeficientes y de la matriz ampliada mediante operaciones elementales de fila.</p>
+            <div class="essential-geometry system-alpha-2022-idea">
+              <div class="math-display" data-math="\det(A)=2(\alpha-1)" data-math-display></div>
+              <div class="math-display" data-math="\alpha\ne1\Rightarrow\text{una solución}" data-math-display data-math-eu="\alpha\ne1\Rightarrow\text{soluzio bakarra}"></div>
+              <strong class="math-display" data-math="\alpha=1\Rightarrow\text{infinitas soluciones}" data-math-display data-math-eu="\alpha=1\Rightarrow\text{soluzio infinitu}"></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Discusión del sistema</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Matrices asociadas al sistema</h3>
+                <p>La matriz de coeficientes contiene los números que multiplican a las incógnitas. La matriz ampliada añade, como última columna, los términos independientes.</p>
+                <div class="theory-formula math-display" data-math="A^*=(A\mid b)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Qué decide el determinante</h3>
+                <p>Si una matriz cuadrada tiene determinante distinto de cero, su rango es máximo. En un sistema de tres ecuaciones con tres incógnitas esto garantiza una única solución.</p>
+                <div class="theory-formula math-display" data-math="\det(A)\ne0\Rightarrow\operatorname{rg}(A)=3" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Teorema de Rouché-Frobenius</h3>
+                <p>Cuando el determinante se anula, comparamos el rango de la matriz de coeficientes con el de la ampliada. Como hay tres incógnitas, las posibilidades son:</p>
+                <div class="system-alpha-2022-theory-cases">
+                  <div><span class="math-inline" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)=3"></span><strong>Una solución</strong></div>
+                  <div><span class="math-inline" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)&lt;3"></span><strong>Infinitas soluciones</strong></div>
+                  <div><span class="math-inline" data-math="\operatorname{rg}(A)&lt;\operatorname{rg}(A^*)"></span><strong>Ninguna solución</strong></div>
+                </div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Operaciones elementales de fila</h3>
+                <p>Intercambiar filas, multiplicar una fila por un número distinto de cero o sumar a una fila un múltiplo de otra conserva el sistema equivalente y permite leer sus rangos.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Escribimos las matrices asociadas</h3>
+                  <p>Las tres primeras columnas siguen el orden de las incógnitas. La última columna de la matriz ampliada contiene los términos independientes.</p>
+                  <div class="system-matrix-pair system-alpha-2022-matrices">
+                    <div class="matrix-equation-line">
+                      <span class="math-inline" data-math="A="></span>
+                      <div class="matrix math-display" data-math="\begin{pmatrix}1&amp;1&amp;\alpha\\2&amp;\alpha&amp;\alpha\\1&amp;\alpha&amp;1\end{pmatrix}" data-math-display></div>
+                    </div>
+                    <div class="matrix-equation-line">
+                      <span class="math-inline" data-math="A^*="></span>
+                      <div class="matrix math-display" data-math="\left(\begin{array}{ccc|c}1&amp;1&amp;\alpha&amp;\alpha\\2&amp;\alpha&amp;\alpha&amp;1\\1&amp;\alpha&amp;1&amp;1\end{array}\right)" data-math-display></div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos y factorizamos el determinante</h3>
+                  <p>Desarrollamos por la primera fila. Cada término incorpora el signo de su posición y su menor de orden dos.</p>
+                  <div class="system-alpha-2022-work">
+                    <div class="math-display" data-math="\begin{aligned}\det(A)&=\alpha(1-\alpha)-(2-\alpha)+\alpha^2\\&=\alpha-\alpha^2-2+\alpha+\alpha^2\\&=2\alpha-2\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="\det(A)=2(\alpha-1)" data-math-display></strong>
+                  </div>
+                  <p>El determinante se anula únicamente para el siguiente valor:</p>
+                  <div class="system-alpha-2022-work">
+                    <strong class="math-display" data-math="\det(A)=0\iff\alpha=1" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Clasificamos el caso general</h3>
+                  <p>Si el parámetro no vale uno, el determinante es distinto de cero. La matriz de coeficientes tiene rango tres y el sistema posee una única solución.</p>
+                  <div class="system-alpha-2022-case-result">
+                    <span class="math-inline" data-math="\alpha\ne1"></span>
+                    <strong class="math-inline" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)=3"></strong>
+                    <p>El sistema es compatible determinado.</p>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Estudiamos el valor excepcional</h3>
+                  <div class="system-alpha-2022-work">
+                    <strong class="math-display" data-math="\alpha=1" data-math-display></strong>
+                  </div>
+                  <p>Sustituimos el parámetro en la matriz ampliada y realizamos dos operaciones elementales.</p>
+                  <div class="system-alpha-2022-work system-alpha-2022-row-matrices">
+                    <div class="math-display" data-math="A^*(1)=\left(\begin{array}{ccc|c}1&amp;1&amp;1&amp;1\\2&amp;1&amp;1&amp;1\\1&amp;1&amp;1&amp;1\end{array}\right)" data-math-display></div>
+                    <div class="math-display" data-math="\begin{aligned}F_2&\leftarrow F_2-2F_1\\F_3&\leftarrow F_3-F_1\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="\left(\begin{array}{ccc|c}1&amp;1&amp;1&amp;1\\0&amp;-1&amp;-1&amp;-1\\0&amp;0&amp;0&amp;0\end{array}\right)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comparamos los rangos</h3>
+                  <p>En la forma escalonada hay dos filas no nulas tanto en la parte de coeficientes como en la matriz completa. Los dos rangos son dos.</p>
+                  <div class="system-alpha-2022-case-result">
+                    <span class="math-inline" data-math="\alpha=1"></span>
+                    <strong class="math-inline" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)=2&lt;3"></strong>
+                    <p>El sistema es compatible indeterminado.</p>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Resumimos la discusión</h3>
+                  <div class="system-alpha-2022-cases">
+                    <div><span class="math-inline" data-math="\alpha\ne1"></span><strong>Compatible determinado</strong><p>Una única solución.</p></div>
+                    <div><span class="math-inline" data-math="\alpha=1"></span><strong>Compatible indeterminado</strong><p>Infinitas soluciones.</p></div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry system-alpha-2022-essential">
+              <div class="math-display" data-math="\det(A)=2(\alpha-1)" data-math-display></div>
+              <div class="system-alpha-2022-cases">
+                <div><span class="math-inline" data-math="\alpha\ne1"></span><strong>Compatible determinado</strong><p>Una única solución.</p></div>
+                <div><span class="math-inline" data-math="\alpha=1"></span><strong>Compatible indeterminado</strong><p>Infinitas soluciones.</p></div>
+              </div>
+            </div>
+
+            <div class="result result-long system-alpha-2022-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="\begin{cases}\alpha\ne1:\ \text{una solución}\\\alpha=1:\ \text{infinitas soluciones}\end{cases}" data-math-display data-math-eu="\begin{cases}\alpha\ne1:\ \text{soluzio bakarra}\\\alpha=1:\ \text{soluzio infinitu}\end{cases}"></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="system-alpha-2022-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">El valor −1 pertenece al caso regular, así que el sistema tendrá una única solución. Sustituiremos el parámetro y eliminaremos incógnitas restando ecuaciones.</p>
+            <p class="idea-text">El valor 1 es el caso singular ya estudiado. La forma escalonada deja una variable libre: la elegimos como parámetro y expresamos las otras dos en función de ella.</p>
+            <div class="essential-geometry system-alpha-2022-idea">
+              <div class="math-display" data-math="\alpha=-1\Rightarrow(x,y,z)=(0,-1,0)" data-math-display></div>
+              <strong class="math-display" data-math="\alpha=1\Rightarrow(x,y,z)=(0,1-t,t),\quad t\in\mathbb R" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Resolución para los valores indicados</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Sustituir el parámetro</h3>
+                <p>Una vez fijado el valor del parámetro obtenemos un sistema numérico. La clasificación previa nos anticipa si su solución será única o si aparecerán variables libres.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Eliminación de incógnitas</h3>
+                <p>Restar ecuaciones permite cancelar términos. Las nuevas ecuaciones son equivalentes a las originales y suelen resultar más sencillas de resolver.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Variable libre</h3>
+                <p>Cuando el rango común es menor que el número de incógnitas, algunas variables no quedan determinadas. Asignamos un parámetro real a una de ellas y expresamos las demás en función de él.</p>
+                <div class="theory-formula math-display" data-math="z=t,\qquad t\in\mathbb R" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Resolvemos el primer valor</h3>
+                  <div class="system-alpha-2022-work">
+                    <strong class="math-display" data-math="\alpha=-1" data-math-display></strong>
+                    <div class="math-display" data-math="\begin{cases}x+y-z=-1\\2x-y-z=1\\x-y+z=1\end{cases}" data-math-display></div>
+                  </div>
+                  <p>Como el determinante no se anula, sabemos que este sistema tiene una única solución.</p>
+                </li>
+
+                <li>
+                  <h3>Eliminamos la incógnita x</h3>
+                  <p>Restamos dos veces la primera ecuación a la segunda y restamos la primera a la tercera.</p>
+                  <div class="system-alpha-2022-work">
+                    <div class="math-display" data-math="\begin{aligned}E_2-2E_1&:\ -3y+z=3\\E_3-E_1&:\ -2y+2z=2\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="\begin{cases}-3y+z=3\\-y+z=1\end{cases}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos las tres incógnitas</h3>
+                  <p>Restamos la segunda ecuación reducida a la primera; después sustituimos hacia atrás.</p>
+                  <div class="system-alpha-2022-work">
+                    <div class="math-display" data-math="(-3y+z)-(-y+z)=3-1" data-math-display></div>
+                    <div class="math-display" data-math="-2y=2\Rightarrow y=-1" data-math-display></div>
+                    <div class="math-display" data-math="-(-1)+z=1\Rightarrow z=0" data-math-display></div>
+                    <strong class="math-display" data-math="x+(-1)-0=-1\Rightarrow x=0" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos la solución única</h3>
+                  <div class="system-alpha-2022-checks">
+                    <div><span>Primera ecuación</span><strong class="math-inline" data-math="0-1-0=-1"></strong></div>
+                    <div><span>Segunda ecuación</span><strong class="math-inline" data-math="0+1-0=1"></strong></div>
+                    <div><span>Tercera ecuación</span><strong class="math-inline" data-math="0+1+0=1"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Resolvemos el segundo valor</h3>
+                  <div class="system-alpha-2022-work">
+                    <strong class="math-display" data-math="\alpha=1" data-math-display></strong>
+                    <div class="math-display" data-math="\begin{cases}x+y+z=1\\2x+y+z=1\\x+y+z=1\end{cases}" data-math-display></div>
+                  </div>
+                  <p>La primera y la tercera ecuación coinciden. Al restar la primera a la segunda obtenemos directamente la primera incógnita.</p>
+                  <div class="system-alpha-2022-work">
+                    <div class="math-display" data-math="E_2-E_1:\ x=0" data-math-display></div>
+                    <strong class="math-display" data-math="x=0,\qquad y+z=1" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Introducimos la variable libre</h3>
+                  <p>Elegimos z como parámetro real. Entonces la ecuación restante determina y.</p>
+                  <div class="system-alpha-2022-work">
+                    <div class="math-display" data-math="z=t,\qquad t\in\mathbb R" data-math-display></div>
+                    <div class="math-display" data-math="y+t=1\Rightarrow y=1-t" data-math-display></div>
+                    <strong class="math-display" data-math="(x,y,z)=(0,1-t,t),\qquad t\in\mathbb R" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos la familia de soluciones</h3>
+                  <p>Las tres ecuaciones se cumplen para cualquier valor real de t.</p>
+                  <div class="system-alpha-2022-work">
+                    <div class="math-display" data-math="0+(1-t)+t=1" data-math-display></div>
+                    <div class="math-display" data-math="2(0)+(1-t)+t=1" data-math-display></div>
+                    <strong class="math-display" data-math="0+(1-t)+t=1" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry system-alpha-2022-essential">
+              <div class="math-display" data-math="\begin{aligned}\alpha=-1&:\quad(x,y,z)=(0,-1,0)\\[4pt]\alpha=1&:\quad(x,y,z)=(0,1-t,t),\quad t\in\mathbb R\end{aligned}" data-math-display></div>
+            </div>
+
+            <div class="result result-long system-alpha-2022-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="\begin{aligned}\alpha=-1&:\ (0,-1,0)\\\alpha=1&:\ (0,1-t,t),\ t\in\mathbb R\end{aligned}" data-math-display></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

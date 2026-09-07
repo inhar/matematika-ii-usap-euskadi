@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zuzena eta planoa: paralelismoa eta perpendikulartasuna · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-recta-planos-2021-extraordinaria-idiomas.js?v=2021-extra-p4c" defer></script>
+  <script src="ejercicio-recta-planos-2021-extraordinaria-grafico.js?v=2021-extra-p4a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2021 · Extraordinaria · Problema 4</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Geometría en el espacio · Rectas y planos · 2021</p>
+        <h1>Recta y plano: paralelismo y perpendicularidad</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Se consideran el plano y la recta:</p>
+        <div class="position-2021-statement-plane math-display" data-math="\pi\colon 2x-y+Az=0" data-math-display></div>
+        <div class="line-plane-extra-statement math-display" data-math="r\colon\begin{cases}4x-3y+4z=-1\\3x-2y+z=-3\end{cases}" data-math-display></div>
+
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">Calcular el valor de <span class="math-inline math-nowrap" data-math="A"></span> para que <span class="math-inline math-nowrap" data-math="r"></span> <span class="math-inline" data-math-es="\text{y}" data-math-eu="\text{eta}"></span> <span class="math-inline math-nowrap" data-math="\pi"></span> sean paralelos.</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">Obtener el plano <span class="math-inline math-nowrap" data-math="\beta"></span> perpendicular a <span class="math-inline math-nowrap" data-math="r"></span> y que pasa por el origen.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="line-plane-extra-part-a" data-target="line-plane-extra-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="line-plane-extra-part-b" data-target="line-plane-extra-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="line-plane-extra-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Las dos ecuaciones de <span class="math-inline math-nowrap" data-math="r"></span> representan dos planos cuya intersección es la recta. El vector director de esa intersección debe ser perpendicular a los normales de ambos planos; por eso se obtiene calculando su producto vectorial.</p>
+            <p class="idea-text">Una recta es paralela a un plano cuando su vector director es perpendicular al vector normal del plano. Traduciremos esa perpendicularidad en un producto escalar igual a cero. Después comprobaremos con un punto de la recta que no está contenida en el plano.</p>
+            <div class="essential-geometry position-2021-idea">
+              <div class="math-display" data-math="d_r=n_1\times n_2=(5,8,1)" data-math-display></div>
+              <div class="math-display" data-math="n_\pi=(2,-1,A)" data-math-display></div>
+              <strong class="math-display" data-math="r\parallel\pi\Longrightarrow d_r\cdot n_\pi=0" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Recta paralela al plano</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Recta como intersección de dos planos</h3>
+                <p>La recta común a dos planos avanza en una dirección perpendicular a los dos vectores normales. El producto vectorial de esos normales proporciona precisamente esa dirección.</p>
+                <div class="theory-formula math-display" data-math="r=\alpha\cap\gamma\Longrightarrow d_r=n_\alpha\times n_\gamma" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Paralelismo entre recta y plano</h3>
+                <p>La dirección de una recta es paralela a un plano cuando es perpendicular al normal del plano. Dos vectores son perpendiculares cuando su producto escalar vale cero.</p>
+                <div class="theory-formula math-display" data-math="d_r\parallel\pi\Longleftrightarrow d_r\cdot n_\pi=0" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Paralela o contenida</h3>
+                <p>La condición anterior también se cumple si la recta está contenida en el plano. Para asegurar un paralelismo estricto basta comprobar que un punto de la recta no satisface la ecuación del plano.</p>
+                <div class="theory-formula math-display" data-math="d_r\cdot n_\pi=0,\quad P\in r,\quad P\notin\pi\Longrightarrow r\parallel\pi" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Leemos los normales de los dos planos que definen la recta</h3>
+                  <p>En cada ecuación tomamos, en orden, los coeficientes de <span class="math-inline math-nowrap" data-math="x"></span>, <span class="math-inline math-nowrap" data-math="y"></span> <span class="math-inline" data-math-es="\text{y}" data-math-eu="\text{eta}"></span> <span class="math-inline math-nowrap" data-math="z"></span>.</p>
+                  <div class="position-2021-parameter-work">
+                    <div>
+                      <span class="math-inline" data-math="4x-3y+4z=-1"></span>
+                      <strong class="math-inline" data-math="n_1=(4,-3,4)"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="3x-2y+z=-3"></span>
+                      <strong class="math-inline" data-math="n_2=(3,-2,1)"></strong>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos el vector director mediante el producto vectorial</h3>
+                  <p>Hacemos cada componente por separado para controlar los signos.</p>
+                  <div class="component-calculation">
+                    <div><span class="math-inline" data-math="d_x"></span><strong class="math-inline" data-math="(-3)1-4(-2)=-3+8=5"></strong></div>
+                    <div><span class="math-inline" data-math="d_y"></span><strong class="math-inline" data-math="4\cdot3-4\cdot1=12-4=8"></strong></div>
+                    <div><span class="math-inline" data-math="d_z"></span><strong class="math-inline" data-math="4(-2)-(-3)3=-8+9=1"></strong></div>
+                  </div>
+                  <div class="equation position-2021-check math-display" data-math="d_r=n_1\times n_2=(5,8,1)" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Leemos el normal del plano con parámetro</h3>
+                  <p>Los coeficientes de la ecuación implícita forman el vector normal. El término independiente no interviene en su orientación.</p>
+                  <div class="position-2021-normal-work">
+                    <div class="math-display" data-math="\pi\colon 2x-y+Az=0" data-math-display></div>
+                    <strong class="math-display" data-math="n_\pi=(2,-1,A)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Imponemos la condición de paralelismo</h3>
+                  <p>Multiplicamos las componentes correspondientes de los dos vectores y sumamos.</p>
+                  <div class="position-2021-dot-work">
+                    <div class="math-display" data-math="d_r\cdot n_\pi=0" data-math-display></div>
+                    <div class="math-display" data-math="(5,8,1)\cdot(2,-1,A)=0" data-math-display></div>
+                    <div class="math-display" data-math="5\cdot2+8(-1)+1\cdot A=0" data-math-display></div>
+                    <div class="math-display" data-math="10-8+A=0" data-math-display></div>
+                    <strong class="math-display" data-math="A=-2" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos que la recta no está contenida en el plano</h3>
+                  <p>Tomamos <span class="math-inline math-nowrap" data-math="z=0"></span> en las ecuaciones de la recta y resolvemos el sistema resultante.</p>
+                  <div class="position-2021-system">
+                    <div class="math-display" data-math="\begin{cases}4x-3y=-1\\3x-2y=-3\end{cases}" data-math-display></div>
+                    <div class="math-display" data-math="\begin{cases}8x-6y=-2\\9x-6y=-9\end{cases}\Longrightarrow x=-7" data-math-display></div>
+                    <div class="math-display" data-math="3(-7)-2y=-3\Longrightarrow y=-9" data-math-display></div>
+                    <strong class="math-display" data-math="P=(-7,-9,0)\in r" data-math-display></strong>
+                  </div>
+                  <p>Para <span class="math-inline math-nowrap" data-math="A=-2"></span>, el plano es <span class="math-inline math-nowrap" data-math="2x-y-2z=0"></span>. Sustituimos el punto.</p>
+                  <div class="equation position-2021-check math-display" data-math="2(-7)-(-9)-2\cdot0=-5\neq0\Longrightarrow P\notin\pi" data-math-display></div>
+
+                  <figure class="position-2021-figure line-plane-extra-parallel-figure" aria-label="Esquema de la recta r paralela y exterior al plano pi">
+                    <figcaption>La dirección de la recta es paralela al plano, pero el punto señalado no pertenece a él.</figcaption>
+                    <div id="line-plane-extra-parallel-board" class="jxgbox position-2021-board line-plane-extra-board" role="img" aria-label="Recta r paralela al plano pi con un punto P exterior"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry position-2021-essential">
+              <div class="math-display" data-math="d_r=(4,-3,4)\times(3,-2,1)=(5,8,1)" data-math-display></div>
+              <div class="math-display" data-math="n_\pi=(2,-1,A)" data-math-display></div>
+              <strong class="math-display" data-math="d_r\cdot n_\pi=10-8+A=0" data-math-display></strong>
+            </div>
+
+            <div class="result geometry-result position-2021-result">
+              <span>Resultado</span>
+              <strong class="math-inline" data-math="A=-2"></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="line-plane-extra-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Si un plano es perpendicular a una recta, el vector director de la recta puede utilizarse como vector normal del plano. Ya conocemos ese vector, así que solo falta fijar la posición del plano con el punto por el que debe pasar.</p>
+            <p class="idea-text">Como el plano pasa por el origen, aplicaremos directamente la ecuación punto-normal con <span class="math-inline math-nowrap" data-math="O=(0,0,0)"></span>. Al desarrollar el producto escalar obtendremos la ecuación buscada sin introducir incógnitas adicionales.</p>
+            <div class="essential-geometry position-2021-idea">
+              <div class="math-display" data-math="n_\beta=d_r=(5,8,1)" data-math-display></div>
+              <strong class="math-display" data-math="n_\beta\cdot[(x,y,z)-O]=0" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Plano perpendicular a la recta</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Plano perpendicular a una recta</h3>
+                <p>Una recta es perpendicular a un plano cuando su dirección es paralela al vector normal del plano. Podemos elegir como normal cualquier múltiplo no nulo del vector director.</p>
+                <div class="theory-formula math-display" data-math="r\perp\beta\Longleftrightarrow n_\beta=\lambda d_r,\qquad \lambda\neq0" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Ecuación punto-normal</h3>
+                <p>Un plano queda determinado por un punto y un vector normal. La ecuación punto-normal expresa que el desplazamiento desde ese punto hasta cualquier otro punto del plano es perpendicular al normal.</p>
+                <div class="theory-formula math-display" data-math="n\cdot(X-P_0)=0" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Elegimos un vector normal para el plano</h3>
+                  <p>Usamos directamente el vector director calculado en el apartado anterior.</p>
+                  <div class="position-2021-normal-work">
+                    <div class="math-display" data-math="d_r=(5,8,1)" data-math-display></div>
+                    <strong class="math-display" data-math="n_\beta=(5,8,1)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Escribimos la ecuación punto-normal</h3>
+                  <p>Un punto genérico del plano es <span class="math-inline math-nowrap" data-math="X=(x,y,z)"></span> y el punto conocido es el origen.</p>
+                  <div class="position-2021-vector-work">
+                    <div class="math-display" data-math="O=(0,0,0)" data-math-display></div>
+                    <div class="math-display" data-math="X-O=(x,y,z)" data-math-display></div>
+                    <strong class="math-display" data-math="n_\beta\cdot(X-O)=0" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Desarrollamos el producto escalar</h3>
+                  <p>Multiplicamos las componentes correspondientes y sumamos.</p>
+                  <div class="position-2021-dot-work">
+                    <div class="math-display" data-math="(5,8,1)\cdot(x,y,z)=0" data-math-display></div>
+                    <div class="math-display" data-math="5x+8y+1z=0" data-math-display></div>
+                    <strong class="math-display" data-math="\beta\colon 5x+8y+z=0" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos las dos condiciones</h3>
+                  <p><span class="math-inline math-nowrap" data-math="r"></span> tiene la misma dirección que el normal; además, el origen satisface la ecuación. Por tanto, las dos condiciones se cumplen.</p>
+                  <div class="position-2021-verification">
+                    <div>
+                      <span>El origen pertenece</span>
+                      <strong class="math-inline" data-math="5\cdot0+8\cdot0+0=0"></strong>
+                    </div>
+                    <div>
+                      <span>Direcciones paralelas</span>
+                      <strong class="math-inline" data-math="n_\beta=d_r=(5,8,1)"></strong>
+                    </div>
+                  </div>
+
+                  <figure class="position-2021-figure line-plane-extra-perpendicular-figure" aria-label="Esquema del plano beta perpendicular a la recta r y que contiene el origen">
+                    <figcaption>La dirección de la recta es normal al plano; el origen fija la posición del plano.</figcaption>
+                    <div id="line-plane-extra-perpendicular-board" class="jxgbox position-2021-board line-plane-extra-board" role="img" aria-label="Plano beta que contiene el origen y recta r perpendicular"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry position-2021-essential">
+              <div class="math-display" data-math="n_\beta=d_r=(5,8,1)" data-math-display></div>
+              <div class="math-display" data-math="(5,8,1)\cdot[(x,y,z)-(0,0,0)]=0" data-math-display></div>
+              <strong class="math-display" data-math="5x+8y+z=0" data-math-display></strong>
+            </div>
+
+            <div class="result result-long geometry-result position-2021-result">
+              <span>Resultado</span>
+              <strong class="math-inline" data-math="\beta\colon 5x+8y+z=0"></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

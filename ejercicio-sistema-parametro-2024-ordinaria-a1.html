@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parametrodun sistema: bi balio berezi · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-sistema-parametro-2024-ordinaria-a1-idiomas.js?v=2024-ord-a1-1" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page system-2024-page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2024 · Ordinaria · Ejercicio A1</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Álgebra lineal · Sistemas con parámetro · 2024</p>
+        <h1 class="system-2024-title">Sistema con parámetro: dos valores excepcionales</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-system-2024-language="es">Discute la existencia de solución del siguiente sistema en función de los valores del parámetro <span class="math-inline math-nowrap" data-math="\alpha"></span>:</p>
+        <p data-system-2024-language="eu" hidden>Eztabaidatu sistema honen soluzioaren existentzia <span class="math-inline math-nowrap" data-math="\alpha"></span> parametroaren balioen arabera:</p>
+        <div class="system-2024-statement math-display" data-math="\left\{\begin{aligned}\alpha x+y+z&amp;=2,\\x+2y+(\alpha-1)z&amp;=-1,\\2x+y+(\alpha-2)z&amp;=1.\end{aligned}\right." data-math-display></div>
+        <p data-system-2024-language="es">Resuelve el sistema, si es posible, en el caso <span class="math-inline math-nowrap" data-math="\alpha=1"></span>.</p>
+        <p data-system-2024-language="eu" hidden>Ebatzi sistema, posible bada, <span class="math-inline math-nowrap" data-math="\alpha=1"></span> kasuan.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs system-2024-tabs" aria-label="Partes de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="system-2024-discussion" data-target="system-2024-discussion">Discusión</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="system-2024-alpha-one" data-target="system-2024-alpha-one"><span data-system-2024-language="es">Caso </span><span class="math-inline math-nowrap" data-math="\alpha=1"></span><span data-system-2024-language="eu" hidden> kasua</span></button>
+    </nav>
+
+    <div class="solutions">
+      <section id="system-2024-discussion" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Discusión</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-system-2024-language="es">El determinante de la matriz de coeficientes separa de inmediato los valores regulares de los excepcionales. Si no se anula, el sistema tiene una única solución; por tanto, solo habrá que estudiar rangos en las raíces del determinante.</p>
+            <p class="idea-text" data-system-2024-language="eu" hidden>Koefizienteen matrizearen determinanteak berehala bereizten ditu balio erregularrak eta bereziak. Anulatzen ez bada, sistemak soluzio bakarra du; beraz, determinantearen erroetan bakarrik aztertu beharko dira heinak.</p>
+            <p class="idea-text" data-system-2024-language="es">Las raíces son <span class="math-inline math-nowrap" data-math="\alpha=-1"></span> y <span class="math-inline math-nowrap" data-math="\alpha=3"></span>. Reduciremos la matriz ampliada en cada una: una contradicción indicará que no hay solución y una fila nula con rangos iguales indicará que hay infinitas.</p>
+            <p class="idea-text" data-system-2024-language="eu" hidden>Erroak <span class="math-inline math-nowrap" data-math="\alpha=-1"></span> eta <span class="math-inline math-nowrap" data-math="\alpha=3"></span> dira. Matrize hedatua murriztuko dugu kasu bakoitzean: kontraesan batek soluziorik ez dagoela adieraziko du, eta hein berdinekin agertzen den errenkada nulu batek infinitu soluzio daudela.</p>
+            <div class="essential-geometry system-2024-idea">
+              <div class="math-display" data-math="\det A_\alpha=(\alpha-3)(\alpha+1)" data-math-display></div>
+              <strong class="math-display system-2024-classification" data-math-es="\begin{cases}\alpha=-1:&amp;\text{sin solución},\\\alpha=3:&amp;\text{infinitas soluciones},\\\alpha\ne-1,3:&amp;\text{solución única}.\end{cases}" data-math-eu="\begin{cases}\alpha=-1:&amp;\text{soluziorik ez},\\\alpha=3:&amp;\text{infinitu soluzio},\\\alpha\ne-1,3:&amp;\text{soluzio bakarra}.\end{cases}" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Discusión</p>
+            <h2>Clasificación del sistema según α</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Determinante y caso regular</h3>
+                <p data-system-2024-language="es">En un sistema cuadrado de tres ecuaciones, <span class="math-inline math-nowrap" data-math="\det A\ne0"></span> significa que la matriz de coeficientes es invertible. Entonces su rango es 3 y el sistema posee exactamente una solución.</p>
+                <p data-system-2024-language="eu" hidden>Hiru ekuazioko sistema karratu batean, <span class="math-inline math-nowrap" data-math="\det A\ne0"></span> izateak koefizienteen matrizea alderantzikagarria dela esan nahi du. Orduan haren heina 3 da eta sistemak soluzio bakarra du.</p>
+                <div class="theory-formula math-display" data-math="\det A\ne0\Longrightarrow\operatorname{rg}(A)=3" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Teorema de Rouché-Frobenius</h3>
+                <p data-system-2024-language="es">Cuando el determinante vale cero, comparamos el rango de la matriz de coeficientes <span class="math-inline math-nowrap" data-math="A"></span> y el de la ampliada <span class="math-inline math-nowrap" data-math="A^*"></span>. La igualdad de rangos garantiza compatibilidad; su valor decide si la solución es única o infinita.</p>
+                <p data-system-2024-language="eu" hidden>Determinantea zero denean, <span class="math-inline math-nowrap" data-math="A"></span> koefizienteen matrizearen heina eta <span class="math-inline math-nowrap" data-math="A^*"></span> matrize hedatuarena alderatzen ditugu. Heinak berdinak badira sistema bateragarria da; haien balioak soluzioa bakarra edo infinitua den erabakitzen du.</p>
+                <div class="system-2024-theory-cases">
+                  <div>
+                    <div class="math-display" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)=3" data-math-display></div>
+                    <p data-system-2024-language="es">Una solución.</p>
+                    <p data-system-2024-language="eu" hidden>Soluzio bat.</p>
+                  </div>
+                  <div>
+                    <div class="math-display" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)&lt;3" data-math-display></div>
+                    <p data-system-2024-language="es">Infinitas soluciones.</p>
+                    <p data-system-2024-language="eu" hidden>Infinitu soluzio.</p>
+                  </div>
+                  <div>
+                    <div class="math-display" data-math="\operatorname{rg}(A)\ne\operatorname{rg}(A^*)" data-math-display></div>
+                    <p data-system-2024-language="es">Ninguna solución.</p>
+                    <p data-system-2024-language="eu" hidden>Soluziorik ez.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Rango mediante reducción por filas</h3>
+                <p data-system-2024-language="es">Las operaciones elementales no cambian el conjunto de soluciones ni el rango. En una forma escalonada, el rango es el número de filas no nulas. Una fila <span class="math-inline math-nowrap" data-math="(0\;0\;0\mid c)"></span> con <span class="math-inline math-nowrap" data-math="c\ne0"></span> representa la contradicción <span class="math-inline math-nowrap" data-math="0=c"></span>.</p>
+                <p data-system-2024-language="eu" hidden>Oinarrizko eragiketek ez dute soluzio multzoa edo heina aldatzen. Forma mailakatuan, nulua ez den errenkada kopurua da heina. <span class="math-inline math-nowrap" data-math="c\ne0"></span> izanik, <span class="math-inline math-nowrap" data-math="(0\;0\;0\mid c)"></span> errenkadak <span class="math-inline math-nowrap" data-math="0=c"></span> kontraesana adierazten du.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Escribimos las matrices del sistema</h3>
+                  <p data-system-2024-language="es">Recogemos los coeficientes de <span class="math-inline math-nowrap" data-math="x,y,z"></span> y añadimos los términos independientes en la última columna.</p>
+                  <p data-system-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="x,y,z"></span> aldagaien koefizienteak biltzen ditugu, eta gai independenteak azken zutabean gehitzen ditugu.</p>
+                  <div class="system-2024-matrix-pair">
+                    <div class="math-display" data-math="A_\alpha=\begin{pmatrix}\alpha&amp;1&amp;1\\1&amp;2&amp;\alpha-1\\2&amp;1&amp;\alpha-2\end{pmatrix}" data-math-display></div>
+                    <div class="math-display" data-math="A_\alpha^*=\left(\begin{array}{ccc|c}\alpha&amp;1&amp;1&amp;2\\1&amp;2&amp;\alpha-1&amp;-1\\2&amp;1&amp;\alpha-2&amp;1\end{array}\right)" data-math-display></div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos el determinante por la primera fila</h3>
+                  <p data-system-2024-language="es">Aplicamos los signos <span class="math-inline math-nowrap" data-math="+,-,+"></span> y escribimos los tres menores de orden 2.</p>
+                  <p data-system-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="+,-,+"></span> zeinuak aplikatu eta 2. ordenako hiru minoreak idazten ditugu.</p>
+                  <div class="system-2024-work system-2024-cofactor-work">
+                    <div class="math-display" data-math="\det A_\alpha=\alpha\begin{vmatrix}2&amp;\alpha-1\\1&amp;\alpha-2\end{vmatrix}" data-math-display></div>
+                    <div class="math-display" data-math="-\begin{vmatrix}1&amp;\alpha-1\\2&amp;\alpha-2\end{vmatrix}" data-math-display></div>
+                    <div class="math-display" data-math="+\begin{vmatrix}1&amp;2\\2&amp;1\end{vmatrix}" data-math-display></div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Simplificamos los tres menores</h3>
+                  <div class="system-2024-minors">
+                    <div>
+                      <div class="math-display" data-math="2(\alpha-2)-(\alpha-1)" data-math-display></div>
+                      <strong class="math-display" data-math="=\alpha-3" data-math-display></strong>
+                    </div>
+                    <div>
+                      <div class="math-display" data-math="(\alpha-2)-2(\alpha-1)" data-math-display></div>
+                      <strong class="math-display" data-math="=-\alpha" data-math-display></strong>
+                    </div>
+                    <div>
+                      <div class="math-display" data-math="1-4" data-math-display></div>
+                      <strong class="math-display" data-math="=-3" data-math-display></strong>
+                    </div>
+                  </div>
+                  <div class="system-2024-work">
+                    <div class="math-display" data-math="\det A_\alpha=\alpha(\alpha-3)-(-\alpha)-3" data-math-display></div>
+                    <div class="math-display" data-math="\det A_\alpha=\alpha^2-2\alpha-3" data-math-display></div>
+                    <strong class="math-display" data-math="\det A_\alpha=(\alpha-3)(\alpha+1)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Clasificamos el caso regular</h3>
+                  <p data-system-2024-language="es">El determinante solo se anula en <span class="math-inline math-nowrap" data-math="\alpha=-1"></span> y <span class="math-inline math-nowrap" data-math="\alpha=3"></span>. Para cualquier otro valor, la matriz tiene rango 3 y el sistema es compatible determinado.</p>
+                  <p data-system-2024-language="eu" hidden>Determinantea <span class="math-inline math-nowrap" data-math="\alpha=-1"></span> eta <span class="math-inline math-nowrap" data-math="\alpha=3"></span> balioetan soilik anulatzen da. Beste edozein baliotarako, matrizearen heina 3 da eta sistema bateragarri determinatua da.</p>
+                  <div class="system-2024-work">
+                    <strong class="math-display" data-math-es="\alpha\ne-1,3\Longrightarrow\text{solución única}" data-math-eu="\alpha\ne-1,3\Longrightarrow\text{soluzio bakarra}" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Estudiamos α = 3</h3>
+                  <p data-system-2024-language="es">Intercambiamos las dos primeras filas para comenzar con un pivote 1 y eliminamos la primera columna.</p>
+                  <p data-system-2024-language="eu" hidden>Lehen bi errenkadak trukatzen ditugu 1 balio duen pibot batekin hasteko, eta lehen zutabea ezabatzen dugu.</p>
+                  <div class="system-2024-work">
+                    <div class="math-display system-2024-matrix" data-math="A_3^*=\left(\begin{array}{ccc|c}3&amp;1&amp;1&amp;2\\1&amp;2&amp;2&amp;-1\\2&amp;1&amp;1&amp;1\end{array}\right)" data-math-display></div>
+                    <div class="math-display" data-math="F_1\leftrightarrow F_2" data-math-display></div>
+                    <div class="math-display" data-math="F_2\leftarrow F_2-3F_1" data-math-display></div>
+                    <div class="math-display" data-math="F_3\leftarrow F_3-2F_1" data-math-display></div>
+                    <div class="math-display system-2024-matrix" data-math="\left(\begin{array}{ccc|c}1&amp;2&amp;2&amp;-1\\0&amp;-5&amp;-5&amp;5\\0&amp;-3&amp;-3&amp;3\end{array}\right)" data-math-display></div>
+                    <div class="math-display" data-math="F_3\leftarrow5F_3-3F_2" data-math-display></div>
+                    <strong class="math-display system-2024-matrix" data-math="\left(\begin{array}{ccc|c}1&amp;2&amp;2&amp;-1\\0&amp;-5&amp;-5&amp;5\\0&amp;0&amp;0&amp;0\end{array}\right)" data-math-display></strong>
+                  </div>
+                  <p data-system-2024-language="es">Quedan dos filas no nulas tanto en los coeficientes como en la matriz ampliada.</p>
+                  <p data-system-2024-language="eu" hidden>Bi errenkada ez-nulu geratzen dira bai koefizienteetan bai matrize hedatuan.</p>
+                  <div class="system-2024-work">
+                    <strong class="math-display" data-math="\operatorname{rg}(A_3)=\operatorname{rg}(A_3^*)=2&lt;3" data-math-display></strong>
+                    <strong class="math-display" data-math-es="\alpha=3\Longrightarrow\text{infinitas soluciones}" data-math-eu="\alpha=3\Longrightarrow\text{infinitu soluzio}" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Estudiamos α = −1</h3>
+                  <p data-system-2024-language="es">Una combinación de las tres filas anula todos los coeficientes, pero no el término independiente.</p>
+                  <p data-system-2024-language="eu" hidden>Hiru errenkaden konbinazio batek koefiziente guztiak anulatzen ditu, baina ez gai independentea.</p>
+                  <div class="system-2024-work">
+                    <div class="math-display system-2024-matrix" data-math="A_{-1}^*=\left(\begin{array}{ccc|c}-1&amp;1&amp;1&amp;2\\1&amp;2&amp;-2&amp;-1\\2&amp;1&amp;-3&amp;1\end{array}\right)" data-math-display></div>
+                    <div class="math-display" data-math="F_3\leftarrow F_1-F_2+F_3" data-math-display></div>
+                    <strong class="math-display system-2024-contradiction" data-math="(0\quad0\quad0\mid4)" data-math-display></strong>
+                    <div class="math-display" data-math="0x+0y+0z=4\Longrightarrow0=4" data-math-display></div>
+                  </div>
+                  <p data-system-2024-language="es">Las dos primeras filas son independientes porque su menor superior izquierdo no se anula.</p>
+                  <p data-system-2024-language="eu" hidden>Lehen bi errenkadak independenteak dira, goiko ezkerreko minorea ez delako anulatzen.</p>
+                  <div class="system-2024-work">
+                    <div class="math-display" data-math="\begin{vmatrix}-1&amp;1\\1&amp;2\end{vmatrix}=-2-1=-3\ne0" data-math-display></div>
+                    <div class="math-display" data-math="\operatorname{rg}(A_{-1})=2" data-math-display></div>
+                    <div class="math-display" data-math="\operatorname{rg}(A_{-1}^*)=3" data-math-display></div>
+                    <strong class="math-display" data-math-es="\alpha=-1\Longrightarrow\text{sin solución}" data-math-eu="\alpha=-1\Longrightarrow\text{soluziorik ez}" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry system-2024-essential">
+              <div class="math-display" data-math="\det A_\alpha=(\alpha-3)(\alpha+1)" data-math-display></div>
+              <div class="math-display" data-math="\alpha=3:\quad\operatorname{rg}(A)=\operatorname{rg}(A^*)=2" data-math-display></div>
+              <div class="math-display" data-math="\alpha=-1:\quad\operatorname{rg}(A)=2\ne3=\operatorname{rg}(A^*)" data-math-display></div>
+              <strong class="math-display system-2024-classification" data-math-es="\begin{cases}\alpha=-1:&amp;\text{sin solución},\\\alpha=3:&amp;\text{infinitas soluciones},\\\alpha\ne-1,3:&amp;\text{solución única}.\end{cases}" data-math-eu="\begin{cases}\alpha=-1:&amp;\text{soluziorik ez},\\\alpha=3:&amp;\text{infinitu soluzio},\\\alpha\ne-1,3:&amp;\text{soluzio bakarra}.\end{cases}" data-math-display></strong>
+            </div>
+
+            <div class="result result-long system-2024-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="\alpha=-1,\quad\alpha=3" data-math-display></strong>
+              <p data-system-2024-language="es">No hay solución para <span class="math-inline math-nowrap" data-math="\alpha=-1"></span>; hay infinitas para <span class="math-inline math-nowrap" data-math="\alpha=3"></span>; en los demás casos la solución es única.</p>
+              <p data-system-2024-language="eu" hidden>Ez dago soluziorik <span class="math-inline math-nowrap" data-math="\alpha=-1"></span> denean; infinitu soluzio daude <span class="math-inline math-nowrap" data-math="\alpha=3"></span> denean; gainerako kasuetan soluzioa bakarra da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="system-2024-alpha-one" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Caso α = 1</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-system-2024-language="es">Como <span class="math-inline math-nowrap" data-math="\alpha=1"></span> no es ninguno de los dos valores excepcionales, sabemos de antemano que la solución existe y es única. Sustituimos el parámetro y aplicamos eliminación por filas para obtener primero <span class="math-inline math-nowrap" data-math="z"></span>, después <span class="math-inline math-nowrap" data-math="y"></span> y finalmente <span class="math-inline math-nowrap" data-math="x"></span>.</p>
+            <p class="idea-text" data-system-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="\alpha=1"></span> bi balio berezietako bat ere ez denez, aldez aurretik badakigu soluzioa existitzen dela eta bakarra dela. Parametroa ordezkatu eta errenkaden bidezko ezabaketa aplikatzen dugu, lehenik <span class="math-inline math-nowrap" data-math="z"></span>, ondoren <span class="math-inline math-nowrap" data-math="y"></span> eta azkenik <span class="math-inline math-nowrap" data-math="x"></span> lortzeko.</p>
+            <p class="idea-text" data-system-2024-language="es">La forma escalonada deja una ecuación con una sola incógnita. A partir de ella, la sustitución hacia atrás reconstruye la única terna que satisface las tres ecuaciones.</p>
+            <p class="idea-text" data-system-2024-language="eu" hidden>Forma mailakatuak ezezagun bakarreko ekuazio bat uzten du. Hortik abiatuta, atzeranzko ordezkapenak hiru ekuazioak betetzen dituen hirukote bakarra berreraikitzen du.</p>
+            <div class="essential-geometry system-2024-idea">
+              <div class="math-display" data-math="z=\frac32,\qquad y=-\frac32" data-math-display></div>
+              <strong class="math-display" data-math="(x,y,z)=\left(2,-\frac32,\frac32\right)" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Caso α = 1</p>
+            <h2>Resolución para α = 1</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Operaciones elementales por filas</h3>
+                <p data-system-2024-language="es">Intercambiar filas, multiplicar una fila por un número no nulo o sumarle un múltiplo de otra produce un sistema equivalente: cambia la escritura, pero no sus soluciones.</p>
+                <p data-system-2024-language="eu" hidden>Errenkadak trukatzeak, errenkada bat zero ez den zenbaki batez biderkatzeak edo beste errenkada baten multiplo bat gehitzeak sistema baliokidea sortzen du: idazkera aldatzen da, baina ez soluzioak.</p>
+                <div class="theory-formula math-display" data-math="F_i\leftarrow F_i+\lambda F_j" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Sustitución hacia atrás</h3>
+                <p data-system-2024-language="es">Una vez escalonada la matriz, la última fila determina la última incógnita. Sustituimos ese valor en la fila anterior y continuamos hacia arriba.</p>
+                <p data-system-2024-language="eu" hidden>Matrizea mailakatu ondoren, azken errenkadak azken ezezaguna zehazten du. Balio hori aurreko errenkadan ordezkatu eta gorantz jarraitzen dugu.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Sustituimos α = 1</h3>
+                  <p data-system-2024-language="es">La segunda ecuación pierde el término en <span class="math-inline math-nowrap" data-math="z"></span> porque <span class="math-inline math-nowrap" data-math="\alpha-1=0"></span>.</p>
+                  <p data-system-2024-language="eu" hidden>Bigarren ekuazioak <span class="math-inline math-nowrap" data-math="z"></span> gaia galtzen du, <span class="math-inline math-nowrap" data-math="\alpha-1=0"></span> delako.</p>
+                  <div class="system-2024-work">
+                    <div class="math-display" data-math="\left\{\begin{aligned}x+y+z&amp;=2,\\x+2y&amp;=-1,\\2x+y-z&amp;=1.\end{aligned}\right." data-math-display></div>
+                    <div class="math-display system-2024-matrix" data-math="A_1^*=\left(\begin{array}{ccc|c}1&amp;1&amp;1&amp;2\\1&amp;2&amp;0&amp;-1\\2&amp;1&amp;-1&amp;1\end{array}\right)" data-math-display></div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Reducimos la matriz ampliada</h3>
+                  <p data-system-2024-language="es">Restamos la primera fila a la segunda y dos veces la primera a la tercera.</p>
+                  <p data-system-2024-language="eu" hidden>Lehen errenkada bigarrenari kentzen diogu, eta lehen errenkadaren bikoitza hirugarrenari.</p>
+                  <div class="system-2024-work">
+                    <div class="math-display" data-math="F_2\leftarrow F_2-F_1" data-math-display></div>
+                    <div class="math-display" data-math="F_3\leftarrow F_3-2F_1" data-math-display></div>
+                    <div class="math-display system-2024-matrix" data-math="\left(\begin{array}{ccc|c}1&amp;1&amp;1&amp;2\\0&amp;1&amp;-1&amp;-3\\0&amp;-1&amp;-3&amp;-3\end{array}\right)" data-math-display></div>
+                  </div>
+                  <p data-system-2024-language="es">Sumamos la segunda fila a la tercera para eliminar <span class="math-inline math-nowrap" data-math="y"></span>.</p>
+                  <p data-system-2024-language="eu" hidden>Bigarren errenkada hirugarrenari gehitzen diogu <span class="math-inline math-nowrap" data-math="y"></span> ezabatzeko.</p>
+                  <div class="system-2024-work">
+                    <div class="math-display" data-math="F_3\leftarrow F_3+F_2" data-math-display></div>
+                    <strong class="math-display system-2024-matrix" data-math="\left(\begin{array}{ccc|c}1&amp;1&amp;1&amp;2\\0&amp;1&amp;-1&amp;-3\\0&amp;0&amp;-4&amp;-6\end{array}\right)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos z</h3>
+                  <div class="system-2024-work">
+                    <div class="math-display" data-math="-4z=-6" data-math-display></div>
+                    <strong class="math-display" data-math="z=\frac{-6}{-4}=\frac32" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos y</h3>
+                  <p data-system-2024-language="es">La segunda fila representa <span class="math-inline math-nowrap" data-math="y-z=-3"></span>.</p>
+                  <p data-system-2024-language="eu" hidden>Bigarren errenkadak <span class="math-inline math-nowrap" data-math="y-z=-3"></span> adierazten du.</p>
+                  <div class="system-2024-work">
+                    <div class="math-display" data-math="y-\frac32=-3" data-math-display></div>
+                    <div class="math-display" data-math="y=-3+\frac32" data-math-display></div>
+                    <strong class="math-display" data-math="y=-\frac32" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos x</h3>
+                  <p data-system-2024-language="es">Sustituimos <span class="math-inline math-nowrap" data-math="y"></span> y <span class="math-inline math-nowrap" data-math="z"></span> en la primera ecuación.</p>
+                  <p data-system-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="y"></span> eta <span class="math-inline math-nowrap" data-math="z"></span> lehen ekuazioan ordezkatzen ditugu.</p>
+                  <div class="system-2024-work">
+                    <div class="math-display" data-math="x-\frac32+\frac32=2" data-math-display></div>
+                    <div class="math-display" data-math="x+0=2" data-math-display></div>
+                    <strong class="math-display" data-math="x=2" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Comprobamos la solución</h3>
+                  <div class="system-2024-checks">
+                    <div class="math-display" data-math="2-\frac32+\frac32=2" data-math-display></div>
+                    <div class="math-display" data-math="2+2\left(-\frac32\right)=-1" data-math-display></div>
+                    <div class="math-display" data-math="2\cdot2-\frac32-\frac32=1" data-math-display></div>
+                  </div>
+                  <p data-system-2024-language="es">La terna satisface las tres ecuaciones originales.</p>
+                  <p data-system-2024-language="eu" hidden>Hirukoteak jatorrizko hiru ekuazioak betetzen ditu.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry system-2024-essential">
+              <div class="math-display system-2024-matrix" data-math="\left(\begin{array}{ccc|c}1&amp;1&amp;1&amp;2\\0&amp;1&amp;-1&amp;-3\\0&amp;0&amp;-4&amp;-6\end{array}\right)" data-math-display></div>
+              <div class="math-display" data-math="z=\frac32,\qquad y=-3+z=-\frac32" data-math-display></div>
+              <strong class="math-display" data-math="(x,y,z)=\left(2,-\frac32,\frac32\right)" data-math-display></strong>
+            </div>
+
+            <div class="result result-long system-2024-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="(x,y,z)=\left(2,-\frac32,\frac32\right)" data-math-display></strong>
+              <p data-system-2024-language="es">Para <span class="math-inline math-nowrap" data-math="\alpha=1"></span>, el sistema es compatible determinado.</p>
+              <p data-system-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="\alpha=1"></span> denean, sistema bateragarri determinatua da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

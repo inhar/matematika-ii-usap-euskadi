@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hiru kurbak mugatutako esparrua · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-area-tres-curvas-2021-ordinaria-idiomas.js?v=2021-ord-p7b" defer></script>
+  <script src="ejercicio-area-tres-curvas-2021-ordinaria-grafico.js?v=2021-ord-p7b" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2021 · Ordinaria · Problema 7</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Área entre curvas · 2021</p>
+        <h1>Recinto limitado por tres curvas</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Se consideran las funciones:</p>
+        <div class="area-three-2021-functions">
+          <span class="math-inline" data-math="f(x)=\frac1x"></span>
+          <span class="math-inline" data-math="g(x)=x^2"></span>
+          <span class="math-inline" data-math="h(x)=\frac{x^2}{8}"></span>
+        </div>
+
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">Dibujar el recinto finito del primer cuadrante limitado por las gráficas de las tres funciones.</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">Calcular el área de dicho recinto.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="area-three-2021-part-a" data-target="area-three-2021-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="area-three-2021-part-b" data-target="area-three-2021-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="area-three-2021-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">El recinto queda determinado por los puntos donde se cortan las curvas dos a dos. Resolveremos las tres ecuaciones de intersección y conservaremos las soluciones del primer cuadrante.</p>
+            <p class="idea-text">Los tres puntos obtenidos indican qué tramo de cada curva forma la frontera: una parábola desde el origen, la hipérbola entre los dos puntos superiores y la parábola más abierta para regresar al origen.</p>
+            <div class="essential-geometry area-three-2021-idea">
+              <div class="math-display" data-math="f=g\Rightarrow A(1,1)" data-math-display></div>
+              <div class="math-display" data-math="f=h\Rightarrow B\left(2,\frac12\right)" data-math-display></div>
+              <strong class="math-display" data-math="g=h\Rightarrow O(0,0)" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Intersecciones y recinto</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Intersección de dos gráficas</h3>
+                <p>En un punto de corte, las dos funciones tienen la misma ordenada para una misma abscisa. Por eso las intersecciones se hallan igualando sus expresiones.</p>
+                <div class="theory-formula math-display" data-math="p(x_0)=q(x_0)\Longrightarrow (x_0,p(x_0))\text{ es un punto de corte}" data-math-eu="p(x_0)=q(x_0)\Longrightarrow (x_0,p(x_0))\text{ ebakidura-puntua da}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Restricción al primer cuadrante</h3>
+                <p>Solo nos interesan puntos con coordenadas no negativas. Además, la función inversa del enunciado exige una abscisa estrictamente positiva.</p>
+                <div class="theory-formula math-display" data-math="x\ge 0,\qquad y\ge 0,\qquad x\ne0\text{ para }f" data-math-eu="x\ge 0,\qquad y\ge 0,\qquad x\ne0,\ f\text{-rako}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Cómo reconocer la frontera</h3>
+                <p>Los puntos de corte dividen las curvas en tramos. El recinto cerrado se obtiene siguiendo consecutivamente los tramos que unen los tres vértices sin salir de la región.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Identificamos la forma de las curvas</h3>
+                  <p>La primera función es una hipérbola en el primer cuadrante. Las otras dos son parábolas con vértice en el origen; la segunda es más abierta porque su coeficiente es menor.</p>
+                  <div class="area-three-2021-shapes">
+                    <span class="math-inline" data-math="f(x)=\frac1x"></span>
+                    <span>hipérbola</span>
+                    <span class="math-inline" data-math="g(x)=x^2"></span>
+                    <span>parábola</span>
+                    <span class="math-inline" data-math="h(x)=\frac{x^2}{8}"></span>
+                    <span>parábola más abierta</span>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la intersección de f y g</h3>
+                  <p>Como trabajamos en el primer cuadrante, la abscisa es positiva.</p>
+                  <div class="area-three-2021-work">
+                    <div class="math-display" data-math="\frac1x=x^2" data-math-display></div>
+                    <div class="math-display" data-math="1=x^3" data-math-display></div>
+                    <div class="math-display" data-math="x=1,\qquad y=1" data-math-display></div>
+                    <strong class="math-display" data-math="A(1,1)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la intersección de f y h</h3>
+                  <div class="area-three-2021-work">
+                    <div class="math-display" data-math="\frac1x=\frac{x^2}{8}" data-math-display></div>
+                    <div class="math-display" data-math="8=x^3" data-math-display></div>
+                    <div class="math-display" data-math="x=2,\qquad y=\frac12" data-math-display></div>
+                    <strong class="math-display" data-math="B\left(2,\frac12\right)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la intersección de g y h</h3>
+                  <div class="area-three-2021-work">
+                    <div class="math-display" data-math="x^2=\frac{x^2}{8}" data-math-display></div>
+                    <div class="math-display" data-math="\frac78x^2=0" data-math-display></div>
+                    <div class="math-display" data-math="x=0,\qquad y=0" data-math-display></div>
+                    <strong class="math-display" data-math="O(0,0)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Seguimos la frontera cerrada</h3>
+                  <p class="area-three-2021-boundary area-three-2021-boundary-es" lang="es">Desde el origen llegamos a <span class="math-inline math-nowrap" data-math="A"></span> por <span class="math-inline math-nowrap" data-math="g"></span>; de <span class="math-inline math-nowrap" data-math="A"></span> a <span class="math-inline math-nowrap" data-math="B"></span> seguimos <span class="math-inline math-nowrap" data-math="f"></span>; y de <span class="math-inline math-nowrap" data-math="B"></span> regresamos al origen por <span class="math-inline math-nowrap" data-math="h"></span>.</p>
+                  <p class="area-three-2021-boundary area-three-2021-boundary-eu" lang="eu">Jatorritik <span class="math-inline math-nowrap" data-math="A"></span> puntura <span class="math-inline math-nowrap" data-math="g"></span> kurbatik iristen gara; <span class="math-inline math-nowrap" data-math="A"></span> puntutik <span class="math-inline math-nowrap" data-math="B"></span> puntura <span class="math-inline math-nowrap" data-math="f"></span> jarraitzen dugu; eta <span class="math-inline math-nowrap" data-math="B"></span> puntutik jatorrira <span class="math-inline math-nowrap" data-math="h"></span> kurbatik itzultzen gara.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry area-three-2021-essential">
+              <div class="math-display" data-math="\frac1x=x^2\Longrightarrow A(1,1)" data-math-display></div>
+              <div class="math-display" data-math="\frac1x=\frac{x^2}{8}\Longrightarrow B\left(2,\frac12\right)" data-math-display></div>
+              <div class="math-display" data-math="x^2=\frac{x^2}{8}\Longrightarrow O(0,0)" data-math-display></div>
+            </div>
+
+            <figure class="area-three-2021-figure" aria-label="Recinto del primer cuadrante limitado por una hipérbola y dos parábolas">
+              <figcaption>Los tres puntos de corte cierran el recinto sombreado. Cada lado curvo pertenece a una función distinta.</figcaption>
+              <div id="area-three-2021-board-a" class="jxgbox area-three-2021-board" role="img" aria-label="Hipérbola uno partido de x y parábolas x al cuadrado y x al cuadrado partido de ocho, con el recinto OAB sombreado"></div>
+            </figure>
+
+            <div class="result result-long area-three-2021-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="math-inline" data-math="O(0,0)"></span>
+                <span class="math-inline" data-math="A(1,1)"></span>
+                <span class="math-inline" data-math="B\left(2,\frac12\right)"></span>
+              </strong>
+              <p>Estos puntos y los tramos que los unen determinan el recinto finito.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="area-three-2021-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text area-three-2021-upper area-three-2021-upper-es" lang="es">La curva inferior es siempre la parábola más abierta. La curva superior, en cambio, es la otra parábola hasta <span class="math-inline math-nowrap" data-math="x=1"></span> y la hipérbola desde <span class="math-inline math-nowrap" data-math="x=1"></span> hasta <span class="math-inline math-nowrap" data-math="x=2"></span>.</p>
+            <p class="idea-text area-three-2021-upper area-three-2021-upper-eu" lang="eu">Beheko kurba parabola irekiena da beti. Goiko kurba, aldiz, beste parabola da <span class="math-inline math-nowrap" data-math="x=1"></span> baliora arte, eta hiperbola <span class="math-inline math-nowrap" data-math="x=1"></span> baliotik <span class="math-inline math-nowrap" data-math="x=2"></span> baliora arte.</p>
+            <p class="idea-text">Por eso dividiremos el área en dos integrales de “función superior menos función inferior”. Las partes racionales se cancelarán y quedará únicamente un logaritmo.</p>
+            <div class="essential-geometry area-three-2021-idea area-three-2021-idea-integrals">
+              <div class="math-display" data-math="S_1=\int_0^1\left(x^2-\frac{x^2}{8}\right)\,dx" data-math-display></div>
+              <div class="math-display" data-math="S_2=\int_1^2\left(\frac1x-\frac{x^2}{8}\right)\,dx" data-math-display></div>
+              <strong class="math-display" data-math="S=S_1+S_2=\ln 2" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Cálculo del área</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Área entre dos curvas</h3>
+                <p>Si una función permanece por encima de otra en todo el intervalo, el área comprendida entre ambas se obtiene integrando su diferencia.</p>
+                <div class="theory-formula math-display" data-math="S=\int_a^b\bigl(\text{superior}-\text{inferior}\bigr)\,dx" data-math-eu="S=\int_a^b\bigl(\text{goikoa}-\text{behekoa}\bigr)\,dx" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Cuándo hay que dividir una integral</h3>
+                <p>Si cambia alguna de las curvas que forman la frontera superior o inferior, el recinto debe separarse en ese punto. Aquí la frontera superior cambia en la intersección de abscisa uno.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Primitivas utilizadas</h3>
+                <p>Solo se necesitan la regla de las potencias y la primitiva de la función inversa.</p>
+                <div class="theory-formula area-three-2021-primitives">
+                  <span class="math-inline" data-math="\int x^2\,dx=\frac{x^3}{3}+C"></span>
+                  <span class="math-inline" data-math="\int\frac1x\,dx=\ln|x|+C"></span>
+                </div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Dividimos el recinto en <span class="math-inline math-nowrap" data-math="x=1"></span></h3>
+                  <p>Entre cero y uno, la frontera superior es <span class="math-inline math-nowrap" data-math="g"></span>. Entre uno y dos, pasa a ser <span class="math-inline math-nowrap" data-math="f"></span>. La frontera inferior es <span class="math-inline math-nowrap" data-math="h"></span> en ambos intervalos.</p>
+                  <div class="area-three-2021-split">
+                    <div>
+                      <span class="math-inline" data-math="0\le x\le1"></span>
+                      <strong class="math-inline" data-math="g(x)-h(x)"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="1\le x\le2"></span>
+                      <strong class="math-inline" data-math="f(x)-h(x)"></strong>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la primera parte</h3>
+                  <div class="area-three-2021-work">
+                    <div class="math-display" data-math="S_1=\int_0^1\left(x^2-\frac{x^2}{8}\right)\,dx" data-math-display></div>
+                    <div class="math-display" data-math="S_1=\frac78\int_0^1x^2\,dx" data-math-display></div>
+                    <div class="math-display" data-math="S_1=\frac78\left[\frac{x^3}{3}\right]_0^1" data-math-display></div>
+                    <strong class="math-display" data-math="S_1=\frac7{24}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la segunda parte</h3>
+                  <div class="area-three-2021-work">
+                    <div class="math-display" data-math="S_2=\int_1^2\left(\frac1x-\frac{x^2}{8}\right)\,dx" data-math-display></div>
+                    <div class="math-display" data-math="S_2=\left[\ln x-\frac{x^3}{24}\right]_1^2" data-math-display></div>
+                    <div class="math-display" data-math="S_2=\left(\ln2-\frac8{24}\right)-\left(\ln1-\frac1{24}\right)" data-math-display></div>
+                    <div class="math-display" data-math="\ln1=0" data-math-display></div>
+                    <strong class="math-display" data-math="S_2=\ln2-\frac7{24}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Sumamos y observamos la cancelación</h3>
+                  <div class="area-three-2021-work">
+                    <div class="math-display" data-math="S=S_1+S_2" data-math-display></div>
+                    <div class="math-display" data-math="S=\frac7{24}+\ln2-\frac7{24}" data-math-display></div>
+                    <strong class="math-display" data-math="S=\ln2" data-math-display></strong>
+                    <div class="math-display" data-math="\ln2\approx0{,}69" data-math-display></div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry area-three-2021-essential">
+              <div class="math-display" data-math="S_1=\int_0^1\left(x^2-\frac{x^2}{8}\right)\,dx=\frac7{24}" data-math-display></div>
+              <div class="math-display" data-math="S_2=\int_1^2\left(\frac1x-\frac{x^2}{8}\right)\,dx=\ln2-\frac7{24}" data-math-display></div>
+              <strong class="math-display" data-math="S=S_1+S_2=\ln2" data-math-display></strong>
+            </div>
+
+            <figure class="area-three-2021-figure" aria-label="Recinto dividido en x igual a uno para calcular su área">
+              <figcaption>La línea discontinua marca el punto donde cambia la curva superior y, por tanto, donde debe dividirse la integral.</figcaption>
+              <div id="area-three-2021-board-b" class="jxgbox area-three-2021-board" role="img" aria-label="Recinto sombreado entre las tres curvas con división vertical en x igual a uno"></div>
+            </figure>
+
+            <div class="result result-long area-three-2021-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="math-inline" data-math="S=\ln2\ \text{u}^2"></span>
+                <span class="math-inline" data-math="S\approx0{,}69\ \text{u}^2"></span>
+              </strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

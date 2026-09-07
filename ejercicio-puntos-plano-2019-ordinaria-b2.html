@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hiru puntu eta haien planoa · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-puntos-plano-idiomas.js" defer></script>
+  <script src="ejercicio-puntos-plano-grafico.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Ordinaria · Opción B · Problema B.2</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Geometría en el espacio · Puntos y planos · Junio de 2019</p>
+        <h1>Tres puntos: alineación y plano que los contiene</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Se consideran los tres puntos:</p>
+        <div class="three-point-data" aria-label="Puntos A, B y C del enunciado">
+          <span>A(0, 0, 1)</span>
+          <span>B(1, 1, 1)</span>
+          <span>C(−1, −1, 2)</span>
+        </div>
+        <p>¿Están alineados? En caso afirmativo, hallar la ecuación de la recta que los contiene. En caso negativo, calcular el plano que los contiene.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema B.2</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Tres puntos están alineados si los vectores que parten de uno de ellos hacia los otros dos son proporcionales. Calcularemos AB y AC desde A; como no tendrán la misma dirección, los tres puntos determinarán un plano. Usaremos A como punto del plano y esos dos vectores como direcciones para escribir su ecuación paramétrica. Después, su producto vectorial nos dará un vector normal y una ecuación implícita equivalente.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema B.2</p>
+            <h2 id="solution-title">Alineación y ecuación del plano</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Vector determinado por dos puntos</h3>
+                <p>El vector que va de P a Q se obtiene restando las coordenadas del punto inicial a las del punto final, componente a componente.</p>
+                <div class="theory-formula math-display" data-math="PQ = Q - P" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Criterio de alineación</h3>
+                <p>Los puntos A, B y C están alineados exactamente cuando AB y AC son paralelos, es decir, cuando existe un número k que permite escribir uno como múltiplo del otro.</p>
+                <div class="theory-formula math-display" data-math-es="A,B,C\text{ alineados}\Longleftrightarrow\overrightarrow{AC}=k\,\overrightarrow{AB}" data-math-eu="A,B,C\text{ lerrokatuta}\Longleftrightarrow\overrightarrow{AC}=k\,\overrightarrow{AB}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Plano por un punto y dos direcciones</h3>
+                <p>Un punto P₀ y dos vectores no paralelos u y v determinan un plano. Sus puntos se obtienen recorriendo libremente ambas direcciones.</p>
+                <div class="theory-formula math-display" data-math="(x,y,z)=P_0+\lambda u+\mu v" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. De la forma paramétrica a la implícita</h3>
+                <p>El producto vectorial de las dos direcciones produce un vector normal n perpendicular al plano. Si P₀ pertenece al plano, todos sus puntos cumplen:</p>
+                <div class="theory-formula math-display" data-math="n \cdot [(x, y, z) - P_{0}] = 0" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Construimos dos vectores con el mismo origen</h3>
+                  <p>Tomamos A como punto inicial y restamos sus coordenadas a las de B y C.</p>
+                  <div class="calculation-list point-vector-calculations">
+                    <div><span>AB</span><strong class="math-inline" data-math="B - A = (1 - 0, 1 - 0, 1 - 1) = (1, 1, 0)"></strong></div>
+                    <div><span>AC</span><strong class="math-inline" data-math="C - A = (-1 - 0, -1 - 0, 2 - 1) = (-1, -1, 1)"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos si los vectores son proporcionales</h3>
+                  <p>Si AC = k·AB, la tercera componente exigiría 1 = k·0. Esta igualdad es imposible para cualquier k.</p>
+                  <div class="det-expansion alignment-check">
+                    <span class="math-inline" data-math="AB = (1, 1, 0)"></span>
+                    <span class="math-inline" data-math="AC = (-1, -1, 1)"></span>
+                    <strong>AC no es múltiplo de AB</strong>
+                  </div>
+                  <p>Por tanto, los tres puntos no están alineados y debemos calcular el plano que determinan.</p>
+                </li>
+
+                <li>
+                  <h3>Escribimos el plano en forma paramétrica</h3>
+                  <p>Usamos A como punto conocido y AB, AC como sus dos vectores directores.</p>
+                  <div class="det-expansion plane-parametric-vector">
+                    <strong class="math-inline" data-math="\pi : (x, y, z) = (0, 0, 1) + \lambda (1, 1, 0) + \mu (-1, -1, 1)"></strong>
+                  </div>
+                  <p>Sumando las componentes obtenemos:</p>
+                  <div class="equation-system plane-parametric-system math-display" aria-label="Plano pi en forma paramétrica" data-math="\begin{cases}x = \lambda - \mu \\ y = \lambda - \mu \\ z = 1 + \mu\end{cases}" data-math-display></div>
+
+                  <figure class="point-plane-figure" aria-label="Representación tridimensional del plano determinado por A, B y C, con los vectores AB y AC desde A; C queda fuera de la recta AB">
+                    <figcaption>C queda fuera de la recta que pasa por A y B; los vectores AB y AC determinan el plano π.</figcaption>
+                    <div id="point-plane-board" class="jxgbox point-plane-board" role="img" aria-label="Plano pi con los puntos A, B y C, la recta que pasa por A y B y los vectores AB y AC"></div>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Obtenemos también la ecuación implícita</h3>
+                  <p>Calculamos un vector normal mediante el producto vectorial AB × AC, componente por componente.</p>
+                  <div class="calculation-list vector-calculation plane-normal-calculation">
+                    <div><span class="math-inline" data-math="n_{x}"></span><strong class="math-inline" data-math="1\cdot 1 - 0(-1) = 1"></strong></div>
+                    <div><span class="math-inline" data-math="n_{y}"></span><strong class="math-inline" data-math="0(-1) - 1\cdot 1 = -1"></strong></div>
+                    <div><span class="math-inline" data-math="n_{z}"></span><strong class="math-inline" data-math="1(-1) - 1(-1) = 0"></strong></div>
+                  </div>
+                  <div class="det-expansion plane-implicit-work">
+                    <span class="math-inline" data-math="n = AB \times AC = (1, -1, 0)"></span>
+                    <span class="math-inline" data-math="(1, -1, 0) \cdot [(x, y, z) - (0, 0, 1)] = 0"></span>
+                    <strong class="math-inline" data-math="\pi : x - y = 0"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos que los tres puntos pertenecen al plano</h3>
+                  <p>Sustituimos sus coordenadas en x − y = 0.</p>
+                  <div class="calculation-list point-plane-checks">
+                    <div><span>A</span><strong class="math-inline" data-math="0 - 0 = 0"></strong></div>
+                    <div><span>B</span><strong class="math-inline" data-math="1 - 1 = 0"></strong></div>
+                    <div><span>C</span><strong class="math-inline" data-math="-1 - (-1) = 0"></strong></div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry points-plane-essential">
+              <div class="math-display" data-math="AB = (1, 1, 0); AC = (-1, -1, 1)" data-math-display></div>
+              <div>AB y AC no son proporcionales ⇒ A, B y C no están alineados</div>
+              <strong class="math-inline" data-math="\pi : (x, y, z) = (0, 0, 1) + \lambda (1, 1, 0) + \mu (-1, -1, 1)"></strong>
+              <div>Forma implícita equivalente: x − y = 0</div>
+            </div>
+
+            <div class="result result-long points-plane-result">
+              <span>Resultado</span>
+              <strong>No están alineados.</strong>
+              <p>El plano que los contiene es π: x − y = 0.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ontzi akastunak banaketa normal batean · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-recipientes-defectuosos-normal-2020-extraordinaria-idiomas.js?v=2020-extra-a5a" defer></script>
+  <script src="ejercicio-recipientes-defectuosos-normal-2020-extraordinaria-grafico.js?v=2020-extra-a5a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2020 · Extraordinaria · Opción A · Ejercicio A.5</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Distribución normal · 2020</p>
+        <h1>Recipientes defectuosos y distribución normal</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Una máquina produce recipientes cuyas capacidades siguen una distribución normal:</p>
+        <div class="equation containers-normal-statement math-display" aria-label="X sigue una distribución normal de media diez y desviación típica cero coma uno" data-math="X\sim N(\mu=10,\ \sigma=0{,}1)" data-math-display></div>
+        <p>Un fabricante considera defectuoso un recipiente si su capacidad no está entre 9,8 y 10,1. Calcular:</p>
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">La probabilidad de que un recipiente sea considerado defectuoso.</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">Si se han fabricado 1 500 recipientes, ¿cuántos se esperan defectuosos?</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="containers-normal-part-a" data-target="containers-normal-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="containers-normal-part-b" data-target="containers-normal-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="containers-normal-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Un recipiente es correcto cuando su capacidad queda dentro del intervalo indicado y es defectuoso cuando queda fuera. Como la tabla normal trabaja con la variable estándar, primero convertiremos los dos límites en valores de <span class="math-nowrap math-inline" data-math="Z"></span>.</p>
+            <p class="idea-text">Es más directo calcular el área central correspondiente a los recipientes correctos y restarla de 1. El resultado restante reúne las dos colas de la campana: capacidades demasiado pequeñas y capacidades demasiado grandes.</p>
+            <div class="essential-geometry containers-normal-idea">
+              <div class="math-display" data-math="9{,}8\le X\le10{,}1\Longleftrightarrow-2\le Z\le1" data-math-display></div>
+              <div class="math-display" data-math="P(D)=1-P(-2\le Z\le1)" data-math-display></div>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Probabilidad de obtener un recipiente defectuoso</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Parámetros de una distribución normal</h3>
+                <p>La media sitúa el centro de la campana y la desviación típica mide la dispersión. En este ejercicio, el solucionario interpreta el segundo parámetro del enunciado como desviación típica.</p>
+                <div class="theory-formula containers-normal-parameters">
+                  <span class="math-inline" data-math="X\sim N(\mu,\sigma)"></span>
+                  <span class="math-inline" data-math="\mu=10,\quad\sigma=0{,}1"></span>
+                </div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Tipificación</h3>
+                <p>Tipificar transforma una capacidad en el número de desviaciones típicas que la separan de la media. Así podemos utilizar la tabla de la normal estándar.</p>
+                <div class="theory-formula math-display" data-math="Z=\frac{X-\mu}{\sigma}\sim N(0,1)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Probabilidades acumuladas y simetría</h3>
+                <p>La función acumulada proporciona el área situada a la izquierda. Para valores negativos podemos aprovechar la simetría de la campana.</p>
+                <div class="theory-formula containers-normal-theory-formulas">
+                  <span class="math-inline" data-math="\Phi(z)=P(Z\le z)"></span>
+                  <span class="math-inline" data-math="\Phi(-z)=1-\Phi(z)"></span>
+                </div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Suceso complementario</h3>
+                <p>Un recipiente es correcto o defectuoso, y ambas posibilidades abarcan todos los casos. Por tanto, sus probabilidades suman 1.</p>
+                <div class="theory-formula math-display" data-math="P(D)=1-P(D^{\mathrm c})" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Identificamos el modelo y los sucesos</h3>
+                  <p>Llamamos <span class="math-nowrap math-inline" data-math="X"></span> a la capacidad de un recipiente. El modelo y los dos sucesos relevantes son:</p>
+                  <div class="calculation-list containers-normal-data">
+                    <div><span>Modelo</span><strong class="math-inline" data-math="X\sim N(10,\ 0{,}1)"></strong></div>
+                    <div><span>Correcto</span><strong class="math-inline" data-math="D^{\mathrm c}=\{9{,}8\le X\le10{,}1\}"></strong></div>
+                    <div><span>Defectuoso</span><strong class="math-inline" data-math="D=\{X&lt;9{,}8\}\cup\{X&gt;10{,}1\}"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Tipificamos los dos límites</h3>
+                  <p>Restamos la media y dividimos por la desviación típica en ambos extremos.</p>
+                  <div class="normal-bound-calculations">
+                    <div>
+                      <span>Límite inferior</span>
+                      <div>
+                        <b class="math-inline" data-math="z_1=\frac{9{,}8-10}{0{,}1}"></b>
+                        <strong class="math-inline" data-math="z_1=-2"></strong>
+                      </div>
+                    </div>
+                    <div>
+                      <span>Límite superior</span>
+                      <div>
+                        <b class="math-inline" data-math="z_2=\frac{10{,}1-10}{0{,}1}"></b>
+                        <strong class="math-inline" data-math="z_2=1"></strong>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="det-expansion containers-normal-standardized">
+                    <span class="math-inline" data-math="P(9{,}8\le X\le10{,}1)"></span>
+                    <strong class="math-inline" data-math="=P(-2\le Z\le1)"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Situamos el intervalo en la campana</h3>
+                  <p>La zona central representa los recipientes correctos. Las dos zonas sombreadas son las capacidades consideradas defectuosas.</p>
+                  <figure class="normal-distribution-figure containers-normal-figure" aria-label="Distribución normal de capacidades con las dos colas defectuosas sombreadas">
+                    <figcaption>El defecto reúne la cola izquierda, por debajo de 9,8, y la cola derecha, por encima de 10,1.</figcaption>
+                    <div id="containers-normal-board" class="jxgbox normal-distribution-board containers-normal-board" role="img" aria-label="Campana normal centrada en diez con las colas anteriores a nueve coma ocho y posteriores a diez coma uno sombreadas"></div>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Calculamos la probabilidad del intervalo correcto</h3>
+                  <p>El área entre dos valores se obtiene restando las probabilidades acumuladas de sus extremos.</p>
+                  <div class="calculation-list containers-normal-table">
+                    <div><span class="math-inline" data-math="\Phi(1)"></span><strong class="math-inline" data-math="0{,}8413"></strong></div>
+                    <div><span class="math-inline" data-math="\Phi(-2)"></span><strong class="math-inline" data-math="1-\Phi(2)=1-0{,}9772=0{,}0228"></strong></div>
+                  </div>
+                  <div class="det-expansion containers-normal-central">
+                    <span class="math-inline" data-math="P(-2\le Z\le1)=\Phi(1)-\Phi(-2)"></span>
+                    <span class="math-inline" data-math="=0{,}8413-0{,}0228"></span>
+                    <strong class="math-inline" data-math="=0{,}8185"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Tomamos el suceso complementario</h3>
+                  <p>La probabilidad defectuosa es toda el área que queda fuera del intervalo correcto.</p>
+                  <div class="det-expansion containers-normal-defect">
+                    <span class="math-inline" data-math="P(D)=1-P(D^{\mathrm c})"></span>
+                    <span class="math-inline" data-math="=1-0{,}8185"></span>
+                    <strong class="math-inline" data-math="=0{,}1815=18{,}15\%"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos sumando las dos colas</h3>
+                  <p>La cola izquierda vale 0,0228. La derecha se obtiene restando a 1 la acumulada hasta 1.</p>
+                  <div class="calculation-list containers-normal-tails">
+                    <div><span>Cola izquierda</span><strong class="math-inline" data-math="P(Z&lt;-2)=0{,}0228"></strong></div>
+                    <div><span>Cola derecha</span><strong class="math-inline" data-math="P(Z&gt;1)=1-0{,}8413=0{,}1587"></strong></div>
+                  </div>
+                  <div class="math-display" data-math="0{,}0228+0{,}1587=0{,}1815" data-math-display></div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry containers-normal-essential">
+              <div class="math-display" data-math="z_1=\frac{9{,}8-10}{0{,}1}=-2" data-math-display></div>
+              <div class="math-display" data-math="z_2=\frac{10{,}1-10}{0{,}1}=1" data-math-display></div>
+              <div class="math-display" data-math="P(D^{\mathrm c})=\Phi(1)-\Phi(-2)" data-math-display></div>
+              <div class="math-display" data-math="P(D^{\mathrm c})=0{,}8413-0{,}0228=0{,}8185" data-math-display></div>
+              <strong class="math-inline" data-math="P(D)=1-0{,}8185=0{,}1815=18{,}15\%."></strong>
+            </div>
+
+            <div class="result result-long normal-result">
+              <span>Resultado</span>
+              <strong><span class="result-unit">Probabilidad de defecto: <span class="math-nowrap math-inline" data-math="0{,}1815"></span></span></strong>
+              <p>Equivale aproximadamente al 18,15 % de la producción.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="containers-normal-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">La probabilidad calculada en el apartado anterior representa la proporción de recipientes defectuosos que predice el modelo. Multiplicaremos esa proporción por el tamaño de la producción.</p>
+            <p class="idea-text">El producto puede ser decimal porque es un valor esperado, no un recuento observado. Para expresar un número práctico de recipientes lo aproximaremos al entero más cercano.</p>
+            <div class="essential-geometry containers-normal-idea">
+              <div class="math-display" data-math="n\cdot p=1500\cdot0{,}1815" data-math-display></div>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Número esperado de recipientes defectuosos</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. De probabilidad a frecuencia esperada</h3>
+                <p>Si cada elemento tiene probabilidad p de cumplir una condición y se producen n elementos, el número esperado que la cumple es el producto de ambos valores.</p>
+                <div class="theory-formula math-display" data-math-es="\text{número esperado}=n\cdot p" data-math-eu="\text{espero den kopurua}=n\cdot p" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Interpretación y redondeo</h3>
+                <p>La esperanza matemática es un promedio teórico y no tiene por qué ser entera. Si se pide un número aproximado de objetos, se redondea al entero más cercano y se mantiene visible el valor previo al redondeo.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Recuperamos la probabilidad de defecto</h3>
+                  <p>Del apartado anterior sabemos qué fracción de la producción se espera que quede fuera del intervalo admitido.</p>
+                  <div class="math-display" data-math="p=P(D)=0{,}1815" data-math-display></div>
+                </li>
+                <li>
+                  <h3>Multiplicamos por el número fabricado</h3>
+                  <p>Aplicamos la proporción a los 1 500 recipientes producidos.</p>
+                  <div class="det-expansion containers-normal-expected">
+                    <span class="math-inline" data-math="n\cdot p=1500\cdot0{,}1815"></span>
+                    <strong class="math-inline" data-math="=272{,}25"></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Expresamos una cantidad práctica</h3>
+                  <p>La esperanza del modelo es 272,25. Como el número real de recipientes debe ser entero, lo aproximamos al entero más cercano.</p>
+                  <div class="math-display" data-math-es="272{,}25\approx272\text{ recipientes}" data-math-eu="272{,}25\approx272\text{ ontzi}" data-math-display></div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry containers-normal-essential">
+              <div class="math-display" data-math="p=0{,}1815,\qquad n=1500" data-math-display></div>
+              <div class="math-display" data-math="n\cdot p=1500\cdot0{,}1815=272{,}25" data-math-display></div>
+              <strong class="math-inline" data-math-es="\approx272\text{ recipientes defectuosos}." data-math-eu="\approx272\text{ ontzi akastun}."></strong>
+            </div>
+
+            <div class="result result-long normal-result">
+              <span>Resultado</span>
+              <strong>Se esperan aproximadamente 272 recipientes defectuosos.</strong>
+              <p>La esperanza matemática antes de redondear es 272,25.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

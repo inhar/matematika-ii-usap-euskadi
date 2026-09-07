@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iraungitako sendagaiak: probabilitate osoa eta Bayes · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-medicamentos-caducados-2021-ordinaria-idiomas.js?v=2021-ord-p9b" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2021 · Ordinaria · Problema 9</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Probabilidad total y Bayes · 2021</p>
+        <h1>Medicamentos caducados</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Una farmacia recibe un lote con medicamentos de los tipos A, I y M. La distribución del lote y el porcentaje de medicamentos caducados dentro de cada tipo son:</p>
+
+        <div class="medicine-2021-data" aria-label="Distribución del lote y porcentajes de medicamentos caducados">
+          <div>
+            <strong class="math-inline" data-math="A"></strong>
+            <span class="math-inline" data-math="P(A)=0{,}80"></span>
+            <span class="math-inline" data-math="P(C\mid A)=0{,}10"></span>
+          </div>
+          <div>
+            <strong class="math-inline" data-math="I"></strong>
+            <span class="math-inline" data-math="P(I)=0{,}10"></span>
+            <span class="math-inline" data-math="P(C\mid I)=0{,}20"></span>
+          </div>
+          <div>
+            <strong class="math-inline" data-math="M"></strong>
+            <span>el resto del lote</span>
+            <span class="math-inline" data-math="P(C\mid M)=0{,}05"></span>
+          </div>
+        </div>
+        <p>Se elige al azar una caja del lote. Llamaremos <span class="math-inline math-nowrap" data-math="C"></span> al suceso «el medicamento está caducado».</p>
+
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">Calcular la probabilidad de elegir un medicamento caducado.</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">Sabiendo que el medicamento está caducado, calcular la probabilidad de que sea del tipo A.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="medicine-2021-part-a" data-target="medicine-2021-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="medicine-2021-part-b" data-target="medicine-2021-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="medicine-2021-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Un medicamento caducado puede proceder de cualquiera de los tres tipos. Representaremos esos tres caminos en un árbol: primero se elige el tipo y después se observa si el medicamento está caducado.</p>
+            <p class="idea-text">La probabilidad de cada camino se obtiene multiplicando sus dos ramas. Como los tres caminos que terminan en caducado son incompatibles, sumaremos sus probabilidades. Esta es la estructura del teorema de la probabilidad total.</p>
+            <div class="essential-geometry medicine-2021-idea">
+              <div class="math-display" data-math="P(M)=1-0{,}80-0{,}10=0{,}10" data-math-display></div>
+              <div class="math-display" data-math="\begin{aligned}P(C)={}&0{,}80\cdot0{,}10+0{,}10\cdot0{,}20\\&+0{,}10\cdot0{,}05\end{aligned}" data-math-display></div>
+              <strong class="math-display" data-math="P(C)=0{,}105" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Probabilidad de elegir un medicamento caducado</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Probabilidades condicionadas en un árbol</h3>
+                <p>La primera etapa representa el tipo de medicamento. La segunda contiene probabilidades condicionadas, porque la proporción de caducados depende del tipo elegido.</p>
+                <div class="theory-formula math-display" data-math="\begin{gathered}P(C\mid A)\\P(C\mid I)\\P(C\mid M)\end{gathered}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Suceso contrario</h3>
+                <p>En cada tipo, estar caducado y no estarlo son sucesos complementarios. Sus probabilidades suman uno.</p>
+                <div class="theory-formula math-display" data-math="P(C^{c}\mid T)=1-P(C\mid T)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Regla del producto</h3>
+                <p>La probabilidad de recorrer un camino completo se obtiene multiplicando la probabilidad de la primera rama por la probabilidad condicionada de la segunda.</p>
+                <div class="theory-formula math-display" data-math="P(T\cap C)=P(T)\cdot P(C\mid T)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Teorema de la probabilidad total</h3>
+                <p>Los tipos A, I y M forman una partición del lote: cada medicamento pertenece exactamente a uno de ellos. Sumamos los tres caminos capaces de producir un medicamento caducado.</p>
+                <div class="theory-formula math-display" data-math="P(C)=\sum_{T\in\{A,I,M\}}P(T)P(C\mid T)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Completamos la proporción del tipo M</h3>
+                  <p>Las proporciones de los tres tipos deben sumar uno. El tipo M ocupa la parte que falta.</p>
+                  <div class="medicine-2021-work">
+                    <div class="math-display" data-math="P(M)=1-P(A)-P(I)" data-math-display></div>
+                    <strong class="math-display" data-math="P(M)=1-0{,}80-0{,}10=0{,}10" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos las probabilidades de no estar caducado</h3>
+                  <p>Restamos de uno la probabilidad de caducidad de cada tipo.</p>
+                  <div class="medicine-2021-work">
+                    <div class="math-display" data-math="P(C^c\mid A)=1-0{,}10=0{,}90" data-math-display></div>
+                    <div class="math-display" data-math="P(C^c\mid I)=1-0{,}20=0{,}80" data-math-display></div>
+                    <div class="math-display" data-math="P(C^c\mid M)=1-0{,}05=0{,}95" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Leemos los caminos del árbol</h3>
+                  <p>En cada camino aparece primero el tipo, después el estado del medicamento y, al final, el producto de las dos ramas.</p>
+                </li>
+
+                <li>
+                  <h3>Calculamos los caminos que terminan en caducado</h3>
+                  <div class="medicine-2021-paths">
+                    <div>
+                      <span class="math-inline" data-math="A\cap C"></span>
+                      <strong class="math-inline" data-math="0{,}80\cdot0{,}10=0{,}080"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="I\cap C"></span>
+                      <strong class="math-inline" data-math="0{,}10\cdot0{,}20=0{,}020"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="M\cap C"></span>
+                      <strong class="math-inline" data-math="0{,}10\cdot0{,}05=0{,}005"></strong>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Sumamos los tres caminos</h3>
+                  <p>Son incompatibles porque un medicamento no puede pertenecer a dos tipos a la vez.</p>
+                  <div class="medicine-2021-work">
+                    <div class="math-display" data-math="\begin{aligned}P(C)={}&P(A\cap C)+P(I\cap C)\\&+P(M\cap C)\end{aligned}" data-math-display></div>
+                    <div class="math-display" data-math="P(C)=0{,}080+0{,}020+0{,}005" data-math-display></div>
+                    <strong class="math-display" data-math="P(C)=0{,}105=10{,}5\%" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry medicine-2021-essential">
+              <div class="math-display" data-math="P(M)=0{,}10" data-math-display></div>
+              <div class="math-display" data-math="\begin{aligned}P(C)={}&P(A)P(C\mid A)+P(I)P(C\mid I)\\&+P(M)P(C\mid M)\end{aligned}" data-math-display></div>
+              <div class="math-display" data-math="\begin{aligned}P(C)={}&0{,}80\cdot0{,}10+0{,}10\cdot0{,}20\\&+0{,}10\cdot0{,}05\end{aligned}" data-math-display></div>
+              <strong class="math-display" data-math="P(C)=0{,}105" data-math-display></strong>
+            </div>
+
+            <figure class="medicine-2021-tree-figure" aria-label="Árbol de probabilidades de los tres tipos de medicamentos y su estado de caducidad">
+              <figcaption>Árbol de probabilidades. A la derecha se muestra el producto completo de cada camino.</figcaption>
+
+              <div class="medicine-2021-tree medicine-2021-tree-desktop" role="img" aria-label="Árbol con tipos A, I y M, probabilidades de caducado y no caducado, y probabilidades conjuntas">
+                <svg viewBox="0 0 900 500" aria-hidden="true" focusable="false">
+                  <g class="medicine-tree-primary-lines">
+                    <line x1="55" y1="250" x2="300" y2="80"></line>
+                    <line x1="55" y1="250" x2="300" y2="250"></line>
+                    <line x1="55" y1="250" x2="300" y2="420"></line>
+                  </g>
+                  <g class="medicine-tree-expired-lines">
+                    <line x1="350" y1="80" x2="620" y2="45"></line>
+                    <line x1="350" y1="250" x2="620" y2="215"></line>
+                    <line x1="350" y1="420" x2="620" y2="385"></line>
+                  </g>
+                  <g class="medicine-tree-current-lines">
+                    <line x1="350" y1="80" x2="620" y2="115"></line>
+                    <line x1="350" y1="250" x2="620" y2="285"></line>
+                    <line x1="350" y1="420" x2="620" y2="455"></line>
+                  </g>
+                  <g class="medicine-tree-dots">
+                    <circle cx="55" cy="250" r="4"></circle>
+                    <circle cx="325" cy="80" r="4"></circle>
+                    <circle cx="325" cy="250" r="4"></circle>
+                    <circle cx="325" cy="420" r="4"></circle>
+                  </g>
+                </svg>
+
+                <span class="medicine-tree-stage medicine-tree-stage-type">Tipo</span>
+                <span class="medicine-tree-stage medicine-tree-stage-state">Estado</span>
+                <span class="medicine-tree-stage medicine-tree-stage-joint">Camino</span>
+
+                <span class="medicine-tree-label medicine-tree-type-a math-inline" data-math="A"></span>
+                <span class="medicine-tree-label medicine-tree-type-i math-inline" data-math="I"></span>
+                <span class="medicine-tree-label medicine-tree-type-m math-inline" data-math="M"></span>
+                <span class="medicine-tree-prob medicine-tree-prob-a math-inline" data-math="0{,}80"></span>
+                <span class="medicine-tree-prob medicine-tree-prob-i math-inline" data-math="0{,}10"></span>
+                <span class="medicine-tree-prob medicine-tree-prob-m math-inline" data-math="0{,}10"></span>
+
+                <span class="medicine-tree-label medicine-tree-a-c math-inline" data-math="C"></span>
+                <span class="medicine-tree-label medicine-tree-a-n math-inline" data-math="C^c"></span>
+                <span class="medicine-tree-label medicine-tree-i-c math-inline" data-math="C"></span>
+                <span class="medicine-tree-label medicine-tree-i-n math-inline" data-math="C^c"></span>
+                <span class="medicine-tree-label medicine-tree-m-c math-inline" data-math="C"></span>
+                <span class="medicine-tree-label medicine-tree-m-n math-inline" data-math="C^c"></span>
+
+                <span class="medicine-tree-prob medicine-tree-a-c-prob math-inline" data-math="0{,}10"></span>
+                <span class="medicine-tree-prob medicine-tree-a-n-prob math-inline" data-math="0{,}90"></span>
+                <span class="medicine-tree-prob medicine-tree-i-c-prob math-inline" data-math="0{,}20"></span>
+                <span class="medicine-tree-prob medicine-tree-i-n-prob math-inline" data-math="0{,}80"></span>
+                <span class="medicine-tree-prob medicine-tree-m-c-prob math-inline" data-math="0{,}05"></span>
+                <span class="medicine-tree-prob medicine-tree-m-n-prob math-inline" data-math="0{,}95"></span>
+
+                <span class="medicine-tree-joint medicine-tree-a-c-joint math-inline" data-math="0{,}080"></span>
+                <span class="medicine-tree-joint medicine-tree-a-n-joint math-inline" data-math="0{,}720"></span>
+                <span class="medicine-tree-joint medicine-tree-i-c-joint math-inline" data-math="0{,}020"></span>
+                <span class="medicine-tree-joint medicine-tree-i-n-joint math-inline" data-math="0{,}080"></span>
+                <span class="medicine-tree-joint medicine-tree-m-c-joint math-inline" data-math="0{,}005"></span>
+                <span class="medicine-tree-joint medicine-tree-m-n-joint math-inline" data-math="0{,}095"></span>
+              </div>
+
+              <div class="medicine-2021-tree-mobile" role="img" aria-label="Resumen móvil de las ramas del árbol para los tipos A, I y M">
+                <div>
+                  <strong class="math-inline" data-math="A\quad(0{,}80)"></strong>
+                  <span class="math-inline" data-math="C:\ 0{,}10\ \longrightarrow\ 0{,}080"></span>
+                  <span class="math-inline" data-math="C^c:\ 0{,}90\ \longrightarrow\ 0{,}720"></span>
+                </div>
+                <div>
+                  <strong class="math-inline" data-math="I\quad(0{,}10)"></strong>
+                  <span class="math-inline" data-math="C:\ 0{,}20\ \longrightarrow\ 0{,}020"></span>
+                  <span class="math-inline" data-math="C^c:\ 0{,}80\ \longrightarrow\ 0{,}080"></span>
+                </div>
+                <div>
+                  <strong class="math-inline" data-math="M\quad(0{,}10)"></strong>
+                  <span class="math-inline" data-math="C:\ 0{,}05\ \longrightarrow\ 0{,}005"></span>
+                  <span class="math-inline" data-math="C^c:\ 0{,}95\ \longrightarrow\ 0{,}095"></span>
+                </div>
+              </div>
+            </figure>
+
+            <div class="result result-long medicine-2021-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(C)=0{,}105" data-math-display></strong>
+              <p>La probabilidad de elegir un medicamento caducado es del <span class="math-inline math-nowrap" data-math="10{,}5\%"></span>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="medicine-2021-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Ahora sabemos que el medicamento está caducado. Por tanto, el nuevo conjunto de referencia está formado únicamente por los tres caminos del árbol que terminan en C.</p>
+            <p class="idea-text">Dentro de ese conjunto, el camino favorable es el que comienza en A. Aplicaremos Bayes: dividiremos la probabilidad conjunta de ser del tipo A y estar caducado entre la probabilidad total de estar caducado.</p>
+            <div class="essential-geometry medicine-2021-idea">
+              <div class="math-display" data-math="P(A\cap C)=0{,}80\cdot0{,}10=0{,}080" data-math-display></div>
+              <div class="math-display" data-math="P(A\mid C)=\frac{P(A\cap C)}{P(C)}" data-math-display></div>
+              <strong class="math-display" data-math="P(A\mid C)=\frac{0{,}080}{0{,}105}=\frac{16}{21}" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Probabilidad de que sea del tipo A</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Probabilidad condicionada</h3>
+                <p>Al saber que ha ocurrido C, descartamos todos los medicamentos no caducados. La probabilidad buscada compara el camino donde ocurren A y C con todo el suceso C.</p>
+                <div class="theory-formula math-display" data-math="P(A\mid C)=\frac{P(A\cap C)}{P(C)}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Teorema de Bayes</h3>
+                <p>La probabilidad conjunta del numerador se calcula siguiendo una rama. El denominador se obtiene mediante la probabilidad total.</p>
+                <div class="theory-formula math-display" data-math="P(A\mid C)=\frac{P(A)P(C\mid A)}{P(C)}" data-math-display></div>
+                <div class="theory-formula math-display" data-math="\begin{aligned}P(C)={}&P(A)P(C\mid A)\\&+P(I)P(C\mid I)\\&+P(M)P(C\mid M)\end{aligned}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. No invertir la condición</h3>
+                <p>La probabilidad de estar caducado sabiendo que es del tipo A es un dato del enunciado. La pregunta pide la dirección contraria, que en general tiene un valor distinto.</p>
+                <div class="theory-formula math-display" data-math="P(A\mid C)\ne P(C\mid A)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Traducimos la pregunta</h3>
+                  <p>La información conocida se escribe después de la barra y lo que queremos averiguar, delante.</p>
+                  <div class="medicine-2021-work">
+                    <strong class="math-display" data-math="P(A\mid C)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos el camino favorable</h3>
+                  <p>El medicamento debe ser del tipo A y, además, estar caducado.</p>
+                  <div class="medicine-2021-work">
+                    <div class="math-display" data-math="P(A\cap C)=P(A)P(C\mid A)" data-math-display></div>
+                    <strong class="math-display" data-math="P(A\cap C)=0{,}80\cdot0{,}10=0{,}080" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Usamos la probabilidad total</h3>
+                  <p>El denominador reúne todos los medicamentos caducados, independientemente de su tipo.</p>
+                  <div class="medicine-2021-work">
+                    <strong class="math-display" data-math="P(C)=0{,}105" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Aplicamos Bayes y simplificamos</h3>
+                  <div class="medicine-2021-work">
+                    <div class="math-display" data-math="P(A\mid C)=\frac{0{,}080}{0{,}105}" data-math-display></div>
+                    <div class="math-display" data-math="P(A\mid C)=\frac{80}{105}=\frac{16}{21}" data-math-display></div>
+                    <strong class="math-display" data-math="P(A\mid C)\approx0{,}7619=76{,}19\%" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry medicine-2021-essential">
+              <div class="math-display" data-math="P(A\cap C)=0{,}080,\qquad P(C)=0{,}105" data-math-display></div>
+              <div class="math-display" data-math="P(A\mid C)=\frac{P(A\cap C)}{P(C)}" data-math-display></div>
+              <strong class="math-display" data-math="P(A\mid C)=\frac{0{,}080}{0{,}105}=\frac{16}{21}\approx0{,}7619" data-math-display></strong>
+            </div>
+
+            <figure class="medicine-2021-bayes-figure" aria-label="Composición de los medicamentos caducados según su tipo">
+              <figcaption>Entre todos los medicamentos caducados, la mayor parte procede del tipo A.</figcaption>
+              <div class="medicine-2021-bayes-bar" role="img" aria-label="Barra dividida según las probabilidades conjuntas 0,080 del tipo A, 0,020 del tipo I y 0,005 del tipo M">
+                <span class="medicine-bayes-a"></span>
+                <span class="medicine-bayes-i"></span>
+                <span class="medicine-bayes-m"></span>
+              </div>
+              <div class="medicine-2021-bayes-legend">
+                <span><i class="medicine-bayes-a"></i><span class="math-inline" data-math="A\cap C:\ 0{,}080"></span></span>
+                <span><i class="medicine-bayes-i"></i><span class="math-inline" data-math="I\cap C:\ 0{,}020"></span></span>
+                <span><i class="medicine-bayes-m"></i><span class="math-inline" data-math="M\cap C:\ 0{,}005"></span></span>
+              </div>
+            </figure>
+
+            <div class="result result-long medicine-2021-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(A\mid C)=\frac{16}{21}\approx0{,}7619" data-math-display></strong>
+              <p>La probabilidad pedida es aproximadamente del <span class="math-inline math-nowrap" data-math="76{,}19\%"></span>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

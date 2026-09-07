@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parametrodun sistema linealaren eztabaida · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-sistemas-extraordinaria-idiomas.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Extraordinaria · Opción A · Problema A.1</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Álgebra · Sistemas lineales · Julio de 2019</p>
+        <h1>Discusión de un sistema según el parámetro m</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Discutir, en función de los valores de <i>m</i>, el siguiente sistema:</p>
+
+        <div class="equation-system statement-system extraordinary-system-statement math-display" aria-label="Sistema de tres ecuaciones con parámetro m" data-math="\begin{cases}x + 2y + 3z = 6 \\ x + y - z = 1 \\ 2x - 2y + mz = m\end{cases}" data-math-display></div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema A.1</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Queremos clasificar el sistema según tenga una solución, infinitas o ninguna. Calcularemos el determinante de la matriz de coeficientes porque sus ceros son los únicos valores de m en los que puede cambiar el tipo de sistema. Fuera de esos valores el sistema tendrá solución única; en cada valor excepcional compararemos el rango de la matriz de coeficientes con el de la matriz ampliada mediante el teorema de Rouché-Frobenius.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema A.1</p>
+            <h2 id="solution-title">Discusión completa del sistema</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Matriz de coeficientes y matriz ampliada</h3>
+                <p>Un sistema lineal se escribe como A·X = b. La matriz A contiene los coeficientes de x, y, z; la matriz ampliada A* añade la columna b de términos independientes.</p>
+                <div class="theory-formula math-display" data-math="A^{*} = (A\mid b)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Determinante y valores críticos</h3>
+                <p>Si A es cuadrada y det(A) ≠ 0, entonces A tiene rango máximo. En un sistema de tres ecuaciones con tres incógnitas esto garantiza una única solución. Por eso solo debemos estudiar aparte los valores de m que cumplen det(A) = 0.</p>
+                <div class="theory-formula extraordinary-theory-lines">
+                  <span class="math-inline" data-math="\det(A) \ne 0"></span>
+                  <span class="math-inline" data-math="\Rightarrow\operatorname{rg}(A)=3"></span>
+                  <span class="math-inline" data-math-es="\Rightarrow\text{solución única}" data-math-eu="\Rightarrow\text{soluzio bakarra}"></span>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Cómo justificar un rango igual a 2</h3>
+                <p>Un menor de orden 2 no nulo demuestra que el rango es al menos 2. Si además una fila es combinación lineal de otras dos, no puede haber tres filas independientes y el rango es como máximo 2. Juntas, ambas observaciones fijan el rango exactamente en 2.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Teorema de Rouché-Frobenius</h3>
+                <p>Con tres incógnitas, la comparación entre los rangos de A y A* clasifica el sistema:</p>
+                <div class="classification-list theory-classification extraordinary-theory-classification">
+                  <div><span class="math-inline" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)=3"></span><strong>Una solución</strong></div>
+                  <div><span class="math-inline" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)<3"></span><strong>Infinitas soluciones</strong></div>
+                  <div><span class="math-inline" data-math="\operatorname{rg}(A)<\operatorname{rg}(A^*)"></span><strong>Ninguna solución</strong></div>
+                </div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Construimos las dos matrices</h3>
+                  <p>Tomamos los coeficientes de x, y, z en ese orden. La matriz ampliada incorpora además los términos independientes 6, 1 y m.</p>
+                  <div class="system-matrix-pair">
+                    <div class="matrix-equation-line">
+                      <span class="math-inline" data-math="A ="></span>
+                      <div class="matrix matrix-large math-display" data-math="\begin{pmatrix}1 &amp; 2 &amp; 3 \\ 1 &amp; 1 &amp; -1 \\ 2 &amp; -2 &amp; m\end{pmatrix}" data-math-display></div>
+                    </div>
+                    <div class="matrix-equation-line">
+                      <span class="math-inline" data-math="A^{*} ="></span>
+                      <div class="matrix matrix-large matrix-four augmented-matrix math-display" data-math="\left(\begin{array}{ccc|c}1 &amp; 2 &amp; 3 &amp; 6 \\ 1 &amp; 1 &amp; -1 &amp; 1 \\ 2 &amp; -2 &amp; m &amp; m\end{array}\right)" data-math-display></div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos el determinante de A</h3>
+                  <p>Desarrollamos por la primera fila. Para cada entrada calculamos su menor 2 × 2 y respetamos los signos +, −, +.</p>
+                  <div class="cofactor-work extraordinary-cofactor-work">
+                    <div>
+                      <span>Primera entrada</span>
+                      <strong><b class="math-inline" data-math="1 \cdot [1\cdot m - (-1)(-2)]"></b><b class="math-inline" data-math="= m - 2"></b></strong>
+                    </div>
+                    <div>
+                      <span>Segunda entrada</span>
+                      <strong><b class="math-inline" data-math="-2 \cdot [1\cdot m - (-1)\cdot 2]"></b><b class="math-inline" data-math="= -2(m + 2)"></b></strong>
+                    </div>
+                    <div>
+                      <span>Tercera entrada</span>
+                      <strong><b class="math-inline" data-math="+3 \cdot [1(-2) - 1\cdot 2]"></b><b class="math-inline" data-math="= 3(-4)"></b></strong>
+                    </div>
+                  </div>
+                  <p>Sumamos los tres términos y simplificamos sin saltos.</p>
+                  <div class="det-expansion extraordinary-det-chain">
+                    <span class="math-inline" data-math="\det(A) = (m - 2) - 2(m + 2) + 3(-4)"></span>
+                    <span class="math-inline" data-math="= m - 2 - 2m - 4 - 12"></span>
+                    <strong class="math-inline" data-math="= -m - 18"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Localizamos el valor excepcional</h3>
+                  <p>El comportamiento solo puede cambiar cuando el determinante se anula.</p>
+                  <div class="derivation extraordinary-critical-value">
+                    <div><span class="math-inline" data-math="-m-18"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="0"></span></div>
+                    <div><span class="math-inline" data-math="-m"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="18"></span></div>
+                    <div><span class="math-inline" data-math="m"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="-18"></strong></div>
+                  </div>
+                  <p class="source-correction"><strong>Corrección de la fuente:</strong> en la página siguiente de la solución aparece dos veces m = 18, pero se ha omitido el signo menos. El determinante y la propia matriz sustituida confirman que el valor correcto es m = −18.</p>
+                </li>
+
+                <li>
+                  <h3>Caso m ≠ −18</h3>
+                  <p>Si m no vale −18, entonces det(A) ≠ 0. La matriz A tiene rango 3 y la ampliada no puede tener un rango mayor que 3 porque solo hay tres filas.</p>
+                  <div class="rank-comparison">
+                    <span class="math-inline" data-math="\operatorname{rg}(A)=3"></span>
+                    <span class="math-inline" data-math="\operatorname{rg}(A^*)=3"></span>
+                  </div>
+                  <p>Como el rango común coincide con las tres incógnitas, el sistema es compatible determinado: tiene una única solución.</p>
+                </li>
+
+                <li>
+                  <h3>Caso m = −18: rango de A</h3>
+                  <p>Sustituimos el valor crítico. Como det(A) = 0, sabemos que rango(A) &lt; 3. Para probar que no baja de 2 tomamos el menor de las dos primeras filas y las dos primeras columnas.</p>
+                  <div class="minor-work extraordinary-rank-minor">
+                    <div class="matrix matrix-two math-display" data-math="\begin{vmatrix}1 &amp; 2 \\ 1 &amp; 1\end{vmatrix}" data-math-display></div>
+                    <span class="math-inline" data-math="\Rightarrow"></span>
+                    <strong class="math-inline" data-math="1\cdot 1 - 2\cdot 1 = -1 \ne 0"></strong>
+                  </div>
+                  <div class="det-expansion rank-bound-chain">
+                    <span class="math-inline" data-math="\det(A)=0\Rightarrow\operatorname{rg}(A)<3"></span>
+                    <span class="math-inline" data-math-es="\text{menor }2\times2\text{ no nulo}\Rightarrow\operatorname{rg}(A)\ge2" data-math-eu="\text{zero ez den }2\times2\text{ minorea}\Rightarrow\operatorname{rg}(A)\ge2"></span>
+                    <strong class="math-inline" data-math="\operatorname{rg}(A)=2"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Caso m = −18: rango de A*</h3>
+                  <p>Escribimos la matriz ampliada ya sustituida y comparamos sus filas completas, incluida la última columna.</p>
+                  <div class="matrix-equation-line extraordinary-augmented-substitution">
+                    <span class="math-inline" data-math="A^{*} ="></span>
+                    <div class="matrix matrix-large matrix-four augmented-matrix math-display" data-math="\left(\begin{array}{ccc|c}1 &amp; 2 &amp; 3 &amp; 6 \\ 1 &amp; 1 &amp; -1 &amp; 1 \\ 2 &amp; -2 &amp; -18 &amp; -18\end{array}\right)" data-math-display></div>
+                  </div>
+                  <p>La tercera fila completa se obtiene combinando las dos primeras:</p>
+                  <div class="equation equation-compact extraordinary-row-relation math-display" data-math="F_{3} = -4F_{1} + 6F_{2}" data-math-display></div>
+                  <div class="calculation-list extraordinary-row-check">
+                    <div><span>Columna 1</span><strong class="math-inline" data-math="-4\cdot 1 + 6\cdot 1 = 2"></strong></div>
+                    <div><span>Columna 2</span><strong class="math-inline" data-math="-4\cdot 2 + 6\cdot 1 = -2"></strong></div>
+                    <div><span>Columna 3</span><strong class="math-inline" data-math="-4\cdot 3 + 6(-1) = -18"></strong></div>
+                    <div><span>Columna ampliada</span><strong class="math-inline" data-math="-4\cdot 6 + 6\cdot 1 = -18"></strong></div>
+                  </div>
+                  <p>La relación incluye los términos independientes, así que añadir la columna ampliada no aumenta el rango.</p>
+                  <div class="rank-comparison">
+                    <span class="math-inline" data-math="\operatorname{rg}(A)=2"></span>
+                    <span class="math-inline" data-math="\operatorname{rg}(A^*)=2"></span>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Clasificamos el valor excepcional</h3>
+                  <p>Los rangos son iguales, pero menores que el número de incógnitas.</p>
+                  <div class="det-expansion extraordinary-final-classification">
+                    <span class="math-inline" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)=2"></span>
+                    <span class="math-inline" data-math-es="2<3\text{ incógnitas}" data-math-eu="2<3\text{ ezezagun}"></span>
+                    <strong>Sistema compatible indeterminado</strong>
+                  </div>
+                  <p>Por tanto, para m = −18 el sistema tiene infinitas soluciones. No aparece ningún valor que produzca un sistema incompatible.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="equation essential-calculation extraordinary-essential-det math-display" data-math="\det(A) = -m - 18" data-math-display></div>
+
+            <div class="classification-list essential-classification two-case-classification">
+              <div>
+                <span>m ≠ −18</span>
+                <strong>Compatible determinado</strong>
+                <p>Una única solución.</p>
+              </div>
+              <div>
+                <span>m = −18</span>
+                <strong>Compatible indeterminado</strong>
+                <p>Infinitas soluciones.</p>
+              </div>
+            </div>
+
+            <div class="result result-long system-result extraordinary-system-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="result-unit">m ≠ −18: una solución</span>
+                <span class="result-unit">m = −18: infinitas soluciones</span>
+              </strong>
+              <p>No hay ningún caso incompatible.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Koloretako bolak: probabilitate osoa eta Bayes · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-urnas-colores-bayes-2024-ordinaria-a5-idiomas.js?v=2024-ord-a5-1" defer></script>
+  <script src="ejercicio-urnas-colores-bayes-2024-ordinaria-a5-grafico.js?v=2024-ord-a5-1" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page urn-colors-2024-page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2024 · Ordinaria · Ejercicio A5</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Probabilidad total y Bayes · 2024</p>
+        <h1>Una transferencia, tres colores</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-urn-colors-2024-language="es">La urna <span class="math-inline math-nowrap" data-math="A"></span> contiene 3 bolas verdes, 5 rojas y 4 azules. La urna <span class="math-inline math-nowrap" data-math="B"></span> contiene 2 verdes, 2 rojas y 3 azules. Se extrae al azar una bola de <span class="math-inline math-nowrap" data-math="A"></span>, se introduce en <span class="math-inline math-nowrap" data-math="B"></span> y después se extrae una bola de <span class="math-inline math-nowrap" data-math="B"></span>.</p>
+        <p data-urn-colors-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="A"></span> urnak 3 bola berde, 5 gorri eta 4 urdin ditu. <span class="math-inline math-nowrap" data-math="B"></span> urnak 2 berde, 2 gorri eta 3 urdin ditu. <span class="math-inline math-nowrap" data-math="A"></span> urnatik bola bat zoriz atera, <span class="math-inline math-nowrap" data-math="B"></span> urnan sartu eta, ondoren, <span class="math-inline math-nowrap" data-math="B"></span> urnatik bola bat ateratzen da.</p>
+        <ol class="problem-list">
+          <li>Realiza el correspondiente diagrama de árbol.</li>
+          <li>Calcula la probabilidad de que la bola extraída de la urna B sea verde.</li>
+          <li>Calcula esa probabilidad sabiendo que la bola extraída de A ha sido roja.</li>
+          <li>Sabiendo que la bola extraída de B es verde, calcula la probabilidad de que la extraída de A haya sido roja.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="tabs" role="tablist" aria-label="Apartados de la solución">
+      <button class="tab active" type="button" role="tab" aria-selected="true" data-target="urn-colors-2024-part-a">Apartado A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-target="urn-colors-2024-part-b">Apartado B</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-target="urn-colors-2024-part-c">Apartado C</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-target="urn-colors-2024-part-d">Apartado D</button>
+    </div>
+
+    <div class="solutions">
+      <section id="urn-colors-2024-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-urn-colors-2024-language="es">El árbol debe seguir el orden real del experimento. La primera etapa representa el color trasladado desde <span class="math-inline math-nowrap" data-math="A"></span>; la segunda, el color extraído de <span class="math-inline math-nowrap" data-math="B"></span> después de modificar su composición.</p>
+            <p class="idea-text" data-urn-colors-2024-language="eu" hidden>Zuhaitzak esperimentuaren benetako ordenari jarraitu behar dio. Lehenengo etapak <span class="math-inline math-nowrap" data-math="A"></span>-tik eramandako kolorea adierazten du; bigarrenak, osaera aldatu ondoren <span class="math-inline math-nowrap" data-math="B"></span>-tik ateratako kolorea.</p>
+            <p class="idea-text" data-urn-colors-2024-language="es">En cada rama final el denominador es <span class="math-inline math-nowrap" data-math="8"></span>, porque <span class="math-inline math-nowrap" data-math="B"></span> pasa de siete a ocho bolas. Solo aumenta en una unidad el número del color transferido.</p>
+            <p class="idea-text" data-urn-colors-2024-language="eu" hidden>Azken adar bakoitzean izendatzailea <span class="math-inline math-nowrap" data-math="8"></span> da, <span class="math-inline math-nowrap" data-math="B"></span> urnak zazpi bolatik zortzira igarotzen delako. Transferitutako kolorearen kopurua bakarrik handitzen da unitate batean.</p>
+            <div class="essential-geometry urn-transfer-2022-idea">
+              <div class="math-display" data-math="P(V_A)=\frac3{12};\quad P(R_A)=\frac5{12};\quad P(Az_A)=\frac4{12}" data-math-eu="P(B_A)=\frac3{12};\quad P(G_A)=\frac5{12};\quad P(U_A)=\frac4{12}" data-math-display></div>
+              <strong class="math-display" data-math-es="B:\ 7+1=8\text{ bolas después de la transferencia}" data-math-eu="B:\ 7+1=8\text{ bola transferentziaren ondoren}" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Construimos el árbol</h2>
+            <figure class="urn-transfer-2022-figure urn-colors-2024-figure">
+              <figcaption data-urn-colors-2024-language="es">Cada camino se lee de izquierda a derecha: color trasladado desde <span class="math-inline math-nowrap" data-math="A"></span> y color extraído después desde <span class="math-inline math-nowrap" data-math="B"></span>.</figcaption>
+              <figcaption data-urn-colors-2024-language="eu" hidden>Bide bakoitza ezkerretik eskuinera irakurtzen da: <span class="math-inline math-nowrap" data-math="A"></span>-tik eramandako kolorea eta gero <span class="math-inline math-nowrap" data-math="B"></span>-tik ateratakoa.</figcaption>
+              <div id="urn-colors-2024-board" class="jxgbox urn-transfer-2022-board" role="img" aria-label="Árbol de probabilidades de la transferencia entre las urnas A y B"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Probabilidad condicionada en un árbol</h3>
+                <p data-urn-colors-2024-language="es">La probabilidad de la segunda extracción depende del color de la primera, porque la composición de <span class="math-inline math-nowrap" data-math="B"></span> ya ha cambiado. Por eso cada grupo de tres ramas tiene probabilidades distintas.</p>
+                <p data-urn-colors-2024-language="eu" hidden>Bigarren ateraldiaren probabilitatea lehenengo kolorearen araberakoa da, <span class="math-inline math-nowrap" data-math="B"></span>-ren osaera ordurako aldatu delako. Horregatik, hiru adarreko talde bakoitzak probabilitate desberdinak ditu.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Comprobación de cada nudo</h3>
+                <p data-urn-colors-2024-language="es">Las probabilidades de las ramas que salen de un mismo nudo deben sumar <span class="math-inline math-nowrap" data-math="1"></span>.</p>
+                <p data-urn-colors-2024-language="eu" hidden>Korapilo beretik ateratzen diren adarren probabilitateen baturak <span class="math-inline math-nowrap" data-math="1"></span> izan behar du.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li><h3>Calculamos las primeras ramas</h3><div class="math-display" data-math="\frac3{12}+\frac5{12}+\frac4{12}=1" data-math-display></div></li>
+                <li>
+                  <h3>Actualizamos la urna B en cada caso</h3>
+                  <div class="math-display" data-math-es="V_A:\quad (V,R,Az)=(3,2,3)" data-math-eu="B_A:\quad (B,G,U)=(3,2,3)" data-math-display></div>
+                  <div class="math-display" data-math-es="R_A:\quad (V,R,Az)=(2,3,3)" data-math-eu="G_A:\quad (B,G,U)=(2,3,3)" data-math-display></div>
+                  <div class="math-display" data-math-es="Az_A:\quad (V,R,Az)=(2,2,4)" data-math-eu="U_A:\quad (B,G,U)=(2,2,4)" data-math-display></div>
+                </li>
+                <li>
+                  <h3>Escribimos las probabilidades condicionadas</h3>
+                  <div class="math-display" data-math-es="V_A:\quad \frac38,\ \frac28,\ \frac38" data-math-eu="B_A:\quad \frac38,\ \frac28,\ \frac38" data-math-display></div>
+                  <div class="math-display" data-math-es="R_A:\quad \frac28,\ \frac38,\ \frac38" data-math-eu="G_A:\quad \frac28,\ \frac38,\ \frac38" data-math-display></div>
+                  <div class="math-display" data-math-es="Az_A:\quad \frac28,\ \frac28,\ \frac48" data-math-eu="U_A:\quad \frac28,\ \frac28,\ \frac48" data-math-display></div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry urn-transfer-2022-essential">
+              <div class="math-display" data-math="\frac3{12}+\frac5{12}+\frac4{12}=1" data-math-display></div>
+              <strong class="math-display" data-math="\frac38+\frac28+\frac38=\frac28+\frac38+\frac38=\frac28+\frac28+\frac48=1" data-math-display></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="urn-colors-2024-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p><h2>Idea de resolución</h2>
+            <p class="idea-text" data-urn-colors-2024-language="es">Una bola verde puede salir de <span class="math-inline math-nowrap" data-math="B"></span> después de haber trasladado una verde, una roja o una azul. Son tres caminos incompatibles; multiplicamos las probabilidades dentro de cada camino y sumamos los tres resultados.</p>
+            <p class="idea-text" data-urn-colors-2024-language="eu" hidden>Bola berde bat <span class="math-inline math-nowrap" data-math="B"></span>-tik atera daiteke aurretik berde, gorri edo urdin bat transferitu ondoren. Hiru bide bateraezin dira; bide bakoitzeko probabilitateak biderkatu eta hiru emaitzak batzen ditugu.</p>
+            <div class="essential-geometry urn-transfer-2022-idea"><strong class="math-display" data-math-es="P(V_B)=\frac3{12}\frac38+\frac5{12}\frac28+\frac4{12}\frac28=\frac9{32}" data-math-eu="P(B_B)=\frac3{12}\frac38+\frac5{12}\frac28+\frac4{12}\frac28=\frac9{32}" data-math-display></strong></div>
+          </div>
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p><h2>Sumamos los tres caminos verdes</h2>
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p><div class="theory-topic"><h3>Reglas del producto y de la suma</h3><p data-urn-colors-2024-language="es">En cada camino usamos <span class="math-inline math-nowrap" data-math="P(E\cap F)=P(E)P(F\mid E)"></span>. Como los tres colores transferidos son incompatibles y agotan los casos, sumamos los caminos.</p><p data-urn-colors-2024-language="eu" hidden>Bide bakoitzean <span class="math-inline math-nowrap" data-math="P(E\cap F)=P(E)P(F\mid E)"></span> erabiltzen dugu. Transferitutako hiru koloreak bateraezinak direnez eta kasu guztiak hartzen dituztenez, bideak batzen ditugu.</p></div>
+            </aside>
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li><h3>Camino verde-verde</h3><div class="math-display" data-math="\frac3{12}\cdot\frac38=\frac9{96}" data-math-display></div></li>
+                <li><h3>Camino roja-verde</h3><div class="math-display" data-math="\frac5{12}\cdot\frac28=\frac{10}{96}" data-math-display></div></li>
+                <li><h3>Camino azul-verde</h3><div class="math-display" data-math="\frac4{12}\cdot\frac28=\frac8{96}" data-math-display></div></li>
+                <li><h3>Sumamos los caminos</h3><div class="math-display" data-math="P(V_B)=\frac{9+10+8}{96}=\frac{27}{96}" data-math-eu="P(B_B)=\frac{9+10+8}{96}=\frac{27}{96}" data-math-display></div><strong class="math-display" data-math="P(V_B)=\frac9{32}" data-math-eu="P(B_B)=\frac9{32}" data-math-display></strong></li>
+              </ol>
+            </div>
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry urn-transfer-2022-essential"><div class="math-display" data-math-es="P(V_B)=\frac3{12}\frac38+\frac5{12}\frac28+\frac4{12}\frac28" data-math-eu="P(B_B)=\frac3{12}\frac38+\frac5{12}\frac28+\frac4{12}\frac28" data-math-display></div><strong class="math-display" data-math="\frac9{32}=0{,}28125" data-math-display></strong></div>
+            <div class="result"><span>Resultado</span><strong class="math-display" data-math="\frac9{32}" data-math-display></strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="urn-colors-2024-part-c" class="panel" role="tabpanel" hidden>
+        <div class="section-index">03</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado C</p><h2>Idea de resolución</h2>
+            <p class="idea-text" data-urn-colors-2024-language="es">La condición ya nos sitúa en la rama «se trasladó una roja». En esa rama, <span class="math-inline math-nowrap" data-math="B"></span> contiene 2 bolas verdes entre 8; no hay que promediar con los otros colores.</p>
+            <p class="idea-text" data-urn-colors-2024-language="eu" hidden>Baldintzak «bola gorri bat transferitu da» adarrean kokatzen gaitu. Adar horretan, <span class="math-inline math-nowrap" data-math="B"></span> urnak 8 bolatik 2 berde ditu; ez da beste koloreekin batezbestekorik egin behar.</p>
+            <div class="essential-geometry urn-transfer-2022-idea"><strong class="math-display" data-math-es="P(V_B\mid R_A)=\frac28=\frac14" data-math-eu="P(B_B\mid G_A)=\frac28=\frac14" data-math-display></strong></div>
+          </div>
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado C</p><h2>Leemos la rama condicionada</h2>
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden><p class="layer-label">Teoría necesaria</p><div class="theory-topic"><h3>Probabilidad condicionada</h3><p data-urn-colors-2024-language="es">Conocer que se trasladó una roja reduce el espacio muestral a ese único nudo del árbol. La probabilidad pedida es la fracción de bolas verdes de la nueva urna <span class="math-inline math-nowrap" data-math="B"></span>.</p><p data-urn-colors-2024-language="eu" hidden>Bola gorri bat transferitu dela jakiteak lagin-espazioa zuhaitzeko korapilo bakar horretara murrizten du. Eskatutako probabilitatea <span class="math-inline math-nowrap" data-math="B"></span> urna berriaren bola berdeen proportzioa da.</p></div></aside>
+            <div class="progressive-layer" data-min-level="detail" hidden><p class="layer-label">Resolución completa</p><ol class="worked-steps"><li><h3>Actualizamos la composición</h3><p data-urn-colors-2024-language="es">Tras añadir una roja, <span class="math-inline math-nowrap" data-math="B"></span> queda con 2 verdes, 3 rojas y 3 azules: 8 bolas.</p><p data-urn-colors-2024-language="eu" hidden>Gorri bat gehitu ondoren, <span class="math-inline math-nowrap" data-math="B"></span> urnan 2 berde, 3 gorri eta 3 urdin daude: 8 bola.</p><div class="math-display" data-math="2+3+3=8" data-math-display></div></li><li><h3>Contamos los casos favorables</h3><strong class="math-display" data-math-es="P(V_B\mid R_A)=\frac{2\text{ verdes}}{8\text{ bolas}}=\frac14" data-math-eu="P(B_B\mid G_A)=\frac{2\text{ berde}}{8\text{ bola}}=\frac14" data-math-display></strong></li></ol></div>
+            <p class="step-caption">Cálculo esencial</p><div class="essential-geometry urn-transfer-2022-essential"><strong class="math-display" data-math-es="P(V_B\mid R_A)=\frac28=\frac14" data-math-eu="P(B_B\mid G_A)=\frac28=\frac14" data-math-display></strong></div>
+            <div class="result"><span>Resultado</span><strong class="math-display" data-math="\frac14" data-math-display></strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="urn-colors-2024-part-d" class="panel" role="tabpanel" hidden>
+        <div class="section-index">04</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado D</p><h2>Idea de resolución</h2>
+            <p class="idea-text" data-urn-colors-2024-language="es">Ahora conocemos el resultado final, «sale verde de <span class="math-inline math-nowrap" data-math="B"></span>», y preguntamos qué camino anterior lo produjo. Invertimos el condicionamiento con Bayes: dividimos la probabilidad del camino roja-verde entre la probabilidad total de acabar en verde.</p>
+            <p class="idea-text" data-urn-colors-2024-language="eu" hidden>Orain azken emaitza ezagutzen dugu, «<span class="math-inline math-nowrap" data-math="B"></span>-tik berdea atera da», eta aurreko zer bidek sortu duen galdetzen dugu. Baldintzapena Bayesen bidez alderantzikatzen dugu: gorri-berde bidearen probabilitatea berdean amaitzeko probabilitate osoarekin zatitzen dugu.</p>
+            <div class="essential-geometry urn-transfer-2022-idea"><strong class="math-display" data-math-es="P(R_A\mid V_B)=\frac{P(R_A)P(V_B\mid R_A)}{P(V_B)}=\frac{10}{27}" data-math-eu="P(G_A\mid B_B)=\frac{P(G_A)P(B_B\mid G_A)}{P(B_B)}=\frac{10}{27}" data-math-display></strong></div>
+          </div>
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado D</p><h2>Aplicamos el teorema de Bayes</h2>
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden><p class="layer-label">Teoría necesaria</p><div class="theory-topic"><h3>Teorema de Bayes</h3><p data-urn-colors-2024-language="es">Bayes permite invertir una probabilidad condicionada. El numerador es la intersección de los dos sucesos, es decir, el camino completo que cumple ambas condiciones.</p><p data-urn-colors-2024-language="eu" hidden>Bayesen teoremak probabilitate baldintzatu bat alderantzikatzeko aukera ematen du. Zenbakitzailea bi gertaeren ebakidura da, hau da, bi baldintzak betetzen dituen bide osoa.</p><div class="theory-formula math-display" data-math="P(E\mid F)=\frac{P(E)P(F\mid E)}{P(F)}" data-math-display></div></div></aside>
+            <div class="progressive-layer" data-min-level="detail" hidden><p class="layer-label">Resolución completa</p><ol class="worked-steps"><li><h3>Calculamos el camino roja-verde</h3><div class="math-display" data-math-es="P(R_A\cap V_B)=\frac5{12}\cdot\frac28=\frac{10}{96}" data-math-eu="P(G_A\cap B_B)=\frac5{12}\cdot\frac28=\frac{10}{96}" data-math-display></div></li><li><h3>Usamos la probabilidad total de verde</h3><div class="math-display" data-math-es="P(V_B)=\frac9{32}=\frac{27}{96}" data-math-eu="P(B_B)=\frac9{32}=\frac{27}{96}" data-math-display></div></li><li><h3>Aplicamos Bayes y simplificamos</h3><div class="math-display" data-math-es="P(R_A\mid V_B)=\frac{10/96}{27/96}" data-math-eu="P(G_A\mid B_B)=\frac{10/96}{27/96}" data-math-display></div><strong class="math-display" data-math="\frac{10}{96}\cdot\frac{96}{27}=\frac{10}{27}" data-math-display></strong></li></ol></div>
+            <p class="step-caption">Cálculo esencial</p><div class="essential-geometry urn-transfer-2022-essential"><div class="math-display" data-math-es="P(R_A\mid V_B)=\frac{(5/12)(2/8)}{9/32}" data-math-eu="P(G_A\mid B_B)=\frac{(5/12)(2/8)}{9/32}" data-math-display></div><strong class="math-display" data-math="\frac{10}{27}\approx0{,}3704" data-math-display></strong></div>
+            <div class="result"><span>Resultado</span><strong class="math-display" data-math="\frac{10}{27}" data-math-display></strong></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

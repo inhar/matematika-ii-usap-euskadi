@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>500 txanpon: binomial baten hurbilketa normala · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-monedas-binomial-normal-2023-ordinaria-modelo-2-idiomas.js?v=2023-ord-m2-b5-1" defer></script>
+  <script src="ejercicio-monedas-binomial-normal-2023-ordinaria-modelo-2-grafico.js?v=2023-ord-m2-b5-3" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page coins-normal-2023-page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Modelo 2 · Ejercicio B5</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Aproximación normal de la binomial · 2023</p>
+        <h1 class="coins-normal-2023-title">500 monedas: aproximación normal de una binomial</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-coins-normal-2023-language="es">Una caja que contiene 500 monedas es vaciada sobre una mesa. Halla:</p>
+        <p data-coins-normal-2023-language="eu" hidden>500 txanpon dituen kutxa bat mahai baten gainean husten da. Kalkulatu:</p>
+        <ol class="statement-list coins-normal-2023-questions">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text" data-coins-normal-2023-language="es">la probabilidad de que el número de caras sea mayor que 240;</span>
+            <span class="statement-text" data-coins-normal-2023-language="eu" hidden>aurpegi kopurua 240 baino handiagoa izateko probabilitatea;</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text" data-coins-normal-2023-language="es">la probabilidad de que el número de caras sea menor que 230;</span>
+            <span class="statement-text" data-coins-normal-2023-language="eu" hidden>aurpegi kopurua 230 baino txikiagoa izateko probabilitatea;</span>
+          </li>
+          <li>
+            <span class="statement-label">c</span>
+            <span class="statement-text" data-coins-normal-2023-language="es">la probabilidad de que el número de caras esté comprendido entre 230 y 240, ambos incluidos.</span>
+            <span class="statement-text" data-coins-normal-2023-language="eu" hidden>aurpegi kopurua 230 eta 240 artean egoteko probabilitatea, biak barne.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="coins-normal-2023-part-a" data-target="coins-normal-2023-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="coins-normal-2023-part-b" data-target="coins-normal-2023-part-b">B</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="coins-normal-2023-part-c" data-target="coins-normal-2023-part-c">C</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="coins-normal-2023-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-coins-normal-2023-language="es">El número de caras sigue una binomial con 500 ensayos y probabilidad <span class="math-inline math-nowrap" data-math="1/2"></span>. Como los dos resultados esperados, caras y cruces, son muy numerosos, sustituimos la binomial por una normal con la misma media y desviación típica.</p>
+            <p class="idea-text" data-coins-normal-2023-language="eu" hidden>Aurpegi kopuruak 500 saiakuntza eta <span class="math-inline math-nowrap" data-math="1/2"></span> probabilitatea dituen binomiala jarraitzen du. Espero diren bi emaitzak, aurpegiak eta gurutzeak, oso ugariak direnez, binomiala batezbesteko eta desbideratze tipiko bereko normal batez ordezkatzen dugu.</p>
+            <p class="idea-text" data-coins-normal-2023-language="es">«Más de 240» comienza en 241. Por eso la frontera continua se coloca en 240,5. Tras tipificarla obtenemos <span class="math-inline math-nowrap" data-math="z\approx-0{,}85"></span>; buscamos el área situada a su derecha.</p>
+            <p class="idea-text" data-coins-normal-2023-language="eu" hidden>«240 baino gehiago» 241ean hasten da. Horregatik, muga jarraitua 240,5ean kokatzen da. Tipifikatu ondoren <span class="math-inline math-nowrap" data-math="z\approx-0{,}85"></span> lortzen dugu; haren eskuineko azalera bilatzen dugu.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Más de 240 caras</h2>
+
+            <figure class="coins-normal-2023-figure">
+              <figcaption data-coins-normal-2023-language="es">La zona sombreada es la probabilidad situada a la derecha de <span class="math-inline math-nowrap" data-math="z=-0{,}85"></span>.</figcaption>
+              <figcaption data-coins-normal-2023-language="eu" hidden>Itzaleztatutako eremua <span class="math-inline math-nowrap" data-math="z=-0{,}85"></span> balioaren eskuinean dagoen probabilitatea da.</figcaption>
+              <div id="coins-normal-2023-a-board" class="jxgbox coins-normal-2023-board" role="img" aria-label="Campana normal estándar con el área a la derecha de menos cero coma ochenta y cinco sombreada"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Del experimento a la binomial</h3>
+                <p data-coins-normal-2023-language="es">Si repetimos <span class="math-inline math-nowrap" data-math="n"></span> veces un experimento independiente con probabilidad de éxito constante <span class="math-inline math-nowrap" data-math="p"></span>, el número de éxitos sigue una distribución binomial.</p>
+                <p data-coins-normal-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="p"></span> arrakasta-probabilitate konstantea duen esperimentu independente bat <span class="math-inline math-nowrap" data-math="n"></span> aldiz errepikatzen badugu, arrakasta kopuruak banaketa binomiala jarraitzen du.</p>
+                <div class="theory-formula math-display" data-math="X\sim B(n,p)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Aproximación normal</h3>
+                <p data-coins-normal-2023-language="es">Cuando <span class="math-inline math-nowrap" data-math="np"></span> y <span class="math-inline math-nowrap" data-math="n(1-p)"></span> son al menos 5, aproximamos la binomial mediante una normal con estos parámetros:</p>
+                <p data-coins-normal-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="np"></span> eta <span class="math-inline math-nowrap" data-math="n(1-p)"></span> gutxienez 5 direnean, binomiala parametro hauek dituen normal baten bidez hurbiltzen dugu:</p>
+                <div class="coins-normal-2023-theory-pair">
+                  <div class="theory-formula math-display" data-math="\mu=np" data-math-display></div>
+                  <div class="theory-formula math-display" data-math="\sigma=\sqrt{np(1-p)}" data-math-display></div>
+                </div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Corrección de continuidad</h3>
+                <p data-coins-normal-2023-language="es">La binomial es discreta y la normal es continua. El primer entero favorable es 241, de modo que colocamos la frontera a mitad de camino entre 240 y 241.</p>
+                <p data-coins-normal-2023-language="eu" hidden>Binomiala diskretua da eta normala jarraitua. Aldeko lehen zenbaki osoa 241 da; beraz, muga 240 eta 241 arteko erdian kokatzen dugu.</p>
+                <div class="theory-formula math-display" data-math="P(X\ge241)\approx P(Y\ge240{,}5)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Simetría de la normal estándar</h3>
+                <p data-coins-normal-2023-language="es">La tabla suele dar áreas a la izquierda de valores positivos. La simetría permite convertir la cola a la derecha de un valor negativo en esa área tabulada.</p>
+                <p data-coins-normal-2023-language="eu" hidden>Taulak balio positiboen ezkerreko azalerak eman ohi ditu. Simetriari esker, balio negatibo baten eskuineko isatsa taulako azalera horretara bihur dezakegu.</p>
+                <div class="theory-formula math-display" data-math="P(Z\ge-a)=P(Z\le a)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Definimos la variable aleatoria</h3>
+                  <p data-coins-normal-2023-language="es">Llamamos <span class="math-inline math-nowrap" data-math="X"></span> al número de caras. Cada moneda constituye un ensayo independiente y una cara tiene probabilidad <span class="math-inline math-nowrap" data-math="1/2"></span>.</p>
+                  <p data-coins-normal-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="X"></span> deitzen diogu aurpegi kopuruari. Txanpon bakoitza saiakuntza independentea da, eta aurpegi baten probabilitatea <span class="math-inline math-nowrap" data-math="1/2"></span> da.</p>
+                  <div class="coins-normal-2023-work">
+                    <strong class="math-display" data-math="X\sim B(500;0{,}5)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Comprobamos la aproximación y calculamos sus parámetros</h3>
+                  <div class="coins-normal-2023-work">
+                    <div class="math-display" data-math="np=500\cdot0{,}5=250\ge5" data-math-display></div>
+                    <div class="math-display" data-math="n(1-p)=500\cdot0{,}5=250\ge5" data-math-display></div>
+                    <div class="math-display" data-math="\mu=np=250" data-math-display></div>
+                    <div class="math-display" data-math="\sigma=\sqrt{500\cdot0{,}5\cdot0{,}5}" data-math-display></div>
+                    <div class="math-display" data-math="\sigma=\sqrt{125}\approx11{,}18" data-math-display></div>
+                    <strong class="math-display" data-math="Y\sim N(250;11{,}18)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Traducimos la desigualdad y corregimos la continuidad</h3>
+                  <p data-coins-normal-2023-language="es">Como <span class="math-inline math-nowrap" data-math="X"></span> solo toma valores enteros, superar 240 equivale a comenzar en 241.</p>
+                  <p data-coins-normal-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="X"></span> aldagaiak balio osoak soilik hartzen dituenez, 240 gainditzea 241ean hastea da.</p>
+                  <div class="coins-normal-2023-work">
+                    <div class="math-display" data-math="P(X>240)=P(X\ge241)" data-math-display></div>
+                    <strong class="math-display" data-math="P(X\ge241)\approx P(Y\ge240{,}5)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Tipificamos la frontera</h3>
+                  <div class="coins-normal-2023-work">
+                    <div class="math-display" data-math="z=\frac{240{,}5-250}{11{,}18}" data-math-display></div>
+                    <div class="math-display" data-math="z=\frac{-9{,}5}{11{,}18}" data-math-display></div>
+                    <strong class="math-display" data-math="z\approx-0{,}85" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Leemos la probabilidad en la tabla</h3>
+                  <p data-coins-normal-2023-language="es">Por simetría, el área a la derecha de <span class="math-inline math-nowrap" data-math="-0{,}85"></span> es igual al área a la izquierda de <span class="math-inline math-nowrap" data-math="0{,}85"></span>.</p>
+                  <p data-coins-normal-2023-language="eu" hidden>Simetria dela eta, <span class="math-inline math-nowrap" data-math="-0{,}85"></span> balioaren eskuineko azalera <span class="math-inline math-nowrap" data-math="0{,}85"></span> balioaren ezkerreko azaleraren berdina da.</p>
+                  <div class="coins-normal-2023-work">
+                    <div class="math-display" data-math="P(Z\ge-0{,}85)=P(Z\le0{,}85)" data-math-display></div>
+                    <strong class="math-display" data-math="P(Z\le0{,}85)=0{,}8023" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry coins-normal-2023-essential">
+              <div class="math-display" data-math="X\sim B(500;0{,}5)\approx Y\sim N(250;11{,}18)" data-math-display></div>
+              <div class="math-display" data-math="P(X>240)\approx P(Y\ge240{,}5)" data-math-display></div>
+              <div class="math-display" data-math="z=\frac{240{,}5-250}{11{,}18}\approx-0{,}85" data-math-display></div>
+              <strong class="math-display" data-math="P(X>240)\approx0{,}8023" data-math-display></strong>
+            </div>
+
+            <div class="result result-long coins-normal-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(X>240)\approx0{,}8023" data-math-display></strong>
+              <p data-coins-normal-2023-language="es">La probabilidad es aproximadamente del <span class="math-inline math-nowrap" data-math="80{,}23\%"></span>.</p>
+              <p data-coins-normal-2023-language="eu" hidden>Probabilitatea gutxi gorabehera <span class="math-inline math-nowrap" data-math="\%80{,}23"></span> da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="coins-normal-2023-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-coins-normal-2023-language="es">Conservamos el mismo modelo normal. «Menos de 230» significa como máximo 229 caras, de modo que la corrección de continuidad sitúa la frontera en 229,5.</p>
+            <p class="idea-text" data-coins-normal-2023-language="eu" hidden>Eredu normal bera mantentzen dugu. «230 baino gutxiago» gehienez 229 aurpegi izatea da; beraz, jarraitutasun-zuzenketak muga 229,5ean kokatzen du.</p>
+            <p class="idea-text" data-coins-normal-2023-language="es">Esa frontera está a unas <span class="math-inline math-nowrap" data-math="1{,}83"></span> desviaciones típicas por debajo de la media. Calculamos la pequeña cola izquierda usando la simetría de la normal estándar.</p>
+            <p class="idea-text" data-coins-normal-2023-language="eu" hidden>Muga hori batezbestekoaren azpitik <span class="math-inline math-nowrap" data-math="1{,}83"></span> desbideratze tipikora dago gutxi gorabehera. Ezkerreko isats txikia normal estandarraren simetria erabiliz kalkulatzen dugu.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Menos de 230 caras</h2>
+
+            <figure class="coins-normal-2023-figure">
+              <figcaption data-coins-normal-2023-language="es">La zona sombreada es la cola situada a la izquierda de <span class="math-inline math-nowrap" data-math="z=-1{,}83"></span>.</figcaption>
+              <figcaption data-coins-normal-2023-language="eu" hidden>Itzaleztatutako eremua <span class="math-inline math-nowrap" data-math="z=-1{,}83"></span> balioaren ezkerrean dagoen isatsa da.</figcaption>
+              <div id="coins-normal-2023-b-board" class="jxgbox coins-normal-2023-board" role="img" aria-label="Campana normal estándar con el área a la izquierda de menos uno coma ochenta y tres sombreada"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Del experimento a la binomial</h3>
+                <p data-coins-normal-2023-language="es">El número de caras en 500 monedas independientes es binomial, porque cada moneda solo aporta cara o cruz y la probabilidad de cara permanece constante.</p>
+                <p data-coins-normal-2023-language="eu" hidden>500 txanpon independentetako aurpegi kopurua binomiala da, txanpon bakoitzak aurpegia edo gurutzea soilik ematen duelako eta aurpegiaren probabilitatea konstante mantentzen delako.</p>
+                <div class="theory-formula math-display" data-math="X\sim B(500;0{,}5)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Aproximación normal</h3>
+                <p data-coins-normal-2023-language="es">Como <span class="math-inline math-nowrap" data-math="np=n(1-p)=250"></span>, la aproximación es adecuada. La normal conserva la media y la desviación típica de la binomial.</p>
+                <p data-coins-normal-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="np=n(1-p)=250"></span> denez, hurbilketa egokia da. Normalak binomialaren batezbestekoa eta desbideratze tipikoa mantentzen ditu.</p>
+                <div class="theory-formula math-display" data-math="Y\sim N(250;11{,}18)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Corrección de continuidad</h3>
+                <p data-coins-normal-2023-language="es">La condición estricta <span class="math-inline math-nowrap" data-math="X<230"></span> termina en el entero 229. En la normal continua, su borde superior queda en 229,5.</p>
+                <p data-coins-normal-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="X<230"></span> baldintza zorrotza 229 zenbaki osoan amaitzen da. Normal jarraituan, haren goiko muga 229,5ean geratzen da.</p>
+                <div class="theory-formula math-display" data-math="P(X\le229)\approx P(Y\le229{,}5)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Simetría de la normal estándar</h3>
+                <p data-coins-normal-2023-language="es">La cola izquierda de un valor negativo es el complemento del área acumulada hasta su valor positivo simétrico.</p>
+                <p data-coins-normal-2023-language="eu" hidden>Balio negatibo baten ezkerreko isatsa haren balio positibo simetrikoraino metatutako azaleraren osagarria da.</p>
+                <div class="theory-formula math-display" data-math="\Phi(-a)=1-\Phi(a)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Recuperamos el modelo común</h3>
+                  <div class="coins-normal-2023-work">
+                    <div class="math-display" data-math="X\sim B(500;0{,}5)" data-math-display></div>
+                    <div class="math-display" data-math="\mu=250" data-math-display></div>
+                    <div class="math-display" data-math="\sigma=\sqrt{125}\approx11{,}18" data-math-display></div>
+                    <strong class="math-display" data-math="Y\sim N(250;11{,}18)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Aplicamos la corrección de continuidad</h3>
+                  <p data-coins-normal-2023-language="es">Los valores favorables son <span class="math-inline math-nowrap" data-math="0,1,\ldots,229"></span>. La normal debe llegar hasta el punto medio entre 229 y 230.</p>
+                  <p data-coins-normal-2023-language="eu" hidden>Aldeko balioak <span class="math-inline math-nowrap" data-math="0,1,\ldots,229"></span> dira. Normalak 229 eta 230 arteko erdiko punturaino iritsi behar du.</p>
+                  <div class="coins-normal-2023-work">
+                    <div class="math-display" data-math="P(X<230)=P(X\le229)" data-math-display></div>
+                    <strong class="math-display" data-math="P(X\le229)\approx P(Y\le229{,}5)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Tipificamos la frontera</h3>
+                  <div class="coins-normal-2023-work">
+                    <div class="math-display" data-math="z=\frac{229{,}5-250}{11{,}18}" data-math-display></div>
+                    <div class="math-display" data-math="z=\frac{-20{,}5}{11{,}18}" data-math-display></div>
+                    <strong class="math-display" data-math="z\approx-1{,}83" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Usamos la simetría de la normal</h3>
+                  <p data-coins-normal-2023-language="es">La tabla da <span class="math-inline math-nowrap" data-math="\Phi(1{,}83)=0{,}9664"></span>. Restamos esa área de 1 para quedarnos con la cola izquierda.</p>
+                  <p data-coins-normal-2023-language="eu" hidden>Taulak <span class="math-inline math-nowrap" data-math="\Phi(1{,}83)=0{,}9664"></span> ematen du. Azalera hori 1etik kentzen dugu ezkerreko isatsa bakarrik hartzeko.</p>
+                  <div class="coins-normal-2023-work">
+                    <div class="math-display" data-math="P(Z\le-1{,}83)=1-\Phi(1{,}83)" data-math-display></div>
+                    <div class="math-display" data-math="P(Z\le-1{,}83)=1-0{,}9664" data-math-display></div>
+                    <strong class="math-display" data-math="P(Z\le-1{,}83)=0{,}0336" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry coins-normal-2023-essential">
+              <div class="math-display" data-math="X\sim B(500;0{,}5)\approx Y\sim N(250;11{,}18)" data-math-display></div>
+              <div class="math-display" data-math="P(X<230)\approx P(Y\le229{,}5)" data-math-display></div>
+              <div class="math-display" data-math="z=\frac{229{,}5-250}{11{,}18}\approx-1{,}83" data-math-display></div>
+              <strong class="math-display" data-math="P(X<230)\approx0{,}0336" data-math-display></strong>
+            </div>
+
+            <div class="result result-long coins-normal-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(X<230)\approx0{,}0336" data-math-display></strong>
+              <p data-coins-normal-2023-language="es">La probabilidad es aproximadamente del <span class="math-inline math-nowrap" data-math="3{,}36\%"></span>.</p>
+              <p data-coins-normal-2023-language="eu" hidden>Probabilitatea gutxi gorabehera <span class="math-inline math-nowrap" data-math="\%3{,}36"></span> da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="coins-normal-2023-part-c" class="panel" role="tabpanel" hidden>
+        <div class="section-index">03</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado C</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-coins-normal-2023-language="es">Ahora queremos conservar todos los valores enteros desde 230 hasta 240, incluidos. La corrección de continuidad ensancha el intervalo media unidad por cada extremo: pasamos de <span class="math-inline math-nowrap" data-math="[230,240]"></span> a <span class="math-inline math-nowrap" data-math="[229{,}5,240{,}5]"></span>.</p>
+            <p class="idea-text" data-coins-normal-2023-language="eu" hidden>Orain 230etik 240ra bitarteko balio oso guztiak gorde nahi ditugu, biak barne. Jarraitutasun-zuzenketak tartea unitate erdi zabaltzen du mutur bakoitzean: <span class="math-inline math-nowrap" data-math="[230,240]"></span> tartetik <span class="math-inline math-nowrap" data-math="[229{,}5,240{,}5]"></span> tartera igarotzen gara.</p>
+            <p class="idea-text" data-coins-normal-2023-language="es">Podemos calcular directamente el área entre los dos valores tipificados o, más rápido, restar de 1 las dos probabilidades exteriores ya obtenidas en los apartados A y B.</p>
+            <p class="idea-text" data-coins-normal-2023-language="eu" hidden>Bi balio tipifikatuen arteko azalera zuzenean kalkula dezakegu edo, azkarrago, 1etik A eta B ataletan lortutako kanpoko bi probabilitateak kendu.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado C</p>
+            <h2>Entre 230 y 240 caras</h2>
+
+            <figure class="coins-normal-2023-figure">
+              <figcaption data-coins-normal-2023-language="es">La zona sombreada queda entre <span class="math-inline math-nowrap" data-math="z=-1{,}83"></span> y <span class="math-inline math-nowrap" data-math="z=-0{,}85"></span>.</figcaption>
+              <figcaption data-coins-normal-2023-language="eu" hidden>Itzaleztatutako eremua <span class="math-inline math-nowrap" data-math="z=-1{,}83"></span> eta <span class="math-inline math-nowrap" data-math="z=-0{,}85"></span> balioen artean dago.</figcaption>
+              <div id="coins-normal-2023-c-board" class="jxgbox coins-normal-2023-board" role="img" aria-label="Campana normal estándar con el área entre menos uno coma ochenta y tres y menos cero coma ochenta y cinco sombreada"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Del experimento a la binomial</h3>
+                <p data-coins-normal-2023-language="es">Seguimos contando caras en 500 monedas independientes, por lo que la variable y sus parámetros no cambian.</p>
+                <p data-coins-normal-2023-language="eu" hidden>500 txanpon independentetako aurpegiak zenbatzen jarraitzen dugu; beraz, aldagaia eta haren parametroak ez dira aldatzen.</p>
+                <div class="theory-formula math-display" data-math="X\sim B(500;0{,}5)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Aproximación normal</h3>
+                <p data-coins-normal-2023-language="es">La aproximación normal común a los tres apartados tiene media 250 y desviación típica aproximadamente 11,18.</p>
+                <p data-coins-normal-2023-language="eu" hidden>Hiru ataletarako hurbilketa normal komunak 250eko batezbestekoa eta gutxi gorabehera 11,18ko desbideratze tipikoa ditu.</p>
+                <div class="theory-formula math-display" data-math="Y\sim N(250;11{,}18)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Corrección de continuidad en un intervalo</h3>
+                <p data-coins-normal-2023-language="es">Para incluir los enteros 230 y 240, llevamos el límite inferior hasta 229,5 y el superior hasta 240,5.</p>
+                <p data-coins-normal-2023-language="eu" hidden>230 eta 240 zenbaki osoak barne hartzeko, beheko muga 229,5era eta goikoa 240,5era eramaten ditugu.</p>
+                <div class="theory-formula math-display" data-math="P(230\le X\le240)" data-math-display></div>
+                <div class="theory-formula math-display" data-math="\approx P(229{,}5\le Y\le240{,}5)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Partición de casos</h3>
+                <p data-coins-normal-2023-language="es">Los tres sucesos «menos de 230», «de 230 a 240» y «más de 240» son incompatibles y reúnen todos los valores posibles. Por eso sus probabilidades suman 1.</p>
+                <p data-coins-normal-2023-language="eu" hidden>«230 baino gutxiago», «230etik 240ra» eta «240 baino gehiago» gertaerak bateraezinak dira eta balio posible guztiak biltzen dituzte. Horregatik, haien probabilitateen batura 1 da.</p>
+                <div class="theory-formula math-display" data-math="P(X<230)+P(230\le X\le240)" data-math-display></div>
+                <div class="theory-formula math-display" data-math="+P(X>240)=1" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Recuperamos el modelo común</h3>
+                  <div class="coins-normal-2023-work">
+                    <div class="math-display" data-math="X\sim B(500;0{,}5)" data-math-display></div>
+                    <div class="math-display" data-math="\mu=250" data-math-display></div>
+                    <div class="math-display" data-math="\sigma\approx11{,}18" data-math-display></div>
+                    <strong class="math-display" data-math="Y\sim N(250;11{,}18)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Corregimos los dos extremos</h3>
+                  <p data-coins-normal-2023-language="es">El intervalo discreto incluye el primer y el último entero, así que extendemos media unidad los dos límites.</p>
+                  <p data-coins-normal-2023-language="eu" hidden>Tarte diskretuak lehen eta azken zenbaki osoak barne hartzen ditu; beraz, bi mugak unitate erdi luzatzen ditugu.</p>
+                  <div class="coins-normal-2023-work">
+                    <div class="math-display" data-math="P(230\le X\le240)" data-math-display></div>
+                    <strong class="math-display" data-math="\approx P(229{,}5\le Y\le240{,}5)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Tipificamos los dos extremos</h3>
+                  <div class="coins-normal-2023-bounds">
+                    <div>
+                      <span data-coins-normal-2023-language="es">Límite inferior</span>
+                      <span data-coins-normal-2023-language="eu" hidden>Beheko muga</span>
+                      <div class="math-display" data-math="z_1=\frac{229{,}5-250}{11{,}18}" data-math-display></div>
+                      <strong class="math-display" data-math="z_1\approx-1{,}83" data-math-display></strong>
+                    </div>
+                    <div>
+                      <span data-coins-normal-2023-language="es">Límite superior</span>
+                      <span data-coins-normal-2023-language="eu" hidden>Goiko muga</span>
+                      <div class="math-display" data-math="z_2=\frac{240{,}5-250}{11{,}18}" data-math-display></div>
+                      <strong class="math-display" data-math="z_2\approx-0{,}85" data-math-display></strong>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos el área central</h3>
+                  <p data-coins-normal-2023-language="es">Restamos las dos probabilidades acumuladas. Por simetría, <span class="math-inline math-nowrap" data-math="\Phi(-0{,}85)=1-0{,}8023=0{,}1977"></span>.</p>
+                  <p data-coins-normal-2023-language="eu" hidden>Metatutako bi probabilitateak kentzen ditugu. Simetria dela eta, <span class="math-inline math-nowrap" data-math="\Phi(-0{,}85)=1-0{,}8023=0{,}1977"></span>.</p>
+                  <div class="coins-normal-2023-work">
+                    <div class="math-display" data-math="P(-1{,}83\le Z\le-0{,}85)" data-math-display></div>
+                    <div class="math-display" data-math="=\Phi(-0{,}85)-\Phi(-1{,}83)" data-math-display></div>
+                    <div class="math-display" data-math="=0{,}1977-0{,}0336" data-math-display></div>
+                    <strong class="math-display" data-math="=0{,}1641" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Comprobamos mediante los tres casos posibles</h3>
+                  <p data-coins-normal-2023-language="es">El intervalo pedido es lo que queda al quitar las dos zonas exteriores calculadas en A y B.</p>
+                  <p data-coins-normal-2023-language="eu" hidden>Eskatutako tartea A eta B ataletan kalkulatutako kanpoko bi eremuak kendu ondoren geratzen dena da.</p>
+                  <div class="coins-normal-2023-work">
+                    <div class="math-display" data-math="P(230\le X\le240)" data-math-display></div>
+                    <div class="math-display" data-math="=1-P(X>240)-P(X<230)" data-math-display></div>
+                    <div class="math-display" data-math="=1-0{,}8023-0{,}0336" data-math-display></div>
+                    <strong class="math-display" data-math="=0{,}1641" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry coins-normal-2023-essential">
+              <div class="math-display" data-math="P(230\le X\le240)" data-math-display></div>
+              <div class="math-display" data-math="\approx P(229{,}5\le Y\le240{,}5)" data-math-display></div>
+              <div class="math-display" data-math="=1-0{,}8023-0{,}0336" data-math-display></div>
+              <strong class="math-display" data-math="P(230\le X\le240)\approx0{,}1641" data-math-display></strong>
+            </div>
+
+            <div class="result result-long coins-normal-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(230\le X\le240)\approx0{,}1641" data-math-display></strong>
+              <p data-coins-normal-2023-language="es">La probabilidad es aproximadamente del <span class="math-inline math-nowrap" data-math="16{,}41\%"></span>.</p>
+              <p data-coins-normal-2023-language="eu" hidden>Probabilitatea gutxi gorabehera <span class="math-inline math-nowrap" data-math="\%16{,}41"></span> da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

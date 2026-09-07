@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zuzenaren eta planoaren arteko hiru erlazio · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-recta-plano-parametro-simetria-2024-extraordinaria-b2-idiomas.js?v=1" defer></script>
+  <script src="ejercicio-recta-plano-parametro-simetria-2024-extraordinaria-b2-grafico.js?v=1" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="page line-plane-extra-2024-page">
+  <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+    <a href="index.html">← Volver a ejercicios</a>
+    <div class="exercise-nav-meta">
+      <span class="source-reference">2024 · Extraordinaria · Ejercicio B2</span>
+      <div class="language-switch" data-language-switch></div>
+    </div>
+  </nav>
+  <header class="hero"><div class="hero-copy">
+    <p class="eyebrow">Geometría · Recta, plano y simetría · 2024</p>
+    <h1>Un mismo plano, tres preguntas</h1>
+  </div></header>
+
+  <section class="problem" aria-labelledby="statement-title">
+    <div class="section-index">00</div>
+    <div class="section-content">
+      <h2 id="statement-title">Enunciado</h2>
+      <p>Se consideran la recta y el plano</p>
+      <div class="statement-function math-display" data-math="r:\ \begin{cases}2x-y+z=0,\\x-y+4z=1,\end{cases}" data-math-display></div>
+      <div class="statement-function math-display" data-math="\pi:\ 2x-3y+Az=10" data-math-display></div>
+      <ol class="problem-list">
+        <li>Calcula <span class="math-inline math-nowrap" data-math="A"></span> para que <span class="math-inline math-nowrap" data-math="r"></span> y <span class="math-inline math-nowrap" data-math="\pi"></span> sean paralelos.</li>
+        <li>Si <span class="math-inline math-nowrap" data-math="A=21"></span>, calcula la intersección de <span class="math-inline math-nowrap" data-math="r"></span> y <span class="math-inline math-nowrap" data-math="\pi"></span>.</li>
+        <li>Si <span class="math-inline math-nowrap" data-math="A=1"></span>, calcula el simétrico del origen respecto de <span class="math-inline math-nowrap" data-math="\pi"></span>.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="level-control" aria-labelledby="level-title">
+    <p class="control-label" id="level-title">Qué quieres ver</p>
+    <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+      <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+      <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+      <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+      <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+    </div>
+  </section>
+
+  <div class="tabs" role="tablist" aria-label="Apartados de la solución">
+    <button class="tab active" type="button" role="tab" aria-selected="true" data-target="line-plane-extra-2024-a">Apartado A</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-target="line-plane-extra-2024-b">Apartado B</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-target="line-plane-extra-2024-c">Apartado C</button>
+  </div>
+
+  <div class="solutions">
+    <section id="line-plane-extra-2024-a" class="panel active" role="tabpanel">
+      <div class="section-index">01</div><div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Apartado A</p><h2>Idea de resolución</h2>
+          <p class="idea-text" data-line-plane-extra-2024-language="es">Primero parametrizamos la recta para obtener su vector director <span class="math-inline math-nowrap" data-math="\vec v_r=(3,7,1)"></span>. El plano tiene vector normal <span class="math-inline math-nowrap" data-math="\vec n=(2,-3,A)"></span>.</p>
+          <p class="idea-text" data-line-plane-extra-2024-language="eu" hidden>Lehenik zuzena parametrizatzen dugu haren <span class="math-inline math-nowrap" data-math="\vec v_r=(3,7,1)"></span> bektore zuzendaria lortzeko. Planoaren bektore normala <span class="math-inline math-nowrap" data-math="\vec n=(2,-3,A)"></span> da.</p>
+          <p class="idea-text" data-line-plane-extra-2024-language="es">Una recta paralela a un plano tiene su dirección perpendicular al vector normal. Igualamos el producto escalar a cero y, después, comprobamos que la recta no esté contenida en el plano.</p>
+          <p class="idea-text" data-line-plane-extra-2024-language="eu" hidden>Plano baten zuzen paraleloaren norabidea bektore normalarekiko perpendikularra da. Biderkadura eskalarra zero dela ezartzen dugu eta, ondoren, zuzena planoan barne ez dagoela egiaztatzen dugu.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="(3,7,1)\cdot(2,-3,A)=A-15" data-math-display></strong></div>
+        </div>
+        <div class="solution-view" hidden>
+          <p class="kicker">Apartado A</p><h2>Hacemos perpendicular la dirección al vector normal</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic"><h3>Recta paralela a un plano</h3>
+              <p data-line-plane-extra-2024-language="es">Si <span class="math-inline math-nowrap" data-math="\vec v"></span> dirige la recta y <span class="math-inline math-nowrap" data-math="\vec n"></span> es normal al plano, la recta tiene dirección paralela al plano cuando <span class="math-inline math-nowrap" data-math="\vec v\cdot\vec n=0"></span>. Si además un punto de la recta no satisface la ecuación del plano, no está contenida y es paralela estricta.</p>
+              <p data-line-plane-extra-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="\vec v"></span> zuzenaren zuzendaria eta <span class="math-inline math-nowrap" data-math="\vec n"></span> planoaren normala badira, zuzenaren norabidea planoarekiko paraleloa da <span class="math-inline math-nowrap" data-math="\vec v\cdot\vec n=0"></span> denean. Gainera, zuzeneko puntu batek planoaren ekuazioa betetzen ez badu, zuzena ez dago barnean eta zorrotz paraleloa da.</p>
+            </div>
+          </aside>
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li><h3>Parametrizamos la recta</h3>
+                <p data-line-plane-extra-2024-language="es">Tomamos <span class="math-inline math-nowrap" data-math="z=\lambda"></span> y resolvemos las dos ecuaciones.</p>
+                <p data-line-plane-extra-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="z=\lambda"></span> hartzen dugu eta bi ekuazioak ebazten ditugu.</p>
+                <div class="math-display" data-math="r:\ \begin{cases}x=-1+3\lambda,\\y=-2+7\lambda,\\z=\lambda.\end{cases}" data-math-display></div>
+                <div class="math-display" data-math="\vec v_r=(3,7,1)" data-math-display></div>
+              </li>
+              <li><h3>Extraemos el vector normal del plano</h3><div class="math-display" data-math="\vec n=(2,-3,A)" data-math-display></div></li>
+              <li><h3>Imponemos perpendicularidad</h3>
+                <div class="math-display" data-math="\vec v_r\cdot\vec n=0" data-math-display></div>
+                <div class="math-display" data-math="3\cdot2+7(-3)+A=0" data-math-display></div>
+                <div class="math-display" data-math="A-15=0\quad\Longrightarrow\quad A=15" data-math-display></div>
+              </li>
+              <li><h3>Comprobamos que la recta no está contenida</h3>
+                <p data-line-plane-extra-2024-language="es">El punto <span class="math-inline math-nowrap" data-math="(-1,-2,0)"></span> pertenece a <span class="math-inline math-nowrap" data-math="r"></span>, pero en el plano con <span class="math-inline math-nowrap" data-math="A=15"></span> produce:</p>
+                <p data-line-plane-extra-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="(-1,-2,0)"></span> puntua <span class="math-inline math-nowrap" data-math="r"></span> zuzenean dago, baina <span class="math-inline math-nowrap" data-math="A=15"></span> duen planoan hau ematen du:</p>
+                <div class="math-display" data-math="2(-1)-3(-2)+15\cdot0=4\ne10" data-math-display></div>
+              </li>
+            </ol>
+          </div>
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry"><div class="math-display" data-math="(3,7,1)\cdot(2,-3,A)=0" data-math-display></div><strong class="math-display" data-math="A=15" data-math-display></strong></div>
+          <div class="result"><span>Resultado</span><strong class="math-display" data-math="A=15" data-math-display></strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="line-plane-extra-2024-b" class="panel" role="tabpanel" hidden>
+      <div class="section-index">02</div><div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Apartado B</p><h2>Idea de resolución</h2>
+          <p class="idea-text" data-line-plane-extra-2024-language="es">Para encontrar el corte, sustituimos las ecuaciones paramétricas de <span class="math-inline math-nowrap" data-math="r"></span> en el plano con <span class="math-inline math-nowrap" data-math="A=21"></span>. La ecuación resultante determina el único valor de <span class="math-inline math-nowrap" data-math="\lambda"></span> en el que el punto de la recta pertenece al plano.</p>
+          <p class="idea-text" data-line-plane-extra-2024-language="eu" hidden>Ebakidura aurkitzeko, <span class="math-inline math-nowrap" data-math="r"></span>-ren ekuazio parametrikoak <span class="math-inline math-nowrap" data-math="A=21"></span> duen planoan ordezkatzen ditugu. Lortutako ekuazioak zuzeneko puntua planoan dagoen <span class="math-inline math-nowrap" data-math="\lambda"></span>-ren balio bakarra zehazten du.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="\lambda=1\quad\Longrightarrow\quad P=(2,5,1)" data-math-display></strong></div>
+        </div>
+        <div class="solution-view" hidden>
+          <p class="kicker">Apartado B</p><h2>Sustituimos la recta en el plano</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic"><h3>Intersección recta-plano</h3>
+              <p data-line-plane-extra-2024-language="es">Cada valor de <span class="math-inline math-nowrap" data-math="\lambda"></span> genera un punto de la recta. Si sus coordenadas satisfacen la ecuación del plano, ese punto pertenece a ambos.</p>
+              <p data-line-plane-extra-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="\lambda"></span>-ren balio bakoitzak zuzeneko puntu bat sortzen du. Haren koordenatuek planoaren ekuazioa betetzen badute, puntua bietan dago.</p>
+            </div>
+          </aside>
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li><h3>Escribimos el plano para <span class="math-inline math-nowrap" data-math="A=21"></span></h3><div class="math-display" data-math="\pi:\ 2x-3y+21z=10" data-math-display></div></li>
+              <li><h3>Sustituimos la recta</h3>
+                <div class="math-display" data-math="2(-1+3\lambda)-3(-2+7\lambda)+21\lambda=10" data-math-display></div>
+                <div class="math-display" data-math="4+6\lambda=10\quad\Longrightarrow\quad \lambda=1" data-math-display></div>
+              </li>
+              <li><h3>Calculamos las tres coordenadas</h3>
+                <div class="math-display" data-math="x=-1+3=2;\qquad y=-2+7=5" data-math-display></div>
+                <div class="math-display" data-math="z=1" data-math-display></div>
+              </li>
+            </ol>
+          </div>
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry"><div class="math-display" data-math="4+6\lambda=10\Rightarrow\lambda=1" data-math-display></div><strong class="math-display" data-math="P=(2,5,1)" data-math-display></strong></div>
+          <div class="result"><span>Resultado</span><strong class="math-display" data-math="r\cap\pi=\{(2,5,1)\}" data-math-display></strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="line-plane-extra-2024-c" class="panel" role="tabpanel" hidden>
+      <div class="section-index">03</div><div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Apartado C</p><h2>Idea de resolución</h2>
+          <p class="idea-text" data-line-plane-extra-2024-language="es">El simétrico del origen está sobre la perpendicular al plano que pasa por el origen. Esa perpendicular tiene como dirección el vector normal <span class="math-inline math-nowrap" data-math="(2,-3,1)"></span>.</p>
+          <p class="idea-text" data-line-plane-extra-2024-language="eu" hidden>Jatorriaren simetrikoa jatorritik igarotzen den planoarekiko perpendikularrean dago. Perpendikular horren norabidea <span class="math-inline math-nowrap" data-math="(2,-3,1)"></span> bektore normala da.</p>
+          <p class="idea-text" data-line-plane-extra-2024-language="es">Primero hallamos el pie <span class="math-inline math-nowrap" data-math="M"></span> de la perpendicular. Después usamos que <span class="math-inline math-nowrap" data-math="M"></span> es el punto medio entre el origen <span class="math-inline math-nowrap" data-math="O"></span> y su reflejo <span class="math-inline math-nowrap" data-math="O'"></span>.</p>
+          <p class="idea-text" data-line-plane-extra-2024-language="eu" hidden>Lehenik perpendikularraren <span class="math-inline math-nowrap" data-math="M"></span> oina aurkitzen dugu. Ondoren, <span class="math-inline math-nowrap" data-math="M"></span> jatorriaren <span class="math-inline math-nowrap" data-math="O"></span> eta haren <span class="math-inline math-nowrap" data-math="O'"></span> islatuaren erdiko puntua dela erabiltzen dugu.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="O'=2M-O=2M" data-math-display></strong></div>
+        </div>
+        <div class="solution-view" hidden>
+          <p class="kicker">Apartado C</p><h2>Proyectamos el origen y duplicamos el vector</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic"><h3>1. Recta perpendicular a un plano</h3>
+              <p data-line-plane-extra-2024-language="es">Una recta perpendicular a un plano tiene como vector director cualquier múltiplo del vector normal del plano.</p>
+              <p data-line-plane-extra-2024-language="eu" hidden>Planoarekiko perpendikularra den zuzen baten bektore zuzendaria planoaren bektore normalaren edozein multiplo da.</p>
+            </div>
+            <div class="theory-topic"><h3>2. Simetría respecto de un plano</h3>
+              <p data-line-plane-extra-2024-language="es">El plano es la mediatriz perpendicular del segmento que une un punto con su simétrico. El pie de la perpendicular es su punto medio.</p>
+              <p data-line-plane-extra-2024-language="eu" hidden>Planoa puntu bat eta haren simetrikoa lotzen dituen segmentuaren erdibitzaile perpendikularra da. Perpendikularraren oina haren erdiko puntua da.</p>
+              <div class="theory-formula math-display" data-math="M=\frac{O+O'}2\quad\Longrightarrow\quad O'=2M-O" data-math-display></div>
+            </div>
+          </aside>
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li><h3>Escribimos el plano y su normal</h3>
+                <div class="math-display" data-math="\pi:\ 2x-3y+z=10,\qquad \vec n=(2,-3,1)" data-math-display></div>
+              </li>
+              <li><h3>Construimos la perpendicular por el origen</h3>
+                <div class="math-display" data-math="t:\ (x,y,z)=\lambda(2,-3,1)" data-math-display></div>
+              </li>
+              <li><h3>Hallamos el pie <span class="math-inline math-nowrap" data-math="M=t\cap\pi"></span></h3>
+                <div class="math-display" data-math="2(2\lambda)-3(-3\lambda)+\lambda=10" data-math-display></div>
+                <div class="math-display" data-math="14\lambda=10\quad\Longrightarrow\quad \lambda=\frac57" data-math-display></div>
+                <div class="math-display" data-math="M=\left(\frac{10}{7},-\frac{15}{7},\frac57\right)" data-math-display></div>
+              </li>
+              <li><h3>Reflejamos el origen</h3>
+                <div class="math-display" data-math="O'=2M-O=2M" data-math-display></div>
+                <div class="math-display" data-math="O'=\left(\frac{20}{7},-\frac{30}{7},\frac{10}{7}\right)" data-math-display></div>
+              </li>
+            </ol>
+          </div>
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry">
+            <div class="math-display" data-math="\lambda=\frac57,\qquad M=\left(\frac{10}{7},-\frac{15}{7},\frac57\right)" data-math-display></div>
+            <div class="math-display" data-math="O'=2M" data-math-display></div>
+          </div>
+          <figure class="line-plane-extra-2024-figure" aria-label="Plano, origen, proyección y punto simétrico">
+            <figcaption data-line-plane-extra-2024-language="es">El punto <span class="math-inline math-nowrap" data-math="M"></span> está en el plano y divide el segmento <span class="math-inline math-nowrap" data-math="OO'"></span> en dos partes iguales.</figcaption>
+            <figcaption data-line-plane-extra-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="M"></span> puntua planoan dago, eta <span class="math-inline math-nowrap" data-math="OO'"></span> segmentua bi zati berdinetan banatzen du.</figcaption>
+            <div id="line-plane-extra-2024-board" class="jxgbox reflection-2022-board" role="img" aria-label="Origen y punto simétrico a ambos lados del plano"></div>
+          </figure>
+          <div class="result"><span>Resultado</span><strong class="math-display" data-math="O'=\left(\frac{20}{7},-\frac{30}{7},\frac{10}{7}\right)" data-math-display></strong></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

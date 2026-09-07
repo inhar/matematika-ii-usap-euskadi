@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Euskadiko EBAUko Matematika IIko ariketak, edukiaren, urtearen eta deialdiaren arabera antolatuta.">
+  <title>Matematika II · EBAU Euskadi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="catalogo.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="contenidos.js" defer></script>
+  <script src="contenidos-eu.js" defer></script>
+  <script src="catalogo.js?v=pdf-free-20260907" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Matematika II, hasiera" data-i18n-aria="brandAria">
+        <span class="brand-subject" data-i18n="subject">Matematika II</span>
+        <span class="brand-place">EBAU · Euskadi</span>
+      </a>
+      <div class="header-actions">
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="catalog-page">
+    <section id="view-practicar" class="catalog-view active" aria-label="Praktikatu" data-i18n-aria="practice">
+      <form class="catalog-tools" id="catalog-form" role="search">
+        <div class="control-row">
+          <div class="search-field">
+            <i data-lucide="search" aria-hidden="true"></i>
+            <label class="sr-only" for="exercise-search" data-i18n="searchLabel">Bilatu ariketak</label>
+            <input id="exercise-search" type="search" autocomplete="off" placeholder="Bilatu edukia edo teknika" data-i18n-placeholder="searchPlaceholder">
+            <button class="clear-search" id="clear-search" type="button" hidden>
+              <i data-lucide="x" aria-hidden="true"></i>
+              <span class="sr-only" data-i18n="clearSearch">Ezabatu bilaketa</span>
+            </button>
+          </div>
+
+          <div class="filters" aria-label="Ariketen iragazkiak" data-i18n-aria="filtersAria">
+            <div class="tree-filter" id="topic-tree-filter">
+              <span class="filter-label" data-i18n="topic">Gaia</span>
+              <button class="tree-trigger" id="topic-trigger" type="button" aria-expanded="false" aria-controls="topic-popover">
+                <span id="topic-value">Eduki guztiak</span>
+                <i data-lucide="chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="topic-popover" id="topic-popover" hidden>
+                <div class="topic-popover-head">
+                  <p data-i18n="subjectContents">Matematika IIko edukiak</p>
+                  <button type="button" id="topic-clear" data-i18n="all">Guztiak</button>
+                </div>
+                <div class="topic-tree" id="topic-tree" role="tree" aria-label="Edukien zuhaitza" data-i18n-aria="contentTreeAria"></div>
+              </div>
+            </div>
+            <label>
+              <span data-i18n="difficulty">Zailtasuna</span>
+              <select id="difficulty-filter">
+                <option value="" data-i18n="allFeminine">Guztiak</option>
+                <option value="basica" data-i18n="difficultyBasic">Oinarrizkoa</option>
+                <option value="media" data-i18n="difficultyMedium">Ertaina</option>
+                <option value="alta" data-i18n="difficultyHigh">Handia</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="yearSession">Urtea eta deialdia</span>
+              <select id="exam-filter">
+                <option value="" data-i18n="allFeminine">Guztiak</option>
+                <option value="2026-ordinaria" data-session-year="2026" data-session="ordinary">2026 · Ohikoa</option>
+                <option value="2026-extraordinaria" data-session-year="2026" data-session="extraordinary">2026 · Ezohikoa</option>
+                <option value="2025-ordinaria" data-session-year="2025" data-session="ordinary">2025 · Ohikoa</option>
+                <option value="2025-extraordinaria" data-session-year="2025" data-session="extraordinary">2025 · Ezohikoa</option>
+                <option value="2024-ordinaria" data-session-year="2024" data-session="ordinary">2024 · Ohikoa</option>
+                <option value="2024-extraordinaria" data-session-year="2024" data-session="extraordinary">2024 · Ezohikoa</option>
+                <option value="2023-ordinaria" data-session-year="2023" data-session="ordinary">2023 · Ohikoa</option>
+                <option value="2023-extraordinaria" data-session-year="2023" data-session="extraordinary">2023 · Ezohikoa</option>
+                <option value="2022-ordinaria" data-session-year="2022" data-session="ordinary">2022 · Ohikoa</option>
+                <option value="2022-extraordinaria" data-session-year="2022" data-session="extraordinary">2022 · Ezohikoa</option>
+                <option value="2021-ordinaria" data-session-year="2021" data-session="ordinary">2021 · Ohikoa</option>
+                <option value="2021-extraordinaria" data-session-year="2021" data-session="extraordinary">2021 · Ezohikoa</option>
+                <option value="2020-ordinaria" data-session-year="2020" data-session="ordinary">2020 · Ohikoa</option>
+                <option value="2020-extraordinaria" data-session-year="2020" data-session="extraordinary">2020 · Ezohikoa</option>
+                <option value="2019-ordinaria" data-session-year="2019" data-session="ordinary">2019 · Ohikoa</option>
+                <option value="2019-extraordinaria" data-session-year="2019" data-session="extraordinary">2019 · Ezohikoa</option>
+                <option value="pendiente" data-i18n="pending">Katalogatzeke</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-status">
+          <p id="filter-description">Eduki guztiak</p>
+          <button class="reset-filters" id="reset-filters" type="button" hidden>
+            <i data-lucide="rotate-ccw" aria-hidden="true"></i>
+            <span data-i18n="reset">Berrezarri</span>
+          </button>
+        </div>
+      </form>
+
+      <div class="exercise-list" id="exercise-list"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <p class="empty-title" data-i18n="emptyTitle">Oraindik ez dago irizpide hauekin katalogatutako ariketarik.</p>
+        <p data-i18n="emptyBody">Bilduma ariketaz ariketa osatuko da.</p>
+        <button type="button" id="empty-reset" data-i18n="showAll">Ikusi guztiak</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><span data-i18n="subject">Matematika II</span> · EBAU Euskadi</p>
+    <p>2019–2026</p>
+  </footer>
+</body>
+</html>

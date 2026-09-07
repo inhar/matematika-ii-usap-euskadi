@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Probabilitate osoa eta Bayes · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-probabilidad-idiomas.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Ordinaria · Opción A · Problema A.5</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Probabilidad condicionada · Junio de 2019</p>
+        <h1>Tres cajas: probabilidad total y teorema de Bayes</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Sobre una mesa hay tres cajas con botones. La primera contiene 3 botones, la segunda 5 y la tercera 4. Cada caja contiene un único botón rojo. Se elige una caja al azar y, después, un botón de esa caja también al azar.</p>
+
+        <div class="box-data" aria-label="Composición de las tres cajas">
+          <div>
+            <strong>C₁</strong>
+            <span>3 botones</span>
+            <small>1 rojo</small>
+          </div>
+          <div>
+            <strong>C₂</strong>
+            <span>5 botones</span>
+            <small>1 rojo</small>
+          </div>
+          <div>
+            <strong>C₃</strong>
+            <span>4 botones</span>
+            <small>1 rojo</small>
+          </div>
+        </div>
+
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">¿Cuál es la probabilidad de que el botón extraído sea rojo?</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">Si el botón extraído es rojo, ¿cuál es la probabilidad de que proceda de la primera caja?</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="probability-part-a" data-target="probability-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="probability-part-b" data-target="probability-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="probability-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Conocemos la probabilidad de elegir cada caja, 1/3, y la probabilidad de extraer su único botón rojo una vez elegida. Buscamos que ocurra «rojo» sin saber de qué caja procede: representaremos las dos elecciones en un árbol, multiplicaremos las probabilidades de cada camino que termina en rojo y sumaremos esos tres caminos incompatibles. Esa es precisamente la estructura de la probabilidad total.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Probabilidad de extraer un botón rojo</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Probabilidades en un árbol</h3>
+                <p>La primera ramificación representa la caja elegida. La segunda contiene probabilidades condicionadas, porque la proporción de botones rojos depende de la caja en la que ya estamos.</p>
+                <div class="theory-formula math-display" data-math-es="P(R\mid C_i)=\dfrac{\text{botones rojos en }C_i}{\text{botones totales en }C_i}" data-math-eu="P(R\mid C_i)=\dfrac{C_i\text{-ko botoi gorriak}}{C_i\text{-ko botoi guztiak}}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Regla del producto para un camino</h3>
+                <p>Para que un camino completo ocurra deben suceder sus dos etapas. La probabilidad conjunta se obtiene multiplicando la probabilidad de llegar a la caja por la probabilidad condicionada de extraer rojo en ella.</p>
+                <div class="theory-formula math-display" data-math="P(C_i\cap R)=P(C_i)\cdot P(R\mid C_i)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Teorema de la probabilidad total</h3>
+                <p>Las cajas C₁, C₂ y C₃ forman una partición: siempre se elige exactamente una. Por eso el suceso R se descompone en tres caminos incompatibles y sus probabilidades se suman.</p>
+                <div class="theory-formula math-display" data-math="P(R)=\sum_i P(C_i)\cdot P(R\mid C_i)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Nombramos los sucesos</h3>
+                  <p>Llamamos C₁, C₂ y C₃ a elegir la primera, segunda o tercera caja, y R a extraer un botón rojo.</p>
+                  <div class="equation equation-compact math-display" data-math="P(C_{1}) = P(C_{2}) = P(C_{3}) = \frac{1}{3}" data-math-display></div>
+                  <p>Las tres cajas tienen la misma probabilidad porque la caja se elige al azar entre tres opciones.</p>
+                </li>
+
+                <li>
+                  <h3>Calculamos las probabilidades dentro de cada caja</h3>
+                  <p>Cada caja tiene un solo botón rojo. Dividimos ese botón favorable entre el número total de botones de la caja.</p>
+                  <div class="calculation-list box-probabilities">
+                    <div><span class="math-inline" data-math="C_{1}"></span><strong class="math-inline" data-math="P(R\mid C_{1}) = \frac{1}{3}; P(R^{c}\mid C_{1}) = \frac{2}{3}"></strong></div>
+                    <div><span class="math-inline" data-math="C_{2}"></span><strong class="math-inline" data-math="P(R\mid C_{2}) = \frac{1}{5}; P(R^{c}\mid C_{2}) = \frac{4}{5}"></strong></div>
+                    <div><span class="math-inline" data-math="C_{3}"></span><strong class="math-inline" data-math="P(R\mid C_{3}) = \frac{1}{4}; P(R^{c}\mid C_{3}) = \frac{3}{4}"></strong></div>
+                  </div>
+                  <p>Rᶜ significa «no rojo»; su probabilidad es la parte que falta hasta 1.</p>
+                </li>
+
+                <li>
+                  <h3>Organizamos las dos elecciones en un árbol</h3>
+                  <p>En cada fila se ve primero la probabilidad de elegir la caja y, después, las dos posibles extracciones dentro de ella.</p>
+                  <figure class="probability-tree-figure" role="img" aria-label="Árbol de probabilidades de elegir una caja y extraer un botón rojo o no rojo">
+                    <figcaption>Diagrama de árbol del experimento</figcaption>
+
+                    <svg class="tree-svg tree-svg-desktop" viewBox="0 0 820 480" aria-hidden="true" focusable="false">
+                      <text class="tree-stage-heading" x="8" y="24">1 · Caja elegida</text>
+                      <text class="tree-stage-heading" x="460" y="24">2 · Botón extraído</text>
+
+                      <g class="tree-lines">
+                        <line x1="62" y1="250" x2="300" y2="82"></line>
+                        <line x1="62" y1="250" x2="300" y2="250"></line>
+                        <line x1="62" y1="250" x2="300" y2="418"></line>
+
+                        <line x1="440" y1="82" x2="600" y2="47"></line>
+                        <line x1="440" y1="82" x2="600" y2="117"></line>
+                        <line x1="440" y1="250" x2="600" y2="215"></line>
+                        <line x1="440" y1="250" x2="600" y2="285"></line>
+                        <line x1="440" y1="418" x2="600" y2="383"></line>
+                        <line x1="440" y1="418" x2="600" y2="453"></line>
+                      </g>
+
+                      <circle class="tree-root-dot" cx="62" cy="250" r="4"></circle>
+
+                      <text class="tree-prob" x="160" y="148">1/3</text>
+                      <text class="tree-prob" x="166" y="238">1/3</text>
+                      <text class="tree-prob" x="160" y="354">1/3</text>
+
+                      <text class="tree-node-label" x="315" y="88">Caja 1 (C₁)</text>
+                      <text class="tree-node-label" x="315" y="256">Caja 2 (C₂)</text>
+                      <text class="tree-node-label" x="315" y="424">Caja 3 (C₃)</text>
+
+                      <text class="tree-prob" x="510" y="52">1/3</text>
+                      <text class="tree-prob" x="510" y="122">2/3</text>
+                      <text class="tree-prob" x="510" y="220">1/5</text>
+                      <text class="tree-prob" x="510" y="290">4/5</text>
+                      <text class="tree-prob" x="510" y="388">1/4</text>
+                      <text class="tree-prob" x="510" y="458">3/4</text>
+
+                      <text class="tree-outcome-label tree-red-label" x="620" y="53">Rojo (R)</text>
+                      <text class="tree-outcome-label" x="620" y="123">No rojo (Rᶜ)</text>
+                      <text class="tree-outcome-label tree-red-label" x="620" y="221">Rojo (R)</text>
+                      <text class="tree-outcome-label" x="620" y="291">No rojo (Rᶜ)</text>
+                      <text class="tree-outcome-label tree-red-label" x="620" y="389">Rojo (R)</text>
+                      <text class="tree-outcome-label" x="620" y="459">No rojo (Rᶜ)</text>
+                    </svg>
+
+                    <svg class="tree-svg tree-svg-mobile" viewBox="0 0 360 680" aria-hidden="true" focusable="false">
+                      <text class="tree-mobile-legend" x="10" y="22">R = rojo · Rᶜ = no rojo</text>
+
+                      <g class="tree-lines">
+                        <line x1="58" y1="340" x2="140" y2="100"></line>
+                        <line x1="58" y1="340" x2="140" y2="340"></line>
+                        <line x1="58" y1="340" x2="140" y2="580"></line>
+
+                        <line x1="185" y1="100" x2="270" y2="65"></line>
+                        <line x1="185" y1="100" x2="270" y2="135"></line>
+                        <line x1="185" y1="340" x2="270" y2="305"></line>
+                        <line x1="185" y1="340" x2="270" y2="375"></line>
+                        <line x1="185" y1="580" x2="270" y2="545"></line>
+                        <line x1="185" y1="580" x2="270" y2="615"></line>
+                      </g>
+
+                      <circle class="tree-root-dot" cx="58" cy="340" r="4"></circle>
+                      <text class="tree-root-label" x="8" y="330">Inicio</text>
+
+                      <text class="tree-prob" x="88" y="212">1/3</text>
+                      <text class="tree-prob" x="88" y="328">1/3</text>
+                      <text class="tree-prob" x="88" y="470">1/3</text>
+
+                      <text class="tree-node-label" x="148" y="106">C₁</text>
+                      <text class="tree-node-label" x="148" y="346">C₂</text>
+                      <text class="tree-node-label" x="148" y="586">C₃</text>
+
+                      <text class="tree-prob" x="218" y="72">1/3</text>
+                      <text class="tree-prob" x="218" y="142">2/3</text>
+                      <text class="tree-prob" x="218" y="312">1/5</text>
+                      <text class="tree-prob" x="218" y="382">4/5</text>
+                      <text class="tree-prob" x="218" y="552">1/4</text>
+                      <text class="tree-prob" x="218" y="622">3/4</text>
+
+                      <text class="tree-outcome-label tree-red-label" x="286" y="72">R</text>
+                      <text class="tree-outcome-label" x="286" y="142">Rᶜ</text>
+                      <text class="tree-outcome-label tree-red-label" x="286" y="312">R</text>
+                      <text class="tree-outcome-label" x="286" y="382">Rᶜ</text>
+                      <text class="tree-outcome-label tree-red-label" x="286" y="552">R</text>
+                      <text class="tree-outcome-label" x="286" y="622">Rᶜ</text>
+                    </svg>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Calculamos los tres caminos que terminan en rojo</h3>
+                  <p>La probabilidad de cada camino se obtiene multiplicando sus dos ramas.</p>
+                  <div class="calculation-list red-paths">
+                    <div><span class="math-inline" data-math="C_{1} \cap R"></span><strong class="math-inline" data-math="(\frac{1}{3}) \cdot (\frac{1}{3}) = \frac{1}{9} = \frac{20}{180}"></strong></div>
+                    <div><span class="math-inline" data-math="C_{2} \cap R"></span><strong class="math-inline" data-math="(\frac{1}{3}) \cdot (\frac{1}{5}) = \frac{1}{15} = \frac{12}{180}"></strong></div>
+                    <div><span class="math-inline" data-math="C_{3} \cap R"></span><strong class="math-inline" data-math="(\frac{1}{3}) \cdot (\frac{1}{4}) = \frac{1}{12} = \frac{15}{180}"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Sumamos todos los caminos rojos</h3>
+                  <p>Los tres caminos son incompatibles porque el botón solo puede proceder de una caja. Sumamos sus probabilidades usando el denominador común 180.</p>
+                  <div class="det-expansion probability-expansion">
+                    <span class="math-inline" data-math="P(R) = \frac{1}{9} + \frac{1}{15} + \frac{1}{12}"></span>
+                    <span class="math-inline" data-math="= \frac{20}{180} + \frac{12}{180} + \frac{15}{180}"></span>
+                    <strong class="math-inline" data-math="= \frac{47}{180} \approx 0{,}2611"></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry probability-essential">
+              <div class="math-display" data-math="P(C_{1}) = P(C_{2}) = P(C_{3}) = \frac{1}{3}" data-math-display></div>
+              <div class="math-display" data-math="P(R\mid C_{1}) = \frac{1}{3}; P(R\mid C_{2}) = \frac{1}{5}; P(R\mid C_{3}) = \frac{1}{4}" data-math-display></div>
+              <strong class="math-inline" data-math="P(R) = (\frac{1}{3})(\frac{1}{3}) + (\frac{1}{3})(\frac{1}{5}) + (\frac{1}{3})(\frac{1}{4}) = \frac{47}{180}"></strong>
+            </div>
+
+            <div class="result probability-result">
+              <span>Resultado</span>
+              <strong>P(R) = 47/180</strong>
+              <p>≈ 0,2611 = 26,11 %</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="probability-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Ahora sabemos que el botón es rojo y queremos averiguar de qué caja procede. La condición ha cambiado el espacio que debemos comparar: entre todos los caminos que producen un botón rojo, solo uno pasa por la primera caja. Aplicaremos el teorema de Bayes dividiendo la probabilidad de ese camino favorable, C₁ y R, entre la probabilidad total de obtener rojo calculada en el apartado anterior.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Probabilidad de que el botón rojo proceda de C₁</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Probabilidad condicionada</h3>
+                <p>Al saber que ha ocurrido R, dejamos de considerar los resultados no rojos. La probabilidad de C₁ dentro de ese nuevo conjunto se obtiene comparando la parte en la que ocurren C₁ y R con todo el suceso R.</p>
+                <div class="theory-formula math-display" data-math="P(C_1\mid R)=\frac{P(C_1\cap R)}{P(R)}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Teorema de Bayes</h3>
+                <p>La probabilidad conjunta del numerador puede escribirse siguiendo el camino del árbol. El denominador reúne todos los caminos capaces de producir R mediante la probabilidad total.</p>
+                <div class="theory-formula math-display" data-math="P(C_1\mid R)=\dfrac{P(C_1)P(R\mid C_1)}{\sum_i P(C_i)P(R\mid C_i)}" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Traducimos la pregunta a símbolos</h3>
+                  <p>La información conocida, «el botón es rojo», se escribe después de la barra. Lo que queremos averiguar, «procede de la primera caja», se escribe delante.</p>
+                  <div class="equation equation-compact math-display" data-math="P(C_{1}\mid R)" data-math-display></div>
+                  <p>No estamos calculando P(R | C₁): esa probabilidad sería 1/3 y respondería a una pregunta distinta.</p>
+                </li>
+
+                <li>
+                  <h3>Calculamos el camino favorable</h3>
+                  <p>Para que el botón sea rojo y proceda de C₁ hay que elegir primero C₁ y extraer después su botón rojo.</p>
+                  <div class="det-expansion probability-expansion">
+                    <span class="math-inline" data-math="P(C_{1} \cap R) = P(C_{1}) \cdot P(R\mid C_{1})"></span>
+                    <strong class="math-inline" data-math="= (\frac{1}{3}) \cdot (\frac{1}{3}) = \frac{1}{9}"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Recuperamos la probabilidad total de rojo</h3>
+                  <p>El botón rojo puede proceder de cualquiera de las tres cajas. Sumamos de nuevo los tres caminos para que el apartado sea autosuficiente.</p>
+                  <div class="det-expansion probability-expansion">
+                    <span class="math-inline" data-math="P(R) = \frac{1}{9} + \frac{1}{15} + \frac{1}{12}"></span>
+                    <strong class="math-inline" data-math="= \frac{47}{180}"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Aplicamos Bayes y simplificamos</h3>
+                  <p>Dividimos el camino favorable entre todos los caminos que terminan en rojo.</p>
+                  <div class="det-expansion probability-expansion">
+                    <span class="math-inline" data-math="P(C_1\mid R)=\dfrac{\frac19}{\frac{47}{180}}"></span>
+                    <span class="math-inline" data-math="= (\frac{1}{9}) \cdot (\frac{180}{47})"></span>
+                    <strong class="math-inline" data-math="= \frac{20}{47} \approx 0{,}4255"></strong>
+                  </div>
+                  <figure class="bayes-composition" role="img" aria-label="Reparto de la probabilidad de obtener rojo entre las tres cajas: 20 partes de la caja 1, 12 de la caja 2 y 15 de la caja 3">
+                    <div class="bayes-bar" aria-hidden="true">
+                      <span class="bayes-c1"><b>C₁</b><small>20</small></span>
+                      <span class="bayes-c2"><b>C₂</b><small>12</small></span>
+                      <span class="bayes-c3"><b>C₃</b><small>15</small></span>
+                    </div>
+                    <figcaption>De las 47 partes que producen rojo, 20 corresponden a C₁.</figcaption>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Interpretamos el resultado</h3>
+                  <p>Entre todos los botones rojos que puede producir el experimento, aproximadamente el 42,55 % procede de la primera caja. Es más que 1/3 porque C₁ tiene la mayor proporción de botones rojos: 1 de cada 3.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry probability-essential bayes-essential">
+              <div class="math-display" data-math="P(C_{1} \cap R) = P(C_{1})P(R\mid C_{1}) = (\frac{1}{3})(\frac{1}{3}) = \frac{1}{9}" data-math-display></div>
+              <div class="math-display" data-math="P(R) = \frac{47}{180}" data-math-display></div>
+              <strong class="math-inline" data-math="P(C_1\mid R)=\dfrac{\frac19}{\frac{47}{180}}=\frac{20}{47}"></strong>
+            </div>
+
+            <div class="result probability-result">
+              <span>Resultado</span>
+              <strong>P(C₁ | R) = 20/47</strong>
+              <p>≈ 0,4255 = 42,55 %</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

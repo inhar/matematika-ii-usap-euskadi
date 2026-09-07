@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parabolaren ukitzaileak · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-tangentes-idiomas.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Ordinaria · Opción A · Problema A.3</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Derivadas · Junio de 2019</p>
+        <h1>Tangentes a una parábola desde un punto exterior</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Dada la función y el punto exterior a su gráfica:</p>
+        <div class="function-data" aria-label="Función f de x igual a x al cuadrado más sesenta y cuatro y punto P igual a seis coma cero">
+          <span class="math-inline" data-math="f(x) = x^{2} + 64"></span>
+          <span class="math-inline" data-math="P = (6, 0)"></span>
+        </div>
+        <p class="statement-prompt">Encontrar la recta o rectas tangentes a f que pasan por P.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Problema A.3</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Llamaremos a a la coordenada x del punto desconocido de tangencia. Como ese punto está en la parábola, será T = (a, f(a)); además, la pendiente de la tangente allí es f′(a). Con esos dos datos escribiremos la ecuación general de la tangente y exigiremos que pase por P = (6, 0). Obtendremos una ecuación de segundo grado para a: cada una de sus soluciones determinará una recta tangente.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Problema A.3</p>
+            <h2 id="solution-title">Rectas tangentes que pasan por P</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. La derivada da la pendiente de la tangente</h3>
+                <p>Si una función es derivable en x = a, la pendiente de su recta tangente en ese punto es el valor de la derivada.</p>
+                <div class="theory-formula math-display" data-math="m_{t} = f'(a)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Ecuación punto-pendiente</h3>
+                <p>La recta de pendiente m que pasa por (x₀, y₀) se escribe:</p>
+                <div class="theory-formula math-display" data-math="y - y_{0} = m(x - x_{0})" data-math-display></div>
+                <p>En una tangente, el punto conocido es T = (a, f(a)) y la pendiente es f′(a).</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Condición de paso por un punto</h3>
+                <p>Una recta pasa por P = (6, 0) si, al sustituir x = 6 e y = 0 en su ecuación, la igualdad se cumple. Esta condición permitirá encontrar a.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Ecuación de segundo grado</h3>
+                <p>Para una ecuación mónica u² + bu + c = 0, las soluciones se calculan con:</p>
+                <div class="theory-formula math-display" data-math="u=\frac{-b\pm\sqrt{b^2-4c}}{2}" data-math-display></div>
+                <p>Si aparecen dos soluciones distintas, habrá dos puntos de tangencia y, por tanto, dos rectas.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Representamos el punto de tangencia</h3>
+                  <p>Sea a la coordenada x del punto donde la recta toca la parábola. Como el punto pertenece a la gráfica de f, su coordenada y es f(a).</p>
+                  <div class="equation equation-compact math-display" data-math="T = (a, f(a)) = (a, a^{2} + 64)" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la pendiente de la tangente</h3>
+                  <p>Derivamos f(x) = x² + 64. La derivada de x² es 2x y la de una constante es 0.</p>
+                  <div class="derivation tangent-derivation">
+                    <div><span class="math-inline" data-math="f'(x)"></span><span class="math-inline" data-math="="></span><span>2x</span></div>
+                    <div><span class="math-inline" data-math="f'(a)"></span><span class="math-inline" data-math="="></span><span>2a</span></div>
+                  </div>
+                  <p>Por tanto, la pendiente de la tangente en T es m = 2a.</p>
+                </li>
+
+                <li>
+                  <h3>Escribimos la tangente en función de a</h3>
+                  <p>Usamos la ecuación punto-pendiente con T = (a, a² + 64) y m = 2a:</p>
+                  <div class="derivation tangent-derivation tangent-derivation-wide">
+                    <div><span class="math-inline" data-math="y - (a^{2} + 64)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="2a(x - a)"></span></div>
+                    <div><span class="math-inline" data-math="y"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="2ax-a^2+64"></span></div>
+                  </div>
+                  <p>Esta fórmula representa la tangente para cualquier posible punto de contacto a.</p>
+                </li>
+
+                <li>
+                  <h3>Imponemos que la recta pase por P</h3>
+                  <p>Sustituimos las coordenadas P = (6, 0), es decir, x = 6 e y = 0:</p>
+                  <div class="derivation tangent-derivation tangent-derivation-wide">
+                    <div><span>0</span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="2a\cdot 6 - a^{2} + 64"></span></div>
+                    <div><span>0</span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="12a - a^{2} + 64"></span></div>
+                    <div><span class="math-inline" data-math="a^{2} - 12a - 64"></span><span class="math-inline" data-math="="></span><span>0</span></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Resolvemos la ecuación de segundo grado</h3>
+                  <p>Sus coeficientes son 1, −12 y −64. Calculamos primero el discriminante:</p>
+                  <div class="equation equation-compact math-display" data-math="\Delta = (-12)^{2} - 4\cdot 1\cdot (-64) = 144 + 256 = 400" data-math-display></div>
+                  <div class="derivation tangent-derivation tangent-derivation-wide">
+                    <div><span>a</span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="\frac{12\pm\sqrt{400}}{2}"></span></div>
+                    <div><span>a</span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="\frac{12\pm20}{2}"></span></div>
+                  </div>
+                  <div class="vector-pair tangent-values">
+                    <span>a₁ = 16;</span>
+                    <span>a₂ = −4.</span>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Construimos las dos rectas</h3>
+                  <p>Sustituimos cada valor de a en y = 2ax − a² + 64.</p>
+                  <div class="calculation-list tangent-lines-work">
+                    <div><span class="math-inline" data-math="a = 16"></span><strong class="math-inline" data-math="y = 32x - 16^{2} + 64 = 32x - 192"></strong></div>
+                    <div><span class="math-inline" data-math="a = -4"></span><strong class="math-inline" data-math="y = -8x - (-4)^{2} + 64 = -8x + 48"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos el resultado</h3>
+                  <p>Las dos rectas pasan por P porque al sustituir x = 6 se obtiene y = 0. Además, sus pendientes coinciden con la derivada en sus respectivos puntos de tangencia.</p>
+                  <div class="calculation-list tangent-checks">
+                    <div><span class="math-inline" data-math="a=16"></span><strong class="math-inline" data-math-es="T_1=(16,320),\ \text{pendiente }32=f'(16)" data-math-eu="T_1=(16,320),\ \text{malda }32=f'(16)"></strong></div>
+                    <div><span class="math-inline" data-math="a=-4"></span><strong class="math-inline" data-math-es="T_2=(-4,80),\ \text{pendiente }-8=f'(-4)" data-math-eu="T_2=(-4,80),\ \text{malda }-8=f'(-4)"></strong></div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry tangent-essential">
+              <div class="math-display" data-math="T = (a, a^{2} + 64), m = f'(a) = 2a" data-math-display></div>
+              <div class="math-display" data-math="y=2ax-a^2+64" data-math-display></div>
+              <strong class="math-inline" data-math-es="P(6,0)\Rightarrow a^2-12a-64=0\Rightarrow a=16\ \text{o}\ a=-4" data-math-eu="P(6,0)\Rightarrow a^2-12a-64=0\Rightarrow a=16\ \text{edo}\ a=-4"></strong>
+            </div>
+
+            <div class="cases tangent-cases">
+              <div class="case">
+                <p>a = 16</p>
+                <strong>y = 32x − 192</strong>
+              </div>
+              <div class="case">
+                <p>a = −4</p>
+                <strong>y = −8x + 48</strong>
+              </div>
+            </div>
+
+            <div class="result result-long tangent-result">
+              <span>Resultado</span>
+              <strong>y = 32x − 192<br>y = −8x + 48</strong>
+              <p>Las dos rectas son tangentes a f y pasan por P.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

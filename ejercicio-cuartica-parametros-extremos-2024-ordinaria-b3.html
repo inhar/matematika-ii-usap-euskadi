@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funtzio kuartikoaren parametroak eta muturrak · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-cuartica-parametros-extremos-2024-ordinaria-b3-idiomas.js?v=1" defer></script>
+  <script src="ejercicio-cuartica-parametros-extremos-2024-ordinaria-b3-grafico.js?v=1" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="page quartic-2024-page">
+  <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+    <a href="index.html">← Volver a ejercicios</a>
+    <div class="exercise-nav-meta">
+      <span class="source-reference">2024 · Ordinaria · Ejercicio B3</span>
+      <div class="language-switch" data-language-switch></div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Análisis · Derivadas y extremos · 2024</p>
+      <h1>De la tangente a la función</h1>
+    </div>
+  </header>
+
+  <section class="problem" aria-labelledby="statement-title">
+    <div class="section-index">00</div>
+    <div class="section-content">
+      <h2 id="statement-title">Enunciado</h2>
+      <p>La función</p>
+      <div class="statement-function math-display" data-math="f(x)=Ax^4+Bx^2+C" data-math-display></div>
+      <p data-quartic-2024-language="es">tiene un extremo relativo cuando <span class="math-inline math-nowrap" data-math="x=\frac12"></span>, y la recta tangente a su gráfica en <span class="math-inline math-nowrap" data-math="x=1"></span> es <span class="math-inline math-nowrap" data-math="y=6x-2"></span>.</p>
+      <p data-quartic-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=\frac12"></span> denean mutur erlatibo bat du, eta <span class="math-inline math-nowrap" data-math="x=1"></span> puntuan haren grafikoarekiko ukitzailea <span class="math-inline math-nowrap" data-math="y=6x-2"></span> da.</p>
+      <ol class="problem-list">
+        <li>Encuentra los valores de los parámetros <span class="math-inline math-nowrap" data-math="A,B,C"></span>.</li>
+        <li>Encuentra todos los extremos relativos de <span class="math-inline math-nowrap" data-math="f"></span> y clasifícalos.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="level-control" aria-labelledby="level-title">
+    <p class="control-label" id="level-title">Qué quieres ver</p>
+    <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+      <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+      <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+      <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+      <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+    </div>
+  </section>
+
+  <div class="tabs" role="tablist" aria-label="Apartados de la solución">
+    <button class="tab active" type="button" role="tab" aria-selected="true" data-target="quartic-2024-part-a">Apartado A</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-target="quartic-2024-part-b">Apartado B</button>
+  </div>
+
+  <div class="solutions">
+    <section id="quartic-2024-part-a" class="panel active" role="tabpanel">
+      <div class="section-index">01</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Apartado A</p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-quartic-2024-language="es">Cada dato geométrico se convierte en una ecuación. El extremo en <span class="math-inline math-nowrap" data-math="x=\frac12"></span> obliga a que allí la derivada valga cero.</p>
+          <p class="idea-text" data-quartic-2024-language="eu" hidden>Datu geometriko bakoitza ekuazio bihurtzen dugu. <span class="math-inline math-nowrap" data-math="x=\frac12"></span> puntuko muturrak deribatua bertan zero izatea eskatzen du.</p>
+          <p class="idea-text" data-quartic-2024-language="es">La tangente <span class="math-inline math-nowrap" data-math="y=6x-2"></span> aporta dos condiciones: su pendiente es <span class="math-inline math-nowrap" data-math="6"></span> y, al tomar <span class="math-inline math-nowrap" data-math="x=1"></span>, pasa por <span class="math-inline math-nowrap" data-math="(1,4)"></span>. Las tres condiciones determinan <span class="math-inline math-nowrap" data-math="A,B,C"></span>.</p>
+          <p class="idea-text" data-quartic-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="y=6x-2"></span> ukitzaileak bi baldintza ematen ditu: haren malda <span class="math-inline math-nowrap" data-math="6"></span> da eta, <span class="math-inline math-nowrap" data-math="x=1"></span> hartuta, <span class="math-inline math-nowrap" data-math="(1,4)"></span> puntutik igarotzen da. Hiru baldintzek <span class="math-inline math-nowrap" data-math="A,B,C"></span> zehazten dituzte.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="f'\!\left(\frac12\right)=0,\qquad f(1)=4,\qquad f'(1)=6" data-math-display></strong></div>
+        </div>
+
+        <div class="solution-view" hidden>
+          <p class="kicker">Apartado A</p>
+          <h2>Traducimos los datos en tres ecuaciones</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>1. Condición necesaria de extremo</h3>
+              <p data-quartic-2024-language="es">Si una función derivable tiene un extremo relativo en un punto interior <span class="math-inline math-nowrap" data-math="x_0"></span>, entonces su tangente es horizontal.</p>
+              <p data-quartic-2024-language="eu" hidden>Funtzio deribagarri batek barneko <span class="math-inline math-nowrap" data-math="x_0"></span> puntu batean mutur erlatiboa badu, haren ukitzailea horizontala da.</p>
+              <div class="theory-formula math-display" data-math="x_0\text{ es extremo}\quad\Longrightarrow\quad f'(x_0)=0" data-math-display></div>
+            </div>
+            <div class="theory-topic">
+              <h3>2. Información de una recta tangente</h3>
+              <p data-quartic-2024-language="es">La tangente en <span class="math-inline math-nowrap" data-math="x_0"></span> pasa por <span class="math-inline math-nowrap" data-math="(x_0,f(x_0))"></span> y su pendiente es <span class="math-inline math-nowrap" data-math="f'(x_0)"></span>. Por eso, si conocemos su ecuación, obtenemos tanto el valor como la derivada de la función.</p>
+              <p data-quartic-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="x_0"></span> puntuko ukitzailea <span class="math-inline math-nowrap" data-math="(x_0,f(x_0))"></span> puntutik igarotzen da, eta haren malda <span class="math-inline math-nowrap" data-math="f'(x_0)"></span> da. Beraz, haren ekuazioa ezagututa, funtzioaren balioa eta deribatua lortzen ditugu.</p>
+              <div class="theory-formula math-display" data-math="y-f(x_0)=f'(x_0)(x-x_0)" data-math-display></div>
+            </div>
+          </aside>
+
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Derivamos la función</h3>
+                <div class="math-display" data-math="f'(x)=4Ax^3+2Bx" data-math-display></div>
+              </li>
+              <li>
+                <h3>Usamos el extremo situado en <span class="math-inline math-nowrap" data-math="x=\frac12"></span></h3>
+                <p data-quartic-2024-language="es">Como la función es derivable, en ese extremo su derivada debe valer cero.</p>
+                <p data-quartic-2024-language="eu" hidden>Funtzioa deribagarria denez, mutur horretan deribatuak zero balio behar du.</p>
+                <div class="math-display" data-math="f'\!\left(\frac12\right)=4A\left(\frac12\right)^3+2B\left(\frac12\right)=\frac A2+B=0" data-math-display></div>
+              </li>
+              <li>
+                <h3>Obtenemos el punto de tangencia</h3>
+                <p data-quartic-2024-language="es">La tangente es <span class="math-inline math-nowrap" data-math="y=6x-2"></span>. Para <span class="math-inline math-nowrap" data-math="x=1"></span>, su ordenada es <span class="math-inline math-nowrap" data-math="4"></span>; por tanto, la gráfica de <span class="math-inline math-nowrap" data-math="f"></span> pasa por <span class="math-inline math-nowrap" data-math="(1,4)"></span>.</p>
+                <p data-quartic-2024-language="eu" hidden>Ukitzailea <span class="math-inline math-nowrap" data-math="y=6x-2"></span> da. <span class="math-inline math-nowrap" data-math="x=1"></span> denean, haren ordenatua <span class="math-inline math-nowrap" data-math="4"></span> da; hortaz, <span class="math-inline math-nowrap" data-math="f"></span>-ren grafikoa <span class="math-inline math-nowrap" data-math="(1,4)"></span> puntutik igarotzen da.</p>
+                <div class="math-display" data-math="f(1)=A+B+C=4" data-math-display></div>
+              </li>
+              <li>
+                <h3>Usamos la pendiente de la tangente</h3>
+                <p data-quartic-2024-language="es">El coeficiente de <span class="math-inline math-nowrap" data-math="x"></span> en la recta es <span class="math-inline math-nowrap" data-math="6"></span>, así que esa es la derivada de <span class="math-inline math-nowrap" data-math="f"></span> en <span class="math-inline math-nowrap" data-math="x=1"></span>.</p>
+                <p data-quartic-2024-language="eu" hidden>Zuzeneko <span class="math-inline math-nowrap" data-math="x"></span>-ren koefizientea <span class="math-inline math-nowrap" data-math="6"></span> da; beraz, hori da <span class="math-inline math-nowrap" data-math="f"></span>-ren deribatua <span class="math-inline math-nowrap" data-math="x=1"></span> denean.</p>
+                <div class="math-display" data-math="f'(1)=4A+2B=6" data-math-display></div>
+              </li>
+              <li>
+                <h3>Resolvemos el sistema</h3>
+                <div class="math-display" data-math="\frac A2+B=0\quad\Longrightarrow\quad B=-\frac A2" data-math-display></div>
+                <div class="math-display" data-math="4A+2\left(-\frac A2\right)=6" data-math-display></div>
+                <div class="math-display" data-math="3A=6\quad\Longrightarrow\quad A=2" data-math-display></div>
+                <div class="math-display" data-math="B=-1,\qquad 2-1+C=4\quad\Longrightarrow\quad C=3" data-math-display></div>
+              </li>
+            </ol>
+          </div>
+
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry">
+            <div class="math-display" data-math="\frac A2+B=0;\qquad A+B+C=4" data-math-display></div>
+            <div class="math-display" data-math="4A+2B=6" data-math-display></div>
+            <strong class="math-display" data-math="A=2,\qquad B=-1,\qquad C=3" data-math-display></strong>
+          </div>
+          <div class="result"><span>Resultado</span><strong class="math-display" data-math="f(x)=2x^4-x^2+3" data-math-display></strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quartic-2024-part-b" class="panel" role="tabpanel" hidden>
+      <div class="section-index">02</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Apartado B</p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-quartic-2024-language="es">Con los parámetros ya conocidos, buscamos todos los puntos donde <span class="math-inline math-nowrap" data-math="f'(x)=0"></span>. La factorización de la derivada permite leer directamente las tres abscisas candidatas.</p>
+          <p class="idea-text" data-quartic-2024-language="eu" hidden>Parametroak ezagututa, <span class="math-inline math-nowrap" data-math="f'(x)=0"></span> den puntu guztiak bilatzen ditugu. Deribatuaren faktorizazioak hiru abzisa hautagaiak zuzenean ematen ditu.</p>
+          <p class="idea-text" data-quartic-2024-language="es">Después evaluamos la segunda derivada: un valor negativo indica máximo y uno positivo, mínimo. Finalmente calculamos las ordenadas sustituyendo en <span class="math-inline math-nowrap" data-math="f"></span>.</p>
+          <p class="idea-text" data-quartic-2024-language="eu" hidden>Ondoren, bigarren deribatua ebaluatzen dugu: balio negatiboak maximoa adierazten du, eta positiboak minimoa. Amaitzeko, ordenatuak <span class="math-inline math-nowrap" data-math="f"></span>-n ordezkatuz kalkulatzen ditugu.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="f'(x)=2x(2x-1)(2x+1)" data-math-display></strong></div>
+        </div>
+
+        <div class="solution-view" hidden>
+          <p class="kicker">Apartado B</p>
+          <h2>Hallamos y clasificamos los tres puntos críticos</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>1. Puntos críticos</h3>
+              <p data-quartic-2024-language="es">En una función derivable, los extremos relativos solo pueden aparecer donde la derivada se anula. Resolver <span class="math-inline math-nowrap" data-math="f'(x)=0"></span> proporciona los candidatos; todavía hay que clasificarlos.</p>
+              <p data-quartic-2024-language="eu" hidden>Funtzio deribagarri batean, mutur erlatiboak deribatua nulua den tokietan baino ezin dira agertu. <span class="math-inline math-nowrap" data-math="f'(x)=0"></span> ebazteak hautagaiak ematen ditu; gero sailkatu egin behar dira.</p>
+            </div>
+            <div class="theory-topic">
+              <h3>2. Criterio de la segunda derivada</h3>
+              <p data-quartic-2024-language="es">Si <span class="math-inline math-nowrap" data-math="f'(x_0)=0"></span>, el signo de <span class="math-inline math-nowrap" data-math="f''(x_0)"></span> describe la curvatura local.</p>
+              <p data-quartic-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="f'(x_0)=0"></span> bada, <span class="math-inline math-nowrap" data-math="f''(x_0)"></span>-ren zeinuak tokiko kurbadura deskribatzen du.</p>
+              <div class="theory-formula math-display" data-math="f''(x_0)<0\quad\Longrightarrow\quad\text{máximo}" data-math-display data-math-es="f''(x_0)<0\quad\Longrightarrow\quad\text{máximo}" data-math-eu="f''(x_0)<0\quad\Longrightarrow\quad\text{maximoa}"></div>
+              <div class="theory-formula math-display" data-math="f''(x_0)>0\quad\Longrightarrow\quad\text{mínimo}" data-math-display data-math-es="f''(x_0)>0\quad\Longrightarrow\quad\text{mínimo}" data-math-eu="f''(x_0)>0\quad\Longrightarrow\quad\text{minimoa}"></div>
+            </div>
+          </aside>
+
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Derivamos y factorizamos</h3>
+                <div class="math-display" data-math="f'(x)=8x^3-2x=2x(4x^2-1)" data-math-display></div>
+                <div class="math-display" data-math="f'(x)=2x(2x-1)(2x+1)" data-math-display></div>
+              </li>
+              <li>
+                <h3>Encontramos los puntos críticos</h3>
+                <div class="math-display" data-math="2x(2x-1)(2x+1)=0" data-math-display></div>
+                <div class="math-display" data-math="x=0;\qquad x=\frac12;\qquad x=-\frac12" data-math-display></div>
+              </li>
+              <li>
+                <h3>Calculamos la segunda derivada</h3>
+                <div class="math-display" data-math="f''(x)=24x^2-2" data-math-display></div>
+              </li>
+              <li>
+                <h3>Clasificamos cada candidato</h3>
+                <div class="math-display" data-math="f''(0)=-2<0" data-math-display></div>
+                <p data-quartic-2024-language="es"><span class="math-inline math-nowrap" data-math="x=0"></span> es un máximo relativo.</p>
+                <p data-quartic-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=0"></span> maximo erlatiboa da.</p>
+                <div class="math-display" data-math="f''\!\left(\pm\frac12\right)=4>0" data-math-display></div>
+                <p data-quartic-2024-language="es"><span class="math-inline math-nowrap" data-math="x=\pm\frac12"></span> son mínimos relativos.</p>
+                <p data-quartic-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=\pm\frac12"></span> minimo erlatiboak dira.</p>
+              </li>
+              <li>
+                <h3>Calculamos las ordenadas</h3>
+                <div class="math-display" data-math="f(0)=3" data-math-display></div>
+                <div class="math-display" data-math="f\!\left(\pm\frac12\right)=2\left(\frac12\right)^4-\left(\frac12\right)^2+3=\frac{23}{8}" data-math-display></div>
+              </li>
+            </ol>
+          </div>
+
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry">
+            <div class="math-display" data-math="f'(x)=2x(2x-1)(2x+1)=0" data-math-display></div>
+            <div class="math-display" data-math="x=-\frac12;\qquad x=0;\qquad x=\frac12" data-math-display></div>
+            <div class="math-display" data-math="f''(0)=-2<0;\qquad f''\!\left(\pm\frac12\right)=4>0" data-math-display></div>
+          </div>
+
+          <figure class="quartic-2024-figure" aria-label="Ampliación local de la función cuártica alrededor de sus extremos">
+            <figcaption data-quartic-2024-language="es">Ampliación vertical del entorno de los tres extremos. La diferencia entre sus alturas es solo <span class="math-inline math-nowrap" data-math="\frac18"></span>.</figcaption>
+            <figcaption data-quartic-2024-language="eu" hidden>Hiru muturren inguruko handitze bertikala. Haien altueren arteko aldea <span class="math-inline math-nowrap" data-math="\frac18"></span> baino ez da.</figcaption>
+            <div id="quartic-2024-board" class="jxgbox quartic-2024-board" role="img" aria-label="Máximo en cero y mínimos en menos un medio y un medio"></div>
+          </figure>
+
+          <div class="result quartic-2024-result">
+            <span>Resultado</span>
+            <strong data-quartic-2024-language="es">Máximo relativo en <span class="math-inline math-nowrap" data-math="(0,3)"></span>; mínimos relativos en <span class="math-inline math-nowrap" data-math="\left(-\frac12,\frac{23}{8}\right)"></span> y <span class="math-inline math-nowrap" data-math="\left(\frac12,\frac{23}{8}\right)"></span>.</strong>
+            <strong data-quartic-2024-language="eu" hidden>Maximo erlatiboa <span class="math-inline math-nowrap" data-math="(0,3)"></span> puntuan; minimo erlatiboak <span class="math-inline math-nowrap" data-math="\left(-\frac12,\frac{23}{8}\right)"></span> eta <span class="math-inline math-nowrap" data-math="\left(\frac12,\frac{23}{8}\right)"></span> puntuetan.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

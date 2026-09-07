@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zuzenaren posizioa planoarekiko · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-posicion-recta-plano-parametros-2021-ordinaria-idiomas.js?v=2021-ord-p3d" defer></script>
+  <script src="ejercicio-posicion-recta-plano-parametros-2021-ordinaria-grafico.js?v=2021-ord-p3b" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2021 · Ordinaria · Problema 3</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Geometría en el espacio · Rectas y planos · 2021</p>
+        <h1>Posición de una recta respecto de un plano</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>La recta <span class="math-inline math-nowrap" data-math="r"></span> pasa por los puntos:</p>
+        <div class="position-2021-points">
+          <span class="math-inline" data-math="A(1,a,-1)"></span>
+          <span class="math-inline" data-math="B(b,1,1)"></span>
+        </div>
+        <p>y el plano está definido por:</p>
+        <div class="equation position-2021-statement-plane math-display" data-math="\pi\colon x+y-2z=2b" data-math-display></div>
+
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">Calcular los valores de <span class="math-inline math-nowrap" data-math="a"></span> <span class="math-inline" data-math-es="\text{y}" data-math-eu="\text{eta}"></span> <span class="math-inline math-nowrap" data-math="b"></span> para que la recta sea perpendicular al plano.</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">Calcular los valores de <span class="math-inline math-nowrap" data-math="a"></span> <span class="math-inline" data-math-es="\text{y}" data-math-eu="\text{eta}"></span> <span class="math-inline math-nowrap" data-math="b"></span> para que la recta esté contenida en el plano.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="position-2021-part-a" data-target="position-2021-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="position-2021-part-b" data-target="position-2021-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="position-2021-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">La dirección de la recta se obtiene restando las coordenadas de sus dos puntos. El plano, por su parte, tiene un vector normal que se lee directamente en los coeficientes de su ecuación.</p>
+            <p class="idea-text">Para que una recta sea perpendicular a un plano, su vector director debe ser paralelo al vector normal del plano. Por eso igualaremos ambos vectores mediante un factor de proporcionalidad. La tercera componente, que no contiene parámetros, permitirá hallar primero ese factor y después obtener los valores de los parámetros.</p>
+            <div class="essential-geometry position-2021-idea">
+              <div class="math-display" data-math="d_r=(b-1,1-a,2)" data-math-display></div>
+              <div class="math-display" data-math="n_\pi=(1,1,-2)" data-math-display></div>
+              <strong class="math-display" data-math="r\perp\pi\Longleftrightarrow d_r=\lambda n_\pi" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Perpendicularidad entre la recta y el plano</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Vector director a partir de dos puntos</h3>
+                <p>Dos puntos distintos determinan una recta. Al restar el punto inicial al punto final obtenemos un vector con la dirección de esa recta.</p>
+                <div class="theory-formula math-display" data-math="d_r=\overrightarrow{AB}=B-A" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Vector normal de un plano</h3>
+                <p>En la ecuación general de un plano, los coeficientes de las tres variables forman un vector perpendicular al plano.</p>
+                <div class="theory-formula math-display" data-math="Ax+By+Cz=D\Longrightarrow n_\pi=(A,B,C)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Recta perpendicular a un plano</h3>
+                <p>Una recta es perpendicular a un plano cuando avanza en la dirección normal al plano. Por tanto, su vector director y el normal son proporcionales.</p>
+                <div class="theory-formula math-display" data-math="r\perp\pi\Longleftrightarrow d_r=\lambda n_\pi" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Calculamos el vector director de la recta</h3>
+                  <p>A las coordenadas de <span class="math-inline math-nowrap" data-math="B"></span> les restamos las de <span class="math-inline math-nowrap" data-math="A"></span>, siempre en el mismo orden.</p>
+                  <div class="position-2021-vector-work">
+                    <div class="math-display" data-math="\overrightarrow{AB}=B-A" data-math-display></div>
+                    <div class="math-display" data-math="=(b-1,\,1-a,\,1-(-1))" data-math-display></div>
+                    <strong class="math-display" data-math="d_r=(b-1,\,1-a,\,2)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Leemos el vector normal del plano</h3>
+                  <p>Tomamos los coeficientes de <span class="math-inline math-nowrap" data-math="x"></span>, <span class="math-inline math-nowrap" data-math="y"></span> <span class="math-inline" data-math-es="\text{y}" data-math-eu="\text{eta}"></span> <span class="math-inline math-nowrap" data-math="z"></span>.</p>
+                  <p>El término <span class="math-inline math-nowrap" data-math="2b"></span> no interviene en la orientación del plano.</p>
+                  <div class="position-2021-normal-work">
+                    <div class="math-display" data-math="\pi\colon 1x+1y-2z=2b" data-math-display></div>
+                    <strong class="math-display" data-math="n_\pi=(1,1,-2)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Imponemos que los vectores sean proporcionales</h3>
+                  <p>Escribimos la igualdad vectorial. Una misma constante debe relacionar las tres componentes.</p>
+                  <div class="equation position-2021-proportional math-display" data-math="\begin{pmatrix}b-1\\1-a\\2\end{pmatrix}=\lambda\begin{pmatrix}1\\1\\-2\end{pmatrix}" data-math-display></div>
+                  <p>La tercera componente determina inmediatamente la constante.</p>
+                  <div class="position-2021-equations">
+                    <div class="math-display" data-math="2=-2\lambda" data-math-display></div>
+                    <strong class="math-display" data-math="\lambda=-1" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos los dos parámetros</h3>
+                  <p>Sustituimos en las componentes primera y segunda el valor <span class="math-inline math-nowrap" data-math="\lambda=-1"></span>.</p>
+                  <div class="position-2021-parameter-work">
+                    <div>
+                      <span class="math-inline" data-math="b-1=-1"></span>
+                      <strong class="math-inline" data-math="b=0"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="1-a=-1"></span>
+                      <strong class="math-inline" data-math="a=2"></strong>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos la dirección obtenida</h3>
+                  <p>Con esos valores, el vector director es exactamente el opuesto del normal. Por tanto, ambos son paralelos y la recta es perpendicular al plano.</p>
+                  <div class="equation position-2021-check math-display" data-math="d_r=(-1,-1,2)=-(1,1,-2)=-n_\pi" data-math-display></div>
+
+                  <figure class="position-2021-figure position-2021-perpendicular-figure" aria-label="Recta perpendicular al plano para a igual a dos y b igual a cero">
+                    <figcaption>La recta sigue la dirección normal del plano y lo corta formando un ángulo recto.</figcaption>
+                    <div id="position-2021-perpendicular-board" class="jxgbox position-2021-board" role="img" aria-label="Plano pi y recta r perpendicular con los puntos A y B"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry position-2021-essential">
+              <div class="math-display" data-math="d_r=(b-1,1-a,2)" data-math-display></div>
+              <div class="math-display" data-math="n_\pi=(1,1,-2)" data-math-display></div>
+              <div class="math-display" data-math="d_r=\lambda n_\pi,\qquad 2=-2\lambda\Rightarrow\lambda=-1" data-math-display></div>
+              <strong class="math-display" data-math="b-1=-1,\qquad 1-a=-1" data-math-display></strong>
+            </div>
+
+            <div class="result result-long geometry-result position-2021-result">
+              <span>Resultado</span>
+              <strong class="math-inline" data-math="a=2,\qquad b=0"></strong>
+              <p>La recta es perpendicular al plano.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="position-2021-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Para que toda la recta esté dentro del plano deben cumplirse dos condiciones: la dirección de la recta tiene que ser paralela al plano y, además, al menos un punto de la recta debe pertenecer al plano.</p>
+            <p class="idea-text">La primera condición se traduce en un producto escalar nulo entre el vector director y el normal. Para la segunda sustituiremos el punto <span class="math-inline math-nowrap" data-math="A"></span> en la ecuación del plano. Las dos ecuaciones obtenidas forman un sistema para <span class="math-inline math-nowrap" data-math="a"></span> <span class="math-inline" data-math-es="\text{y}" data-math-eu="\text{eta}"></span> <span class="math-inline math-nowrap" data-math="b"></span>.</p>
+            <div class="essential-geometry position-2021-idea">
+              <div class="math-display" data-math="d_r\cdot n_\pi=0" data-math-display></div>
+              <div class="math-display" data-math="A\in\pi" data-math-display></div>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Condiciones para que la recta esté contenida</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Dirección paralela a un plano</h3>
+                <p>Un vector es paralelo a un plano cuando es perpendicular a su vector normal. Esto equivale a que su producto escalar con el normal sea cero.</p>
+                <div class="theory-formula math-display" data-math="d_r\parallel\pi\Longleftrightarrow d_r\cdot n_\pi=0" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Pertenencia de un punto a un plano</h3>
+                <p>Un punto pertenece al plano cuando sus coordenadas satisfacen la ecuación. Basta comprobar un punto de la recta si ya sabemos que su dirección es paralela al plano.</p>
+                <div class="theory-formula math-display" data-math="P(x_0,y_0,z_0)\in\pi\Longleftrightarrow x_0+y_0-2z_0=2b" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Criterio de recta contenida</h3>
+                <p>Las dos condiciones son necesarias: la dirección evita que la recta salga del plano y el punto fija la recta sobre él. Juntas son también suficientes.</p>
+                <div class="theory-formula position-2021-contained-criterion">
+                  <span class="math-inline" data-math="d_r\cdot n_\pi=0"></span>
+                  <span class="math-inline" data-math="A\in\pi"></span>
+                  <strong class="math-inline" data-math="\Longrightarrow r\subset\pi"></strong>
+                </div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Imponemos que la dirección sea paralela al plano</h3>
+                  <p>Usamos el vector director y el normal calculados en el apartado anterior. Desarrollamos el producto escalar componente a componente.</p>
+                  <div class="position-2021-dot-work">
+                    <div class="math-display" data-math="(b-1,1-a,2)\cdot(1,1,-2)=0" data-math-display></div>
+                    <div class="math-display" data-math="b-1+1-a-4=0" data-math-display></div>
+                    <strong class="math-display" data-math="-a+b=4" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Imponemos que un punto pertenezca al plano</h3>
+                  <p>Elegimos <span class="math-inline math-nowrap" data-math="A(1,a,-1)"></span> y sustituimos sus coordenadas en <span class="math-inline math-nowrap" data-math="x+y-2z=2b"></span>.</p>
+                  <div class="position-2021-membership-work">
+                    <div class="math-display" data-math="1+a-2(-1)=2b" data-math-display></div>
+                    <div class="math-display" data-math="1+a+2=2b" data-math-display></div>
+                    <strong class="math-display" data-math="a-2b=-3" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Resolvemos el sistema de dos ecuaciones</h3>
+                  <p>Sumamos las ecuaciones para eliminar <span class="math-inline math-nowrap" data-math="a"></span> y hallar primero <span class="math-inline math-nowrap" data-math="b"></span>.</p>
+                  <div class="position-2021-system">
+                    <div class="math-display" data-math="\begin{cases}-a+b=4\\a-2b=-3\end{cases}" data-math-display></div>
+                    <div class="math-display" data-math="-b=1" data-math-display></div>
+                    <strong class="math-display" data-math="b=-1" data-math-display></strong>
+                  </div>
+                  <p>Sustituimos ese valor en la primera ecuación.</p>
+                  <div class="position-2021-equations">
+                    <div class="math-display" data-math="-a-1=4" data-math-display></div>
+                    <strong class="math-display" data-math="a=-5" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos las dos condiciones</h3>
+                  <p>Con los parámetros hallados, ambos puntos satisfacen la ecuación del plano y el vector director es perpendicular al normal.</p>
+                  <div class="position-2021-verification">
+                    <div>
+                      <span class="math-inline" data-math="A(1,-5,-1)"></span>
+                      <strong class="math-inline" data-math="1-5+2=-2"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="B(-1,1,1)"></span>
+                      <strong class="math-inline" data-math="-1+1-2=-2"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="d_r=(-2,6,2)"></span>
+                      <strong class="math-inline" data-math="d_r\cdot n_\pi=-2+6-4=0"></strong>
+                    </div>
+                  </div>
+
+                  <figure class="position-2021-figure position-2021-contained-figure" aria-label="Recta contenida en el plano para a igual a menos cinco y b igual a menos uno">
+                    <figcaption>Los puntos <span class="math-inline math-nowrap" data-math="A"></span> <span class="math-inline" data-math-es="\text{y}" data-math-eu="\text{eta}"></span> <span class="math-inline math-nowrap" data-math="B"></span> están sobre el plano, y la dirección completa de la recta permanece en él.</figcaption>
+                    <div id="position-2021-contained-board" class="jxgbox position-2021-board" role="img" aria-label="Plano pi con la recta r contenida y los puntos A y B"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry position-2021-essential">
+              <div class="math-display" data-math="d_r\cdot n_\pi=0\Rightarrow -a+b=4" data-math-display></div>
+              <div class="math-display" data-math="A\in\pi\Rightarrow a-2b=-3" data-math-display></div>
+              <strong class="math-display" data-math="\begin{cases}-a+b=4\\a-2b=-3\end{cases}" data-math-display></strong>
+            </div>
+
+            <div class="result result-long geometry-result position-2021-result">
+              <span>Resultado</span>
+              <strong class="math-inline" data-math="a=-5,\qquad b=-1"></strong>
+              <p>La recta está contenida en el plano.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

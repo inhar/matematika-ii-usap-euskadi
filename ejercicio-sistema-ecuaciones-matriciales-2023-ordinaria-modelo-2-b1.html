@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matrize-ekuazioen sistema · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-sistema-ecuaciones-matriciales-2023-ordinaria-modelo-2-idiomas.js?v=2023-ord-m2-b1" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Modelo 2 · Ejercicio B1</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Álgebra lineal · Operaciones con matrices · 2023</p>
+        <h1 class="matrix-system-2023-title">Sistema de ecuaciones matriciales</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-matrix-system-2023-language="es">Calcula las matrices <span class="math-inline math-nowrap" data-math="A"></span> y <span class="math-inline math-nowrap" data-math="B"></span> que satisfacen las siguientes igualdades:</p>
+        <p data-matrix-system-2023-language="eu" hidden>Kalkulatu honako berdintzak betetzen dituzten <span class="math-inline math-nowrap" data-math="A"></span> eta <span class="math-inline math-nowrap" data-math="B"></span> matrizeak:</p>
+        <div class="matrix-system-2023-statement">
+          <div class="math-display" data-math="A+B=\begin{pmatrix}2&amp;8&amp;2&amp;9\\2&amp;6&amp;2&amp;11\end{pmatrix}" data-math-display></div>
+          <div class="math-display" data-math="3A-2B=\begin{pmatrix}6&amp;-16&amp;6&amp;-3\\-4&amp;18&amp;-4&amp;18\end{pmatrix}" data-math-display></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio B1</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-matrix-system-2023-language="es">Aunque las incógnitas son matrices, la estructura es la de un sistema lineal ordinario con dos incógnitas. Podemos multiplicar una ecuación por un número y sumar las dos ecuaciones para eliminar una de las matrices.</p>
+            <p class="idea-text" data-matrix-system-2023-language="eu" hidden>Ezezagunak matrizeak izan arren, egitura bi ezezaguneko sistema lineal arrunt batena da. Ekuazio bat zenbaki batez biderkatu eta bi ekuazioak batu ditzakegu matrizeetako bat ezabatzeko.</p>
+            <p class="idea-text" data-matrix-system-2023-language="es">Llamando <span class="math-inline math-nowrap" data-math="C"></span> y <span class="math-inline math-nowrap" data-math="D"></span> a las matrices conocidas, multiplicamos <span class="math-inline math-nowrap" data-math="A+B=C"></span> por 2 y sumamos. Los términos con <span class="math-inline math-nowrap" data-math="B"></span> se cancelan y obtenemos directamente <span class="math-inline math-nowrap" data-math="A"></span>. Después usamos <span class="math-inline math-nowrap" data-math="B=C-A"></span>.</p>
+            <p class="idea-text" data-matrix-system-2023-language="eu" hidden>Matrize ezagunei <span class="math-inline math-nowrap" data-math="C"></span> eta <span class="math-inline math-nowrap" data-math="D"></span> deituta, <span class="math-inline math-nowrap" data-math="A+B=C"></span> ekuazioa 2z biderkatu eta batu egiten dugu. <span class="math-inline math-nowrap" data-math="B"></span> duten gaiak ezabatu, eta zuzenean <span class="math-inline math-nowrap" data-math="A"></span> lortzen dugu. Ondoren, <span class="math-inline math-nowrap" data-math="B=C-A"></span> erabiltzen dugu.</p>
+            <div class="essential-geometry matrix-system-2023-idea">
+              <div class="math-display" data-math="3A-2B+2(A+B)=D+2C" data-math-display></div>
+              <div class="math-display" data-math="5A=D+2C" data-math-display></div>
+              <strong class="math-display" data-math="A=\frac{D+2C}{5},\qquad B=C-A" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio B1</p>
+            <h2 id="solution-title">Eliminación de incógnitas matriciales</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Las matrices forman un espacio vectorial</h3>
+                <p data-matrix-system-2023-language="es">Las matrices del mismo tamaño se pueden sumar, restar y multiplicar por números. Estas operaciones cumplen las mismas propiedades algebraicas que usamos al resolver un sistema de ecuaciones.</p>
+                <p data-matrix-system-2023-language="eu" hidden>Tamaina bereko matrizeak batu, kendu eta zenbakiez biderka daitezke. Eragiketa horiek ekuazio-sistema bat ebaztean erabiltzen ditugun propietate aljebraiko berak betetzen dituzte.</p>
+                <div class="matrix-system-2023-theory-chain">
+                  <div class="math-display" data-math="\lambda(A+B)=\lambda A+\lambda B" data-math-display></div>
+                  <div class="math-display" data-math="A+B=B+A" data-math-display></div>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Es un sistema lineal de dos incógnitas</h3>
+                <p data-matrix-system-2023-language="es">Si representamos las matrices conocidas por <span class="math-inline math-nowrap" data-math="C"></span> y <span class="math-inline math-nowrap" data-math="D"></span>, los coeficientes escalares forman un sistema de orden 2. Su determinante es distinto de cero, por lo que existe una única pareja <span class="math-inline math-nowrap" data-math="(A,B)"></span>.</p>
+                <p data-matrix-system-2023-language="eu" hidden>Matrize ezagunak <span class="math-inline math-nowrap" data-math="C"></span> eta <span class="math-inline math-nowrap" data-math="D"></span> bidez adierazten baditugu, koefiziente eskalarrek 2. ordenako sistema bat osatzen dute. Haren determinantea zero ez denez, <span class="math-inline math-nowrap" data-math="(A,B)"></span> bikote bakarra dago.</p>
+                <div class="matrix-system-2023-theory-system">
+                  <div class="math-display" data-math="\begin{pmatrix}1&amp;1\\3&amp;-2\end{pmatrix}\begin{pmatrix}A\\B\end{pmatrix}=\begin{pmatrix}C\\D\end{pmatrix}" data-math-display></div>
+                  <div class="math-display" data-math="\begin{vmatrix}1&amp;1\\3&amp;-2\end{vmatrix}=-5\ne0" data-math-display></div>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Eliminación por combinación lineal</h3>
+                <p data-matrix-system-2023-language="es">Para eliminar <span class="math-inline math-nowrap" data-math="B"></span>, hacemos que sus coeficientes sean opuestos. Multiplicar la primera ecuación por 2 produce <span class="math-inline math-nowrap" data-math="+2B"></span>, que se cancela con <span class="math-inline math-nowrap" data-math="-2B"></span> al sumar.</p>
+                <p data-matrix-system-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="B"></span> ezabatzeko, haren koefizienteak aurkakoak izatea eragiten dugu. Lehen ekuazioa 2z biderkatzean <span class="math-inline math-nowrap" data-math="+2B"></span> lortzen da, eta batzean <span class="math-inline math-nowrap" data-math="-2B"></span>-rekin ezabatzen da.</p>
+                <div class="math-display" data-math="(3A-2B)+2(A+B)=5A" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Abreviamos las matrices conocidas</h3>
+                  <p data-matrix-system-2023-language="es">Esta notación permite ver con claridad el sistema antes de realizar las cuentas entrada por entrada.</p>
+                  <p data-matrix-system-2023-language="eu" hidden>Notazio horrek sistema argi ikusteko aukera ematen du, sarreraz sarrerako kalkuluak egin aurretik.</p>
+                  <div class="matrix-system-2023-work matrix-system-2023-known">
+                    <div class="math-display" data-math="C=\begin{pmatrix}2&amp;8&amp;2&amp;9\\2&amp;6&amp;2&amp;11\end{pmatrix}" data-math-display></div>
+                    <div class="math-display" data-math="D=\begin{pmatrix}6&amp;-16&amp;6&amp;-3\\-4&amp;18&amp;-4&amp;18\end{pmatrix}" data-math-display></div>
+                  </div>
+                  <div class="matrix-system-2023-work">
+                    <div class="math-display" data-math="A+B=C" data-math-display></div>
+                    <div class="math-display" data-math="3A-2B=D" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Eliminamos la matriz B</h3>
+                  <p data-matrix-system-2023-language="es">Multiplicamos la primera ecuación por 2 y la sumamos a la segunda.</p>
+                  <p data-matrix-system-2023-language="eu" hidden>Lehen ekuazioa 2z biderkatu eta bigarrenari batzen diogu.</p>
+                  <div class="matrix-system-2023-work">
+                    <div class="math-display" data-math="2A+2B=2C" data-math-display></div>
+                    <div class="math-display" data-math="3A-2B=D" data-math-display></div>
+                    <div class="math-display" data-math="5A=D+2C" data-math-display></div>
+                    <strong class="math-display" data-math="A=\frac{D+2C}{5}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la matriz A</h3>
+                  <p data-matrix-system-2023-language="es">Primero duplicamos cada entrada de <span class="math-inline math-nowrap" data-math="C"></span>; después sumamos las matrices entrada a entrada.</p>
+                  <p data-matrix-system-2023-language="eu" hidden>Lehenik <span class="math-inline math-nowrap" data-math="C"></span>-ren sarrera bakoitza bikoizten dugu; ondoren, matrizeak sarreraz sarrera batzen ditugu.</p>
+                  <div class="matrix-system-2023-work">
+                    <div class="math-display" data-math="2C=\begin{pmatrix}4&amp;16&amp;4&amp;18\\4&amp;12&amp;4&amp;22\end{pmatrix}" data-math-display></div>
+                    <div class="math-display" data-math="D+2C=\begin{pmatrix}10&amp;0&amp;10&amp;15\\0&amp;30&amp;0&amp;40\end{pmatrix}" data-math-display></div>
+                    <div class="math-display" data-math="A=\frac15\begin{pmatrix}10&amp;0&amp;10&amp;15\\0&amp;30&amp;0&amp;40\end{pmatrix}" data-math-display></div>
+                    <strong class="math-display" data-math="A=\begin{pmatrix}2&amp;0&amp;2&amp;3\\0&amp;6&amp;0&amp;8\end{pmatrix}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Despejamos y calculamos la matriz B</h3>
+                  <p data-matrix-system-2023-language="es">Volvemos a la primera ecuación y restamos <span class="math-inline math-nowrap" data-math="A"></span> en ambos miembros.</p>
+                  <p data-matrix-system-2023-language="eu" hidden>Lehen ekuaziora itzuli eta <span class="math-inline math-nowrap" data-math="A"></span> kentzen dugu bi aldeetan.</p>
+                  <div class="matrix-system-2023-work">
+                    <div class="math-display" data-math="B=C-A" data-math-display></div>
+                    <div class="math-display" data-math="B=\begin{pmatrix}2-2&amp;8-0&amp;2-2&amp;9-3\\2-0&amp;6-6&amp;2-0&amp;11-8\end{pmatrix}" data-math-display></div>
+                    <strong class="math-display" data-math="B=\begin{pmatrix}0&amp;8&amp;0&amp;6\\2&amp;0&amp;2&amp;3\end{pmatrix}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos las dos igualdades</h3>
+                  <p data-matrix-system-2023-language="es">Sustituimos los resultados. Las dos matrices obtenidas deben satisfacer simultáneamente las dos ecuaciones originales.</p>
+                  <p data-matrix-system-2023-language="eu" hidden>Emaitzak ordezkatzen ditugu. Lortutako bi matrizeek jatorrizko bi ekuazioak aldi berean bete behar dituzte.</p>
+                  <div class="matrix-system-2023-work matrix-system-2023-checks">
+                    <div>
+                      <div class="math-display" data-math="A+B" data-math-display></div>
+                      <div class="math-display" data-math="=\begin{pmatrix}2&amp;8&amp;2&amp;9\\2&amp;6&amp;2&amp;11\end{pmatrix}=C" data-math-display></div>
+                    </div>
+                    <div>
+                      <div class="math-display" data-math="3A-2B" data-math-display></div>
+                      <div class="math-display" data-math="=\begin{pmatrix}6&amp;-16&amp;6&amp;-3\\-4&amp;18&amp;-4&amp;18\end{pmatrix}=D" data-math-display></div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry matrix-system-2023-essential">
+              <div class="math-display" data-math="3A-2B+2(A+B)=D+2C" data-math-display></div>
+              <div class="math-display" data-math="5A=D+2C=\begin{pmatrix}10&amp;0&amp;10&amp;15\\0&amp;30&amp;0&amp;40\end{pmatrix}" data-math-display></div>
+              <strong class="math-display" data-math="A=\begin{pmatrix}2&amp;0&amp;2&amp;3\\0&amp;6&amp;0&amp;8\end{pmatrix}" data-math-display></strong>
+              <div class="math-display" data-math="B=C-A" data-math-display></div>
+              <strong class="math-display" data-math="B=\begin{pmatrix}0&amp;8&amp;0&amp;6\\2&amp;0&amp;2&amp;3\end{pmatrix}" data-math-display></strong>
+            </div>
+
+            <div class="result result-long matrix-system-2023-result">
+              <span>Resultado</span>
+              <div class="matrix-system-2023-result-pair">
+                <strong class="math-display" data-math="A=\begin{pmatrix}2&amp;0&amp;2&amp;3\\0&amp;6&amp;0&amp;8\end{pmatrix}" data-math-display></strong>
+                <strong class="math-display" data-math="B=\begin{pmatrix}0&amp;8&amp;0&amp;6\\2&amp;0&amp;2&amp;3\end{pmatrix}" data-math-display></strong>
+              </div>
+              <p data-matrix-system-2023-language="es">La comprobación verifica que ambas ecuaciones se cumplen.</p>
+              <p data-matrix-system-2023-language="eu" hidden>Egiaztapenak bi ekuazioak betetzen direla baieztatzen du.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

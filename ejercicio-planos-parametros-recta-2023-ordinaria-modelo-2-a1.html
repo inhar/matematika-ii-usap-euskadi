@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parametrodun hiru plano: zuzen bateko ebakidura? · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-planos-parametros-recta-2023-ordinaria-modelo-2-idiomas.js?v=2023-ord-m2-a1" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Modelo 2 · Ejercicio A1</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Geometría en el espacio · Posiciones relativas · 2023</p>
+        <h1 class="planes-line-2023-title">Tres planos con parámetros: ¿intersección en una recta?</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-planes-line-2023-language="es">Se consideran tres planos de ecuaciones:</p>
+        <p data-planes-line-2023-language="eu" hidden>Hiru plano hauek emanda:</p>
+        <div class="planes-line-2023-statement math-display" data-math="\begin{aligned}\pi_1&amp;\equiv4x+2y-4z=2,\\\pi_2&amp;\equiv x-y-z=2,\\\pi_3&amp;\equiv x+ay+z=b.\end{aligned}" data-math-display></div>
+        <p data-planes-line-2023-language="es">¿Existen valores de los parámetros <span class="math-inline math-nowrap" data-math="a"></span> y <span class="math-inline math-nowrap" data-math="b"></span> para los cuales los tres planos se cortan en una recta? Razona la respuesta y, si es afirmativa, calcula dichos valores.</p>
+        <p data-planes-line-2023-language="eu" hidden>Ba al dago <span class="math-inline math-nowrap" data-math="a"></span> eta <span class="math-inline math-nowrap" data-math="b"></span> parametroen baliorik hiru planoak zuzen batean ebaki daitezen? Arrazoitu erantzuna eta, baiezkoa bada, kalkulatu balio horiek.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio A1</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-planes-line-2023-language="es">Los tres planos forman un sistema de tres ecuaciones con tres incógnitas. Para que su intersección común sea una recta, el sistema debe tener una variable libre: las matrices de coeficientes y ampliada tendrían que compartir rango 2.</p>
+            <p class="idea-text" data-planes-line-2023-language="eu" hidden>Hiru planoek hiru ekuazioko eta hiru ezezaguneko sistema bat osatzen dute. Ebakidura komuna zuzen bat izan dadin, sistemak aldagai aske bat izan behar du: koefizienteen matrizeak eta matrize hedatuak 2ko heina izan beharko lukete.</p>
+            <p class="idea-text" data-planes-line-2023-language="es">Por tanto, basta comprobar si la matriz de coeficientes puede perder rango. Al calcular su determinante, el parámetro <span class="math-inline math-nowrap" data-math="a"></span> desaparece y obtenemos siempre <span class="math-inline math-nowrap" data-math="-12"></span>. La matriz es invertible para cualquier valor de los parámetros, así que los planos siempre se cortan en un único punto.</p>
+            <p class="idea-text" data-planes-line-2023-language="eu" hidden>Beraz, nahikoa da koefizienteen matrizeak heina gal dezakeen egiaztatzea. Determinantea kalkulatzean, <span class="math-inline math-nowrap" data-math="a"></span> parametroa desagertu eta beti <span class="math-inline math-nowrap" data-math="-12"></span> lortzen dugu. Matrizea alderantzikagarria da parametroen edozein baliotarako; hortaz, planoak puntu bakar batean ebakitzen dira beti.</p>
+            <div class="essential-geometry planes-line-2023-idea">
+              <div class="math-display" data-math="\det A=-12\ne0" data-math-display></div>
+              <strong class="math-display" data-math="\operatorname{rg}(A)=3\quad\text{para todo }a" data-math-eu="\operatorname{rg}(A)=3\quad a\text{-ren balio guztietarako}" data-math-display></strong>
+              <strong data-planes-line-2023-language="es">No existen valores de <span class="math-inline math-nowrap" data-math="a"></span> y <span class="math-inline math-nowrap" data-math="b"></span> que produzcan una recta.</strong>
+              <strong data-planes-line-2023-language="eu" hidden>Ez dago zuzen bat sortzen duen <span class="math-inline math-nowrap" data-math="a"></span> eta <span class="math-inline math-nowrap" data-math="b"></span> baliorik.</strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio A1</p>
+            <h2 id="solution-title">Estudio de la intersección mediante el determinante</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Interpretación geométrica del rango</h3>
+                <p data-planes-line-2023-language="es">Las ecuaciones de los planos forman un sistema lineal con tres incógnitas. Si es compatible, el número de parámetros libres es el número de incógnitas menos el rango.</p>
+                <p data-planes-line-2023-language="eu" hidden>Planoen ekuazioek hiru ezezaguneko sistema lineal bat osatzen dute. Bateragarria bada, parametro askeen kopurua ezezagun kopurua ken heina da.</p>
+                <div class="planes-line-2023-theory-chain">
+                  <div class="math-display" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)=2" data-math-display></div>
+                  <div class="math-display" data-math="3-2=1\ \text{parámetro libre}\Rightarrow\text{recta}" data-math-eu="3-2=1\ \text{parametro aske}\Rightarrow\text{zuzena}" data-math-display></div>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Determinante y solución única</h3>
+                <p data-planes-line-2023-language="es">En una matriz cuadrada, un determinante no nulo equivale a tener rango máximo. Entonces el sistema posee una única solución para cualquier término independiente.</p>
+                <p data-planes-line-2023-language="eu" hidden>Matrize karratu batean, zero ez den determinantea gehienezko heina izatearen baliokidea da. Orduan, sistemak soluzio bakarra du gai independenteen edozein baliotarako.</p>
+                <div class="planes-line-2023-theory-chain">
+                  <div class="math-display" data-math="\det A\ne0\Longleftrightarrow\operatorname{rg}(A)=3" data-math-display></div>
+                  <div class="math-display" data-math="\operatorname{rg}(A)=3\Rightarrow\text{un punto}" data-math-eu="\operatorname{rg}(A)=3\Rightarrow\text{puntu bat}" data-math-display></div>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Qué papel desempeña cada parámetro</h3>
+                <p data-planes-line-2023-language="es">El parámetro <span class="math-inline math-nowrap" data-math="a"></span> está en la matriz de coeficientes y podría, en principio, alterar su rango. El parámetro <span class="math-inline math-nowrap" data-math="b"></span> solo está en la columna de términos independientes. Pero, como <span class="math-inline math-nowrap" data-math="A"></span> es invertible para todo <span class="math-inline math-nowrap" data-math="a"></span>, ningún valor de <span class="math-inline math-nowrap" data-math="b"></span> puede convertir la solución única en una recta.</p>
+                <p data-planes-line-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="a"></span> parametroa koefizienteen matrizean dago eta, hasiera batean, haren heina alda lezake. <span class="math-inline math-nowrap" data-math="b"></span> parametroa gai independenteen zutabean baino ez dago. Baina <span class="math-inline math-nowrap" data-math="A"></span> alderantzikagarria denez <span class="math-inline math-nowrap" data-math="a"></span>-ren balio guztietarako, <span class="math-inline math-nowrap" data-math="b"></span>-ren ezein baliok ezin du soluzio bakarra zuzen bihurtu.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Escribimos las matrices del sistema</h3>
+                  <p data-planes-line-2023-language="es">Los coeficientes de <span class="math-inline math-nowrap" data-math="x,y,z"></span> forman <span class="math-inline math-nowrap" data-math="A"></span>; los términos independientes forman la última columna de <span class="math-inline math-nowrap" data-math="A^*"></span>.</p>
+                  <p data-planes-line-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="x,y,z"></span> aldagaien koefizienteek <span class="math-inline math-nowrap" data-math="A"></span> osatzen dute; gai independenteek <span class="math-inline math-nowrap" data-math="A^*"></span>-ren azken zutabea osatzen dute.</p>
+                  <div class="planes-line-2023-work planes-line-2023-matrices">
+                    <div class="math-display" data-math="A=\begin{pmatrix}4&amp;2&amp;-4\\1&amp;-1&amp;-1\\1&amp;a&amp;1\end{pmatrix}" data-math-display></div>
+                    <div class="math-display" data-math="A^*=\left(\begin{array}{ccc|c}4&amp;2&amp;-4&amp;2\\1&amp;-1&amp;-1&amp;2\\1&amp;a&amp;1&amp;b\end{array}\right)" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Traducimos «cortarse en una recta»</h3>
+                  <p data-planes-line-2023-language="es">Una recta en el espacio necesita un parámetro libre. Con tres incógnitas, esto exige que ambos rangos sean 2.</p>
+                  <p data-planes-line-2023-language="eu" hidden>Espazioko zuzen batek parametro aske bat behar du. Hiru ezezagun izanik, bi heinek 2 izan behar dute.</p>
+                  <div class="planes-line-2023-work">
+                    <strong class="math-display" data-math="\text{recta}\Longrightarrow\operatorname{rg}(A)=\operatorname{rg}(A^*)=2" data-math-eu="\text{zuzena}\Longrightarrow\operatorname{rg}(A)=\operatorname{rg}(A^*)=2" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Simplificamos el determinante</h3>
+                  <p data-planes-line-2023-language="es">Restar a una fila un múltiplo de otra no cambia el determinante. Aplicamos <span class="math-inline math-nowrap" data-math="F_1\leftarrow F_1-4F_2"></span>.</p>
+                  <p data-planes-line-2023-language="eu" hidden>Errenkada bati beste baten multiplo bat kentzeak ez du determinantea aldatzen. <span class="math-inline math-nowrap" data-math="F_1\leftarrow F_1-4F_2"></span> aplikatzen dugu.</p>
+                  <div class="planes-line-2023-work">
+                    <div class="math-display" data-math="\begin{pmatrix}4&amp;2&amp;-4\\1&amp;-1&amp;-1\\1&amp;a&amp;1\end{pmatrix}\longrightarrow\begin{pmatrix}0&amp;6&amp;0\\1&amp;-1&amp;-1\\1&amp;a&amp;1\end{pmatrix}" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos el determinante</h3>
+                  <p data-planes-line-2023-language="es">Desarrollamos por la primera fila transformada. Solo interviene el elemento 6, situado en la posición <span class="math-inline math-nowrap" data-math="(1,2)"></span>, cuyo signo es negativo.</p>
+                  <p data-planes-line-2023-language="eu" hidden>Eraldatutako lehen errenkadatik garatzen dugu. 6 elementuak baino ez du parte hartzen; <span class="math-inline math-nowrap" data-math="(1,2)"></span> posizioan dago eta haren zeinua negatiboa da.</p>
+                  <div class="planes-line-2023-work">
+                    <div class="math-display" data-math="\det A=-6\begin{vmatrix}1&amp;-1\\1&amp;1\end{vmatrix}" data-math-display></div>
+                    <div class="math-display" data-math="\det A=-6\bigl(1-(-1)\bigr)" data-math-display></div>
+                    <strong class="math-display" data-math="\det A=-12" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Interpretamos el resultado</h3>
+                  <p data-planes-line-2023-language="es">El determinante no depende de <span class="math-inline math-nowrap" data-math="a"></span> y nunca se anula. Por tanto, <span class="math-inline math-nowrap" data-math="A"></span> tiene rango 3 para cualquier <span class="math-inline math-nowrap" data-math="a"></span>. Al ser invertible, el sistema es compatible determinado para cualquier <span class="math-inline math-nowrap" data-math="b"></span>.</p>
+                  <p data-planes-line-2023-language="eu" hidden>Determinantea ez dago <span class="math-inline math-nowrap" data-math="a"></span>-ren mende eta ez da inoiz anulatzen. Beraz, <span class="math-inline math-nowrap" data-math="A"></span>-ren heina 3 da <span class="math-inline math-nowrap" data-math="a"></span>-ren edozein baliotarako. Alderantzikagarria denez, sistema bateragarri determinatua da <span class="math-inline math-nowrap" data-math="b"></span>-ren edozein baliotarako.</p>
+                  <div class="planes-line-2023-work">
+                    <div class="math-display" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)=3" data-math-display></div>
+                    <strong class="math-display" data-math="\text{intersección}=\text{un único punto}" data-math-eu="\text{ebakidura}=\text{puntu bakar bat}" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry planes-line-2023-essential">
+              <div class="math-display" data-math="A=\begin{pmatrix}4&amp;2&amp;-4\\1&amp;-1&amp;-1\\1&amp;a&amp;1\end{pmatrix}" data-math-display></div>
+              <div class="math-display" data-math="F_1\leftarrow F_1-4F_2" data-math-display></div>
+              <div class="math-display" data-math="\det A=-6\begin{vmatrix}1&amp;-1\\1&amp;1\end{vmatrix}=-12" data-math-display></div>
+              <strong class="math-display" data-math="\det A\ne0\Rightarrow\operatorname{rg}(A)=3" data-math-display></strong>
+              <strong data-planes-line-2023-language="es">Los tres planos siempre se cortan en un punto, nunca en una recta.</strong>
+              <strong data-planes-line-2023-language="eu" hidden>Hiru planoak puntu batean ebakitzen dira beti, inoiz ez zuzen batean.</strong>
+            </div>
+
+            <div class="result result-long planes-line-2023-result">
+              <span>Resultado</span>
+              <strong data-planes-line-2023-language="es">No existen valores de <span class="math-inline math-nowrap" data-math="a"></span> y <span class="math-inline math-nowrap" data-math="b"></span>.</strong>
+              <strong data-planes-line-2023-language="eu" hidden>Ez dago <span class="math-inline math-nowrap" data-math="a"></span> eta <span class="math-inline math-nowrap" data-math="b"></span> baliorik.</strong>
+              <p data-planes-line-2023-language="es">Para cualquier pareja <span class="math-inline math-nowrap" data-math="(a,b)"></span>, la intersección común es un único punto.</p>
+              <p data-planes-line-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="(a,b)"></span> bikote guztietarako, ebakidura komuna puntu bakar bat da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

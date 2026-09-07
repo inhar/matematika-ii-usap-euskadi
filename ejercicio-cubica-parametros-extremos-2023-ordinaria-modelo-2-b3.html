@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funtzio kubikoaren parametroak eta muturrak · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-cubica-parametros-extremos-2023-ordinaria-modelo-2-idiomas.js?v=2023-ord-m2-b3" defer></script>
+  <script src="ejercicio-cubica-parametros-extremos-2023-ordinaria-modelo-2-grafico.js?v=2023-ord-m2-b3" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page cubic-extrema-2023-page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Modelo 2 · Ejercicio B3</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Parámetros, tangentes y extremos · 2023</p>
+        <h1 class="cubic-extrema-2023-title">Parámetros y extremos de una función cúbica</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-cubic-extrema-2023-language="es">Sea la función</p>
+        <p data-cubic-extrema-2023-language="eu" hidden>Har dezagun funtzio hau:</p>
+        <div class="statement-function cubic-extrema-2023-statement math-display" data-math="f(x)=x^3+Ax^2+Bx+C" data-math-display></div>
+        <p data-cubic-extrema-2023-language="es">Encuentra los valores de los parámetros <span class="math-inline math-nowrap" data-math="A"></span>, <span class="math-inline math-nowrap" data-math="B"></span> y <span class="math-inline math-nowrap" data-math="C"></span> para que se cumplan las condiciones siguientes:</p>
+        <p data-cubic-extrema-2023-language="eu" hidden>Aurkitu <span class="math-inline math-nowrap" data-math="A"></span>, <span class="math-inline math-nowrap" data-math="B"></span> eta <span class="math-inline math-nowrap" data-math="C"></span> parametroen balioak, honako baldintza hauek bete daitezen:</p>
+        <ul class="cubic-extrema-2023-conditions">
+          <li data-cubic-extrema-2023-language="es"><span class="math-inline math-nowrap" data-math="f(0)=2"></span>;</li>
+          <li data-cubic-extrema-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="f(0)=2"></span>;</li>
+          <li data-cubic-extrema-2023-language="es">las tangentes en los puntos de abscisas <span class="math-inline math-nowrap" data-math="x=1"></span> y <span class="math-inline math-nowrap" data-math="x=3"></span> son paralelas;</li>
+          <li data-cubic-extrema-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=1"></span> eta <span class="math-inline math-nowrap" data-math="x=3"></span> abzisetako ukitzaileak paraleloak dira;</li>
+          <li data-cubic-extrema-2023-language="es"><span class="math-inline math-nowrap" data-math="f"></span> tiene un extremo relativo en <span class="math-inline math-nowrap" data-math="x=-1"></span>.</li>
+          <li data-cubic-extrema-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="f"></span>-k mutur erlatibo bat du <span class="math-inline math-nowrap" data-math="x=-1"></span> puntuan.</li>
+        </ul>
+        <p data-cubic-extrema-2023-language="es">Determina si ese extremo es un máximo o un mínimo. Estudia si existe algún otro extremo relativo y clasifícalo.</p>
+        <p data-cubic-extrema-2023-language="eu" hidden>Zehaztu mutur hori maximoa edo minimoa den. Aztertu beste mutur erlatiborik dagoen eta sailkatu.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio B3</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-cubic-extrema-2023-language="es">Cada dato se convierte en una ecuación para los parámetros. El valor <span class="math-inline math-nowrap" data-math="f(0)=2"></span> determina directamente <span class="math-inline math-nowrap" data-math="C"></span>. Como la derivada es la pendiente de la tangente, el paralelismo se traduce en <span class="math-inline math-nowrap" data-math="f'(1)=f'(3)"></span>; y que exista un extremo en <span class="math-inline math-nowrap" data-math="x=-1"></span> significa <span class="math-inline math-nowrap" data-math="f'(-1)=0"></span>.</p>
+            <p class="idea-text" data-cubic-extrema-2023-language="eu" hidden>Datu bakoitza parametroentzako ekuazio bihurtzen da. <span class="math-inline math-nowrap" data-math="f(0)=2"></span> balioak zuzenean zehazten du <span class="math-inline math-nowrap" data-math="C"></span>. Deribatua ukitzailearen malda denez, paralelismoa <span class="math-inline math-nowrap" data-math="f'(1)=f'(3)"></span> baldintza bihurtzen da; eta <span class="math-inline math-nowrap" data-math="x=-1"></span> puntuan mutur bat egoteak <span class="math-inline math-nowrap" data-math="f'(-1)=0"></span> esan nahi du.</p>
+            <p class="idea-text" data-cubic-extrema-2023-language="es">Una vez hallados los parámetros, factorizamos <span class="math-inline math-nowrap" data-math="f'(x)"></span>. Sus ceros localizan todos los posibles extremos y el cambio de signo de la derivada permite decidir cuáles son máximos y cuáles mínimos.</p>
+            <p class="idea-text" data-cubic-extrema-2023-language="eu" hidden>Parametroak aurkitu ondoren, <span class="math-inline math-nowrap" data-math="f'(x)"></span> faktorizatzen dugu. Haren zeroek mutur posible guztiak kokatzen dituzte, eta deribatuaren zeinu-aldaketak maximoak eta minimoak bereizteko aukera ematen du.</p>
+            <div class="essential-geometry cubic-extrema-2023-essential">
+              <div class="math-display" data-math="C=2;\qquad f'(1)=f'(3);\qquad f'(-1)=0" data-math-display></div>
+              <strong class="math-display" data-math="A=-6;\qquad B=-15;\qquad C=2" data-math-display></strong>
+              <div class="math-display" data-math="f'(x)=3(x+1)(x-5)" data-math-display></div>
+              <div class="math-display" data-math-es="\text{Máximo: }(-1,10);\qquad\text{mínimo: }(5,-98)" data-math-eu="\text{Maximoa: }(-1,10);\qquad\text{minimoa: }(5,-98)" data-math-display></div>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio B3</p>
+            <h2 id="solution-title">De las condiciones a la función y sus extremos</h2>
+
+            <figure class="cubic-extrema-2023-figure" aria-label="Función cúbica con dos tangentes paralelas, un máximo y un mínimo">
+              <figcaption data-cubic-extrema-2023-language="es">Las tangentes en <span class="math-inline math-nowrap" data-math="x=1"></span> y <span class="math-inline math-nowrap" data-math="x=3"></span> tienen la misma pendiente. La curva presenta un máximo en <span class="math-inline math-nowrap" data-math="x=-1"></span> y un mínimo en <span class="math-inline math-nowrap" data-math="x=5"></span>.</figcaption>
+              <figcaption data-cubic-extrema-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=1"></span> eta <span class="math-inline math-nowrap" data-math="x=3"></span> puntuetako ukitzaileek malda bera dute. Kurbak maximo bat du <span class="math-inline math-nowrap" data-math="x=-1"></span> puntuan, eta minimo bat <span class="math-inline math-nowrap" data-math="x=5"></span> puntuan.</figcaption>
+              <div id="cubic-extrema-2023-board" class="jxgbox cubic-extrema-2023-board" role="img" aria-label="Cúbica con máximo en menos uno, mínimo en cinco y tangentes paralelas en uno y tres"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Derivada y pendiente de una tangente</h3>
+                <p data-cubic-extrema-2023-language="es">La pendiente de la tangente a una función en <span class="math-inline math-nowrap" data-math="x=a"></span> es <span class="math-inline math-nowrap" data-math="f'(a)"></span>. Dos rectas no verticales son paralelas si sus pendientes son iguales.</p>
+                <p data-cubic-extrema-2023-language="eu" hidden>Funtzio baten <span class="math-inline math-nowrap" data-math="x=a"></span> puntuko ukitzailearen malda <span class="math-inline math-nowrap" data-math="f'(a)"></span> da. Bi zuzen ez-bertikal paraleloak dira haien maldak berdinak badira.</p>
+                <div class="cubic-extrema-2023-theory-chain">
+                  <div class="math-display" data-math="m_{t_a}=f'(a)" data-math-display></div>
+                  <div class="math-display" data-math="t_1\parallel t_2\Longleftrightarrow m_{t_1}=m_{t_2}" data-math-display></div>
+                </div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Condición necesaria de extremo</h3>
+                <p data-cubic-extrema-2023-language="es">Si una función derivable tiene un extremo local en un punto interior, su derivada se anula allí. Esta condición localiza candidatos, pero todavía hay que clasificarlos.</p>
+                <p data-cubic-extrema-2023-language="eu" hidden>Funtzio deribagarri batek barruko puntu batean mutur lokal bat badu, haren deribatua zero da han. Baldintza horrek hautagaiak kokatzen ditu, baina oraindik sailkatu egin behar dira.</p>
+                <div class="theory-formula math-display" data-math="x=a\text{ extremo local}\quad\Longrightarrow\quad f'(a)=0" data-math-es="x=a\text{ extremo local}\quad\Longrightarrow\quad f'(a)=0" data-math-eu="x=a\text{ mutur lokala}\quad\Longrightarrow\quad f'(a)=0" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Clasificación mediante el signo de la derivada</h3>
+                <p data-cubic-extrema-2023-language="es">Si la derivada cambia de positiva a negativa, la función pasa de crecer a decrecer y aparece un máximo. Si cambia de negativa a positiva, aparece un mínimo.</p>
+                <p data-cubic-extrema-2023-language="eu" hidden>Deribatua positibotik negatibora aldatzen bada, funtzioa gorakor izatetik beherakor izatera pasatzen da eta maximo bat agertzen da. Negatibotik positibora aldatzen bada, minimo bat agertzen da.</p>
+                <div class="cubic-extrema-2023-theory-chain">
+                  <div class="math-display" data-math-es="+\to-\Rightarrow\text{ máximo}" data-math-eu="+\to-\Rightarrow\text{ maximoa}" data-math-display></div>
+                  <div class="math-display" data-math-es="-\to+\Rightarrow\text{ mínimo}" data-math-eu="-\to+\Rightarrow\text{ minimoa}" data-math-display></div>
+                </div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Usamos el valor de la función en <span class="math-inline math-nowrap" data-math="x=0"></span></h3>
+                  <p data-cubic-extrema-2023-language="es">Al sustituir <span class="math-inline math-nowrap" data-math="x=0"></span>, todos los términos salvo el independiente desaparecen.</p>
+                  <p data-cubic-extrema-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=0"></span> ordezkatzean, gai independentea izan ezik beste guztiak desagertzen dira.</p>
+                  <div class="cubic-extrema-2023-work">
+                    <div class="math-display" data-math="f(0)=0^3+A\cdot0^2+B\cdot0+C" data-math-display></div>
+                    <div class="math-display" data-math="f(0)=C=2" data-math-display></div>
+                    <strong class="math-display" data-math="C=2" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la derivada</h3>
+                  <p data-cubic-extrema-2023-language="es">Los parámetros son constantes. Derivamos término a término.</p>
+                  <p data-cubic-extrema-2023-language="eu" hidden>Parametroak konstanteak dira. Gaiz gai deribatzen dugu.</p>
+                  <div class="cubic-extrema-2023-work">
+                    <div class="math-display" data-math="f(x)=x^3+Ax^2+Bx+C" data-math-display></div>
+                    <strong class="math-display" data-math="f'(x)=3x^2+2Ax+B" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Traducimos el paralelismo de las tangentes</h3>
+                  <p data-cubic-extrema-2023-language="es">Las dos tangentes son paralelas si tienen la misma pendiente. Sustituimos las dos abscisas en la derivada e igualamos los resultados.</p>
+                  <p data-cubic-extrema-2023-language="eu" hidden>Bi ukitzaileak paraleloak dira malda bera badute. Bi abzisak deribatuan ordezkatu eta emaitzak berdintzen ditugu.</p>
+                  <div class="cubic-extrema-2023-work">
+                    <div class="math-display" data-math="f'(1)=3\cdot1^2+2A\cdot1+B=3+2A+B" data-math-display></div>
+                    <div class="math-display" data-math="f'(3)=3\cdot3^2+2A\cdot3+B=27+6A+B" data-math-display></div>
+                    <div class="math-display" data-math="3+2A+B=27+6A+B" data-math-display></div>
+                    <div class="math-display" data-math="3+2A=27+6A" data-math-display></div>
+                    <div class="math-display" data-math="-24=4A" data-math-display></div>
+                    <strong class="math-display" data-math="A=-6" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Usamos el extremo situado en <span class="math-inline math-nowrap" data-math="x=-1"></span></h3>
+                  <p data-cubic-extrema-2023-language="es">Como la función es derivable y tiene allí un extremo, imponemos <span class="math-inline math-nowrap" data-math="f'(-1)=0"></span>. Después sustituimos <span class="math-inline math-nowrap" data-math="A=-6"></span>.</p>
+                  <p data-cubic-extrema-2023-language="eu" hidden>Funtzioa deribagarria denez eta han mutur bat duenez, <span class="math-inline math-nowrap" data-math="f'(-1)=0"></span> ezartzen dugu. Ondoren, <span class="math-inline math-nowrap" data-math="A=-6"></span> ordezkatzen dugu.</p>
+                  <div class="cubic-extrema-2023-work">
+                    <div class="math-display" data-math="f'(-1)=3(-1)^2+2A(-1)+B=0" data-math-display></div>
+                    <div class="math-display" data-math="3-2A+B=0" data-math-display></div>
+                    <div class="math-display" data-math="3-2(-6)+B=0" data-math-display></div>
+                    <div class="math-display" data-math="15+B=0" data-math-display></div>
+                    <strong class="math-display" data-math="B=-15" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Escribimos la función obtenida y factorizamos su derivada</h3>
+                  <p data-cubic-extrema-2023-language="es">Con los tres parámetros conocidos ya podemos localizar todos los puntos críticos.</p>
+                  <p data-cubic-extrema-2023-language="eu" hidden>Hiru parametroak ezagututa, puntu kritiko guztiak koka ditzakegu.</p>
+                  <div class="cubic-extrema-2023-work">
+                    <strong class="math-display" data-math="f(x)=x^3-6x^2-15x+2" data-math-display></strong>
+                    <div class="math-display" data-math="f'(x)=3x^2-12x-15" data-math-display></div>
+                    <div class="math-display" data-math="f'(x)=3(x^2-4x-5)" data-math-display></div>
+                    <strong class="math-display" data-math="f'(x)=3(x+1)(x-5)" data-math-display></strong>
+                    <div class="math-display" data-math="f'(x)=0\quad\Longleftrightarrow\quad x=-1;\qquad x=5" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Clasificamos los dos extremos</h3>
+                  <p data-cubic-extrema-2023-language="es">El factor constante <span class="math-inline math-nowrap" data-math="3"></span> es positivo, así que el signo depende de <span class="math-inline math-nowrap" data-math="(x+1)(x-5)"></span>.</p>
+                  <p data-cubic-extrema-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="3"></span> faktore konstantea positiboa da; beraz, zeinua <span class="math-inline math-nowrap" data-math="(x+1)(x-5)"></span> biderkaduraren araberakoa da.</p>
+                  <div class="cubic-extrema-2023-signs">
+                    <div><span class="math-inline" data-math="(-\infty,-1)"></span><strong class="math-inline" data-math="f'(x)>0\Rightarrow f\nearrow"></strong></div>
+                    <div><span class="math-inline" data-math="(-1,5)"></span><strong class="math-inline" data-math="f'(x)<0\Rightarrow f\searrow"></strong></div>
+                    <div><span class="math-inline" data-math="(5,+\infty)"></span><strong class="math-inline" data-math="f'(x)>0\Rightarrow f\nearrow"></strong></div>
+                  </div>
+                  <p data-cubic-extrema-2023-language="es">En <span class="math-inline math-nowrap" data-math="x=-1"></span> la función pasa de crecer a decrecer: es un máximo local. En <span class="math-inline math-nowrap" data-math="x=5"></span> pasa de decrecer a crecer: es un mínimo local.</p>
+                  <p data-cubic-extrema-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=-1"></span> puntuan funtzioa gorakor izatetik beherakor izatera pasatzen da: maximo lokala da. <span class="math-inline math-nowrap" data-math="x=5"></span> puntuan beherakor izatetik gorakor izatera pasatzen da: minimo lokala da.</p>
+                  <div class="cubic-extrema-2023-work">
+                    <div class="math-display" data-math="f(-1)=-1-6+15+2=10" data-math-display></div>
+                    <div class="math-display" data-math="f(5)=125-150-75+2=-98" data-math-display></div>
+                    <strong class="math-display" data-math-es="\text{Máximo: }(-1,10);\qquad\text{mínimo: }(5,-98)" data-math-eu="\text{Maximoa: }(-1,10);\qquad\text{minimoa: }(5,-98)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos las tangentes paralelas</h3>
+                  <p data-cubic-extrema-2023-language="es">Calculamos la pendiente común y, para visualizar el paralelismo, escribimos las dos tangentes mediante la ecuación punto-pendiente.</p>
+                  <p data-cubic-extrema-2023-language="eu" hidden>Malda komuna kalkulatzen dugu eta, paralelismoa ikusteko, bi ukitzaileak puntu-malda ekuazioaren bidez idazten ditugu.</p>
+                  <div class="cubic-extrema-2023-work">
+                    <div class="math-display" data-math="f'(1)=f'(3)=-24" data-math-display></div>
+                    <div class="math-display" data-math="f(1)=-18;\qquad f(3)=-70" data-math-display></div>
+                    <div class="math-display" data-math="t_1:\ y+18=-24(x-1)\quad\Longrightarrow\quad y=-24x+6" data-math-display></div>
+                    <div class="math-display" data-math="t_3:\ y+70=-24(x-3)\quad\Longrightarrow\quad y=-24x+2" data-math-display></div>
+                    <strong class="math-display" data-math="t_1\parallel t_3" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry cubic-extrema-2023-essential">
+              <div class="math-display" data-math="f'(x)=3x^2+2Ax+B" data-math-display></div>
+              <div class="math-display" data-math="f(0)=2\Rightarrow C=2" data-math-display></div>
+              <div class="math-display" data-math="f'(1)=f'(3)\Rightarrow A=-6" data-math-display></div>
+              <div class="math-display" data-math="f'(-1)=0\Rightarrow B=-15" data-math-display></div>
+              <strong class="math-display" data-math="f(x)=x^3-6x^2-15x+2" data-math-display></strong>
+              <div class="math-display" data-math="f'(x)=3(x+1)(x-5)" data-math-display></div>
+              <div class="cubic-extrema-2023-essential-results">
+                <div class="math-display" data-math-es="\text{Máximo local: }(-1,10)" data-math-eu="\text{Maximo lokala: }(-1,10)" data-math-display></div>
+                <div class="math-display" data-math-es="\text{Mínimo local: }(5,-98)" data-math-eu="\text{Minimo lokala: }(5,-98)" data-math-display></div>
+              </div>
+            </div>
+
+            <div class="result result-long cubic-extrema-2023-result">
+              <span>Resultado</span>
+              <div class="cubic-extrema-2023-result-values">
+                <div class="cubic-extrema-2023-result-row cubic-extrema-2023-parameters">
+                  <strong class="math-display" data-math="A=-6" data-math-display></strong>
+                  <strong class="math-display" data-math="B=-15" data-math-display></strong>
+                  <strong class="math-display" data-math="C=2" data-math-display></strong>
+                </div>
+                <div class="cubic-extrema-2023-result-row">
+                  <strong class="math-display" data-math-es="\text{Máximo: }(-1,10)" data-math-eu="\text{Maximoa: }(-1,10)" data-math-display></strong>
+                  <strong class="math-display" data-math-es="\text{Mínimo: }(5,-98)" data-math-eu="\text{Minimoa: }(5,-98)" data-math-display></strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

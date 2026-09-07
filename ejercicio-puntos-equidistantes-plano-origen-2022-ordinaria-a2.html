@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Planoarekiko eta jatorriarekiko puntu distantziakideak · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-puntos-equidistantes-plano-origen-2022-ordinaria-idiomas.js?v=2022-ord-a2a" defer></script>
+  <script src="ejercicio-puntos-equidistantes-plano-origen-2022-ordinaria-grafico.js?v=2022-ord-a2a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2022 · Ordinaria · Ejercicio A2</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Geometría en el espacio · Distancias · 2022</p>
+        <h1 class="equidistance-2022-title">Puntos equidistantes de un plano y del origen</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Se consideran la recta y el plano:</p>
+        <div class="equidistance-2022-statement">
+          <div class="geometry-object">
+            <span class="math-inline" data-math="r\colon"></span>
+            <div class="equation-system compact-system equidistance-2022-system math-display" aria-label="Recta r en ecuaciones paramétricas" data-math="\begin{cases}x=t\\y=2t\\z=0\end{cases}" data-math-display></div>
+          </div>
+          <span class="math-display" data-math="\pi\colon x+y+z-2=0" data-math-display></span>
+        </div>
+        <p data-equidistance-language="es">Calcula las coordenadas de un punto <span class="math-inline math-nowrap" data-math="P"></span> perteneciente a la recta <span class="math-inline math-nowrap" data-math="r"></span> tal que su distancia al plano <span class="math-inline math-nowrap" data-math="\pi"></span> sea igual a su distancia al origen de coordenadas. ¿Es único dicho punto? Contesta razonadamente.</p>
+        <p data-equidistance-language="eu" hidden>Kalkulatu <span class="math-inline math-nowrap" data-math="r"></span> zuzeneko <span class="math-inline math-nowrap" data-math="P"></span> puntu baten koordenatuak, <span class="math-inline math-nowrap" data-math="P"></span> puntutik <span class="math-inline math-nowrap" data-math="\pi"></span> planorako distantzia koordenatu-jatorrirainoko distantziaren berdina izan dadin. Puntu hori bakarra al da? Arrazoitu erantzuna.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio A2</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Como el punto pertenece a la recta, no necesitamos tres incógnitas: sus tres coordenadas dependen de un único parámetro. Escribiremos el punto genérico de la recta y calcularemos desde él las dos distancias del enunciado.</p>
+            <p class="idea-text">Al igualarlas aparece una ecuación con valores absolutos. Ambos miembros son distancias y, por tanto, no negativos; podemos elevar al cuadrado de forma equivalente. La ecuación resultante es de segundo grado y produce dos puntos distintos.</p>
+            <div class="essential-geometry equidistance-2022-idea">
+              <div class="math-display" data-math="P(t)=(t,2t,0)" data-math-display></div>
+              <div class="math-display" data-math="\sqrt{15}\,|t|=|3t-2|" data-math-display></div>
+              <strong class="math-display" data-math="t=\frac{-3\pm\sqrt{15}}{3}" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio A2</p>
+            <h2 id="solution-title">Dos puntos equidistantes</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Punto genérico de una recta paramétrica</h3>
+                <p>Cada valor del parámetro proporciona un punto de la recta. Mantenerlo como incógnita permite imponer después la condición geométrica del problema.</p>
+                <div class="theory-formula math-display" data-math="P(t)=(x(t),y(t),z(t))" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Distancia entre dos puntos</h3>
+                <p>La distancia es la norma del vector que une los puntos. Al simplificar una raíz cuadrada debemos recordar que la raíz de un cuadrado es el valor absoluto.</p>
+                <div class="theory-formula math-display" data-math="\begin{aligned}\Delta x&amp;=x_P-x_Q,\quad \Delta y=y_P-y_Q\\\Delta z&amp;=z_P-z_Q\end{aligned}" data-math-display></div>
+                <div class="theory-formula math-display" data-math="d(P,Q)=\sqrt{\Delta x^2+\Delta y^2+\Delta z^2}" data-math-display></div>
+                <div class="theory-formula math-display" data-math="\sqrt{t^2}=|t|" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Distancia de un punto a un plano</h3>
+                <p>Se sustituye el punto en el primer miembro de la ecuación del plano, se toma el valor absoluto y se divide entre el módulo del vector normal.</p>
+                <div class="theory-formula math-display" data-math="d(P,\pi)=\frac{|Ax_P+By_P+Cz_P+D|}{\sqrt{A^2+B^2+C^2}}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Elevar al cuadrado una igualdad</h3>
+                <p>Si los dos miembros son no negativos, la igualdad original y la igualdad de sus cuadrados son equivalentes. En este caso los valores absolutos garantizan esa condición.</p>
+                <div class="theory-formula math-display" data-math="\begin{gathered}a\ge0,\quad b\ge0\\a=b\Longleftrightarrow a^2=b^2\end{gathered}" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Parametrizamos el punto de la recta</h3>
+                  <p>Tomamos las tres ecuaciones paramétricas como coordenadas del punto buscado.</p>
+                  <div class="equidistance-2022-work">
+                    <strong class="math-display" data-math="P(t)=(t,2t,0),\qquad t\in\mathbb R" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la distancia al origen</h3>
+                  <p>El origen es el punto de coordenadas nulas. Aplicamos la fórmula de la distancia entre dos puntos.</p>
+                  <div class="equidistance-2022-work">
+                    <div class="math-display" data-math="\begin{aligned}d(P,O)&amp;=\sqrt{t^2+(2t)^2+0^2}\\&amp;=\sqrt{5t^2}\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="d(P,O)=\sqrt5\,|t|" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la distancia al plano</h3>
+                  <p>En la ecuación del plano los coeficientes del vector normal son uno, uno y uno; el término independiente es menos dos.</p>
+                  <div class="equidistance-2022-work">
+                    <div class="math-display" data-math="d(P,\pi)=\frac{|t+2t+0-2|}{\sqrt{1^2+1^2+1^2}}" data-math-display></div>
+                    <strong class="math-display" data-math="d(P,\pi)=\frac{|3t-2|}{\sqrt3}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Igualamos las dos distancias</h3>
+                  <p>Imponemos exactamente la condición indicada en el enunciado y eliminamos el denominador.</p>
+                  <div class="equidistance-2022-work">
+                    <div class="math-display" data-math="\sqrt5\,|t|=\frac{|3t-2|}{\sqrt3}" data-math-display></div>
+                    <strong class="math-display" data-math="\sqrt{15}\,|t|=|3t-2|" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Elevamos al cuadrado y simplificamos</h3>
+                  <p>Los dos miembros son no negativos, así que el paso es reversible y no introduce soluciones extrañas.</p>
+                  <div class="equidistance-2022-work">
+                    <div class="math-display" data-math="15t^2=(3t-2)^2" data-math-display></div>
+                    <div class="math-display" data-math="15t^2=9t^2-12t+4" data-math-display></div>
+                    <div class="math-display" data-math="6t^2+12t-4=0" data-math-display></div>
+                    <strong class="math-display" data-math="3t^2+6t-2=0" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Resolvemos la ecuación cuadrática</h3>
+                  <p>Aplicamos la fórmula general y simplificamos la raíz.</p>
+                  <div class="equidistance-2022-work">
+                    <div class="math-display" data-math="t=\frac{-6\pm\sqrt{6^2-4\cdot3\cdot(-2)}}{2\cdot3}" data-math-display></div>
+                    <div class="math-display" data-math="t=\frac{-6\pm\sqrt{60}}{6}" data-math-display></div>
+                    <strong class="math-display" data-math="t_1=\frac{-3+\sqrt{15}}3,\qquad t_2=\frac{-3-\sqrt{15}}3" data-math-display></strong>
+                    <div class="math-display" data-math="t_1\approx0{,}291,\qquad t_2\approx-2{,}291" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Obtenemos las coordenadas de los puntos</h3>
+                  <p>Sustituimos cada valor del parámetro en el punto genérico. La segunda coordenada es el doble de la primera y la tercera siempre vale cero.</p>
+                  <div class="equidistance-2022-points">
+                    <strong class="math-display" data-math="P_1=\left(\frac{-3+\sqrt{15}}3,\frac{-6+2\sqrt{15}}3,0\right)" data-math-display></strong>
+                    <strong class="math-display" data-math="P_2=\left(\frac{-3-\sqrt{15}}3,\frac{-6-2\sqrt{15}}3,0\right)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Respondemos sobre la unicidad</h3>
+                  <p>La ecuación de las distancias tiene dos valores reales distintos del parámetro. Cada uno determina un punto diferente de la recta; por tanto, el punto pedido no es único.</p>
+                  <div class="equidistance-2022-work">
+                    <strong class="math-inline" data-math="t_1\ne t_2\quad\Longrightarrow\quad P_1\ne P_2"></strong>
+                  </div>
+
+                  <figure class="equidistance-2022-figure" aria-label="Recta r con el origen y los dos puntos que están a la misma distancia del plano pi y del origen">
+                    <figcaption data-equidistance-language="es">La recta <span class="math-inline math-nowrap" data-math="r"></span> contiene al origen y a los dos puntos solución. Los segmentos discontinuos llegan perpendicularmente al plano; para cada punto, su longitud coincide con la del segmento que lo une al origen.</figcaption>
+                    <figcaption data-equidistance-language="eu" hidden><span class="math-inline math-nowrap" data-math="r"></span> zuzenak jatorria eta bi soluzio-puntuak ditu. Segmentu etenak planora perpendikularki heltzen dira; puntu bakoitzerako, haren luzera puntua jatorriarekin lotzen duen segmentuaren berdina da.</figcaption>
+                    <div id="equidistance-2022-board" class="jxgbox equidistance-2022-board" role="img" aria-label="Recta r, plano pi, origen O, puntos P uno y P dos, y sus distancias perpendiculares al plano"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry equidistance-2022-essential">
+              <div class="math-display" data-math="P(t)=(t,2t,0)" data-math-display></div>
+              <div class="math-display" data-math="\sqrt5\,|t|=\frac{|3t-2|}{\sqrt3}" data-math-display></div>
+              <div class="math-display" data-math="3t^2+6t-2=0" data-math-display></div>
+              <strong class="math-display" data-math="t=\frac{-3\pm\sqrt{15}}3" data-math-display></strong>
+            </div>
+
+            <div class="result result-long geometry-result equidistance-2022-result">
+              <span>Resultado</span>
+              <strong class="equidistance-2022-result-points">
+                <span class="math-display" data-math="P_1=\left(\frac{-3+\sqrt{15}}3,\frac{-6+2\sqrt{15}}3,0\right)" data-math-display></span>
+                <span class="math-display" data-math="P_2=\left(\frac{-3-\sqrt{15}}3,\frac{-6-2\sqrt{15}}3,0\right)" data-math-display></span>
+              </strong>
+              <p>No es único: hay dos puntos.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

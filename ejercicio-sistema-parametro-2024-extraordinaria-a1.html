@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parametrodun sistemaren eztabaida · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-sistema-parametro-2024-extraordinaria-a1-idiomas.js?v=1" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="page system-extra-2024-page">
+  <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+    <a href="index.html">← Volver a ejercicios</a>
+    <div class="exercise-nav-meta">
+      <span class="source-reference">2024 · Extraordinaria · Ejercicio A1</span>
+      <div class="language-switch" data-language-switch></div>
+    </div>
+  </nav>
+
+  <header class="hero"><div class="hero-copy">
+    <p class="eyebrow">Álgebra lineal · Sistemas con parámetros · 2024</p>
+    <h1>Una excepción, infinitas soluciones</h1>
+  </div></header>
+
+  <section class="problem" aria-labelledby="statement-title">
+    <div class="section-index">00</div>
+    <div class="section-content">
+      <h2 id="statement-title">Enunciado</h2>
+      <p>Discute la existencia de solución del sistema según el parámetro <span class="math-inline math-nowrap" data-math="a"></span>.</p>
+      <div class="statement-function math-display" data-math="\begin{cases}ax+4y+z=3,\\ax-5y+2z=-2,\\2x-y+3z=1.\end{cases}" data-math-display></div>
+      <p>Resuélvelo, si es posible:</p>
+      <ol class="problem-list">
+        <li>cuando <span class="math-inline math-nowrap" data-math="a=0"></span>;</li>
+        <li>cuando <span class="math-inline math-nowrap" data-math="a=1"></span>.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="level-control" aria-labelledby="level-title">
+    <p class="control-label" id="level-title">Qué quieres ver</p>
+    <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+      <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+      <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+      <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+      <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+    </div>
+  </section>
+
+  <div class="tabs" role="tablist" aria-label="Apartados de la solución">
+    <button class="tab active" type="button" role="tab" aria-selected="true" data-target="system-extra-2024-discussion">Discusión</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-target="system-extra-2024-zero"><span class="math-inline math-nowrap" data-math="a=0"></span></button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-target="system-extra-2024-one"><span class="math-inline math-nowrap" data-math="a=1"></span></button>
+  </div>
+
+  <div class="solutions">
+    <section id="system-extra-2024-discussion" class="panel active" role="tabpanel">
+      <div class="section-index">01</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Discusión</p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-system-extra-2024-language="es">El determinante de la matriz de coeficientes separa inmediatamente el caso regular de los posibles casos especiales. Aquí solo se anula para <span class="math-inline math-nowrap" data-math="a=1"></span>.</p>
+          <p class="idea-text" data-system-extra-2024-language="eu" hidden>Koefizienteen matrizearen determinanteak kasu erregularra balizko kasu berezietatik berehala bereizten du. Hemen <span class="math-inline math-nowrap" data-math="a=1"></span> denean baino ez da nulua.</p>
+          <p class="idea-text" data-system-extra-2024-language="es">Si <span class="math-inline math-nowrap" data-math="a\ne1"></span>, el determinante no es cero y existe una única solución. En <span class="math-inline math-nowrap" data-math="a=1"></span>, la tercera ecuación resulta ser la suma de las dos primeras: queda una ecuación redundante y una incógnita libre.</p>
+          <p class="idea-text" data-system-extra-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="a\ne1"></span> bada, determinantea ez da zero eta soluzio bakarra dago. <span class="math-inline math-nowrap" data-math="a=1"></span> denean, hirugarren ekuazioa lehenengo bien batura da: ekuazio bat erredundantea eta ezezagun bat askea dira.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="\det A=26(1-a)" data-math-display></strong></div>
+        </div>
+
+        <div class="solution-view" hidden>
+          <p class="kicker">Discusión</p>
+          <h2>Estudiamos el único valor que anula el determinante</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>1. Determinante no nulo</h3>
+              <p data-system-extra-2024-language="es">En un sistema cuadrado de tres ecuaciones, <span class="math-inline math-nowrap" data-math="\det A\ne0"></span> equivale a <span class="math-inline math-nowrap" data-math="\operatorname{rg}(A)=3"></span>. La matriz es invertible y el sistema tiene una única solución.</p>
+              <p data-system-extra-2024-language="eu" hidden>Hiru ekuazioko sistema karratu batean, <span class="math-inline math-nowrap" data-math="\det A\ne0"></span> izatea <span class="math-inline math-nowrap" data-math="\operatorname{rg}(A)=3"></span> izatearen baliokidea da. Matrizea alderantzikagarria da, eta sistemak soluzio bakarra du.</p>
+            </div>
+            <div class="theory-topic">
+              <h3>2. Teorema de Rouché-Frobenius</h3>
+              <p data-system-extra-2024-language="es">Un sistema es compatible si la matriz de coeficientes y la ampliada tienen el mismo rango. Si ese rango es el número de incógnitas, la solución es única; si es menor, hay infinitas soluciones.</p>
+              <p data-system-extra-2024-language="eu" hidden>Sistema bateragarria da koefizienteen matrizeak eta matrize hedatuak hein bera badute. Hein hori ezezagun kopuruaren berdina bada, soluzioa bakarra da; txikiagoa bada, infinitu soluzio daude.</p>
+              <div class="theory-formula math-display" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)=r" data-math-display></div>
+            </div>
+          </aside>
+
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Escribimos la matriz de coeficientes</h3>
+                <div class="math-display" data-math="A=\begin{pmatrix}a&4&1\\a&-5&2\\2&-1&3\end{pmatrix}" data-math-display></div>
+              </li>
+              <li>
+                <h3>Calculamos su determinante</h3>
+                <div class="math-display" data-math="\det A=a(-15+2)-4(3a-4)+(-a+10)" data-math-display></div>
+                <div class="math-display" data-math="\det A=-26a+26=26(1-a)" data-math-display></div>
+              </li>
+              <li>
+                <h3>Separamos el caso regular</h3>
+                <div class="math-display" data-math="a\ne1\quad\Longrightarrow\quad \det A\ne0" data-math-display></div>
+                <p data-system-extra-2024-language="es">Por tanto, para todo <span class="math-inline math-nowrap" data-math="a\ne1"></span> el sistema es compatible determinado.</p>
+                <p data-system-extra-2024-language="eu" hidden>Beraz, <span class="math-inline math-nowrap" data-math="a\ne1"></span> balio guztietarako sistema bateragarri determinatua da.</p>
+              </li>
+              <li>
+                <h3>Analizamos <span class="math-inline math-nowrap" data-math="a=1"></span></h3>
+                <div class="math-display" data-math="\begin{pmatrix}1&4&1&\mid&3\\1&-5&2&\mid&-2\\2&-1&3&\mid&1\end{pmatrix}" data-math-display></div>
+                <div class="math-display" data-math="F_3=F_1+F_2" data-math-display></div>
+                <p data-system-extra-2024-language="es">Las dos primeras filas son independientes y la tercera no aporta información nueva.</p>
+                <p data-system-extra-2024-language="eu" hidden>Lehen bi errenkadak independenteak dira, eta hirugarrenak ez du informazio berririk ematen.</p>
+                <div class="math-display" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)=2<3" data-math-display></div>
+              </li>
+            </ol>
+          </div>
+
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry">
+            <div class="math-display" data-math="\det A=26(1-a)" data-math-display></div>
+            <div class="math-display" data-math="a=1:\qquad F_3=F_1+F_2" data-math-display></div>
+          </div>
+          <div class="result">
+            <span>Resultado</span>
+            <strong data-system-extra-2024-language="es"><span class="math-inline math-nowrap" data-math="a\ne1"></span>: una solución. <span class="math-inline math-nowrap" data-math="a=1"></span>: infinitas soluciones.</strong>
+            <strong data-system-extra-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="a\ne1"></span>: soluzio bakarra. <span class="math-inline math-nowrap" data-math="a=1"></span>: infinitu soluzio.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="system-extra-2024-zero" class="panel" role="tabpanel" hidden>
+      <div class="section-index">02</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker"><span class="math-inline math-nowrap" data-math="a=0"></span></p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-system-extra-2024-language="es">Al sustituir <span class="math-inline math-nowrap" data-math="a=0"></span>, las dos primeras ecuaciones ya no contienen <span class="math-inline math-nowrap" data-math="x"></span>. Las resolvemos como un sistema de dos ecuaciones en <span class="math-inline math-nowrap" data-math="y,z"></span> y usamos la tercera al final para obtener <span class="math-inline math-nowrap" data-math="x"></span>.</p>
+          <p class="idea-text" data-system-extra-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="a=0"></span> ordezkatzean, lehen bi ekuazioek ez dute <span class="math-inline math-nowrap" data-math="x"></span>. Bi ekuazioko <span class="math-inline math-nowrap" data-math="y,z"></span> sistema gisa ebazten ditugu, eta amaieran hirugarrena erabiltzen dugu <span class="math-inline math-nowrap" data-math="x"></span> lortzeko.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="(x,y,z)=\left(0,\frac8{13},\frac7{13}\right)" data-math-display></strong></div>
+        </div>
+
+        <div class="solution-view" hidden>
+          <p class="kicker"><span class="math-inline math-nowrap" data-math="a=0"></span></p>
+          <h2>Resolvemos primero las ecuaciones sin <span class="math-inline math-nowrap" data-math="x"></span></h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>Eliminación y sustitución</h3>
+              <p data-system-extra-2024-language="es">Podemos despejar una incógnita en una ecuación y sustituirla en otra. Cada paso mantiene el mismo conjunto de soluciones si aplicamos la misma operación a los dos miembros.</p>
+              <p data-system-extra-2024-language="eu" hidden>Ezezagun bat ekuazio batean bakandu eta bestean ordezka dezakegu. Urrats bakoitzak soluzio multzo bera mantentzen du eragiketa bera bi ataletan egiten badugu.</p>
+            </div>
+          </aside>
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Sustituimos <span class="math-inline math-nowrap" data-math="a=0"></span></h3>
+                <div class="math-display" data-math="\begin{cases}4y+z=3,\\-5y+2z=-2,\\2x-y+3z=1.\end{cases}" data-math-display></div>
+              </li>
+              <li>
+                <h3>Despejamos <span class="math-inline math-nowrap" data-math="z"></span> en la primera ecuación</h3>
+                <div class="math-display" data-math="z=3-4y" data-math-display></div>
+              </li>
+              <li>
+                <h3>Sustituimos en la segunda</h3>
+                <div class="math-display" data-math="-5y+2(3-4y)=-2" data-math-display></div>
+                <div class="math-display" data-math="-13y=-8\quad\Longrightarrow\quad y=\frac8{13}" data-math-display></div>
+              </li>
+              <li>
+                <h3>Calculamos <span class="math-inline math-nowrap" data-math="z"></span></h3>
+                <div class="math-display" data-math="z=3-4\cdot\frac8{13}=\frac7{13}" data-math-display></div>
+              </li>
+              <li>
+                <h3>Usamos la tercera ecuación para hallar <span class="math-inline math-nowrap" data-math="x"></span></h3>
+                <div class="math-display" data-math="2x-\frac8{13}+3\cdot\frac7{13}=1" data-math-display></div>
+                <div class="math-display" data-math="2x+\frac{13}{13}=1\quad\Longrightarrow\quad x=0" data-math-display></div>
+              </li>
+            </ol>
+          </div>
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry">
+            <div class="math-display" data-math="z=3-4y,\qquad -5y+2z=-2" data-math-display></div>
+            <div class="math-display" data-math="y=\frac8{13};\qquad z=\frac7{13};\qquad x=0" data-math-display></div>
+          </div>
+          <div class="result"><span>Resultado</span><strong class="math-display" data-math="(x,y,z)=\left(0,\frac8{13},\frac7{13}\right)" data-math-display></strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="system-extra-2024-one" class="panel" role="tabpanel" hidden>
+      <div class="section-index">03</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker"><span class="math-inline math-nowrap" data-math="a=1"></span></p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-system-extra-2024-language="es">Como la tercera ecuación es la suma de las dos primeras, solo quedan dos ecuaciones independientes para tres incógnitas. Elegimos una variable libre, por ejemplo <span class="math-inline math-nowrap" data-math="y=\lambda"></span>, y expresamos <span class="math-inline math-nowrap" data-math="x,z"></span> en función de ella.</p>
+          <p class="idea-text" data-system-extra-2024-language="eu" hidden>Hirugarren ekuazioa lehenengo bien batura denez, hiru ezezagunetarako bi ekuazio independente baino ez dira geratzen. Aldagai aske bat aukeratzen dugu, adibidez <span class="math-inline math-nowrap" data-math="y=\lambda"></span>, eta <span class="math-inline math-nowrap" data-math="x,z"></span> haren arabera adierazten ditugu.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="(x,y,z)=(8-13\lambda,\lambda,-5+9\lambda)" data-math-display></strong></div>
+        </div>
+
+        <div class="solution-view" hidden>
+          <p class="kicker"><span class="math-inline math-nowrap" data-math="a=1"></span></p>
+          <h2>Introducimos una variable libre</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>Grado de libertad</h3>
+              <p data-system-extra-2024-language="es">Si un sistema compatible tiene tres incógnitas y rango dos, queda <span class="math-inline math-nowrap" data-math="3-2=1"></span> grado de libertad. Una variable puede tomar cualquier valor real y las otras dependen de ella.</p>
+              <p data-system-extra-2024-language="eu" hidden>Sistema bateragarri batek hiru ezezagun eta bigarren heina baditu, <span class="math-inline math-nowrap" data-math="3-2=1"></span> askatasun-gradu geratzen da. Aldagai batek edozein balio erreal har dezake, eta besteak haren mende daude.</p>
+            </div>
+          </aside>
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Conservamos las dos ecuaciones independientes</h3>
+                <div class="math-display" data-math="\begin{cases}x+4y+z=3,\\x-5y+2z=-2.\end{cases}" data-math-display></div>
+              </li>
+              <li>
+                <h3>Elegimos la variable libre</h3>
+                <div class="math-display" data-math="y=\lambda,\qquad \lambda\in\mathbb R" data-math-display></div>
+                <div class="math-display" data-math="\begin{cases}x+z=3-4\lambda,\\x+2z=-2+5\lambda.\end{cases}" data-math-display></div>
+              </li>
+              <li>
+                <h3>Restamos la primera ecuación a la segunda</h3>
+                <div class="math-display" data-math="z=(-2+5\lambda)-(3-4\lambda)" data-math-display></div>
+                <div class="math-display" data-math="z=-5+9\lambda" data-math-display></div>
+              </li>
+              <li>
+                <h3>Recuperamos <span class="math-inline math-nowrap" data-math="x"></span></h3>
+                <div class="math-display" data-math="x=3-4\lambda-z" data-math-display></div>
+                <div class="math-display" data-math="x=3-4\lambda+5-9\lambda=8-13\lambda" data-math-display></div>
+              </li>
+            </ol>
+          </div>
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry">
+            <div class="math-display" data-math="y=\lambda;\qquad z=-5+9\lambda" data-math-display></div>
+            <div class="math-display" data-math="x=8-13\lambda" data-math-display></div>
+          </div>
+          <div class="result">
+            <span>Resultado</span>
+            <strong>
+              <span class="math-display" data-math="(x,y,z)=(8-13\lambda,\lambda,-5+9\lambda)" data-math-display></span>
+              <span class="math-display" data-math="\lambda\in\mathbb R" data-math-display></span>
+            </strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

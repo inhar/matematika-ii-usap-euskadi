@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ukitzaile paraleloak dituen funtzio kubikoaren parametroak · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-cubica-tangentes-paralelas-2022-ordinaria-idiomas.js?v=2022-ord-b3c" defer></script>
+  <script src="ejercicio-cubica-tangentes-paralelas-2022-ordinaria-grafico.js?v=2022-ord-b3c" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2022 · Ordinaria · Ejercicio B3</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Derivadas y tangentes · 2022</p>
+        <h1 class="cubic-tangent-2022-title">Parámetros de una cúbica con tangentes paralelas</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-cubic-2022-language="es">Sea la función</p>
+        <p data-cubic-2022-language="eu" hidden>Funtzio hau emanda:</p>
+        <div class="statement-function cubic-tangent-2022-statement math-display" aria-label="f de x igual a x al cubo más A x al cuadrado más B x más C" data-math="f(x)=x^3+Ax^2+Bx+C" data-math-display></div>
+        <p data-cubic-2022-language="es">Encuentra los valores de <span class="math-inline math-nowrap" data-math="A"></span>, <span class="math-inline math-nowrap" data-math="B"></span> y <span class="math-inline math-nowrap" data-math="C"></span> para que <span class="math-inline math-nowrap" data-math="f"></span> se anule en <span class="math-inline math-nowrap" data-math="x=1"></span> y las tangentes a su gráfica en <span class="math-inline math-nowrap" data-math="x=-1"></span> y <span class="math-inline math-nowrap" data-math="x=3"></span> sean paralelas a la recta <span class="math-inline math-nowrap" data-math="y=2x+1"></span>.</p>
+        <p data-cubic-2022-language="eu" hidden>Aurkitu <span class="math-inline math-nowrap" data-math="A"></span>, <span class="math-inline math-nowrap" data-math="B"></span> eta <span class="math-inline math-nowrap" data-math="C"></span> parametroen balioak, <span class="math-inline math-nowrap" data-math="f"></span> funtzioa <span class="math-inline math-nowrap" data-math="x=1"></span> puntuan zero izan dadin eta haren grafikoko <span class="math-inline math-nowrap" data-math="x=-1"></span> eta <span class="math-inline math-nowrap" data-math="x=3"></span> abzisetako ukitzaileak <span class="math-inline math-nowrap" data-math="y=2x+1"></span> zuzenarekiko paraleloak izan daitezen.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio B3</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-cubic-2022-language="es">Necesitamos determinar tres parámetros, así que buscaremos tres ecuaciones. La condición «se anula en <span class="math-inline math-nowrap" data-math="x=1"></span>» significa <span class="math-inline math-nowrap" data-math="f(1)=0"></span>.</p>
+            <p class="idea-text" data-cubic-2022-language="eu" hidden>Hiru parametro zehaztu behar ditugu; beraz, hiru ekuazio bilatuko ditugu. «<span class="math-inline math-nowrap" data-math="x=1"></span> puntuan zero da» baldintzak <span class="math-inline math-nowrap" data-math="f(1)=0"></span> esan nahi du.</p>
+            <p class="idea-text" data-cubic-2022-language="es">La recta dada tiene pendiente <span class="math-inline math-nowrap" data-math="2"></span>. Como la derivada da la pendiente de la tangente, los dos paralelismos se convierten en <span class="math-inline math-nowrap" data-math="f'(-1)=2"></span> y <span class="math-inline math-nowrap" data-math="f'(3)=2"></span>. Al sustituir en <span class="math-inline math-nowrap" data-math="f"></span> y <span class="math-inline math-nowrap" data-math="f'"></span> obtendremos un sistema lineal para <span class="math-inline math-nowrap" data-math="A,B,C"></span>.</p>
+            <p class="idea-text" data-cubic-2022-language="eu" hidden>Emandako zuzenaren malda <span class="math-inline math-nowrap" data-math="2"></span> da. Deribatuak ukitzailearen malda ematen duenez, bi paralelismoak <span class="math-inline math-nowrap" data-math="f'(-1)=2"></span> eta <span class="math-inline math-nowrap" data-math="f'(3)=2"></span> baldintza bihurtzen dira. <span class="math-inline math-nowrap" data-math="f"></span> eta <span class="math-inline math-nowrap" data-math="f'"></span> funtzioetan ordezkatuta, <span class="math-inline math-nowrap" data-math="A,B,C"></span> parametroetarako sistema lineal bat lortuko dugu.</p>
+            <div class="essential-geometry cubic-tangent-2022-idea">
+              <div class="math-display" data-math="\begin{cases}A+B+C=-1\\-2A+B=-1\\6A+B=-25\end{cases}" data-math-display></div>
+              <strong class="math-display" data-math="A=-3,\qquad B=-7,\qquad C=9" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio B3</p>
+            <h2 id="solution-title">Traducimos las condiciones y resolvemos</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Cero de una función</h3>
+                <p>Decir que una función se anula en una abscisa significa que el valor de la función en ella es cero. El punto correspondiente pertenece al eje horizontal.</p>
+                <div class="theory-formula math-display" data-math="x=a\text{ es un cero}\Longleftrightarrow f(a)=0" data-math-es="x=a\text{ es un cero}\Longleftrightarrow f(a)=0" data-math-eu="x=a\text{ zero bat da}\Longleftrightarrow f(a)=0" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Derivada y pendiente de la tangente</h3>
+                <p>La derivada de una función en un punto es la pendiente de la recta tangente a su gráfica en ese punto.</p>
+                <div class="theory-formula math-display" data-math="m_{\mathrm{tangente}}=f'(x_0)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Rectas paralelas</h3>
+                <p data-cubic-2022-language="es">Dos rectas no verticales son paralelas cuando tienen la misma pendiente. En una ecuación <span class="math-inline math-nowrap" data-math="y=mx+n"></span>, la pendiente es el coeficiente <span class="math-inline math-nowrap" data-math="m"></span>.</p>
+                <p data-cubic-2022-language="eu" hidden>Bertikalak ez diren bi zuzen paraleloak dira malda bera dutenean. <span class="math-inline math-nowrap" data-math="y=mx+n"></span> ekuazioan, malda <span class="math-inline math-nowrap" data-math="m"></span> koefizientea da.</p>
+                <div class="theory-formula math-display" data-math="r_1\parallel r_2\Longleftrightarrow m_1=m_2" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Ecuación de una recta tangente</h3>
+                <p>Una vez conocidos el punto de tangencia y su pendiente, la ecuación punto-pendiente permite escribir la tangente y comprobar gráficamente el paralelismo.</p>
+                <div class="theory-formula math-display" data-math="y-f(x_0)=f'(x_0)(x-x_0)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Traducimos la condición de anulación</h3>
+                  <p data-cubic-2022-language="es">La función se anula en <span class="math-inline math-nowrap" data-math="x=1"></span>, por lo que sustituimos ese valor en la función e igualamos a cero.</p>
+                  <p data-cubic-2022-language="eu" hidden>Funtzioa <span class="math-inline math-nowrap" data-math="x=1"></span> puntuan zero denez, balio hori funtzioan ordezkatu eta emaitza zerorekin berdintzen dugu.</p>
+                  <div class="cubic-tangent-2022-work">
+                    <div class="math-display" data-math="f(1)=1^3+A\cdot1^2+B\cdot1+C=0" data-math-display></div>
+                    <div class="math-display" data-math="1+A+B+C=0" data-math-display></div>
+                    <strong class="math-display" data-math="A+B+C=-1" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la derivada</h3>
+                  <p>Derivamos término a término. Los parámetros son constantes y el término independiente desaparece.</p>
+                  <div class="cubic-tangent-2022-work">
+                    <div class="math-display" data-math="f(x)=x^3+Ax^2+Bx+C" data-math-display></div>
+                    <strong class="math-display" data-math="f'(x)=3x^2+2Ax+B" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Traducimos el paralelismo</h3>
+                  <p data-cubic-2022-language="es">La recta <span class="math-inline math-nowrap" data-math="y=2x+1"></span> tiene pendiente <span class="math-inline math-nowrap" data-math="2"></span>. Las tangentes pedidas deben tener esa misma pendiente.</p>
+                  <p data-cubic-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="y=2x+1"></span> zuzenaren malda <span class="math-inline math-nowrap" data-math="2"></span> da. Eskatutako ukitzaileek malda bera izan behar dute.</p>
+                  <div class="cubic-tangent-2022-work">
+                    <strong class="math-display" data-math="f'(-1)=2,\qquad f'(3)=2" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Usamos la tangente en <span class="math-inline math-nowrap" data-math="x=-1"></span></h3>
+                  <p data-cubic-2022-language="es">Sustituimos <span class="math-inline math-nowrap" data-math="x=-1"></span> en la derivada y simplificamos con cuidado los signos.</p>
+                  <p data-cubic-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=-1"></span> deribatuan ordezkatu eta zeinuak arretaz sinplifikatzen ditugu.</p>
+                  <div class="cubic-tangent-2022-work">
+                    <div class="math-display" data-math="3(-1)^2+2A(-1)+B=2" data-math-display></div>
+                    <div class="math-display" data-math="3-2A+B=2" data-math-display></div>
+                    <strong class="math-display" data-math="-2A+B=-1" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Usamos la tangente en <span class="math-inline math-nowrap" data-math="x=3"></span></h3>
+                  <p data-cubic-2022-language="es">Sustituimos ahora <span class="math-inline math-nowrap" data-math="x=3"></span> en la misma expresión.</p>
+                  <p data-cubic-2022-language="eu" hidden>Orain <span class="math-inline math-nowrap" data-math="x=3"></span> adierazpen berean ordezkatzen dugu.</p>
+                  <div class="cubic-tangent-2022-work">
+                    <div class="math-display" data-math="3\cdot3^2+2A\cdot3+B=2" data-math-display></div>
+                    <div class="math-display" data-math="27+6A+B=2" data-math-display></div>
+                    <strong class="math-display" data-math="6A+B=-25" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Resolvemos las dos ecuaciones de las pendientes</h3>
+                  <p data-cubic-2022-language="es">Restamos la primera ecuación a la segunda. Así desaparece <span class="math-inline math-nowrap" data-math="B"></span> y obtenemos directamente <span class="math-inline math-nowrap" data-math="A"></span>.</p>
+                  <p data-cubic-2022-language="eu" hidden>Lehenengo ekuazioa bigarrenari kentzen diogu. Horrela, <span class="math-inline math-nowrap" data-math="B"></span> desagertzen da eta zuzenean <span class="math-inline math-nowrap" data-math="A"></span> lortzen dugu.</p>
+                  <div class="cubic-tangent-2022-work">
+                    <div class="math-display" data-math="(6A+B)-(-2A+B)=-25-(-1)" data-math-display></div>
+                    <div class="math-display" data-math="8A=-24" data-math-display></div>
+                    <strong class="math-display" data-math="A=-3" data-math-display></strong>
+                    <div class="math-display" data-math="-2(-3)+B=-1" data-math-display></div>
+                    <strong class="math-display" data-math="B=-7" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos el parámetro restante</h3>
+                  <p data-cubic-2022-language="es">Sustituimos <span class="math-inline math-nowrap" data-math="A=-3"></span> y <span class="math-inline math-nowrap" data-math="B=-7"></span> en la ecuación que procedía de <span class="math-inline math-nowrap" data-math="f(1)=0"></span>.</p>
+                  <p data-cubic-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="A=-3"></span> eta <span class="math-inline math-nowrap" data-math="B=-7"></span> balioak <span class="math-inline math-nowrap" data-math="f(1)=0"></span> baldintzatik zetorren ekuazioan ordezkatzen ditugu.</p>
+                  <div class="cubic-tangent-2022-work">
+                    <div class="math-display" data-math="-3-7+C=-1" data-math-display></div>
+                    <div class="math-display" data-math="C-10=-1" data-math-display></div>
+                    <strong class="math-display" data-math="C=9" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos las tres condiciones</h3>
+                  <p>Con los parámetros obtenidos escribimos la función y su derivada. Las tres sustituciones recuperan exactamente las condiciones del enunciado.</p>
+                  <div class="cubic-tangent-2022-work">
+                    <div class="math-display" data-math="f(x)=x^3-3x^2-7x+9" data-math-display></div>
+                    <div class="math-display" data-math="f'(x)=3x^2-6x-7" data-math-display></div>
+                    <div class="math-display" data-math="f(1)=0" data-math-display></div>
+                    <strong class="math-display" data-math="f'(-1)=2,\qquad f'(3)=2" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Visualizamos las tangentes paralelas</h3>
+                  <p data-cubic-2022-language="es">Los puntos de tangencia son <span class="math-inline math-nowrap" data-math="P=(-1,12)"></span> y <span class="math-inline math-nowrap" data-math="Q=(3,-12)"></span>. Aplicando la ecuación punto-pendiente obtenemos las dos tangentes.</p>
+                  <p data-cubic-2022-language="eu" hidden>Ukitze-puntuak <span class="math-inline math-nowrap" data-math="P=(-1,12)"></span> eta <span class="math-inline math-nowrap" data-math="Q=(3,-12)"></span> dira. Puntu-malda ekuazioa aplikatuta, bi ukitzaileak lortzen ditugu.</p>
+                  <div class="cubic-tangent-2022-work">
+                    <div class="math-display" data-math="t_{-1}\colon y=2x+14" data-math-display></div>
+                    <div class="math-display" data-math="t_3\colon y=2x-18" data-math-display></div>
+                    <strong class="math-display" data-math="t_{-1}\parallel(y=2x+1)\parallel t_3" data-math-display></strong>
+                  </div>
+
+                  <figure class="cubic-tangent-2022-figure" aria-label="Función cúbica, dos tangentes paralelas y recta de referencia">
+                    <figcaption data-cubic-2022-language="es">La cúbica toca las dos rectas naranjas en <span class="math-inline math-nowrap" data-math="P"></span> y <span class="math-inline math-nowrap" data-math="Q"></span>. Las dos tangentes y la recta discontinua de referencia tienen pendiente <span class="math-inline math-nowrap" data-math="2"></span>.</figcaption>
+                    <figcaption data-cubic-2022-language="eu" hidden>Funtzio kubikoak bi zuzen laranjak <span class="math-inline math-nowrap" data-math="P"></span> eta <span class="math-inline math-nowrap" data-math="Q"></span> puntuetan ukitzen ditu. Bi ukitzaileek eta erreferentziako zuzen etenak <span class="math-inline math-nowrap" data-math="2"></span> malda dute.</figcaption>
+                    <div id="cubic-tangent-2022-board" class="jxgbox cubic-tangent-2022-board" role="img" aria-label="Cúbica con tangentes en menos uno y tres, paralelas a y igual a dos x más uno"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry cubic-tangent-2022-essential">
+              <div class="math-display" data-math="\begin{cases}f(1)=0\\f'(-1)=2\\f'(3)=2\end{cases}" data-math-display></div>
+              <div class="math-display" data-math="\begin{cases}A+B+C=-1\\-2A+B=-1\\6A+B=-25\end{cases}" data-math-display></div>
+              <strong class="math-display" data-math="A=-3,\qquad B=-7,\qquad C=9" data-math-display></strong>
+            </div>
+
+            <div class="result result-long cubic-tangent-2022-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="A=-3,\qquad B=-7,\qquad C=9" data-math-display></strong>
+              <p class="math-inline" data-math="f(x)=x^3-3x^2-7x+9"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funtzio arrazional bat, hiru tarte · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-funcion-racional-asintotas-2025-extraordinaria-4a-idiomas.js?v=1" defer></script>
+  <script src="ejercicio-funcion-racional-asintotas-2025-extraordinaria-4a-grafico.js?v=1" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="page rational-extra-2025-page">
+  <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+    <a href="index.html">← Volver a ejercicios</a>
+    <div class="exercise-nav-meta">
+      <span class="source-reference">2025 · Extraordinaria · Ejercicio 4A</span>
+      <div class="language-switch" data-language-switch></div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Análisis · Funciones racionales · 2025</p>
+      <h1>Una función racional, tres intervalos</h1>
+    </div>
+  </header>
+
+  <section class="problem" aria-labelledby="statement-title">
+    <div class="section-index">00</div>
+    <div class="section-content">
+      <h2 id="statement-title">Enunciado</h2>
+      <p>Sea la función</p>
+      <div class="statement-function math-display" data-math="f(x)=\frac{x}{x^2-3x-4}" data-math-display></div>
+      <ol class="problem-list" data-rational-extra-language="es">
+        <li>Encuentra las asíntotas de la función <span class="math-inline math-nowrap" data-math="f"></span>.</li>
+        <li>Halla los intervalos de crecimiento y decrecimiento de <span class="math-inline math-nowrap" data-math="f"></span>.</li>
+        <li>Calcula la recta tangente a la gráfica de <span class="math-inline math-nowrap" data-math="f"></span> en el punto de abscisa <span class="math-inline math-nowrap" data-math="x=0"></span>.</li>
+      </ol>
+      <ol class="problem-list" data-rational-extra-language="eu" hidden>
+        <li>Aurkitu <span class="math-inline math-nowrap" data-math="f"></span> funtzioaren asintotak.</li>
+        <li>Aurkitu <span class="math-inline math-nowrap" data-math="f"></span> funtzioaren gorakortasun- eta beherakortasun-tarteak.</li>
+        <li>Kalkulatu <span class="math-inline math-nowrap" data-math="f"></span> funtzioaren grafikoaren zuzen ukitzailea <span class="math-inline math-nowrap" data-math="x=0"></span> abzisako puntuan.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="level-control" aria-labelledby="level-title">
+    <p class="control-label" id="level-title">Qué quieres ver</p>
+    <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+      <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+      <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+      <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+      <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+    </div>
+  </section>
+
+  <div class="tabs" role="tablist" aria-label="Apartados de la solución">
+    <button class="tab active" type="button" role="tab" aria-selected="true" data-target="rational-extra-asymptotes">Asíntotas</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-target="rational-extra-monotony">Monotonía</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-target="rational-extra-tangent">Tangente</button>
+  </div>
+
+  <div class="solutions">
+    <section id="rational-extra-asymptotes" class="panel active" role="tabpanel">
+      <div class="section-index">01</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Apartado A</p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-rational-extra-language="es">Primero factorizamos el denominador. Sus ceros quedan fuera del dominio y, como el numerador no se anula en ellos, producen dos asíntotas verticales. Después comparamos los grados del numerador y del denominador para estudiar el comportamiento cuando <span class="math-inline math-nowrap" data-math="x\to\pm\infty"></span>.</p>
+          <p class="idea-text" data-rational-extra-language="eu" hidden>Lehenik, izendatzailea faktorizatzen dugu. Haren zeroak definizio-eremutik kanpo geratzen dira eta, haietan zenbakitzailea nulua ez denez, bi asintota bertikal sortzen dituzte. Ondoren, zenbakitzailearen eta izendatzailearen graduak alderatzen ditugu <span class="math-inline math-nowrap" data-math="x\to\pm\infty"></span> deneko portaera aztertzeko.</p>
+          <div class="essential-geometry rational-extra-essential">
+            <div class="math-display" data-math="x^2-3x-4=(x+1)(x-4)" data-math-display></div>
+            <strong class="math-display" data-math="x=-1,\quad x=4,\quad y=0" data-math-display></strong>
+          </div>
+        </div>
+
+        <div class="solution-view" hidden>
+          <p class="kicker">Apartado A</p>
+          <h2>Estudiamos dónde y cómo se aproxima la función</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>Asíntota vertical</h3>
+              <p data-rational-extra-language="es">La recta <span class="math-inline math-nowrap" data-math="x=a"></span> es una asíntota vertical si la función crece sin límite al aproximarnos a <span class="math-inline math-nowrap" data-math="a"></span> por alguno de los lados. En una función racional, primero se buscan los ceros no simplificables del denominador.</p>
+              <p data-rational-extra-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=a"></span> zuzena asintota bertikala da funtzioa mugarik gabe hazten bada <span class="math-inline math-nowrap" data-math="a"></span>-ra alde batetik hurbiltzean. Funtzio arrazional batean, lehenik izendatzailearen zero sinplifikaezinak bilatzen dira.</p>
+              <div class="rational-extra-limit-pair rational-extra-theory-limits">
+                <div class="theory-formula math-display" data-math="\lim_{x\to a^-}f(x)=\pm\infty" data-math-display></div>
+                <div class="theory-formula math-display" data-math="\lim_{x\to a^+}f(x)=\pm\infty" data-math-display></div>
+              </div>
+            </div>
+            <div class="theory-topic">
+              <h3>Asíntota horizontal</h3>
+              <p data-rational-extra-language="es">La recta <span class="math-inline math-nowrap" data-math="y=b"></span> es una asíntota horizontal si la función se aproxima a <span class="math-inline math-nowrap" data-math="b"></span> cuando <span class="math-inline math-nowrap" data-math="x"></span> tiende a infinito. Si el grado del numerador es menor que el del denominador, el cociente tiende a cero.</p>
+              <p data-rational-extra-language="eu" hidden><span class="math-inline math-nowrap" data-math="y=b"></span> zuzena asintota horizontala da funtzioa <span class="math-inline math-nowrap" data-math="b"></span>-ra hurbiltzen bada <span class="math-inline math-nowrap" data-math="x"></span> infiniturantz doanean. Zenbakitzailearen gradua izendatzailearena baino txikiagoa bada, zatidura zerorantz doa.</p>
+              <div class="theory-formula math-display" data-math="\lim_{x\to\pm\infty}f(x)=b\quad\Longrightarrow\quad y=b" data-math-display></div>
+            </div>
+          </aside>
+
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Factorizamos el denominador y hallamos el dominio</h3>
+                <div class="math-display" data-math="x^2-3x-4=(x+1)(x-4)" data-math-display></div>
+                <div class="math-display" data-math="\operatorname{Dom}(f)=\mathbb R\setminus\{-1,4\}" data-math-display></div>
+              </li>
+              <li>
+                <h3>Comprobamos la asíntota vertical x = −1</h3>
+                <div class="rational-extra-limit-pair">
+                  <div class="math-display" data-math="\lim_{x\to-1^-}f(x)=-\infty" data-math-display></div>
+                  <div class="math-display" data-math="\lim_{x\to-1^+}f(x)=+\infty" data-math-display></div>
+                </div>
+              </li>
+              <li>
+                <h3>Comprobamos la asíntota vertical x = 4</h3>
+                <div class="rational-extra-limit-pair">
+                  <div class="math-display" data-math="\lim_{x\to4^-}f(x)=-\infty" data-math-display></div>
+                  <div class="math-display" data-math="\lim_{x\to4^+}f(x)=+\infty" data-math-display></div>
+                </div>
+              </li>
+              <li>
+                <h3>Buscamos la asíntota horizontal</h3>
+                <div class="math-display" data-math="\lim_{x\to\pm\infty}\frac{x}{x^2-3x-4}=\lim_{x\to\pm\infty}\frac{1/x}{1-3/x-4/x^2}=0" data-math-display></div>
+                <p data-rational-extra-language="es">Por tanto, <span class="math-inline math-nowrap" data-math="y=0"></span> es asíntota horizontal. No hay asíntota oblicua porque ya existe una horizontal.</p>
+                <p data-rational-extra-language="eu" hidden>Beraz, <span class="math-inline math-nowrap" data-math="y=0"></span> asintota horizontala da. Ez dago asintota zeiharrik, horizontala badagoelako.</p>
+              </li>
+            </ol>
+          </div>
+
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry rational-extra-essential">
+            <div class="math-display" data-math="(x+1)(x-4)=0\iff x=-1\ \text{o}\ x=4" data-math-eu="(x+1)(x-4)=0\iff x=-1\ \text{edo}\ x=4" data-math-display></div>
+            <div class="math-display" data-math="\lim_{x\to\pm\infty}f(x)=0" data-math-display></div>
+            <strong class="math-display" data-math="\text{AV: }x=-1,\ x=4;\qquad \text{AH: }y=0" data-math-eu="\text{AB: }x=-1,\ x=4;\qquad \text{AH: }y=0" data-math-display></strong>
+          </div>
+
+          <figure class="rational-extra-figure">
+            <figcaption data-rational-extra-language="es">Las tres ramas están separadas por las asíntotas verticales. La recta azul es la tangente pedida en el tercer apartado.</figcaption>
+            <figcaption data-rational-extra-language="eu" hidden>Hiru adarrak asintota bertikalek bereizten dituzte. Zuzen urdina hirugarren atalean eskatutako ukitzailea da.</figcaption>
+            <div id="rational-extra-board" class="jxgbox rational-extra-board" role="img" aria-label="Gráfica de la función racional, sus asíntotas y su tangente en el origen"></div>
+          </figure>
+
+          <div class="result result-long rational-extra-result">
+            <span>Resultado</span>
+            <div>
+              <strong data-rational-extra-language="es">Asíntotas verticales</strong>
+              <strong data-rational-extra-language="eu" hidden>Asintota bertikalak</strong>
+              <div class="math-display" data-math="x=-1,\qquad x=4" data-math-display></div>
+              <strong data-rational-extra-language="es">Asíntota horizontal</strong>
+              <strong data-rational-extra-language="eu" hidden>Asintota horizontala</strong>
+              <div class="math-display" data-math="y=0" data-math-display></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rational-extra-monotony" class="panel" role="tabpanel" hidden>
+      <div class="section-index">02</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Apartado B</p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-rational-extra-language="es">Derivamos con la regla del cociente y estudiamos el signo. El numerador de la derivada es siempre negativo y el denominador, al estar al cuadrado, siempre positivo donde existe la función. Aun así, debemos dar tres intervalos separados por los puntos que no pertenecen al dominio.</p>
+          <p class="idea-text" data-rational-extra-language="eu" hidden>Zatiduraren erregelarekin deribatu eta zeinua aztertzen dugu. Deribatuaren zenbakitzailea beti negatiboa da, eta izendatzailea, karratura egonda, beti positiboa funtzioa definituta dagoen tokietan. Hala ere, definizio-eremutik kanpoko puntuek bereizitako hiru tarte eman behar ditugu.</p>
+          <div class="essential-geometry rational-extra-essential">
+            <strong class="math-display" data-math="f'(x)=-\frac{x^2+4}{(x^2-3x-4)^2}<0" data-math-display></strong>
+          </div>
+        </div>
+
+        <div class="solution-view" hidden>
+          <p class="kicker">Apartado B</p>
+          <h2>Leemos la monotonía en el signo de la derivada</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>Criterio de monotonía</h3>
+              <p data-rational-extra-language="es">Si <span class="math-inline math-nowrap" data-math="f'(x)>0"></span> en un intervalo, la función crece allí; si <span class="math-inline math-nowrap" data-math="f'(x)<0"></span>, decrece. El estudio se hace por separado en cada intervalo contenido en el dominio.</p>
+              <p data-rational-extra-language="eu" hidden><span class="math-inline math-nowrap" data-math="f'(x)>0"></span> bada tarte batean, funtzioa gorakorra da han; <span class="math-inline math-nowrap" data-math="f'(x)<0"></span> bada, beherakorra. Azterketa definizio-eremuan dagoen tarte bakoitzean bereiz egiten da.</p>
+            </div>
+            <div class="theory-topic">
+              <h3>Signo de un cuadrado</h3>
+              <p data-rational-extra-language="es">Un cuadrado es positivo salvo cuando su base vale cero. Aquí esos ceros no pertenecen al dominio, de modo que el denominador de <span class="math-inline math-nowrap" data-math="f'"></span> es positivo en todos los puntos donde se puede evaluar.</p>
+              <p data-rational-extra-language="eu" hidden>Karratu bat positiboa da, oinarria zero denean izan ezik. Hemen zero horiek ez daude definizio-eremuan; beraz, <span class="math-inline math-nowrap" data-math="f'"></span>-ren izendatzailea positiboa da ebaluatu daitekeen puntu guztietan.</p>
+            </div>
+          </aside>
+
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Aplicamos la regla del cociente</h3>
+                <div class="math-display" data-math="f'(x)=\frac{1\cdot(x^2-3x-4)-x(2x-3)}{(x^2-3x-4)^2}" data-math-display></div>
+              </li>
+              <li>
+                <h3>Simplificamos el numerador</h3>
+                <div class="math-display" data-math="x^2-3x-4-2x^2+3x=-x^2-4" data-math-display></div>
+                <div class="math-display" data-math="f'(x)=-\frac{x^2+4}{(x^2-3x-4)^2}" data-math-display></div>
+              </li>
+              <li>
+                <h3>Determinamos el signo</h3>
+                <div class="rational-extra-sign-reasons">
+                  <div class="math-display" data-math="x^2+4>0\quad\text{para todo }x\in\mathbb R" data-math-eu="x^2+4>0\quad x\in\mathbb R\ \text{guztietarako}" data-math-display></div>
+                  <div class="math-display" data-math="(x^2-3x-4)^2>0\quad\text{si }x\ne-1,4" data-math-eu="(x^2-3x-4)^2>0\quad x\ne-1,4\ \text{bada}" data-math-display></div>
+                </div>
+                <strong class="math-display" data-math="f'(x)<0\quad\text{en todo su dominio}" data-math-eu="f'(x)<0\quad\text{definizio-eremu osoan}" data-math-display></strong>
+              </li>
+              <li>
+                <h3>Separamos los intervalos del dominio</h3>
+                <div class="math-display" data-math="(-\infty,-1);\qquad(-1,4);\qquad(4,+\infty)" data-math-display></div>
+                <p data-rational-extra-language="es">La función es decreciente en cada uno de ellos y no tiene intervalos de crecimiento.</p>
+                <p data-rational-extra-language="eu" hidden>Funtzioa beherakorra da haietako bakoitzean, eta ez du gorakortasun-tarterik.</p>
+              </li>
+            </ol>
+          </div>
+
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry rational-extra-essential">
+            <div class="math-display" data-math="f'(x)=-\frac{x^2+4}{(x^2-3x-4)^2}<0" data-math-display></div>
+            <strong class="math-display" data-math="\searrow\,(-\infty,-1);\quad\searrow\,(-1,4);\quad\searrow\,(4,+\infty)" data-math-display></strong>
+          </div>
+          <div class="result result-long rational-extra-result">
+            <span>Resultado</span>
+            <div>
+              <strong data-rational-extra-language="es">Decrece en</strong>
+              <strong data-rational-extra-language="eu" hidden>Beherakorra da:</strong>
+              <div class="math-display" data-math="(-\infty,-1)\cup(-1,4)\cup(4,+\infty)" data-math-display></div>
+              <p data-rational-extra-language="es">No hay intervalos de crecimiento.</p>
+              <p data-rational-extra-language="eu" hidden>Ez dago gorakortasun-tarterik.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rational-extra-tangent" class="panel" role="tabpanel" hidden>
+      <div class="section-index">03</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Apartado C</p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-rational-extra-language="es">La recta tangente queda determinada por un punto y una pendiente. Evaluamos la función en <span class="math-inline math-nowrap" data-math="x=0"></span> para hallar el punto de contacto y la derivada en ese mismo valor para obtener la pendiente.</p>
+          <p class="idea-text" data-rational-extra-language="eu" hidden>Zuzen ukitzailea puntu batek eta malda batek zehazten dute. Funtzioa <span class="math-inline math-nowrap" data-math="x=0"></span> puntuan ebaluatzen dugu ukitze-puntua aurkitzeko, eta deribatua balio berean, malda lortzeko.</p>
+          <div class="essential-geometry rational-extra-essential">
+            <div class="math-display" data-math="f(0)=0,\qquad f'(0)=-\frac14" data-math-display></div>
+            <strong class="math-display" data-math="y=-\frac14x" data-math-display></strong>
+          </div>
+        </div>
+
+        <div class="solution-view" hidden>
+          <p class="kicker">Apartado C</p>
+          <h2>Usamos el punto y la pendiente</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>Ecuación de la recta tangente</h3>
+              <p data-rational-extra-language="es">En la abscisa <span class="math-inline math-nowrap" data-math="x=a"></span>, el punto de tangencia es <span class="math-inline math-nowrap" data-math="(a,f(a))"></span> y la pendiente es <span class="math-inline math-nowrap" data-math="f'(a)"></span>. La forma punto-pendiente reúne ambos datos.</p>
+              <p data-rational-extra-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=a"></span> abzisan, ukitze-puntua <span class="math-inline math-nowrap" data-math="(a,f(a))"></span> da eta malda <span class="math-inline math-nowrap" data-math="f'(a)"></span>. Puntu-malda formak bi datuak biltzen ditu.</p>
+              <div class="theory-formula math-display" data-math="y-f(a)=f'(a)(x-a)" data-math-display></div>
+            </div>
+          </aside>
+
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Hallamos el punto de tangencia</h3>
+                <div class="math-display" data-math="f(0)=\frac{0}{0^2-3\cdot0-4}=0" data-math-display></div>
+                <div class="math-display" data-math="P=(0,0)" data-math-display></div>
+              </li>
+              <li>
+                <h3>Calculamos la pendiente</h3>
+                <div class="math-display" data-math="f'(0)=-\frac{0^2+4}{(0^2-3\cdot0-4)^2}=-\frac4{16}=-\frac14" data-math-display></div>
+              </li>
+              <li>
+                <h3>Sustituimos en la ecuación punto-pendiente</h3>
+                <div class="math-display" data-math="y-0=-\frac14(x-0)" data-math-display></div>
+                <strong class="math-display" data-math="y=-\frac14x" data-math-display></strong>
+              </li>
+            </ol>
+          </div>
+
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry rational-extra-essential">
+            <div class="math-display" data-math="P=(0,f(0))=(0,0)" data-math-display></div>
+            <div class="math-display" data-math="m=f'(0)=-\frac14" data-math-display></div>
+            <strong class="math-display" data-math="y=-\frac14x" data-math-display></strong>
+          </div>
+          <div class="result">
+            <span>Resultado</span>
+            <strong class="math-display" data-math="y=-\frac14x" data-math-display></strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

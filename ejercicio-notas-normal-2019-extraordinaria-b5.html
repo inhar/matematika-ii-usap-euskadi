@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Azterketa bateko puntuazioen banaketa normala · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-notas-normal-idiomas.js" defer></script>
+  <script src="ejercicio-notas-normal-grafico.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2019 · Extraordinaria · Opción B · Problema B.5</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Distribución normal · Julio de 2019</p>
+        <h1>Distribución normal de las puntuaciones de una prueba</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Los resultados de una prueba realizada a 500 estudiantes se distribuyen normalmente con media 40 puntos y desviación típica 10 puntos. Se pide:</p>
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">¿Qué porcentaje del alumnado tiene una puntuación entre 30 y 60 puntos?</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">¿Cuántos estudiantes tienen una puntuación superior a 60 puntos?</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="normal-score-part-a" data-target="normal-score-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="normal-score-part-b" data-target="normal-score-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="normal-score-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">La puntuación ya sigue una distribución normal, así que no necesitamos aproximarla ni aplicar corrección de continuidad. Convertiremos 30 y 60 puntos en valores de la normal estándar mediante la tipificación. Después calcularemos el área situada entre esos dos valores y la expresaremos como porcentaje.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Porcentaje entre 30 y 60 puntos</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Distribución normal</h3>
+                <p>Una variable normal queda determinada por su media y su desviación típica. La media sitúa el centro de la campana y la desviación típica mide su dispersión.</p>
+                <div class="theory-formula math-display" data-math="X\sim N(\mu,\sigma),\qquad \mu=40,\quad \sigma=10" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Tipificación</h3>
+                <p>Tipificar consiste en restar la media y dividir por la desviación típica. El resultado indica a cuántas desviaciones típicas de la media se encuentra un valor.</p>
+                <div class="theory-formula math-display" data-math="Z=\frac{X-\mu}{\sigma}\sim N(0,1)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Probabilidad entre dos valores</h3>
+                <p>La función acumulada <span class="math-nowrap math-inline" data-math="\Phi(z)=P(Z\le z)"></span> proporciona el área situada a la izquierda de z. El área entre dos límites se obtiene restando sus probabilidades acumuladas.</p>
+                <div class="theory-formula math-display" data-math="P(a&lt;Z&lt;b)=\Phi(b)-\Phi(a)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Simetría de la normal estándar</h3>
+                <p>La campana es simétrica respecto de cero. Si la tabla solo contiene valores positivos, usamos esta relación para obtener la acumulada de un valor negativo.</p>
+                <div class="theory-formula math-display" data-math="\Phi(-z)=1-\Phi(z)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Identificamos el modelo</h3>
+                  <p>Llamamos X a la puntuación obtenida por un estudiante. El enunciado proporciona directamente los dos parámetros de la distribución.</p>
+                  <div class="calculation-list normal-score-data">
+                    <div><span>Modelo</span><strong class="math-inline" data-math="X\sim N(40,10)"></strong></div>
+                    <div><span>Media</span><strong class="math-inline" data-math="\mu=40"></strong></div>
+                    <div><span>Desviación típica</span><strong class="math-inline" data-math="\sigma=10"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Tipificamos los dos límites</h3>
+                  <p>Aplicamos la misma transformación a 30 y a 60. Así expresamos ambos valores en la escala de la normal estándar.</p>
+                  <div class="normal-bound-calculations">
+                    <div>
+                      <span>Límite inferior</span>
+                      <div>
+                        <b class="math-inline" data-math="z_1=\frac{30-40}{10}"></b>
+                        <strong class="math-inline" data-math="z_1=-1"></strong>
+                      </div>
+                    </div>
+                    <div>
+                      <span>Límite superior</span>
+                      <div>
+                        <b class="math-inline" data-math="z_2=\frac{60-40}{10}"></b>
+                        <strong class="math-inline" data-math="z_2=2"></strong>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="det-expansion standardized-interval">
+                    <span class="math-inline" data-math="P(30&lt;X&lt;60)"></span>
+                    <strong class="math-inline" data-math="=P(-1&lt;Z&lt;2)"></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Interpretamos el área en la campana</h3>
+                  <p>La región buscada empieza una desviación típica por debajo de la media y termina dos desviaciones típicas por encima. Por eso contiene la mayor parte de la campana.</p>
+                  <figure class="normal-distribution-figure normal-score-figure" aria-label="Área de la normal estándar comprendida entre menos uno y dos">
+                    <figcaption>El área sombreada representa <span class="math-nowrap math-inline" data-math="P(-1&lt;Z&lt;2)"></span>.</figcaption>
+                    <div id="normal-score-interval-board" class="jxgbox normal-distribution-board normal-score-board" role="img" aria-label="Campana normal estándar con el área entre z igual a menos uno y z igual a dos sombreada"></div>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Leemos la tabla y usamos la simetría</h3>
+                  <p>La tabla proporciona las probabilidades acumuladas de 2 y de 1. Para el límite negativo usamos la simetría de la distribución.</p>
+                  <div class="calculation-list normal-table-values">
+                    <div><span class="math-inline" data-math="\Phi(2)"></span><strong class="math-inline" data-math="0{,}9772"></strong></div>
+                    <div><span class="math-inline" data-math="\Phi(-1)"></span><strong class="math-inline" data-math="1-\Phi(1)=1-0{,}8413=0{,}1587"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Restamos las probabilidades acumuladas</h3>
+                  <p>Conservamos únicamente el área comprendida entre los dos límites.</p>
+                  <div class="det-expansion normal-probability-work">
+                    <span class="math-inline" data-math="P(-1&lt;Z&lt;2)=\Phi(2)-\Phi(-1)"></span>
+                    <span class="math-inline" data-math="=0{,}9772-0{,}1587"></span>
+                    <strong class="math-inline" data-math="=0{,}8185=81{,}85\%"></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry normal-score-essential">
+              <div class="math-display" data-math="X\sim N(40,10),\qquad Z=\frac{X-40}{10}" data-math-display></div>
+              <div class="math-display" data-math="P(30&lt;X&lt;60)=P(-1&lt;Z&lt;2)" data-math-display></div>
+              <div class="math-display" data-math="=\Phi(2)-\Phi(-1)=0{,}9772-0{,}1587" data-math-display></div>
+              <strong class="math-inline" data-math="P(30&lt;X&lt;60)=0{,}8185=81{,}85\%."></strong>
+            </div>
+
+            <div class="result result-long normal-result">
+              <span>Resultado</span>
+              <strong><span class="result-unit">El 81,85 % del alumnado.</span></strong>
+              <p>La puntuación se encuentra entre 30 y 60 puntos.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="normal-score-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Tipificaremos 60 puntos para localizarlo en la normal estándar. La probabilidad de superar esa puntuación es la cola situada a la derecha del valor obtenido. Finalmente multiplicaremos esa proporción por los 500 estudiantes para estimar cuántos pertenecen a ese grupo.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Estudiantes con más de 60 puntos</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Cola derecha de una distribución</h3>
+                <p>La tabla normal proporciona el área acumulada a la izquierda. Para hallar la probabilidad situada a la derecha de z, restamos esa acumulada a la probabilidad total.</p>
+                <div class="theory-formula math-display" data-math="P(Z&gt;z)=1-\Phi(z)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. De probabilidad a frecuencia esperada</h3>
+                <p>Si una proporción p de una población de n personas cumple una condición, el número esperado de personas que la cumplen es el producto n·p.</p>
+                <div class="theory-formula math-display" data-math-es="\text{frecuencia esperada}=n\cdot p" data-math-eu="\text{espero den maiztasuna}=n\cdot p" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Interpretación del resultado</h3>
+                <p>El modelo produce una estimación, que puede no ser entera. Si se pide un número aproximado de estudiantes, el criterio habitual es redondear al entero más cercano y explicar la aproximación.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Tipificamos 60 puntos</h3>
+                  <p>Calculamos cuántas desviaciones típicas separan 60 de la media 40.</p>
+                  <div class="derivation normal-score-standardization">
+                    <div><span class="math-inline" data-math="z"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="\frac{60-40}{10}"></span></div>
+                    <div><span></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="2"></strong></div>
+                  </div>
+                  <p>Una puntuación de 60 está dos desviaciones típicas por encima de la media.</p>
+                </li>
+
+                <li>
+                  <h3>Calculamos la cola derecha</h3>
+                  <p>Buscamos la probabilidad complementaria al área acumulada hasta z = 2.</p>
+                  <div class="det-expansion normal-tail-result">
+                    <span class="math-inline" data-math="P(X&gt;60)=P(Z&gt;2)"></span>
+                    <span class="math-inline" data-math="=1-\Phi(2)"></span>
+                    <strong class="math-inline" data-math="=1-0{,}9772=0{,}0228"></strong>
+                  </div>
+                  <figure class="normal-distribution-figure normal-score-figure" aria-label="Cola derecha de la normal estándar a partir de dos">
+                    <figcaption>La cola sombreada representa <span class="math-nowrap math-inline" data-math="P(Z&gt;2)=0{,}0228"></span>.</figcaption>
+                    <div id="normal-score-tail-board" class="jxgbox normal-distribution-board normal-score-board" role="img" aria-label="Campana normal estándar con la cola situada a la derecha de z igual a dos sombreada"></div>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Pasamos de proporción a estudiantes</h3>
+                  <p>Multiplicamos la probabilidad por el tamaño del grupo.</p>
+                  <div class="derivation normal-score-students">
+                    <div><span class="math-inline" data-math="500\cdot0{,}0228"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="11{,}4"></strong></div>
+                  </div>
+                  <p>El modelo estima 11,4 estudiantes. Redondeando al entero más cercano, hablamos de aproximadamente 11 estudiantes.</p>
+                </li>
+
+                <li>
+                  <h3>Aclaramos el redondeo de la fuente</h3>
+                  <p>El solucionario publicado redondea hacia arriba y responde 12 estudiantes. Sin embargo, 11,4 está más cerca de 11 que de 12; por eso el redondeo ordinario da 11. En cualquier caso, el dato matemático esencial es la estimación 11,4.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry normal-score-essential">
+              <div class="math-display" data-math="P(X&gt;60)=P(Z&gt;2)=1-\Phi(2)" data-math-display></div>
+              <div class="math-display" data-math="=1-0{,}9772=0{,}0228" data-math-display></div>
+              <strong class="math-inline" data-math-es="500\cdot0{,}0228=11{,}4\approx11\text{ estudiantes}." data-math-eu="500\cdot0{,}0228=11{,}4\approx11\text{ ikasle}."></strong>
+            </div>
+            <p class="essential-note source-rounding-note">La fuente ofrece 12 estudiantes al redondear hacia arriba; el redondeo al entero más cercano da 11.</p>
+
+            <div class="result result-long normal-result">
+              <span>Resultado</span>
+              <strong><span class="result-unit">Aproximadamente 11 estudiantes.</span></strong>
+              <p>La estimación del modelo es 11,4; la fuente responde 12.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

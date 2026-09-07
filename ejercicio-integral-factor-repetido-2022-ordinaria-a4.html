@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faktore errepikatua duen integral arrazionala · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-integral-factor-repetido-2022-ordinaria-idiomas.js?v=2022-ord-a4a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2022 · Ordinaria · Ejercicio A4</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Integrales racionales · 2022</p>
+        <h1 class="partial-repeat-2022-title">Integral racional con un factor repetido</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Calcula:</p>
+        <div class="statement-function partial-repeat-2022-statement math-display" aria-label="Integral de siete x más trece dividido entre x más uno por x al cuadrado menos x menos dos, respecto de x" data-math="\int\frac{7x+13}{(x+1)(x^2-x-2)}\,dx" data-math-display></div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio A4</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-partial-repeat-2022-language="es">El primer paso es factorizar completamente el denominador. Como <span class="math-inline math-nowrap" data-math="x^2-x-2=(x-2)(x+1)"></span>, el factor <span class="math-inline math-nowrap" data-math="x+1"></span> aparece dos veces.</p>
+            <p class="idea-text" data-partial-repeat-2022-language="eu" hidden>Lehen urratsa izendatzailea guztiz faktorizatzea da. <span class="math-inline math-nowrap" data-math="x^2-x-2=(x-2)(x+1)"></span> denez, <span class="math-inline math-nowrap" data-math="x+1"></span> faktorea bi aldiz agertzen da.</p>
+            <p class="idea-text" data-partial-repeat-2022-language="es">Esa repetición decide la forma de las fracciones simples: necesitamos una fracción con <span class="math-inline math-nowrap" data-math="x+1"></span> y otra con <span class="math-inline math-nowrap" data-math="(x+1)^2"></span>, además de la correspondiente a <span class="math-inline math-nowrap" data-math="x-2"></span>. Eliminaremos denominadores, calcularemos los tres coeficientes y después integraremos término a término.</p>
+            <p class="idea-text" data-partial-repeat-2022-language="eu" hidden>Errepikapen horrek zatiki sinpleen forma erabakitzen du: <span class="math-inline math-nowrap" data-math="x+1"></span> izendatzailea duen zatiki bat eta <span class="math-inline math-nowrap" data-math="(x+1)^2"></span> izendatzailea duen beste bat behar ditugu, <span class="math-inline math-nowrap" data-math="x-2"></span> faktoreari dagokionaz gain. Izendatzaileak ezabatu, hiru koefizienteak kalkulatu eta gero gaiz gai integratuko dugu.</p>
+            <div class="essential-geometry partial-repeat-2022-idea">
+              <div class="math-display" data-math="(x+1)(x^2-x-2)=(x-2)(x+1)^2" data-math-display></div>
+              <div class="math-display partial-repeat-2022-decomposition" data-math="\begin{aligned}\frac{7x+13}{(x-2)(x+1)^2}={}&\frac{A}{x-2}+\frac{B}{x+1}\\&+\frac{C}{(x+1)^2}\end{aligned}" data-math-display></div>
+              <strong class="math-display" data-math="A=3,\qquad B=-3,\qquad C=-2" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio A4</p>
+            <h2 id="solution-title">Factorizamos, descomponemos e integramos</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Función racional propia</h3>
+                <p>Una función racional es propia cuando el grado del numerador es menor que el del denominador. En ese caso podemos intentar una descomposición en fracciones simples sin dividir antes los polinomios.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Factor lineal repetido</h3>
+                <p data-partial-repeat-2022-language="es">Si un factor lineal aparece elevado al cuadrado, la descomposición debe contener una fracción por cada una de sus potencias: una con <span class="math-inline math-nowrap" data-math="x-a"></span> y otra con <span class="math-inline math-nowrap" data-math="(x-a)^2"></span>. Omitir una de ellas impide reproducir el numerador original.</p>
+                <p data-partial-repeat-2022-language="eu" hidden>Faktore lineal bat ber bi eginda agertzen bada, deskonposizioak haren berretura bakoitzeko zatiki bat izan behar du: bat <span class="math-inline math-nowrap" data-math="x-a"></span> izendatzailearekin eta beste bat <span class="math-inline math-nowrap" data-math="(x-a)^2"></span> izendatzailearekin. Horietako bat kentzen bada, ezin da jatorrizko zenbakitzailea berreskuratu.</p>
+                <div class="theory-formula math-display" data-math="\begin{aligned}\frac{P(x)}{(x-b)(x-a)^2}={}&\frac{A}{x-b}+\frac{B}{x-a}\\&+\frac{C}{(x-a)^2}\end{aligned}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Cómo calcular los coeficientes</h3>
+                <p>Multiplicamos por el denominador común y obtenemos una identidad polinómica. Sustituir las raíces del denominador anula varios términos y permite aislar algunos coeficientes; para el restante podemos usar cualquier otro valor sencillo.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Primitivas que necesitamos</h3>
+                <p>Un factor lineal simple produce un logaritmo. Su cuadrado produce una potencia negativa, que se integra con la regla de las potencias.</p>
+                <div class="theory-formula math-display" data-math="\int\frac{1}{x-a}\,dx=\ln\lvert x-a\rvert+K" data-math-display></div>
+                <div class="theory-formula math-display" data-math="\int\frac{1}{(x-a)^2}\,dx=-\frac{1}{x-a}+K" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>5. Intervalos y comprobación</h3>
+                <p data-partial-repeat-2022-language="es">La función no está definida donde se anula el denominador. La primitiva vale en cualquier intervalo que no atraviese <span class="math-inline math-nowrap" data-math="x=-1"></span> ni <span class="math-inline math-nowrap" data-math="x=2"></span>. Para comprobarla, derivamos el resultado y recuperamos el integrando.</p>
+                <p data-partial-repeat-2022-language="eu" hidden>Funtzioa ez dago definituta izendatzailea zero den puntuetan. Primitiboak <span class="math-inline math-nowrap" data-math="x=-1"></span> edo <span class="math-inline math-nowrap" data-math="x=2"></span> zeharkatzen ez duen edozein tartetan balio du. Egiaztatzeko, emaitza deribatu eta integrakizuna berreskuratzen dugu.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Comprobamos que la fracción es propia</h3>
+                  <p data-partial-repeat-2022-language="es">El numerador tiene grado <span class="math-inline math-nowrap" data-math="1"></span> y el denominador grado <span class="math-inline math-nowrap" data-math="3"></span>. No hace falta dividir polinomios: podemos pasar directamente a factorizar y descomponer.</p>
+                  <p data-partial-repeat-2022-language="eu" hidden>Zenbakitzaileak <span class="math-inline math-nowrap" data-math="1"></span> maila du eta izendatzaileak <span class="math-inline math-nowrap" data-math="3"></span> maila. Ez da polinomioen zatiketarik egin behar: zuzenean faktorizatu eta deskonposa dezakegu.</p>
+                </li>
+
+                <li>
+                  <h3>Factorizamos todo el denominador</h3>
+                  <p data-partial-repeat-2022-language="es">Buscamos dos números cuyo producto sea <span class="math-inline math-nowrap" data-math="-2"></span> y cuya suma sea <span class="math-inline math-nowrap" data-math="-1"></span>: son <span class="math-inline math-nowrap" data-math="-2"></span> y <span class="math-inline math-nowrap" data-math="1"></span>.</p>
+                  <p data-partial-repeat-2022-language="eu" hidden>Biderkadura <span class="math-inline math-nowrap" data-math="-2"></span> eta batura <span class="math-inline math-nowrap" data-math="-1"></span> duten bi zenbaki bilatzen ditugu: <span class="math-inline math-nowrap" data-math="-2"></span> eta <span class="math-inline math-nowrap" data-math="1"></span> dira.</p>
+                  <div class="partial-repeat-2022-work">
+                    <div class="math-display" data-math="x^2-x-2=(x-2)(x+1)" data-math-display></div>
+                    <strong class="math-display" data-math="(x+1)(x^2-x-2)=(x-2)(x+1)^2" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Planteamos las fracciones simples</h3>
+                  <p data-partial-repeat-2022-language="es">El factor <span class="math-inline math-nowrap" data-math="x-2"></span> es simple. Como <span class="math-inline math-nowrap" data-math="x+1"></span> aparece con multiplicidad dos, debemos incluir las potencias primera y segunda.</p>
+                  <p data-partial-repeat-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="x-2"></span> faktorea sinplea da. <span class="math-inline math-nowrap" data-math="x+1"></span> bi aldiz agertzen denez, lehenengo eta bigarren berreturak sartu behar ditugu.</p>
+                  <div class="partial-repeat-2022-work">
+                    <div class="math-display partial-repeat-2022-decomposition" data-math="\begin{aligned}\frac{7x+13}{(x-2)(x+1)^2}={}&\frac{A}{x-2}+\frac{B}{x+1}\\&+\frac{C}{(x+1)^2}\end{aligned}" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Eliminamos los denominadores</h3>
+                  <p>Multiplicamos toda la igualdad por el denominador común. Cada fracción pierde exactamente el factor que tenía debajo.</p>
+                  <div class="partial-repeat-2022-work">
+                    <div class="math-display partial-repeat-2022-identity" data-math="\begin{aligned}7x+13={}&A(x+1)^2\\&+B(x-2)(x+1)\\&+C(x-2)\end{aligned}" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos dos coeficientes con las raíces</h3>
+                  <p data-partial-repeat-2022-language="es">Elegimos primero los valores que anulan los factores. Con <span class="math-inline math-nowrap" data-math="x=2"></span> desaparecen los términos con <span class="math-inline math-nowrap" data-math="B"></span> y <span class="math-inline math-nowrap" data-math="C"></span>; con <span class="math-inline math-nowrap" data-math="x=-1"></span> desaparecen los que contienen <span class="math-inline math-nowrap" data-math="A"></span> y <span class="math-inline math-nowrap" data-math="B"></span>.</p>
+                  <p data-partial-repeat-2022-language="eu" hidden>Lehenik, faktoreak zero bihurtzen dituzten balioak aukeratzen ditugu. <span class="math-inline math-nowrap" data-math="x=2"></span> denean, <span class="math-inline math-nowrap" data-math="B"></span> eta <span class="math-inline math-nowrap" data-math="C"></span> dituzten gaiak desagertzen dira; <span class="math-inline math-nowrap" data-math="x=-1"></span> denean, <span class="math-inline math-nowrap" data-math="A"></span> eta <span class="math-inline math-nowrap" data-math="B"></span> dituztenak.</p>
+                  <div class="partial-repeat-2022-cases">
+                    <div class="math-display" data-math="x=2:\quad 27=9A\quad\Longrightarrow\quad A=3" data-math-display></div>
+                    <div class="math-display" data-math="x=-1:\quad 6=-3C\quad\Longrightarrow\quad C=-2" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos el coeficiente restante</h3>
+                  <p data-partial-repeat-2022-language="es">Para hallar <span class="math-inline math-nowrap" data-math="B"></span> elegimos el valor sencillo <span class="math-inline math-nowrap" data-math="x=0"></span> y usamos los coeficientes que ya conocemos.</p>
+                  <p data-partial-repeat-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="B"></span> kalkulatzeko, <span class="math-inline math-nowrap" data-math="x=0"></span> balio erraza aukeratu eta dagoeneko ezagutzen ditugun koefizienteak erabiltzen ditugu.</p>
+                  <div class="partial-repeat-2022-work">
+                    <div class="math-display" data-math="13=A-2B-2C" data-math-display></div>
+                    <div class="math-display" data-math="13=3-2B-2(-2)=7-2B" data-math-display></div>
+                    <strong class="math-display" data-math="B=-3" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Escribimos la descomposición obtenida</h3>
+                  <p>Sustituimos los tres coeficientes antes de integrar.</p>
+                  <div class="partial-repeat-2022-work">
+                    <strong class="math-display partial-repeat-2022-decomposition" data-math="\begin{aligned}\frac{7x+13}{(x-2)(x+1)^2}={}&\frac{3}{x-2}-\frac{3}{x+1}\\&-\frac{2}{(x+1)^2}\end{aligned}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Integramos término a término</h3>
+                  <p data-partial-repeat-2022-language="es">Los dos primeros términos producen logaritmos. En el tercero escribimos el denominador como potencia y vigilamos el doble signo negativo.</p>
+                  <p data-partial-repeat-2022-language="eu" hidden>Lehen bi gaiek logaritmoak ematen dituzte. Hirugarrenean, izendatzailea berretura gisa idazten dugu eta bi zeinu negatiboak arretaz erabiltzen ditugu.</p>
+                  <div class="partial-repeat-2022-work">
+                    <div class="math-display" data-math="\int\frac{3}{x-2}\,dx=3\ln\lvert x-2\rvert" data-math-display></div>
+                    <div class="math-display" data-math="\int-\frac{3}{x+1}\,dx=-3\ln\lvert x+1\rvert" data-math-display></div>
+                    <div class="math-display" data-math="\int-\frac{2}{(x+1)^2}\,dx=-2\int(x+1)^{-2}\,dx" data-math-display></div>
+                    <div class="math-display" data-math="-2\left[-(x+1)^{-1}\right]=\frac{2}{x+1}" data-math-display></div>
+                    <strong class="math-display partial-repeat-2022-final" data-math="\begin{aligned}I={}&3\ln\lvert x-2\rvert-3\ln\lvert x+1\rvert\\&+\frac{2}{x+1}+K\end{aligned}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos derivando</h3>
+                  <p>Derivamos la primitiva. Al reunir las fracciones recuperamos exactamente la función inicial.</p>
+                  <div class="partial-repeat-2022-work">
+                    <div class="math-display partial-repeat-2022-check" data-math="\begin{aligned}I'(x)={}&\frac{3}{x-2}-\frac{3}{x+1}\\&-\frac{2}{(x+1)^2}\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="I'(x)=\frac{7x+13}{(x+1)(x^2-x-2)}" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry partial-repeat-2022-essential">
+              <div class="math-display" data-math="(x+1)(x^2-x-2)=(x-2)(x+1)^2" data-math-display></div>
+              <div class="math-display partial-repeat-2022-decomposition" data-math="\begin{aligned}\frac{7x+13}{(x-2)(x+1)^2}={}&\frac{A}{x-2}+\frac{B}{x+1}\\&+\frac{C}{(x+1)^2}\end{aligned}" data-math-display></div>
+              <div class="math-display" data-math="A=3,\qquad B=-3,\qquad C=-2" data-math-display></div>
+              <strong class="math-display partial-repeat-2022-final" data-math="\begin{aligned}I={}&3\ln\lvert x-2\rvert-3\ln\lvert x+1\rvert\\&+\frac{2}{x+1}+K\end{aligned}" data-math-display></strong>
+            </div>
+
+            <div class="result result-long partial-repeat-2022-result">
+              <span>Resultado</span>
+              <strong class="math-display partial-repeat-2022-final" data-math="\begin{aligned}I={}&3\ln\lvert x-2\rvert-3\ln\lvert x+1\rvert\\&+\frac{2}{x+1}+K\end{aligned}" data-math-display></strong>
+              <p data-partial-repeat-2022-language="es">Válida en cada intervalo que no atraviese <span class="math-inline math-nowrap" data-math="x=-1"></span> ni <span class="math-inline math-nowrap" data-math="x=2"></span>.</p>
+              <p data-partial-repeat-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=-1"></span> edo <span class="math-inline math-nowrap" data-math="x=2"></span> zeharkatzen ez duen tarte bakoitzean balio du.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

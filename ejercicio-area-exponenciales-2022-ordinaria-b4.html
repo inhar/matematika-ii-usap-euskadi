@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bi esponentzialen eta zuzen baten arteko azalera · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-area-exponenciales-2022-ordinaria-idiomas.js?v=2022-ord-b4a" defer></script>
+  <script src="ejercicio-area-exponenciales-2022-ordinaria-grafico.js?v=2022-ord-b4a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2022 · Ordinaria · Ejercicio B4</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Área entre curvas · 2022</p>
+        <h1 class="area-exp-2022-title">Área entre dos exponenciales y una recta</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Dibuja el recinto limitado por las gráficas de las funciones</p>
+        <div class="area-exp-2022-functions">
+          <span class="math-inline" data-math="f(x)=e^x"></span>
+          <span class="math-inline" data-math="g(x)=e^{-x}"></span>
+          <span class="math-inline" data-math="y=e"></span>
+        </div>
+        <p>y calcula el área de dicho recinto.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio B4</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-area-exp-2022-language="es">Primero hallamos los tres puntos donde se cortan las fronteras. Las dos exponenciales se encuentran en <span class="math-inline math-nowrap" data-math="x=0"></span>; cada una corta a la recta <span class="math-inline math-nowrap" data-math="y=e"></span> en uno de los extremos del recinto.</p>
+            <p class="idea-text" data-area-exp-2022-language="eu" hidden>Lehenik, mugak ebakitzen diren hiru puntuak aurkitzen ditugu. Bi esponentzialak <span class="math-inline math-nowrap" data-math="x=0"></span> denean ebakitzen dira; bakoitzak <span class="math-inline math-nowrap" data-math="y=e"></span> zuzena esparruaren muturretako batean ebakitzen du.</p>
+            <p class="idea-text" data-area-exp-2022-language="es">La recta es siempre la frontera superior, pero la frontera inferior cambia en <span class="math-inline math-nowrap" data-math="x=0"></span>. Por eso dividimos el área en dos integrales. Además, como <span class="math-inline math-nowrap" data-math="e^{-x}"></span> es el reflejo de <span class="math-inline math-nowrap" data-math="e^x"></span> respecto del eje vertical, las dos partes deben tener la misma área.</p>
+            <p class="idea-text" data-area-exp-2022-language="eu" hidden>Zuzena beti da goiko muga, baina beheko muga <span class="math-inline math-nowrap" data-math="x=0"></span> puntuan aldatzen da. Horregatik, azalera bi integraletan banatzen dugu. Gainera, <span class="math-inline math-nowrap" data-math="e^{-x}"></span> funtzioa <span class="math-inline math-nowrap" data-math="e^x"></span> funtzioaren isla denez ardatz bertikalarekiko, bi zatien azalerek berdinak izan behar dute.</p>
+            <div class="essential-geometry area-exp-2022-idea">
+              <div class="math-display" data-math="P(-1,e),\qquad O(0,1),\qquad Q(1,e)" data-math-display></div>
+              <div class="math-display area-exp-2022-integral-pair" data-math="\begin{aligned}A_1&=\int_{-1}^{0}\left(e-e^{-x}\right)\,dx,\\ A_2&=\int_{0}^{1}\left(e-e^x\right)\,dx\end{aligned}" data-math-display></div>
+              <strong class="math-display" data-math="A=A_1+A_2=2\ \text{u}^2" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio B4</p>
+            <h2 id="solution-title">Delimitamos el recinto y calculamos su área</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Intersecciones de gráficas</h3>
+                <p>Dos gráficas se cortan cuando tienen la misma ordenada para una misma abscisa. Igualamos sus expresiones y, después, calculamos la coordenada vertical del punto.</p>
+                <div class="theory-formula math-display" data-math="\begin{aligned}p(x_0)&=q(x_0),\\ P&=\bigl(x_0,p(x_0)\bigr)\end{aligned}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Simetría de las exponenciales</h3>
+                <p data-area-exp-2022-language="es">Si <span class="math-inline math-nowrap" data-math="f(x)=e^x"></span>, entonces <span class="math-inline math-nowrap" data-math="g(x)=e^{-x}=f(-x)"></span>. Sustituir <span class="math-inline math-nowrap" data-math="x"></span> por <span class="math-inline math-nowrap" data-math="-x"></span> refleja una gráfica respecto del eje <span class="math-inline math-nowrap" data-math="y"></span>.</p>
+                <p data-area-exp-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="f(x)=e^x"></span> bada, orduan <span class="math-inline math-nowrap" data-math="g(x)=e^{-x}=f(-x)"></span>. <span class="math-inline math-nowrap" data-math="x"></span> aldagaiaren ordez <span class="math-inline math-nowrap" data-math="-x"></span> jartzeak grafikoa <span class="math-inline math-nowrap" data-math="y"></span> ardatzarekiko islatzen du.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Área entre dos curvas</h3>
+                <p>En cada intervalo integramos la función que está arriba menos la que está abajo. Si una frontera cambia, también debe cambiar la integral.</p>
+                <div class="theory-formula math-display" data-math="\begin{aligned}A&=\int_a^b\bigl(p(x)-q(x)\bigr)\,dx,\\ p(x)&\ge q(x)\end{aligned}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Integral definida y regla de Barrow</h3>
+                <p>Hallamos una primitiva de la función y la evaluamos en los extremos: valor en el extremo superior menos valor en el inferior.</p>
+                <div class="theory-formula math-display" data-math="\begin{aligned}\int_a^b h(x)\,dx&=H(b)-H(a),\\ H'(x)&=h(x)\end{aligned}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>5. Primitivas necesarias</h3>
+                <p>La exponencial conserva su forma al integrar. Cuando el exponente es negativo aparece un signo menos.</p>
+                <div class="theory-formula area-exp-2022-primitives">
+                  <span class="math-inline" data-math="\int e^x\,dx=e^x+C"></span>
+                  <span class="math-inline" data-math="\int e^{-x}\,dx=-e^{-x}+C"></span>
+                </div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Identificamos las tres fronteras</h3>
+                  <p data-area-exp-2022-language="es">Las curvas <span class="math-inline math-nowrap" data-math="e^x"></span> y <span class="math-inline math-nowrap" data-math="e^{-x}"></span> formarán la parte inferior del recinto. La recta horizontal <span class="math-inline math-nowrap" data-math="y=e"></span> lo cerrará por arriba.</p>
+                  <p data-area-exp-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="e^x"></span> eta <span class="math-inline math-nowrap" data-math="e^{-x}"></span> kurbek esparruaren beheko zatia osatuko dute. <span class="math-inline math-nowrap" data-math="y=e"></span> zuzen horizontalak goitik itxiko du.</p>
+                </li>
+
+                <li>
+                  <h3>Hallamos el corte de las dos exponenciales</h3>
+                  <p>Igualamos sus ordenadas. Como la función exponencial es inyectiva, la igualdad de potencias obliga a que los exponentes sean iguales.</p>
+                  <div class="area-exp-2022-work">
+                    <div class="math-display" data-math="e^x=e^{-x}" data-math-display></div>
+                    <div class="math-display" data-math="x=-x\quad\Longrightarrow\quad 2x=0" data-math-display></div>
+                    <div class="math-display" data-math="x=0,\qquad y=e^0=1" data-math-display></div>
+                    <strong class="math-display" data-math="O(0,1)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos los cortes con la recta</h3>
+                  <p data-area-exp-2022-language="es">Para <span class="math-inline math-nowrap" data-math="f(x)=e^x"></span>, comparamos <span class="math-inline math-nowrap" data-math="e^x"></span> con <span class="math-inline math-nowrap" data-math="e=e^1"></span>. Para <span class="math-inline math-nowrap" data-math="g(x)=e^{-x}"></span> hacemos lo mismo.</p>
+                  <p data-area-exp-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="f(x)=e^x"></span> funtziorako, <span class="math-inline math-nowrap" data-math="e^x"></span> eta <span class="math-inline math-nowrap" data-math="e=e^1"></span> alderatzen ditugu. <span class="math-inline math-nowrap" data-math="g(x)=e^{-x}"></span> funtziorako gauza bera egiten dugu.</p>
+                  <div class="area-exp-2022-cuts">
+                    <div>
+                      <div class="math-display" data-math="e^x=e^1\Longrightarrow x=1" data-math-display></div>
+                      <strong class="math-display" data-math="Q(1,e)" data-math-display></strong>
+                    </div>
+                    <div>
+                      <div class="math-display" data-math="e^{-x}=e^1\Longrightarrow -x=1" data-math-display></div>
+                      <strong class="math-display" data-math="P(-1,e)" data-math-display></strong>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Determinamos qué función limita por abajo</h3>
+                  <p data-area-exp-2022-language="es">Entre <span class="math-inline math-nowrap" data-math="-1"></span> y <span class="math-inline math-nowrap" data-math="0"></span>, la frontera inferior es <span class="math-inline math-nowrap" data-math="e^{-x}"></span>. Entre <span class="math-inline math-nowrap" data-math="0"></span> y <span class="math-inline math-nowrap" data-math="1"></span>, pasa a ser <span class="math-inline math-nowrap" data-math="e^x"></span>. La frontera superior es <span class="math-inline math-nowrap" data-math="e"></span> en todo el recinto.</p>
+                  <p data-area-exp-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="-1"></span> eta <span class="math-inline math-nowrap" data-math="0"></span> artean, beheko muga <span class="math-inline math-nowrap" data-math="e^{-x}"></span> da. <span class="math-inline math-nowrap" data-math="0"></span> eta <span class="math-inline math-nowrap" data-math="1"></span> artean, <span class="math-inline math-nowrap" data-math="e^x"></span> bihurtzen da. Goiko muga <span class="math-inline math-nowrap" data-math="e"></span> da esparru osoan.</p>
+                  <div class="area-exp-2022-boundaries">
+                    <div>
+                      <span class="math-inline" data-math="-1\le x\le0"></span>
+                      <strong class="math-inline" data-math="e-e^{-x}"></strong>
+                    </div>
+                    <div>
+                      <span class="math-inline" data-math="0\le x\le1"></span>
+                      <strong class="math-inline" data-math="e-e^x"></strong>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Planteamos el área en dos tramos</h3>
+                  <p>En cada mitad restamos la frontera inferior a la recta superior.</p>
+                  <div class="area-exp-2022-work">
+                    <div class="math-display" data-math="A=A_1+A_2" data-math-display></div>
+                    <div class="math-display area-exp-2022-integral-pair" data-math="\begin{aligned}A_1&=\int_{-1}^{0}\left(e-e^{-x}\right)\,dx,\\ A_2&=\int_{0}^{1}\left(e-e^x\right)\,dx\end{aligned}" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la mitad izquierda</h3>
+                  <p data-area-exp-2022-language="es">Una primitiva de <span class="math-inline math-nowrap" data-math="e-e^{-x}"></span> es <span class="math-inline math-nowrap" data-math="ex+e^{-x}"></span>, porque la derivada de <span class="math-inline math-nowrap" data-math="e^{-x}"></span> introduce el signo negativo que necesitamos.</p>
+                  <p data-area-exp-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="e-e^{-x}"></span> funtzioaren primitibo bat <span class="math-inline math-nowrap" data-math="ex+e^{-x}"></span> da, <span class="math-inline math-nowrap" data-math="e^{-x}"></span> funtzioaren deribatuak behar dugun zeinu negatiboa sortzen duelako.</p>
+                  <div class="area-exp-2022-work">
+                    <div class="math-display area-exp-2022-evaluation" data-math="\begin{aligned}A_1&=\left[ex+e^{-x}\right]_{-1}^{0}\\ &=\left(0+1\right)-\left(-e+e\right)\\ &=1\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="A_1=1\ \text{u}^2" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la mitad derecha</h3>
+                  <p data-area-exp-2022-language="es">Ahora una primitiva de <span class="math-inline math-nowrap" data-math="e-e^x"></span> es <span class="math-inline math-nowrap" data-math="ex-e^x"></span>. Volvemos a aplicar la regla de Barrow.</p>
+                  <p data-area-exp-2022-language="eu" hidden>Orain, <span class="math-inline math-nowrap" data-math="e-e^x"></span> funtzioaren primitibo bat <span class="math-inline math-nowrap" data-math="ex-e^x"></span> da. Barrow-ren araua berriro aplikatzen dugu.</p>
+                  <div class="area-exp-2022-work">
+                    <div class="math-display area-exp-2022-evaluation" data-math="\begin{aligned}A_2&=\left[ex-e^x\right]_{0}^{1}\\ &=\left(e-e\right)-\left(0-1\right)\\ &=1\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="A_2=1\ \text{u}^2" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Sumamos y comprobamos la simetría</h3>
+                  <p data-area-exp-2022-language="es">Las dos áreas coinciden, como anticipaba la simetría respecto del eje <span class="math-inline math-nowrap" data-math="y"></span>. Sumándolas obtenemos el área total.</p>
+                  <p data-area-exp-2022-language="eu" hidden>Bi azalerak berdinak dira, <span class="math-inline math-nowrap" data-math="y"></span> ardatzarekiko simetriak aurresaten zuen bezala. Batuz, azalera osoa lortzen dugu.</p>
+                  <div class="area-exp-2022-work">
+                    <div class="math-display" data-math="A=A_1+A_2" data-math-display></div>
+                    <div class="math-display" data-math="A=1+1" data-math-display></div>
+                    <strong class="math-display" data-math="A=2\ \text{u}^2" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry area-exp-2022-essential">
+              <div class="math-display" data-math="P(-1,e),\qquad O(0,1),\qquad Q(1,e)" data-math-display></div>
+              <div class="math-display" data-math="A_1=\int_{-1}^{0}\left(e-e^{-x}\right)\,dx=1" data-math-display></div>
+              <div class="math-display" data-math="A_2=\int_{0}^{1}\left(e-e^x\right)\,dx=1" data-math-display></div>
+              <strong class="math-display" data-math="A=A_1+A_2=2\ \text{u}^2" data-math-display></strong>
+            </div>
+
+            <figure class="area-exp-2022-figure" aria-label="Recinto limitado por dos exponenciales y la recta y igual a e">
+              <figcaption data-area-exp-2022-language="es">La recta <span class="math-inline math-nowrap" data-math="y=e"></span> es la frontera superior. La frontera inferior cambia en <span class="math-inline math-nowrap" data-math="x=0"></span>: es <span class="math-inline math-nowrap" data-math="g(x)=e^{-x}"></span> a la izquierda y <span class="math-inline math-nowrap" data-math="f(x)=e^x"></span> a la derecha.</figcaption>
+              <figcaption data-area-exp-2022-language="eu" hidden><span class="math-inline math-nowrap" data-math="y=e"></span> zuzena goiko muga da. Beheko muga <span class="math-inline math-nowrap" data-math="x=0"></span> puntuan aldatzen da: ezkerrean <span class="math-inline math-nowrap" data-math="g(x)=e^{-x}"></span> da, eta eskuinean <span class="math-inline math-nowrap" data-math="f(x)=e^x"></span>.</figcaption>
+              <div id="area-exp-2022-board" class="jxgbox area-exp-2022-board" role="img" aria-label="Gráficas de e elevado a x, e elevado a menos x y la recta y igual a e, con el recinto sombreado"></div>
+            </figure>
+
+            <div class="result result-long area-exp-2022-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="A=2\ \text{u}^2" data-math-display></strong>
+              <p data-area-exp-2022-language="es">Cada una de las dos mitades simétricas tiene área <span class="math-inline math-nowrap" data-math="1\ \text{u}^2"></span>.</p>
+              <p data-area-exp-2022-language="eu" hidden>Bi erdi simetrikoetako bakoitzaren azalera <span class="math-inline math-nowrap" data-math="1\ \text{u}^2"></span> da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

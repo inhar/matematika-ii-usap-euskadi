@@ -1,0 +1,69 @@
+<!doctype html><html lang="eu"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Determinanteen propietateak · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css"><link rel="stylesheet" href="styles.css?v=pdf-free-20260907"><link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script><script src="idioma.js" defer></script><script src="ejercicio-propiedades-determinantes-2024-ordinaria-b1-idiomas.js?v=1" defer></script><script src="matematicas.js?v=math-layout-20260901" defer></script><script src="script.js" defer></script>
+</head><body><main class="page determinants-2024-page">
+  <nav class="exercise-nav" aria-label="Navegación del ejercicio"><a href="index.html">← Volver a ejercicios</a><div class="exercise-nav-meta"><span class="source-reference">2024 · Ordinaria · Ejercicio B1</span><div class="language-switch" data-language-switch></div></div></nav>
+  <header class="hero"><div class="hero-copy"><p class="eyebrow">Álgebra lineal · Propiedades de los determinantes · 2024</p><h1>Determinantes sin conocer las entradas</h1></div></header>
+  <section class="problem" aria-labelledby="statement-title"><div class="section-index">00</div><div class="section-content">
+    <h2 id="statement-title">Enunciado</h2><p>Se sabe que</p>
+    <div class="statement-function math-display" data-math="\begin{vmatrix}a&b&c\\p&q&r\\x&y&z\end{vmatrix}=2" data-math-display></div>
+    <p>Calcula, explicando las propiedades aplicadas:</p>
+    <ol class="problem-list problem-list-math">
+      <li><div class="math-display" data-math="\begin{vmatrix}3a&3b&3c\\a-p&b-q&c-r\\2x-a&2y-b&2z-c\end{vmatrix}" data-math-display></div></li>
+      <li><div class="math-display" data-math="\begin{vmatrix}a&x&2p\\b&y&2q\\c&z&2r\end{vmatrix}" data-math-display></div></li>
+    </ol>
+  </div></section>
+  <section class="level-control" aria-labelledby="level-title"><p class="control-label" id="level-title">Qué quieres ver</p><div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución"><button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button><button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button><button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button><button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button></div></section>
+  <div class="tabs" role="tablist" aria-label="Apartados de la solución"><button class="tab active" type="button" role="tab" aria-selected="true" data-target="determinants-2024-part-a">Apartado A</button><button class="tab" type="button" role="tab" aria-selected="false" data-target="determinants-2024-part-b">Apartado B</button></div>
+  <div class="solutions">
+    <section id="determinants-2024-part-a" class="panel active" role="tabpanel"><div class="section-index">01</div><div class="section-content">
+      <div class="idea-view"><p class="kicker">Apartado A</p><h2>Idea de resolución</h2>
+        <p class="idea-text" data-determinants-2024-language="es">Llamamos <span class="math-inline math-nowrap" data-math="F_1,F_2,F_3"></span> a las filas del determinante conocido. Las filas nuevas son <span class="math-inline math-nowrap" data-math="3F_1"></span>, <span class="math-inline math-nowrap" data-math="F_1-F_2"></span> y <span class="math-inline math-nowrap" data-math="2F_3-F_1"></span>.</p>
+        <p class="idea-text" data-determinants-2024-language="eu" hidden>Determinante ezagunaren errenkadei <span class="math-inline math-nowrap" data-math="F_1,F_2,F_3"></span> deitzen diegu. Errenkada berriak <span class="math-inline math-nowrap" data-math="3F_1"></span>, <span class="math-inline math-nowrap" data-math="F_1-F_2"></span> eta <span class="math-inline math-nowrap" data-math="2F_3-F_1"></span> dira.</p>
+        <p class="idea-text" data-determinants-2024-language="es">Sumar a una fila un múltiplo de otra no cambia el determinante. Por eso eliminaremos las copias de <span class="math-inline math-nowrap" data-math="F_1"></span> y solo quedarán los factores <span class="math-inline math-nowrap" data-math="3"></span>, <span class="math-inline math-nowrap" data-math="-1"></span> y <span class="math-inline math-nowrap" data-math="2"></span>.</p>
+        <p class="idea-text" data-determinants-2024-language="eu" hidden>Errenkada bati beste baten multiplo bat gehitzeak ez du determinantea aldatzen. Horregatik, <span class="math-inline math-nowrap" data-math="F_1"></span>-en kopiak ezabatu, eta <span class="math-inline math-nowrap" data-math="3"></span>, <span class="math-inline math-nowrap" data-math="-1"></span> eta <span class="math-inline math-nowrap" data-math="2"></span> faktoreak bakarrik geratuko dira.</p>
+        <div class="essential-geometry"><strong class="math-display" data-math="3\cdot(-1)\cdot2\cdot2=-12" data-math-display></strong></div>
+      </div>
+      <div class="solution-view" hidden><p class="kicker">Apartado A</p><h2>Reducimos las filas al determinante conocido</h2>
+        <aside class="theory-note progressive-layer" data-min-level="theory" hidden><p class="layer-label">Teoría necesaria</p>
+          <div class="theory-topic"><h3>1. Multiplicar una fila</h3><p data-determinants-2024-language="es">Si una fila se multiplica por <span class="math-inline math-nowrap" data-math="k"></span>, el determinante también se multiplica por <span class="math-inline math-nowrap" data-math="k"></span>.</p><p data-determinants-2024-language="eu" hidden>Errenkada bat <span class="math-inline math-nowrap" data-math="k"></span>-z biderkatzen bada, determinantea ere <span class="math-inline math-nowrap" data-math="k"></span>-z biderkatzen da.</p></div>
+          <div class="theory-topic"><h3>2. Sumar filas</h3><p data-determinants-2024-language="es">Sustituir <span class="math-inline math-nowrap" data-math="F_i"></span> por <span class="math-inline math-nowrap" data-math="F_i+kF_j"></span>, con <span class="math-inline math-nowrap" data-math="i\ne j"></span>, no cambia el determinante.</p><p data-determinants-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="F_i"></span> errenkadaren ordez <span class="math-inline math-nowrap" data-math="F_i+kF_j"></span> jartzeak, <span class="math-inline math-nowrap" data-math="i\ne j"></span> izanik, ez du determinantea aldatzen.</p></div>
+        </aside>
+        <div class="progressive-layer" data-min-level="detail" hidden><p class="layer-label">Resolución completa</p><ol class="worked-steps">
+          <li><h3>Nombramos el determinante pedido</h3><div class="math-display" data-math="D_A=\det\begin{pmatrix}3F_1\\F_1-F_2\\2F_3-F_1\end{pmatrix}" data-math-display></div></li>
+          <li><h3>Extraemos el factor de la primera fila</h3><div class="math-display" data-math="D_A=3\det\begin{pmatrix}F_1\\F_1-F_2\\2F_3-F_1\end{pmatrix}" data-math-display></div></li>
+          <li><h3>Eliminamos las copias de la primera fila</h3><p data-determinants-2024-language="es">Hacemos <span class="math-inline math-nowrap" data-math="F_2\leftarrow F_2-F_1"></span> y <span class="math-inline math-nowrap" data-math="F_3\leftarrow F_3+F_1"></span>. Son sumas de múltiplos de otra fila, así que el valor no cambia.</p><p data-determinants-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="F_2\leftarrow F_2-F_1"></span> eta <span class="math-inline math-nowrap" data-math="F_3\leftarrow F_3+F_1"></span> egiten ditugu. Beste errenkada baten multiploen baturak direnez, balioa ez da aldatzen.</p><div class="math-display" data-math="D_A=3\det\begin{pmatrix}F_1\\-F_2\\2F_3\end{pmatrix}" data-math-display></div></li>
+          <li><h3>Extraemos los dos factores restantes</h3><div class="math-display" data-math="D_A=3(-1)2\det\begin{pmatrix}F_1\\F_2\\F_3\end{pmatrix}" data-math-display></div><strong class="math-display" data-math="D_A=-6\cdot2=-12" data-math-display></strong></li>
+        </ol></div>
+        <p class="step-caption">Cálculo esencial</p><div class="essential-geometry"><div class="math-display" data-math="(3F_1,F_1-F_2,2F_3-F_1)\longrightarrow(3F_1,-F_2,2F_3)" data-math-display></div><strong class="math-display" data-math="D_A=3(-1)2\cdot2=-12" data-math-display></strong></div>
+        <div class="result"><span>Resultado</span><strong class="math-display" data-math="-12" data-math-display></strong></div>
+      </div>
+    </div></section>
+    <section id="determinants-2024-part-b" class="panel" role="tabpanel" hidden><div class="section-index">02</div><div class="section-content">
+      <div class="idea-view"><p class="kicker">Apartado B</p><h2>Idea de resolución</h2>
+        <p class="idea-text" data-determinants-2024-language="es">Al transponer el determinante conocido obtenemos las columnas <span class="math-inline math-nowrap" data-math="(a,b,c)^{\mathsf T}"></span>, <span class="math-inline math-nowrap" data-math="(p,q,r)^{\mathsf T}"></span> y <span class="math-inline math-nowrap" data-math="(x,y,z)^{\mathsf T}"></span>, sin cambiar su valor.</p>
+        <p class="idea-text" data-determinants-2024-language="eu" hidden>Determinante ezaguna transposatzean, <span class="math-inline math-nowrap" data-math="(a,b,c)^{\mathsf T}"></span>, <span class="math-inline math-nowrap" data-math="(p,q,r)^{\mathsf T}"></span> eta <span class="math-inline math-nowrap" data-math="(x,y,z)^{\mathsf T}"></span> zutabeak lortzen ditugu, balioa aldatu gabe.</p>
+        <p class="idea-text" data-determinants-2024-language="es">El determinante pedido intercambia las columnas segunda y tercera, lo que cambia el signo, y multiplica la última por <span class="math-inline math-nowrap" data-math="2"></span>.</p>
+        <p class="idea-text" data-determinants-2024-language="eu" hidden>Eskatutako determinanteak bigarren eta hirugarren zutabeak trukatzen ditu; horrek zeinua aldatzen du, eta azken zutabea <span class="math-inline math-nowrap" data-math="2"></span>-z biderkatzen du.</p>
+        <div class="essential-geometry"><strong class="math-display" data-math="2\cdot(-1)\cdot2=-4" data-math-display></strong></div>
+      </div>
+      <div class="solution-view" hidden><p class="kicker">Apartado B</p><h2>Transponemos, intercambiamos y multiplicamos</h2>
+        <aside class="theory-note progressive-layer" data-min-level="theory" hidden><p class="layer-label">Teoría necesaria</p>
+          <div class="theory-topic"><h3>1. Determinante de la traspuesta</h3><p data-determinants-2024-language="es">Una matriz y su traspuesta tienen el mismo determinante.</p><p data-determinants-2024-language="eu" hidden>Matrize batek eta haren transposatuak determinante bera dute.</p><div class="theory-formula math-display" data-math="\det(M^{\mathsf T})=\det(M)" data-math-display></div></div>
+          <div class="theory-topic"><h3>2. Intercambiar dos columnas</h3><p data-determinants-2024-language="es">Un intercambio de dos columnas cambia el signo del determinante. Multiplicar una columna por <span class="math-inline math-nowrap" data-math="k"></span> multiplica el determinante por <span class="math-inline math-nowrap" data-math="k"></span>.</p><p data-determinants-2024-language="eu" hidden>Bi zutabe trukatzeak determinantearen zeinua aldatzen du. Zutabe bat <span class="math-inline math-nowrap" data-math="k"></span>-z biderkatzeak determinantea <span class="math-inline math-nowrap" data-math="k"></span>-z biderkatzen du.</p></div>
+        </aside>
+        <div class="progressive-layer" data-min-level="detail" hidden><p class="layer-label">Resolución completa</p><ol class="worked-steps">
+          <li><h3>Transponemos el determinante conocido</h3><div class="math-display" data-math="\begin{vmatrix}a&p&x\\b&q&y\\c&r&z\end{vmatrix}=\begin{vmatrix}a&b&c\\p&q&r\\x&y&z\end{vmatrix}=2" data-math-display></div></li>
+          <li><h3>Intercambiamos las columnas segunda y tercera</h3><div class="math-display" data-math="\begin{vmatrix}a&x&p\\b&y&q\\c&z&r\end{vmatrix}=-\begin{vmatrix}a&p&x\\b&q&y\\c&r&z\end{vmatrix}=-2" data-math-display></div></li>
+          <li><h3>Multiplicamos la tercera columna por dos</h3><div class="math-display" data-math="\begin{vmatrix}a&x&2p\\b&y&2q\\c&z&2r\end{vmatrix}=2\begin{vmatrix}a&x&p\\b&y&q\\c&z&r\end{vmatrix}" data-math-display></div><strong class="math-display" data-math="D_B=2(-2)=-4" data-math-display></strong></li>
+        </ol></div>
+        <p class="step-caption">Cálculo esencial</p><div class="essential-geometry"><div class="math-display" data-math="\det(M^{\mathsf T})=2;\qquad C_2\leftrightarrow C_3\Rightarrow-2" data-math-display></div><strong class="math-display" data-math="D_B=2(-2)=-4" data-math-display></strong></div>
+        <div class="result"><span>Resultado</span><strong class="math-display" data-math="-4" data-math-display></strong></div>
+      </div>
+    </div></section>
+  </div>
+</main></body></html>

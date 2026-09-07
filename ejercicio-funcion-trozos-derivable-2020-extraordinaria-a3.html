@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zatika definitutako funtzio baten deribagarritasuna · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-funcion-trozos-derivable-2020-extraordinaria-idiomas.js?v=2020-extra-a3b" defer></script>
+  <script src="ejercicio-funcion-trozos-derivable-2020-extraordinaria-grafico.js?v=2020-extra-a3c" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2020 · Extraordinaria · Opción A · Ejercicio A.3</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Continuidad y derivabilidad · 2020</p>
+        <h1>Derivabilidad de una función definida a trozos</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Sea la función definida por:</p>
+        <div class="equation piecewise-2020-statement math-display" aria-label="Función definida mediante dos ramas" data-math="f(x)=\begin{cases}ax^2+3x,&amp;x\le2\\x^2-bx-4,&amp;x>2\end{cases}" data-math-display></div>
+        <p>Calcular razonadamente los dos parámetros, sabiendo que la función es derivable en toda la recta real.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio A.3</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Cada rama es un polinomio, así que por separado no presenta ningún problema. El único punto que debemos estudiar es aquel en el que cambia la fórmula.</p>
+            <p class="idea-text">Para que la función sea derivable allí deben cumplirse dos condiciones, en este orden: las ramas tienen que llegar al mismo valor y, además, deben hacerlo con la misma pendiente. La primera condición asegura continuidad; la segunda, una tangente común. Obtendremos una ecuación de cada condición y resolveremos el sistema formado por ambas.</p>
+            <div class="essential-geometry piecewise-2020-idea">
+              <div class="math-display" data-math="f_1(2)=f_2(2)" data-math-display></div>
+              <div class="math-display" data-math="f_1'(2)=f_2'(2)" data-math-display></div>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio A.3</p>
+            <h2 id="solution-title">Continuidad y derivabilidad en el punto de unión</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Dónde puede aparecer el problema</h3>
+                <p>Los polinomios son continuos y derivables en toda la recta real. En una función definida a trozos solo hay que comprobar los puntos en los que cambia la expresión; aquí existe un único punto de unión.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Continuidad en el punto de unión</h3>
+                <p>La rama izquierda, el valor de la función y la rama derecha deben llegar a la misma altura. Como la primera rama contiene el punto de unión, la condición se escribe así:</p>
+                <div class="theory-formula math-display" data-math="\lim_{x\to2^-}f(x)=f(2)=\lim_{x\to2^+}f(x)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Derivabilidad en el punto de unión</h3>
+                <p>Una función derivable debe ser continua. Una vez asegurada la continuidad, falta exigir que las pendientes laterales coincidan. Geométricamente, las dos ramas deben compartir la misma recta tangente.</p>
+                <div class="theory-formula math-display" data-math="f'_-(2)=f'_+(2)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Separamos las dos ramas</h3>
+                  <p>La primera expresión se usa a la izquierda y también en el punto de unión; la segunda se usa únicamente a la derecha.</p>
+                  <div class="piecewise-2020-branches">
+                    <span class="math-inline" data-math="f_1(x)=ax^2+3x,\qquad x\le2"></span>
+                    <span class="math-inline" data-math="f_2(x)=x^2-bx-4,\qquad x>2"></span>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Imponemos la continuidad</h3>
+                  <p>Calculamos por separado el valor al que llega cada rama.</p>
+                  <div class="derivation piecewise-2020-value">
+                    <div><span class="math-inline" data-math="f_1(2)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="a\cdot2^2+3\cdot2"></span></div>
+                    <div><span></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="4a+6"></strong></div>
+                  </div>
+                  <div class="derivation piecewise-2020-value">
+                    <div><span class="math-inline" data-math="\displaystyle\lim_{x\to2^+}f(x)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="2^2-2b-4"></span></div>
+                    <div><span></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="-2b"></strong></div>
+                  </div>
+                  <p>Igualamos ambos resultados y simplificamos.</p>
+                  <div class="derivation piecewise-2020-condition">
+                    <div><span class="math-inline" data-math="4a+6"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="-2b"></span></div>
+                    <div><span class="math-inline" data-math="4a+2b"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="-6"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Imponemos la igualdad de pendientes</h3>
+                  <p>Derivamos cada polinomio por separado.</p>
+                  <div class="piecewise-2020-branches">
+                    <span class="math-inline" data-math="f_1'(x)=2ax+3"></span>
+                    <span class="math-inline" data-math="f_2'(x)=2x-b"></span>
+                  </div>
+                  <p>Evaluamos las dos derivadas en el punto de unión.</p>
+                  <div class="derivation piecewise-2020-derivatives">
+                    <div><span class="math-inline" data-math="f_1'(2)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="4a+3"></span></div>
+                    <div><span class="math-inline" data-math="f_2'(2)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="4-b"></span></div>
+                  </div>
+                  <p>Para que exista una única pendiente en ese punto, las igualamos.</p>
+                  <div class="derivation piecewise-2020-condition">
+                    <div><span class="math-inline" data-math="4a+3"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="4-b"></span></div>
+                    <div><span class="math-inline" data-math="4a+b"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="1"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Resolvemos el sistema de condiciones</h3>
+                  <div class="equation piecewise-2020-condition-system math-display" aria-label="Sistema de dos ecuaciones para los parámetros" data-math="\begin{cases}4a+2b=-6\\4a+b=1\end{cases}" data-math-display></div>
+                  <p>Restamos la segunda ecuación de la primera; de este modo desaparece el primer parámetro.</p>
+                  <div class="derivation piecewise-2020-system-work">
+                    <div><span class="math-inline" data-math="(4a+2b)-(4a+b)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="-6-1"></span></div>
+                    <div><span class="math-inline" data-math="b"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="-7"></strong></div>
+                  </div>
+                  <p>Sustituimos el valor obtenido en la ecuación más sencilla.</p>
+                  <div class="derivation piecewise-2020-system-work">
+                    <div><span class="math-inline" data-math="4a+(-7)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="1"></span></div>
+                    <div><span class="math-inline" data-math="4a"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="8"></span></div>
+                    <div><span class="math-inline" data-math="a"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="2"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Verificamos las dos condiciones</h3>
+                  <p>Con los parámetros calculados, comprobamos tanto la altura como la pendiente de cada rama.</p>
+                  <div class="calculation-list piecewise-2020-checks">
+                    <div><span>Valor por la izquierda</span><strong class="math-inline" data-math="2\cdot2^2+3\cdot2=14"></strong></div>
+                    <div><span>Valor por la derecha</span><strong class="math-inline" data-math="2^2+7\cdot2-4=14"></strong></div>
+                    <div><span>Pendiente por la izquierda</span><strong class="math-inline" data-math="4\cdot2+3=11"></strong></div>
+                    <div><span>Pendiente por la derecha</span><strong class="math-inline" data-math="2\cdot2+7=11"></strong></div>
+                  </div>
+                  <p>Las dos ramas se unen en el mismo punto y comparten allí la misma tangente.</p>
+                  <div class="equation piecewise-2020-final-function math-display" aria-label="Función final con los parámetros calculados" data-math="f(x)=\begin{cases}2x^2+3x,&amp;x\le2\\x^2+7x-4,&amp;x>2\end{cases}" data-math-display></div>
+
+                  <figure class="piecewise-2020-figure" aria-label="Gráfica de las dos ramas y su tangente común en el punto de unión">
+                    <figcaption>Las ramas coinciden en altura y pendiente: se unen en un único punto y comparten la recta tangente.</figcaption>
+                    <div id="piecewise-2020-board" class="jxgbox piecewise-2020-board" role="img" aria-label="Dos ramas parabólicas unidas suavemente en el punto dos catorce y su tangente común"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry piecewise-2020-essential">
+              <div class="math-display" data-math="4a+6=-2b\quad\Longrightarrow\quad4a+2b=-6" data-math-display></div>
+              <div class="math-display" data-math="4a+3=4-b\quad\Longrightarrow\quad4a+b=1" data-math-display></div>
+              <strong class="piecewise-2020-essential-result">
+                <span class="math-display" data-math="\begin{cases}4a+2b=-6\\4a+b=1\end{cases}" data-math-display></span>
+                <span class="math-display" data-math="\Longrightarrow\quad a=2,\ b=-7" data-math-display></span>
+              </strong>
+            </div>
+
+            <div class="result result-long piecewise-2020-result">
+              <span>Resultado</span>
+              <strong class="math-inline" data-math="a=2;\qquad b=-7"></strong>
+              <p>Las ramas se unen en el punto de ordenada 14 con pendiente común 11.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

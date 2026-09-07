@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A parametrodun sistema baten eztabaida · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-sistema-parametro-a-2020-extraordinaria-idiomas.js?v=2020-extra-a1c" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2020 · Extraordinaria · Opción A · Ejercicio A.1</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Álgebra lineal · Sistemas con parámetro · 2020</p>
+        <h1>Discusión y resolución de un sistema con parámetro</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Discutir, en función de <span class="math-inline" data-math="A"></span>, el sistema siguiente y resolverlo cuando sea posible:</p>
+        <div class="equation-system statement-system parameter-a-system-statement math-display" aria-label="Sistema de tres ecuaciones con parámetro A" data-math="\begin{cases}x+y+z=2A\\2x+3y+4z=2\\4x+4y+Az=4A\end{cases}" data-math-display></div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio A.1</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Necesitamos saber para qué valores del parámetro el sistema tiene una solución, ninguna o infinitas, y además resolver los casos compatibles. Aplicaremos eliminación de Gauss a la matriz ampliada: las operaciones elementales conservan las soluciones y dejan visible la ecuación final que contiene el parámetro.</p>
+            <p class="idea-text">Esa misma forma escalonada permitirá clasificar cada caso y, cuando haya solución única, resolver hacia atrás en el orden <span class="math-inline math-nowrap" data-math="z,\ y,\ x"></span>.</p>
+            <div class="essential-geometry parameter-a-idea">
+              <div class="math-display" data-math="(A-4)z=-4A" data-math-display></div>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio A.1</p>
+            <h2 id="solution-title">Discusión y resolución completa</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Matriz ampliada y operaciones elementales</h3>
+                <p>La matriz ampliada contiene los coeficientes de las incógnitas y la columna de términos independientes. Sumar a una fila un múltiplo de otra produce un sistema equivalente: cambia su escritura, pero no sus soluciones.</p>
+                <div class="theory-formula math-display" data-math="F_i\leftarrow F_i+\lambda F_j" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Forma escalonada y pivotes</h3>
+                <p>En una matriz escalonada, cada fila no nula aporta un pivote. El número de pivotes es el rango. Si aparecen tres pivotes para tres incógnitas, el sistema tiene una única solución.</p>
+                <div class="theory-formula extraordinary-theory-lines">
+                  <span class="math-inline" data-math="\operatorname{rg}(C)=3"></span>
+                  <span class="math-inline" data-math-es="\Rightarrow\text{tres pivotes}" data-math-eu="\Rightarrow\text{hiru pibote}"></span>
+                  <span class="math-inline" data-math-es="\Rightarrow\text{solución única}" data-math-eu="\Rightarrow\text{soluzio bakarra}"></span>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Teorema de Rouché-Frobenius</h3>
+                <p>Un sistema es compatible cuando la matriz de coeficientes y la ampliada tienen el mismo rango. Si la ampliada tiene mayor rango, aparece una contradicción y no existe solución.</p>
+                <div class="classification-list theory-classification extraordinary-theory-classification">
+                  <div><span class="math-inline" data-math="\operatorname{rg}(C)=\operatorname{rg}(C^*)=3"></span><strong>Una solución</strong></div>
+                  <div><span class="math-inline" data-math="\operatorname{rg}(C)=\operatorname{rg}(C^*)<3"></span><strong>Infinitas soluciones</strong></div>
+                  <div><span class="math-inline" data-math="\operatorname{rg}(C)<\operatorname{rg}(C^*)"></span><strong>Ninguna solución</strong></div>
+                </div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Sustitución hacia atrás</h3>
+                <p>Una vez escalonado un sistema compatible determinado, resolvemos desde la última ecuación hacia la primera. Cada incógnita ya calculada se sustituye en la ecuación inmediatamente anterior.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Construimos la matriz ampliada</h3>
+                  <p>Las tres primeras columnas contienen, en ese orden, los coeficientes de <span class="math-inline math-nowrap" data-math="x,\ y,\ z"></span>; la última contiene los términos independientes.</p>
+                  <div class="matrix-equation-line parameter-a-original-matrix">
+                    <span class="math-inline" data-math="C^*(A)="></span>
+                    <div class="matrix matrix-large matrix-four augmented-matrix math-display" data-math="\left(\begin{array}{ccc|c}1 &amp; 1 &amp; 1 &amp; 2A\\2 &amp; 3 &amp; 4 &amp; 2\\4 &amp; 4 &amp; A &amp; 4A\end{array}\right)" data-math-display></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Eliminamos la primera entrada de la segunda fila</h3>
+                  <p>Restamos dos veces la primera fila a la segunda. Escribimos cada nueva entrada para que no quede ningún salto.</p>
+                  <div class="equation equation-compact math-display" data-math="F_2\leftarrow F_2-2F_1" data-math-display></div>
+                  <div class="calculation-list parameter-a-row-calculation">
+                    <div><span>Columna 1</span><strong class="math-inline" data-math="2-2\cdot1=0"></strong></div>
+                    <div><span>Columna 2</span><strong class="math-inline" data-math="3-2\cdot1=1"></strong></div>
+                    <div><span>Columna 3</span><strong class="math-inline" data-math="4-2\cdot1=2"></strong></div>
+                    <div><span>Columna ampliada</span><strong class="math-inline" data-math="2-2(2A)=2-4A"></strong></div>
+                  </div>
+                  <div class="matrix math-display parameter-a-reduced-matrix" data-math="\left(\begin{array}{ccc|c}1 &amp; 1 &amp; 1 &amp; 2A\\0 &amp; 1 &amp; 2 &amp; 2-4A\\4 &amp; 4 &amp; A &amp; 4A\end{array}\right)" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Eliminamos la primera entrada de la tercera fila</h3>
+                  <p>Ahora restamos cuatro veces la primera fila a la tercera.</p>
+                  <div class="equation equation-compact math-display" data-math="F_3\leftarrow F_3-4F_1" data-math-display></div>
+                  <div class="calculation-list parameter-a-row-calculation">
+                    <div><span>Columna 1</span><strong class="math-inline" data-math="4-4\cdot1=0"></strong></div>
+                    <div><span>Columna 2</span><strong class="math-inline" data-math="4-4\cdot1=0"></strong></div>
+                    <div><span>Columna 3</span><strong class="math-inline" data-math="A-4\cdot1=A-4"></strong></div>
+                    <div><span>Columna ampliada</span><strong class="math-inline" data-math="4A-4(2A)=-4A"></strong></div>
+                  </div>
+                  <div class="matrix math-display parameter-a-reduced-matrix" data-math="\left(\begin{array}{ccc|c}1 &amp; 1 &amp; 1 &amp; 2A\\0 &amp; 1 &amp; 2 &amp; 2-4A\\0 &amp; 0 &amp; A-4 &amp; -4A\end{array}\right)" data-math-display></div>
+                  <p>La última fila corresponde a la ecuación que decide toda la discusión.</p>
+                  <div class="equation equation-compact math-display" data-math="(A-4)z=-4A" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Caso <span class="math-inline" data-math="A=4"></span></h3>
+                  <p>Sustituimos el valor en la última fila de la matriz escalonada.</p>
+                  <div class="derivation parameter-a-contradiction">
+                    <div><span class="math-inline" data-math="(4-4)z"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="-4\cdot4"></span></div>
+                    <div><span class="math-inline" data-math="0z"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="-16"></strong></div>
+                  </div>
+                  <p>La igualdad <span class="math-inline" data-math="0=-16"></span> es imposible. La matriz de coeficientes tiene dos pivotes, mientras que la columna ampliada crea un tercero.</p>
+                  <div class="rank-comparison">
+                    <span class="math-inline" data-math="\operatorname{rg}(C)=2"></span>
+                    <span class="math-inline" data-math="\operatorname{rg}(C^*)=3"></span>
+                  </div>
+                  <p>Por Rouché-Frobenius, el sistema es incompatible: no tiene solución.</p>
+                </li>
+
+                <li>
+                  <h3>Caso <span class="math-inline" data-math="A\ne4"></span></h3>
+                  <p>El coeficiente <span class="math-inline" data-math="A-4"></span> no se anula, así que la última fila aporta un tercer pivote. Los rangos coinciden con el número de incógnitas.</p>
+                  <div class="rank-comparison">
+                    <span class="math-inline" data-math="\operatorname{rg}(C)=3"></span>
+                    <span class="math-inline" data-math="\operatorname{rg}(C^*)=3"></span>
+                  </div>
+                  <p>El sistema es compatible determinado. Ahora podemos dividir por <span class="math-inline" data-math="A-4"></span> y resolver hacia atrás.</p>
+                </li>
+
+                <li>
+                  <h3>Despejamos <span class="math-inline" data-math="z"></span></h3>
+                  <p>Partimos de la tercera ecuación escalonada.</p>
+                  <div class="derivation parameter-a-back-substitution">
+                    <div><span class="math-inline" data-math="(A-4)z"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="-4A"></span></div>
+                    <div><span class="math-inline" data-math="z"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="\dfrac{-4A}{A-4}"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Despejamos <span class="math-inline" data-math="y"></span></h3>
+                  <p>La segunda ecuación escalonada es <span class="math-inline" data-math="y+2z=2-4A"></span>. Sustituimos el valor de <span class="math-inline" data-math="z"></span> y reducimos a un único denominador.</p>
+                  <div class="derivation parameter-a-long-derivation">
+                    <div><span class="math-inline" data-math="y"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="2-4A-2z"></span></div>
+                    <div><span class="math-inline" data-math="y"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="2-4A+\dfrac{8A}{A-4}"></span></div>
+                    <div><span class="math-inline" data-math="y"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="\dfrac{(2-4A)(A-4)+8A}{A-4}"></span></div>
+                    <div><span class="math-inline" data-math="y"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="\dfrac{-4A^2+18A-8+8A}{A-4}"></span></div>
+                    <div><span class="math-inline" data-math="y"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="\dfrac{-4A^2+26A-8}{A-4}"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Despejamos <span class="math-inline" data-math="x"></span></h3>
+                  <p>Usamos la primera ecuación, <span class="math-inline" data-math="x+y+z=2A"></span>, y sustituimos las dos incógnitas ya calculadas.</p>
+                  <div class="derivation parameter-a-long-derivation">
+                    <div><span class="math-inline" data-math="x"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="2A-y-z"></span></div>
+                    <div><span class="math-inline" data-math="x"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="2A-\dfrac{-4A^2+26A-8}{A-4}+\dfrac{4A}{A-4}"></span></div>
+                    <div><span class="math-inline" data-math="x"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="\dfrac{2A(A-4)+4A^2-26A+8+4A}{A-4}"></span></div>
+                    <div><span class="math-inline" data-math="x"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="\dfrac{6A^2-30A+8}{A-4}"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos la solución</h3>
+                  <p>La suma de los tres numeradores reproduce la primera ecuación:</p>
+                  <div class="det-expansion parameter-a-check">
+                    <span class="math-inline" data-math="x+y+z"></span>
+                    <span class="math-inline" data-math="=\dfrac{2A^2-8A}{A-4}"></span>
+                    <strong class="math-inline" data-math="=\dfrac{2A(A-4)}{A-4}=2A"></strong>
+                  </div>
+                  <p>Las expresiones satisfacen también las dos ecuaciones escalonadas, que son equivalentes a las originales.</p>
+                  <p class="source-correction"><strong>Corrección de la fuente:</strong> el solucionario de la página 22 contiene errores al simplificar los numeradores de <span class="math-inline math-nowrap" data-math="x,\ y"></span>. Las expresiones anteriores son las que verifican el sistema.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="matrix math-display parameter-a-essential-matrix" data-math="\left(\begin{array}{ccc|c}1 &amp; 1 &amp; 1 &amp; 2A\\0 &amp; 1 &amp; 2 &amp; 2-4A\\0 &amp; 0 &amp; A-4 &amp; -4A\end{array}\right)" data-math-display></div>
+
+            <div class="classification-list essential-classification two-case-classification">
+              <div>
+                <span class="math-inline" data-math="A\ne4"></span>
+                <strong>Compatible determinado</strong>
+                <p>Una única solución.</p>
+              </div>
+              <div>
+                <span class="math-inline" data-math="A=4"></span>
+                <strong>Incompatible</strong>
+                <p>No tiene solución.</p>
+              </div>
+            </div>
+
+            <div class="essential-geometry parameter-a-essential-solution">
+              <div class="math-display" data-math="x=\dfrac{6A^2-30A+8}{A-4}" data-math-display></div>
+              <div class="math-display" data-math="y=\dfrac{-4A^2+26A-8}{A-4}" data-math-display></div>
+              <div class="math-display" data-math="z=\dfrac{-4A}{A-4}" data-math-display></div>
+            </div>
+
+            <div class="result result-long system-result extraordinary-system-result parameter-a-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="result-unit"><span class="math-inline" data-math="A\ne4"></span>: una solución</span>
+                <span class="result-unit"><span class="math-inline" data-math="A=4"></span>: ninguna solución</span>
+              </strong>
+              <p>No hay ningún caso con infinitas soluciones.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

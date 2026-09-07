@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funtzio kubikoaren parametroak eta ukitzailea · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css"><link rel="stylesheet" href="vendor/katex/katex.min.css"><link rel="stylesheet" href="styles.css?v=pdf-free-20260907"><link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script><script src="vendor/katex/katex.min.js" defer></script><script src="idioma.js" defer></script><script src="ejercicio-cubica-parametros-tangente-2024-extraordinaria-a3-idiomas.js?v=1" defer></script><script src="ejercicio-cubica-parametros-tangente-2024-extraordinaria-a3-grafico.js?v=1" defer></script><script src="matematicas.js?v=math-layout-20260901" defer></script><script src="script.js" defer></script>
+</head>
+<body><main class="page cubic-extra-2024-page">
+  <nav class="exercise-nav" aria-label="Navegación del ejercicio"><a href="index.html">← Volver a ejercicios</a><div class="exercise-nav-meta"><span class="source-reference">2024 · Extraordinaria · Ejercicio A3</span><div class="language-switch" data-language-switch></div></div></nav>
+  <header class="hero"><div class="hero-copy"><p class="eyebrow">Análisis · Parámetros y recta tangente · 2024</p><h1>De cuatro condiciones a una cúbica</h1></div></header>
+
+  <section class="problem" aria-labelledby="statement-title"><div class="section-index">00</div><div class="section-content">
+    <h2 id="statement-title">Enunciado</h2>
+    <div class="statement-function math-display" data-math="f(x)=x^3+Ax^2+Bx+C" data-math-display></div>
+    <p data-cubic-extra-2024-language="es">Las tangentes en <span class="math-inline math-nowrap" data-math="x=-1"></span> y <span class="math-inline math-nowrap" data-math="x=2"></span> son paralelas. Además, <span class="math-inline math-nowrap" data-math="f"></span> tiene un extremo relativo en <span class="math-inline math-nowrap" data-math="x=1"></span> y</p>
+    <p data-cubic-extra-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=-1"></span> eta <span class="math-inline math-nowrap" data-math="x=2"></span> puntuetako ukitzaileak paraleloak dira. Gainera, <span class="math-inline math-nowrap" data-math="f"></span>-k mutur erlatibo bat du <span class="math-inline math-nowrap" data-math="x=1"></span> puntuan, eta</p>
+    <div class="math-display" data-math="f(0)=\lim_{x\to0}\frac{e^{2x}-1}{x}" data-math-display></div>
+    <ol class="problem-list">
+      <li>Encuentra <span class="math-inline math-nowrap" data-math="A,B,C"></span>.</li>
+      <li data-cubic-extra-2024-language="es">Para <span class="math-inline math-nowrap" data-math="A=-3,\ B=0,\ C=4"></span>, halla la tangente en <span class="math-inline math-nowrap" data-math="x=-1"></span>.</li>
+      <li data-cubic-extra-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="A=-3,\ B=0,\ C=4"></span> izanik, aurkitu <span class="math-inline math-nowrap" data-math="x=-1"></span> puntuko ukitzailea.</li>
+    </ol>
+  </div></section>
+
+  <section class="level-control" aria-labelledby="level-title"><p class="control-label" id="level-title">Qué quieres ver</p><div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución"><button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button><button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button><button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button><button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button></div></section>
+  <div class="tabs" role="tablist" aria-label="Apartados de la solución"><button class="tab active" type="button" role="tab" aria-selected="true" data-target="cubic-extra-2024-a">Apartado A</button><button class="tab" type="button" role="tab" aria-selected="false" data-target="cubic-extra-2024-b">Apartado B</button></div>
+
+  <div class="solutions">
+    <section id="cubic-extra-2024-a" class="panel active" role="tabpanel"><div class="section-index">01</div><div class="section-content">
+      <div class="idea-view"><p class="kicker">Apartado A</p><h2>Idea de resolución</h2>
+        <p class="idea-text" data-cubic-extra-2024-language="es">Las tangentes paralelas tienen la misma pendiente, de modo que igualamos <span class="math-inline math-nowrap" data-math="f'(-1)"></span> y <span class="math-inline math-nowrap" data-math="f'(2)"></span>. El extremo en <span class="math-inline math-nowrap" data-math="x=1"></span> aporta la condición <span class="math-inline math-nowrap" data-math="f'(1)=0"></span>.</p>
+        <p class="idea-text" data-cubic-extra-2024-language="eu" hidden>Ukitzaile paraleloek malda bera dute; beraz, <span class="math-inline math-nowrap" data-math="f'(-1)"></span> eta <span class="math-inline math-nowrap" data-math="f'(2)"></span> berdintzen ditugu. <span class="math-inline math-nowrap" data-math="x=1"></span> puntuko muturrak <span class="math-inline math-nowrap" data-math="f'(1)=0"></span> baldintza ematen du.</p>
+        <p class="idea-text" data-cubic-extra-2024-language="es">Esas dos ecuaciones determinan <span class="math-inline math-nowrap" data-math="A"></span> y <span class="math-inline math-nowrap" data-math="B"></span>. El término independiente es <span class="math-inline math-nowrap" data-math="C=f(0)"></span>, y lo obtenemos evaluando el límite.</p>
+        <p class="idea-text" data-cubic-extra-2024-language="eu" hidden>Bi ekuazio horiek <span class="math-inline math-nowrap" data-math="A"></span> eta <span class="math-inline math-nowrap" data-math="B"></span> zehazten dituzte. Gai independentea <span class="math-inline math-nowrap" data-math="C=f(0)"></span> da, eta limitea kalkulatuz lortzen dugu.</p>
+        <div class="essential-geometry"><strong class="math-display" data-math="f'(-1)=f'(2),\qquad f'(1)=0,\qquad C=f(0)" data-math-display></strong></div>
+      </div>
+      <div class="solution-view" hidden><p class="kicker">Apartado A</p><h2>Traducimos cada dato en una ecuación</h2>
+        <aside class="theory-note progressive-layer" data-min-level="theory" hidden><p class="layer-label">Teoría necesaria</p>
+          <div class="theory-topic"><h3>1. Derivada y tangentes</h3><p data-cubic-extra-2024-language="es">La derivada es la pendiente de la tangente. Dos rectas son paralelas cuando tienen la misma pendiente; en un extremo interior de una función derivable, la pendiente es cero.</p><p data-cubic-extra-2024-language="eu" hidden>Deribatua ukitzailearen malda da. Bi zuzen paraleloak dira malda bera dutenean; funtzio deribagarri baten barneko mutur batean malda zero da.</p></div>
+          <div class="theory-topic"><h3>2. Regla de L’Hôpital</h3><p data-cubic-extra-2024-language="es">Ante una indeterminación <span class="math-inline math-nowrap" data-math="0/0"></span>, y si se cumplen las condiciones de derivabilidad, podemos calcular el límite del cociente de las derivadas.</p><p data-cubic-extra-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="0/0"></span> indeterminazioan, deribagarritasun-baldintzak betetzen badira, deribatuen zatiduraren limitea kalkula dezakegu.</p><div class="theory-formula math-display" data-math="\lim\frac{u(x)}{v(x)}=\lim\frac{u'(x)}{v'(x)}" data-math-display></div></div>
+        </aside>
+        <div class="progressive-layer" data-min-level="detail" hidden><p class="layer-label">Resolución completa</p><ol class="worked-steps">
+          <li><h3>Derivamos</h3><div class="math-display" data-math="f'(x)=3x^2+2Ax+B" data-math-display></div></li>
+          <li><h3>Igualamos las pendientes paralelas</h3>
+            <div class="math-display" data-math="f'(-1)=3-2A+B" data-math-display></div>
+            <div class="math-display" data-math="f'(2)=12+4A+B" data-math-display></div>
+            <div class="math-display" data-math="3-2A+B=12+4A+B" data-math-display></div>
+            <div class="math-display" data-math="-6A=9\quad\Longrightarrow\quad A=-\frac32" data-math-display></div>
+          </li>
+          <li><h3>Usamos el extremo en <span class="math-inline math-nowrap" data-math="x=1"></span></h3>
+            <div class="math-display" data-math="f'(1)=3+2A+B=0" data-math-display></div>
+            <div class="math-display" data-math="3-3+B=0\quad\Longrightarrow\quad B=0" data-math-display></div>
+          </li>
+          <li><h3>Calculamos el límite</h3>
+            <div class="math-display" data-math="\lim_{x\to0}\frac{e^{2x}-1}{x}=\frac00" data-math-display></div>
+            <div class="math-display" data-math="\lim_{x\to0}\frac{2e^{2x}}1=2" data-math-display></div>
+            <div class="math-display" data-math="C=f(0)=2" data-math-display></div>
+          </li>
+        </ol></div>
+        <p class="step-caption">Cálculo esencial</p><div class="essential-geometry">
+          <div class="math-display" data-math="f'(-1)=f'(2)\Rightarrow A=-\frac32" data-math-display></div>
+          <div class="math-display" data-math="f'(1)=0\Rightarrow B=0;\qquad f(0)=2\Rightarrow C=2" data-math-display></div>
+        </div>
+        <div class="result"><span>Resultado</span><strong class="math-display" data-math="A=-\frac32,\qquad B=0,\qquad C=2" data-math-display></strong></div>
+      </div>
+    </div></section>
+
+    <section id="cubic-extra-2024-b" class="panel" role="tabpanel" hidden><div class="section-index">02</div><div class="section-content">
+      <div class="idea-view"><p class="kicker">Apartado B</p><h2>Idea de resolución</h2>
+        <p class="idea-text" data-cubic-extra-2024-language="es">Este apartado da otros parámetros: ahora trabajamos con <span class="math-inline math-nowrap" data-math="f(x)=x^3-3x^2+4"></span>. Calculamos el punto de la gráfica y la pendiente en <span class="math-inline math-nowrap" data-math="x=-1"></span>, y usamos la ecuación punto-pendiente.</p>
+        <p class="idea-text" data-cubic-extra-2024-language="eu" hidden>Atal honek beste parametro batzuk ematen ditu: orain <span class="math-inline math-nowrap" data-math="f(x)=x^3-3x^2+4"></span> funtzioarekin lan egiten dugu. <span class="math-inline math-nowrap" data-math="x=-1"></span> puntuko grafikoko puntua eta malda kalkulatu, eta puntu-malda ekuazioa erabiltzen dugu.</p>
+        <div class="essential-geometry"><strong class="math-display" data-math="P=(-1,0),\qquad m=f'(-1)=9" data-math-display></strong></div>
+      </div>
+      <div class="solution-view" hidden><p class="kicker">Apartado B</p><h2>Hallamos el punto y la pendiente de tangencia</h2>
+        <aside class="theory-note progressive-layer" data-min-level="theory" hidden><p class="layer-label">Teoría necesaria</p>
+          <div class="theory-topic"><h3>Ecuación de la tangente</h3><p data-cubic-extra-2024-language="es">La tangente en <span class="math-inline math-nowrap" data-math="x_0"></span> pasa por <span class="math-inline math-nowrap" data-math="(x_0,f(x_0))"></span> y tiene pendiente <span class="math-inline math-nowrap" data-math="f'(x_0)"></span>.</p><p data-cubic-extra-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="x_0"></span> puntuko ukitzailea <span class="math-inline math-nowrap" data-math="(x_0,f(x_0))"></span> puntutik igarotzen da, eta <span class="math-inline math-nowrap" data-math="f'(x_0)"></span> malda du.</p><div class="theory-formula math-display" data-math="y-f(x_0)=f'(x_0)(x-x_0)" data-math-display></div></div>
+        </aside>
+        <div class="progressive-layer" data-min-level="detail" hidden><p class="layer-label">Resolución completa</p><ol class="worked-steps">
+          <li><h3>Escribimos la nueva función</h3><div class="math-display" data-math="f(x)=x^3-3x^2+4" data-math-display></div></li>
+          <li><h3>Calculamos el punto de tangencia</h3><div class="math-display" data-math="f(-1)=(-1)^3-3(-1)^2+4=0" data-math-display></div><div class="math-display" data-math="P=(-1,0)" data-math-display></div></li>
+          <li><h3>Calculamos la pendiente</h3><div class="math-display" data-math="f'(x)=3x^2-6x" data-math-display></div><div class="math-display" data-math="f'(-1)=3+6=9" data-math-display></div></li>
+          <li><h3>Aplicamos la ecuación punto-pendiente</h3><div class="math-display" data-math="y-0=9(x+1)" data-math-display></div><div class="math-display" data-math="y=9x+9" data-math-display></div></li>
+        </ol></div>
+        <p class="step-caption">Cálculo esencial</p><div class="essential-geometry"><div class="math-display" data-math="f(-1)=0,\qquad f'(-1)=9" data-math-display></div><strong class="math-display" data-math="y=9x+9" data-math-display></strong></div>
+        <figure class="cubic-extra-2024-figure" aria-label="Función cúbica y tangente en menos uno"><figcaption data-cubic-extra-2024-language="es">La recta toca la curva en <span class="math-inline math-nowrap" data-math="(-1,0)"></span> y comparte allí su dirección.</figcaption><figcaption data-cubic-extra-2024-language="eu" hidden>Zuzenak kurba <span class="math-inline math-nowrap" data-math="(-1,0)"></span> puntuan ukitzen du, eta norabide bera dute bertan.</figcaption><div id="cubic-extra-2024-board" class="jxgbox cubic-extra-2024-board" role="img" aria-label="Cúbica y recta tangente de pendiente nueve"></div></figure>
+        <div class="result"><span>Resultado</span><strong class="math-display" data-math="y=9x+9" data-math-display></strong></div>
+      </div>
+    </div></section>
+  </div>
+</main></body></html>

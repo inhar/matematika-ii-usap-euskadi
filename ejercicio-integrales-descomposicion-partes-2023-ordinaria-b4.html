@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deskonposizio algebraikoa eta zatikako integrazioa · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-integrales-descomposicion-partes-2023-ordinaria-idiomas.js?v=2023-ord-b4" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Ejercicio B4</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Integrales indefinidas · 2023</p>
+        <h1 class="integrals-b4-2023-title">Descomposición algebraica e integración por partes</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-integrals-b4-2023-language="es">Calcula las siguientes integrales:</p>
+        <p data-integrals-b4-2023-language="eu" hidden>Kalkulatu integral hauek:</p>
+        <div class="integrals-b4-2023-statement">
+          <div>
+            <span class="math-inline" data-math="I"></span>
+            <span class="math-display" data-math="\int\frac{x^2+4}{(x+2)^2}\,dx" data-math-display></span>
+          </div>
+          <div>
+            <span class="math-inline" data-math="II"></span>
+            <span class="math-display" data-math="\int(x+2)\sin(3x)\,dx" data-math-display></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Integrales de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="integrals-b4-2023-part-i" data-target="integrals-b4-2023-part-i">I</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="integrals-b4-2023-part-ii" data-target="integrals-b4-2023-part-ii">II</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="integrals-b4-2023-part-i" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Integral I</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-integrals-b4-2023-language="es">El denominador es una potencia de <span class="math-inline math-nowrap" data-math="x+2"></span>. Conviene expresar también el numerador mediante potencias de ese mismo binomio: así el cociente se separará en tres términos con primitivas inmediatas.</p>
+            <p class="idea-text" data-integrals-b4-2023-language="eu" hidden>Izendatzailea <span class="math-inline math-nowrap" data-math="x+2"></span> binomioaren berretura da. Zenbakitzailea ere binomio beraren berreturen bidez adieraztea komeni da; horrela, zatidura berehalako primitiboa duten hiru terminotan banatuko da.</p>
+            <p class="idea-text" data-integrals-b4-2023-language="es">Usaremos <span class="math-inline math-nowrap" data-math="t=x+2"></span> solo para descubrir la descomposición y después volveremos a <span class="math-inline math-nowrap" data-math="x"></span>. La integral se reducirá a una constante, una primitiva logarítmica y una potencia negativa.</p>
+            <p class="idea-text" data-integrals-b4-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="t=x+2"></span> erabiliko dugu deskonposizioa aurkitzeko bakarrik, eta ondoren <span class="math-inline math-nowrap" data-math="x"></span> aldagaira itzuliko gara. Integrala konstante batera, primitibo logaritmiko batera eta berretura negatibo batera murriztuko da.</p>
+            <div class="essential-geometry integrals-b4-2023-idea">
+              <div class="math-display" data-math="x^2+4=(x+2)^2-4(x+2)+8" data-math-display></div>
+              <div class="math-display" data-math="\frac{x^2+4}{(x+2)^2}=1-\frac4{x+2}+\frac8{(x+2)^2}" data-math-display></div>
+              <strong class="math-display" data-math="I=x-4\ln\lvert x+2\rvert-\frac8{x+2}+C" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Integral I</p>
+            <h2>Descomposición del integrando</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Reescritura respecto de un binomio</h3>
+                <p data-integrals-b4-2023-language="es">Si el denominador contiene una potencia de <span class="math-inline math-nowrap" data-math="x+a"></span>, podemos hacer provisionalmente <span class="math-inline math-nowrap" data-math="t=x+a"></span>. Escribir el numerador como polinomio en <span class="math-inline math-nowrap" data-math="t"></span> permite simplificar el cociente término a término.</p>
+                <p data-integrals-b4-2023-language="eu" hidden>Izendatzaileak <span class="math-inline math-nowrap" data-math="x+a"></span> binomioaren berretura badu, behin-behinean <span class="math-inline math-nowrap" data-math="t=x+a"></span> har dezakegu. Zenbakitzailea <span class="math-inline math-nowrap" data-math="t"></span>-ren polinomio gisa idazteak zatidura terminoz termino sinplifikatzeko aukera ematen du.</p>
+                <div class="theory-formula math-display" data-math="\frac{t^2+bt+c}{t^2}=1+\frac bt+\frac c{t^2}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Linealidad de la integral</h3>
+                <p data-integrals-b4-2023-language="es">Podemos integrar una suma término a término y sacar fuera los factores constantes.</p>
+                <p data-integrals-b4-2023-language="eu" hidden>Batura bat terminoz termino integra dezakegu, eta faktore konstanteak integraletik kanpo atera.</p>
+                <div class="theory-formula math-display" data-math="\int(af+bg)\,dx=a\int f\,dx+b\int g\,dx" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Primitivas que vamos a utilizar</h3>
+                <p data-integrals-b4-2023-language="es">El término de exponente menos uno produce un logaritmo; para el exponente menos dos aplicamos la regla de las potencias.</p>
+                <p data-integrals-b4-2023-language="eu" hidden>Minus bateko berretzailea duen terminoak logaritmoa ematen du; minus biko berretzaileari berreturen erregela aplikatzen diogu.</p>
+                <div class="integrals-b4-2023-primitives">
+                  <span class="math-inline" data-math="\int\frac1{x+a}\,dx=\ln\lvert x+a\rvert+C"></span>
+                  <span class="math-inline" data-math="\int(x+a)^{-2}\,dx=-(x+a)^{-1}+C"></span>
+                </div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Tomamos como referencia el binomio del denominador</h3>
+                  <p data-integrals-b4-2023-language="es">Llamamos <span class="math-inline math-nowrap" data-math="t"></span> al binomio <span class="math-inline math-nowrap" data-math="x+2"></span>. De esta igualdad despejamos <span class="math-inline math-nowrap" data-math="x"></span>.</p>
+                  <p data-integrals-b4-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="t"></span> deituko diogu <span class="math-inline math-nowrap" data-math="x+2"></span> binomioari. Berdintza horretatik <span class="math-inline math-nowrap" data-math="x"></span> bakantzen dugu.</p>
+                  <div class="integrals-b4-2023-work">
+                    <div class="math-display" data-math="t=x+2" data-math-display></div>
+                    <div class="math-display" data-math="x=t-2" data-math-display></div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Reescribimos el numerador</h3>
+                  <p data-integrals-b4-2023-language="es">Sustituimos <span class="math-inline math-nowrap" data-math="x=t-2"></span>, desarrollamos el cuadrado y reducimos términos.</p>
+                  <p data-integrals-b4-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=t-2"></span> ordezkatu, karratua garatu eta terminoak laburtzen ditugu.</p>
+                  <div class="integrals-b4-2023-work">
+                    <div class="math-display" data-math="x^2+4=(t-2)^2+4" data-math-display></div>
+                    <div class="math-display" data-math="x^2+4=t^2-4t+4+4" data-math-display></div>
+                    <div class="math-display" data-math="x^2+4=t^2-4t+8" data-math-display></div>
+                    <strong class="math-display" data-math="x^2+4=(x+2)^2-4(x+2)+8" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Separamos el cociente</h3>
+                  <p data-integrals-b4-2023-language="es">Dividimos cada sumando del numerador entre <span class="math-inline math-nowrap" data-math="(x+2)^2"></span> y simplificamos las potencias comunes.</p>
+                  <p data-integrals-b4-2023-language="eu" hidden>Zenbakitzaileko batugai bakoitza <span class="math-inline math-nowrap" data-math="(x+2)^2"></span>-z zatitu eta berretura komunak sinplifikatzen ditugu.</p>
+                  <div class="integrals-b4-2023-work">
+                    <div class="math-display" data-math="\frac{x^2+4}{(x+2)^2}=\frac{(x+2)^2}{(x+2)^2}-\frac{4(x+2)}{(x+2)^2}+\frac8{(x+2)^2}" data-math-display></div>
+                    <strong class="math-display" data-math="\frac{x^2+4}{(x+2)^2}=1-\frac4{x+2}+\frac8{(x+2)^2}" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Integramos término a término</h3>
+                  <p data-integrals-b4-2023-language="es">Aplicamos la linealidad y escribimos el último cociente como una potencia de exponente menos dos.</p>
+                  <p data-integrals-b4-2023-language="eu" hidden>Linealtasuna aplikatzen dugu, eta azken zatidura minus biko berretzaileko berretura gisa idazten dugu.</p>
+                  <div class="integrals-b4-2023-work">
+                    <div class="math-display" data-math="I=\int1\,dx-4\int\frac1{x+2}\,dx+8\int(x+2)^{-2}\,dx" data-math-display></div>
+                    <div class="math-display" data-math="I=x-4\ln\lvert x+2\rvert-8(x+2)^{-1}+C" data-math-display></div>
+                    <strong class="math-display" data-math="I=x-4\ln\lvert x+2\rvert-\frac8{x+2}+C" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Comprobamos derivando</h3>
+                  <p data-integrals-b4-2023-language="es">Derivamos la primitiva. La expresión obtenida coincide con la descomposición del integrando y, por tanto, con la fracción inicial.</p>
+                  <p data-integrals-b4-2023-language="eu" hidden>Primitiboa deribatzen dugu. Lortutako adierazpena integrakizunaren deskonposizioarekin bat dator, eta, beraz, hasierako zatikiarekin ere bai.</p>
+                  <div class="integrals-b4-2023-work">
+                    <div class="math-display" data-math="I'(x)=1-\frac4{x+2}+\frac8{(x+2)^2}" data-math-display></div>
+                    <strong class="math-display" data-math="I'(x)=\frac{x^2+4}{(x+2)^2}" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry integrals-b4-2023-essential">
+              <div class="math-display" data-math="x^2+4=(x+2)^2-4(x+2)+8" data-math-display></div>
+              <div class="math-display" data-math="\frac{x^2+4}{(x+2)^2}=1-\frac4{x+2}+\frac8{(x+2)^2}" data-math-display></div>
+              <div class="math-display" data-math="I=\int\left(1-\frac4{x+2}+\frac8{(x+2)^2}\right)\,dx" data-math-display></div>
+              <strong class="math-display" data-math="I=x-4\ln\lvert x+2\rvert-\frac8{x+2}+C" data-math-display></strong>
+            </div>
+
+            <div class="result result-long integrals-b4-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="I=x-4\ln\lvert x+2\rvert-\frac8{x+2}+C" data-math-display></strong>
+              <p data-integrals-b4-2023-language="es">Primitiva válida en cada intervalo del dominio, con <span class="math-inline math-nowrap" data-math="x\ne-2"></span>.</p>
+              <p data-integrals-b4-2023-language="eu" hidden>Primitiboa definizio-eremuko tarte bakoitzean da baliozkoa, <span class="math-inline math-nowrap" data-math="x\ne-2"></span> izanik.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="integrals-b4-2023-part-ii" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Integral II</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-integrals-b4-2023-language="es">El integrando es el producto de un polinomio y una función trigonométrica. Elegiremos el polinomio como <span class="math-inline math-nowrap" data-math="u"></span>, porque al derivarlo se convierte en uno, y el seno como <span class="math-inline math-nowrap" data-math="dv"></span>, porque puede integrarse directamente.</p>
+            <p class="idea-text" data-integrals-b4-2023-language="eu" hidden>Integrakizuna polinomio baten eta funtzio trigonometriko baten biderkadura da. Polinomioa <span class="math-inline math-nowrap" data-math="u"></span> gisa aukeratuko dugu, deribatzean bat bihurtzen delako, eta sinua <span class="math-inline math-nowrap" data-math="dv"></span> gisa, zuzenean integra daitekeelako.</p>
+            <p class="idea-text" data-integrals-b4-2023-language="es">Tras aplicar la integración por partes quedará una integral de coseno inmediata. Los factores <span class="math-inline math-nowrap" data-math="1/3"></span> aparecen porque el argumento trigonométrico es <span class="math-inline math-nowrap" data-math="3x"></span>.</p>
+            <p class="idea-text" data-integrals-b4-2023-language="eu" hidden>Zatikako integrazioa aplikatu ondoren, kosinuaren berehalako integral bat geratuko da. <span class="math-inline math-nowrap" data-math="1/3"></span> faktoreak argumentu trigonometrikoa <span class="math-inline math-nowrap" data-math="3x"></span> delako agertzen dira.</p>
+            <div class="essential-geometry integrals-b4-2023-idea">
+              <div class="math-display" data-math="u=x+2,\qquad dv=\sin(3x)\,dx" data-math-display></div>
+              <div class="math-display" data-math="du=dx,\qquad v=-\frac13\cos(3x)" data-math-display></div>
+              <strong class="math-display" data-math="II=-\frac{x+2}{3}\cos(3x)+\frac19\sin(3x)+C" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Integral II</p>
+            <h2>Integración por partes</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Cuándo utilizar la integración por partes</h3>
+                <p data-integrals-b4-2023-language="es">El método es apropiado para productos en los que un factor se simplifica al derivarlo y el otro tiene una primitiva conocida. Es habitual en productos de polinomios con funciones trigonométricas.</p>
+                <p data-integrals-b4-2023-language="eu" hidden>Metodoa egokia da biderkagai bat deribatzean sinplifikatzen den eta besteak primitibo ezaguna duen biderkaduretarako. Ohikoa da polinomioen eta funtzio trigonometrikoen arteko biderkaduretan.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Fórmula de integración por partes</h3>
+                <p data-integrals-b4-2023-language="es">Elegimos una parte para derivarla y otra para integrarla. Después sustituimos los cuatro elementos en la fórmula.</p>
+                <p data-integrals-b4-2023-language="eu" hidden>Zati bat deribatzeko eta beste bat integratzeko aukeratzen ditugu. Ondoren, lau elementuak formulan ordezkatzen ditugu.</p>
+                <div class="theory-formula math-display" data-math="\int u\,dv=uv-\int v\,du" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Primitivas trigonométricas con argumento lineal</h3>
+                <p data-integrals-b4-2023-language="es">Al integrar seno o coseno de <span class="math-inline math-nowrap" data-math="kx"></span>, dividimos por <span class="math-inline math-nowrap" data-math="k"></span>, la derivada del argumento.</p>
+                <p data-integrals-b4-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="kx"></span>-ren sinua edo kosinua integratzean, argumentuaren deribatua den <span class="math-inline math-nowrap" data-math="k"></span>-z zatitzen dugu.</p>
+                <div class="integrals-b4-2023-primitives">
+                  <span class="math-inline" data-math="\int\sin(kx)\,dx=-\frac1k\cos(kx)+C"></span>
+                  <span class="math-inline" data-math="\int\cos(kx)\,dx=\frac1k\sin(kx)+C"></span>
+                </div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Reconocemos el método</h3>
+                  <p data-integrals-b4-2023-language="es">El factor <span class="math-inline math-nowrap" data-math="x+2"></span> se simplifica al derivarlo y <span class="math-inline math-nowrap" data-math="\sin(3x)"></span> puede integrarse de forma inmediata. Por eso aplicamos integración por partes.</p>
+                  <p data-integrals-b4-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="x+2"></span> biderkagaia deribatzean sinplifikatzen da, eta <span class="math-inline math-nowrap" data-math="\sin(3x)"></span> berehala integra daiteke. Horregatik, zatikako integrazioa aplikatzen dugu.</p>
+                </li>
+                <li>
+                  <h3>Elegimos y calculamos las dos partes</h3>
+                  <p data-integrals-b4-2023-language="es">Derivamos el polinomio e integramos el seno. Para hallar <span class="math-inline math-nowrap" data-math="v"></span>, dividimos por tres y aparece el signo negativo propio de la primitiva del seno.</p>
+                  <p data-integrals-b4-2023-language="eu" hidden>Polinomioa deribatu eta sinua integratzen dugu. <span class="math-inline math-nowrap" data-math="v"></span> kalkulatzeko, hiruz zatitzen dugu, eta sinuaren primitiboari dagokion zeinu negatiboa agertzen da.</p>
+                  <div class="integrals-b4-2023-parts">
+                    <div>
+                      <strong class="math-inline" data-math="u=x+2"></strong>
+                      <span class="math-inline" data-math="du=dx"></span>
+                    </div>
+                    <div>
+                      <strong class="math-inline" data-math="dv=\sin(3x)\,dx"></strong>
+                      <span class="math-inline" data-math="v=-\frac13\cos(3x)"></span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Sustituimos en la fórmula</h3>
+                  <p data-integrals-b4-2023-language="es">El segundo término queda sumando porque la fórmula resta una integral cuyo integrando ya es negativo.</p>
+                  <p data-integrals-b4-2023-language="eu" hidden>Bigarren terminoa batzen geratzen da, formulak dagoeneko negatiboa den integrakizun baten integrala kentzen duelako.</p>
+                  <div class="integrals-b4-2023-work">
+                    <div class="math-display" data-math="II=uv-\int v\,du" data-math-display></div>
+                    <div class="math-display" data-math="uv=(x+2)\left(-\frac13\cos(3x)\right)=-\frac{x+2}{3}\cos(3x)" data-math-display></div>
+                    <div class="math-display" data-math="-\int v\,du=-\int\left(-\frac13\cos(3x)\right)\,dx" data-math-display></div>
+                    <div class="math-display" data-math="=\frac13\int\cos(3x)\,dx" data-math-display></div>
+                    <strong class="math-display" data-math="II=-\frac{x+2}{3}\cos(3x)+\frac13\int\cos(3x)\,dx" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos la integral restante</h3>
+                  <p data-integrals-b4-2023-language="es">La primitiva de <span class="math-inline math-nowrap" data-math="\cos(3x)"></span> aporta otro factor <span class="math-inline math-nowrap" data-math="1/3"></span>. Al multiplicarlos obtenemos <span class="math-inline math-nowrap" data-math="1/9"></span>.</p>
+                  <p data-integrals-b4-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="\cos(3x)"></span>-ren primitiboak beste <span class="math-inline math-nowrap" data-math="1/3"></span> faktore bat ematen du. Biak biderkatzean <span class="math-inline math-nowrap" data-math="1/9"></span> lortzen dugu.</p>
+                  <div class="integrals-b4-2023-work">
+                    <div class="math-display" data-math="\int\cos(3x)\,dx=\frac13\sin(3x)" data-math-display></div>
+                    <div class="math-display" data-math="II=-\frac{x+2}{3}\cos(3x)+\frac13\left(\frac13\sin(3x)\right)+C" data-math-display></div>
+                    <strong class="math-display" data-math="II=-\frac{x+2}{3}\cos(3x)+\frac19\sin(3x)+C" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Comprobamos derivando</h3>
+                  <p data-integrals-b4-2023-language="es">Aplicamos la regla del producto al primer sumando. Los dos términos con coseno se cancelan y queda exactamente el integrando inicial.</p>
+                  <p data-integrals-b4-2023-language="eu" hidden>Biderkaduraren erregela aplikatzen diogu lehenengo batugaiari. Kosinua duten bi terminoak ezeztatu egiten dira, eta hasierako integrakizuna geratzen da zehazki.</p>
+                  <div class="integrals-b4-2023-work">
+                    <div class="math-display" data-math="\frac{d}{dx}\left[-\frac{x+2}{3}\cos(3x)\right]" data-math-display></div>
+                    <div class="math-display" data-math="=-\frac13\cos(3x)+(x+2)\sin(3x)" data-math-display></div>
+                    <div class="math-display" data-math="\frac{d}{dx}\left[\frac19\sin(3x)\right]=\frac13\cos(3x)" data-math-display></div>
+                    <strong class="math-display" data-math="II'(x)=(x+2)\sin(3x)" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry integrals-b4-2023-essential">
+              <div class="math-display" data-math="u=x+2,\quad du=dx" data-math-display></div>
+              <div class="math-display" data-math="dv=\sin(3x)\,dx,\quad v=-\frac13\cos(3x)" data-math-display></div>
+              <div class="math-display" data-math="II=-\frac{x+2}{3}\cos(3x)+\frac13\int\cos(3x)\,dx" data-math-display></div>
+              <strong class="math-display" data-math="II=-\frac{x+2}{3}\cos(3x)+\frac19\sin(3x)+C" data-math-display></strong>
+            </div>
+
+            <div class="result result-long integrals-b4-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="II=-\frac{x+2}{3}\cos(3x)+\frac19\sin(3x)+C" data-math-display></strong>
+              <p data-integrals-b4-2023-language="es">Al derivar se recupera exactamente el integrando.</p>
+              <p data-integrals-b4-2023-language="eu" hidden>Deribatzean integrakizuna zehazki berreskuratzen da.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

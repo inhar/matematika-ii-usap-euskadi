@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Puntu baten simetrikoa plano batekiko · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-simetrico-punto-plano-2022-ordinaria-idiomas.js?v=2022-ord-b2a" defer></script>
+  <script src="ejercicio-simetrico-punto-plano-2022-ordinaria-grafico.js?v=2022-ord-b2a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2022 · Ordinaria · Ejercicio B2</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Geometría en el espacio · Simetría y proyecciones · 2022</p>
+        <h1 class="reflection-2022-title">Simétrico de un punto respecto de un plano</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-reflection-language="es">Sean el punto <span class="math-inline math-nowrap" data-math="P=(1,2,a)"></span>, donde <span class="math-inline math-nowrap" data-math="a\ne0"></span>, y el plano</p>
+        <p data-reflection-language="eu" hidden><span class="math-inline math-nowrap" data-math="P=(1,2,a)"></span> puntua, non <span class="math-inline math-nowrap" data-math="a\ne0"></span> den, eta plano hau emanda:</p>
+        <div class="reflection-2022-statement">
+          <strong class="math-display" data-math="\pi\colon x+y+2z=3" data-math-display></strong>
+        </div>
+        <p data-reflection-language="es">Halla las coordenadas del punto simétrico de <span class="math-inline math-nowrap" data-math="P"></span> respecto al plano <span class="math-inline math-nowrap" data-math="\pi"></span>.</p>
+        <p data-reflection-language="eu" hidden>Kalkulatu <span class="math-inline math-nowrap" data-math="P"></span> puntuaren simetrikoaren koordenatuak <span class="math-inline math-nowrap" data-math="\pi"></span> planoarekiko.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio B2</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-reflection-language="es">El punto buscado está al otro lado del plano, sobre la perpendicular que pasa por <span class="math-inline math-nowrap" data-math="P"></span>, y a la misma distancia de él. La dirección de esa perpendicular es el vector normal del plano.</p>
+            <p class="idea-text" data-reflection-language="eu" hidden>Bilatutako puntua planoaren beste aldean dago, <span class="math-inline math-nowrap" data-math="P"></span> puntutik igarotzen den zuzen perpendikularrean, eta planotik <span class="math-inline math-nowrap" data-math="P"></span> puntuaren distantzia berera. Perpendikular horren norabidea planoaren bektore normala da.</p>
+            <p class="idea-text" data-reflection-language="es">Primero cortaremos esa recta perpendicular con el plano para obtener <span class="math-inline math-nowrap" data-math="H"></span>. Este punto es la proyección ortogonal de <span class="math-inline math-nowrap" data-math="P"></span> y también el punto medio entre <span class="math-inline math-nowrap" data-math="P"></span> y su simétrico <span class="math-inline math-nowrap" data-math="P'"></span>. Por eso, una vez conocido <span class="math-inline math-nowrap" data-math="H"></span>, basta aplicar <span class="math-inline math-nowrap" data-math="P'=2H-P"></span>.</p>
+            <p class="idea-text" data-reflection-language="eu" hidden>Lehenik, zuzen perpendikularra planoarekin ebakiko dugu <span class="math-inline math-nowrap" data-math="H"></span> puntua lortzeko. <span class="math-inline math-nowrap" data-math="H"></span> puntua <span class="math-inline math-nowrap" data-math="P"></span> puntuaren proiekzio ortogonala da, baita <span class="math-inline math-nowrap" data-math="P"></span> eta <span class="math-inline math-nowrap" data-math="P'"></span> puntuen erdiko puntua ere. Beraz, <span class="math-inline math-nowrap" data-math="H"></span> ezagutu ondoren, <span class="math-inline math-nowrap" data-math="P'=2H-P"></span> aplikatzea besterik ez da behar.</p>
+            <div class="essential-geometry reflection-2022-idea">
+              <div class="math-display" data-math="\vec n=(1,1,2)" data-math-display></div>
+              <div class="math-display" data-math="H=\left(1-\frac a3,\,2-\frac a3,\,\frac a3\right)" data-math-display></div>
+              <strong class="math-display" data-math="P'=\left(1-\frac{2a}{3},\,2-\frac{2a}{3},\,-\frac a3\right)" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio B2</p>
+            <h2 id="solution-title">Reflejamos el punto en el plano</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Vector normal de un plano</h3>
+                <p data-reflection-language="es">En la ecuación general de un plano, los coeficientes de <span class="math-inline math-nowrap" data-math="x"></span>, <span class="math-inline math-nowrap" data-math="y"></span> y <span class="math-inline math-nowrap" data-math="z"></span> forman un vector perpendicular al plano.</p>
+                <p data-reflection-language="eu" hidden>Plano baten ekuazio orokorrean, <span class="math-inline math-nowrap" data-math="x"></span>, <span class="math-inline math-nowrap" data-math="y"></span> eta <span class="math-inline math-nowrap" data-math="z"></span> aldagaien koefizienteek planoarekiko perpendikularra den bektore bat osatzen dute.</p>
+                <div class="theory-formula math-display" data-math="\pi\colon Ax+By+Cz=D" data-math-display></div>
+                <div class="theory-formula math-display" data-math="\vec n=(A,B,C),\qquad \vec n\perp\pi" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Recta perpendicular a un plano</h3>
+                <p>La recta perpendicular a un plano que pasa por un punto utiliza como vector director el vector normal del plano.</p>
+                <div class="theory-formula math-display" data-math="s\colon X=P+t\vec n" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Proyección ortogonal</h3>
+                <p data-reflection-language="es">La proyección ortogonal <span class="math-inline math-nowrap" data-math="H"></span> se obtiene intersecando el plano con la recta perpendicular que parte de <span class="math-inline math-nowrap" data-math="P"></span>. Así se garantizan simultáneamente las dos condiciones necesarias.</p>
+                <p data-reflection-language="eu" hidden><span class="math-inline math-nowrap" data-math="H"></span> proiekzio ortogonala <span class="math-inline math-nowrap" data-math="P"></span> puntutik abiatzen den zuzen perpendikularra planoarekin ebakiz lortzen da. Horrela, beharrezko bi baldintzak aldi berean bermatzen dira.</p>
+                <div class="theory-formula math-display" data-math="H\in\pi,\qquad \overrightarrow{PH}\parallel\vec n" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Simetría respecto de un plano</h3>
+                <p data-reflection-language="es">El plano es la mediatriz espacial del segmento que une un punto con su simétrico. Por tanto, la proyección <span class="math-inline math-nowrap" data-math="H"></span> es el punto medio de <span class="math-inline math-nowrap" data-math="P"></span> y <span class="math-inline math-nowrap" data-math="P'"></span>.</p>
+                <p data-reflection-language="eu" hidden>Planoa puntu bat eta haren simetrikoa lotzen dituen segmentuaren erdibitzaile espaziala da. Beraz, <span class="math-inline math-nowrap" data-math="H"></span> proiekzioa <span class="math-inline math-nowrap" data-math="P"></span> eta <span class="math-inline math-nowrap" data-math="P'"></span> puntuen erdiko puntua da.</p>
+                <div class="theory-formula math-display" data-math="H=\frac{P+P'}2" data-math-display></div>
+                <strong class="theory-formula math-display" data-math="P'=2H-P" data-math-display></strong>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Leemos el vector normal del plano</h3>
+                  <p data-reflection-language="es">Tomamos los coeficientes de las tres variables en la ecuación de <span class="math-inline math-nowrap" data-math="\pi"></span>.</p>
+                  <p data-reflection-language="eu" hidden><span class="math-inline math-nowrap" data-math="\pi"></span> planoaren ekuazioko hiru aldagaien koefizienteak hartzen ditugu.</p>
+                  <div class="reflection-2022-work">
+                    <div class="math-display" data-math="\pi\colon x+y+2z=3" data-math-display></div>
+                    <strong class="math-display" data-math="\vec n=(1,1,2)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Escribimos la perpendicular que pasa por el punto</h3>
+                  <p data-reflection-language="es">La recta <span class="math-inline math-nowrap" data-math="s"></span> pasa por <span class="math-inline math-nowrap" data-math="P=(1,2,a)"></span> y tiene la dirección del vector normal.</p>
+                  <p data-reflection-language="eu" hidden><span class="math-inline math-nowrap" data-math="s"></span> zuzena <span class="math-inline math-nowrap" data-math="P=(1,2,a)"></span> puntutik igarotzen da eta bektore normalaren norabidea du.</p>
+                  <div class="reflection-2022-work">
+                    <div class="math-display" data-math="s\colon (x,y,z)=(1,2,a)+t(1,1,2)" data-math-display></div>
+                    <strong class="math-display" data-math="\begin{cases}x=1+t\\y=2+t\\z=a+2t\end{cases}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Buscamos el corte de la recta con el plano</h3>
+                  <p data-reflection-language="es">Sustituimos las coordenadas de la recta en la ecuación del plano. El valor obtenido sitúa el punto de corte <span class="math-inline math-nowrap" data-math="H"></span>.</p>
+                  <p data-reflection-language="eu" hidden>Zuzenaren koordenatuak planoaren ekuazioan ordezkatzen ditugu. Lortutako balioak <span class="math-inline math-nowrap" data-math="H"></span> ebakidura-puntua zehazten du.</p>
+                  <div class="reflection-2022-work">
+                    <div class="math-display" data-math="(1+t)+(2+t)+2(a+2t)=3" data-math-display></div>
+                    <div class="math-display" data-math="3+2a+6t=3" data-math-display></div>
+                    <div class="math-display" data-math="6t=-2a" data-math-display></div>
+                    <strong class="math-display" data-math="t=-\frac a3" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la proyección ortogonal</h3>
+                  <p data-reflection-language="es">Sustituimos <span class="math-inline math-nowrap" data-math="t=-a/3"></span> en las tres ecuaciones de la recta.</p>
+                  <p data-reflection-language="eu" hidden><span class="math-inline math-nowrap" data-math="t=-a/3"></span> zuzenaren hiru ekuazioetan ordezkatzen dugu.</p>
+                  <div class="reflection-2022-work">
+                    <div class="math-display" data-math="x_H=1-\frac a3,\qquad y_H=2-\frac a3" data-math-display></div>
+                    <div class="math-display" data-math="z_H=a-\frac{2a}{3}=\frac a3" data-math-display></div>
+                    <strong class="math-display" data-math="H=\left(1-\frac a3,\,2-\frac a3,\,\frac a3\right)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Usamos que la proyección es el punto medio</h3>
+                  <p data-reflection-language="es">Como <span class="math-inline math-nowrap" data-math="H"></span> está justo a mitad de camino entre <span class="math-inline math-nowrap" data-math="P"></span> y <span class="math-inline math-nowrap" data-math="P'"></span>, despejamos el punto simétrico.</p>
+                  <p data-reflection-language="eu" hidden><span class="math-inline math-nowrap" data-math="H"></span> puntua <span class="math-inline math-nowrap" data-math="P"></span> eta <span class="math-inline math-nowrap" data-math="P'"></span> puntuen arteko erdibidean dagoenez, puntu simetrikoa askatzen dugu.</p>
+                  <div class="reflection-2022-work">
+                    <div class="math-display" data-math="P'=2H-P" data-math-display></div>
+                    <div class="math-display" data-math="x_{P'}=2\left(1-\frac a3\right)-1=1-\frac{2a}{3}" data-math-display></div>
+                    <div class="math-display" data-math="y_{P'}=2\left(2-\frac a3\right)-2=2-\frac{2a}{3}" data-math-display></div>
+                    <div class="math-display" data-math="z_{P'}=2\cdot\frac a3-a=-\frac a3" data-math-display></div>
+                    <strong class="math-display" data-math="P'=\left(1-\frac{2a}{3},\,2-\frac{2a}{3},\,-\frac a3\right)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos las dos propiedades geométricas</h3>
+                  <p>El punto medio pertenece al plano y el segmento que une los puntos tiene la dirección de su vector normal.</p>
+                  <div class="reflection-2022-work">
+                    <div class="math-display" data-math="\left(1-\frac a3\right)+\left(2-\frac a3\right)+2\cdot\frac a3=3" data-math-display></div>
+                    <div class="math-display" data-math="\overrightarrow{PP'}=-\frac{2a}{3}(1,1,2)" data-math-display></div>
+                    <strong class="math-display" data-math="H\in\pi,\qquad PP'\perp\pi" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Interpretamos la condición sobre el parámetro</h3>
+                  <p data-reflection-language="es">Al sustituir <span class="math-inline math-nowrap" data-math="P"></span> en el primer miembro del plano, la diferencia respecto de <span class="math-inline math-nowrap" data-math="3"></span> es <span class="math-inline math-nowrap" data-math="2a"></span>. Como <span class="math-inline math-nowrap" data-math="a\ne0"></span>, el punto no está en el plano y su simétrico es distinto de él.</p>
+                  <p data-reflection-language="eu" hidden><span class="math-inline math-nowrap" data-math="P"></span> planoaren ekuazioan ordezkatzean, bi atalen arteko diferentzia <span class="math-inline math-nowrap" data-math="2a"></span> da. <span class="math-inline math-nowrap" data-math="a\ne0"></span> denez, puntua ez dago planoan eta haren simetrikoa ez da puntu bera.</p>
+                  <div class="reflection-2022-work">
+                    <div class="math-display" data-math="1+2+2a-3=2a\ne0" data-math-display></div>
+                    <strong class="math-display" data-math="P\notin\pi,\qquad P'\ne P" data-math-display></strong>
+                  </div>
+
+                  <figure class="reflection-2022-figure" aria-label="Punto P, plano pi, proyección H y punto simétrico P prima">
+                    <figcaption data-reflection-language="es">Esquema geométrico, no está a escala. La perpendicular atraviesa el plano en <span class="math-inline math-nowrap" data-math="H"></span>; los dos tramos marcados tienen la misma longitud, de modo que <span class="math-inline math-nowrap" data-math="H"></span> es el punto medio de <span class="math-inline math-nowrap" data-math="PP'"></span>.</figcaption>
+                    <figcaption data-reflection-language="eu" hidden>Eskema geometrikoa, ez dago eskalan. Perpendikularrak <span class="math-inline math-nowrap" data-math="H"></span> puntuan zeharkatzen du planoa; markatutako bi zatiek luzera bera dute, eta, beraz, <span class="math-inline math-nowrap" data-math="H"></span> <span class="math-inline math-nowrap" data-math="PP'"></span> segmentuaren erdiko puntua da.</figcaption>
+                    <div id="reflection-2022-board" class="jxgbox reflection-2022-board" role="img" aria-label="Plano pi y recta perpendicular con P, H y P prima alineados"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry reflection-2022-essential">
+              <div class="math-display" data-math="\vec n=(1,1,2)" data-math-display></div>
+              <div class="math-display" data-math="s\colon (x,y,z)=(1,2,a)+t(1,1,2)" data-math-display></div>
+              <div class="math-display" data-math="t=-\frac a3" data-math-display></div>
+              <div class="math-display" data-math="H=\left(1-\frac a3,\,2-\frac a3,\,\frac a3\right)" data-math-display></div>
+              <strong class="math-display" data-math="P'=2H-P" data-math-display></strong>
+            </div>
+
+            <div class="result result-long geometry-result reflection-2022-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P'=\left(1-\frac{2a}{3},\,2-\frac{2a}{3},\,-\frac a3\right)" data-math-display></strong>
+              <p data-reflection-language="es">Este punto está sobre la perpendicular a <span class="math-inline math-nowrap" data-math="\pi"></span> que pasa por <span class="math-inline math-nowrap" data-math="P"></span>, al otro lado del plano y a la misma distancia.</p>
+              <p data-reflection-language="eu" hidden>Puntu hori <span class="math-inline math-nowrap" data-math="P"></span> puntutik igarotzen den <span class="math-inline math-nowrap" data-math="\pi"></span> planoarekiko perpendikularrean dago, planoaren beste aldean eta distantzia berean.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parabola, hiperbola eta zuzenaren arteko azalera · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-area-parabola-hiperbola-recta-2023-ordinaria-idiomas.js?v=2023-ord-a4a" defer></script>
+  <script src="ejercicio-area-parabola-hiperbola-recta-2023-ordinaria-grafico.js?v=2023-ord-a4a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Ejercicio A4</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Integrales y áreas · 2023</p>
+        <h1 class="area-2023-title">Área limitada por tres curvas</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-area-2023-language="es">Dibuja el recinto del primer cuadrante limitado inferiormente por la curva</p>
+        <p data-area-2023-language="eu" hidden>Marraztu lehenengo koadranteko esparrua, behetik kurba honek mugatua:</p>
+        <div class="area-2023-functions">
+          <span class="math-inline" data-math="y=\frac{x^2}{4}"></span>
+        </div>
+        <p data-area-2023-language="es">y superiormente por las curvas</p>
+        <p data-area-2023-language="eu" hidden>eta goitik kurba hauek mugatua:</p>
+        <div class="area-2023-functions">
+          <span class="math-inline" data-math="y=\frac4{x^2}"></span>
+          <span class="math-inline" data-math="y=4"></span>
+        </div>
+        <p data-area-2023-language="es">Calcula el área de ese recinto.</p>
+        <p data-area-2023-language="eu" hidden>Kalkulatu esparru horren azalera.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio A4</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-area-2023-language="es">La parábola es la frontera inferior en todo el recinto, pero la frontera superior cambia. Primero es la recta <span class="math-inline math-nowrap" data-math="y=4"></span>; cuando esta corta a la hipérbola en <span class="math-inline math-nowrap" data-math="x=1"></span>, la hipérbola pasa a formar el borde superior.</p>
+            <p class="idea-text" data-area-2023-language="eu" hidden>Parabola esparru osoaren beheko muga da, baina goiko muga aldatu egiten da. Lehenik <span class="math-inline math-nowrap" data-math="y=4"></span> zuzena da; zuzenak hiperbola <span class="math-inline math-nowrap" data-math="x=1"></span> puntuan ebakitzen duenean, hiperbola goiko muga izatera pasatzen da.</p>
+            <p class="idea-text" data-area-2023-language="es">El recinto termina en <span class="math-inline math-nowrap" data-math="x=2"></span>, donde se cortan la hipérbola y la parábola. Por eso dividimos el área en dos integrales, siempre con la estructura “función superior menos función inferior”.</p>
+            <p class="idea-text" data-area-2023-language="eu" hidden>Esparrua <span class="math-inline math-nowrap" data-math="x=2"></span> puntuan amaitzen da, hiperbola eta parabola han ebakitzen baitira. Horregatik, azalera bi integraletan banatzen dugu, beti «goiko funtzioa ken beheko funtzioa» egiturarekin.</p>
+            <div class="essential-geometry area-2023-essential">
+              <div class="math-display" data-math="S_1=\int_0^1\left(4-\frac{x^2}{4}\right)\,dx" data-math-display></div>
+              <div class="math-display" data-math="S_2=\int_1^2\left(\frac4{x^2}-\frac{x^2}{4}\right)\,dx" data-math-display></div>
+              <strong class="math-display" data-math="S=S_1+S_2=\frac{16}{3}\ \text{u}^2" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio A4</p>
+            <h2 id="solution-title">Representación y cálculo del área</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Intersección de dos gráficas</h3>
+                <p data-area-2023-language="es">En un punto de corte, ambas funciones tienen la misma ordenada para la misma abscisa. Por eso igualamos sus expresiones y después calculamos la coordenada vertical.</p>
+                <p data-area-2023-language="eu" hidden>Ebakidura-puntu batean, bi funtzioek ordenatu bera dute abzisa bererako. Horregatik, haien adierazpenak berdintzen ditugu eta gero koordenatu bertikala kalkulatzen dugu.</p>
+                <div class="theory-formula math-display" data-math="p(x_0)=q(x_0),\qquad P=(x_0,p(x_0))" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Área entre dos curvas</h3>
+                <p data-area-2023-language="es">Si una función permanece por encima de otra en todo un intervalo, el área entre ambas se obtiene integrando la diferencia. Si cambia alguna frontera, hay que dividir el recinto en ese punto.</p>
+                <p data-area-2023-language="eu" hidden>Funtzio bat beste baten gainetik badago tarte oso batean, bien arteko azalera diferentzia integratuz lortzen da. Mugaren bat aldatzen bada, esparrua puntu horretan banatu behar da.</p>
+                <div class="theory-formula math-display" data-math-es="S=\int_a^b\bigl(\text{superior}-\text{inferior}\bigr)\,dx" data-math-eu="S=\int_a^b\bigl(\text{goikoa}-\text{behekoa}\bigr)\,dx" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Primitivas necesarias</h3>
+                <p data-area-2023-language="es">Aplicamos la regla de las potencias también a los exponentes negativos.</p>
+                <p data-area-2023-language="eu" hidden>Berreturen erregela berretzaile negatiboei ere aplikatzen diegu.</p>
+                <div class="area-2023-primitives">
+                  <span class="math-inline" data-math="\int x^2\,dx=\frac{x^3}{3}+C"></span>
+                  <span class="math-inline" data-math="\int x^{-2}\,dx=-x^{-1}+C"></span>
+                </div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Localizamos el cambio de la frontera superior</h3>
+                  <p data-area-2023-language="es">Igualamos la recta y la hipérbola. Como estamos en el primer cuadrante, conservamos la solución positiva.</p>
+                  <p data-area-2023-language="eu" hidden>Zuzena eta hiperbola berdintzen ditugu. Lehenengo koadrantean gaudenez, soluzio positiboa hartzen dugu.</p>
+                  <div class="area-2023-work">
+                    <div class="math-display" data-math="4=\frac4{x^2}" data-math-display></div>
+                    <div class="math-display" data-math="x^2=1\Rightarrow x=1" data-math-display></div>
+                    <strong class="math-display" data-math="P=(1,4)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Localizamos el extremo derecho del recinto</h3>
+                  <p data-area-2023-language="es">El recinto se cierra cuando la hipérbola alcanza la parábola inferior.</p>
+                  <p data-area-2023-language="eu" hidden>Hiperbolak beheko parabola ukitzen duenean ixten da esparrua.</p>
+                  <div class="area-2023-work">
+                    <div class="math-display" data-math="\frac4{x^2}=\frac{x^2}{4}" data-math-display></div>
+                    <div class="math-display" data-math="x^4=16\Rightarrow x=2" data-math-display></div>
+                    <div class="math-display" data-math="y=\frac{2^2}{4}=1" data-math-display></div>
+                    <strong class="math-display" data-math="Q=(2,1)" data-math-display></strong>
+                  </div>
+                  <p data-area-2023-language="es">La recta y la parábola también se cortan en <span class="math-inline math-nowrap" data-math="x=4"></span>, pero ese punto queda fuera del recinto: a partir de <span class="math-inline math-nowrap" data-math="x=2"></span> la hipérbola ya está por debajo de la curva que debía ser la frontera inferior.</p>
+                  <p data-area-2023-language="eu" hidden>Zuzena eta parabola <span class="math-inline math-nowrap" data-math="x=4"></span> puntuan ere ebakitzen dira, baina puntu hori esparrutik kanpo dago: <span class="math-inline math-nowrap" data-math="x=2"></span> puntutik aurrera hiperbola beheko muga izan behar zuen kurbaren azpitik dago.</p>
+                </li>
+
+                <li>
+                  <h3>Representamos y dividimos el recinto</h3>
+                  <p data-area-2023-language="es">El eje <span class="math-inline math-nowrap" data-math="y"></span> cierra el recinto por la izquierda. La línea discontinua en <span class="math-inline math-nowrap" data-math="x=1"></span> marca el cambio de frontera superior.</p>
+                  <p data-area-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="y"></span> ardatzak esparrua ezkerretik ixten du. <span class="math-inline math-nowrap" data-math="x=1"></span> puntuko lerro etenak goiko mugaren aldaketa adierazten du.</p>
+
+                  <figure class="area-2023-figure" aria-label="Recinto del primer cuadrante limitado por una parábola, una hipérbola y una recta horizontal">
+                    <figcaption data-area-2023-language="es">La zona <span class="math-inline math-nowrap" data-math="S_1"></span> tiene techo horizontal; en <span class="math-inline math-nowrap" data-math="S_2"></span>, el techo es la hipérbola. La parábola forma toda la frontera inferior.</figcaption>
+                    <figcaption data-area-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="S_1"></span> eremuak sabai horizontala du; <span class="math-inline math-nowrap" data-math="S_2"></span> eremuan, hiperbola da sabaia. Parabolak beheko muga osoa osatzen du.</figcaption>
+                    <div id="area-2023-board" class="jxgbox area-2023-board" role="img" aria-label="Recinto sombreado entre y igual a x cuadrado partido por cuatro, y igual a cuatro partido por x cuadrado e y igual a cuatro"></div>
+                  </figure>
+                </li>
+
+                <li>
+                  <h3>Calculamos la primera parte</h3>
+                  <p data-area-2023-language="es">Entre <span class="math-inline math-nowrap" data-math="x=0"></span> y <span class="math-inline math-nowrap" data-math="x=1"></span>, la función superior es <span class="math-inline math-nowrap" data-math="y=4"></span>.</p>
+                  <p data-area-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=0"></span> eta <span class="math-inline math-nowrap" data-math="x=1"></span> artean, goiko funtzioa <span class="math-inline math-nowrap" data-math="y=4"></span> da.</p>
+                  <div class="area-2023-work">
+                    <div class="math-display" data-math="S_1=\int_0^1\left(4-\frac{x^2}{4}\right)\,dx" data-math-display></div>
+                    <div class="math-display" data-math="S_1=\left[4x-\frac{x^3}{12}\right]_0^1" data-math-display></div>
+                    <div class="math-display" data-math="S_1=4-\frac1{12}" data-math-display></div>
+                    <strong class="math-display" data-math="S_1=\frac{47}{12}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la segunda parte</h3>
+                  <p data-area-2023-language="es">Entre <span class="math-inline math-nowrap" data-math="x=1"></span> y <span class="math-inline math-nowrap" data-math="x=2"></span>, la hipérbola es la función superior. Escribimos <span class="math-inline math-nowrap" data-math="4/x^2"></span> como <span class="math-inline math-nowrap" data-math="4x^{-2}"></span> para integrar.</p>
+                  <p data-area-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=1"></span> eta <span class="math-inline math-nowrap" data-math="x=2"></span> artean, hiperbola da goiko funtzioa. Integratzeko, <span class="math-inline math-nowrap" data-math="4/x^2"></span> adierazpena <span class="math-inline math-nowrap" data-math="4x^{-2}"></span> moduan idazten dugu.</p>
+                  <div class="area-2023-work">
+                    <div class="math-display" data-math="S_2=\int_1^2\left(\frac4{x^2}-\frac{x^2}{4}\right)\,dx" data-math-display></div>
+                    <div class="math-display" data-math="S_2=\left[-\frac4x-\frac{x^3}{12}\right]_1^2" data-math-display></div>
+                    <div class="math-display" data-math="S_2=\left(-2-\frac{8}{12}\right)-\left(-4-\frac1{12}\right)" data-math-display></div>
+                    <div class="math-display" data-math="S_2=-\frac{32}{12}+\frac{49}{12}" data-math-display></div>
+                    <strong class="math-display" data-math="S_2=\frac{17}{12}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Sumamos las dos áreas</h3>
+                  <div class="area-2023-work">
+                    <div class="math-display" data-math="S=S_1+S_2" data-math-display></div>
+                    <div class="math-display" data-math="S=\frac{47}{12}+\frac{17}{12}=\frac{64}{12}" data-math-display></div>
+                    <strong class="math-display" data-math="S=\frac{16}{3}\ \text{u}^2\approx5{,}33\ \text{u}^2" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry area-2023-essential">
+              <div class="math-display" data-math="4=\frac4{x^2}\Rightarrow x=1" data-math-display></div>
+              <div class="math-display" data-math="\frac4{x^2}=\frac{x^2}{4}\Rightarrow x=2" data-math-display></div>
+              <div class="math-display" data-math="S_1=\int_0^1\left(4-\frac{x^2}{4}\right)\,dx=\frac{47}{12}" data-math-display></div>
+              <div class="math-display" data-math="S_2=\int_1^2\left(\frac4{x^2}-\frac{x^2}{4}\right)\,dx=\frac{17}{12}" data-math-display></div>
+              <strong class="math-display" data-math="S=S_1+S_2=\frac{16}{3}\ \text{u}^2" data-math-display></strong>
+            </div>
+
+            <div class="result area-2023-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="S=\frac{16}{3}\ \text{u}^2\approx5{,}33\ \text{u}^2" data-math-display></strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

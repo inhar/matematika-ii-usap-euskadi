@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Urtebetetzeak: binomialaren hurbilketa normala · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-cumpleanos-binomial-normal-2021-ordinaria-idiomas.js?v=2021-ord-p10b" defer></script>
+  <script src="ejercicio-cumpleanos-binomial-normal-2021-ordinaria-grafico.js?v=2021-ord-p10d" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2021 · Ordinaria · Problema 10</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Binomial y normal · 2021</p>
+        <h1>Cumpleaños: aproximación normal de una binomial</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>En una ciudad se seleccionan al azar 3.900 personas. Suponemos que los cumpleaños se distribuyen por igual entre los 365 días del año. Se pide calcular la probabilidad de que el número de personas que cumplen años el día del patrón de la ciudad:</p>
+
+        <div class="birthday-2021-data" aria-label="Datos del experimento">
+          <span class="math-inline" data-math="n=3.900"></span>
+          <span class="math-inline" data-math="p=\frac{1}{365}"></span>
+          <span class="math-inline" data-math="q=\frac{364}{365}"></span>
+        </div>
+
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">sea, al menos, 15;</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">esté comprendido entre 5 y 15, ambos incluidos.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="birthday-2021-part-a" data-target="birthday-2021-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="birthday-2021-part-b" data-target="birthday-2021-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="birthday-2021-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Contaremos las personas cuyo cumpleaños coincide con ese día mediante una binomial. Como hay muchos ensayos y la probabilidad individual es pequeña, sustituiremos la binomial por una normal con la misma media y desviación típica.</p>
+            <p class="idea-text">«Al menos 15» incluye los valores 15, 16, 17… Al pasar de una variable discreta a otra continua, la frontera se coloca media unidad antes, en 14,5. Después tipificamos esa frontera y calculamos la cola derecha de la normal estándar.</p>
+            <div class="essential-geometry birthday-2021-idea">
+              <div class="math-display" data-math="\begin{aligned}X&\sim B\left(3.900,\frac{1}{365}\right)\\&\approx Y\sim N(\mu=10{,}68,\sigma=3{,}26)\end{aligned}" data-math-display></div>
+              <div class="math-display" data-math="P(X\ge15)\approx P(Y\ge14{,}5)" data-math-display></div>
+              <strong class="math-display" data-math="P(X\ge15)\approx0{,}1210" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Probabilidad de que cumplan años al menos 15 personas</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Recuento binomial</h3>
+                <p>Si repetimos un ensayo independiente con dos resultados y una probabilidad de éxito constante, el número de éxitos sigue una distribución binomial. Aquí cada persona es un ensayo y «cumplir años el día del patrón» es el éxito.</p>
+                <div class="theory-formula math-display" data-math="X\sim B(n,p)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Cuándo se puede aproximar por una normal</h3>
+                <p>La normal aproxima bien a la binomial cuando hay suficientes éxitos y fracasos esperados. Usaremos el criterio habitual:</p>
+                <div class="theory-formula math-display" data-math="np\ge5\qquad\text{y}\qquad nq\ge5" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Parámetros de la normal aproximante</h3>
+                <p>La normal debe conservar la media y la desviación típica de la binomial.</p>
+                <div class="theory-formula math-display" data-math="\mu=np,\qquad \sigma=\sqrt{npq}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Corrección de continuidad</h3>
+                <p>La binomial concentra la probabilidad en números enteros; la normal reparte área de forma continua. Para incluir desde el entero 15, situamos la frontera continua entre 14 y 15.</p>
+                <div class="theory-formula math-display" data-math="P(X\ge15)\approx P(Y\ge14{,}5)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>5. Tipificación y cola derecha</h3>
+                <p>Tipificar convierte la normal de este ejercicio en una normal estándar. La tabla proporciona el área acumulada a la izquierda, por lo que una cola derecha se obtiene restando de uno.</p>
+                <div class="theory-formula math-display" data-math="\begin{aligned}Z&=\frac{Y-\mu}{\sigma}\\P(Z\ge z)&=1-\Phi(z)\end{aligned}" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Definimos la variable y el modelo</h3>
+                  <p>Sea <span class="math-inline math-nowrap" data-math="X"></span> el número de personas, entre las 3.900 seleccionadas, cuyo cumpleaños cae el día del patrón. Para cada persona hay éxito o fracaso, y la probabilidad de éxito es la misma.</p>
+                  <div class="birthday-2021-work">
+                    <div class="math-display" data-math="\begin{aligned}n&=3.900,\qquad p=\frac{1}{365}\\q&=1-p=\frac{364}{365}\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="X\sim B\left(3.900,\frac{1}{365}\right)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos que la aproximación normal es adecuada</h3>
+                  <p>Calculamos los números esperados de éxitos y de fracasos. Ambos superan ampliamente 5.</p>
+                  <div class="birthday-2021-conditions">
+                    <div><span class="math-inline" data-math="np"></span><strong class="math-inline" data-math="3.900\cdot\frac{1}{365}\approx10{,}68>5"></strong></div>
+                    <div><span class="math-inline" data-math="nq"></span><strong class="math-inline" data-math="3.900\cdot\frac{364}{365}\approx3.889{,}32>5"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la media y la desviación típica</h3>
+                  <div class="birthday-2021-work">
+                    <div class="math-display" data-math="\mu=np=\frac{3.900}{365}\approx10{,}6849" data-math-display></div>
+                    <div class="math-display" data-math="\sigma=\sqrt{npq}=\sqrt{3.900\cdot\frac{1}{365}\cdot\frac{364}{365}}\approx3{,}2643" data-math-display></div>
+                    <strong class="math-display" data-math="Y\sim N(\mu=10{,}68,\sigma=3{,}26)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Aplicamos la corrección de continuidad</h3>
+                  <p>El primer valor entero incluido es 15. En la normal, su barra de probabilidad se representa mediante el área que comienza en 14,5.</p>
+                  <div class="birthday-2021-work">
+                    <div class="math-display" data-math="\begin{aligned}P(X\ge15)={}&P(X=15)+P(X=16)\\&+\cdots\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="P(X\ge15)\approx P(Y\ge14{,}5)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Tipificamos la frontera</h3>
+                  <p>Usamos los parámetros sin redondear hasta el final para evitar acumular error.</p>
+                  <div class="birthday-2021-work">
+                    <div class="math-display" data-math="z=\frac{14{,}5-10{,}6849}{3{,}2643}" data-math-display></div>
+                    <strong class="math-display" data-math="z\approx1{,}1687\approx1{,}17" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la cola derecha</h3>
+                  <p>La tabla da el área a la izquierda de <span class="math-inline math-nowrap" data-math="z=1{,}17"></span>. La probabilidad pedida es la parte que queda a su derecha.</p>
+                  <div class="birthday-2021-table-values">
+                    <div><span class="math-inline" data-math="\Phi(1{,}17)"></span><strong class="math-inline" data-math="0{,}8790"></strong></div>
+                  </div>
+                  <div class="birthday-2021-work">
+                    <div class="math-display" data-math="P(Z\ge1{,}17)=1-\Phi(1{,}17)" data-math-display></div>
+                    <strong class="math-display" data-math="P(X\ge15)\approx1-0{,}8790=0{,}1210" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry birthday-2021-essential">
+              <div class="math-display" data-math="\begin{aligned}X&\sim B\left(3.900,\frac{1}{365}\right)\\&\approx Y\sim N(\mu=10{,}68,\sigma=3{,}26)\end{aligned}" data-math-display></div>
+              <div class="math-display" data-math="P(X\ge15)\approx P(Y\ge14{,}5)" data-math-display></div>
+              <div class="math-display" data-math="z=\frac{14{,}5-10{,}6849}{3{,}2643}\approx1{,}17" data-math-display></div>
+              <strong class="math-display" data-math="1-\Phi(1{,}17)=1-0{,}8790=0{,}1210" data-math-display></strong>
+            </div>
+
+            <figure class="birthday-2021-figure" aria-label="Cola derecha de la distribución normal estándar a partir de uno coma diecisiete">
+              <figcaption>La zona sombreada representa la probabilidad situada a la derecha de <span class="math-inline math-nowrap" data-math="z=1{,}17"></span>.</figcaption>
+              <div id="birthday-normal-2021-board-a" class="jxgbox birthday-2021-board" role="img" aria-label="Campana normal estándar con la cola a la derecha de z igual a uno coma diecisiete sombreada"></div>
+            </figure>
+
+            <div class="result result-long birthday-2021-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(X\ge15)\approx0{,}1210" data-math-display></strong>
+              <p>La probabilidad es aproximadamente del <span class="math-inline math-nowrap" data-math="12{,}10\%"></span>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="birthday-2021-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Usaremos la misma normal aproximante. Como los extremos 5 y 15 están incluidos, la corrección de continuidad amplía el intervalo media unidad por cada lado: desde 4,5 hasta 15,5.</p>
+            <p class="idea-text">Tipificaremos las dos fronteras y restaremos las probabilidades acumuladas. De ese modo conservamos únicamente el área central situada entre ambas.</p>
+            <div class="essential-geometry birthday-2021-idea">
+              <div class="math-display" data-math="P(5\le X\le15)\approx P(4{,}5\le Y\le15{,}5)" data-math-display></div>
+              <div class="math-display" data-math="-1{,}90\le Z\le1{,}48" data-math-display></div>
+              <strong class="math-display" data-math="P(5\le X\le15)\approx0{,}9019" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Probabilidad de que cumplan años entre 5 y 15 personas</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Conservamos el mismo modelo</h3>
+                <p>La variable aleatoria no cambia: seguimos contando cumpleaños entre las mismas 3.900 personas. Por tanto, usamos la misma binomial y la misma normal aproximante.</p>
+                <div class="theory-formula math-display" data-math="\begin{aligned}X&\sim B\left(3.900,\frac{1}{365}\right)\\&\approx Y\sim N(\mu=10{,}68,\sigma=3{,}26)\end{aligned}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Corrección de continuidad en un intervalo cerrado</h3>
+                <p>Para incluir todos los enteros desde 5 hasta 15, la zona continua debe comenzar a mitad de camino entre 4 y 5 y terminar a mitad de camino entre 15 y 16.</p>
+                <div class="theory-formula math-display" data-math="\begin{gathered}P(5\le X\le15)\\\approx P(4{,}5\le Y\le15{,}5)\end{gathered}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Tipificación de un intervalo</h3>
+                <p>Aplicamos la misma transformación a cada extremo. Así obtenemos un intervalo equivalente para la normal estándar.</p>
+                <div class="theory-formula math-display" data-math="z_1=\frac{4{,}5-\mu}{\sigma},\qquad z_2=\frac{15{,}5-\mu}{\sigma}" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>4. Área entre dos valores</h3>
+                <p>La función <span class="math-inline math-nowrap" data-math="\Phi(z)"></span> acumula el área situada a la izquierda de <span class="math-inline math-nowrap" data-math="z"></span>. Para aislar la zona entre dos fronteras restamos las dos áreas acumuladas.</p>
+                <div class="theory-formula math-display" data-math="P(z_1\le Z\le z_2)=\Phi(z_2)-\Phi(z_1)" data-math-display></div>
+                <p>Si la tabla solo contiene valores positivos, usamos la simetría de la normal:</p>
+                <div class="theory-formula math-display" data-math="\Phi(-z)=1-\Phi(z)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Recuperamos la aproximación normal</h3>
+                  <p>Ya hemos comprobado que <span class="math-inline math-nowrap" data-math="np"></span> y <span class="math-inline math-nowrap" data-math="nq"></span> son mayores que 5.</p>
+                  <div class="birthday-2021-work">
+                    <div class="math-display" data-math="\mu=\frac{3.900}{365}\approx10{,}6849" data-math-display></div>
+                    <div class="math-display" data-math="\sigma=\sqrt{3.900\cdot\frac{1}{365}\cdot\frac{364}{365}}\approx3{,}2643" data-math-display></div>
+                    <strong class="math-display" data-math="Y\sim N(\mu=10{,}68,\sigma=3{,}26)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Corregimos los dos extremos</h3>
+                  <p>El intervalo incluye tanto el 5 como el 15. Por eso desplazamos el límite inferior hacia 4,5 y el superior hacia 15,5.</p>
+                  <div class="birthday-2021-work">
+                    <div class="math-display" data-math="P(5\le X\le15)" data-math-display></div>
+                    <strong class="math-display" data-math="\approx P(4{,}5\le Y\le15{,}5)" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Tipificamos el límite inferior</h3>
+                  <div class="birthday-2021-work">
+                    <div class="math-display" data-math="z_1=\frac{4{,}5-10{,}6849}{3{,}2643}" data-math-display></div>
+                    <strong class="math-display" data-math="z_1\approx-1{,}8947\approx-1{,}90" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Tipificamos el límite superior</h3>
+                  <div class="birthday-2021-work">
+                    <div class="math-display" data-math="z_2=\frac{15{,}5-10{,}6849}{3{,}2643}" data-math-display></div>
+                    <strong class="math-display" data-math="z_2\approx1{,}4751\approx1{,}48" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Buscamos las dos probabilidades acumuladas</h3>
+                  <p>Para el límite negativo usamos la simetría de la campana normal.</p>
+                  <div class="birthday-2021-table-values">
+                    <div><span class="math-inline" data-math="\Phi(1{,}48)"></span><strong class="math-inline" data-math="0{,}9306"></strong></div>
+                    <div><span class="math-inline" data-math="\Phi(-1{,}90)"></span><strong class="math-display" data-math="\begin{aligned}1-\Phi(1{,}90)&=1-0{,}9713\\&=0{,}0287\end{aligned}" data-math-display></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Restamos las áreas acumuladas</h3>
+                  <div class="birthday-2021-work">
+                    <div class="math-display" data-math="\begin{gathered}P(-1{,}90\le Z\le1{,}48)\\=\Phi(1{,}48)-\Phi(-1{,}90)\end{gathered}" data-math-display></div>
+                    <strong class="math-display" data-math="\begin{gathered}P(5\le X\le15)\\\approx0{,}9306-0{,}0287=0{,}9019\end{gathered}" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry birthday-2021-essential">
+              <div class="math-display" data-math="P(5\le X\le15)\approx P(4{,}5\le Y\le15{,}5)" data-math-display></div>
+              <div class="math-display" data-math="z_1\approx-1{,}90,\qquad z_2\approx1{,}48" data-math-display></div>
+              <div class="math-display" data-math="\Phi(1{,}48)-\Phi(-1{,}90)" data-math-display></div>
+              <strong class="math-display" data-math="0{,}9306-0{,}0287=0{,}9019" data-math-display></strong>
+            </div>
+
+            <figure class="birthday-2021-figure" aria-label="Área de la distribución normal estándar comprendida entre menos uno coma noventa y uno coma cuarenta y ocho">
+              <figcaption>La zona sombreada conserva el área central comprendida entre <span class="math-inline math-nowrap" data-math="z=-1{,}90"></span> y <span class="math-inline math-nowrap" data-math="z=1{,}48"></span>.</figcaption>
+              <div id="birthday-normal-2021-board-b" class="jxgbox birthday-2021-board" role="img" aria-label="Campana normal estándar con el área entre z igual a menos uno coma noventa y z igual a uno coma cuarenta y ocho sombreada"></div>
+            </figure>
+
+            <div class="result result-long birthday-2021-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(5\le X\le15)\approx0{,}9019" data-math-display></strong>
+              <p>La probabilidad es aproximadamente del <span class="math-inline math-nowrap" data-math="90{,}19\%"></span>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

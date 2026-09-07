@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funtzio arrazional baten azterketa · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-funcion-racional-monotonia-asintotas-2023-ordinaria-modelo-2-idiomas.js?v=2023-ord-m2-a3" defer></script>
+  <script src="ejercicio-funcion-racional-monotonia-asintotas-2023-ordinaria-modelo-2-grafico.js?v=2023-ord-m2-a3" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page rational-study-2023-page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2023 · Ordinaria · Modelo 2 · Ejercicio A3</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Análisis · Monotonía, asíntotas y tangente · 2023</p>
+        <h1 class="rational-study-2023-title">Estudio de una función racional</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p data-rational-study-2023-language="es">Sea la función</p>
+        <p data-rational-study-2023-language="eu" hidden>Har dezagun funtzio hau:</p>
+        <div class="statement-function rational-study-2023-statement math-display" data-math="f(x)=\frac{x}{x^2+1}" data-math-display></div>
+        <p data-rational-study-2023-language="es">Estudia sus intervalos de crecimiento y decrecimiento, calcula sus asíntotas y encuentra la recta tangente a la gráfica de <span class="math-inline math-nowrap" data-math="f"></span> en el punto de abscisa <span class="math-inline math-nowrap" data-math="x=0"></span>. Haz una representación aproximada de la gráfica.</p>
+        <p data-rational-study-2023-language="eu" hidden>Aztertu haren gorakortasun- eta beherakortasun-tarteak, kalkulatu asintotak eta aurkitu <span class="math-inline math-nowrap" data-math="f"></span>-ren grafikoaren zuzen ukitzailea <span class="math-inline math-nowrap" data-math="x=0"></span> abzisako puntuan. Egin grafikoaren gutxi gorabeherako irudikapena.</p>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio A3</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text" data-rational-study-2023-language="es">La derivada decide dónde crece o decrece la función. Al aplicar la regla del cociente obtenemos una fracción cuyo denominador es siempre positivo; por eso, todo el estudio del signo se reduce al numerador <span class="math-inline math-nowrap" data-math="1-x^2"></span>.</p>
+            <p class="idea-text" data-rational-study-2023-language="eu" hidden>Deribatuak erabakitzen du funtzioa non den gorakorra edo beherakorra. Zatiduraren erregela aplikatzean, izendatzailea beti positiboa duen zatiki bat lortzen dugu; beraz, zeinuaren azterketa osoa <span class="math-inline math-nowrap" data-math="1-x^2"></span> zenbakitzailera mugatzen da.</p>
+            <p class="idea-text" data-rational-study-2023-language="es">Las asíntotas se estudian a partir del dominio y de los límites. Como <span class="math-inline math-nowrap" data-math="x^2+1"></span> nunca se anula, no hay asíntotas verticales; y como la función tiende a cero en ambos extremos, <span class="math-inline math-nowrap" data-math="y=0"></span> es horizontal. Para la tangente usamos <span class="math-inline math-nowrap" data-math="f(0)"></span> y <span class="math-inline math-nowrap" data-math="f'(0)"></span>.</p>
+            <p class="idea-text" data-rational-study-2023-language="eu" hidden>Asintotak definizio-eremuaren eta limiteen bidez aztertzen dira. <span class="math-inline math-nowrap" data-math="x^2+1"></span> inoiz zero ez denez, ez dago asintota bertikalik; eta funtzioak bi muturretan zerorantz jotzen duenez, <span class="math-inline math-nowrap" data-math="y=0"></span> asintota horizontala da. Ukitzailea lortzeko, <span class="math-inline math-nowrap" data-math="f(0)"></span> eta <span class="math-inline math-nowrap" data-math="f'(0)"></span> erabiltzen ditugu.</p>
+            <div class="essential-geometry rational-study-2023-essential">
+              <div class="math-display" data-math="f'(x)=\frac{1-x^2}{(x^2+1)^2}" data-math-display></div>
+              <div class="math-display" data-math-es="\text{Crece en }(-1,1)" data-math-eu="\text{Gorakorra: }(-1,1)" data-math-display></div>
+              <div class="math-display" data-math-es="\text{Decrece en }(-\infty,-1)\cup(1,+\infty)" data-math-eu="\text{Beherakorra: }(-\infty,-1)\cup(1,+\infty)" data-math-display></div>
+              <strong class="math-display" data-math="y=0;\qquad y=x" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio A3</p>
+            <h2 id="solution-title">Variación, asíntotas, tangente y gráfica</h2>
+
+            <figure class="rational-study-2023-figure" aria-label="Gráfica de la función racional, su asíntota horizontal y su tangente en el origen">
+              <figcaption data-rational-study-2023-language="es">La función se aproxima a <span class="math-inline math-nowrap" data-math="y=0"></span> en ambos extremos. La recta <span class="math-inline math-nowrap" data-math="y=x"></span> es tangente en el origen; los puntos marcados son el mínimo y el máximo locales.</figcaption>
+              <figcaption data-rational-study-2023-language="eu" hidden>Funtzioa <span class="math-inline math-nowrap" data-math="y=0"></span>-ra hurbiltzen da bi muturretan. <span class="math-inline math-nowrap" data-math="y=x"></span> zuzena ukitzailea da jatorrian; markatutako puntuak minimo eta maximo lokalak dira.</figcaption>
+              <div id="rational-study-2023-board" class="jxgbox rational-study-2023-board" role="img" aria-label="Función x partido por x al cuadrado más uno, asíntota y igual a cero y tangente y igual a x"></div>
+            </figure>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Derivada y monotonía</h3>
+                <p data-rational-study-2023-language="es">Para derivar un cociente usamos la regla siguiente. Después, los ceros de la derivada separan los intervalos de signo: derivada positiva significa crecimiento y derivada negativa, decrecimiento.</p>
+                <p data-rational-study-2023-language="eu" hidden>Zatidura bat deribatzeko, honako erregela erabiltzen dugu. Ondoren, deribatuaren zeroek zeinu-tarteak bereizten dituzte: deribatu positiboak gorakortasuna esan nahi du, eta negatiboak, beherakortasuna.</p>
+                <div class="theory-formula math-display" data-math="\left(\frac{u}{v}\right)'=\frac{u'v-uv'}{v^2}" data-math-display></div>
+                <div class="rational-study-2023-theory-chain">
+                  <div class="math-display" data-math-es="f'(x)>0\Rightarrow f\text{ crece}" data-math-eu="f'(x)>0\Rightarrow f\text{ gorakorra da}" data-math-display></div>
+                  <div class="math-display" data-math-es="f'(x)<0\Rightarrow f\text{ decrece}" data-math-eu="f'(x)<0\Rightarrow f\text{ beherakorra da}" data-math-display></div>
+                </div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Asíntotas de una función racional</h3>
+                <p data-rational-study-2023-language="es">Una asíntota vertical puede aparecer donde el denominador se anula y la función se hace infinita. Una recta <span class="math-inline math-nowrap" data-math="y=L"></span> es asíntota horizontal si la función tiende a <span class="math-inline math-nowrap" data-math="L"></span> cuando <span class="math-inline math-nowrap" data-math="x\to+\infty"></span> o <span class="math-inline math-nowrap" data-math="x\to-\infty"></span>.</p>
+                <p data-rational-study-2023-language="eu" hidden>Asintota bertikal bat ager daiteke izendatzailea zero bihurtzen den eta funtzioa infinitu egiten den tokian. <span class="math-inline math-nowrap" data-math="y=L"></span> zuzena asintota horizontala da funtzioak <span class="math-inline math-nowrap" data-math="L"></span>-ra jotzen badu <span class="math-inline math-nowrap" data-math="x\to+\infty"></span> edo <span class="math-inline math-nowrap" data-math="x\to-\infty"></span> denean.</p>
+                <div class="theory-formula math-display" data-math="\lim_{x\to\pm\infty}f(x)=L\quad\Longrightarrow\quad y=L" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Recta tangente</h3>
+                <p data-rational-study-2023-language="es">La tangente en <span class="math-inline math-nowrap" data-math="x=a"></span> pasa por <span class="math-inline math-nowrap" data-math="(a,f(a))"></span> y tiene pendiente <span class="math-inline math-nowrap" data-math="f'(a)"></span>.</p>
+                <p data-rational-study-2023-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=a"></span> puntuko ukitzailea <span class="math-inline math-nowrap" data-math="(a,f(a))"></span> puntutik igarotzen da, eta <span class="math-inline math-nowrap" data-math="f'(a)"></span> malda dauka.</p>
+                <div class="theory-formula math-display" data-math="y-f(a)=f'(a)(x-a)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Determinamos el dominio y calculamos la derivada</h3>
+                  <p data-rational-study-2023-language="es">El denominador es estrictamente positivo para todo número real, así que el dominio es todo <span class="math-inline math-nowrap" data-math="\mathbb R"></span>. Aplicamos la regla del cociente y simplificamos.</p>
+                  <p data-rational-study-2023-language="eu" hidden>Izendatzailea hertsiki positiboa da zenbaki erreal guztietarako; beraz, definizio-eremua <span class="math-inline math-nowrap" data-math="\mathbb R"></span> osoa da. Zatiduraren erregela aplikatu eta sinplifikatzen dugu.</p>
+                  <div class="rational-study-2023-work">
+                    <div class="math-display" data-math="x^2+1>0\quad\forall x\in\mathbb R" data-math-display></div>
+                    <div class="math-display" data-math="f'(x)=\frac{1\cdot(x^2+1)-x\cdot2x}{(x^2+1)^2}" data-math-display></div>
+                    <div class="math-display" data-math="f'(x)=\frac{x^2+1-2x^2}{(x^2+1)^2}" data-math-display></div>
+                    <strong class="math-display" data-math="f'(x)=\frac{1-x^2}{(x^2+1)^2}=\frac{(1-x)(1+x)}{(x^2+1)^2}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Hallamos los puntos críticos y estudiamos el signo</h3>
+                  <p data-rational-study-2023-language="es">El denominador de la derivada siempre es positivo. Por tanto, la derivada se anula y cambia de signo únicamente cuando lo hace <span class="math-inline math-nowrap" data-math="1-x^2"></span>.</p>
+                  <p data-rational-study-2023-language="eu" hidden>Deribatuaren izendatzailea beti positiboa da. Beraz, deribatua <span class="math-inline math-nowrap" data-math="1-x^2"></span> zenbakitzailea zero bihurtzen denean bakarrik da zero eta aldatzen da zeinuz.</p>
+                  <div class="rational-study-2023-work">
+                    <div class="math-display" data-math="1-x^2=0\quad\Longleftrightarrow\quad x^2=1" data-math-display></div>
+                    <strong class="math-display" data-math="x=-1;\qquad x=1" data-math-display></strong>
+                  </div>
+                  <div class="rational-study-2023-signs">
+                    <div><span class="math-inline" data-math="(-\infty,-1)"></span><strong class="math-inline" data-math="f'(x)<0\Rightarrow f\searrow"></strong></div>
+                    <div><span class="math-inline" data-math="(-1,1)"></span><strong class="math-inline" data-math="f'(x)>0\Rightarrow f\nearrow"></strong></div>
+                    <div><span class="math-inline" data-math="(1,+\infty)"></span><strong class="math-inline" data-math="f'(x)<0\Rightarrow f\searrow"></strong></div>
+                  </div>
+                  <div class="rational-study-2023-work rational-study-2023-monotony">
+                    <strong class="math-display" data-math-es="\text{Crece en }(-1,1)" data-math-eu="\text{Gorakorra da }(-1,1)\text{ tartean}" data-math-display></strong>
+                    <strong class="math-display" data-math-es="\text{Decrece en }(-\infty,-1)\cup(1,+\infty)" data-math-eu="\text{Beherakorra da }(-\infty,-1)\cup(1,+\infty)\text{ tarteetan}" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos los extremos que ayudan a dibujar la gráfica</h3>
+                  <p data-rational-study-2023-language="es">La derivada cambia de negativa a positiva en <span class="math-inline math-nowrap" data-math="x=-1"></span>, y de positiva a negativa en <span class="math-inline math-nowrap" data-math="x=1"></span>. Sustituimos ambos valores en la función.</p>
+                  <p data-rational-study-2023-language="eu" hidden>Deribatua negatibotik positibora aldatzen da <span class="math-inline math-nowrap" data-math="x=-1"></span> puntuan, eta positibotik negatibora <span class="math-inline math-nowrap" data-math="x=1"></span> puntuan. Bi balioak funtzioan ordezkatzen ditugu.</p>
+                  <div class="rational-study-2023-extrema">
+                    <div><span class="math-inline" data-math="x=-1:\ -\to+"></span><strong class="math-inline" data-math="f(-1)=-\frac12"></strong></div>
+                    <div><span class="math-inline" data-math="x=1:\ +\to-"></span><strong class="math-inline" data-math="f(1)=\frac12"></strong></div>
+                  </div>
+                  <p data-rational-study-2023-language="es">Hay un mínimo local en <span class="math-inline math-nowrap" data-math="\left(-1,-\frac12\right)"></span> y un máximo local en <span class="math-inline math-nowrap" data-math="\left(1,\frac12\right)"></span>.</p>
+                  <p data-rational-study-2023-language="eu" hidden>Minimo lokal bat dago <span class="math-inline math-nowrap" data-math="\left(-1,-\frac12\right)"></span> puntuan, eta maximo lokal bat <span class="math-inline math-nowrap" data-math="\left(1,\frac12\right)"></span> puntuan.</p>
+                </li>
+
+                <li>
+                  <h3>Estudiamos las asíntotas</h3>
+                  <p data-rational-study-2023-language="es">No hay asíntotas verticales porque el denominador nunca vale cero. Para estudiar el comportamiento en el infinito, dividimos numerador y denominador por <span class="math-inline math-nowrap" data-math="x^2"></span>.</p>
+                  <p data-rational-study-2023-language="eu" hidden>Ez dago asintota bertikalik, izendatzailea inoiz ez delako zero. Infinituko portaera aztertzeko, zenbakitzailea eta izendatzailea <span class="math-inline math-nowrap" data-math="x^2"></span>-rekin zatitzen ditugu.</p>
+                  <div class="rational-study-2023-work">
+                    <div class="math-display" data-math="x^2+1=0\quad\Longleftrightarrow\quad x^2=-1" data-math-display></div>
+                    <strong class="math-display" data-math-es="\text{No hay asíntotas verticales}" data-math-eu="\text{Ez dago asintota bertikalik}" data-math-display></strong>
+                    <div class="math-display" data-math="\lim_{x\to\pm\infty}\frac{x}{x^2+1}=\lim_{x\to\pm\infty}\frac{1/x}{1+1/x^2}=0" data-math-display></div>
+                    <strong class="math-display" data-math-es="\text{Asíntota horizontal: }y=0" data-math-eu="\text{Asintota horizontala: }y=0" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos la tangente en <span class="math-inline math-nowrap" data-math="x=0"></span></h3>
+                  <p data-rational-study-2023-language="es">Calculamos el punto de contacto y la pendiente, y los introducimos en la ecuación punto-pendiente.</p>
+                  <p data-rational-study-2023-language="eu" hidden>Ukitze-puntua eta malda kalkulatzen ditugu, eta puntu-malda ekuazioan sartzen ditugu.</p>
+                  <div class="rational-study-2023-work">
+                    <div class="math-display" data-math="f(0)=0" data-math-display></div>
+                    <div class="math-display" data-math="f'(0)=\frac{1-0^2}{(0^2+1)^2}=1" data-math-display></div>
+                    <div class="math-display" data-math="y-f(0)=f'(0)(x-0)" data-math-display></div>
+                    <strong class="math-display" data-math="y=x" data-math-display></strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Reunimos la información para dibujar la gráfica</h3>
+                  <p data-rational-study-2023-language="es">La función pasa por el origen, tiene los dos extremos calculados y se acerca al eje <span class="math-inline math-nowrap" data-math="x"></span> sin cortarlo de nuevo. Además, <span class="math-inline math-nowrap" data-math="f(-x)=-f(x)"></span>, así que la gráfica es simétrica respecto del origen.</p>
+                  <p data-rational-study-2023-language="eu" hidden>Funtzioa jatorritik igarotzen da, kalkulatutako bi muturrak ditu eta <span class="math-inline math-nowrap" data-math="x"></span> ardatzera hurbiltzen da berriro moztu gabe. Gainera, <span class="math-inline math-nowrap" data-math="f(-x)=-f(x)"></span>; beraz, grafikoa jatorriarekiko simetrikoa da.</p>
+                  <div class="rational-study-2023-work">
+                    <div class="math-display" data-math="f(0)=0;\qquad f(-x)=-f(x)" data-math-display></div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry rational-study-2023-essential">
+              <div class="math-display" data-math="f'(x)=\frac{1-x^2}{(x^2+1)^2};\qquad f'(x)=0\Longleftrightarrow x=-1;\ x=1" data-math-display></div>
+              <div class="rational-study-2023-essential-signs">
+                <div class="math-display" data-math="(-\infty,-1):\ f'<0" data-math-display></div>
+                <div class="math-display" data-math="(-1,1):\ f'>0" data-math-display></div>
+                <div class="math-display" data-math="(1,+\infty):\ f'<0" data-math-display></div>
+              </div>
+              <div class="math-display" data-math-es="\text{Mínimo: }\left(-1,-\frac12\right)" data-math-eu="\text{Minimoa: }\left(-1,-\frac12\right)" data-math-display></div>
+              <div class="math-display" data-math-es="\text{Máximo: }\left(1,\frac12\right)" data-math-eu="\text{Maximoa: }\left(1,\frac12\right)" data-math-display></div>
+              <strong class="math-display" data-math-es="\text{Asíntota horizontal: }y=0" data-math-eu="\text{Asintota horizontala: }y=0" data-math-display></strong>
+              <strong class="math-display" data-math-es="\text{Tangente: }y=x" data-math-eu="\text{Ukitzailea: }y=x" data-math-display></strong>
+            </div>
+
+            <div class="result result-long rational-study-2023-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="result-unit" data-rational-study-2023-language="es">Crece en <span class="math-inline math-nowrap" data-math="(-1,1)"></span>.</span>
+                <span class="result-unit" data-rational-study-2023-language="eu" hidden>Gorakorra da <span class="math-inline math-nowrap" data-math="(-1,1)"></span> tartean.</span>
+                <span class="result-unit" data-rational-study-2023-language="es">Decrece en <span class="math-inline math-nowrap" data-math="(-\infty,-1)\cup(1,+\infty)"></span>.</span>
+                <span class="result-unit" data-rational-study-2023-language="eu" hidden>Beherakorra da <span class="math-inline math-nowrap" data-math="(-\infty,-1)\cup(1,+\infty)"></span> tarteetan.</span>
+                <span class="result-unit" data-rational-study-2023-language="es">No tiene asíntotas verticales; su asíntota horizontal es <span class="math-inline math-nowrap" data-math="y=0"></span>.</span>
+                <span class="result-unit" data-rational-study-2023-language="eu" hidden>Ez du asintota bertikalik; haren asintota horizontala <span class="math-inline math-nowrap" data-math="y=0"></span> da.</span>
+                <span class="result-unit" data-rational-study-2023-language="es">Tangente en el origen: <span class="math-inline math-nowrap" data-math="y=x"></span>.</span>
+                <span class="result-unit" data-rational-study-2023-language="eu" hidden>Jatorriko ukitzailea: <span class="math-inline math-nowrap" data-math="y=x"></span>.</span>
+              </strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

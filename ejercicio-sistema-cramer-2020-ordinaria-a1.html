@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parametrodun sistema bat Cramerren bidez · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-sistema-cramer-2020-ordinaria-idiomas.js" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2020 · Ordinaria · Opción A · Ejercicio A.1</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Álgebra · Sistemas lineales · 2020</p>
+        <h1>Discusión y resolución de un sistema mediante Cramer</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Discutir el siguiente sistema de ecuaciones lineales en función del parámetro <i>a</i>. Resolverlo, también en función de <i>a</i>, mediante el método de Cramer en los casos en que sea posible.</p>
+        <div class="equation-system statement-system cramer-system-statement math-display" aria-label="Sistema de tres ecuaciones con parámetro a" data-math="\begin{cases} ax-y+2z=2 \\ x-2y-z=1 \\ x+2y+az=3 \end{cases}" data-math-display></div>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <div class="solutions single-solution">
+      <section class="panel active" role="region" aria-labelledby="solution-title">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Ejercicio A.1</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">El determinante de la matriz de coeficientes separa el problema en dos partes. Cuando no se anula, el sistema tiene solución única y podemos calcularla con Cramer. Cuando se anula, Cramer deja de ser aplicable y debemos comparar los rangos de la matriz de coeficientes y de la ampliada. Así obtenemos primero los valores excepcionales, después la solución general y, por último, clasificamos esos casos por separado.</p>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Ejercicio A.1</p>
+            <h2 id="solution-title">Discusión y solución del sistema</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Matrices asociadas a un sistema</h3>
+                <p>Al escribir un sistema como A·X = b, A es la matriz de coeficientes, X contiene las incógnitas y b los términos independientes. La matriz ampliada A* se obtiene añadiendo b a la derecha de A.</p>
+                <div class="theory-formula math-display" data-math="A^{*}=(A\mid b)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Determinante y método de Cramer</h3>
+                <p>Si A es cuadrada y su determinante no es cero, el sistema tiene una única solución. Cramer calcula cada incógnita dividiendo dos determinantes: en el numerador se sustituye por b la columna de la incógnita correspondiente.</p>
+                <div class="theory-formula cramer-theory-formula">
+                  <span class="math-inline" data-math="x=\dfrac{D_x}{D}"></span>
+                  <span class="math-inline" data-math="y=\dfrac{D_y}{D}"></span>
+                  <span class="math-inline" data-math="z=\dfrac{D_z}{D}"></span>
+                </div>
+                <p>Cramer solo puede usarse cuando D = det(A) ≠ 0, porque no es posible dividir entre cero.</p>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Teorema de Rouché-Frobenius</h3>
+                <p>Cuando det(A) = 0, el determinante ya no decide el tipo de sistema. Comparamos entonces los rangos de A y A*:</p>
+                <div class="classification-list theory-classification cramer-theory-classification">
+                  <div><span class="math-inline" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)=3"></span><strong>Una solución</strong></div>
+                  <div><span class="math-inline" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)&lt;3"></span><strong>Infinitas soluciones</strong></div>
+                  <div><span class="math-inline" data-math="\operatorname{rg}(A)&lt;\operatorname{rg}(A^*)"></span><strong>Ninguna solución</strong></div>
+                </div>
+                <p>Un menor de orden 2 no nulo demuestra que el rango es al menos 2; un menor de orden 3 no nulo demuestra que es 3.</p>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Escribimos la matriz de coeficientes y la ampliada</h3>
+                  <p>Las columnas siguen el orden de las incógnitas x, y, z. La última columna de A* contiene los términos independientes 2, 1, 3.</p>
+                  <div class="system-matrix-pair cramer-matrix-pair">
+                    <div class="matrix-equation-line">
+                      <span class="math-inline" data-math="A="></span>
+                      <div class="matrix math-display" data-math="\begin{pmatrix}a&amp;-1&amp;2\\1&amp;-2&amp;-1\\1&amp;2&amp;a\end{pmatrix}" data-math-display></div>
+                    </div>
+                    <div class="matrix-equation-line">
+                      <span class="math-inline" data-math="A^{*}="></span>
+                      <div class="matrix math-display" data-math="\left(\begin{array}{ccc|c}a&amp;-1&amp;2&amp;2\\1&amp;-2&amp;-1&amp;1\\1&amp;2&amp;a&amp;3\end{array}\right)" data-math-display></div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos y factorizamos el determinante de A</h3>
+                  <p>Desarrollamos por la primera fila, cuyos signos son +, −, +.</p>
+                  <div class="cofactor-work cramer-cofactor-contributions">
+                    <div>
+                      <span>Primer término</span>
+                      <strong class="math-inline" data-math="a\begin{vmatrix}-2&amp;-1\\2&amp;a\end{vmatrix}=a(-2a+2)"></strong>
+                    </div>
+                    <div>
+                      <span>Segundo término</span>
+                      <strong class="math-inline" data-math="-(-1)\begin{vmatrix}1&amp;-1\\1&amp;a\end{vmatrix}=a+1"></strong>
+                    </div>
+                    <div>
+                      <span>Tercer término</span>
+                      <strong class="math-inline" data-math="2\begin{vmatrix}1&amp;-2\\1&amp;2\end{vmatrix}=2(4)"></strong>
+                    </div>
+                  </div>
+                  <div class="det-expansion cramer-det-chain">
+                    <span class="math-inline" data-math="D=a(-2a+2)+(a+1)+2(4)"></span>
+                    <span class="math-inline" data-math="=-2a^2+3a+9"></span>
+                    <strong class="math-inline" data-math="=-(2a+3)(a-3)"></strong>
+                  </div>
+                  <p>Igualamos cada factor a cero para localizar los únicos valores en los que el sistema puede cambiar de tipo.</p>
+                  <div class="cramer-critical-values">
+                    <span class="math-inline" data-math="2a+3=0\Rightarrow a=-\dfrac32"></span>
+                    <span class="math-inline" data-math="a-3=0\Rightarrow a=3"></span>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Clasificamos el caso general</h3>
+                  <p>Si a no es 3 ni −3/2, entonces D ≠ 0. Por tanto, A tiene rango 3 y el sistema es compatible determinado. En este caso, y solo en este, podemos aplicar Cramer.</p>
+                  <div class="rank-comparison cramer-rank-comparison">
+                    <span class="math-inline" data-math="\operatorname{rg}(A)=\operatorname{rg}(A^*)=3"></span>
+                    <strong>Una única solución</strong>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Calculamos los tres numeradores de Cramer</h3>
+                  <p>Para hallar D<sub>x</sub>, D<sub>y</sub> y D<sub>z</sub> sustituimos, respectivamente, la primera, la segunda y la tercera columna de A por la columna de términos independientes.</p>
+
+                  <div class="cramer-calculations">
+                    <section>
+                      <h4>Numerador de x</h4>
+                      <div class="det-expansion">
+                        <span class="math-inline" data-math="D_x=\begin{vmatrix}2&amp;-1&amp;2\\1&amp;-2&amp;-1\\3&amp;2&amp;a\end{vmatrix}"></span>
+                        <span class="math-inline" data-math="=2(-2a+2)+(a+3)+2(8)"></span>
+                        <strong class="math-inline" data-math="=23-3a"></strong>
+                      </div>
+                    </section>
+                    <section>
+                      <h4>Numerador de y</h4>
+                      <div class="det-expansion">
+                        <span class="math-inline" data-math="D_y=\begin{vmatrix}a&amp;2&amp;2\\1&amp;1&amp;-1\\1&amp;3&amp;a\end{vmatrix}"></span>
+                        <span class="math-inline" data-math="=a(a+3)-2(a+1)+2(2)"></span>
+                        <strong class="math-inline" data-math="=a^2+a+2"></strong>
+                      </div>
+                    </section>
+                    <section>
+                      <h4>Numerador de z</h4>
+                      <div class="det-expansion">
+                        <span class="math-inline" data-math="D_z=\begin{vmatrix}a&amp;-1&amp;2\\1&amp;-2&amp;1\\1&amp;2&amp;3\end{vmatrix}"></span>
+                        <span class="math-inline" data-math="=a(-8)+(3-1)+2(4)"></span>
+                        <strong class="math-inline" data-math="=10-8a"></strong>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Escribimos la solución para el caso regular</h3>
+                  <p>Dividimos cada numerador entre D. Las tres fracciones tienen sentido exactamente cuando a ≠ 3 y a ≠ −3/2.</p>
+                  <div class="cramer-solution">
+                    <span class="math-inline" data-math="x=\dfrac{23-3a}{-2a^2+3a+9}"></span>
+                    <span class="math-inline" data-math="y=\dfrac{a^2+a+2}{-2a^2+3a+9}"></span>
+                    <span class="math-inline" data-math="z=\dfrac{10-8a}{-2a^2+3a+9}"></span>
+                  </div>
+                  <p class="source-correction"><strong>Corrección de la fuente:</strong> la edición consultada publica D<sub>x</sub> = 22 − 2a y D<sub>z</sub> = 10 − 2a. Al desarrollar ambos determinantes se obtienen D<sub>x</sub> = 23 − 3a y D<sub>z</sub> = 10 − 8a, que son los valores usados aquí.</p>
+                </li>
+
+                <li>
+                  <h3>Estudiamos el caso a = 3</h3>
+                  <p>Como D = 0, el rango de A es menor que 3. El menor de las dos primeras filas y columnas no se anula, por lo que el rango de A es 2.</p>
+                  <div class="minor-work">
+                    <span class="math-inline" data-math="\begin{vmatrix}3&amp;-1\\1&amp;-2\end{vmatrix}"></span>
+                    <span class="math-inline" data-math="=-6+1"></span>
+                    <strong class="math-inline" data-math="=-5\ne0\Rightarrow\operatorname{rg}(A)=2"></strong>
+                  </div>
+                  <p>En A* tomamos las columnas 1, 2 y 4. Ese menor de orden 3 sí es distinto de cero.</p>
+                  <div class="det-expansion cramer-rank-chain">
+                    <span class="math-inline" data-math="\begin{vmatrix}3&amp;-1&amp;2\\1&amp;-2&amp;1\\1&amp;2&amp;3\end{vmatrix}"></span>
+                    <span class="math-inline" data-math="=10-8\cdot3=-14\ne0"></span>
+                    <strong class="math-inline" data-math="\operatorname{rg}(A^*)=3"></strong>
+                  </div>
+                  <p>Los rangos son distintos: el sistema es incompatible y no tiene solución.</p>
+                </li>
+
+                <li>
+                  <h3>Estudiamos el caso a = −3/2</h3>
+                  <p>Repetimos el argumento. El mismo menor de orden 2 de A sigue siendo no nulo.</p>
+                  <div class="minor-work">
+                    <span class="math-inline" data-math="\begin{vmatrix}-\frac32&amp;-1\\1&amp;-2\end{vmatrix}"></span>
+                    <span class="math-inline" data-math="=3+1"></span>
+                    <strong class="math-inline" data-math="=4\ne0\Rightarrow\operatorname{rg}(A)=2"></strong>
+                  </div>
+                  <p>El menor formado por las columnas 1, 2 y 4 de A* tampoco se anula.</p>
+                  <div class="det-expansion cramer-rank-chain">
+                    <span class="math-inline" data-math="\begin{vmatrix}-\frac32&amp;-1&amp;2\\1&amp;-2&amp;1\\1&amp;2&amp;3\end{vmatrix}"></span>
+                    <span class="math-inline" data-math="=10-8\left(-\frac32\right)=22\ne0"></span>
+                    <strong class="math-inline" data-math="\operatorname{rg}(A^*)=3"></strong>
+                  </div>
+                  <p>De nuevo, rango(A) &lt; rango(A*): el sistema es incompatible y no tiene solución.</p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="equation essential-calculation cramer-essential-det math-display" data-math="D=-2a^2+3a+9=-(2a+3)(a-3)" data-math-display></div>
+
+            <div class="classification-list essential-classification two-case-classification cramer-essential-classification">
+              <div>
+                <span class="math-inline" data-math="a\notin\left\{3,-\frac32\right\}"></span>
+                <strong>Compatible determinado</strong>
+                <p>Se resuelve mediante Cramer.</p>
+              </div>
+              <div>
+                <span class="math-inline" data-math="a\in\left\{3,-\frac32\right\}"></span>
+                <strong>Incompatible</strong>
+                <p>No tiene solución.</p>
+              </div>
+            </div>
+
+            <div class="cramer-essential-solution">
+              <p>Para <span class="math-inline" data-math="a\notin\left\{3,-\frac32\right\}"></span>:</p>
+              <div class="cramer-solution">
+                <span class="math-inline" data-math="x=\dfrac{23-3a}{-2a^2+3a+9}"></span>
+                <span class="math-inline" data-math="y=\dfrac{a^2+a+2}{-2a^2+3a+9}"></span>
+                <span class="math-inline" data-math="z=\dfrac{10-8a}{-2a^2+3a+9}"></span>
+              </div>
+            </div>
+
+            <div class="result result-long system-result cramer-result">
+              <span>Resultado</span>
+              <strong>
+                <span class="result-unit">a ≠ 3 y a ≠ −3/2: una solución</span>
+                <span class="result-unit">a = 3 o a = −3/2: ninguna solución</span>
+              </strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

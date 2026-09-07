@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aparkaleku okupatuak: banaketa binomiala · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-aparcamientos-binomial-2021-extraordinaria-idiomas.js?v=2021-ext-p10a" defer></script>
+  <script src="ejercicio-aparcamientos-binomial-2021-extraordinaria-grafico.js?v=2021-ext-p10a" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2021 · Extraordinaria · Problema 10</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Probabilidad · Distribución binomial · 2021</p>
+        <h1>Aparcamientos ocupados</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>En un garaje hay 30 aparcamientos. En cada aparcamiento puede encontrarse o no un automóvil, con independencia de lo que ocurra en los otros. La probabilidad de que un aparcamiento esté ocupado es 0,4. Se pide:</p>
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">Identificar y describir este modelo de probabilidad.</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">Hallar la probabilidad de que cierto día haya 8 automóviles aparcados.</span>
+          </li>
+          <li>
+            <span class="statement-label">c</span>
+            <span class="statement-text">Hallar la probabilidad de que un día haya entre 10 y 20 automóviles aparcados.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="parking-2021-part-a" data-target="parking-2021-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="parking-2021-part-b" data-target="parking-2021-part-b">B</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="parking-2021-part-c" data-target="parking-2021-part-c">C</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="parking-2021-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Miramos cada aparcamiento como un ensayo: solo puede estar ocupado o libre. Los 30 ensayos son independientes y todos tienen la misma probabilidad de ocupación.</p>
+            <p class="idea-text">Cuando contamos cuántas veces aparece uno de los dos resultados en un número fijo de ensayos de este tipo, obtenemos una variable binomial. El «éxito» será que el aparcamiento esté ocupado.</p>
+            <div class="essential-geometry parking-2021-idea">
+              <div class="math-display" data-math="n=30,\qquad p=0{,}4,\qquad q=0{,}6" data-math-display></div>
+              <strong class="math-display" data-math="X\sim B(30,0{,}4)" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2>Identificación y descripción del modelo</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Ensayo de Bernoulli</h3>
+                <p>Un ensayo de Bernoulli tiene dos resultados posibles. Llamamos éxito al resultado que queremos contar y representamos su probabilidad mediante <span class="math-inline math-nowrap" data-math="p"></span>.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Condiciones de una distribución binomial</h3>
+                <p>El número de ensayos debe estar fijado, cada ensayo debe tener dos resultados, los ensayos deben ser independientes y la probabilidad de éxito debe permanecer constante.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Parámetros y valores posibles</h3>
+                <p>La notación <span class="math-inline math-nowrap" data-math="X\sim B(n,p)"></span> indica que <span class="math-inline math-nowrap" data-math="X"></span> cuenta éxitos en <span class="math-inline math-nowrap" data-math="n"></span> ensayos. Por ello solo puede tomar valores enteros desde cero hasta <span class="math-inline math-nowrap" data-math="n"></span>.</p>
+                <div class="theory-formula math-display" data-math="X\in\{0,1,\ldots,n\}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>4. Media y dispersión</h3>
+                <p>La esperanza indica el número medio de éxitos a largo plazo. La varianza y la desviación típica miden cuánto se separan los recuentos de esa media.</p>
+                <div class="theory-formula math-display" data-math="\mu=np,\qquad \sigma^2=np(1-p),\qquad \sigma=\sqrt{np(1-p)}" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Definimos qué vamos a contar</h3>
+                  <p>Sea <span class="math-inline math-nowrap" data-math="X"></span> el número de aparcamientos ocupados entre los 30 del garaje.</p>
+                </li>
+                <li>
+                  <h3>Comprobamos las condiciones del modelo</h3>
+                  <ul class="parking-2021-checks">
+                    <li>Hay un número fijo de ensayos: 30 aparcamientos.</li>
+                    <li>Cada uno tiene dos resultados: ocupado o libre.</li>
+                    <li>La ocupación de cada plaza es independiente de las demás.</li>
+                    <li>La probabilidad de ocupación es constante: <span class="math-inline math-nowrap" data-math="p=0{,}4"></span>.</li>
+                  </ul>
+                </li>
+                <li>
+                  <h3>Identificamos los parámetros</h3>
+                  <p>El suceso que contamos es «aparcamiento ocupado». Su contrario es «aparcamiento libre».</p>
+                  <div class="parking-2021-work">
+                    <div class="math-display" data-math="n=30,\qquad p=0{,}4" data-math-display></div>
+                    <div class="math-display" data-math="q=1-p=1-0{,}4=0{,}6" data-math-display></div>
+                    <strong class="math-display" data-math="X\sim B(30,0{,}4)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Describimos su centro y su dispersión</h3>
+                  <div class="parking-2021-work">
+                    <div class="math-display" data-math="\mu=np=30\cdot0{,}4=12" data-math-display></div>
+                    <div class="math-display" data-math="\sigma^2=npq=30\cdot0{,}4\cdot0{,}6=7{,}2" data-math-display></div>
+                    <strong class="math-display" data-math="\sigma=\sqrt{7{,}2}\approx2{,}68" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry parking-2021-essential">
+              <div class="math-display" data-math="n=30,\qquad p=0{,}4,\qquad q=0{,}6" data-math-display></div>
+              <strong class="math-display" data-math="X\sim B(30,0{,}4)" data-math-display></strong>
+              <div class="math-display" data-math="\mu=12,\qquad \sigma^2=7{,}2,\qquad \sigma\approx2{,}68" data-math-display></div>
+            </div>
+
+            <div class="result result-long parking-2021-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="X\sim B(30,0{,}4)" data-math-display></strong>
+              <p>Es una distribución binomial que cuenta cuántos de los 30 aparcamientos están ocupados.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="parking-2021-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">«Hay 8 automóviles» significa que queremos exactamente 8 aparcamientos ocupados. Elegimos cuáles son esas 8 plazas y exigimos que las 22 restantes estén libres.</p>
+            <p class="idea-text">La fórmula binomial reúne esas tres piezas: el número de elecciones posibles, la probabilidad de 8 ocupaciones y la probabilidad de 22 plazas libres.</p>
+            <div class="essential-geometry parking-2021-idea">
+              <div class="math-display" data-math="P(X=8)=\binom{30}{8}(0{,}4)^8(0{,}6)^{22}" data-math-display></div>
+              <strong class="math-display" data-math="P(X=8)\approx0{,}0505" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Probabilidad de que haya exactamente 8 automóviles</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Probabilidad de un valor concreto</h3>
+                <p>Si <span class="math-inline math-nowrap" data-math="X\sim B(n,p)"></span>, la probabilidad de obtener exactamente <span class="math-inline math-nowrap" data-math="k"></span> éxitos es:</p>
+                <div class="theory-formula math-display" data-math="P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Por qué aparece cada factor</h3>
+                <p>El coeficiente <span class="math-inline math-nowrap" data-math="\binom{n}{k}"></span> elige las posiciones de los éxitos. El factor <span class="math-inline math-nowrap" data-math="p^k"></span> corresponde a esos éxitos y <span class="math-inline math-nowrap" data-math="(1-p)^{n-k}"></span> a los fracasos restantes.</p>
+                <div class="theory-formula math-display" data-math="\binom{n}{k}=\frac{n!}{k!(n-k)!}" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Traducimos el enunciado a la variable</h3>
+                  <p>La variable <span class="math-inline math-nowrap" data-math="X"></span> cuenta aparcamientos ocupados. Pedir 8 automóviles equivale a pedir exactamente 8 ocupaciones.</p>
+                  <div class="parking-2021-work">
+                    <strong class="math-display" data-math="P(X=8)" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Determinamos ocupaciones y plazas libres</h3>
+                  <p>Si 8 de las 30 plazas están ocupadas, las otras 22 deben estar libres.</p>
+                  <div class="parking-2021-work">
+                    <div class="math-display" data-math="k=8" data-math-display></div>
+                    <strong class="math-display" data-math="n-k=30-8=22" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Sustituimos en la fórmula binomial</h3>
+                  <div class="parking-2021-work">
+                    <div class="math-display" data-math="P(X=8)=\binom{30}{8}(0{,}4)^8(0{,}6)^{22}" data-math-display></div>
+                    <div class="math-display" data-math="\binom{30}{8}=\frac{30!}{8!\,22!}=5\,852\,925" data-math-display></div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Calculamos y expresamos el resultado</h3>
+                  <div class="parking-2021-work">
+                    <div class="math-display" data-math="P(X=8)=5\,852\,925(0{,}4)^8(0{,}6)^{22}" data-math-display></div>
+                    <strong class="math-display" data-math="P(X=8)\approx0{,}050487\approx0{,}0505" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry parking-2021-essential">
+              <div class="math-display" data-math="X\sim B(30,0{,}4)" data-math-display></div>
+              <div class="math-display" data-math="P(X=8)=\binom{30}{8}(0{,}4)^8(0{,}6)^{22}" data-math-display></div>
+              <strong class="math-display" data-math="P(X=8)\approx0{,}0505" data-math-display></strong>
+            </div>
+
+            <figure class="parking-2021-figure" aria-label="Distribución binomial con el valor ocho destacado">
+              <figcaption>Cada barra representa un número entero de aparcamientos ocupados. La barra naranja corresponde al caso exacto <span class="math-inline math-nowrap" data-math="X=8"></span>.</figcaption>
+              <div id="parking-binomial-2021-board-b" class="jxgbox parking-2021-board" role="img" aria-label="Distribución binomial de treinta ensayos y probabilidad cero coma cuatro con la barra ocho destacada"></div>
+            </figure>
+
+            <div class="result result-long parking-2021-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(X=8)\approx0{,}0505" data-math-display></strong>
+              <p>La probabilidad es aproximadamente del <span class="math-inline math-nowrap" data-math="5{,}05\%"></span>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="parking-2021-part-c" class="panel" role="tabpanel" hidden>
+        <div class="section-index">03</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado C</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">«Entre 10 y 20» incluye los dos extremos. Como la variable solo toma valores enteros, debemos reunir los once casos desde <span class="math-inline math-nowrap" data-math="X=10"></span> hasta <span class="math-inline math-nowrap" data-math="X=20"></span>.</p>
+            <p class="idea-text">Esos casos son incompatibles, así que sumamos sus probabilidades binomiales. De forma equivalente, podemos restar dos probabilidades acumuladas.</p>
+            <div class="essential-geometry parking-2021-idea">
+              <div class="math-display" data-math="\begin{aligned}P(10\le X\le20)&=P(X\le20)\\&\quad-P(X\le9)\end{aligned}" data-math-display></div>
+              <strong class="math-display" data-math="P(10\le X\le20)\approx0{,}8229" data-math-display></strong>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado C</p>
+            <h2>Probabilidad de que haya entre 10 y 20 automóviles</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>1. Intervalo inclusivo en una variable discreta</h3>
+                <p>La expresión <span class="math-inline math-nowrap" data-math="10\le X\le20"></span> incluye todos los enteros desde 10 hasta 20, incluidos ambos extremos.</p>
+              </div>
+              <div class="theory-topic">
+                <h3>2. Suma de casos incompatibles</h3>
+                <p>La variable no puede tomar dos valores distintos a la vez. Por eso las probabilidades de los valores 10, 11, ..., 20 se suman.</p>
+                <div class="theory-formula math-display" data-math="P(a\le X\le b)=\sum_{k=a}^{b}P(X=k)" data-math-display></div>
+              </div>
+              <div class="theory-topic">
+                <h3>3. Cálculo mediante probabilidades acumuladas</h3>
+                <p>Si una calculadora proporciona <span class="math-inline math-nowrap" data-math="P(X\le k)"></span>, el intervalo se obtiene restando lo acumulado hasta el entero anterior al límite inferior.</p>
+                <div class="theory-formula math-display" data-math="P(a\le X\le b)=P(X\le b)-P(X\le a-1)" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Interpretamos correctamente los extremos</h3>
+                  <p>La frase «entre 10 y 20» incluye 10 y 20. Por tanto, los valores favorables son:</p>
+                  <div class="parking-2021-work">
+                    <strong class="math-display" data-math="X\in\{10,11,12,\ldots,19,20\}" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Escribimos la suma de probabilidades</h3>
+                  <p>Aplicamos la fórmula binomial a cada valor y sumamos los once resultados.</p>
+                  <div class="parking-2021-work">
+                    <div class="math-display" data-math="\begin{aligned}P(10\le X\le20)={}&P(X=10)+P(X=11)\\&+\cdots+P(X=20)\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="\begin{aligned}P(10\le X\le20)&=\sum_{k=10}^{20}\binom{30}{k}\\&\quad\cdot(0{,}4)^k(0{,}6)^{30-k}\end{aligned}" data-math-display></strong>
+                  </div>
+                </li>
+                <li>
+                  <h3>Usamos la forma acumulada</h3>
+                  <p>Para empezar en 10, quitamos todos los valores hasta 9 de lo acumulado hasta 20.</p>
+                  <div class="parking-2021-work">
+                    <div class="math-display" data-math="P(10\le X\le20)=P(X\le20)-P(X\le9)" data-math-display></div>
+                    <div class="math-display" data-math="P(X\le20)\approx0{,}9991436" data-math-display></div>
+                    <div class="math-display" data-math="P(X\le9)\approx0{,}1762865" data-math-display></div>
+                  </div>
+                </li>
+                <li>
+                  <h3>Restamos y redondeamos</h3>
+                  <div class="parking-2021-work">
+                    <div class="math-display" data-math="\begin{aligned}P(10\le X\le20)&\approx0{,}9991436\\&\quad-0{,}1762865\end{aligned}" data-math-display></div>
+                    <strong class="math-display" data-math="P(10\le X\le20)\approx0{,}8228571\approx0{,}8229" data-math-display></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry parking-2021-essential">
+              <div class="math-display" data-math="\begin{aligned}P(10\le X\le20)&=\sum_{k=10}^{20}\binom{30}{k}\\&\quad\cdot(0{,}4)^k(0{,}6)^{30-k}\end{aligned}" data-math-display></div>
+              <div class="math-display" data-math="\begin{aligned}P(10\le X\le20)&=P(X\le20)\\&\quad-P(X\le9)\end{aligned}" data-math-display></div>
+              <strong class="math-display" data-math="P(10\le X\le20)\approx0{,}8229" data-math-display></strong>
+            </div>
+
+            <figure class="parking-2021-figure" aria-label="Distribución binomial con los valores de diez a veinte destacados">
+              <figcaption>Las barras naranjas son los once valores incluidos en el intervalo <span class="math-inline math-nowrap" data-math="10\le X\le20"></span>.</figcaption>
+              <div id="parking-binomial-2021-board-c" class="jxgbox parking-2021-board" role="img" aria-label="Distribución binomial de treinta ensayos y probabilidad cero coma cuatro con las barras de diez a veinte destacadas"></div>
+            </figure>
+
+            <div class="result result-long parking-2021-result">
+              <span>Resultado</span>
+              <strong class="math-display" data-math="P(10\le X\le20)\approx0{,}8229" data-math-display></strong>
+              <p>La probabilidad es aproximadamente del <span class="math-inline math-nowrap" data-math="82{,}29\%"></span>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

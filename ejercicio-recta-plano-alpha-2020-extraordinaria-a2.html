@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zuzen baten eta parametrodun plano baten paralelotasuna · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-recta-plano-alpha-2020-extraordinaria-idiomas.js?v=2020-extra-a2b" defer></script>
+  <script src="ejercicio-recta-plano-alpha-2020-extraordinaria-grafico.js?v=2020-extra-a2b" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+      <a href="index.html">← Volver a ejercicios</a>
+      <div class="exercise-nav-meta">
+        <span class="source-reference">2020 · Extraordinaria · Opción A · Ejercicio A.2</span>
+        <div class="language-switch" data-language-switch></div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Geometría en el espacio · Rectas y planos · 2020</p>
+        <h1>Paralelismo entre una recta y un plano con parámetro</h1>
+      </div>
+    </header>
+
+    <section class="problem" aria-labelledby="statement-title">
+      <div class="section-index">00</div>
+      <div class="section-content">
+        <h2 id="statement-title">Enunciado</h2>
+        <p>Sean la recta y el plano definidos por:</p>
+
+        <div class="line-plane-2020-data">
+          <div class="geometry-object">
+            <span class="math-inline" data-math="r\colon"></span>
+            <div class="equation-system compact-system line-plane-2020-system math-display" aria-label="Recta r como intersección de dos planos" data-math="\begin{cases}3x+y-z=2\\2x+y+4z=1\end{cases}" data-math-display></div>
+          </div>
+          <div class="geometry-object line-plane-2020-plane">
+            <span class="math-inline" data-math="\pi\colon"></span>
+            <span class="math-inline line-plane-2020-plane-equation" data-math="3x+(\alpha+1)(y+1)+\alpha z=1"></span>
+          </div>
+        </div>
+
+        <ol class="statement-list">
+          <li>
+            <span class="statement-label">a</span>
+            <span class="statement-text">Hallar el valor del parámetro, <span class="math-inline math-nowrap" data-math="\alpha"></span>, para que la recta y el plano sean paralelos.</span>
+          </li>
+          <li>
+            <span class="statement-label">b</span>
+            <span class="statement-text">Determinar si el punto <span class="math-inline math-nowrap" data-math="P(1,1,2)"></span> pertenece al plano del apartado anterior.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="level-control" aria-labelledby="level-title">
+      <p class="control-label" id="level-title">Qué quieres ver</p>
+      <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+        <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+        <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+        <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+        <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Apartados de la solución" role="tablist">
+      <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="line-plane-2020-part-a" data-target="line-plane-2020-part-a">A</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="line-plane-2020-part-b" data-target="line-plane-2020-part-b">B</button>
+    </nav>
+
+    <div class="solutions">
+      <section id="line-plane-2020-part-a" class="panel active" role="tabpanel">
+        <div class="section-index">01</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado A</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">La recta está dada como intersección de dos planos, de modo que su dirección no aparece escrita directamente. Primero la pondremos en forma paramétrica para obtener un punto y su vector director.</p>
+            <p class="idea-text">Después leeremos el vector normal del plano. Para que la recta sea paralela al plano, su dirección debe ser perpendicular a ese normal: el producto escalar tiene que valer cero. Esa ecuación determinará el parámetro. Por último comprobaremos que un punto de la recta no pertenece al plano, porque la misma perpendicularidad también podría corresponder a una recta contenida en él.</p>
+            <div class="essential-geometry line-plane-2020-idea">
+              <div class="math-display" data-math="d_r\cdot n_\pi=0" data-math-display></div>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado A</p>
+            <h2 id="solution-title">Valor del parámetro y posición relativa</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+
+              <div class="theory-topic">
+                <h3>1. Punto y dirección de una recta paramétrica</h3>
+                <p>En la forma vectorial de una recta, el vector fijo da un punto y el vector multiplicado por el parámetro da su dirección.</p>
+                <div class="theory-formula math-display" data-math="r\colon (x,y,z)=Q+t\,d_r" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>2. Vector normal de un plano</h3>
+                <p>En una ecuación de plano, los coeficientes de las variables forman un vector perpendicular al plano.</p>
+                <div class="theory-formula math-display" data-math="ax+by+cz+d=0\quad\Longrightarrow\quad n_\pi=(a,b,c)" data-math-display></div>
+              </div>
+
+              <div class="theory-topic">
+                <h3>3. Paralelismo entre recta y plano</h3>
+                <p>La dirección de una recta paralela a un plano es perpendicular al vector normal del plano. El producto escalar nulo asegura direcciones paralelas, pero no distingue entre una recta exterior y una recta contenida; para ello se comprueba un punto de la recta.</p>
+                <div class="theory-formula math-display" data-math="d_r\cdot n_\pi=0" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Parametrizamos la recta</h3>
+                  <p>Restamos la segunda ecuación de la primera para eliminar la variable común.</p>
+                  <div class="derivation line-plane-2020-derivation">
+                    <div><span class="math-inline" data-math="(3x+y-z)-(2x+y+4z)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="2-1"></span></div>
+                    <div><span class="math-inline" data-math="x-5z"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="1"></span></div>
+                    <div><span class="math-inline" data-math="x"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="1+5z"></span></div>
+                  </div>
+                  <p>Tomamos la tercera variable como parámetro.</p>
+                  <div class="equation equation-compact math-display" data-math="z=t\quad\Longrightarrow\quad x=1+5t" data-math-display></div>
+                  <p>Sustituimos en la segunda ecuación y despejamos la variable que falta.</p>
+                  <div class="derivation line-plane-2020-derivation">
+                    <div><span class="math-inline" data-math="2(1+5t)+y+4t"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="1"></span></div>
+                    <div><span class="math-inline" data-math="2+14t+y"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="1"></span></div>
+                    <div><span class="math-inline" data-math="y"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="-1-14t"></span></div>
+                  </div>
+                  <p>Ya podemos leer un punto de la recta y su vector director.</p>
+                  <div class="equation equation-compact line-plane-2020-parametric math-display" data-math="r\colon (x,y,z)=(1,-1,0)+t(5,-14,1)" data-math-display></div>
+                  <div class="vector-pair">
+                    <span class="math-inline" data-math="Q=(1,-1,0);"></span>
+                    <span class="math-inline" data-math="d_r=(5,-14,1)."></span>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Leemos el vector normal del plano</h3>
+                  <p>Al desarrollar solo el término que contiene el paréntesis, los coeficientes de las variables quedan visibles.</p>
+                  <div class="equation equation-compact math-display" data-math="3x+(\alpha+1)y+\alpha z+(\alpha+1)=1" data-math-display></div>
+                  <div class="equation equation-compact math-display" data-math="n_\pi=(3,\alpha+1,\alpha)" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Imponemos la condición de paralelismo</h3>
+                  <p>La dirección de la recta debe ser perpendicular al normal del plano. Calculamos el producto escalar componente a componente.</p>
+                  <div class="derivation line-plane-2020-dot">
+                    <div><span class="math-inline" data-math="d_r\cdot n_\pi"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="0"></span></div>
+                    <div><span class="math-inline" data-math="(5,-14,1)\cdot(3,\alpha+1,\alpha)"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="0"></span></div>
+                    <div><span class="math-inline" data-math="5\cdot3-14(\alpha+1)+\alpha"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="0"></span></div>
+                    <div><span class="math-inline" data-math="15-14\alpha-14+\alpha"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="0"></span></div>
+                    <div><span class="math-inline" data-math="1-13\alpha"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="0"></span></div>
+                    <div><span class="math-inline" data-math="\alpha"></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="\dfrac{1}{13}"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Escribimos el plano obtenido</h3>
+                  <p>Sustituimos el parámetro y multiplicamos toda la ecuación por 13 para evitar fracciones.</p>
+                  <div class="derivation line-plane-2020-plane-work">
+                    <div><span class="math-inline" data-math="3x+\dfrac{14}{13}(y+1)+\dfrac{1}{13}z"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="1"></span></div>
+                    <div><span class="math-inline" data-math="39x+14(y+1)+z"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="13"></span></div>
+                    <div><span class="math-inline" data-math="39x+14y+z+1"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="0"></span></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comprobamos que la recta no está contenida</h3>
+                  <p>Usamos el punto de la recta obtenido al tomar el parámetro igual a cero y lo sustituimos en el plano.</p>
+                  <div class="equation equation-compact math-display" data-math="Q=(1,-1,0)\in r" data-math-display></div>
+                  <div class="membership-check line-plane-2020-membership">
+                    <span class="math-inline" data-math="39(1)+14(-1)+0+1=26\ne0"></span>
+                    <strong class="math-inline" data-math="Q\notin\pi"></strong>
+                  </div>
+                  <p>La dirección es paralela al plano y la recta no está contenida en él. Por tanto, la recta y el plano son paralelos y no se cortan.</p>
+
+                  <figure class="line-plane-2020-figure" aria-label="Representación exacta de la recta paralela al plano y de los puntos Q y P">
+                    <figcaption>La recta conserva una separación constante respecto del plano. El punto negro pertenece a la recta; tanto él como el punto destacado quedan fuera del plano.</figcaption>
+                    <div id="line-plane-2020-board" class="jxgbox line-plane-2020-board" role="img" aria-label="Plano pi, recta r paralela, punto Q sobre la recta y punto P fuera del plano"></div>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry line-plane-2020-essential">
+              <div class="math-display" data-math="r\colon (x,y,z)=(1,-1,0)+t(5,-14,1)" data-math-display></div>
+              <div class="math-display" data-math="n_\pi=(3,\alpha+1,\alpha)" data-math-display></div>
+              <strong class="math-display" data-math="(5,-14,1)\cdot(3,\alpha+1,\alpha)=1-13\alpha=0" data-math-display></strong>
+              <div class="math-display" data-math="\alpha=\dfrac{1}{13}" data-math-display></div>
+            </div>
+            <p class="essential-note">Además, el punto elegido de la recta no satisface la ecuación del plano obtenido; el paralelismo es estricto.</p>
+
+            <div class="result result-long geometry-result line-plane-2020-result">
+              <span>Resultado</span>
+              <strong class="math-inline" data-math="\alpha=\dfrac{1}{13}"></strong>
+              <p>La recta es paralela al plano y no está contenida en él.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="line-plane-2020-part-b" class="panel" role="tabpanel" hidden>
+        <div class="section-index">02</div>
+        <div class="section-content">
+          <div class="idea-view">
+            <p class="kicker">Apartado B</p>
+            <h2>Idea de resolución</h2>
+            <p class="idea-text">Un punto pertenece a un plano exactamente cuando sus coordenadas satisfacen la ecuación del plano. Usaremos la ecuación con coeficientes enteros obtenida en el apartado anterior, sustituiremos las tres coordenadas de P y compararemos el resultado con cero.</p>
+            <div class="essential-geometry line-plane-2020-idea">
+              <div class="math-display" data-math="39x+14y+z+1=0" data-math-display></div>
+            </div>
+          </div>
+
+          <div class="solution-view" hidden>
+            <p class="kicker">Apartado B</p>
+            <h2>Pertenencia del punto al plano</h2>
+
+            <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+              <p class="layer-label">Teoría necesaria</p>
+              <div class="theory-topic">
+                <h3>Criterio de pertenencia</h3>
+                <p>Un punto pertenece a un plano si, al sustituir sus coordenadas en la ecuación, la igualdad se cumple. Si el primer miembro no toma el valor indicado por el segundo, el punto queda fuera.</p>
+                <div class="theory-formula math-display" data-math="P(x_0,y_0,z_0)\in\pi\Longleftrightarrow ax_0+by_0+cz_0+d=0" data-math-display></div>
+              </div>
+            </aside>
+
+            <div class="progressive-layer" data-min-level="detail" hidden>
+              <p class="layer-label">Resolución completa</p>
+              <ol class="worked-steps">
+                <li>
+                  <h3>Recuperamos la ecuación del plano</h3>
+                  <p>Para el valor del parámetro hallado en el apartado anterior, la ecuación sin fracciones es:</p>
+                  <div class="equation equation-compact math-display" data-math="\pi\colon 39x+14y+z+1=0" data-math-display></div>
+                </li>
+
+                <li>
+                  <h3>Sustituimos las coordenadas del punto</h3>
+                  <p>Introducimos, en ese orden, la primera, la segunda y la tercera coordenada.</p>
+                  <div class="derivation line-plane-2020-point-check">
+                    <div><span class="math-inline" data-math="39(1)+14(1)+2+1"></span><span class="math-inline" data-math="="></span><span class="math-inline" data-math="39+14+2+1"></span></div>
+                    <div><span></span><span class="math-inline" data-math="="></span><strong class="math-inline" data-math="56"></strong></div>
+                  </div>
+                </li>
+
+                <li>
+                  <h3>Comparamos con la ecuación del plano</h3>
+                  <p>El plano exige que el primer miembro valga cero, pero para el punto dado vale 56.</p>
+                  <div class="membership-check line-plane-2020-membership">
+                    <span class="math-inline" data-math="56\ne0"></span>
+                    <strong class="math-inline" data-math="P\notin\pi"></strong>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <p class="step-caption">Cálculo esencial</p>
+            <div class="essential-geometry line-plane-2020-essential">
+              <div class="math-display" data-math="\pi\colon 39x+14y+z+1=0" data-math-display></div>
+              <strong class="math-display" data-math="39(1)+14(1)+2+1=56\ne0" data-math-display></strong>
+            </div>
+
+            <div class="result result-long geometry-result line-plane-2020-result">
+              <span>Resultado</span>
+              <strong class="math-inline" data-math="P\notin\pi"></strong>
+              <p>El punto dado no pertenece al plano.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

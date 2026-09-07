@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hiru kurbaren arteko azalera · Matematika II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/jsxgraph/jsxgraph.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css?v=pdf-free-20260907">
+  <link rel="stylesheet" href="idioma.css">
+  <script src="vendor/jsxgraph/jsxgraphcore.js" defer></script>
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="idioma.js" defer></script>
+  <script src="ejercicio-area-tres-curvas-2024-ordinaria-b4-idiomas.js?v=1" defer></script>
+  <script src="ejercicio-area-tres-curvas-2024-ordinaria-b4-grafico.js?v=1" defer></script>
+  <script src="matematicas.js?v=math-layout-20260901" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="page three-curves-2024-page">
+  <nav class="exercise-nav" aria-label="Navegación del ejercicio">
+    <a href="index.html">← Volver a ejercicios</a>
+    <div class="exercise-nav-meta">
+      <span class="source-reference">2024 · Ordinaria · Ejercicio B4</span>
+      <div class="language-switch" data-language-switch></div>
+    </div>
+  </nav>
+
+  <header class="hero"><div class="hero-copy">
+    <p class="eyebrow">Análisis · Áreas entre curvas · 2024</p>
+    <h1>Una región, dos integrales</h1>
+  </div></header>
+
+  <section class="problem" aria-labelledby="statement-title">
+    <div class="section-index">00</div>
+    <div class="section-content">
+      <h2 id="statement-title">Enunciado</h2>
+      <p>Se consideran las curvas</p>
+      <div class="statement-function math-display" data-math="y=x^2,\qquad y=\frac{x^2}{3},\qquad y=x" data-math-display></div>
+      <ol class="problem-list">
+        <li>Dibuja el recinto del primer cuadrante limitado por las tres curvas.</li>
+        <li>Calcula el área de ese recinto.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="level-control" aria-labelledby="level-title">
+    <p class="control-label" id="level-title">Qué quieres ver</p>
+    <div class="level-switch" role="group" aria-label="Idea o nivel de profundidad de la solución">
+      <button class="level-button active" type="button" data-level="idea" aria-pressed="true">Idea</button>
+      <button class="level-button" type="button" data-level="essential" aria-pressed="false">Esencial</button>
+      <button class="level-button" type="button" data-level="detail" aria-pressed="false">Paso a paso</button>
+      <button class="level-button" type="button" data-level="theory" aria-pressed="false">Con teoría</button>
+    </div>
+  </section>
+
+  <div class="tabs" role="tablist" aria-label="Apartados de la solución">
+    <button class="tab active" type="button" role="tab" aria-selected="true" data-target="three-curves-2024-part-a">Apartado A</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-target="three-curves-2024-part-b">Apartado B</button>
+  </div>
+
+  <div class="solutions">
+    <section id="three-curves-2024-part-a" class="panel active" role="tabpanel">
+      <div class="section-index">01</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Apartado A</p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-three-curves-2024-language="es">Antes de dibujar el recinto, calculamos dónde se cortan las rectas y las parábolas. Eso proporciona los tres vértices de la frontera: <span class="math-inline math-nowrap" data-math="(0,0)"></span>, <span class="math-inline math-nowrap" data-math="(1,1)"></span> y <span class="math-inline math-nowrap" data-math="(3,3)"></span>.</p>
+          <p class="idea-text" data-three-curves-2024-language="eu" hidden>Esparrua marraztu aurretik, zuzenak eta parabolak non ebakitzen diren kalkulatzen dugu. Horrek mugaren hiru erpinak ematen ditu: <span class="math-inline math-nowrap" data-math="(0,0)"></span>, <span class="math-inline math-nowrap" data-math="(1,1)"></span> eta <span class="math-inline math-nowrap" data-math="(3,3)"></span>.</p>
+          <p class="idea-text" data-three-curves-2024-language="es">Desde el origen hasta <span class="math-inline math-nowrap" data-math="(1,1)"></span>, el borde superior es <span class="math-inline math-nowrap" data-math="y=x^2"></span>. Después continúa por la recta hasta <span class="math-inline math-nowrap" data-math="(3,3)"></span>. El regreso al origen se hace por <span class="math-inline math-nowrap" data-math="y=x^2/3"></span>.</p>
+          <p class="idea-text" data-three-curves-2024-language="eu" hidden>Jatorritik <span class="math-inline math-nowrap" data-math="(1,1)"></span> punturaino, goiko ertza <span class="math-inline math-nowrap" data-math="y=x^2"></span> da. Gero, zuzenetik jarraitzen du <span class="math-inline math-nowrap" data-math="(3,3)"></span> punturaino. Jatorrirako itzulera <span class="math-inline math-nowrap" data-math="y=x^2/3"></span> kurbatik egiten da.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="(0,0)\longrightarrow(1,1)\longrightarrow(3,3)\longrightarrow(0,0)" data-math-display></strong></div>
+        </div>
+
+        <div class="solution-view" hidden>
+          <p class="kicker">Apartado A</p>
+          <h2>Localizamos los cortes y recorremos la frontera</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>1. Intersección de dos gráficas</h3>
+              <p data-three-curves-2024-language="es">Un punto pertenece a dos gráficas cuando tiene la misma ordenada en ambas. Por eso igualamos sus expresiones y, después, sustituimos cada abscisa obtenida.</p>
+              <p data-three-curves-2024-language="eu" hidden>Puntu bat bi grafikori dagokie bietan ordenatu bera duenean. Horregatik, haien adierazpenak berdintzen ditugu eta, ondoren, lortutako abzisa bakoitza ordezkatzen dugu.</p>
+              <div class="theory-formula math-display" data-math="f(x)=g(x)" data-math-display></div>
+            </div>
+            <div class="theory-topic">
+              <h3>2. Qué significa estar limitado por tres curvas</h3>
+              <p data-three-curves-2024-language="es">La frontera debe estar formada por tramos de las tres curvas. Hay que seguirla de un punto de corte al siguiente y comprobar qué tramo cierra realmente el recinto.</p>
+              <p data-three-curves-2024-language="eu" hidden>Muga hiru kurben zatiek osatu behar dute. Ebakidura-puntu batetik hurrengora jarraitu eta zein zatik ixten duen benetan esparrua egiaztatu behar da.</p>
+            </div>
+          </aside>
+
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Cortamos <span class="math-inline math-nowrap" data-math="y=x^2"></span> con <span class="math-inline math-nowrap" data-math="y=x"></span></h3>
+                <div class="math-display" data-math="x^2=x\quad\Longrightarrow\quad x(x-1)=0" data-math-display></div>
+                <div class="math-display" data-math="x=0;\qquad x=1" data-math-display></div>
+                <p data-three-curves-2024-language="es">Los puntos de corte son <span class="math-inline math-nowrap" data-math="(0,0)"></span> y <span class="math-inline math-nowrap" data-math="(1,1)"></span>.</p>
+                <p data-three-curves-2024-language="eu" hidden>Ebakidura-puntuak <span class="math-inline math-nowrap" data-math="(0,0)"></span> eta <span class="math-inline math-nowrap" data-math="(1,1)"></span> dira.</p>
+              </li>
+              <li>
+                <h3>Cortamos <span class="math-inline math-nowrap" data-math="y=x^2/3"></span> con <span class="math-inline math-nowrap" data-math="y=x"></span></h3>
+                <div class="math-display" data-math="\frac{x^2}{3}=x\quad\Longrightarrow\quad x(x-3)=0" data-math-display></div>
+                <div class="math-display" data-math="x=0;\qquad x=3" data-math-display></div>
+                <p data-three-curves-2024-language="es">Los puntos de corte son <span class="math-inline math-nowrap" data-math="(0,0)"></span> y <span class="math-inline math-nowrap" data-math="(3,3)"></span>.</p>
+                <p data-three-curves-2024-language="eu" hidden>Ebakidura-puntuak <span class="math-inline math-nowrap" data-math="(0,0)"></span> eta <span class="math-inline math-nowrap" data-math="(3,3)"></span> dira.</p>
+              </li>
+              <li>
+                <h3>Comprobamos el corte de las dos parábolas</h3>
+                <div class="math-display" data-math="x^2=\frac{x^2}{3}\quad\Longrightarrow\quad \frac{2x^2}{3}=0\quad\Longrightarrow\quad x=0" data-math-display></div>
+                <p data-three-curves-2024-language="es">En el primer cuadrante solo se encuentran en el origen.</p>
+                <p data-three-curves-2024-language="eu" hidden>Lehen koadrantean jatorrian baino ez dute elkar ebakitzen.</p>
+              </li>
+              <li>
+                <h3>Identificamos los tres tramos de la frontera</h3>
+                <div class="three-curves-2024-boundary">
+                  <p><span class="math-inline math-nowrap" data-math="0\le x\le1"></span>: <span class="math-inline math-nowrap" data-math="y=x^2"></span>.</p>
+                  <p><span class="math-inline math-nowrap" data-math="1\le x\le3"></span>: <span class="math-inline math-nowrap" data-math="y=x"></span>.</p>
+                  <p><span class="math-inline math-nowrap" data-math="0\le x\le3"></span>: <span class="math-inline math-nowrap" data-math="y=x^2/3"></span>.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry">
+            <div class="math-display" data-math="x^2=x\Rightarrow x=0;\ 1" data-math-display></div>
+            <div class="math-display" data-math="\frac{x^2}{3}=x\Rightarrow x=0;\ 3" data-math-display></div>
+          </div>
+          <figure class="three-curves-2024-figure" aria-label="Región del primer cuadrante limitada por dos parábolas y una recta">
+            <figcaption data-three-curves-2024-language="es">La zona coloreada es el único recinto del primer cuadrante cuya frontera utiliza las tres curvas.</figcaption>
+            <figcaption data-three-curves-2024-language="eu" hidden>Koloreztatutako eremua lehen koadranteko esparru bakarra da, eta haren mugak hiru kurbak erabiltzen ditu.</figcaption>
+            <div id="three-curves-2024-board-a" class="jxgbox three-curves-2024-board" role="img" aria-label="Región limitada por y igual x cuadrado, y igual x cuadrado partido por tres e y igual x"></div>
+          </figure>
+          <div class="result"><span>Resultado</span><strong data-three-curves-2024-language="es">Vértices <span class="math-inline math-nowrap" data-math="(0,0)"></span>, <span class="math-inline math-nowrap" data-math="(1,1)"></span> y <span class="math-inline math-nowrap" data-math="(3,3)"></span>.</strong><strong data-three-curves-2024-language="eu" hidden>Erpinak: <span class="math-inline math-nowrap" data-math="(0,0)"></span>, <span class="math-inline math-nowrap" data-math="(1,1)"></span> eta <span class="math-inline math-nowrap" data-math="(3,3)"></span>.</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="three-curves-2024-part-b" class="panel" role="tabpanel" hidden>
+      <div class="section-index">02</div>
+      <div class="section-content">
+        <div class="idea-view">
+          <p class="kicker">Apartado B</p>
+          <h2>Idea de resolución</h2>
+          <p class="idea-text" data-three-curves-2024-language="es">El área vertical se calcula como «función superior menos función inferior». La función inferior es <span class="math-inline math-nowrap" data-math="x^2/3"></span> en todo el recinto, pero la superior cambia en <span class="math-inline math-nowrap" data-math="x=1"></span>.</p>
+          <p class="idea-text" data-three-curves-2024-language="eu" hidden>Azalera bertikala «goiko funtzioa ken beheko funtzioa» eginez kalkulatzen da. Beheko funtzioa <span class="math-inline math-nowrap" data-math="x^2/3"></span> da esparru osoan, baina goikoa <span class="math-inline math-nowrap" data-math="x=1"></span> puntuan aldatzen da.</p>
+          <p class="idea-text" data-three-curves-2024-language="es">Por eso sumamos el área comprendida entre las dos parábolas desde <span class="math-inline math-nowrap" data-math="0"></span> hasta <span class="math-inline math-nowrap" data-math="1"></span> y el área entre la recta y la parábola ancha desde <span class="math-inline math-nowrap" data-math="1"></span> hasta <span class="math-inline math-nowrap" data-math="3"></span>.</p>
+          <p class="idea-text" data-three-curves-2024-language="eu" hidden>Horregatik, bi parabolen arteko azalera <span class="math-inline math-nowrap" data-math="0"></span>-tik <span class="math-inline math-nowrap" data-math="1"></span>-era eta zuzenaren eta parabola zabalaren artekoa <span class="math-inline math-nowrap" data-math="1"></span>-etik <span class="math-inline math-nowrap" data-math="3"></span>-ra batzen ditugu.</p>
+          <div class="essential-geometry"><strong class="math-display" data-math="A=\int_0^1\left(x^2-\frac{x^2}{3}\right)dx+\int_1^3\left(x-\frac{x^2}{3}\right)dx" data-math-display></strong></div>
+        </div>
+
+        <div class="solution-view" hidden>
+          <p class="kicker">Apartado B</p>
+          <h2>Separamos el área donde cambia la curva superior</h2>
+          <aside class="theory-note progressive-layer" data-min-level="theory" hidden>
+            <p class="layer-label">Teoría necesaria</p>
+            <div class="theory-topic">
+              <h3>1. Área entre dos curvas</h3>
+              <p data-three-curves-2024-language="es">Si <span class="math-inline math-nowrap" data-math="f(x)\ge g(x)"></span> en <span class="math-inline math-nowrap" data-math="[a,b]"></span>, el área comprendida entre sus gráficas es la integral de la distancia vertical.</p>
+              <p data-three-curves-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="f(x)\ge g(x)"></span> bada <span class="math-inline math-nowrap" data-math="[a,b]"></span> tartean, grafikoen arteko azalera distantzia bertikalaren integrala da.</p>
+              <div class="theory-formula math-display" data-math="A=\int_a^b\bigl(f(x)-g(x)\bigr)\,dx" data-math-display></div>
+            </div>
+            <div class="theory-topic">
+              <h3>2. Cuándo hay que separar la integral</h3>
+              <p data-three-curves-2024-language="es">Si alguna frontera cambia de expresión en un punto interior, cada tramo necesita su propia integral. Aquí la función superior pasa de <span class="math-inline math-nowrap" data-math="x^2"></span> a <span class="math-inline math-nowrap" data-math="x"></span> en <span class="math-inline math-nowrap" data-math="x=1"></span>.</p>
+              <p data-three-curves-2024-language="eu" hidden>Mugaren batek barne-puntu batean adierazpena aldatzen badu, tarte bakoitzak bere integrala behar du. Hemen goiko funtzioa <span class="math-inline math-nowrap" data-math="x^2"></span>-tik <span class="math-inline math-nowrap" data-math="x"></span>-ra aldatzen da <span class="math-inline math-nowrap" data-math="x=1"></span> puntuan.</p>
+            </div>
+            <div class="theory-topic">
+              <h3>3. Regla de la potencia</h3>
+              <div class="theory-formula math-display" data-math="\int x^n\,dx=\frac{x^{n+1}}{n+1}+C\qquad(n\ne-1)" data-math-display></div>
+            </div>
+          </aside>
+
+          <div class="progressive-layer" data-min-level="detail" hidden>
+            <p class="layer-label">Resolución completa</p>
+            <ol class="worked-steps">
+              <li>
+                <h3>Calculamos el primer tramo</h3>
+                <div class="math-display" data-math="A_1=\int_0^1\left(x^2-\frac{x^2}{3}\right)dx" data-math-display></div>
+                <div class="math-display" data-math="A_1=\int_0^1\frac{2x^2}{3}\,dx=\left[\frac{2x^3}{9}\right]_0^1" data-math-display></div>
+                <strong class="math-display" data-math="A_1=\frac29" data-math-display></strong>
+              </li>
+              <li>
+                <h3>Calculamos el segundo tramo</h3>
+                <div class="math-display" data-math="A_2=\int_1^3\left(x-\frac{x^2}{3}\right)dx" data-math-display></div>
+                <div class="math-display" data-math="A_2=\left[\frac{x^2}{2}-\frac{x^3}{9}\right]_1^3" data-math-display></div>
+                <div class="math-display" data-math="A_2=\frac32-\frac7{18}=\frac{10}{9}" data-math-display></div>
+              </li>
+              <li>
+                <h3>Sumamos las dos partes</h3>
+                <div class="math-display" data-math="A=A_1+A_2=\frac29+\frac{10}{9}" data-math-display></div>
+                <strong class="math-display" data-math="A=\frac43" data-math-display></strong>
+              </li>
+            </ol>
+          </div>
+
+          <p class="step-caption">Cálculo esencial</p>
+          <div class="essential-geometry">
+            <div class="math-display" data-math="A_1=\int_0^1\frac{2x^2}{3}\,dx=\frac29" data-math-display></div>
+            <div class="math-display" data-math="A_2=\int_1^3\left(x-\frac{x^2}{3}\right)dx=\frac{10}{9}" data-math-display></div>
+          </div>
+          <figure class="three-curves-2024-figure" aria-label="Descomposición del área limitada por las tres curvas">
+            <figcaption data-three-curves-2024-language="es">La guía vertical en <span class="math-inline math-nowrap" data-math="x=1"></span> marca el lugar donde cambia la función superior.</figcaption>
+            <figcaption data-three-curves-2024-language="eu" hidden><span class="math-inline math-nowrap" data-math="x=1"></span> puntuko gida bertikalak goiko funtzioa non aldatzen den adierazten du.</figcaption>
+            <div id="three-curves-2024-board-b" class="jxgbox three-curves-2024-board" role="img" aria-label="Área dividida en dos tramos en x igual uno"></div>
+          </figure>
+          <div class="result"><span>Resultado</span><strong class="math-display" data-math="A=\frac43\ \text{unidades}^2" data-math-display data-math-es="A=\frac43\ \text{unidades}^2" data-math-eu="A=\frac43\ \text{unitate}^2"></strong></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>
