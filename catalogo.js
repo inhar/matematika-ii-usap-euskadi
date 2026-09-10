@@ -3527,8 +3527,8 @@ const exercises = [
 
 const catalogTranslations = {
   eu: {
-    documentTitle: "Matematika II · EBAU Euskadi",
-    description: "Euskadiko EBAUko Matematika IIko ariketak, edukiaren, urtearen eta deialdiaren arabera antolatuta.",
+    documentTitle: "Matematika II · USaP Euskadi",
+    description: "Euskadiko USaPeko Matematika IIko ariketak, edukiaren, urtearen eta deialdiaren arabera antolatuta.",
     brandAria: "Matematika II, hasiera",
     subject: "Matematika II",
     practice: "Praktikatu",
@@ -3560,8 +3560,8 @@ const catalogTranslations = {
     openExercise: "Ireki ariketa",
   },
   es: {
-    documentTitle: "Matemáticas II · EBAU Euskadi",
-    description: "Ejercicios de Matemáticas II de la EBAU del País Vasco, organizados por contenidos, año y convocatoria.",
+    documentTitle: "Matemáticas II · USaP Euskadi",
+    description: "Ejercicios de Matemáticas II de la USaP del País Vasco, organizados por contenidos, año y convocatoria.",
     brandAria: "Matemáticas II, inicio",
     subject: "Matemáticas II",
     practice: "Practicar",
