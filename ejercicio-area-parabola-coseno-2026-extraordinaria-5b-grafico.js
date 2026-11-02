@@ -28,7 +28,7 @@
     text(-.17, 1.18, "1", { anchorX: "right", anchorY: "bottom", color: c.muted });
     text(-.22, -10.28, String.raw`-\pi^2\approx-9{,}87`, { anchorX: "right", anchorY: "top", color: c.muted });
     text(-1.8, 1.25, String.raw`y=\cos\left(\frac x2\right)`, { anchorX: "left", color: c.blue });
-    text(1.35, -8.25, String.raw`y=x^2-\pi^2`, { anchorX: "left" });
+    text(1.5, -8.35, String.raw`y=x^2-\pi^2`, { anchorX: "left" });
     text(0, -4.15, "R", { color: c.accent, fontSize: compact ? 15 : 20 });
     text(bounds[2] - .22, -.35, "x", { anchorX: "right", anchorY: "top", color: c.muted });
     text(.14, bounds[1] - .18, "y", { anchorX: "left", anchorY: "top", color: c.muted });

@@ -20,7 +20,8 @@
     text(-1.72, 2.0, String.raw`y=3-3x`, { anchorX: "left", color: color.accent });
     text(0.12, 3.35, String.raw`(0,3)`, { anchorX: "left" });
     text(1.12, 0.72, String.raw`(1,1)`, { anchorX: "left", anchorY: "top" });
-    text(1, -0.24, "1"); text(-0.17, 1, "1", { anchorX: "right" });
+    text(0.92, -0.2, "1", { anchorX: "right", anchorY: "top" });
+    text(-0.17, 1, "1", { anchorX: "right" });
     const refresh = () => { if (!box.offsetParent || box.clientWidth < 100) return; const w = box.clientWidth; const h = innerWidth <= 560 ? Math.max(300, w * .78) : Math.max(330, w * .48); board.resizeContainer(w, h); board.setBoundingBox(bounds, false); board.fullUpdate(); };
     state = { refresh }; box.dataset.ready = "true"; refresh();
   }
